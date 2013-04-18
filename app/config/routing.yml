@@ -1,0 +1,48 @@
+oro_account:
+    resource: "@OroAccountBundle/Resources/config/routing.yml"
+
+oro_default:
+    pattern:  /{_locale}
+    defaults:
+        template:    ::base.html.twig
+        _locale:     %locale%
+        _controller: FrameworkBundle:Template:template
+    requirements:
+        _locale:  en|fr|de
+
+oro_ui:
+    resource: "@OroUIBundle/Resources/config/routing.yml"
+    prefix:   /ui
+
+oro_user:
+    resource: "@OroUserBundle/Resources/config/routing.yml"
+
+oro_search:
+    resource: "@OroSearchBundle/Resources/config/routing.yml"
+    prefix:   /
+
+oro_navigation:
+    resource: "@OroNavigationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+oro_windows:
+    resource: "@OroWindowsBundle/Resources/config/routing.yml"
+    prefix: /
+
+oro_soap:
+    resource: "@OroSoapBundle/Resources/config/routing.yml"
+    prefix:   /api
+
+oro_dataflow:
+    resource: "@OroDataFlowBundle/Resources/config/routing.yml"
+
+oro_config:
+    resource: "@OroConfigBundle/Resources/config/routing.yml"
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
+
+_imagine:
+    resource: .
+    type:     imagine

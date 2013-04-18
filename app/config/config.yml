@@ -1,0 +1,153 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+
+framework:
+    #esi:             ~
+    translator:      { fallback: "%locale%" }
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: "%kernel.debug%"
+    form:            true
+    csrf_protection: true
+    validation:      { enable_annotations: true }
+    templating:      { engines: ['twig', 'php'] } #assets_version: SomeVersionScheme
+    default_locale:  "%locale%"
+    trust_proxy_headers: false # Deprecated in 2.0; will be removed in 2.3 (used trusted_proxies instead)
+    trusted_proxies: ~
+    session:
+        cookie_lifetime:      43200
+        name:                 BAPID
+
+# Twig Configuration
+twig:
+    debug:                    "%kernel.debug%"
+    strict_variables:         "%kernel.debug%"
+    exception_controller:     "FOS\RestBundle\Controller\ExceptionController::showAction"
+    globals:
+        bap:
+            layout:           ::base.html.twig  # default layout across all Oro bundles
+
+# Assetic Configuration
+assetic:
+    debug:                    "%kernel.debug%"
+    use_controller:           false
+    bundles:                  ["OroUIBundle", "OroUserBundle", "OroGridBundle", "OroNavigationBundle", "OroWindowsBundle", "OroAccountBundle"]
+    #java: /usr/bin/java
+    filters:
+        cssrewrite: ~
+        lessphp:
+            file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
+            apply_to: "\.less$"
+        yui_css:
+            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+        yui_js:
+            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:               "%database_driver%"
+        host:                 "%database_host%"
+        port:                 "%database_port%"
+        dbname:               "%database_name%"
+        user:                 "%database_user%"
+        password:             "%database_password%"
+        charset:              UTF8
+
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_mapping:         true
+        resolve_target_entities:
+            Symfony\Component\Security\Core\User\UserInterface: Oro\Bundle\UserBundle\Entity\User
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport:                "%mailer_transport%"
+    host:                     "%mailer_host%"
+    username:                 "%mailer_user%"
+    password:                 "%mailer_password%"
+    spool:                    { type: memory }
+
+knp_paginator:
+    page_range:               5         # default page range used in pagination control
+    default_options:
+        page_name:            page      # page query parameter name
+        sort_field_name:      sort      # sort field query parameter name
+        sort_direction_name:  direction # sort direction query parameter name
+        distinct:             false     # ensure distinct results, useful when ORM queries are using GROUP BY statements
+    template:
+        pagination:           AcmeDemoBundle::pager.bootstrap.html.twig
+
+fos_rest:
+    view:
+        failed_validation: HTTP_BAD_REQUEST
+        default_engine: php
+        formats:
+            json: true
+            xml: true
+    format_listener:
+        prefer_extension: true
+    body_listener:
+        decoders:
+            json: fos_rest.decoder.json
+            xml: fos_rest.decoder.xml
+    routing_loader:
+        default_format: json
+
+be_simple_soap:
+    cache:
+        type:                 disk
+        lifetime:             86400
+        limit:                5
+    services:
+        soap:
+            namespace:        http://symfony.loc/Api/1.0/
+            binding:          rpc-literal
+            resource:         "%kernel.root_dir%/../app/config/soap.yml"
+            resource_type:    yml
+        demo:
+            namespace:        http://symfony.loc/Api/1.0/
+            binding:          rpc-literal
+            resource:         "%kernel.root_dir%/../src/Acme/Bundle/DemoBundle/Resources/config/soap.yml"
+            resource_type:    yml
+
+stof_doctrine_extensions:
+    orm:
+        default:
+            tree:             true
+
+services:
+    cache:
+        class:                Doctrine\Common\Cache\PhpFileCache
+        arguments:            [%kernel.cache_dir%]
+    twig.extension.intl:
+         class: Twig_Extensions_Extension_Intl
+         tags:
+             - { name: twig.extension }
+
+escape_wsse_authentication:
+    authentication_provider_class: Oro\Bundle\UserBundle\Security\WsseUserProvider
+
+liip_imagine:
+    filter_sets:
+        avatar_med:
+            quality:          95
+            filters:
+                thumbnail:    { size: [58, 58], mode: outbound }
+                strip:        ~
+
+oro_search:
+    engine:                   orm
+    realtime_update:          true
+
+oro_ui:
+    settings:
+        product_caption:
+          value:              ORO
+
+oro_user:
+    settings:
+        name_format:
+          value:              %%last%%, %%first%%

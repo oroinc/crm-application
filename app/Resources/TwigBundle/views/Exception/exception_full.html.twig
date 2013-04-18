@@ -1,0 +1,27 @@
+{% extends status_code == 403 ? 'OroUIBundle:Default:index.html.twig' : 'TwigBundle::layout.html.twig' %}
+
+{% if status_code == 403 %}
+
+    {% block head_script %}
+    {% endblock %}
+
+    {% block header %}
+    {% endblock %}
+
+    {% block pin_bar %}
+    {% endblock %}
+
+    {% block title %}
+        {{ exception.message }} ({{ status_code }} {{ status_text }})
+    {% endblock %}
+    {% block body %}
+        {% include 'TwigBundle:Exception:exception.html.twig' %}
+    {% endblock %}
+{% else %}
+    {% block content %}
+        <div class="alert alert-block pagination-centered popup-box">
+            <h1>{{ status_code }} {{ status_text }}</h1>
+            <img src="{{ asset('bundles/oroui/img/503.png') }}" alt="Error page" />
+        </div>
+    {% endblock %}
+{% endif %}

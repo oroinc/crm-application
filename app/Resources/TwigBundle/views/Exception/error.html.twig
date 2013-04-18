@@ -1,0 +1,23 @@
+{% extends 'OroUIBundle:Default:index.html.twig' %}
+{% block title %}{{ status_code }} -{{ status_text }}{% endblock %}
+{% block bodyClass %}error-page{% endblock %}
+{% block header %}
+{% endblock %}
+
+{% block pin_bar %}
+{% endblock %}
+
+{% block content %}
+<div class="pagination-centered popup-box-errors">
+        <h1><span>{{ status_code }}</span> {{ status_text }}</h1>
+        <div class="popup-content">
+            <p>Something went wrong. Place text here about how this may be resolved, or where you can find full error log. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block head_script %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('bundles/oroui/js/errors.js') }}"></script>
+{% endblock %}

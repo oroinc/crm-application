@@ -1,0 +1,32 @@
+imports:
+    - { resource: config_dev.yml }
+    - { resource: parameters_test.yml }
+    - { resource: security_test.yml }
+
+framework:
+    test: ~
+    session:
+        storage_id: session.storage.mock_file
+    csrf_protection: true
+
+services:
+    twig.extension.debug:
+        class: Twig_Extensions_Extension_Debug
+        tags:
+            - { name: twig.extension }
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false
+
+swiftmailer:
+    disable_delivery: true
+
+assetic:
+    debug:                    false
+    use_controller:           false
+
+monolog:
+    handlers:
+        main:
+            level: error
