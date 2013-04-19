@@ -8,6 +8,7 @@ framework:
     session:
         storage_id: session.storage.mock_file
     csrf_protection: true
+    router:   { resource: "%kernel.root_dir%/config/routing_test.yml" }
 
 services:
     twig.extension.debug:

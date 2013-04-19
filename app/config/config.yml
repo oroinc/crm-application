@@ -78,7 +78,7 @@ knp_paginator:
         sort_direction_name:  direction # sort direction query parameter name
         distinct:             false     # ensure distinct results, useful when ORM queries are using GROUP BY statements
     template:
-        pagination:           AcmeDemoBundle::pager.bootstrap.html.twig
+        pagination:           OroUIBundle::pager.bootstrap.html.twig
 
 fos_rest:
     view:
@@ -106,11 +106,6 @@ be_simple_soap:
             namespace:        http://symfony.loc/Api/1.0/
             binding:          rpc-literal
             resource:         "%kernel.root_dir%/../app/config/soap.yml"
-            resource_type:    yml
-        demo:
-            namespace:        http://symfony.loc/Api/1.0/
-            binding:          rpc-literal
-            resource:         "%kernel.root_dir%/../src/Acme/Bundle/DemoBundle/Resources/config/soap.yml"
             resource_type:    yml
 
 stof_doctrine_extensions:
@@ -145,7 +140,7 @@ oro_search:
 oro_ui:
     settings:
         product_caption:
-          value:              ORO
+          value:              ORO CRM
 
 oro_user:
     settings:
