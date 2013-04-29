@@ -14,25 +14,19 @@ security:
         Symfony\Component\Security\Core\User\User: plaintext
 
     firewalls:
-        navigationrest:
-            pattern:                        ^/api/rest/(latest|v1)/(navigationitems|windows|shortcuts)
-            provider:                       chain_provider
-            api:
-                parent_context:             main
-            anonymous:                      false
-
         dev:
             pattern:                        ^/(_(profiler|wdt)|css|images|js)/
             security:                       false
 
         wsse_secured:
             pattern:                        ^/api/(rest|soap).*
-            wsse:
-                nonce_dir:                  null
-                lifetime:                   3600
-                realm:                      "Secured API"
-                profile:                    "UsernameToken"
-            anonymous:                      ~
+            anonymous:                      true
+#            wsse:
+#                nonce_dir:                  null
+#                lifetime:                   3600
+#                realm:                      "Secured API"
+#                profile:                    "UsernameToken"
+#            context:                        main
 
         login:
             pattern:                        ^/user/(login|reset-request|send-email|check-email)$

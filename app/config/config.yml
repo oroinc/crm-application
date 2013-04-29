@@ -33,7 +33,14 @@ twig:
 assetic:
     debug:                    "%kernel.debug%"
     use_controller:           false
-    bundles:                  ["OroUIBundle", "OroUserBundle", "OroGridBundle", "OroNavigationBundle", "OroWindowsBundle", "OroAccountBundle"]
+    bundles:
+        - OroUIBundle
+        - OroUserBundle
+        - OroGridBundle
+        - OroFilterBundle
+        - OroNavigationBundle
+        - OroWindowsBundle
+        - OroAccountBundle
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -78,7 +85,7 @@ knp_paginator:
         sort_direction_name:  direction # sort direction query parameter name
         distinct:             false     # ensure distinct results, useful when ORM queries are using GROUP BY statements
     template:
-        pagination:           OroUIBundle::pager.bootstrap.html.twig
+        pagination:           OroUIBundle::pager.html.twig
 
 fos_rest:
     view:
@@ -96,6 +103,9 @@ fos_rest:
     routing_loader:
         default_format: json
 
+fos_js_routing:
+    routes_to_expose:         [oro_api_*]
+
 be_simple_soap:
     cache:
         type:                 disk
@@ -111,6 +121,7 @@ be_simple_soap:
 stof_doctrine_extensions:
     orm:
         default:
+            translatable:     true
             tree:             true
 
 services:
