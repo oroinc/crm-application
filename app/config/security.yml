@@ -14,13 +14,6 @@ security:
         Symfony\Component\Security\Core\User\User: plaintext
 
     firewalls:
-        navigationrest:
-            pattern:                        ^/api/rest/(latest|v1)/(navigationitems|windows|shortcuts)
-            provider:                       chain_provider
-            api:
-                parent_context:             main
-            anonymous:                      false
-
         dev:
             pattern:                        ^/(_(profiler|wdt)|css|images|js)/
             security:                       false
