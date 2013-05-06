@@ -39,17 +39,17 @@ oro_dataflow:
 oro_config:
     resource: "@OroConfigBundle/Resources/config/routing.yml"
 
-oro_address:
-    resource: "@OroAddressBundle/Resources/config/routing.yml"
-    prefix:   /
-
-NelmioApiDocBundle:
+nelmio_api_doc:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
     prefix:   /api/doc
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
 
 _imagine:
     resource: .
     type:     imagine
 
-fos_js_routing:
-    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+oro_address:
+    resource: "@OroAddressBundle/Resources/config/routing.yml"
+    prefix:   /

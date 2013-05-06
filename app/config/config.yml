@@ -34,6 +34,7 @@ assetic:
     debug:                    "%kernel.debug%"
     use_controller:           false
     bundles:
+        - OroAddressBundle
         - OroUIBundle
         - OroUserBundle
         - OroGridBundle
@@ -104,7 +105,7 @@ fos_rest:
         default_format: json
 
 fos_js_routing:
-    routes_to_expose:         [oro_api_*]
+    routes_to_expose:         [oro_*]
 
 be_simple_soap:
     cache:
@@ -135,6 +136,7 @@ services:
 
 escape_wsse_authentication:
     authentication_provider_class: Oro\Bundle\UserBundle\Security\WsseUserProvider
+    authentication_listener_class: Oro\Bundle\UserBundle\Security\WsseAuthListener
 
 liip_imagine:
     filter_sets:
