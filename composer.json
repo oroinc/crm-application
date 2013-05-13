@@ -1,6 +1,6 @@
 {
     "name": "oro/crm",
-    "description": "The \"Business Application Platform\" distribution",
+    "description": "The OroCRM distribution",
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -72,6 +72,18 @@
         {
             "type": "vcs",
             "url": "https://github.com/laboro/SonataAdminBundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/laboro/FilterBundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/orocrm/AccountBundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/orocrm/ContactBundle.git"
         }
     ],
     "scripts": {
@@ -79,13 +91,15 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "php app/console fos:js-routing:dump --target=web/js/routes.js"
         ],
         "post-update-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "php app/console fos:js-routing:dump --target=web/js/routes.js"
         ]
     },
     "minimum-stability": "dev",

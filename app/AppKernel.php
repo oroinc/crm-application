@@ -49,6 +49,7 @@ class AppKernel extends Kernel
             new Oro\Bundle\FilterBundle\OroFilterBundle(),
             new Oro\Bundle\AddressBundle\OroAddressBundle(),
             new Oro\Bundle\AccountBundle\OroAccountBundle(),
+            new Oro\Bundle\ContactBundle\OroContactBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
