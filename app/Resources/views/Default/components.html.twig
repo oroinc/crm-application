@@ -20,7 +20,6 @@
 
 {% block head_script_component %}
     {% include 'OroWindowsBundle:Include:javascript.html.twig' %}
-    {% include 'OroWindowsBundle:Include:stylesheet.html.twig' %}
 
     {% include 'OroNavigationBundle:Js:dot.menu.js.twig' %}
     {% include 'OroNavigationBundle:Js:pinbar.js.twig' %}
@@ -33,9 +32,12 @@
     '@OroNavigationBundle/Resources/public/js/views/dot.menu.js'
 
     '@OroNavigationBundle/Resources/public/js/models/pinbar.item.js'
+    '@OroNavigationBundle/Resources/public/js/models/pagestate.js'
+
     '@OroNavigationBundle/Resources/public/js/collections/pinbar.js'
     '@OroNavigationBundle/Resources/public/js/views/pinbar.item.js'
     '@OroNavigationBundle/Resources/public/js/views/pinbar.js'
+    '@OroNavigationBundle/Resources/public/js/views/pagestate.js'
 
     '@OroNavigationBundle/Resources/public/js/views/favorites.js'
     '@OroNavigationBundle/Resources/public/js/views/shortcuts.js'
@@ -45,7 +47,7 @@
     '@OroSearchBundle/Resources/public/js/searchBar.js'
 
     filter='yui_js'
-    output='js/oroapp-demo.all.js'
+    output='js/oroapp.all.js'
     %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
@@ -65,18 +67,18 @@
 {% block pin_button %}
 
     {% block top_action_box %}
-        <div class="navigation clearfix">
-            <div class="container-fluid">
-                <div class="top-action-box">
-                    <div class="btn-group icons-holder icons-small">
-                        <button class="btn minimize-button" data-title="{{ block('title') }}" title="{{ 'Minimize the window to the pinbar'|trans }}"><i class="icon-minimize hide-text">minimaze tab</i></button>
-                        {# <button class="btn maximize-button"><i class="icon-fullscreen hide-text">full screen</i></button> #}
-                        <button class="btn favorite-button" data-title="{{ block('title') }}" title="{{ 'Add this page to favorites'|trans }}"><i class="icon-star icon-white hide-text">favorites</i></button>
-                        <button class="btn close-button" title="{{ 'Close page'|trans }}"><i class="icon-remove hide-text">Close</i></button>
-                    </div>
+    <div class="navigation clearfix">
+        <div class="container-fluid">
+            <div class="top-action-box">
+                <div class="btn-group icons-holder icons-small">
+                    <button class="btn minimize-button" data-title="{{ oro_title_render_serialized() }}" title="{{ 'Minimize the window to the pinbar'|trans }}"><i class="icon-minimize hide-text">minimaze tab</i></button>
+                    {# <button class="btn maximize-button"><i class="icon-fullscreen hi1de-text">full screen</i></button> #}
+                    <button class="btn favorite-button" data-title="{{ oro_title_render_serialized() }}" title="{{ 'Add this page to favorites'|trans }}"><i class="icon-star icon-white hide-text">favorites</i></button>
+                    <button class="btn close-button" title="{{ 'Close page'|trans }}"><i class="icon-remove hide-text">Close</i></button>
                 </div>
             </div>
         </div>
+    </div>
     {% endblock top_action_box %}
 
     {{ oro_menu_render('pinbar', {'maxPinbarItems': 10, 'tabTitle': 'Tabs'|trans(), 'defaultUrl': path('oro_default')}) }}
