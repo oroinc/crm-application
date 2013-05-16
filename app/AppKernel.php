@@ -59,7 +59,7 @@ class AppKernel extends Kernel
         }
 
         if (in_array($this->getEnvironment(), array('test'))) {
-
+            $bundles[] = new Oro\Bundle\TestFrameworkBundle\OroTestFrameworkBundle();
         }
 
         return $bundles;
