@@ -11,8 +11,13 @@
 
 {% block application_menu %}
     {{ oro_menu_render('application_menu') }}
-    {{ block('pin_button') }}
 {% endblock application_menu %}
+{% block pin_button %}
+    {{ block('top_action_box') }}
+{% endblock pin_button %}
+{% block pin_bar %}
+    {{ oro_menu_render('dots_menu') }}
+{% endblock pin_bar %}
 
 {% block searchbar %}
     {% render "OroSearchBundle:Search:searchBar" with {'searchString':app.request.get('search'), 'fromString':app.request.get('from')} %}
@@ -64,9 +69,7 @@
     </style>
 {% endblock %}
 
-{% block pin_button %}
-
-    {% block top_action_box %}
+{% block top_action_box %}
     <div class="navigation clearfix">
         <div class="container-fluid">
             <div class="top-action-box">
@@ -79,13 +82,7 @@
             </div>
         </div>
     </div>
-    {% endblock top_action_box %}
-
-    {{ oro_menu_render('pinbar', {'maxPinbarItems': 10, 'tabTitle': 'Tabs'|trans(), 'defaultUrl': path('oro_default')}) }}
-    {{ oro_menu_render('favorite', {'tabTitle': 'Favorites'|trans()}) }}
-
-{% endblock %}
-
+{% endblock top_action_box %}
 {% block shortcuts %}
     {{ oro_menu_render('shortcuts', {source: path('oro_api_get_shortcuts', {query: ''}), details: path('oro_shortcut_actionslist')}) }}
 {% endblock shortcuts %}
