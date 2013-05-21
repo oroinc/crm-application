@@ -50,6 +50,8 @@ class AppKernel extends Kernel
             new Oro\Bundle\AddressBundle\OroAddressBundle(),
             new Oro\Bundle\AccountBundle\OroAccountBundle(),
             new Oro\Bundle\ContactBundle\OroContactBundle(),
+
+            new Acme\Bundle\DemoBundle\AcmeDemoBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
