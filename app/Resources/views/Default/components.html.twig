@@ -13,7 +13,9 @@
     {{ oro_menu_render('application_menu') }}
 {% endblock application_menu %}
 {% block pin_button %}
-    {{ block('top_action_box') }}
+    <div id="pin-button-div" {% if app.request.attributes.get('_route') == bap.start_route %}style="display: none"{% endif %}>
+        {{ block('top_action_box') }}
+    </div>
 {% endblock pin_button %}
 {% block pin_bar %}
     {{ oro_menu_render('dots_menu') }}
