@@ -1,0 +1,90 @@
+@backgroundColor:  #f7f8f9;
+@borderStyle:      1px solid #e5e5e5;
+@widgetHeight:     190px;
+@imageWidth:       64px;
+@imageHeight:      58px;
+
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+// Border Radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.fullHeight() {
+  height: 100%;
+}
+
+.quick-launchpad,
+.quick-launchpad #main,
+.quick-launchpad #container {
+  background: @backgroundColor
+}
+
+.quick-launchpad #container > .container {
+  padding-top: 30px;
+}
+
+.quick-launchpad-widget > div {
+  height: @widgetHeight;
+  border: 1px solid #b6b6b6;
+  overflow: hidden;
+  .border-radius(5px);
+  .box-shadow(1px 1px 5px rgba(50, 50, 50, 0.2));
+}
+
+.quick-launchpad-widget{
+  .image-wrap {
+    background: #fff;
+    display: block;
+    width: 40%;
+    .fullHeight();
+    .widget-image {
+      display: block;
+      width: @imageWidth;
+      height: @imageHeight;
+      background: url("../img/icon-sprite.png") no-repeat;
+      cursor: default;
+      margin: 0 auto;
+      &.accounts-image {
+        background-position: 0 (@imageHeight*0);
+      }
+      &.accounts-image:hover {
+        background-position: (@imageWidth*-1) (@imageHeight*0);
+      }
+      &.contacts-image {
+        background-position: 0 (@imageHeight*-1);
+      }
+      &.contacts-image:hover {
+        background-position: (@imageWidth*-1) (@imageHeight*-1);
+      }
+    }
+    p {
+      padding: 35px 0 10px;
+      font-size: 17px;
+      color: #555555;
+    }
+  }
+  .list-wrap {
+    border-left: @borderStyle;
+    width: 60%;
+    margin-left: -1px;
+    .fullHeight();
+    ul {
+      margin: 5px 0;
+      li > a {
+        border-bottom: @borderStyle;
+      }
+      li.last > a {
+        border: none;
+      }
+    }
+  }
+}
