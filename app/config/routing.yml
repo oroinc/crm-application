@@ -8,7 +8,7 @@ oro_account:
 oro_default:
     pattern:  /{_locale}
     defaults:
-        template:    AcmeDemoBundle:Default:index.html.twig
+        template:    OroDashboardBundle:Default:index.html.twig
         _locale:     %locale%
         _controller: FrameworkBundle:Template:template
     requirements:
@@ -42,6 +42,9 @@ oro_dataflow:
 
 oro_config:
     resource: "@OroConfigBundle/Resources/config/routing.yml"
+
+oro_dataaudit:
+    resource: "@OroDataAuditBundle/Resources/config/routing.yml"
 
 nelmio_api_doc:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"

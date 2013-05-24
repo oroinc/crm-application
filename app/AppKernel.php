@@ -48,10 +48,13 @@ class AppKernel extends Kernel
             new Oro\Bundle\GridBundle\OroGridBundle(),
             new Oro\Bundle\WindowsBundle\OroWindowsBundle(),
             new Oro\Bundle\AddressBundle\OroAddressBundle(),
+            new Oro\Bundle\DataAuditBundle\OroDataAuditBundle(),
+
+            // CRM bundles
             new Oro\Bundle\AccountBundle\OroAccountBundle(),
             new Oro\Bundle\ContactBundle\OroContactBundle(),
+            new Oro\Bundle\DashboardBundle\OroDashboardBundle(),
 
-            new Acme\Bundle\DemoBundle\AcmeDemoBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'devjs', 'test'))) {
