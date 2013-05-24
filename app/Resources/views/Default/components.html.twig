@@ -62,13 +62,6 @@
     <script type="text/javascript">
         navigation.Item.prototype.urlRoot = {{ path('oro_api_get_navigationitems', {'type': ''})|json_encode|raw }};
     </script>
-
-    {# TODO: remove after functionality realisation #}
-    <style type="text/css">
-        #main {
-            min-height: 800px;
-        }
-    </style>
 {% endblock %}
 
 {% block top_action_box %}
