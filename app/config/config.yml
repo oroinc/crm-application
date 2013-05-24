@@ -26,13 +26,14 @@ twig:
     strict_variables:         "%kernel.debug%"
     exception_controller:     "FOS\RestBundle\Controller\ExceptionController::showAction"
     globals:
+        env: %kernel.environment%
         bap:
             layout:           ::base.html.twig  # default layout across all Oro bundles
             start_route:      oro_default
 
 # Assetic Configuration
 assetic:
-    debug:                    "%kernel.debug%"
+    debug:                    false
     use_controller:           false
     bundles:
         - AcmeDemoBundle
