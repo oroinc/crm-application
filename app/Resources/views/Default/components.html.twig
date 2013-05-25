@@ -22,7 +22,7 @@
 {% endblock pin_bar %}
 
 {% block searchbar %}
-    {% render "OroSearchBundle:Search:searchBar" with {'searchString':app.request.get('search'), 'fromString':app.request.get('from')} %}
+        {% render "OroSearchBundle:Search:searchBar" with {'searchString':app.request.get('search'), 'fromString':app.request.get('from')} %}
 {% endblock searchbar %}
 
 {% block head_script_component %}
@@ -62,6 +62,20 @@
     <script type="text/javascript">
         navigation.Item.prototype.urlRoot = {{ path('oro_api_get_navigationitems', {'type': ''})|json_encode|raw }};
     </script>
+{% endblock %}
+
+
+{% block head_style_component %}
+    {% stylesheets
+        'bundles/orodashboard/css/dashboard.less'
+
+        debug=false
+        filter='cssrewrite, lessphp, yui_css'
+        output='css/oro.crm.css'
+        %}
+        <link rel="stylesheet" media="all" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
 {% endblock %}
 
 {% block top_action_box %}
