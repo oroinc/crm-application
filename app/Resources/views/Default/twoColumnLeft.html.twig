@@ -5,3 +5,8 @@
     {{ parent() }}
     {{ block('head_script_component') }}
 {% endblock %}
+
+{% block head_style %}
+    {{ parent() }}
+    {{ block('head_style_component') }}
+{% endblock %}
