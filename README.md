@@ -34,9 +34,7 @@ http://getcomposer.org/ or just run the following command:
 
     php composer.phar install
 
-- Install OroCRM database environment
-
-    install
+- Initialize application with install script (for Linux and Mac OS install.sh, for Windows install.bat)
 
 Checking your System Configuration
 -------------------------------------
