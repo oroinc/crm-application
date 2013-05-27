@@ -1,14 +1,14 @@
-oro_contact:
-    resource: "@OroContactBundle/Resources/config/routing.yml"
+orocrm_contact:
+    resource: "@OroCRMContactBundle/Resources/config/routing.yml"
     prefix:   /
 
-oro_account:
-    resource: "@OroAccountBundle/Resources/config/routing.yml"
+orocrm_account:
+    resource: "@OroCRMAccountBundle/Resources/config/routing.yml"
 
 oro_default:
     pattern:  /{_locale}
     defaults:
-        template:    OroDashboardBundle:Default:index.html.twig
+        template:    OroCRMDashboardBundle:Default:index.html.twig
         _locale:     %locale%
         _controller: FrameworkBundle:Template:template
     requirements:
