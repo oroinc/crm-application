@@ -7,6 +7,8 @@ This document contains information on how to download, install, and start
 using OroCRM. For a more detailed explanation, see the [Installation]
 chapter.
 
+Important Note: this application is not production ready and is intendant for evaluation and development only!
+
 Requirements
 ------------
 
@@ -30,11 +32,13 @@ http://getcomposer.org/ or just run the following command:
     git clone http://gitlab.orocrm.com/crm-application.git
 
 - Go to app/config folder and create parameters.yml using parameters.dist.yml as example. Update database name and credentials
-- Install OroCRM dependencies with composer
+- Install OroCRM dependencies with composer. If installation process seems too slow you can use "--prefer-dist" option.
 
     php composer.phar install
 
 - Initialize application with install script (for Linux and Mac OS install.sh, for Windows install.bat)
+
+After installation you can login as application administrator using user name "admin" and password "admin".
 
 Checking your System Configuration
 -------------------------------------
