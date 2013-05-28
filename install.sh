@@ -8,5 +8,5 @@ php app/console oro:navigation:init
 php app/console assets:install web
 php app/console assetic:dump
 
-chmod 777 -R app/cache/
-chmod 777 -R app/logs/
+chmod -R 777 app/cache/
+chmod -R 777 app/logs/
