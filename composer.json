@@ -1,101 +1,55 @@
 {
-    "name": "oro/crm",
+    "name": "oro/crm-standard",
     "description": "The OroCRM distribution",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": { "Oro\\Bundle": "src/Oro/src", "OroCRM\\Bundle": "src/OroCRM/src", "": "src/" }
     },
     "require": {
         "php": ">=5.3.3",
-        "oro/bap": "dev-master"
+        "symfony/symfony": "2.1.*",
+        "doctrine/orm": ">=2.2.3,<2.5-dev",
+        "doctrine/doctrine-bundle": "1.1.*",
+        "doctrine/data-fixtures": "@dev",
+        "doctrine/doctrine-fixtures-bundle": "@dev",
+        "twig/extensions": "1.0.*@dev",
+        "symfony/assetic-bundle": "2.1.*@dev",
+        "symfony/swiftmailer-bundle": "2.1.*",
+        "symfony/monolog-bundle": "2.1.*",
+        "sensio/distribution-bundle": "2.1.*",
+        "sensio/framework-extra-bundle": "2.1.*",
+        "sensio/generator-bundle": "2.1.*",
+        "jms/di-extra-bundle": "1.3.*@dev",
+        "jms/job-queue-bundle": "dev-master",
+        "jms/aop-bundle": "dev-master",
+        "jms/serializer": "0.12.*@dev",
+        "jms/serializer-bundle": "0.12.*@dev",
+        "kriswallsmith/assetic": "1.1.*@dev",
+        "knplabs/knp-menu": "dev-master",
+        "knplabs/knp-menu-bundle": "dev-master",
+        "knplabs/knp-paginator-bundle": "dev-master",
+        "friendsofsymfony/rest-bundle": "0.11.*",
+        "friendsofsymfony/jsrouting-bundle": "1.1.*@dev",
+        "nelmio/api-doc-bundle": "dev-master",
+        "ass/xmlsecurity": "dev-master",
+        "besimple/soap-common": "dev-master",
+        "besimple/soap-server": "dev-master",
+        "besimple/soap-bundle": "dev-master",
+        "ddeboer/data-import": "dev-master",
+        "stof/doctrine-extensions-bundle": "dev-master",
+        "escapestudios/wsse-authentication-bundle": "2.1.x-dev",
+        "sonata-project/admin-bundle": "2.1.x-dev",
+        "sonata-project/doctrine-orm-admin-bundle": "2.1.x-dev",
+        "liip/imagine-bundle": "dev-master",
+        "leafo/lessphp": "dev-master",
+        "symfony/icu": "1.2.*@dev",
+        "symfony/intl": "2.3.*@dev",
+        "willdurand/expose-translation-bundle": "0.2.*@dev",
+        "apy/jsfv-bundle": "2.1.*@dev"
     },
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/laboro/bap"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/AddressBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/ConfigBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/DataFlowBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/FilterBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/FlexibleEntityBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/GridBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/MeasureBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/NavigationBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/SearchBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/SegmentationTreeBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/SoapBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/UIBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/UserBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/DataAuditBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/WindowsBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/JsFormValidationBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/SonataAdminBundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/FilterBundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/orocrm/AccountBundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/orocrm/ContactBundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/TestFrameworkBundle.git"
+            "url": "http://gitlab.orocrm.com/vendors/sonataadminbundle.git"
         }
     ],
     "scripts": {
