@@ -1,23 +1,17 @@
 {
     "name": "oro/crm-application",
     "description": "The OroCRM distribution",
+    "homepage": "https://github.com/orocrm/crm-application.git",
+    "license": "The Open Software License version 3.0",
     "require": {
         "php": ">=5.3.3",
-        "oro/platform": "dev-master",
-        "oro/crm": "dev-master"
+        "oro/platform": "1.0.*@dev",
+        "oro/crm": "1.0.*@dev"
     },
     "repositories": [
         {
             "type": "vcs",
-            "url": "http://gitlab.orocrm.com/platform.git"
-        },
-        {
-            "type": "vcs",
-            "url": "http://gitlab.orocrm.com/crm.git"
-        },
-        {
-            "type": "vcs",
-            "url": "http://gitlab.orocrm.com/vendors/sonataadminbundle.git"
+            "url": "https://github.com/orocrm/SonataAdminBundle.git"
         }
     ],
     "scripts": {
