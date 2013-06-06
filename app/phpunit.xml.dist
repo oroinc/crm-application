@@ -20,13 +20,21 @@
             <directory suffix="Test.php">../src/*/Bundle/*Bundle/Tests/Functional</directory>
             <directory suffix="Test.php">../src/*/src/*/Bundle/*Bundle/Tests/Functional</directory>
         </testsuite>
-        <testsuite name="Project Unit Tests">
-            <directory suffix="Test.php">../src/*/Bundle/*Bundle/Tests/Unit</directory>
-            <directory suffix="Test.php">../src/*/src/*/Bundle/*Bundle/Tests/Unit</directory>
+        <testsuite name="Project OroCRM Unit Tests">
+            <directory suffix="Test.php">../src/OroCRM/Bundle/*Bundle/Tests/Unit</directory>
+            <directory suffix="Test.php">../src/OroCRM/src/OroCRM/Bundle/*Bundle/Tests/Unit</directory>
         </testsuite>
-        <testsuite name="Project Functional Tests">
-            <directory suffix="Test.php">../src/*/Bundle/*Bundle/Tests/Functional</directory>
-            <directory suffix="Test.php">../src/*/src/*/Bundle/*Bundle/Tests/Functional</directory>
+        <testsuite name="Project OroCRM Functional Tests">
+            <directory suffix="Test.php">../src/OroCRM/Bundle/*Bundle/Tests/Functional</directory>
+            <directory suffix="Test.php">../src/OroCRM/src/OroCRM/Bundle/*Bundle/Tests/Functional</directory>
+        </testsuite>
+        <testsuite name="Project Oro Unit Tests">
+            <directory suffix="Test.php">../src/Oro/Bundle/*Bundle/Tests/Unit</directory>
+            <directory suffix="Test.php">../src/Oro/src/Oro/Bundle/*Bundle/Tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Project Oro Functional Tests">
+            <directory suffix="Test.php">../src/Oro/Bundle/*Bundle/Tests/Functional</directory>
+            <directory suffix="Test.php">../src/Oro/src/Oro/Bundle/*Bundle/Tests/Functional</directory>
         </testsuite>
         <testsuite name="Project Performance Tests">
             <directory suffix="Perf.php">../src/*/*Bundle/Tests/Performance</directory>
@@ -70,6 +78,8 @@
             <directory>../src</directory>
             <exclude>
                 <directory>../vendor</directory>
+                <directory>../src/Oro/Bundle/*Bundle</directory>
+                <directory>../src/Oro/src/Oro/Bundle/*Bundle</directory>
                 <directory>../src/*/Bundle/*Bundle/DataFixtures</directory>
                 <directory>../src/*/Bundle/*Bundle/Resources</directory>
                 <directory>../src/*/Bundle/*Bundle/Tests</directory>
