@@ -37,6 +37,7 @@ class AppKernel extends Kernel
 
             // BAP bundles
             new Oro\Bundle\FlexibleEntityBundle\OroFlexibleEntityBundle(),
+            new Oro\Bundle\ImportExportBundle\OroImportExportBundle(),
             new Oro\Bundle\UIBundle\OroUIBundle(),
             new Oro\Bundle\FormBundle\OroFormBundle(),
             new Oro\Bundle\JsFormValidationBundle\OroJsFormValidationBundle(),
