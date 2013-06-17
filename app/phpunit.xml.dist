@@ -41,8 +41,7 @@
             <directory suffix="Perf.php">../src/*/Bundle/*Bundle/Tests/Performance</directory>
         </testsuite>
         <testsuite name="Project Selenium Tests">
-            <directory suffix="Test.php">../src/*/*Bundle/Tests/Selenium</directory>
-            <directory suffix="Test.php">../src/*/Bundle/*Bundle/Tests/Selenium</directory>
+            <directory suffix="Test.php">../src/OroCRM/src/OroCRM/Bundle/*Bundle/Tests/Selenium</directory>
         </testsuite>
     </testsuites>
 
@@ -61,7 +60,9 @@
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_TESTS_URL" value="http://localhost.com"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_TESTS_URL_COVERAGE" value="http://localhost.com/bundles/acmetests/scripts/phpunit_coverage.php"/>
         <const name="MAX_EXECUTION_TIME" value="15000"/>
-        <const name="TIME_OUT" value="1000"/>
+        <const name="TIME_OUT" value="5000"/>
+        <const name="viewportWIDTH" value="1900"/>
+        <const name="viewportHEIGHT" value="1080"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PATH_LOGS" value="app/log"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_LOGIN" value="admin"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PASS" value="admin"/>
@@ -78,8 +79,6 @@
             <directory>../src</directory>
             <exclude>
                 <directory>../vendor</directory>
-                <directory>../src/Oro/Bundle/*Bundle</directory>
-                <directory>../src/Oro/src/Oro/Bundle/*Bundle</directory>
                 <directory>../src/*/Bundle/*Bundle/DataFixtures</directory>
                 <directory>../src/*/Bundle/*Bundle/Resources</directory>
                 <directory>../src/*/Bundle/*Bundle/Tests</directory>
