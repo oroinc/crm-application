@@ -124,6 +124,8 @@ be_simple_soap:
             resource_type:    yml
 
 stof_doctrine_extensions:
+    default_locale: none        # need to set not used value to use en locale as translatable (not default)
+    translation_fallback: true
     orm:
         default:
             translatable:     true
