@@ -124,13 +124,12 @@ be_simple_soap:
             resource_type:    yml
 
 stof_doctrine_extensions:
+    default_locale: en
+    translation_fallback: true
     orm:
         default:
             translatable:     true
             tree:             true
-            loggable:         true
-    class:
-        loggable:             Oro\Bundle\DataAuditBundle\EventListener\LoggableListener
 
 services:
     cache:
@@ -152,6 +151,10 @@ liip_imagine:
             filters:
                 thumbnail:    { size: [58, 58], mode: outbound }
                 strip:        ~
+
+genemu_form:
+    select2: ~
+    autocomplete: ~
 
 oro_search:
     engine:                   orm
