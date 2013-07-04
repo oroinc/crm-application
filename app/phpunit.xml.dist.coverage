@@ -64,6 +64,8 @@
             <directory>../src</directory>
             <exclude>
                 <directory>../vendor</directory>
+                <directory>../src/*/tests</directory>
+                <directory>../src/*/src/*/Bundle/TestFrameworkBundle</directory>
                 <directory>../src/*/Bundle/*Bundle/DataFixtures</directory>
                 <directory>../src/*/Bundle/*Bundle/Resources</directory>
                 <directory>../src/*/Bundle/*Bundle/Tests</directory>
@@ -72,6 +74,10 @@
                 <directory>../src/*/src/*/Bundle/*Bundle/Resources</directory>
                 <directory>../src/*/src/*/Bundle/*Bundle/Tests</directory>
                 <directory>../src/*/src/*/Bundle/*Bundle/vendor</directory>
+                <directory suffix="Extension.php">../src/*/src/*/Bundle/*Bundle/DependencyInjection</directory>
+                <directory suffix="Bundle.php">../src/*/src/*/Bundle/*Bundle</directory>
+                <directory suffix="Extension.php">../src/*/Bundle/*Bundle/DependencyInjection</directory>
+                <directory suffix="Bundle.php">../src/*/Bundle/*Bundle</directory>
             </exclude>
         </whitelist>
     </filter>
