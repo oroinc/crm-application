@@ -6,10 +6,9 @@ orocrm_account:
     resource: "@OroCRMAccountBundle/Resources/config/routing.yml"
 
 oro_default:
-    pattern:  /{_locale}
+    pattern:  /
     defaults:
         template:    OroCRMDashboardBundle:Default:index.html.twig
-        _locale:     %locale%
         _controller: FrameworkBundle:Template:template
 
 oro_ui:
