@@ -53,6 +53,8 @@ class AppKernel extends Kernel
             new Oro\Bundle\WindowsBundle\OroWindowsBundle(),
             new Oro\Bundle\AddressBundle\OroAddressBundle(),
             new Oro\Bundle\DataAuditBundle\OroDataAuditBundle(),
+            new Oro\Bundle\EwsCoreBundle\OroEwsCoreBundle(),
+            new Oro\Bundle\EwsEmailBundle\OroEwsEmailBundle(),
 
             // CRM bundles
             new OroCRM\Bundle\AccountBundle\OroCRMAccountBundle(),
