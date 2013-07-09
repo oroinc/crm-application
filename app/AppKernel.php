@@ -54,6 +54,7 @@ class AppKernel extends Kernel
             new Oro\Bundle\AddressBundle\OroAddressBundle(),
             new Oro\Bundle\DataAuditBundle\OroDataAuditBundle(),
             new Oro\Bundle\TagBundle\OroTagBundle(),
+            new Oro\Bundle\TranslationBundle\OroTranslationBundle(),
 
             // CRM bundles
             new OroCRM\Bundle\AccountBundle\OroCRMAccountBundle(),
