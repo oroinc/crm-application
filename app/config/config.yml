@@ -29,6 +29,12 @@ twig:
         bap:
             layout:           ::base.html.twig  # default layout across all Oro bundles
             start_route:      oro_default
+    form:
+        resources:
+            - 'OroUIBundle:Form:fields.html.twig'
+            - 'OroFormBundle:Form:fields.html.twig'
+            - 'OroTranslationBundle:Form:fields.html.twig'
+            - 'OroAddressBundle:Include:fields.html.twig'
 
 # Assetic Configuration
 assetic:
