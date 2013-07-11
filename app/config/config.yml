@@ -18,6 +18,9 @@ framework:
     session:
         cookie_lifetime:      43200
         name:                 BAPID
+    fragments:
+        enabled: true
+        path: /_fragment # used for controller action in template
 
 # Twig Configuration
 twig:
