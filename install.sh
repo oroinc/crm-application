@@ -7,3 +7,4 @@ php app/console oro:acl:load
 php app/console oro:navigation:init
 php app/console assets:install web
 php app/console assetic:dump
+php app/console oro:assetic:dump
