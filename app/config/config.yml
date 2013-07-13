@@ -14,11 +14,13 @@ framework:
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig', 'php'] } #assets_version: SomeVersionScheme
     default_locale:  "%locale%"
-    trust_proxy_headers: false # Deprecated in 2.0; will be removed in 2.3 (used trusted_proxies instead)
     trusted_proxies: ~
     session:
         cookie_lifetime:      43200
         name:                 BAPID
+    fragments:
+        enabled: true
+        path: /_fragment # used for controller action in template
 
 # Twig Configuration
 twig:
@@ -30,12 +32,19 @@ twig:
         bap:
             layout:           ::base.html.twig  # default layout across all Oro bundles
             start_route:      oro_default
+    form:
+        resources:
+            - 'OroUIBundle:Form:fields.html.twig'
+            - 'OroFormBundle:Form:fields.html.twig'
+            - 'OroTranslationBundle:Form:fields.html.twig'
+            - 'OroAddressBundle:Include:fields.html.twig'
 
 # Assetic Configuration
 assetic:
     debug:                    false
     use_controller:           false
     bundles:
+        - OroAsseticBundle
         - OroCRMDashboardBundle
         - OroAddressBundle
         - OroUIBundle
