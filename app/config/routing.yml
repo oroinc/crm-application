@@ -47,6 +47,14 @@ oro_config:
 oro_dataaudit:
     resource: "@OroDataAuditBundle/Resources/config/routing.yml"
 
+oro_address:
+    resource: "@OroAddressBundle/Resources/config/routing.yml"
+    prefix:   /
+
+oro_tag:
+    resource: "@OroTagBundle/Resources/config/routing.yml"
+    prefix:   /
+
 nelmio_api_doc:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
     prefix:   /api/doc
@@ -57,10 +65,6 @@ fos_js_routing:
 _imagine:
     resource: .
     type:     imagine
-
-oro_address:
-    resource: "@OroAddressBundle/Resources/config/routing.yml"
-    prefix:   /
 
 _bazinga_exposetranslation:
     resource: "@BazingaExposeTranslationBundle/Resources/config/routing/routing.yml"
