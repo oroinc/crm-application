@@ -19,6 +19,10 @@ oro_form:
     resource: "@OroFormBundle/Resources/config/routing.yml"
     prefix:   /
 
+oro_notification:
+    resource: "@OroNotificationBundle/Resources/config/routing.yml"
+    prefix:   /
+
 oro_user:
     resource: "@OroUserBundle/Resources/config/routing.yml"
 
@@ -79,3 +83,9 @@ _apy_jsformvalidation:
 oro_assets:
     resource: .
     type: oro_assetic
+
+oro_entity_config:
+    resource: "@OroEntityConfigBundle/Resources/config/routing.yml"
+
+oro_entity_extend:
+    resource: "@OroEntityExtendBundle/Resources/config/routing.yml"
