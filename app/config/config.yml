@@ -182,6 +182,11 @@ oro_user:
         name_format:
           value:              %%last%%, %%first%%
 
+oro_translation:
+    js_translation:
+        # order of domains reflects messages fallback
+        domains: [jsmessages, validators]
+
 oro_assetic:
     uncompress_js: ~
     uncompress_css: ~
