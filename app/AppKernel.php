@@ -56,9 +56,15 @@ class AppKernel extends Kernel
             new Oro\Bundle\TagBundle\OroTagBundle(),
             new Oro\Bundle\AsseticBundle\OroAsseticBundle(),
             new Oro\Bundle\TranslationBundle\OroTranslationBundle(),
+            new Oro\Bundle\OrganizationBundle\OroOrganizationBundle(),
+            new Oro\Bundle\NotificationBundle\OroNotificationBundle($this),
             new Oro\Bundle\EntityBundle\OroEntityBundle(),
             new Oro\Bundle\EntityConfigBundle\OroEntityConfigBundle(),
             new Oro\Bundle\EntityExtendBundle\OroEntityExtendBundle(),
+            new Oro\Bundle\ImapBundle\OroImapBundle(),
+
+            // BAPP bundles
+            new OroProfessional\Bundle\EwsBundle\OroProfessionalEwsBundle(),
 
             // CRM bundles
             new OroCRM\Bundle\AccountBundle\OroCRMAccountBundle(),
