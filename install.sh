@@ -11,3 +11,4 @@ php app/console oro:acl:load --env $ENV
 php app/console oro:navigation:init --env $ENV
 php app/console assets:install web --env $ENV
 php app/console assetic:dump --env $ENV
+php app/console oro:assetic:dump
