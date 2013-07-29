@@ -195,3 +195,15 @@ jms_di_extra:
     
 oro_entity_extend:
     backend:        Dynamic
+
+a2lix_translation_form:
+    locales: [en, fr]
+    default_required: true
+    templating: "OroUIBundle:Form:translateable.html.twig"
+    use_aop: false
+    default_class:
+        service: "A2lix\TranslationFormBundle\TranslationForm\DefaultTranslationForm"
+        listener: "A2lix\TranslationFormBundle\Form\EventListener\DefaultTranslationsSubscriber"
+        types:
+             translations: "A2lix\TranslationFormBundle\Form\Type\TranslationsType"
+             translationsFields: "A2lix\TranslationFormBundle\Form\Type\TranslationsFieldsType"
