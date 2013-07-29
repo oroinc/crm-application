@@ -55,6 +55,7 @@ assetic:
         - OroCRMAccountBundle
         - OroCRMContactBundle
         - OroAsseticBundle
+        - OroEntityExtendBundle
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -195,6 +196,7 @@ jms_di_extra:
     
 oro_entity_extend:
     backend:        Dynamic
+    backup:         "%kernel.root_dir%/entities/Backup/"
 
 a2lix_translation_form:
     locales: [en, fr]
