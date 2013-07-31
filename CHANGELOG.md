@@ -1,3 +1,8 @@
+CHANGELOG for 1.0.0-alpha4
+===================
+* 1.0.0-alpha4 (2013-07-31)
+ * Address Types Management. Added ability to set different type for addresses in Contact address book
+
 CHANGELOG for 1.0.0-alpha3
 ===================
 
