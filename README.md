@@ -29,9 +29,9 @@ http://getcomposer.org/ or just run the following command:
 
 - Clone https://github.com/laboro/crm-application.git OroCRM project with
 
-    git clone https://github.com/laboro/crm-application.git
+    git clone http://github.com/laboro/crm-application.git
 
-- Go to app/config folder and create parameters.yml using parameters.dist.yml as example. Update database name and credentials
+- Go to app/config folder and create parameters.yml using parameters.yml.dist as example. Update database name and credentials.
   Alternatively parameters.yml can be created automatically on the next step when run composer install command,
   you will be able to customize all the values interactively.
 - Install OroCRM dependencies with composer. If installation process seems too slow you can use "--prefer-dist" option.
