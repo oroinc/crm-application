@@ -55,6 +55,7 @@ assetic:
         - OroCRMAccountBundle
         - OroCRMContactBundle
         - OroAsseticBundle
+        - OroEntityExtendBundle
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -141,7 +142,8 @@ stof_doctrine_extensions:
             tree:             true
 
 services:
-    cache:
+    oro.cache.abstract:
+        abstract: true
         class:                Doctrine\Common\Cache\PhpFileCache
         arguments:            [%kernel.cache_dir%]
     twig.extension.intl:
@@ -195,6 +197,7 @@ jms_di_extra:
     
 oro_entity_extend:
     backend:        Dynamic
+    backup:         "%kernel.root_dir%/entities/Backup/"
 
 a2lix_translation_form:
     locales: [en, fr]
