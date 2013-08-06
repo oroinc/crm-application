@@ -66,7 +66,7 @@ class AppKernel extends Kernel
             new Oro\Bundle\ImapBundle\OroImapBundle(),
 
             // BAPP bundles
-            new OroProfessional\Bundle\EwsBundle\OroProfessionalEwsBundle(),
+            new OroPro\Bundle\EwsBundle\OroProfessionalEwsBundle(),
 
             // CRM bundles
             new OroCRM\Bundle\AccountBundle\OroCRMAccountBundle(),
