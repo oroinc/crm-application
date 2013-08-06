@@ -2,7 +2,13 @@
     "name": "oro/crm-dev",
     "description": "The \"OroCRM Development Edition\" distribution",
     "autoload": {
-        "psr-0": { "Oro\\Bundle": "src/Oro/src", "OroCRM\\Bundle": "src/OroCRM/src", "": "src/" }
+        "psr-0": {
+            "Oro\\Bundle": "src/Oro/src",
+            "OroProfessional\\Bundle": "src/OroProfessional/src",
+            "OroCRM\\Bundle": "src/OroCRM/src",
+            "OroCRMProfessional\\Bundle": "src/OroCRMProfessional/src",
+            "": "src/"
+        }
     },
     "require": {
         "php": ">=5.3.3",
@@ -37,7 +43,7 @@
         "ass/xmlsecurity": "dev-master",
         "besimple/soap-common": "dev-master",
         "besimple/soap-server": "dev-master",
-        "besimple/soap-bundle": "dev-master",
+        "besimple/soap-bundle": "dev-master#57a05d5c82f1401e9ab2aa2e89f94d72e602d2c9",
         "ddeboer/data-import": "dev-master",
         "stof/doctrine-extensions-bundle": "dev-master",
         "escapestudios/wsse-authentication-bundle": "2.1.x-dev",
@@ -47,7 +53,9 @@
         "leafo/lessphp": "dev-master",
         "willdurand/expose-translation-bundle": "0.2.*@dev",
         "apy/jsfv-bundle": "dev-master",
-        "genemu/form-bundle": "2.2.*"
+        "genemu/form-bundle": "2.2.*",
+        "zendframework/zend-mail": "2.1.*",
+        "a2lix/translation-form-bundle" : "1.*@dev"
     },
     "repositories": [
         {
