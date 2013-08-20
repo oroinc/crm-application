@@ -37,6 +37,7 @@ class AppKernel extends Kernel
             new A2lix\TranslationFormBundle\A2lixTranslationFormBundle(),
 
             // BAP bundles
+            new Oro\Bundle\SecurityBundle\OroSecurityBundle(),
             new Oro\Bundle\FlexibleEntityBundle\OroFlexibleEntityBundle(),
             new Oro\Bundle\UIBundle\OroUIBundle(),
             new Oro\Bundle\FormBundle\OroFormBundle(),
