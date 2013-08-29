@@ -3,6 +3,12 @@
     "description": "The OroCRM distribution",
     "homepage": "https://github.com/orocrm/crm-application.git",
     "license": "The Open Software License version 3.0",
+    "autoload": {
+        "psr-0": { 
+           "": "src/",
+           "Extend\\": "app/entities/"
+         }
+    },
     "require": {
         "php": ">=5.3.3",
         "oro/platform": "dev-release",
