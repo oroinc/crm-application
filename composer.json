@@ -11,19 +11,9 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "oro/platform": "dev-release",
-        "oro/crm": "dev-release"
+        "oro/platform": "1.0.*@dev"
+        "oro/crm": "1.0.*@dev"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/orocrm/platform.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/orocrm/crm.git"
-        }
-    ],
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
