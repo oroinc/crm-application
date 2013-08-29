@@ -1,3 +1,9 @@
+CHANGELOG for 1.0.0-alpha5
+* 1.0.0-alpha5 (2013-08-29)
+ * Contacts Improvements
+   * added ability to manage addresses from contact view page with Google Maps API support
+   * added support of multiple Emails and Phones for Contact
+
 CHANGELOG for 1.0.0-alpha4
 ===================
 * 1.0.0-alpha4 (2013-07-31)
