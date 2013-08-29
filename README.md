@@ -27,7 +27,7 @@ http://getcomposer.org/ or just run the following command:
 
     curl -s https://getcomposer.org/installer | php
 
-- Clone http://github.com/orocrm/crm-application.git OroCRM project with
+- Clone https://github.com/orocrm/crm-application.git OroCRM project with
 
     git clone http://github.com/orocrm/crm-application.git
 
