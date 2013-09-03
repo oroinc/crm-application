@@ -4,12 +4,14 @@ if "%1" NEQ "" (
     set ENV=%1
 )
 php app/console doctrine:schema:create --env %ENV% || goto :error
-php app/console oro:search:create-index --env %ENV% || goto :error
 php app/console doctrine:fixture:load --no-debug --no-interaction --env %ENV% || goto :error
 php app/console oro:acl:load --env %ENV% || goto :error
 php app/console oro:navigation:init --env %ENV% || goto :error
 php app/console oro:entity-config:update --env %ENV% || goto :error
 php app/console oro:entity-extend:create --env %ENV% || goto :error
+php app/console-framework cache:clear --env %ENV% || goto :error
+php app/console-framework doctrine:schema:update --env %ENV% --force || goto :error
+php app/console-framework oro:search:create-index --env %ENV% || goto :error
 php app/console assets:install web --env %ENV% || goto :error
 php app/console assetic:dump --env %ENV% || goto :error
 php app/console oro:assetic:dump || goto :error
