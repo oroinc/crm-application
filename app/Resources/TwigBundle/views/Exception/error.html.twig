@@ -20,5 +20,5 @@
 
 {% block head_script %}
     {{ parent() }}
-    <script type="text/javascript" src="{{ asset('bundles/oroui/js/errors.js') }}"></script>
+    <script type="text/javascript">require(['oroui/js/init-errors'])</script>
 {% endblock %}
