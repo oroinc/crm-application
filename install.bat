@@ -3,7 +3,7 @@ set ENV=prod
 if "%1" NEQ "" (
     set ENV=%1
 )
-rem php app/console doctrine:schema:create --env %ENV% || goto :error
+php app/console doctrine:schema:create --env %ENV% || goto :error
 php app/console doctrine:fixture:load --no-debug --no-interaction --env %ENV% || goto :error
 php app/console oro:acl:load --env %ENV% || goto :error
 php app/console oro:navigation:init --env %ENV% || goto :error
