@@ -43,7 +43,6 @@ class AppKernel extends Kernel
             new Oro\Bundle\JsFormValidationBundle\OroJsFormValidationBundle(),
             new Oro\Bundle\SoapBundle\OroSoapBundle(),
             new Oro\Bundle\SearchBundle\OroSearchBundle(),
-            new Oro\Bundle\DataFlowBundle\OroDataFlowBundle(),
             new Oro\Bundle\UserBundle\OroUserBundle(),
             new Oro\Bundle\MeasureBundle\OroMeasureBundle(),
             new Oro\Bundle\SegmentationTreeBundle\OroSegmentationTreeBundle(),
@@ -65,6 +64,7 @@ class AppKernel extends Kernel
             new Oro\Bundle\EntityExtendBundle\OroEntityExtendBundle(),
             new Oro\Bundle\ImapBundle\OroImapBundle(),
             new Oro\Bundle\CronBundle\OroCronBundle(),
+            new Oro\Bundle\WorkflowBundle\OroWorkflowBundle(),
 
             // BAPP bundles
             new OroPro\Bundle\EwsBundle\OroProfessionalEwsBundle(),
@@ -72,7 +72,8 @@ class AppKernel extends Kernel
             // CRM bundles
             new OroCRM\Bundle\AccountBundle\OroCRMAccountBundle(),
             new OroCRM\Bundle\ContactBundle\OroCRMContactBundle(),
-            new OroCRM\Bundle\DashboardBundle\OroCRMDashboardBundle()
+            new OroCRM\Bundle\DashboardBundle\OroCRMDashboardBundle(),
+            new OroCRM\Bundle\SalesBundle\OroCRMSalesBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
