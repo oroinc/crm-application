@@ -192,7 +192,7 @@ oro_translation:
 
 jms_di_extra:
     doctrine_integration: false
-    
+
 oro_entity_extend:
     backend:        Dynamic
     backup:         "%kernel.root_dir%/entities/Backup/"
@@ -200,3 +200,8 @@ oro_entity_extend:
 a2lix_translation_form:
     locales: [en, fr]
     templating: "OroUIBundle:Form:translateable.html.twig"
+
+jms_serializer:
+    metadata:
+        cache: false
+        auto_detection: true
