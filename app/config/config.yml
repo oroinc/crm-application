@@ -192,6 +192,25 @@ clank:
             service:          "oro_wamp.db_ping"
             time:             60000                           # the time in milliseconds between the "tick" function being called
 
+jms_di_extra:
+    doctrine_integration:     false
+
+a2lix_translation_form:
+    locales:                  [en, fr]
+    templating:               "OroUIBundle:Form:translateable.html.twig"
+
+lexik_maintenance:
+    authorized:
+        path:                 "maintenance"                   # Only for demo purposes, remove in production!
+#        ips:                  ["127.0.0.1"]                   # Optional. Authorized ip addresses
+    driver:
+        class:                Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver
+        options:
+            file_path:        %kernel.cache_dir%/lock
+
+#
+# ORO Bundles config
+#
 oro_search:
     engine:                   orm
     realtime_update:          true
@@ -213,13 +232,6 @@ oro_translation:
         # order of domains reflects messages fallback
         domains: [jsmessages, validators]
 
-jms_di_extra:
-    doctrine_integration: false
-
 oro_entity_extend:
     backend:        Dynamic
     backup:         "%kernel.root_dir%/entities/Backup/"
-
-a2lix_translation_form:
-    locales: [en, fr]
-    templating: "OroUIBundle:Form:translateable.html.twig"
