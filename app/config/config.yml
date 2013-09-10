@@ -18,6 +18,7 @@ framework:
     session:
         cookie_lifetime:      43200
         name:                 BAPID
+        handler_id:           session.handler.pdo
     fragments:
         enabled: true
         path: /_fragment # used for controller action in template
@@ -30,10 +31,12 @@ twig:
     strict_variables:         "%kernel.debug%"
     exception_controller:     "FOS\RestBundle\Controller\ExceptionController::showAction"
     globals:
-        env: %kernel.environment%
         bap:
             layout:           ::base.html.twig  # default layout across all Oro bundles
             start_route:      oro_default
+        ws:
+            port:             "%websocket_port%"
+            host:             "%websocket_host%"
     form:
         resources:
             - 'OroUIBundle:Form:fields.html.twig'
@@ -152,6 +155,17 @@ services:
          class: Twig_Extensions_Extension_Intl
          tags:
              - { name: twig.extension }
+    doctrine.dbal.default.wrapped_connection:
+        factory_service:      doctrine.dbal.default_connection
+        factory_method:       getWrappedConnection
+        class:                PDO
+    session.handler.pdo:
+        class:                Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler
+        arguments:
+            - "@doctrine.dbal.default.wrapped_connection"
+            -
+              db_table:       oro_session
+              db_id_col:      id
 
 escape_wsse_authentication:
     authentication_provider_class: Oro\Bundle\UserBundle\Security\WsseUserProvider
@@ -168,6 +182,15 @@ liip_imagine:
 genemu_form:
     select2: ~
     autocomplete: ~
+
+clank:
+    web_socket_server:
+        port:                 %websocket_port%                # The port the socket server will listen on
+#        host:                 %websocket_host%                # (optional) The host ip to bind to
+    periodic:
+        -
+            service:          "oro_wamp.db_ping"
+            time:             60000                           # the time in milliseconds between the "tick" function being called
 
 oro_search:
     engine:                   orm
@@ -192,7 +215,7 @@ oro_translation:
 
 jms_di_extra:
     doctrine_integration: false
-    
+
 oro_entity_extend:
     backend:        Dynamic
     backup:         "%kernel.root_dir%/entities/Backup/"
