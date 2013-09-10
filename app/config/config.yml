@@ -14,11 +14,15 @@ framework:
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig', 'php'] } #assets_version: SomeVersionScheme
     default_locale:  "%locale%"
-    trust_proxy_headers: false # Deprecated in 2.0; will be removed in 2.3 (used trusted_proxies instead)
     trusted_proxies: ~
     session:
         cookie_lifetime:      43200
         name:                 BAPID
+    fragments:
+        enabled: true
+        path: /_fragment # used for controller action in template
+    serializer:
+        enabled: true
 
 # Twig Configuration
 twig:
@@ -30,7 +34,13 @@ twig:
         bap:
             layout:           ::base.html.twig  # default layout across all Oro bundles
             start_route:      oro_default
-
+    form:
+        resources:
+            - 'OroUIBundle:Form:fields.html.twig'
+            - 'OroFormBundle:Form:fields.html.twig'
+            - 'OroTranslationBundle:Form:fields.html.twig'
+            - 'OroAddressBundle:Include:fields.html.twig'
+            - 'OroOrganizationBundle:Form:fields.html.twig'
 # Assetic Configuration
 assetic:
     debug:                    false
@@ -46,6 +56,8 @@ assetic:
         - OroWindowsBundle
         - OroCRMAccountBundle
         - OroCRMContactBundle
+        - OroAsseticBundle
+        - OroEntityExtendBundle
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -124,16 +136,16 @@ be_simple_soap:
             resource_type:    yml
 
 stof_doctrine_extensions:
+    default_locale: en
+    translation_fallback: true
     orm:
         default:
             translatable:     true
             tree:             true
-            loggable:         true
-    class:
-        loggable:             Oro\Bundle\DataAuditBundle\EventListener\LoggableListener
 
 services:
-    cache:
+    oro.cache.abstract:
+        abstract: true
         class:                Doctrine\Common\Cache\PhpFileCache
         arguments:            [%kernel.cache_dir%]
     twig.extension.intl:
@@ -172,3 +184,19 @@ oro_user:
     settings:
         name_format:
           value:              %%last%%, %%first%%
+
+oro_translation:
+    js_translation:
+        # order of domains reflects messages fallback
+        domains: [jsmessages, validators]
+
+jms_di_extra:
+    doctrine_integration: false
+    
+oro_entity_extend:
+    backend:        Dynamic
+    backup:         "%kernel.root_dir%/entities/Backup/"
+
+a2lix_translation_form:
+    locales: [en, fr]
+    templating: "OroUIBundle:Form:translateable.html.twig"

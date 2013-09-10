@@ -2,23 +2,34 @@
     "name": "oro/crm-dev",
     "description": "The \"OroCRM Development Edition\" distribution",
     "autoload": {
-        "psr-0": { "Oro\\Bundle": "src/Oro/src", "OroCRM\\Bundle": "src/OroCRM/src", "": "src/" }
+        "psr-0": {
+            "Oro\\Bundle": "src/Oro/src",
+            "OroPro\\Bundle": "src/OroPro/src",
+            "OroCRM\\Bundle": "src/OroCRM/src",
+            "OroCRMPro\\Bundle": "src/OroCRMPro/src",
+            "Extend\\": "app/entities/",
+            "": "src/"
+        }
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.1.*",
-        "doctrine/orm": ">=2.2.3,<2.5-dev",
-        "doctrine/doctrine-bundle": "1.1.*",
+
+        "symfony/symfony": "2.3.*",
+
+        "doctrine/orm": ">=2.2.3,<2.4-dev",
+        "doctrine/doctrine-bundle": "1.2.*",
         "doctrine/data-fixtures": "@dev",
         "doctrine/doctrine-fixtures-bundle": "@dev",
         "twig/extensions": "1.0.*@dev",
         "symfony/assetic-bundle": "2.3.*@dev",
-        "symfony/swiftmailer-bundle": "2.1.*",
-        "symfony/monolog-bundle": "2.1.*",
-        "sensio/distribution-bundle": "2.1.*",
-        "sensio/framework-extra-bundle": "2.1.*",
-        "sensio/generator-bundle": "2.1.*",
-        "jms/di-extra-bundle": "1.3.*@dev",
+        "symfony/swiftmailer-bundle": "2.3.*",
+        "symfony/monolog-bundle": "2.3.*",
+        "sensio/distribution-bundle": "2.3.*",
+        "sensio/framework-extra-bundle": "2.3.*",
+        "sensio/generator-bundle": "2.3.*",
+        "incenteev/composer-parameter-handler": "~2.0",
+
+        "jms/di-extra-bundle": "1.4.*@dev",
         "jms/job-queue-bundle": "dev-master",
         "jms/aop-bundle": "dev-master",
         "jms/serializer": "0.12.*@dev",
@@ -27,34 +38,28 @@
         "knplabs/knp-menu": "dev-master",
         "knplabs/knp-menu-bundle": "dev-master",
         "knplabs/knp-paginator-bundle": "dev-master",
-        "friendsofsymfony/rest-bundle": "0.11.*",
+        "friendsofsymfony/rest-bundle": "0.12.*",
         "friendsofsymfony/jsrouting-bundle": "1.1.*@dev",
         "nelmio/api-doc-bundle": "dev-master",
         "ass/xmlsecurity": "dev-master",
         "besimple/soap-common": "dev-master",
         "besimple/soap-server": "dev-master",
-        "besimple/soap-bundle": "dev-master",
+        "besimple/soap-bundle": "dev-master#57a05d5c82f1401e9ab2aa2e89f94d72e602d2c9",
         "ddeboer/data-import": "dev-master",
         "stof/doctrine-extensions-bundle": "dev-master",
         "escapestudios/wsse-authentication-bundle": "2.1.x-dev",
-        "sonata-project/admin-bundle": "2.1.x-dev",
-        "sonata-project/doctrine-orm-admin-bundle": "2.1.x-dev",
         "liip/imagine-bundle": "dev-master",
         "leafo/lessphp": "dev-master",
-        "symfony/icu": "1.2.*@dev",
-        "symfony/intl": "2.3.*@dev",
         "willdurand/expose-translation-bundle": "0.2.*@dev",
-        "apy/jsfv-bundle": "dev-master#a27847b4e0e52212277c4759826328b3cfaa15dc",
-        "genemu/form-bundle": "2.1.*"
+        "apy/jsfv-bundle": "dev-master",
+        "genemu/form-bundle": "2.2.*",
+        "zendframework/zend-mail": "2.1.*",
+        "a2lix/translation-form-bundle" : "1.*@dev",
+        "mtdowling/cron-expression": "1.0.*"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/SonataAdminBundle.git"
-        }
-    ],
     "scripts": {
         "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
@@ -62,6 +67,7 @@
             "php app/console fos:js-routing:dump --target=web/js/routes.js"
         ],
         "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
@@ -72,6 +78,9 @@
     "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
-        "symfony-web-dir": "web"
+        "symfony-web-dir": "web",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
     }
 }
