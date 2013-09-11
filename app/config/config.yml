@@ -186,7 +186,7 @@ genemu_form:
 clank:
     web_socket_server:
         port:                 %websocket_port%                # The port the socket server will listen on
-#        host:                 %websocket_host%                # (optional) The host ip to bind to
+        host:                 %websocket_host%                # (optional) The host ip to bind to
     periodic:
         -
             service:          "oro_wamp.db_ping"
