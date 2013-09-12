@@ -58,6 +58,12 @@ Access the `config.php` script from a browser:
 
 If you get any warnings or recommendations, fix them before moving on.
 
+Instant messaging between the browser and the web server
+--------------------------------------------------------
+To use this feature you need to configure parameters.yml websocket parameters and run server with console command
+
+ ```bash
+app/console clank:server
 
 [1]:  http://symfony.com/doc/2.1/book/installation.html
 [2]:  http://getcomposer.org/
