@@ -16,7 +16,7 @@ _apy_jsformvalidation:
     resource: "@APYJsFormValidationBundle/Resources/config/routing/routing.yml"
 
 #
-# ORO routes
+# OROCRM routes
 #
 orocrm_contact:
     resource: "@OroCRMContactBundle/Resources/config/routing.yml"
@@ -24,6 +24,13 @@ orocrm_contact:
 orocrm_account:
     resource: "@OroCRMAccountBundle/Resources/config/routing.yml"
 
+orocrm_sales:
+    resource: "@OroCRMSalesBundle/Resources/config/routing.yml"
+    prefix:   /sales
+
+#
+# ORO routes
+#
 oro_default:
     pattern:  /
     defaults:
@@ -59,9 +66,6 @@ oro_soap:
     resource: "@OroSoapBundle/Resources/config/routing.yml"
     prefix:   /api
 
-oro_dataflow:
-    resource: "@OroDataFlowBundle/Resources/config/routing.yml"
-
 oro_config:
     resource: "@OroConfigBundle/Resources/config/routing.yml"
 
@@ -96,3 +100,7 @@ oro_entity_extend:
 oro_cron:
     resource: "@OroCronBundle/Resources/config/routing.yml"
     prefix:   /cron
+
+oro_workflow:
+    resource: "@OroWorkflowBundle/Resources/config/routing.yml"
+    prefix:   /

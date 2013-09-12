@@ -8,6 +8,9 @@
 {% block before_content %}
 {% endblock %}
 
+{% block scripts_before %}
+{% endblock %}
+
 {% block content %}
 <div class="pagination-centered popup-box-errors">
         <h1><span>{{ status_code }}</span> {{ status_text }}</h1>
@@ -20,5 +23,5 @@
 
 {% block head_script %}
     {{ parent() }}
-    <script type="text/javascript" src="{{ asset('bundles/oroui/js/errors.js') }}"></script>
+    <script type="text/javascript">require(['oroui/js/init-errors'])</script>
 {% endblock %}
