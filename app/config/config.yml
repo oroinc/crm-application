@@ -206,7 +206,7 @@ lexik_maintenance:
     driver:
         class:                Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver
         options:
-            file_path:        %kernel.cache_dir%/lock
+            file_path:        %kernel.root_dir%/cache/lock
 
 #
 # ORO Bundles config
