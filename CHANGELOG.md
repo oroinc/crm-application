@@ -1,9 +1,9 @@
 CHANGELOG for 1.0.0-alpha6
 ===================
 
-* 1.0.0-alpha5 (2013-09-12)
-   * Added Leads and Opportunities
-   * Workflows
+* 1.0.0-alpha6 (2013-09-12)
+   * Leads and Opportunities
+   * Flexible Workflow Engine (FWE)
 
 CHANGELOG for 1.0.0-alpha5
 ===================
