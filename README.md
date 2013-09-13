@@ -38,7 +38,11 @@ http://getcomposer.org/ or just run the following command:
 
     php composer.phar install
 
+- Create the database (default name is "oro_crm")
+
 - Initialize application with install script (for Linux and Mac OS install.sh, for Windows install.bat)
+
+- Create a virtual host or run "app/console server:run"
 
 After installation you can login as application administrator using user name "admin" and password "admin".
 
@@ -65,5 +69,5 @@ To use this feature you need to configure parameters.yml websocket parameters an
  ```bash
 app/console clank:server
 
-[1]:  http://symfony.com/doc/2.1/book/installation.html
+[1]:  http://symfony.com/doc/2.3/book/installation.html
 [2]:  http://getcomposer.org/
