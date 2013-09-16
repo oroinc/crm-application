@@ -202,12 +202,12 @@ a2lix_translation_form:
 
 lexik_maintenance:
     authorized:
-        path:                 "maintenance"                   # Only for demo purposes, remove in production!
+        path:                 "maintenance|.*\.js"             # "maintenance" is only for demo purposes, remove in production!
 #        ips:                  ["127.0.0.1"]                   # Optional. Authorized ip addresses
     driver:
         class:                Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver
         options:
-            file_path:        %kernel.cache_dir%/lock
+            file_path:        %kernel.root_dir%/cache/lock
 
 #
 # ORO Bundles config
@@ -235,5 +235,3 @@ oro_translation:
 
 oro_entity_extend:
     backup:         "%kernel.root_dir%/entities/Extend/Backup/"
-    #backend:        Dynamic
-    #backup:         "%kernel.root_dir%/entities/Backup/"
