@@ -38,6 +38,8 @@ http://getcomposer.org/ or just run the following command:
 
     php composer.phar install
 
+- Create the database (default name is "oro_crm")
+
 - Initialize application with install script (for Linux and Mac OS install.sh, for Windows install.bat)
 
 After installation you can login as application administrator using user name "admin" and password "admin".
@@ -59,5 +61,5 @@ Access the `config.php` script from a browser:
 If you get any warnings or recommendations, fix them before moving on.
 
 
-[1]:  http://symfony.com/doc/2.1/book/installation.html
+[1]:  http://symfony.com/doc/2.3/book/installation.html
 [2]:  http://getcomposer.org/
