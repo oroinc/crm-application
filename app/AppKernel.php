@@ -78,6 +78,7 @@ class AppKernel extends Kernel
             new OroCRM\Bundle\ContactBundle\OroCRMContactBundle(),
             new OroCRM\Bundle\DashboardBundle\OroCRMDashboardBundle(),
             new OroCRM\Bundle\SalesBundle\OroCRMSalesBundle(),
+            new OroCRM\Bundle\ReportBundle\OroCRMReportBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
