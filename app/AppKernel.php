@@ -3,8 +3,6 @@
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
-include __DIR__ . '/entities/Extend/Entity/alias.php';
-
 class AppKernel extends Kernel
 {
     public function registerBundles()
@@ -65,7 +63,7 @@ class AppKernel extends Kernel
             new Oro\Bundle\EmailBundle\OroEmailBundle(),
             new Oro\Bundle\EntityBundle\OroEntityBundle(),
             new Oro\Bundle\EntityConfigBundle\OroEntityConfigBundle(),
-            new Oro\Bundle\EntityExtendBundle\OroEntityExtendBundle(),
+            new Oro\Bundle\EntityExtendBundle\OroEntityExtendBundle($this),
             new Oro\Bundle\ImapBundle\OroImapBundle(),
             new Oro\Bundle\CronBundle\OroCronBundle(),
             new Oro\Bundle\WorkflowBundle\OroWorkflowBundle(),
