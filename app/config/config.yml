@@ -18,7 +18,7 @@ framework:
     session:
         cookie_lifetime:      43200
         name:                 BAPID
-        handler_id:           session.handler.pdo
+        handler_id:           %session_handler%
     fragments:
         enabled: true
         path: /_fragment # used for controller action in template
