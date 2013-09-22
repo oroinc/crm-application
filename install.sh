@@ -4,6 +4,7 @@ if [ $1 ]
 then
     ENV="$1"
 fi
+php app/console oro:entity-extend:clear --env $ENV
 php app/console doctrine:schema:create --env $ENV
 php app/console oro:entity-config:update --env $ENV
 php app/console oro:entity-extend:load --env $ENV
