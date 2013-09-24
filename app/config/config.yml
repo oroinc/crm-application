@@ -18,7 +18,7 @@ framework:
     session:
         cookie_lifetime:      43200
         name:                 BAPID
-        handler_id:           session.handler.pdo
+        handler_id:           %session_handler%
     fragments:
         enabled: true
         path: /_fragment # used for controller action in template
@@ -90,6 +90,7 @@ doctrine:
         class_metadata_factory_name: Oro\Bundle\EntityExtendBundle\Mapping\ExtendClassMetadataFactory
         resolve_target_entities:
             Symfony\Component\Security\Core\User\UserInterface: Oro\Bundle\UserBundle\Entity\User
+
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -189,6 +190,7 @@ clank:
     web_socket_server:
         port:                 %websocket_port%                # The port the socket server will listen on
         host:                 %websocket_host%                # (optional) The host ip to bind to
+    session_handler:          session.handler.pdo
     periodic:
         -
             service:          "oro_wamp.db_ping"

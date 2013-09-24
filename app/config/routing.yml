@@ -28,6 +28,9 @@ orocrm_sales:
     resource: "@OroCRMSalesBundle/Resources/config/routing.yml"
     prefix:   /sales
 
+orocrm_report:
+    resource: "@OroCRMReportBundle/Resources/config/routing.yml"
+
 #
 # ORO routes
 #
@@ -111,3 +114,6 @@ oro_workflow:
 oro_importexport:
     resource: "@OroImportExportBundle/Resources/config/routing.yml"
     prefix:   /
+
+oro_installer:
+    resource: "@OroInstallerBundle/Resources/config/routing.yml"
