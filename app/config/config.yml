@@ -76,32 +76,13 @@ assetic:
 # Doctrine Configuration
 doctrine:
     dbal:
-        default_connection:   default
-        connections:
-            default:
-                driver:       "%database_driver%"
-                host:         "%database_host%"
-                port:         "%database_port%"
-                dbname:       "%database_name%"
-                user:         "%database_user%"
-                password:     "%database_password%"
-                charset:      UTF8
-            report_source:
-                driver:       "%database_driver_rs%"
-                host:         "%database_host_rs%"
-                port:         "%database_port_rs%"
-                dbname:       "%database_name_rs%"
-                user:         "%database_user_rs%"
-                password:     "%database_password_rs%"
-                charset:      UTF8
-            report_target:
-                driver:       "%database_driver_rt%"
-                host:         "%database_host_rt%"
-                port:         "%database_port_rt%"
-                dbname:       "%database_name_rt%"
-                user:         "%database_user_rt%"
-                password:     "%database_password_rt%"
-                charset:      UTF8
+        driver:               "%database_driver%"
+        host:                 "%database_host%"
+        port:                 "%database_port%"
+        dbname:               "%database_name%"
+        user:                 "%database_user%"
+        password:             "%database_password%"
+        charset:              UTF8
 
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
