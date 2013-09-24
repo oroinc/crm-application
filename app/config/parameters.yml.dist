@@ -1,10 +1,9 @@
 parameters:
-    database_driver:   pdo_mysql
     database_host:     127.0.0.1
     database_port:     ~
     database_name:     oro_crm
     database_user:     root
-    database_password: root
+    database_password: ~
 
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
@@ -15,8 +14,8 @@ parameters:
     websocket_host:    "127.0.0.1"
     websocket_port:    8080
 
-    session_handler:   session.handler.pdo
+    session_handler:   ~
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
-    installed:         '2013-01-01T00:00:00+00:00'
+    installed:         false
