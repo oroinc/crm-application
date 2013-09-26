@@ -5,6 +5,7 @@ then
     ENV="$1"
 fi
 php app/console oro:entity-extend:clear --env $ENV
+php app/console doctrine:schema:drop --env $ENV --force --full-database
 php app/console doctrine:schema:create --env $ENV
 php app/console doctrine:fixture:load --no-debug --no-interaction --env $ENV
 php app/console doctrine:fixtures:load --fixtures=src/Oro/src/Oro/Bundle/TestFrameworkBundle/Fixtures/ --append --no-debug --no-interaction --env $ENV
