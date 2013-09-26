@@ -76,14 +76,32 @@ assetic:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:               pdo_mysql
-        host:                 "%database_host%"
-        port:                 "%database_port%"
-        dbname:               "%database_name%"
-        user:                 "%database_user%"
-        password:             "%database_password%"
-        charset:              UTF8
-
+        default_connection:   default
+        connections:
+            default:
+                driver:       pdo_mysql
+                host:         "%database_host%"
+                port:         "%database_port%"
+                dbname:       "%database_name%"
+                user:         "%database_user%"
+                password:     "%database_password%"
+                charset:      UTF8
+            report_source:
+                driver:       pdo_mysql
+                host:         "%database_host%"
+                port:         "%database_port%"
+                dbname:       "%database_name%"
+                user:         "%database_user%"
+                password:     "%database_password%"
+                charset:      UTF8
+            report_target:
+                driver:       pdo_mysql
+                host:         "%database_host%"
+                port:         "%database_port%"
+                dbname:       "%database_name%"
+                user:         "%database_user%"
+                password:     "%database_password%"
+                charset:      UTF8
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping:         true
