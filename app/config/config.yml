@@ -214,9 +214,6 @@ clank:
             service:          "oro_wamp.db_ping"
             time:             60000                           # the time in milliseconds between the "tick" function being called
 
-jms_di_extra:
-    doctrine_integration:     false
-
 a2lix_translation_form:
     locales:                  [en, fr]
     templating:               "OroUIBundle:Form:translateable.html.twig"
@@ -243,11 +240,6 @@ oro_ui:
             value: "OroCRM"
         application_title:
             value: "OroCRM"
-
-oro_user:
-    settings:
-        name_format:
-          value:              %%last%%, %%first%%
 
 oro_translation:
     js_translation:
