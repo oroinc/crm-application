@@ -1,3 +1,24 @@
+CHANGELOG for 1.0.0-alpha6
+===================
+
+* 1.0.0-alpha6 (2013-09-12)
+   * Leads and Opportunities
+   * Flexible Workflow Engine (FWE)
+
+CHANGELOG for 1.0.0-alpha5
+===================
+
+* 1.0.0-alpha5 (2013-08-29)
+ * Contacts Improvements
+   * added ability to manage addresses from contact view page with Google Maps API support
+   * added support of multiple Emails and Phones for Contact
+
+CHANGELOG for 1.0.0-alpha4
+===================
+
+* 1.0.0-alpha4 (2013-07-31)
+ * Address Types Management. Added ability to set different type for addresses in Contact address book
+
 CHANGELOG for 1.0.0-alpha3
 ===================
 

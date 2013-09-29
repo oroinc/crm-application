@@ -6,11 +6,10 @@
     "autoload": {
         "psr-0": { 
            "": "src/",
-           "Extend\\": "app/entities/"
+           "OroEmail\\": "app/emails"
          }
     },
     "require": {
-        "php": ">=5.3.3",
         "oro/platform": "dev-release",
         "oro/crm": "dev-release"
     },
@@ -46,7 +45,6 @@
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
-        "symfony-assets-install": "symlink",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         }

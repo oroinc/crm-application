@@ -17,8 +17,6 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new JMS\AopBundle\JMSAopBundle(),
-            new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             //new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new JMS\JobQueueBundle\JMSJobQueueBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle($this),
@@ -37,44 +35,14 @@ class AppKernel extends Kernel
             new A2lix\TranslationFormBundle\A2lixTranslationFormBundle(),
             new JDare\ClankBundle\JDareClankBundle(),
             new Lexik\Bundle\MaintenanceBundle\LexikMaintenanceBundle(),
-
-            // BAP bundles
-            new Oro\Bundle\FlexibleEntityBundle\OroFlexibleEntityBundle(),
-            new Oro\Bundle\UIBundle\OroUIBundle(),
-            new Oro\Bundle\FormBundle\OroFormBundle(),
-            new Oro\Bundle\JsFormValidationBundle\OroJsFormValidationBundle(),
-            new Oro\Bundle\SoapBundle\OroSoapBundle(),
-            new Oro\Bundle\SearchBundle\OroSearchBundle(),
-            new Oro\Bundle\UserBundle\OroUserBundle(),
-            new Oro\Bundle\MeasureBundle\OroMeasureBundle(),
-            new Oro\Bundle\SegmentationTreeBundle\OroSegmentationTreeBundle(),
-            new Oro\Bundle\NavigationBundle\OroNavigationBundle(),
-            new Oro\Bundle\ConfigBundle\OroConfigBundle(),
-            new Oro\Bundle\FilterBundle\OroFilterBundle(),
-            new Oro\Bundle\GridBundle\OroGridBundle(),
-            new Oro\Bundle\WindowsBundle\OroWindowsBundle(),
-            new Oro\Bundle\AddressBundle\OroAddressBundle(),
-            new Oro\Bundle\DataAuditBundle\OroDataAuditBundle(),
-            new Oro\Bundle\TagBundle\OroTagBundle(),
-            new Oro\Bundle\AsseticBundle\OroAsseticBundle(),
-            new Oro\Bundle\TranslationBundle\OroTranslationBundle(),
-            new Oro\Bundle\OrganizationBundle\OroOrganizationBundle(),
-            new Oro\Bundle\NotificationBundle\OroNotificationBundle($this),
-            new Oro\Bundle\EmailBundle\OroEmailBundle(),
-            new Oro\Bundle\EntityBundle\OroEntityBundle(),
-            new Oro\Bundle\EntityConfigBundle\OroEntityConfigBundle(),
-            new Oro\Bundle\EntityExtendBundle\OroEntityExtendBundle(),
-            new Oro\Bundle\ImapBundle\OroImapBundle(),
-            new Oro\Bundle\CronBundle\OroCronBundle(),
-            new Oro\Bundle\WorkflowBundle\OroWorkflowBundle(),
-            new Oro\Bundle\SyncBundle\OroSyncBundle(),
-            new Oro\Bundle\PlatformBundle\OroPlatformBundle(),
+            new Sylius\Bundle\FlowBundle\SyliusFlowBundle(),
 
             // CRM bundles
             new OroCRM\Bundle\AccountBundle\OroCRMAccountBundle(),
             new OroCRM\Bundle\ContactBundle\OroCRMContactBundle(),
             new OroCRM\Bundle\DashboardBundle\OroCRMDashboardBundle(),
             new OroCRM\Bundle\SalesBundle\OroCRMSalesBundle(),
+            new OroCRM\Bundle\ReportBundle\OroCRMReportBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -86,6 +54,9 @@ class AppKernel extends Kernel
         if (in_array($this->getEnvironment(), array('test'))) {
             $bundles[] = new Oro\Bundle\TestFrameworkBundle\OroTestFrameworkBundle();
         }
+
+        // BAP bundles
+        $bundles = array_merge($bundles, Oro\Bundle\PlatformBundle\OroPlatformBundle::registeredBundles($this));
 
         return $bundles;
     }
