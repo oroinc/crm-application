@@ -1,15 +1,21 @@
 parameters:
-    database_driver:   pdo_mysql
-    database_host:     127.0.0.1
-    database_port:     ~
-    database_name:     oro_crm_test
-    database_user:     root
-    database_password: root
+    database_host:          127.0.0.1
+    database_port:          ~
+    database_name:          oro_crm_test
+    database_user:          root
+    database_password:      root
 
-    mailer_transport:  smtp
-    mailer_host:       127.0.0.1
-    mailer_user:       ~
-    mailer_password:   ~
+    mailer_transport:       smtp
+    mailer_host:            127.0.0.1
+    mailer_user:            ~
+    mailer_password:        ~
 
-    locale:            en
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    # WebSocket server config
+    websocket_host:         "127.0.0.1"
+    websocket_port:         8080
+
+    session_handler:        ~
+
+    locale:                 en
+    secret:                 ThisTokenIsNotSoSecretChangeIt
+    installed:              true

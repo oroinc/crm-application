@@ -12,7 +12,7 @@ Important Note: this application is not production ready and is intended for eva
 Requirements
 ------------
 
-OroCRM requires Symfony 2, Doctrine 2 and PHP 5.3.3 or above.
+OroCRM requires Symfony 2, Doctrine 2 and PHP 5.3.8 or above.
 
 Installation instructions:
 -------------------------
@@ -31,6 +31,8 @@ http://getcomposer.org/ or just run the following command:
 
     git clone http://github.com/orocrm/crm-application.git
 
+- Make sure that you have installed Java
+
 - Go to app/config folder and create parameters.yml using parameters.yml.dist as example. Update database name and credentials.
   Alternatively parameters.yml can be created automatically on the next step when run composer install command,
   you will be able to customize all the values interactively.
@@ -38,9 +40,11 @@ http://getcomposer.org/ or just run the following command:
 
     php composer.phar install
 
-- Initialize application with install script (for Linux and Mac OS install.sh, for Windows install.bat)
+- Create the database (default name is "oro_crm")
 
-After installation you can login as application administrator using user name "admin" and password "admin".
+- Open the OroCRM URL and initialize application with Install Wizard
+  Alternatively with script (for Linux and Mac OS install.sh, for Windows install.bat)
+  After installation you can login as application administrator using user name "admin" and password "admin".
 
 Checking your System Configuration
 -------------------------------------
@@ -58,12 +62,6 @@ Access the `config.php` script from a browser:
 
 If you get any warnings or recommendations, fix them before moving on.
 
-Instant messaging between the browser and the web server
---------------------------------------------------------
-To use this feature you need to configure parameters.yml websocket parameters and run server with console command
 
- ```bash
-app/console clank:server
-
-[1]:  http://symfony.com/doc/2.1/book/installation.html
+[1]:  http://symfony.com/doc/2.3/book/installation.html
 [2]:  http://getcomposer.org/
