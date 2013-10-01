@@ -29,7 +29,7 @@ http://getcomposer.org/ or just run the following command:
 
 - Clone https://github.com/orocrm/crm-application.git OroCRM project with
 
-    git clone http://github.com/orocrm/crm-application.git
+    git clone https://github.com/orocrm/crm-application.git
 
 - Make sure that you have installed Java
 
