@@ -20,3 +20,5 @@ php app/console assets:install web --env $ENV
 php app/console assetic:dump --env $ENV
 php app/console oro:assetic:dump --env $ENV
 php app/console oro:translation:dump --env $ENV
+php app/console oro:requirejs:config --env $ENV
+php app/console oro:requirejs:build --env $ENV
