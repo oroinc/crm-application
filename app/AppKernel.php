@@ -1,6 +1,5 @@
 <?php
 
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
 use Oro\Bundle\DistributionBundle\OroKernel;
