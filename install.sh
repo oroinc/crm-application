@@ -15,6 +15,7 @@ php app/console oro:entity-extend:init --env $ENV
 php app/console oro:entity-extend:update-config --env $ENV
 php app/console doctrine:schema:update --env $ENV --force
 php app/console oro:search:create-index --env $ENV
+php app/console oro:localization:dump --env $ENV
 php app/console assets:install web --env $ENV
 php app/console assetic:dump --env $ENV
 php app/console oro:assetic:dump --env $ENV

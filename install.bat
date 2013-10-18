@@ -15,6 +15,7 @@ php app/console oro:entity-extend:init --env %ENV% || goto :error
 php app/console oro:entity-extend:update-config --env %ENV% || goto :error
 php app/console doctrine:schema:update --env %ENV% --force || goto :error
 php app/console oro:search:create-index --env %ENV% || goto :error
+php app/console oro:localization:dump --env $ENV || goto :error
 php app/console assets:install web --env %ENV% || goto :error
 php app/console assetic:dump --env %ENV% || goto :error
 php app/console oro:assetic:dump --env %ENV% || goto :error
