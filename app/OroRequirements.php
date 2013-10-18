@@ -7,20 +7,32 @@ require_once __DIR__ . '/SymfonyRequirements.php';
  */
 class OroRequirements extends SymfonyRequirements
 {
+    const REQUIRED_PHP_VERSION = '5.3.9';
+
     public function __construct()
     {
         parent::__construct();
 
+        $phpVersion  = phpversion();
         $gdVersion   = defined('GD_VERSION') ? (float) GD_VERSION : null;
         $curlVersion = function_exists('curl_version') ? curl_version() : null;
 
-        $this->addRequirement(
+        $this->addOroRequirement(
+            version_compare($phpVersion, self::REQUIRED_PHP_VERSION, '>='),
+            sprintf('PHP version must be at least %s (%s installed)', self::REQUIRED_PHP_VERSION, $phpVersion),
+            sprintf('You are running PHP version "<strong>%s</strong>", but Oro needs at least PHP "<strong>%s</strong>" to run.
+                Before using Oro, upgrade your PHP installation, preferably to the latest version.',
+                $phpVersion, self::REQUIRED_PHP_VERSION),
+            sprintf('Install PHP %s or newer (installed version is %s)', self::REQUIRED_PHP_VERSION, $phpVersion)
+        );
+
+        $this->addOroRequirement(
             null !== $gdVersion && $gdVersion >= 2.0,
             'GD extension must be at least 2.0',
             'Install and enable the <strong>JSON</strong> extension.'
         );
 
-        $this->addRequirement(
+        $this->addOroRequirement(
             function_exists('mcrypt_encrypt'),
             'mcrypt_encrypt() should be available',
             'Install and enable the <strong>Mcrypt</strong> extension.'
@@ -66,17 +78,30 @@ class OroRequirements extends SymfonyRequirements
             'Set the "<strong>memory_limit</strong>" setting in php.ini<a href="#phpini">*</a> to at least "256M".'
         );
 
-        $this->addRequirement(
+        $this->addOroRequirement(
             is_writable($baseDir . '/web/uploads'),
             'web/uploads/ directory must be writable',
             'Change the permissions of the "<strong>web/uploads/</strong>" directory so that the web server can write into it.'
         );
 
-        $this->addRequirement(
+        $this->addOroRequirement(
             is_writable($baseDir . '/web/bundles'),
             'web/bundles/ directory must be writable',
             'Change the permissions of the "<strong>web/bundles/</strong>" directory so that the web server can write into it.'
         );
+    }
+
+    /**
+     * Adds an Oro specific requirement.
+     *
+     * @param Boolean     $fulfilled   Whether the requirement is fulfilled
+     * @param string      $testMessage The message for testing the requirement
+     * @param string      $helpHtml    The help text formatted in HTML for resolving the problem
+     * @param string|null $helpText    The help text (when null, it will be inferred from $helpHtml, i.e. stripped from HTML tags)
+     */
+    public function addOroRequirement($fulfilled, $testMessage, $helpHtml, $helpText = null)
+    {
+        $this->add(new OroRequirement($fulfilled, $testMessage, $helpHtml, $helpText, false));
     }
 
     /**
@@ -87,7 +112,7 @@ class OroRequirements extends SymfonyRequirements
     public function getMandatoryRequirements()
     {
         return array_filter($this->getRequirements(), function ($requirement) {
-            return !($requirement instanceof PhpIniRequirement);
+            return !($requirement instanceof PhpIniRequirement) && !($requirement instanceof OroRequirement);
         });
     }
 
@@ -100,6 +125,18 @@ class OroRequirements extends SymfonyRequirements
     {
         return array_filter($this->getRequirements(), function ($requirement) {
             return $requirement instanceof PhpIniRequirement;
+        });
+    }
+
+    /**
+     * Get the list of Oro specific requirements
+     *
+     * @return array
+     */
+    public function getOroRequirements()
+    {
+        return array_filter($this->getRequirements(), function ($requirement) {
+            return $requirement instanceof OroRequirement;
         });
     }
 
@@ -136,4 +173,8 @@ class OroRequirements extends SymfonyRequirements
 
         return (float) $val;
     }
+}
+
+class OroRequirement extends Requirement
+{
 }
