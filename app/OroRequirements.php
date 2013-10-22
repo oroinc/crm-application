@@ -29,7 +29,7 @@ class OroRequirements extends SymfonyRequirements
         $this->addOroRequirement(
             null !== $gdVersion && $gdVersion >= 2.0,
             'GD extension must be at least 2.0',
-            'Install and enable the <strong>JSON</strong> extension.'
+            'Install and enable the <strong>GD</strong> extension.'
         );
 
         $this->addOroRequirement(
