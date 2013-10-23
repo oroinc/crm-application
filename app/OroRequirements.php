@@ -88,7 +88,7 @@ class OroRequirements extends SymfonyRequirements
 
         $this->addOroRequirement(
             $jreExists,
-            'Java Runtime Environment should be installed',
+            'Java Runtime Environment must be installed',
             'Install the <strong>JRE</strong>.'
         );
 
