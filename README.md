@@ -42,10 +42,9 @@ http://getcomposer.org/ or just run the following command:
 
 - Create the database (default name is "oro_crm")
 
-- Open the BAP URL and initialize application with Install Wizard
+- Open the OroCRM URL and initialize application with Install Wizard
   Alternatively with script (for Linux and Mac OS install.sh, for Windows install.bat)
-
-After installation you can login as application administrator using user name "admin" and password "admin".
+  After installation you can login as application administrator using user name "admin" and password "admin".
 
 Checking your System Configuration
 -------------------------------------
