@@ -2,20 +2,28 @@
 
 require_once __DIR__ . '/SymfonyRequirements.php';
 
+use Symfony\Component\Process\ProcessBuilder;
+
 /**
  * This class specifies all requirements and optional recommendations that are necessary to run the Oro Application.
  */
 class OroRequirements extends SymfonyRequirements
 {
-    const REQUIRED_PHP_VERSION = '5.3.9';
+    const REQUIRED_PHP_VERSION = '5.4.4';
 
     public function __construct()
     {
         parent::__construct();
 
+        $jreExists = new ProcessBuilder(array('java', '-version'));
+        $jreExists = $jreExists->getProcess();
+
+        $jreExists->run();
+
         $phpVersion  = phpversion();
         $gdVersion   = defined('GD_VERSION') ? (float) GD_VERSION : null;
         $curlVersion = function_exists('curl_version') ? curl_version() : null;
+        $jreExists   = strpos($jreExists->getErrorOutput(), 'java version') !== false;
 
         $this->addOroRequirement(
             version_compare($phpVersion, self::REQUIRED_PHP_VERSION, '>='),
@@ -29,7 +37,7 @@ class OroRequirements extends SymfonyRequirements
         $this->addOroRequirement(
             null !== $gdVersion && $gdVersion >= 2.0,
             'GD extension must be at least 2.0',
-            'Install and enable the <strong>GD</strong> extension.'
+            'Install and enable the <strong>JSON</strong> extension.'
         );
 
         $this->addOroRequirement(
@@ -76,6 +84,12 @@ class OroRequirements extends SymfonyRequirements
             false,
             'memory_limit should be at least 256M',
             'Set the "<strong>memory_limit</strong>" setting in php.ini<a href="#phpini">*</a> to at least "256M".'
+        );
+
+        $this->addOroRequirement(
+            $jreExists,
+            'Java Runtime Environment must be installed',
+            'Install the <strong>JRE</strong>.'
         );
 
         $this->addOroRequirement(
