@@ -7,13 +7,13 @@ fi
 php app/console oro:entity-extend:clear --env $ENV
 php app/console doctrine:schema:drop --env $ENV --force --full-database
 php app/console doctrine:schema:create --env $ENV
-php app/console doctrine:fixture:load --no-debug --no-interaction --env $ENV
-php app/console doctrine:fixtures:load --fixtures=src/Oro/src/Oro/Bundle/TestFrameworkBundle/Fixtures/ --append --no-debug --no-interaction --env $ENV
-php app/console oro:navigation:init --env $ENV
 php app/console oro:entity-config:init --env $ENV
 php app/console oro:entity-extend:init --env $ENV
 php app/console oro:entity-extend:update-config --env $ENV
 php app/console doctrine:schema:update --env $ENV --force
+php app/console doctrine:fixture:load --append --no-debug --no-interaction --env $ENV
+php app/console doctrine:fixtures:load --fixtures=src/Oro/src/Oro/Bundle/TestFrameworkBundle/Fixtures/ --append --no-debug --no-interaction --env $ENV
+php app/console oro:navigation:init --env $ENV
 php app/console oro:search:create-index --env $ENV
 php app/console oro:localization:dump --env $ENV
 php app/console assets:install web --env $ENV
