@@ -11,7 +11,7 @@ php app/console oro:entity-config:init --env %ENV% || goto :error
 php app/console oro:entity-extend:init --env %ENV% || goto :error
 php app/console oro:entity-extend:update-config --env %ENV% || goto :error
 php app/console doctrine:schema:update --env %ENV% --force || goto :error
-php app/console doctrine:fixture:load --no-debug --no-interaction --env %ENV% || goto :error
+php app/console doctrine:fixture:load --append --no-debug --no-interaction --env %ENV% || goto :error
 php app/console doctrine:fixtures:load --fixtures=src/Oro/src/Oro/Bundle/TestFrameworkBundle/Fixtures/ --append --no-debug --no-interaction --env  %ENV% || goto :error
 php app/console oro:navigation:init --env %ENV% || goto :error
 php app/console oro:search:create-index --env %ENV% || goto :error
