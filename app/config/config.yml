@@ -38,31 +38,16 @@ twig:
         ws:
             port:             "%websocket_port%"
             host:             "%websocket_host%"
-    form:
-        resources:
-            - 'OroUIBundle:Form:fields.html.twig'
-            - 'OroFormBundle:Form:fields.html.twig'
-            - 'OroTranslationBundle:Form:fields.html.twig'
-            - 'OroAddressBundle:Include:fields.html.twig'
-            - 'OroOrganizationBundle:Form:fields.html.twig'
-            - 'OroSecurityBundle:Form:fields.html.twig'
+
 # Assetic Configuration
 assetic:
     debug:                    false
     use_controller:           false
     bundles:
         - OroCRMDashboardBundle
-        - OroAddressBundle
-        - OroUIBundle
-        - OroUserBundle
-        - OroGridBundle
-        - OroFilterBundle
-        - OroNavigationBundle
-        - OroWindowsBundle
         - OroCRMAccountBundle
         - OroCRMContactBundle
-        - OroAsseticBundle
-        - OroEntityExtendBundle
+
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
