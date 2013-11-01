@@ -3,6 +3,7 @@
 require_once __DIR__ . '/SymfonyRequirements.php';
 
 use Symfony\Component\Process\ProcessBuilder;
+use Symfony\Component\Intl\Intl;
 
 /**
  * This class specifies all requirements and optional recommendations that are necessary to run the Oro Application.
@@ -23,6 +24,7 @@ class OroRequirements extends SymfonyRequirements
         $phpVersion  = phpversion();
         $gdVersion   = defined('GD_VERSION') ? (float) GD_VERSION : null;
         $curlVersion = function_exists('curl_version') ? curl_version() : null;
+        $icuVersion  = Intl::getIcuVersion();
         $jreExists   = strpos($jreExists->getErrorOutput(), 'java version') !== false;
 
         $this->addOroRequirement(
@@ -44,6 +46,18 @@ class OroRequirements extends SymfonyRequirements
             function_exists('mcrypt_encrypt'),
             'mcrypt_encrypt() should be available',
             'Install and enable the <strong>Mcrypt</strong> extension.'
+        );
+
+        $this->addOroRequirement(
+            class_exists('Locale'),
+            'intl extension should be available',
+            'Install and enable the <strong>intl</strong> extension.'
+        );
+
+        $this->addOroRequirement(
+            null !== $icuVersion && (float) $icuVersion >= 4.4,
+            'icu library must be at least 4.4',
+            'Install and enable the <strong>icu</strong> library.'
         );
 
         $this->addRecommendation(

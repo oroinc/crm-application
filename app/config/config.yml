@@ -145,8 +145,8 @@ be_simple_soap:
         soap:
             namespace:        http://symfony.loc/Api/1.0/
             binding:          rpc-literal
-            resource:         "%kernel.root_dir%/../app/config/soap.yml"
-            resource_type:    yml
+            resource:         .
+            resource_type:    oro_soap
 
 stof_doctrine_extensions:
     default_locale: en
@@ -207,6 +207,9 @@ a2lix_translation_form:
     locales:                  [en, fr]
     templating:               "OroUIBundle:Form:translateable.html.twig"
 
+apy_js_form_validation:
+    check_modes:              [submit]
+
 lexik_maintenance:
     authorized:
         path:                 "maintenance|.*\.js"             # "maintenance" is only for demo purposes, remove in production!
@@ -219,27 +222,12 @@ lexik_maintenance:
 #
 # ORO Bundles config
 #
-oro_search:
-    engine:                   orm
-    realtime_update:          true
-
 oro_ui:
     settings:
         application_name:
-            value: "OroCRM"
+            value:            "OroCRM"
         application_title:
-            value: "OroCRM"
-
-oro_translation:
-    js_translation:
-        # order of domains reflects messages fallback
-        domains: [jsmessages, validators]
-
-oro_entity_extend:
-    backup:         "%kernel.root_dir%/entities/Extend/Backup/"
-
-apy_js_form_validation:
-    check_modes: [submit]
+            value:            "OroCRM"
 
 oro_require_js:
     config:
