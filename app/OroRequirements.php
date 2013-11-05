@@ -20,6 +20,9 @@ class OroRequirements extends SymfonyRequirements
         $jreExists = $jreExists->getProcess();
 
         $jreExists->run();
+        while ($jreExists->isRunning()) {
+            // waiting for process to finish
+        }
 
         $phpVersion  = phpversion();
         $gdVersion   = defined('GD_VERSION') ? (float) GD_VERSION : null;
