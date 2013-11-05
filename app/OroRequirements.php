@@ -16,7 +16,7 @@ class OroRequirements extends SymfonyRequirements
     {
         parent::__construct();
 
-        $jreExists = new Proces('java -version');
+        $jreExists = new Process('java -version');
         $jreExists->run();
 
         $phpVersion  = phpversion();
