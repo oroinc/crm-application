@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/SymfonyRequirements.php';
 
-use Symfony\Component\Process\Process;
+use Symfony\Component\Process\ProcessBuilder;
 use Symfony\Component\Intl\Intl;
 
 /**
@@ -16,8 +16,13 @@ class OroRequirements extends SymfonyRequirements
     {
         parent::__construct();
 
-        $jreExists = new Process('java -version');
+        $jreExists = new ProcessBuilder(array('java', '-version'));
+        $jreExists = $jreExists->getProcess();
+
         $jreExists->run();
+        while ($jreExists->isRunning()) {
+            // waiting for process to finish
+        }
 
         $phpVersion  = phpversion();
         $gdVersion   = defined('GD_VERSION') ? (float) GD_VERSION : null;
