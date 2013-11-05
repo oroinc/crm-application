@@ -11,6 +11,9 @@ use Symfony\Component\Intl\Intl;
 class OroRequirements extends SymfonyRequirements
 {
     const REQUIRED_PHP_VERSION = '5.4.4';
+    const REQUIRED_GD_VERSION = '2.0';
+    const REQUIRED_CURL_VERSION = '7.0';
+    const REQUIRED_ICU_VERSION = '4.4';
 
     public function __construct()
     {
@@ -25,7 +28,7 @@ class OroRequirements extends SymfonyRequirements
         }
 
         $phpVersion  = phpversion();
-        $gdVersion   = defined('GD_VERSION') ? (float) GD_VERSION : null;
+        $gdVersion   = defined('GD_VERSION') ? GD_VERSION : null;
         $curlVersion = function_exists('curl_version') ? curl_version() : null;
         $icuVersion  = Intl::getIcuVersion();
         $jreExists   = strpos($jreExists->getErrorOutput(), 'java version') !== false;
@@ -40,9 +43,9 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addOroRequirement(
-            null !== $gdVersion && $gdVersion >= 2.0,
-            'GD extension must be at least 2.0',
-            'Install and enable the <strong>JSON</strong> extension.'
+            null !== $gdVersion && version_compare($gdVersion, self::REQUIRED_GD_VERSION, '>='),
+            'GD extension must be at least ' . self::REQUIRED_GD_VERSION,
+            'Install and enable the <strong>GD</strong> extension at least ' . self::REQUIRED_GD_VERSION . ' version'
         );
 
         $this->addOroRequirement(
@@ -58,9 +61,9 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addOroRequirement(
-            null !== $icuVersion && (float) $icuVersion >= 4.4,
-            'icu library must be at least 4.4',
-            'Install and enable the <strong>icu</strong> library.'
+            null !== $icuVersion && version_compare($icuVersion, self::REQUIRED_ICU_VERSION, '>='),
+            'icu library must be at least ' . self::REQUIRED_ICU_VERSION,
+            'Install and enable the <strong>icu</strong> library at least ' . self::REQUIRED_ICU_VERSION . ' version'
         );
 
         $this->addRecommendation(
@@ -70,9 +73,9 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addRecommendation(
-            null !== $curlVersion && (float) $curlVersion['version'] >= 7.0,
-            'cURL extension must be at least 7.0',
-            'Install and enable the <strong>cURL</strong> extension.'
+            null !== $curlVersion && version_compare($curlVersion['version'], self::REQUIRED_CURL_VERSION, '>='),
+            'cURL extension must be at least ' . self::REQUIRED_CURL_VERSION,
+            'Install and enable the <strong>cURL</strong> extension at least ' . self::REQUIRED_CURL_VERSION . ' version'
         );
 
         // Windows specific checks
