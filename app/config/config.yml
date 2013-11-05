@@ -246,7 +246,8 @@ oro_require_js:
 #        generateSourceMaps: true
 #        useSourceUrl: true
     # it's better to set "node" as js_engine, if nodejs is installed
-    js_engine: "java -Xss10m -Xms512m -Xmx1024m -cp %kernel.root_dir%/Resources/java/js.jar org.mozilla.javascript.tools.shell.Main"
+#    js_engine: "java -Xss10m -Xms512m -Xmx1024m -cp %kernel.root_dir%/Resources/java/js.jar org.mozilla.javascript.tools.shell.Main"
+    js_engine: node
 
 oro_help:
     defaults:
