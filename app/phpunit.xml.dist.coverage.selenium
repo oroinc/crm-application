@@ -14,18 +14,13 @@
     bootstrap                   = "bootstrap.php.cache" >
 
     <logging>
+      <log type="coverage-php" target="../build/coverage.cov"/>
       <log type="junit" target="../build/logs/phpunit.xml"/>
     </logging>
 
     <testsuites>
         <testsuite name="Project Test Suite">
             <directory suffix="Test.php">../src/*/src/*/Bundle/*Bundle/Tests/Unit</directory>
-            <directory suffix="Test.php">../src/*/src/*/Bundle/*Bundle/Tests/Functional</directory>
-        </testsuite>
-        <testsuite name="Unit Tests">
-            <directory suffix="Test.php">../src/*/src/*/Bundle/*Bundle/Tests/Unit</directory>
-        </testsuite>
-        <testsuite name="Functional Tests">
             <directory suffix="Test.php">../src/*/src/*/Bundle/*Bundle/Tests/Functional</directory>
         </testsuite>
         <testsuite name="Project OroCRM Unit Tests">
@@ -43,9 +38,6 @@
         <testsuite name="Project Selenium Tests">
             <directory suffix="Test.php">../src/OroCRM/src/OroCRM/Bundle/*Bundle/Tests/Selenium</directory>
         </testsuite>
-        <testsuite name="Project Behat Tests">
-            <directory suffix="Test.php">../src/Oro*/src/Oro*/Bundle/*Bundle/Tests/Behat</directory>
-        </testsuite>
     </testsuites>
 
     <!--
@@ -54,23 +46,21 @@
     </php>
     -->
     <php>
-        <const name="PHPUNIT_LOAD_LIMIT" value="1.2"/>
-        <const name="PHPUNIT_PAGE_LIMIT" value="0.5"/>
         <const name="PHPUNIT_TESTSUITE_BROWSER_PATH_WINNT" value="C:\Dev\phantomjs-1.9.0-windows\phantomjs.exe"/>
         <const name="PHPUNIT_TESTSUITE_BROWSER_PATH_LINUX" value="/usr/bin/phantomjs"/>
-        <const name="PHPUNIT_TESTSUITE" value="true"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_HOST" value="127.0.0.1"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PORT" value="4444"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM2_BROWSER" value="phantomjs"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_TESTS_URL" value="http://localhost.com"/>
-        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_TESTS_URL_COVERAGE" value="http://localhost.com/bundles/acmetests/scripts/phpunit_coverage.php"/>
-        <const name="MAX_EXECUTION_TIME" value="120000"/>
+        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_TESTS_URL_COVERAGE" value="http://localhost.com/bundles/orotestframework/scripts/phpunit_coverage.php"/>
+        <const name="MAX_EXECUTION_TIME" value="60000"/>
         <const name="TIME_OUT" value="5000"/>
         <const name="viewportWIDTH" value="1900"/>
         <const name="viewportHEIGHT" value="1080"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PATH_LOGS" value="app/log"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_LOGIN" value="admin"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PASS" value="admin"/>
+        <const name="PHPUNIT_SELENIUM_COVERAGE" value="1"/>
     </php>
     <listeners>
         <listener class="TestListener" file="src/Oro/src/Oro/Bundle/TestFrameworkBundle/Test/TestListener.php">
@@ -94,12 +84,9 @@
                 <directory>../src/*/src/*/Bundle/*Bundle/Resources</directory>
                 <directory>../src/*/src/*/Bundle/*Bundle/Tests</directory>
                 <directory>../src/*/src/*/Bundle/*Bundle/vendor</directory>
-                <directory>../src/*/src/*/Bundle/*Bundle/DependencyInjection</directory>
                 <directory suffix="Bundle.php">../src/*/src/*/Bundle/*Bundle</directory>
-                <directory>../src/*/Bundle/*Bundle/DependencyInjection</directory>
                 <directory suffix="Bundle.php">../src/*/Bundle/*Bundle</directory>
             </exclude>
         </whitelist>
     </filter>
-
 </phpunit>

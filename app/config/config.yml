@@ -13,17 +13,18 @@ framework:
     csrf_protection: true
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig', 'php'] } #assets_version: SomeVersionScheme
-    default_locale:  "%locale%"
-    trusted_proxies: ~
+    default_locale:           "%locale%"
+    trusted_proxies:          ~
     session:
-        cookie_lifetime:      43200
         name:                 BAPID
-        handler_id:           session.handler.pdo
+        handler_id:           %session_handler%
+        save_path:            %kernel.root_dir%/cache/sessions
+        gc_maxlifetime:       3600
     fragments:
-        enabled: true
-        path: /_fragment # used for controller action in template
+        enabled:              true
+        path:                 /_fragment # used for controller action in template
     serializer:
-        enabled: true
+        enabled:              true
 
 # Twig Configuration
 twig:
@@ -37,30 +38,16 @@ twig:
         ws:
             port:             "%websocket_port%"
             host:             "%websocket_host%"
-    form:
-        resources:
-            - 'OroUIBundle:Form:fields.html.twig'
-            - 'OroFormBundle:Form:fields.html.twig'
-            - 'OroTranslationBundle:Form:fields.html.twig'
-            - 'OroAddressBundle:Include:fields.html.twig'
-            - 'OroOrganizationBundle:Form:fields.html.twig'
+
 # Assetic Configuration
 assetic:
     debug:                    false
     use_controller:           false
     bundles:
         - OroCRMDashboardBundle
-        - OroAddressBundle
-        - OroUIBundle
-        - OroUserBundle
-        - OroGridBundle
-        - OroFilterBundle
-        - OroNavigationBundle
-        - OroWindowsBundle
         - OroCRMAccountBundle
         - OroCRMContactBundle
-        - OroAsseticBundle
-        - OroEntityExtendBundle
+
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -75,24 +62,49 @@ assetic:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:               "%database_driver%"
-        host:                 "%database_host%"
-        port:                 "%database_port%"
-        dbname:               "%database_name%"
-        user:                 "%database_user%"
-        password:             "%database_password%"
-        charset:              UTF8
-
+        default_connection:   default
+        connections:
+            default:
+                driver:       pdo_mysql
+                host:         "%database_host%"
+                port:         "%database_port%"
+                dbname:       "%database_name%"
+                user:         "%database_user%"
+                password:     "%database_password%"
+                charset:      UTF8
+            report_source:
+                driver:       pdo_mysql
+                host:         "%database_host%"
+                port:         "%database_port%"
+                dbname:       "%database_name%"
+                user:         "%database_user%"
+                password:     "%database_password%"
+                charset:      UTF8
+            report_target:
+                driver:       pdo_mysql
+                host:         "%database_host%"
+                port:         "%database_port%"
+                dbname:       "%database_name%"
+                user:         "%database_user%"
+                password:     "%database_password%"
+                charset:      UTF8
+        types:
+            date:     Oro\Bundle\LocaleBundle\DoctrineExtensions\DBAL\Types\UTCDateType
+            datetime: Oro\Bundle\LocaleBundle\DoctrineExtensions\DBAL\Types\UTCDateTimeType
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping:         true
+        class_metadata_factory_name: Oro\Bundle\EntityExtendBundle\Mapping\ExtendClassMetadataFactory
         resolve_target_entities:
             Symfony\Component\Security\Core\User\UserInterface: Oro\Bundle\UserBundle\Entity\User
+
 
 # Swiftmailer Configuration
 swiftmailer:
     transport:                "%mailer_transport%"
     host:                     "%mailer_host%"
+    port:                     "%mailer_port%"
+    encryption:               "%mailer_encryption%"
     username:                 "%mailer_user%"
     password:                 "%mailer_password%"
     spool:                    { type: memory }
@@ -135,8 +147,8 @@ be_simple_soap:
         soap:
             namespace:        http://symfony.loc/Api/1.0/
             binding:          rpc-literal
-            resource:         "%kernel.root_dir%/../app/config/soap.yml"
-            resource_type:    yml
+            resource:         .
+            resource_type:    oro_soap
 
 stof_doctrine_extensions:
     default_locale: en
@@ -187,17 +199,18 @@ clank:
     web_socket_server:
         port:                 %websocket_port%                # The port the socket server will listen on
         host:                 %websocket_host%                # (optional) The host ip to bind to
+    session_handler:          session.handler.pdo
     periodic:
         -
             service:          "oro_wamp.db_ping"
             time:             60000                           # the time in milliseconds between the "tick" function being called
 
-jms_di_extra:
-    doctrine_integration:     false
-
 a2lix_translation_form:
     locales:                  [en, fr]
     templating:               "OroUIBundle:Form:translateable.html.twig"
+
+apy_js_form_validation:
+    check_modes:              [submit]
 
 lexik_maintenance:
     authorized:
@@ -211,27 +224,41 @@ lexik_maintenance:
 #
 # ORO Bundles config
 #
-oro_search:
-    engine:                   orm
-    realtime_update:          true
-
 oro_ui:
     settings:
         application_name:
-            value: "OroCRM"
+            value:            "OroCRM"
         application_title:
-            value: "OroCRM"
+            value:            "OroCRM"
 
-oro_user:
-    settings:
-        name_format:
-          value:              %%last%%, %%first%%
+oro_require_js:
+    config:
+        # @see http://requirejs.org/docs/api.html#config
+        waitSeconds: 0
+#        enforceDefine: true
+#        scriptType: 'text/javascript'
+    build_path: "js/oro.min.js"
+    building_timeout: 3600
+    build:
+        # @see https://github.com/jrburke/r.js/blob/master/build/example.build.js
+        optimize: "uglify2"
+        preserveLicenseComments: true
+#        generateSourceMaps: true
+#        useSourceUrl: true
+    # it's better to set "node" as js_engine, if nodejs is installed
+    js_engine: "java -Xss10m -Xms512m -Xmx1024m -cp %kernel.root_dir%/Resources/java/js.jar org.mozilla.javascript.tools.shell.Main"
 
-oro_translation:
-    js_translation:
-        # order of domains reflects messages fallback
-        domains: [jsmessages, validators]
-
-oro_entity_extend:
-    backend:        Dynamic
-    backup:         "%kernel.root_dir%/entities/Backup/"
+oro_help:
+    defaults:
+        server: http://help.orocrm.com/
+        prefix: Third_Party
+    vendors:
+        Oro:
+            prefix: ~
+            alias: Platform
+        OroCRM:
+            prefix: ~
+            alias: CRM
+    routes:
+        oro_default:
+            uri: CRM/OroCRMDashboardBundle

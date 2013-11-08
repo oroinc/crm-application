@@ -5,14 +5,15 @@
         "psr-0": {
             "Oro\\Bundle": "src/Oro/src",
             "OroCRM\\Bundle": "src/OroCRM/src",
+            "OroEmail\\": "app/emails/",
             "": "src/"
         }
     },
     "require": {
-        "php": ">=5.3.3",
-
-        "symfony/symfony": "2.3.*",
-
+        "php": ">=5.4.4",
+        "ext-intl": "*",
+        "lib-ICU": ">=4.2",
+        "symfony/symfony": "v2.3.6",
         "doctrine/orm": ">=2.2.3,<2.4-dev",
         "doctrine/doctrine-bundle": "1.2.*",
         "doctrine/data-fixtures": "@dev",
@@ -25,12 +26,9 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-
-        "jms/di-extra-bundle": "1.4.*@dev",
         "jms/job-queue-bundle": "dev-master",
-        "jms/aop-bundle": "dev-master",
-        "jms/serializer": "0.12.*@dev",
-        "jms/serializer-bundle": "0.12.*@dev",
+        "jms/serializer": "0.14.*@dev",
+        "jms/serializer-bundle": "0.13.*@dev",
         "kriswallsmith/assetic": "1.1.*@dev",
         "knplabs/knp-menu": "dev-master",
         "knplabs/knp-menu-bundle": "dev-master",
@@ -44,23 +42,19 @@
         "besimple/soap-bundle": "dev-master",
         "ddeboer/data-import": "dev-master",
         "stof/doctrine-extensions-bundle": "dev-master",
-        "escapestudios/wsse-authentication-bundle": "2.1.x-dev",
-        "sonata-project/admin-bundle": "dev-master",
-        "sonata-project/doctrine-orm-admin-bundle": "dev-master",
+        "escapestudios/wsse-authentication-bundle": "2.3.x-dev",
         "liip/imagine-bundle": "dev-master",
         "leafo/lessphp": "dev-master",
         "willdurand/expose-translation-bundle": "0.2.*@dev",
         "apy/jsfv-bundle": "dev-master",
         "genemu/form-bundle": "2.2.*",
         "zendframework/zend-mail": "2.1.*",
-        "a2lix/translation-form-bundle" : "1.*@dev"
+        "a2lix/translation-form-bundle" : "1.*@dev",
+        "mtdowling/cron-expression": "1.0.*",
+        "jdare/clank-bundle": "dev-master",
+        "lexik/maintenance-bundle": "dev-master",
+        "sylius/flow-bundle": "dev-master"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/SonataAdminBundle.git"
-        }
-    ],
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
