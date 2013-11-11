@@ -13,28 +13,38 @@
     syntaxCheck                 = "false"
     bootstrap                   = "bootstrap.php.cache" >
 
+    <logging>
+      <log type="junit" target="../build/logs/phpunit.xml"/>
+    </logging>
+
     <testsuites>
         <testsuite name="Project Test Suite">
-            <directory suffix="Test.php">../src/*/*Bundle/Tests/Unit</directory>
-            <directory suffix="Test.php">../src/*/Bundle/*Bundle/Tests/Unit</directory>
-            <directory suffix="Test.php">../src/*/*Bundle/Tests/Functional</directory>
-            <directory suffix="Test.php">../src/*/Bundle/*Bundle/Tests/Functional</directory>
+            <directory suffix="Test.php">../src/*/src/*/Bundle/*Bundle/Tests/Unit</directory>
+            <directory suffix="Test.php">../src/*/src/*/Bundle/*Bundle/Tests/Functional</directory>
         </testsuite>
-        <testsuite name="Project Unit Tests">
-            <directory suffix="Test.php">../src/*/*Bundle/Tests/Unit</directory>
-            <directory suffix="Test.php">../src/*/Bundle/*Bundle/Tests/Unit</directory>
+        <testsuite name="Unit Tests">
+            <directory suffix="Test.php">../src/*/src/*/Bundle/*Bundle/Tests/Unit</directory>
         </testsuite>
-        <testsuite name="Project Functional Tests">
-            <directory suffix="Test.php">../src/*/*Bundle/Tests/Functional</directory>
-            <directory suffix="Test.php">../src/*/Bundle/*Bundle/Tests/Functional</directory>
+        <testsuite name="Functional Tests">
+            <directory suffix="Test.php">../src/*/src/*/Bundle/*Bundle/Tests/Functional</directory>
         </testsuite>
-        <testsuite name="Project Performance Tests">
-            <directory suffix="Perf.php">../src/*/*Bundle/Tests/Performance</directory>
-            <directory suffix="Perf.php">../src/*/Bundle/*Bundle/Tests/Performance</directory>
+        <testsuite name="Project OroCRM Unit Tests">
+            <directory suffix="Test.php">../src/OroCRM/src/OroCRM/Bundle/*Bundle/Tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Project OroCRM Functional Tests">
+            <directory suffix="Test.php">../src/OroCRM/src/OroCRM/Bundle/*Bundle/Tests/Functional</directory>
+        </testsuite>
+        <testsuite name="Project Oro Unit Tests">
+            <directory suffix="Test.php">../src/Oro/src/Oro/Bundle/*Bundle/Tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Project Oro Functional Tests">
+            <directory suffix="Test.php">../src/Oro/src/Oro/Bundle/*Bundle/Tests/Functional</directory>
         </testsuite>
         <testsuite name="Project Selenium Tests">
-            <directory suffix="Test.php">../src/*/*Bundle/Tests/Selenium</directory>
-            <directory suffix="Test.php">../src/*/Bundle/*Bundle/Tests/Selenium</directory>
+            <directory suffix="Test.php">../src/OroCRM/src/OroCRM/Bundle/*Bundle/Tests/Selenium</directory>
+        </testsuite>
+        <testsuite name="Project Behat Tests">
+            <directory suffix="Test.php">../src/Oro*/src/Oro*/Bundle/*Bundle/Tests/Behat</directory>
         </testsuite>
     </testsuites>
 
@@ -44,34 +54,50 @@
     </php>
     -->
     <php>
+        <const name="PHPUNIT_LOAD_LIMIT" value="1.2"/>
+        <const name="PHPUNIT_PAGE_LIMIT" value="0.5"/>
+        <const name="PHPUNIT_TESTSUITE_BROWSER_PATH_WINNT" value="C:\Dev\phantomjs-1.9.0-windows\phantomjs.exe"/>
+        <const name="PHPUNIT_TESTSUITE_BROWSER_PATH_LINUX" value="/usr/bin/phantomjs"/>
         <const name="PHPUNIT_TESTSUITE" value="true"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_HOST" value="127.0.0.1"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PORT" value="4444"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM2_BROWSER" value="phantomjs"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_TESTS_URL" value="http://localhost.com"/>
-        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PATH" value="app/log"/>
+        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_TESTS_URL_COVERAGE" value="http://localhost.com/bundles/acmetests/scripts/phpunit_coverage.php"/>
+        <const name="MAX_EXECUTION_TIME" value="120000"/>
+        <const name="TIME_OUT" value="5000"/>
+        <const name="viewportWIDTH" value="1900"/>
+        <const name="viewportHEIGHT" value="1080"/>
+        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PATH_LOGS" value="app/log"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_LOGIN" value="admin"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PASS" value="admin"/>
     </php>
     <listeners>
-        <!--<listener class="ScreenshotListener" file="src/Acme/Bundle/TestsBundle/Test/ScreenshotListener.php">-->
-            <!--<arguments>-->
-                <!--<string>app/logs</string>-->
-            <!--</arguments>-->
-        <!--</listener>-->
+        <listener class="TestListener" file="src/Oro/src/Oro/Bundle/TestFrameworkBundle/Test/TestListener.php">
+            <arguments>
+                <string>app/logs</string>
+            </arguments>
+        </listener>
     </listeners>
     <filter>
-        <whitelist>
+        <whitelist processUncoveredFilesFromWhitelist="true" addUncoveredFilesFromWhitelist="true">
             <directory>../src</directory>
             <exclude>
                 <directory>../vendor</directory>
-                <directory>../src/*/*Bundle/DataFixtures</directory>
+                <directory>../src/*/tests</directory>
+                <directory>../src/*/src/*/Bundle/TestFrameworkBundle</directory>
                 <directory>../src/*/Bundle/*Bundle/DataFixtures</directory>
-                <directory>../src/*/*Bundle/Resources</directory>
-                <directory>../src/*/*Bundle/Tests</directory>
                 <directory>../src/*/Bundle/*Bundle/Resources</directory>
                 <directory>../src/*/Bundle/*Bundle/Tests</directory>
                 <directory>../src/*/Bundle/*Bundle/vendor</directory>
+                <directory>../src/*/src/*/Bundle/*Bundle/DataFixtures</directory>
+                <directory>../src/*/src/*/Bundle/*Bundle/Resources</directory>
+                <directory>../src/*/src/*/Bundle/*Bundle/Tests</directory>
+                <directory>../src/*/src/*/Bundle/*Bundle/vendor</directory>
+                <directory>../src/*/src/*/Bundle/*Bundle/DependencyInjection</directory>
+                <directory suffix="Bundle.php">../src/*/src/*/Bundle/*Bundle</directory>
+                <directory>../src/*/Bundle/*Bundle/DependencyInjection</directory>
+                <directory suffix="Bundle.php">../src/*/Bundle/*Bundle</directory>
             </exclude>
         </whitelist>
     </filter>
