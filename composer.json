@@ -10,19 +10,9 @@
          }
     },
     "require": {
-        "oro/platform": "dev-release",
-        "oro/crm": "dev-release"
+        "oro/platform": "1.0.0-beta3",
+        "oro/crm": "1.0.0-beta3"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/platform.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/crm.git"
-        }
-    ],
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
