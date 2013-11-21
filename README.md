@@ -25,11 +25,15 @@ Installation instructions:
 If you don't have Composer yet, download it following the instructions on
 http://getcomposer.org/ or just run the following command:
 
+```bash
     curl -s https://getcomposer.org/installer | php
+```
 
 - Clone https://github.com/orocrm/crm-application.git OroCRM project with
 
+```bash
     git clone http://github.com/orocrm/crm-application.git
+```
 
 - Make sure that you have installed Java
 
@@ -38,13 +42,45 @@ http://getcomposer.org/ or just run the following command:
   you will be able to customize all the values interactively.
 - Install OroCRM dependencies with composer. If installation process seems too slow you can use "--prefer-dist" option.
 
-    php composer.phar install
+```bash
+    php composer.phar install --prefer-dist
+```
 
 - Create the database (default name is "oro_crm")
 
 - Open the OroCRM URL and initialize application with Install Wizard
-  Alternatively with script (for Linux and Mac OS install.sh, for Windows install.bat)
-  After installation you can login as application administrator using user name "admin" and password "admin".
+
+- Alternatively with command line
+
+```bash  
+app/console oro:install
+```
+
+- After installation you can login as application administrator using user name "admin" and password "admin".
+
+Instant messaging between the browser and the web server
+--------------------------------------------------------
+To use this feature you need to configure parameters.yml websocket parameters and run server with console command
+
+```bash
+app/console clank:server --env prod
+```
+
+Reporting
+---------
+To use this feature you need to run report data collector with console command
+
+```bash
+app/console oro:report:update --env prod
+```
+
+Demo Data uploading
+---------
+To upload this feature you need to run console command
+
+ ```bash
+php app/console doctrine:fixture:load --verbose --append --no-interaction --env=prod --fixtures=vendor/oro/crm/src/OroCRM/Bundle/DemoDataBundle/DataFixtures
+```
 
 Checking your System Configuration
 -------------------------------------
@@ -54,7 +90,9 @@ configured for a Symfony application.
 
 Execute the `check.php` script from the command line:
 
+```bash
     php app/check.php
+```
 
 Access the `config.php` script from a browser:
 
