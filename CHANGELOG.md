@@ -1,3 +1,13 @@
+CHANGELOG for 1.0.0-beta4
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-beta4 versions.
+
+* 1.0.0-beta4 (2013-11-21)
+ * Removed install.bat/install.sh 
+ * Workflow transitions
+ * Make all entities as Extended
+ * End support for Internet Explorer 9 
+
 CHANGELOG for 1.0.0-beta3
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-beta3 versions.
