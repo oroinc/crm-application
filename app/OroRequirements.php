@@ -19,11 +19,11 @@ class OroRequirements extends SymfonyRequirements
     {
         parent::__construct();
 
-        $jreExists = new ProcessBuilder(array('java', '-version'));
-        $jreExists = $jreExists->getProcess();
+        $nodeExists = new ProcessBuilder(array('node', '--version'));
+        $nodeExists = $nodeExists->getProcess();
 
-        $jreExists->run();
-        while ($jreExists->isRunning()) {
+        $nodeExists->run();
+        while ($nodeExists->isRunning()) {
             // waiting for process to finish
         }
 
@@ -31,7 +31,7 @@ class OroRequirements extends SymfonyRequirements
         $gdVersion   = defined('GD_VERSION') ? GD_VERSION : null;
         $curlVersion = function_exists('curl_version') ? curl_version() : null;
         $icuVersion  = Intl::getIcuVersion();
-        $jreExists   = strpos($jreExists->getErrorOutput(), 'java version') !== false;
+        $nodeExists   = $nodeExists->getErrorOutput() === null;
 
         $this->addOroRequirement(
             version_compare($phpVersion, self::REQUIRED_PHP_VERSION, '>='),
@@ -107,9 +107,9 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addOroRequirement(
-            $jreExists,
-            'Java Runtime Environment must be installed',
-            'Install the <strong>JRE</strong>.'
+            $nodeExists,
+            'NodeJS must be installed',
+            'Install the <strong>NodeJS</strong>.'
         );
 
         $this->addOroRequirement(
