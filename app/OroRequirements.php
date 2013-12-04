@@ -106,7 +106,7 @@ class OroRequirements extends SymfonyRequirements
             'Set the "<strong>memory_limit</strong>" setting in php.ini<a href="#phpini">*</a> to at least "256M".'
         );
 
-        $this->addOroRequirement(
+        $this->addRecommendation(
             $nodeExists,
             'NodeJS must be installed',
             'Install the <strong>NodeJS</strong>.'
