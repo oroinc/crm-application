@@ -43,17 +43,13 @@ twig:
 assetic:
     debug:                    false
     use_controller:           false
-
-    #java: /usr/bin/java
     filters:
         cssrewrite: ~
         lessphp:
             file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
             apply_to: "\.less$"
-        yui_css:
-            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
-        yui_js:
-            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+        cssmin:
+            file: %kernel.root_dir%/Resources/php/cssmin-v3.0.1.php
 
 # Doctrine Configuration
 doctrine:
@@ -226,20 +222,12 @@ oro_ui:
 
 oro_require_js:
     config:
-        # @see http://requirejs.org/docs/api.html#config
         waitSeconds: 0
-#        enforceDefine: true
-#        scriptType: 'text/javascript'
     build_path: "js/oro.min.js"
     building_timeout: 3600
     build:
-        # @see https://github.com/jrburke/r.js/blob/master/build/example.build.js
         optimize: "uglify2"
         preserveLicenseComments: true
-#        generateSourceMaps: true
-#        useSourceUrl: true
-    # it's better to set "node" as js_engine, if nodejs is installed
-    js_engine: "java -Xss10m -Xms512m -Xmx1024m -cp %kernel.root_dir%/Resources/java/js.jar org.mozilla.javascript.tools.shell.Main"
 
 oro_help:
     defaults:
