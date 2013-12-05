@@ -1,0 +1,162 @@
+{% extends '@WebProfiler/Profiler/layout.html.twig' %}
+
+{% block toolbar %}
+    {% set request_handler %}
+        {% if collector.controller.class is defined %}
+            {% set link = collector.controller.file|file_link(collector.controller.line) %}
+            <span class="sf-toolbar-info-class sf-toolbar-info-with-next-pointer">{{ collector.controller.class|abbr_class }}</span>
+            <span class="sf-toolbar-info-method" onclick="{% if link %}window.location='{{link|e('js')}}';window.event.stopPropagation();return false;{% endif %}">
+                {{ collector.controller.method }}
+            </span>
+        {% else %}
+            <span class="sf-toolbar-info-class">{{ collector.controller }}</span>
+        {% endif %}
+    {% endset %}
+    {% set request_status_code_color = (400 > collector.statuscode) ? ((200 == collector.statuscode) ? 'green' : 'yellow') : 'red'%}
+    {% set request_route = collector.route ? collector.route : 'NONE' %}
+    {% set icon %}
+        <img width="28" height="28" class="hover-icon" alt="Request" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAACvElEQVR42tVTbUhTYRTerDCnKVoUUr/KCZmypA9Koet0bXNLJ5XazDJ/WFaCUY0pExRZXxYiJgsxWWjkaL+yK+po1gjyR2QfmqWxtBmaBtqWGnabT++c11Fu4l/P4VzOPc95zoHznsNZodIbLDdRcKnc1Bu8DAK45ZsOnykQNMopsNooLxCknb0cDq5vml9FtHiIgpBR0R6iihYyFMTDt2Lg56ObPkI6TMGXSof1EV67IqCwisJSWliFAG/E0CfFIiebdNypcxi/1zgyFiIiZ3sJQr0RQx5frLa6k7SOKRo3oMFNR5t62h2rttKXEOKFqDCxtXNmmBokO2KKTlp3IdWuT2dYRNGKwEXEBCcL172G5FG0aIxC0kR9PBTVH1kkwQn+IqJnCE33EalVzT9GJQS1tAdD3CKicJYFrxqx7W2ejCEdZy1FiC5tZxHhLJKOZaRdQJAyV/YAvDliySALHxmxR4Hqe2iwvaOR/CEuZYJFSgYhVbZRkA8KGdEktrqnqra90NndCdkt77fjIHIhexOrfO6O3bbbOj/rqu5IptgyR3sU93QbOYhquZK4MCDp0Ina/PLsu5JvbCTRaapUdUmIV/RzoMdsk/0hWRNdAvKOmvqlN0drsJbJf1P4YsQ5lGrJeuosiOUgbOC8cto3LfOXTdVd7BqZsQKbse+0jUL6WPcesqs4MNSUTQAxGjwFiC8m3yzmqwHJBWYKBJ9WNqW/dHkpU/osch1Yj5RJfXPfSEe/2UPsN490NPfZG5CKyJmcV5ayHyzy7BMqsXfuHhGK/cjAIeSpR92gehR55D8TcQhDEKJwytBJ4fr4NULvrEM8NszfJPyxDoHYAQ1oPCWmIX4gifmDS/DV2DKeb25FHWr76yEG7/9L4YFPeiQQ4/8LkgJ8Et+NncTCsYqzXAEXa7CWdPZzGWdlyV+vST0JanfPvwAAAABJRU5ErkJggg==">
+        <img width="28" height="28" style="display: none;"  class="active-icon" alt="Request" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkZCQkRDMzE1REFEMTFFM0JBRDlDNTFBQTAyNEJFNEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkZCQkRDMzI1REFEMTFFM0JBRDlDNTFBQTAyNEJFNEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2RkJCREMyRjVEQUQxMUUzQkFEOUM1MUFBMDI0QkU0QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2RkJCREMzMDVEQUQxMUUzQkFEOUM1MUFBMDI0QkU0QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlIEbSQAAAapSURBVEjH3VZJbxxF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">
+        <span class="sf-toolbar-status sf-toolbar-status-{{ request_status_code_color }}" title="{{ collector.statustext }}">{{ collector.statuscode }}</span>
+        <span class="sf-toolbar-status sf-toolbar-info-piece-additional">{{ request_handler }}</span>
+        <span class="sf-toolbar-info-piece-additional-detail">on <i>{{ request_route }}</i></span>
+    {% endset %}
+    {% set text %}
+        {% spaceless %}
+            <div class="sf-toolbar-info-piece">
+                <b>Status</b>
+                <span class="sf-toolbar-status sf-toolbar-status-{{ request_status_code_color }}">{{ collector.statuscode }}</span> {{ collector.statustext }}
+            </div>
+            <div class="sf-toolbar-info-piece">
+                <b>Controller</b>
+                {{ request_handler }}
+            </div>
+            <div class="sf-toolbar-info-piece">
+                <b>Route name</b>
+                <span>{{ request_route }}</span>
+            </div>
+            <div class="sf-toolbar-info-piece">
+                <b>Has session</b>
+                <span>{% if collector.sessionmetadata|length %}yes{% else %}no{% endif %}</span>
+            </div>
+        {% endspaceless %}
+    {% endset %}
+    {% include '@WebProfiler/Profiler/toolbar_item.html.twig' with { 'link': profiler_url } %}
+{% endblock %}
+
+{% block menu %}
+<span class="label">
+    <span class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAcCAQAAACn1QXuAAAD2UlEQVR42p2Ve0zTVxTHKS4+KCBqNomCClgEJJAYkznQQIFaWltAiigsxGUgMy6b45HWV4UKUoP1yaMS0DqniVpngKlEMoMzW2Z0QTf4Ax/bdCzFCpQWq60U+Xp/baG/EoGf3vPH7/b3PffTc++55/w8xg+wji4W3ImDw4S3DgSD5fGhA+wcbRxclqsB+30RnmWcda1JPWn1poj8e3TYlvb/l6edTdSLWvYHgcUIdSwiuduxOOdu/n90WF7350648J+a0ClxYNWECglgahP+OyUOPpm34sDMNt6Ez+QwjniAKSzFgKWTw6L33x/3/yMHzU09l/XKlykj7krlXURNDlsEaVm/a8Fh48trUEEKGY4Zb5SaXUpZH4oROAlKvjijPu9GQfcY6jkOQoBlWIgARCAVVbtNo1rxky9/lqiV/hMmQfwXfRtZQxYVVoItC5aUpO8rDIcvYvUNqcN0n7TfJkyC+5lUdYIH9hlOkn3bCWbVCoJLLX9C9+FZEcoIpj2HYHh9XT92ZbUEFl7XSvfhD2EVI5imFh/DX948+lvWhgAEHL3kBrNhNSOYvImCdSgEb+wbGrmjomCFv46DrWn6hN+2QY6ZDYH8Tt6Dv+c4Yfn9bofbN8ABG/xHjYcMKmNHC0Tw/XOF0Ez3+VaH2BMZ1Ezclaynnm1x8LTDBo7U65Tm0tejrltPwwvzIcQO7EIKFsB3c8uoprAqzZruwQpE1cnpeMVxxZLNc8mFQQy2W9Tb+1xSplbjD18EEvM7sjTjuksp6rXVDBeVN29s5ztjFY1VSILpfJAHZiFkG1lAtyTD+gvZsix5emPSC3flm6v3JGvfxNvn+8zDt/HLFR3XUYI6RFPltERkYFro4j6Itdd5JB6JzaaGBAKUFtorpOsHRNoLveAxU1jRQ6xFQbaVNNFBpICN6YjZ00UpN0swj4KFPK/MtTJBffXKoETk3mouiYw7cmoLpsGzNVFkth+NpTKWgnkjof9MnjOflRYqsy4rfV1udebZatIgHhyB0XmylsyL2VXJjtQReMNWe9uGH5JN3ytMubY6HS7J9HSYTI/L1c9ybQoTQfEwG2HN52p7KixuEQ91PH5wEYkE5sRxUYJaFCCr4g+6o+o2slEMNVHjCYqF+RBjJ87m0OI/2YnvwMVCgnLi2AjCcgQgpGen1Mh1bATSgV4pghGISKKyqT6Gj+CHRUj/grT66sGOp7tIjOpmhGEGqYLxA174DOW4gjZiP6EMn2LWO7pz+O8N2nYcQhGq7v+ITZg3wYcPPghFDKibGUNm3u/qq5hL1PWIxgJEIRZBmE69fQsyes/JMSWb+gAAAABJRU5ErkJggg==" alt="Request"></span>
+    <strong>Request</strong>
+</span>
+{% endblock %}
+
+{% block panel %}
+    <h2>Request GET Parameters</h2>
+
+    {% if collector.requestquery.all|length %}
+        {% include '@WebProfiler/Profiler/bag.html.twig' with { 'bag': collector.requestquery } only %}
+    {% else %}
+        <p>
+            <em>No GET parameters</em>
+        </p>
+    {% endif %}
+
+    <h2>Request POST Parameters</h2>
+
+    {% if collector.requestrequest.all|length %}
+        {% include '@WebProfiler/Profiler/bag.html.twig' with { 'bag': collector.requestrequest } only %}
+    {% else %}
+        <p>
+            <em>No POST parameters</em>
+        </p>
+    {% endif %}
+
+    <h2>Request Attributes</h2>
+
+    {% if collector.requestattributes.all|length %}
+        {% include '@WebProfiler/Profiler/bag.html.twig' with { 'bag': collector.requestattributes } only %}
+    {% else %}
+        <p>
+            <em>No attributes</em>
+        </p>
+    {% endif %}
+
+    <h2>Request Cookies</h2>
+
+    {% if collector.requestcookies.all|length %}
+        {% include '@WebProfiler/Profiler/bag.html.twig' with { 'bag': collector.requestcookies } only %}
+    {% else %}
+        <p>
+            <em>No cookies</em>
+        </p>
+    {% endif %}
+
+    <h2>Request Headers</h2>
+
+    {% include '@WebProfiler/Profiler/bag.html.twig' with { 'bag': collector.requestheaders } only %}
+
+    <h2>Request Content</h2>
+
+    {% if collector.content == false %}
+        <p><em>Request content not available (it was retrieved as a resource).</em></p>
+    {% elseif collector.content %}
+        <pre>{{ collector.content }}</pre>
+    {% else %}
+        <p><em>No content</em></p>
+    {% endif %}
+
+    <h2>Request Server Parameters</h2>
+
+    {% include '@WebProfiler/Profiler/bag.html.twig' with { 'bag': collector.requestserver } only %}
+
+    <h2>Response Headers</h2>
+
+    {% include '@WebProfiler/Profiler/bag.html.twig' with { 'bag': collector.responseheaders } only %}
+
+    <h2>Session Metadata</h2>
+
+    {% if collector.sessionmetadata|length %}
+    {% include '@WebProfiler/Profiler/table.html.twig' with { 'data': collector.sessionmetadata } only %}
+    {% else %}
+    <p>
+        <em>No session metadata</em>
+    </p>
+    {% endif %}
+
+    <h2>Session Attributes</h2>
+
+    {% if collector.sessionattributes|length %}
+        {% include '@WebProfiler/Profiler/table.html.twig' with { 'data': collector.sessionattributes } only %}
+    {% else %}
+        <p>
+            <em>No session attributes</em>
+        </p>
+    {% endif %}
+
+    <h2>Flashes</h2>
+
+    {% if collector.flashes|length %}
+        {% include '@WebProfiler/Profiler/table.html.twig' with { 'data': collector.flashes } only %}
+    {% else %}
+        <p>
+            <em>No flashes</em>
+        </p>
+    {% endif %}
+
+    {% if profile.parent %}
+        <h2><a href="{{ path('_profiler', { 'token': profile.parent.token }) }}">Parent request: {{ profile.parent.token }}</a></h2>
+
+        {% include '@WebProfiler/Profiler/bag.html.twig' with { 'bag': profile.parent.getcollector('request').requestattributes } only %}
+    {% endif %}
+
+    {% if profile.children|length %}
+        <h2>Sub requests</h2>
+
+        {% for child in profile.children %}
+            <h3><a href="{{ path('_profiler', { 'token': child.token }) }}">{{ child.token }}</a></h3>
+            {% include '@WebProfiler/Profiler/bag.html.twig' with { 'bag': child.getcollector('request').requestattributes } only %}
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}
