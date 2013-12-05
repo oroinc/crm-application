@@ -1,3 +1,13 @@
+CHANGELOG for 1.0.0-beta5
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-beta5 versions.
+
+* 1.0.0-beta5 (2013-12-05)
+ * Reports creation wizard (Table reports)
+ * B2B Sales Flow adjustments
+ * Call entity
+ * Add weather layer in the map on contact view page
+
 CHANGELOG for 1.0.0-beta4
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-beta4 versions.
