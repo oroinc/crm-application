@@ -78,30 +78,6 @@ Demo Data uploading
 ---------
 To upload this feature you need to run console command
 
- ```bash
-php app/console doctrine:fixture:load --verbose --append --no-interaction --env=prod --fixtures=vendor/oro/crm/src/OroCRM/Bundle/DemoDataBundle/DataFixtures
-```
-
-Instant messaging between the browser and the web server
---------------------------------------------------------
-To use this feature you need to configure parameters.yml websocket parameters and run server with console command
-
-```bash
-app/console clank:server --env prod
-```
-
-Reporting
----------
-To use this feature you need to run report data collector with console command
-
-```bash
-app/console oro:report:update --env prod
-```
-
-Demo Data uploading
----------
-To upload this feature you need to run console command
-
 ```bash
 php app/console doctrine:fixture:load --verbose --append --no-interaction --env=prod --fixtures=vendor/oro/crm/src/OroCRM/Bundle/DemoDataBundle/DataFixtures
 ```
