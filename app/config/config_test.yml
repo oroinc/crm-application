@@ -1,5 +1,5 @@
 imports:
-    - { resource: config_dev.yml }
+    - { resource: config_prod.yml }
     - { resource: parameters_test.yml }
     - { resource: security_test.yml }
 
@@ -8,7 +8,7 @@ framework:
     session:
         storage_id: session.storage.mock_file
     csrf_protection: true
-    router:   { resource: "%kernel.root_dir%/config/routing_test.yml" }
+    router:   { resource: "%kernel.root_dir%/config/routing.yml" }
     profiler:
             enabled: false
 
@@ -18,21 +18,8 @@ services:
         tags:
             - { name: twig.extension }
 
-web_profiler:
-    toolbar: false
-    intercept_redirects: false
-
 swiftmailer:
     disable_delivery: true
-
-assetic:
-    debug:                    false
-    use_controller:           false
-
-monolog:
-    handlers:
-        main:
-            level: error
 
 oro_require_js:
     js_engine: ~
