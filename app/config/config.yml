@@ -151,10 +151,11 @@ stof_doctrine_extensions:
             tree:             true
 
 services:
+    # this cache should be used to caching data which need to be shared between nodes in a web farm
     oro.cache.abstract:
         abstract: true
-        class:                Doctrine\Common\Cache\PhpFileCache
-        arguments:            [%kernel.cache_dir%]
+        class:                Oro\Bundle\SecurityBundle\Cache\FilesystemCache
+        arguments:            [%kernel.cache_dir%/oro_data]
     twig.extension.intl:
          class: Twig_Extensions_Extension_Intl
          tags:
