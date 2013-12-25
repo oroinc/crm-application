@@ -16,12 +16,13 @@
         "ext-intl": "*",
         "lib-ICU": ">=4.2",
         "symfony/symfony": "v2.3.6",
-        "doctrine/orm": "2.3.*@dev",
-        "doctrine/doctrine-bundle": "1.2.*@dev",
+        "doctrine/orm": "2.3.x-dev",
+        "doctrine/doctrine-bundle": "1.2.x-dev",
         "doctrine/data-fixtures": "1.0.0",
         "doctrine/doctrine-fixtures-bundle": "2.2.0",
         "twig/extensions": "1.0.1",
         "symfony/assetic-bundle": "2.3.0",
+        "symfony/icu": "1.2.x-dev",
         "symfony/swiftmailer-bundle": "2.3.*",
         "symfony/monolog-bundle": "2.3.0",
         "sensio/distribution-bundle": "2.3.4",
@@ -32,8 +33,8 @@
         "jms/serializer": "0.14.0",
         "jms/serializer-bundle": "0.13.0",
         "kriswallsmith/assetic": "1.1.2",
-        "knplabs/knp-menu": "2.0.*@dev",
-        "knplabs/knp-menu-bundle": "2.0.*@dev",
+        "knplabs/knp-menu": "2.0.x-dev",
+        "knplabs/knp-menu-bundle": "2.0.x-dev",
         "knplabs/knp-paginator-bundle": "2.3.3",
         "friendsofsymfony/rest-bundle": "0.12.*",
         "friendsofsymfony/jsrouting-bundle": "1.5.0",
@@ -52,7 +53,7 @@
         "jdare/clank-bundle": "0.1.*",
         "lexik/maintenance-bundle": "dev-master",
         "sylius/flow-bundle": "0.6.*",
-        "composer/composer": "1.0.*@dev"
+        "composer/composer": "1.0.x-dev"
     },
     "scripts": {
         "post-install-cmd": [
@@ -69,6 +70,7 @@
         ]
     },
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
