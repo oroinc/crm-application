@@ -89,6 +89,10 @@ doctrine:
         class_metadata_factory_name: Oro\Bundle\EntityExtendBundle\Mapping\ExtendClassMetadataFactory
         resolve_target_entities:
             Symfony\Component\Security\Core\User\UserInterface: Oro\Bundle\UserBundle\Entity\User
+        mappings:
+            OroDistributionBundle:
+                mapping:   false
+                is_bundle: true
 
 
 # Swiftmailer Configuration
