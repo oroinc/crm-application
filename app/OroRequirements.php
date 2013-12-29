@@ -22,6 +22,9 @@ class OroRequirements extends SymfonyRequirements
         $nodeExists = new ProcessBuilder(array('node', '--version'));
         $nodeExists = $nodeExists->getProcess();
 
+        if (isset($_SERVER['PATH'])) {
+            $nodeExists->setEnv(['PATH' => $_SERVER['PATH']]);
+        }
         $nodeExists->run();
         while ($nodeExists->isRunning()) {
             // waiting for process to finish
