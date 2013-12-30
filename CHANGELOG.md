@@ -1,3 +1,13 @@
+CHANGELOG for 1.0.0-beta6
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-beta6 versions.
+
+* 1.0.0-beta6 (2013-12-30)
+ * Magento data import: Customers, Shopping carts and Orders
+ * B2C Sales Flow
+ * Call view window
+ * Basic dashboards
+
 CHANGELOG for 1.0.0-beta5
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-beta5 versions.
