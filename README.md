@@ -1,56 +1,58 @@
-OroCRM Application
-========================
+# OroCRM Application
 
-Welcome to OroCRM an Open Source Client Relationship Management (CRM) tool.
+Welcome to OroCRM an Open Source Customer Relationship Management (CRM) tool.
 
-This document contains information on how to download, install, and start
-using OroCRM. For a more detailed explanation, see the [Installation]
-chapter.
+**Important Note**: this application is not production ready and is intended for evaluation and development only.
 
-Important Note: this application is not production ready and is intended for evaluation and development only!
+## Requirements
 
-Requirements
-------------
+OroCRM is Symfony 2 based application with following requirements:
 
-OroCRM requires Symfony 2, Doctrine 2 and PHP 5.3.8 or above.
+* PHP 5.4.4 and above
+* PHP Extensions
+    * GD
+    * Mcrypt
+    * JSON
+    * ctype
+    * Tokenizer
+    * SimpleXML
+    * PCRE
+* MySQL 5.1 and above
 
-Installation instructions:
--------------------------
+## Installation instructions
 
+OroCRM uses [Composer][1] to manage package dependencies, this is the a recommended way to install OroCRM.
 
-### Using Composer
-
-[As both Symfony 2 and OroCRM use [Composer][2] to manage their dependencies, this is the recommended way to install OroCRM.]
-
-If you don't have Composer yet, download it following the instructions on
-http://getcomposer.org/ or just run the following command:
+If you don't have Composer yet, download it following the instructions on http://getcomposer.org/
+or just run the following command:
 
 ```bash
     curl -s https://getcomposer.org/installer | php
 ```
 
-- Clone https://github.com/orocrm/crm-application.git OroCRM project with
+Clone https://github.com/orocrm/crm-application.git OroCRM project with:
 
 ```bash
     git clone http://github.com/orocrm/crm-application.git
 ```
 
+<<<<<<< .mine
 - Make sure that you have installed Java
 
 - Go to app/config folder and create parameters.yml using parameters.yml.dist as example. Update database name and credentials.
   Alternatively parameters.yml can be created automatically on the next step when run composer install command,
   you will be able to customize all the values interactively.
 - Install OroCRM dependencies with composer. If installation process seems too slow you can use "--prefer-dist" option.
+=======
+Go to crm-application folder and run composer installation:
 
 ```bash
     php composer.phar install --prefer-dist
 ```
 
-- Create the database (default name is "oro_crm")
+Create the database (default name is "oro_crm").
 
-- Open the OroCRM URL and initialize application with Install Wizard
-
-- Alternatively with command line
+Initialize application with Installation Wizard by opening install.php in the browser or from CLI:
 
 ```bash  
 app/console oro:install
