@@ -143,15 +143,9 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addOroRequirement(
-            is_writable($baseDir . '/web/js'),
-            'web/js/ directory must be writable',
-            'Change the permissions of the "<strong>web/js/</strong>" directory so that the web server can write into it.'
-        );
-
-        $this->addOroRequirement(
-            is_writable($baseDir . '/web/css'),
-            'web/css/ directory must be writable',
-            'Change the permissions of the "<strong>web/css/</strong>" directory so that the web server can write into it.'
+            is_writable($baseDir . '/web'),
+            'web directory must be writable',
+            'Change the permissions of the "<strong>web</strong>" directory so that the web server can write into it.'
         );
     }
 
