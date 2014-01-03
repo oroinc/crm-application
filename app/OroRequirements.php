@@ -111,8 +111,20 @@ class OroRequirements extends SymfonyRequirements
 
         $this->addRecommendation(
             $nodeExists,
-            'NodeJS must be installed',
+            'NodeJS should be installed',
             'Install the <strong>NodeJS</strong>.'
+        );
+
+        $this->addOroRequirement(
+            is_writable($baseDir . '/app/cache'),
+            'app/cache/ directory must be writable',
+            'Change the permissions of the "<strong>app/cache/</strong>" directory so that the web server can write into it.'
+        );
+
+        $this->addOroRequirement(
+            is_writable($baseDir . '/app/logs'),
+            'app/logs/ directory must be writable',
+            'Change the permissions of the "<strong>app/logs/</strong>" directory so that the web server can write into it.'
         );
 
         $this->addOroRequirement(
@@ -126,6 +138,13 @@ class OroRequirements extends SymfonyRequirements
             'web/bundles/ directory must be writable',
             'Change the permissions of the "<strong>web/bundles/</strong>" directory so that the web server can write into it.'
         );
+
+        $this->addOroRequirement(
+            is_writable($baseDir . '/web'),
+            'web directory must be writable',
+            'Change the permissions of the "<strong>web</strong>" directory so that the web server can write into it.'
+        );
+
     }
 
     /**
