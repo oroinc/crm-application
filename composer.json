@@ -7,21 +7,25 @@
             "OroPro\\Bundle": "src/OroPro/src",
             "OroCRM\\Bundle": "src/OroCRM/src",
             "OroCRMPro\\Bundle": "src/OroCRMPro/src",
-            "OroEmail\\": "app/emails/",
             "": "src/"
         }
     },
     "require": {
         "php": ">=5.4.4",
         "ext-intl": "*",
-        "lib-ICU": ">=4.2",
+        "ext-mbstring": "*",
+        "ext-gd": "*",
+        "ext-xml": "*",
+        "ext-mysql": "*",
+        "lib-ICU": ">=4.8",
         "symfony/symfony": "v2.3.6",
-        "doctrine/orm": "2.3.*@dev",
-        "doctrine/doctrine-bundle": "1.2.*@dev",
+        "doctrine/orm": "2.4.*@dev",
+        "doctrine/doctrine-bundle": "1.2.x-dev",
         "doctrine/data-fixtures": "1.0.0",
         "doctrine/doctrine-fixtures-bundle": "2.2.0",
         "twig/extensions": "1.0.1",
         "symfony/assetic-bundle": "2.3.0",
+        "symfony/icu": "1.2.x-dev",
         "symfony/swiftmailer-bundle": "2.3.*",
         "symfony/monolog-bundle": "2.3.0",
         "sensio/distribution-bundle": "2.3.4",
@@ -32,8 +36,8 @@
         "jms/serializer": "0.14.0",
         "jms/serializer-bundle": "0.13.0",
         "kriswallsmith/assetic": "1.1.2",
-        "knplabs/knp-menu": "2.0.*@dev",
-        "knplabs/knp-menu-bundle": "2.0.*@dev",
+        "knplabs/knp-menu": "2.0.x-dev",
+        "knplabs/knp-menu-bundle": "2.0.x-dev",
         "knplabs/knp-paginator-bundle": "2.3.3",
         "friendsofsymfony/rest-bundle": "0.12.*",
         "friendsofsymfony/jsrouting-bundle": "1.5.0",
@@ -41,10 +45,9 @@
         "ass/xmlsecurity": "1.0.0",
         "besimple/soap": "0.2.2",
         "stof/doctrine-extensions-bundle": "1.1.0",
-        "escapestudios/wsse-authentication-bundle": "2.3.x-dev",
+        "escapestudios/wsse-authentication-bundle": "dev-master#ac3f700a88966e6483ff84d5de2b751d7622736d",
         "liip/imagine-bundle": "0.17.*",
         "leafo/lessphp": "0.4.0",
-        "willdurand/expose-translation-bundle": "1.1.*",
         "genemu/form-bundle": "2.2.1",
         "zendframework/zend-mail": "2.1.*",
         "a2lix/translation-form-bundle": "1.2",
@@ -52,7 +55,7 @@
         "jdare/clank-bundle": "0.1.*",
         "lexik/maintenance-bundle": "dev-master",
         "sylius/flow-bundle": "0.6.*",
-        "composer/composer": "1.0.*@dev"
+        "composer/composer": "1.0.x-dev"
     },
     "scripts": {
         "post-install-cmd": [
@@ -69,6 +72,7 @@
         ]
     },
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

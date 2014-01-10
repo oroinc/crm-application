@@ -34,7 +34,6 @@ twig:
     globals:
         bap:
             layout:           ::base.html.twig  # default layout across all Oro bundles
-            start_route:      oro_default
         ws:
             port:             "%websocket_port%"
             host:             "%websocket_host%"
@@ -83,12 +82,17 @@ doctrine:
         types:
             date:     Oro\Bundle\LocaleBundle\DoctrineExtensions\DBAL\Types\UTCDateType
             datetime: Oro\Bundle\LocaleBundle\DoctrineExtensions\DBAL\Types\UTCDateTimeType
+            time:     Oro\Bundle\LocaleBundle\DoctrineExtensions\DBAL\Types\UTCTimeType
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping:         true
         class_metadata_factory_name: Oro\Bundle\EntityExtendBundle\Mapping\ExtendClassMetadataFactory
         resolve_target_entities:
             Symfony\Component\Security\Core\User\UserInterface: Oro\Bundle\UserBundle\Entity\User
+        mappings:
+            OroDistributionBundle:
+                mapping:   false
+                is_bundle: true
 
 
 # Swiftmailer Configuration
