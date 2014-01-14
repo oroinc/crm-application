@@ -11,7 +11,7 @@
     processIsolation            = "false"
     stopOnFailure               = "false"
     syntaxCheck                 = "false"
-    bootstrap                   = "bootstrap.php.cache" >
+    bootstrap                   = "autoload.php" >
 
     <logging>
       <log type="junit" target="../build/logs/phpunit.xml"/>
@@ -41,7 +41,7 @@
             <directory suffix="Test.php">../src/Oro/src/Oro/Bundle/*Bundle/Tests/Functional</directory>
         </testsuite>
         <testsuite name="Project Selenium Tests">
-            <directory suffix="Test.php">../src/OroCRM/src/OroCRM/Bundle/*Bundle/Tests/Selenium</directory>
+            <directory suffix="Test.php">../src/*/src/*/Bundle/*Bundle/Tests/Selenium</directory>
         </testsuite>
         <testsuite name="Project Behat Tests">
             <directory suffix="Test.php">../src/Oro*/src/Oro*/Bundle/*Bundle/Tests/Behat</directory>
@@ -61,7 +61,7 @@
         <const name="PHPUNIT_TESTSUITE" value="true"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_HOST" value="127.0.0.1"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PORT" value="4444"/>
-        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM2_BROWSER" value="phantomjs"/>
+        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM2_BROWSER" value="firefox"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_TESTS_URL" value="http://localhost.com"/>
         <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_TESTS_URL_COVERAGE" value="http://localhost.com/bundles/acmetests/scripts/phpunit_coverage.php"/>
         <const name="MAX_EXECUTION_TIME" value="120000"/>
