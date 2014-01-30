@@ -22,6 +22,9 @@ class OroRequirements extends SymfonyRequirements
         $nodeExists = new ProcessBuilder(array('node', '--version'));
         $nodeExists = $nodeExists->getProcess();
 
+        if (isset($_SERVER['PATH'])) {
+            $nodeExists->setEnv(['PATH' => $_SERVER['PATH']]);
+        }
         $nodeExists->run();
         while ($nodeExists->isRunning()) {
             // waiting for process to finish
@@ -108,7 +111,7 @@ class OroRequirements extends SymfonyRequirements
 
         $this->addRecommendation(
             $nodeExists,
-            'NodeJS must be installed',
+            'NodeJS should be installed',
             'Install the <strong>NodeJS</strong>.'
         );
 
@@ -123,6 +126,30 @@ class OroRequirements extends SymfonyRequirements
             'web/bundles/ directory must be writable',
             'Change the permissions of the "<strong>web/bundles/</strong>" directory so that the web server can write into it.'
         );
+
+        if (is_dir($baseDir . '/web/js')) {
+            $this->addOroRequirement(
+                is_writable($baseDir . '/web/js'),
+                'web/js directory must be writable',
+                'Change the permissions of the "<strong>web/js</strong>" directory so that the web server can write into it.'
+            );
+        }
+
+        if (is_dir($baseDir . '/web/css')) {
+            $this->addOroRequirement(
+                is_writable($baseDir . '/web/css'),
+                'web/css directory must be writable',
+                'Change the permissions of the "<strong>web/css</strong>" directory so that the web server can write into it.'
+            );
+        }
+
+        if (!is_dir($baseDir . '/web/css') || !is_dir($baseDir . '/web/js')) {
+            $this->addOroRequirement(
+                is_writable($baseDir . '/web'),
+                'web directory must be writable',
+                'Change the permissions of the "<strong>web</strong>" directory so that the web server can write into it.'
+            );
+        }
     }
 
     /**
