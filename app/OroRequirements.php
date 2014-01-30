@@ -22,6 +22,9 @@ class OroRequirements extends SymfonyRequirements
         $nodeExists = new ProcessBuilder(array('node', '--version'));
         $nodeExists = $nodeExists->getProcess();
 
+        if (isset($_SERVER['PATH'])) {
+            $nodeExists->setEnv(['PATH' => $_SERVER['PATH']]);
+        }
         $nodeExists->run();
         while ($nodeExists->isRunning()) {
             // waiting for process to finish
@@ -113,24 +116,6 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addOroRequirement(
-            is_writable($baseDir . '/app/cache'),
-            'app/cache/ directory must be writable',
-            'Change the permissions of the "<strong>app/cache/</strong>" directory so that the web server can write into it.'
-        );
-
-        $this->addOroRequirement(
-            is_writable($baseDir . '/app/logs'),
-            'app/logs/ directory must be writable',
-            'Change the permissions of the "<strong>app/logs/</strong>" directory so that the web server can write into it.'
-        );
-
-        $this->addOroRequirement(
-            is_writable($baseDir . '/app/emails'),
-            'app/emails/ directory must be writable',
-            'Change the permissions of the "<strong>app/emails/</strong>" directory so that the web server can write into it.'
-        );
-
-        $this->addOroRequirement(
             is_writable($baseDir . '/web/uploads'),
             'web/uploads/ directory must be writable',
             'Change the permissions of the "<strong>web/uploads/</strong>" directory so that the web server can write into it.'
@@ -142,11 +127,29 @@ class OroRequirements extends SymfonyRequirements
             'Change the permissions of the "<strong>web/bundles/</strong>" directory so that the web server can write into it.'
         );
 
-        $this->addOroRequirement(
-            is_writable($baseDir . '/web'),
-            'web directory must be writable',
-            'Change the permissions of the "<strong>web</strong>" directory so that the web server can write into it.'
-        );
+        if (is_dir($baseDir . '/web/js')) {
+            $this->addOroRequirement(
+                is_writable($baseDir . '/web/js'),
+                'web/js directory must be writable',
+                'Change the permissions of the "<strong>web/js</strong>" directory so that the web server can write into it.'
+            );
+        }
+
+        if (is_dir($baseDir . '/web/css')) {
+            $this->addOroRequirement(
+                is_writable($baseDir . '/web/css'),
+                'web/css directory must be writable',
+                'Change the permissions of the "<strong>web/css</strong>" directory so that the web server can write into it.'
+            );
+        }
+
+        if (!is_dir($baseDir . '/web/css') || !is_dir($baseDir . '/web/js')) {
+            $this->addOroRequirement(
+                is_writable($baseDir . '/web'),
+                'web directory must be writable',
+                'Change the permissions of the "<strong>web</strong>" directory so that the web server can write into it.'
+            );
+        }
     }
 
     /**

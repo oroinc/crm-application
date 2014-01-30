@@ -1,3 +1,14 @@
+CHANGELOG for 1.0.0-rc1
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-rc1 versions.
+
+* 1.0.0-rc1 (2014-01-30)
+ * Improved Reports
+ * Improved Workflow
+ * Improved Dashboard
+ * Magento import performance improvements
+ * Other improvements in channnels, contacts
+
 CHANGELOG for 1.0.0-beta6
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-beta6 versions.
