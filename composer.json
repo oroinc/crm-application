@@ -10,6 +10,12 @@
             "": "src/"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/laboro/doctrine-functions"
+        }
+    ],
     "require": {
         "php": ">=5.4.4",
         "ext-intl": "*",
@@ -55,7 +61,8 @@
         "jdare/clank-bundle": "0.1.*",
         "lexik/maintenance-bundle": "dev-master",
         "sylius/flow-bundle": "0.6.*",
-        "composer/composer": "1.0.0-alpha8"
+        "composer/composer": "1.0.0-alpha8",
+        "luxifer/doctrine-functions": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
