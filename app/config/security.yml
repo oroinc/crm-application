@@ -42,6 +42,11 @@ security:
             provider:                       chain_provider
             anonymous:                      true
 
+        embedded_form:
+            pattern:                        ^/embedded-form/(submit|success)
+            provider:                       chain_provider
+            anonymous:                      true
+
         main:
             pattern:                        ^/
             provider:                       chain_provider
