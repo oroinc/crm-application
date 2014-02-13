@@ -25,9 +25,11 @@
         </testsuite>
         <testsuite name="Project OroCRM Unit Tests">
             <directory suffix="Test.php">../src/OroCRM/src/OroCRM/Bundle/*Bundle/Tests/Unit</directory>
+            <directory suffix="Test.php">../src/OroCRMPackages/src/OroCRM/Bundle/*Bundle/Tests/Unit</directory>
         </testsuite>
         <testsuite name="Project OroCRM Functional Tests">
             <directory suffix="Test.php">../src/OroCRM/src/OroCRM/Bundle/*Bundle/Tests/Functional</directory>
+            <directory suffix="Test.php">../src/OroCRMPackages/src/OroCRM/Bundle/*Bundle/Tests/Functional</directory>
         </testsuite>
         <testsuite name="Project Oro Unit Tests">
             <directory suffix="Test.php">../src/Oro/src/Oro/Bundle/*Bundle/Tests/Unit</directory>
@@ -53,10 +55,12 @@
                 <directory>../src/*/tests</directory>
                 <directory>../src/*/src/*/Bundle/TestFrameworkBundle</directory>
                 <directory>../src/*/Bundle/*Bundle/DataFixtures</directory>
+                <directory>../src/*/Bundle/*Bundle/Migrations</directory>
                 <directory>../src/*/Bundle/*Bundle/Resources</directory>
                 <directory>../src/*/Bundle/*Bundle/Tests</directory>
                 <directory>../src/*/Bundle/*Bundle/vendor</directory>
                 <directory>../src/*/src/*/Bundle/*Bundle/DataFixtures</directory>
+                <directory>../src/*/src/*/Bundle/*Bundle/Migrations</directory>
                 <directory>../src/*/src/*/Bundle/*Bundle/Resources</directory>
                 <directory>../src/*/src/*/Bundle/*Bundle/Tests</directory>
                 <directory>../src/*/src/*/Bundle/*Bundle/vendor</directory>
