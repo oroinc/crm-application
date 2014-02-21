@@ -5,6 +5,9 @@ security:
             id: security.acl.cache.doctrine
             prefix: sf2_acl_
 
+    access_decision_manager:
+        strategy: unanimous
+
     providers:
         chain_provider:
             chain:
@@ -39,6 +42,11 @@ security:
 
         reset_password:
             pattern:                        ^/user/reset/*
+            provider:                       chain_provider
+            anonymous:                      true
+
+        embedded_form:
+            pattern:                        ^/embedded-form/(submit|success)
             provider:                       chain_provider
             anonymous:                      true
 
