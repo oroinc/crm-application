@@ -77,7 +77,7 @@ Demo Data uploading
 To upload this feature you need to run console command
 
  ```bash
-php app/console doctrine:fixture:load --verbose --append --no-interaction --env=prod --fixtures=vendor/oro/crm/src/OroCRM/Bundle/DemoDataBundle/DataFixtures
+php app/console oro:installer:fixtures:load --env prod --fixtures-type=demo
 ```
 
 Checking your System Configuration

@@ -150,6 +150,14 @@ class OroRequirements extends SymfonyRequirements
                 'Change the permissions of the "<strong>web</strong>" directory so that the web server can write into it.'
             );
         }
+
+        if (is_file($baseDir . '/app/config/parameters.yml')) {
+            $this->addOroRequirement(
+                is_writable($baseDir . '/app/config/parameters.yml'),
+                'app/config/parameters.yml file must be writable',
+                'Change the permissions of the "<strong>app/config/parameters.yml</strong>" file so that the web server can write into it.'
+            );
+        }
     }
 
     /**

@@ -1,3 +1,12 @@
+CHANGELOG for 1.0.0-rc2
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-rc2 versions.
+
+* 1.0.0-rc2 (2014-02-25)
+ * Refactored Flexible Workflows
+ * Embedded forms
+ * Account merging
+
 CHANGELOG for 1.0.0-rc1
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-rc1 versions.
