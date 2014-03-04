@@ -17,6 +17,7 @@ OroCRM is Symfony 2 based application with following requirements:
     * Tokenizer
     * SimpleXML
     * PCRE
+    * ICU
 * MySQL 5.1 and above
 
 ## Installation instructions
