@@ -1,0 +1,85 @@
+imports:
+    - { resource: @OroDistributionBundle/Resources/config/security.yml }
+    - { resource: ../parameters.yml }
+
+framework:
+    #esi:             ~
+    translator:      { fallback: "%locale%" }
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/dist/routing.yml"
+        strict_requirements: "%kernel.debug%"
+    form:            true
+    csrf_protection: true
+    validation:      { enable_annotations: true }
+    templating:      { engines: ['twig', 'php'] } #assets_version: SomeVersionScheme
+    default_locale:           "%locale%"
+    trusted_proxies:          ~
+    session:
+        name:                 BAPID_DIST
+        handler_id:           %session_handler%
+        save_path:            %kernel.root_dir%/cache/sessions
+        gc_maxlifetime:       3600
+    fragments:
+        enabled:              true
+        path:                 /_fragment # used for controller action in template
+
+# Assetic Configuration
+assetic:
+    debug:                    false
+    use_controller:           false
+    filters:
+        cssrewrite: ~
+        lessphp:
+            file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
+            apply_to: "\.less$"
+        cssmin:
+            file: %kernel.root_dir%/Resources/php/cssmin-v3.0.1.php
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        default_connection:   default
+        connections:
+            default:
+                driver:       pdo_mysql
+                host:         "%database_host%"
+                port:         "%database_port%"
+                dbname:       "%database_name%"
+                user:         "%database_user%"
+                password:     "%database_password%"
+                charset:      UTF8
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_mapping:         true
+
+# Twig Configuration
+twig:
+    debug:                    "%kernel.debug%"
+    strict_variables:         "%kernel.debug%"
+
+services:
+    oro.cache.abstract:
+        abstract:             true
+        class:                Doctrine\Common\Cache\PhpFileCache
+        arguments:            [%kernel.cache_dir%/dist]
+    twig.extension.intl:
+         class:               Twig_Extensions_Extension_Intl
+         tags:
+             - { name: twig.extension }
+
+oro_help:
+    defaults:
+        server: http://help.orocrm.com/
+        prefix: Third_Party
+    vendors:
+        Oro:
+            prefix: ~
+            alias: Platform
+
+monolog:
+    handlers:
+        oro_distribution:
+            type: stream
+            path: %kernel.logs_dir%/%kernel.environment%.distribution.log
+            channels: oro_distribution
