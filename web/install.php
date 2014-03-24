@@ -7,9 +7,10 @@ if (!isset($_SERVER['HTTP_HOST'])) {
 use Symfony\Component\Translation\Translator;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Symfony\Component\Yaml\Yaml;
+use Symfony\Component\HttpFoundation\Request;
 
 require_once __DIR__ . '/../app/OroRequirements.php';
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../app/autoload.php';
 
 // check for installed system
 $paramFile = __DIR__ . '/../app/config/parameters.yml';
@@ -22,7 +23,14 @@ if (file_exists($paramFile)) {
         && isset($data['parameters']['installed'])
         && false != $data['parameters']['installed']
     ) {
-        header('Location: /');
+        require_once __DIR__.'/../app/DistributionKernel.php';
+
+        $kernel = new DistributionKernel('prod', false);
+        $kernel->loadClassCache();
+        $request = Request::createFromGlobals();
+        $response = $kernel->handle($request);
+        $response->send();
+        $kernel->terminate($request, $response);
 
         exit;
     }
