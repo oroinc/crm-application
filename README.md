@@ -2,8 +2,6 @@
 
 Welcome to OroCRM an Open Source Customer Relationship Management (CRM) tool.
 
-**Important Note**: this application is not production ready and is intended for evaluation and development only.
-
 ## Requirements
 
 OroCRM is Symfony 2 based application with following requirements:
@@ -42,5 +40,13 @@ Create the database (default name is "oro_crm").
 Initialize application with Installation Wizard by opening install.php in the browser or from CLI:
 
     php app/console oro:install
+
+Start web socket server:
+
+    php app/console clank:server
+
+Configure crontab or scheduled tasks execution to run command below every minute:
+
+    php app/console oro:cron
 
 [1]:  http://getcomposer.org/
