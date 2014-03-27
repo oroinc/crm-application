@@ -1,6 +1,12 @@
 {% extends 'OroUIBundle:Default:index.html.twig' %}
 {% oro_title_set({titleTemplate : "%code% - %status%" , params: {'%code%': status_code, '%status%' :status_text }, force : true}) %}
-{% block hash_nav %}{% endblock %}
+{% block hash_nav %}
+    <script type="text/javascript">
+        require(['oronavigation/js/navigation'], function (Navigation) {
+            Navigation.enable = false;
+        });
+    </script>
+{% endblock %}
 {% block bodyClass %}error-page{% endblock %}
 
 {% block header %}
