@@ -16,10 +16,11 @@ framework:
     default_locale:           "%locale%"
     trusted_proxies:          ~
     session:
-        name:                 BAPID
+        name:                 CRMID
         handler_id:           %session_handler%
         save_path:            %kernel.root_dir%/cache/sessions
         gc_maxlifetime:       3600
+        cookie_httponly:      true
     fragments:
         enabled:              true
         path:                 /_fragment # used for controller action in template
@@ -94,6 +95,23 @@ doctrine:
                 mapping:   false
                 is_bundle: true
 
+        dql:
+            datetime_functions:
+                date:         Luxifer\DQL\Datetime\Date
+                datediff:     Luxifer\DQL\Datetime\DateDiff
+                dayofmonth:   Luxifer\DQL\Datetime\DayOfMonth
+                dayofweek:    Luxifer\DQL\Datetime\DayOfWeek
+                dayofyear:    Luxifer\DQL\Datetime\DayOfYear
+                week:         Luxifer\DQL\Datetime\Week
+                day:          Luxifer\DQL\Datetime\Day
+                hour:         Luxifer\DQL\Datetime\Hour
+                minute:       Luxifer\DQL\Datetime\Minute
+                month:        Luxifer\DQL\Datetime\Month
+                quarter:      Luxifer\DQL\Datetime\Quarter
+                second:       Luxifer\DQL\Datetime\Second
+                time:         Luxifer\DQL\Datetime\Time
+                year:         Luxifer\DQL\Datetime\Year
+                convert_tz:   Luxifer\DQL\Datetime\ConvertTZ
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -218,6 +236,9 @@ lexik_maintenance:
 #
 # ORO Bundles config
 #
+oro_distribution:
+    entry_point: ~
+
 oro_ui:
     settings:
         application_name:

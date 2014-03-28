@@ -1,0 +1,9 @@
+#
+# ORO routes
+#
+index:
+    path: /
+    defaults: { _controller: OroDistributionBundle:Package:listInstalled }
+
+oro_distribution:
+    resource: "@OroDistributionBundle/Resources/config/routing.yml"

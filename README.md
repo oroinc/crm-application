@@ -2,8 +2,6 @@
 
 Welcome to OroCRM an Open Source Customer Relationship Management (CRM) tool.
 
-**Important Note**: this application is not production ready and is intended for evaluation and development only.
-
 ## Requirements
 
 OroCRM is Symfony 2 based application with following requirements:
@@ -17,6 +15,7 @@ OroCRM is Symfony 2 based application with following requirements:
     * Tokenizer
     * SimpleXML
     * PCRE
+    * ICU
 * MySQL 5.1 and above
 
 ## Installation instructions
@@ -60,6 +59,8 @@ app/console oro:install
 After installation you can login as application administrator using user name "admin" and password "admin".
 
 ## Installation notes
+
+Installed PHP Accelerators must be compatible with Symfony and Doctrine (support DOCBLOCKs)
 
 Using MySQL 5.6 with HDD is potentially risky because of performance issues
 
