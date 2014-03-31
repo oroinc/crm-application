@@ -1,3 +1,41 @@
+CHANGELOG for 1.0.0
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0 versions.
+
+* 1.0.0 (2014-04-01)
+ * Tasks
+ * Improved UI for launch of the Sales Process workflow
+
+CHANGELOG for 1.0.0-rc2
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-rc2 versions.
+
+* 1.0.0-rc2 (2014-02-25)
+ * Refactored Flexible Workflows
+ * Embedded forms
+ * Account merging
+
+CHANGELOG for 1.0.0-rc1
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-rc1 versions.
+
+* 1.0.0-rc1 (2014-01-30)
+ * Improved Reports
+ * Improved Workflow
+ * Improved Dashboard
+ * Magento import performance improvements
+ * Other improvements in channnels, contacts
+
+CHANGELOG for 1.0.0-beta6
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-beta6 versions.
+
+* 1.0.0-beta6 (2013-12-30)
+ * Magento data import: Customers, Shopping carts and Orders
+ * B2C Sales Flow
+ * Call view window
+ * Basic dashboards
+
 CHANGELOG for 1.0.0-beta5
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-beta5 versions.
@@ -13,7 +51,6 @@ CHANGELOG for 1.0.0-beta4
 This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-beta4 versions.
 
 * 1.0.0-beta4 (2013-11-21)
- * Removed install.bat/install.sh 
  * Workflow transitions
  * Make all entities as Extended
  * End support for Internet Explorer 9 
@@ -46,8 +83,8 @@ CHANGELOG for 1.0.0-alpha6
 ===================
 
 * 1.0.0-alpha6 (2013-09-12)
-   * Leads and Opportunities
-   * Flexible Workflow Engine (FWE)
+  * Leads and Opportunities
+  * Flexible Workflow Engine (FWE)
 
 CHANGELOG for 1.0.0-alpha5
 ===================

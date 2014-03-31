@@ -7,6 +7,7 @@ Welcome to OroCRM an Open Source Customer Relationship Management (CRM) tool.
 OroCRM is Symfony 2 based application with following requirements:
 
 * PHP 5.4.4 and above
+* PHP 5.4.4 and above command line interface
 * PHP Extensions
     * GD
     * Mcrypt
@@ -82,40 +83,33 @@ To use this feature you need to configure parameters.yml websocket parameters an
 app/console clank:server --env prod
 ```
 
-Reporting
----------
+## Reporting
+
 To use this feature you need to run report data collector with console command
 
 ```bash
 app/console oro:report:update --env prod
 ```
 
-Demo Data uploading
----------
+## Demo Data uploading
+
 To upload this feature you need to run console command
 
 ```bash
 php app/console doctrine:fixture:load --verbose --append --no-interaction --env=prod --fixtures=vendor/oro/crm/src/OroCRM/Bundle/DemoDataBundle/DataFixtures
 ```
+## Instant messaging between the browser and the web server
 
-Checking your System Configuration
--------------------------------------
+To use this feature you need to configure parameters.yml websocket parameters and run server with console command
 
-Before starting to code, make sure that your local system is properly
-configured for a Symfony application.
-
-Execute the `check.php` script from the command line:
-
-```bash
-php app/check.php
+ ```bash
+app/console clank:server
 ```
+Configure crontab or scheduled tasks execution to run command below every minute:
 
-Access the `config.php` script from a browser:
-
-    http://your_domain/path/to/symfony/app/web/config.php
-
-If you get any warnings or recommendations, fix them before moving on.
-
+ ```bash
+    php app/console oro:cron
+ ```
 
 [1]:  http://symfony.com/doc/2.3/book/installation.html
 [2]:  http://getcomposer.org/
