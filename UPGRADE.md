@@ -1,3 +1,27 @@
+UPGRADE to 1.0.0 from 1.0.0-RC3
+=======================
+
+### General
+
+  * Pull changes from repository
+```bash
+git pull
+```
+  * Upgrade composer dependency
+```bash
+php composer.phar update --prefer-dist
+```
+  * Remove old caches and assets
+```bash
+rm -rf app/cache/*
+rm -rf web/js/*
+rm -rf web/css/*
+```
+  * Upgrade platform
+```bash
+php app/console oro:platform:update --env=prod
+```
+
 UPGRADE to 1.0.0-RC2 from 1.0.0-RC1
 =======================
 
