@@ -75,14 +75,18 @@ And ensure that timeout has default value
 
 See [Optimizing InnoDB Disk I/O][3] for more
 
-Instant messaging between the browser and the web server
---------------------------------------------------------
+## Instant messaging between the browser and the web server
+
 To use this feature you need to configure parameters.yml websocket parameters and run server with console command
 
 ```bash
 app/console clank:server --env prod
 ```
+Configure crontab or scheduled tasks execution to run command below every minute:
 
+ ```bash
+php app/console oro:cron
+ ```
 ## Reporting
 
 To use this feature you need to run report data collector with console command
@@ -90,7 +94,6 @@ To use this feature you need to run report data collector with console command
 ```bash
 app/console oro:report:update --env prod
 ```
-
 ## Demo Data uploading
 
 To upload this feature you need to run console command
@@ -98,19 +101,6 @@ To upload this feature you need to run console command
 ```bash
 php app/console doctrine:fixture:load --verbose --append --no-interaction --env=prod --fixtures=vendor/oro/crm/src/OroCRM/Bundle/DemoDataBundle/DataFixtures
 ```
-## Instant messaging between the browser and the web server
-
-To use this feature you need to configure parameters.yml websocket parameters and run server with console command
-
- ```bash
-app/console clank:server
-```
-Configure crontab or scheduled tasks execution to run command below every minute:
-
- ```bash
-    php app/console oro:cron
- ```
-
 [1]:  http://symfony.com/doc/2.3/book/installation.html
 [2]:  http://getcomposer.org/
 [3]:  http://dev.mysql.com/doc/refman/5.6/en/optimizing-innodb-diskio.html
