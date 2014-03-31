@@ -1,14 +1,14 @@
 # OroCRM Application
 
-Welcome to OroCRM an Open Source Customer Relationship Management (CRM) tool.
+Welcome to OroCRM the Open Source Customer Relationship Management (CRM) application.
 
 ## Requirements
 
-OroCRM is Symfony 2 based application with following requirements:
+OroCRM is a Symfony 2 based application with the following requirements:
 
-* PHP 5.4.4 and above
+* PHP 5.4.4 or above
 * PHP 5.4.4 and above command line interface
-* PHP Extensions
+* PHP Extensions:
     * GD
     * Mcrypt
     * JSON
@@ -17,13 +17,13 @@ OroCRM is Symfony 2 based application with following requirements:
     * SimpleXML
     * PCRE
     * ICU
-* MySQL 5.1 and above
+* MySQL 5.1 or above
 
 ## Installation instructions
 
 OroCRM uses [Composer][1] to manage package dependencies, this is the a recommended way to install OroCRM.
 
-- If you don't have Composer yet, download it following the instructions on http://getcomposer.org/
+- If you don't have Composer yet, download it and follow the instructions on http://getcomposer.org/
 or just run the following command:
 
 ```bash
@@ -72,7 +72,7 @@ php app/console oro:cron
 
 Installed PHP Accelerators must be compatible with Symfony and Doctrine (support DOCBLOCKs).
 
-Using MySQL 5.6 with HDD is potentially risky because of performance issues.
+Using MySQL 5.6 on HDD is potentially risky because of performance issues.
 
 Recommended configuration for this case:
 
@@ -85,9 +85,9 @@ And ensure that timeout has default value
 See [Optimizing InnoDB Disk I/O][3] for more
 
 
-## Demo Data uploading
+## Loading Demo Data using command line
 
-To upload this feature you need to run console command
+To load sample data you need to run console command
 
 ```bash
 php app/console oro:migration:data:load --fixtures-type=demo --env=prod
