@@ -37,11 +37,8 @@ git clone http://github.com/orocrm/crm-application.git
 ```
 
 
-- Make sure that you have installed NodeJS
+- Make sure that you have [NodeJS][4] installed
 
-- Go to app/config folder and create parameters.yml using parameters.yml.dist as example. Update database name and credentials.
-  Alternatively parameters.yml can be created automatically on the next step when run composer install command,
-  you will be able to customize all the values interactively.
 - Install OroCRM dependencies with composer. If installation process seems too slow you can use "--prefer-dist" option.
   Go to crm-application folder and run composer installation:
 
@@ -49,21 +46,33 @@ git clone http://github.com/orocrm/crm-application.git
 php composer.phar install --prefer-dist
 ```
 
-- Create the database (default name is "oro_crm").
+- Create the database with the name specified on previous step (default name is "oro_crm").
 
-- Initialize application with Installation Wizard by opening install.php in the browser or from CLI:
+- Install application and admin user with Installation Wizard by opening install.php in the browser or from CLI:
 
 ```bash  
-app/console oro:install
+php app/console oro:install
 ```
 
-After installation you can login as application administrator using user name "admin" and password "admin".
+- Enable instant messaging between the browser and the web server
+
+```bash
+php app/console clank:server --env prod
+```
+
+- Configure crontab or scheduled tasks execution to run command below every minute:
+
+```bash
+php app/console oro:cron
+```
+ 
+**Note:** ``app/console`` is a path from project root folder. Please make sure you are using full path for crontab configuration or if you running console command from other location.
 
 ## Installation notes
 
-Installed PHP Accelerators must be compatible with Symfony and Doctrine (support DOCBLOCKs)
+Installed PHP Accelerators must be compatible with Symfony and Doctrine (support DOCBLOCKs).
 
-Using MySQL 5.6 with HDD is potentially risky because of performance issues
+Using MySQL 5.6 with HDD is potentially risky because of performance issues.
 
 Recommended configuration for this case:
 
@@ -75,25 +84,7 @@ And ensure that timeout has default value
 
 See [Optimizing InnoDB Disk I/O][3] for more
 
-## Instant messaging between the browser and the web server
 
-To use this feature you need to configure parameters.yml websocket parameters and run server with console command
-
-```bash
-app/console clank:server --env prod
-```
-Configure crontab or scheduled tasks execution to run command below every minute:
-
- ```bash
-php app/console oro:cron
- ```
-## Reporting
-
-To use this feature you need to run report data collector with console command
-
-```bash
-app/console oro:report:update --env prod
-```
 ## Demo Data uploading
 
 To upload this feature you need to run console command
@@ -104,3 +95,4 @@ php app/console oro:migration:data:load --fixtures-type=demo --env=prod
 [1]:  http://symfony.com/doc/2.3/book/installation.html
 [2]:  http://getcomposer.org/
 [3]:  http://dev.mysql.com/doc/refman/5.6/en/optimizing-innodb-diskio.html
+[4]:  https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
