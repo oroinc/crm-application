@@ -99,7 +99,7 @@ app/console oro:report:update --env prod
 To upload this feature you need to run console command
 
 ```bash
-php app/console doctrine:fixture:load --verbose --append --no-interaction --env=prod --fixtures=vendor/oro/crm/src/OroCRM/Bundle/DemoDataBundle/DataFixtures
+php app/console oro:migration:data:load --fixtures-type=demo --env=prod
 ```
 [1]:  http://symfony.com/doc/2.3/book/installation.html
 [2]:  http://getcomposer.org/
