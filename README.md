@@ -51,7 +51,7 @@ php composer.phar install --prefer-dist
 - Install application and admin user with Installation Wizard by opening install.php in the browser or from CLI:
 
 ```bash  
-php app/console oro:install
+php app/console oro:install --env prod
 ```
 
 - Enable instant messaging between the browser and the web server
@@ -63,7 +63,7 @@ php app/console clank:server --env prod
 - Configure crontab or scheduled tasks execution to run command below every minute:
 
 ```bash
-php app/console oro:cron
+php app/console oro:cron --env prod
 ```
  
 **Note:** ``app/console`` is a path from project root folder. Please make sure you are using full path for crontab configuration or if you running console command from other location.
