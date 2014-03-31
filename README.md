@@ -37,7 +37,7 @@ git clone http://github.com/orocrm/crm-application.git
 ```
 
 
-- Make sure that you have installed Java
+- Make sure that you have installed NodeJS
 
 - Go to app/config folder and create parameters.yml using parameters.yml.dist as example. Update database name and credentials.
   Alternatively parameters.yml can be created automatically on the next step when run composer install command,
