@@ -54,7 +54,7 @@ php composer.phar install --prefer-dist
 php app/console oro:install --env prod
 ```
 
-- Enable instant messaging between the browser and the web server
+- Enable WebSockets messaging
 
 ```bash
 php app/console clank:server --env prod
