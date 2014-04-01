@@ -1,6 +1,10 @@
 {% extends 'OroUIBundle:Default:index.html.twig' %}
 {% oro_title_set({titleTemplate : "%code% - %status%" , params: {'%code%': status_code, '%status%' :status_text }, force : true}) %}
 {% block hash_nav %}{% endblock %}
+{% block head %}
+    <meta name="error" content="{{ status_code }}" />
+    {{ parent() }}
+{% endblock %}
 {% block bodyClass %}error-page{% endblock %}
 
 {% block header %}
@@ -32,24 +36,24 @@
 {% endblock left_panel %}
 
 {% block content %}
-<div class="popup-frame">
-    <div class="popup-holder">
-        <div class="pagination-centered popup-box-errors">
-            <h1><span>{{ status_code }}</span> {{ status_text }}</h1>
-            <div class="popup-content">
-                <p>
-                    {% if status_code == 404 %}
-                        {{ 'The page you requested could not be found. Please make sure the path you used is correct'|trans }}
-                    {% elseif status_code == 403 %}
-                        {{ "You don't have permission to access this page"|trans }}
-                    {% else %}
-                        {{ 'The System is currently under maintenance and should be available in a few minutes'|trans }}
-                    {% endif %}
-                </p>
+    <div class="popup-frame">
+        <div class="popup-holder">
+            <div class="pagination-centered popup-box-errors">
+                <h1><span>{{ status_code }}</span> {{ status_text }}</h1>
+                <div class="popup-content">
+                    <p>
+                        {% if status_code == 404 %}
+                            {{ 'The page you requested could not be found. Please make sure the path you used is correct'|trans }}
+                        {% elseif status_code == 403 %}
+                            {{ "You don't have permission to access this page"|trans }}
+                        {% else %}
+                            {{ 'The System is currently under maintenance and should be available in a few minutes'|trans }}
+                        {% endif %}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 

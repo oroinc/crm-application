@@ -1,3 +1,11 @@
+CHANGELOG for 1.0.0
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0 versions.
+
+* 1.0.0 (2014-04-01)
+ * Tasks
+ * Improved UI for launch of the Sales Process workflow
+
 CHANGELOG for 1.0.0-rc2
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-rc2 versions.
@@ -43,7 +51,6 @@ CHANGELOG for 1.0.0-beta4
 This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0-beta4 versions.
 
 * 1.0.0-beta4 (2013-11-21)
- * Removed install.bat/install.sh 
  * Workflow transitions
  * Make all entities as Extended
  * End support for Internet Explorer 9 
@@ -76,8 +83,8 @@ CHANGELOG for 1.0.0-alpha6
 ===================
 
 * 1.0.0-alpha6 (2013-09-12)
-   * Leads and Opportunities
-   * Flexible Workflow Engine (FWE)
+  * Leads and Opportunities
+  * Flexible Workflow Engine (FWE)
 
 CHANGELOG for 1.0.0-alpha5
 ===================
