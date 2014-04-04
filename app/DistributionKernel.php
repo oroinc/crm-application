@@ -11,15 +11,17 @@ class DistributionKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
-            new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new \Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new \Symfony\Bundle\TwigBundle\TwigBundle(),
-            new \Symfony\Bundle\AsseticBundle\AsseticBundle(),
-            new \Symfony\Bundle\MonologBundle\MonologBundle(),
+            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new Symfony\Bundle\TwigBundle\TwigBundle(),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Oro\Bundle\DistributionBundle\OroDistributionBundle(),
-            new \Symfony\Bundle\SecurityBundle\SecurityBundle(),
+            new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
-            new \Oro\Bundle\HelpBundle\OroHelpBundle(),
+            new Oro\Bundle\HelpBundle\OroHelpBundle(),
+            new Lexik\Bundle\MaintenanceBundle\LexikMaintenanceBundle(),
+            new Oro\Bundle\PlatformBundle\OroPlatformBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev'))) {
