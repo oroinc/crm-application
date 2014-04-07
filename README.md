@@ -92,7 +92,13 @@ To load sample data you need to run console command
 ```bash
 php app/console oro:migration:data:load --fixtures-type=demo --env=prod
 ```
+
+## Web Server Configuration
+
+OroCRM application is based on symfony standard application so web server cofiguration recomendation are the [same][5].
+
 [1]:  http://symfony.com/doc/2.3/book/installation.html
 [2]:  http://getcomposer.org/
 [3]:  http://dev.mysql.com/doc/refman/5.6/en/optimizing-innodb-diskio.html
 [4]:  https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
+[5]:  http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html

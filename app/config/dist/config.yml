@@ -58,6 +58,12 @@ twig:
     debug:                    "%kernel.debug%"
     strict_variables:         "%kernel.debug%"
 
+lexik_maintenance:
+    driver:
+        class:                Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver
+        options:
+            file_path:        %kernel.root_dir%/cache/maintenance_lock
+
 services:
     oro.cache.abstract:
         abstract:             true
