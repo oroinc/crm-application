@@ -72,6 +72,8 @@ php app/console oro:cron --env prod
 
 Installed PHP Accelerators must be compatible with Symfony and Doctrine (support DOCBLOCKs).
 
+Note that the port used in Websocket must be open in firewall for outgoing/incoming connections
+
 Using MySQL 5.6 on HDD is potentially risky because of performance issues.
 
 Recommended configuration for this case:
