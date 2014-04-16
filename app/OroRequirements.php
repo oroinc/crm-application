@@ -64,6 +64,12 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addOroRequirement(
+            null !== $curlVersion && version_compare($curlVersion['version'], self::REQUIRED_CURL_VERSION, '>='),
+            'cURL extension must be at least ' . self::REQUIRED_CURL_VERSION,
+            'Install and enable the <strong>cURL</strong> extension at least ' . self::REQUIRED_CURL_VERSION . ' version'
+        );
+
+        $this->addOroRequirement(
             null !== $icuVersion && version_compare($icuVersion, self::REQUIRED_ICU_VERSION, '>='),
             'icu library must be at least ' . self::REQUIRED_ICU_VERSION,
             'Install and enable the <strong>icu</strong> library at least ' . self::REQUIRED_ICU_VERSION . ' version'
@@ -73,12 +79,6 @@ class OroRequirements extends SymfonyRequirements
             class_exists('SoapClient'),
             'SOAP extension should be installed (API calls)',
             'Install and enable the <strong>SOAP</strong> extension.'
-        );
-
-        $this->addRecommendation(
-            null !== $curlVersion && version_compare($curlVersion['version'], self::REQUIRED_CURL_VERSION, '>='),
-            'cURL extension must be at least ' . self::REQUIRED_CURL_VERSION,
-            'Install and enable the <strong>cURL</strong> extension at least ' . self::REQUIRED_CURL_VERSION . ' version'
         );
 
         // Windows specific checks
