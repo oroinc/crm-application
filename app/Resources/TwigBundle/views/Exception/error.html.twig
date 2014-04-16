@@ -10,6 +10,7 @@
 {% block header %}
     {% if app.user is not null %}
         {{ parent() }}
+        {% block navbar %}{% endblock %}
     {% else %}
         <header class="navbar" id="oroplatform-header">
             <div class="navbar-inner">
