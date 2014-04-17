@@ -8,29 +8,16 @@
             "": "src/"
         }
     },
-    "config": {
-        "github-oauth": {
-            "github.com": "bb8f791840e2b4fed940f4c57ed621b03d5fb2b8"
-        }
-    },
-    "require": {
-        "oro/platform": "dev-release",
-        "oro/crm": "dev-release"
-    },
     "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/platform.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/crm.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/laboro/OroCRMMagentoContactUsBundle.git"
+       {
+            "type": "composer",
+            "url": "http://packagist.orocrm.com"
         }
     ],
+    "require": {
+        "oro/platform": "1.0.1",
+        "oro/crm": "1.0.1"
+    },
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
