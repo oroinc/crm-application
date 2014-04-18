@@ -173,11 +173,6 @@ stof_doctrine_extensions:
             tree:             true
 
 services:
-    # this cache should be used to caching data which need to be shared between nodes in a web farm
-    oro.cache.abstract:
-        abstract: true
-        class:                Oro\Bundle\SecurityBundle\Cache\FilesystemCache
-        arguments:            [%kernel.cache_dir%/oro_data]
     twig.extension.intl:
          class: Twig_Extensions_Extension_Intl
          tags:
@@ -231,7 +226,7 @@ lexik_maintenance:
     driver:
         class:                Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver
         options:
-            file_path:        %kernel.root_dir%/cache/lock
+            file_path:        %kernel.root_dir%/cache/maintenance_lock
 
 #
 # ORO Bundles config
