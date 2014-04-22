@@ -10,6 +10,9 @@
 {% block header %}
     {% if app.user is not null %}
         {{ parent() }}
+        {% if status_code == 503 %}
+            {% block navbar %}{% endblock %}
+        {% endif %}
     {% else %}
         <header class="navbar" id="oroplatform-header">
             <div class="navbar-inner">
