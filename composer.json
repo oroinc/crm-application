@@ -4,20 +4,19 @@
     "homepage": "https://github.com/orocrm/crm-application.git",
     "license": "OSL-3.0",
     "autoload": {
-        "psr-0": { 
-           "": "src/"
-         }
+        "psr-0": {
+            "": "src/"
+        }
     },
     "repositories": [
-       {
+        {
             "type": "composer",
             "url": "http://packagist.orocrm.com"
         }
     ],
     "require": {
-        "oro/platform": "1.0.0",
-        "oro/crm": "1.0.0",
-        "knplabs/knp-menu": "2.0.x-dev#ff1a6e73e79c9f75c6a130d03b07f05c89fede63"
+        "oro/platform": "1.x-dev",
+        "oro/crm": "1.x-dev"
     },
     "scripts": {
         "post-install-cmd": [

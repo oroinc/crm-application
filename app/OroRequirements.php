@@ -52,6 +52,12 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addOroRequirement(
+            null !== $curlVersion && version_compare($curlVersion['version'], self::REQUIRED_CURL_VERSION, '>='),
+            'cURL extension must be at least ' . self::REQUIRED_CURL_VERSION,
+            'Install and enable the <strong>cURL</strong> extension at least ' . self::REQUIRED_CURL_VERSION . ' version'
+        );
+
+        $this->addOroRequirement(
             function_exists('mcrypt_encrypt'),
             'mcrypt_encrypt() should be available',
             'Install and enable the <strong>Mcrypt</strong> extension.'
@@ -73,12 +79,6 @@ class OroRequirements extends SymfonyRequirements
             class_exists('SoapClient'),
             'SOAP extension should be installed (API calls)',
             'Install and enable the <strong>SOAP</strong> extension.'
-        );
-
-        $this->addRecommendation(
-            null !== $curlVersion && version_compare($curlVersion['version'], self::REQUIRED_CURL_VERSION, '>='),
-            'cURL extension must be at least ' . self::REQUIRED_CURL_VERSION,
-            'Install and enable the <strong>cURL</strong> extension at least ' . self::REQUIRED_CURL_VERSION . ' version'
         );
 
         // Windows specific checks
