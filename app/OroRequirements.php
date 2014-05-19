@@ -14,6 +14,8 @@ class OroRequirements extends SymfonyRequirements
     const REQUIRED_GD_VERSION = '2.0';
     const REQUIRED_CURL_VERSION = '7.0';
     const REQUIRED_ICU_VERSION = '3.8';
+    
+    const EXCLUDE_REQUIREMENTS_MASK = '/5\.3\.(3|4|8|16)|5\.4\.0/';
 
     public function __construct()
     {
@@ -241,6 +243,41 @@ class OroRequirements extends SymfonyRequirements
         }
 
         return (float) $val;
+    }
+    
+
+    /**
+     *  {@inheritdoc}
+     */
+    public function getRequirements()
+    {
+        $requirements = parent::getRequirements();
+
+        foreach ($requirements as $key => $requirement) {
+            $testMessage = $requirement->getTestMessage();
+            if (preg_match_all(self::EXCLUDE_REQUIREMENTS_MASK, $testMessage, $matches)) {
+                unset($requirements[$key]);
+            }
+        }
+
+        return $requirements;
+    }
+
+    /**
+     *  {@inheritdoc}
+     */
+    public function getRecommendations()
+    {
+        $recommendations = parent::getRecommendations();
+
+        foreach ($recommendations as $key => $recommendation) {
+            $testMessage = $recommendation->getTestMessage();
+            if (preg_match_all(self::EXCLUDE_REQUIREMENTS_MASK, $testMessage, $matches)) {
+                unset($recommendations[$key]);
+            }
+        }
+
+        return $recommendations;
     }
 }
 
