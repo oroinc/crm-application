@@ -10,10 +10,10 @@ use Symfony\Component\Intl\Intl;
  */
 class OroRequirements extends SymfonyRequirements
 {
-    const REQUIRED_PHP_VERSION = '5.4.4';
-    const REQUIRED_GD_VERSION = '2.0';
+    const REQUIRED_PHP_VERSION  = '5.4.4';
+    const REQUIRED_GD_VERSION   = '2.0';
     const REQUIRED_CURL_VERSION = '7.0';
-    const REQUIRED_ICU_VERSION = '3.8';
+    const REQUIRED_ICU_VERSION  = '3.8';
     
     const EXCLUDE_REQUIREMENTS_MASK = '/5\.3\.(3|4|8|16)|5\.4\.0/';
 
@@ -21,29 +21,20 @@ class OroRequirements extends SymfonyRequirements
     {
         parent::__construct();
 
-        $nodeExists = new ProcessBuilder(array('node', '--version'));
-        $nodeExists = $nodeExists->getProcess();
-
-        if (isset($_SERVER['PATH'])) {
-            $nodeExists->setEnv(['PATH' => $_SERVER['PATH']]);
-        }
-        $nodeExists->run();
-        while ($nodeExists->isRunning()) {
-            // waiting for process to finish
-        }
-
         $phpVersion  = phpversion();
         $gdVersion   = defined('GD_VERSION') ? GD_VERSION : null;
         $curlVersion = function_exists('curl_version') ? curl_version() : null;
         $icuVersion  = Intl::getIcuVersion();
-        $nodeExists   = $nodeExists->getErrorOutput() === null;
 
         $this->addOroRequirement(
             version_compare($phpVersion, self::REQUIRED_PHP_VERSION, '>='),
             sprintf('PHP version must be at least %s (%s installed)', self::REQUIRED_PHP_VERSION, $phpVersion),
-            sprintf('You are running PHP version "<strong>%s</strong>", but Oro needs at least PHP "<strong>%s</strong>" to run.
-                Before using Oro, upgrade your PHP installation, preferably to the latest version.',
-                $phpVersion, self::REQUIRED_PHP_VERSION),
+            sprintf(
+                'You are running PHP version "<strong>%s</strong>", but Oro needs at least PHP "<strong>%s</strong>" to run.
+                                Before using Oro, upgrade your PHP installation, preferably to the latest version.',
+                $phpVersion,
+                self::REQUIRED_PHP_VERSION
+            ),
             sprintf('Install PHP %s or newer (installed version is %s)', self::REQUIRED_PHP_VERSION, $phpVersion)
         );
 
@@ -98,6 +89,15 @@ class OroRequirements extends SymfonyRequirements
             );
         }
 
+        // Unix specific checks
+        if (!defined('PHP_WINDOWS_VERSION_BUILD')) {
+            $this->addRequirement(
+                $this->checkFileNameLength(),
+                'Cache folder should not be inside encrypted directory',
+                'Move <strong>app/cache</strong> folder outside encrypted directory.'
+            );
+        }
+
         $baseDir = realpath(__DIR__ . '/..');
         $mem     = $this->getBytes(ini_get('memory_limit'));
 
@@ -112,7 +112,7 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addRecommendation(
-            $nodeExists,
+            $this->checkNodeExists(),
             'NodeJS should be installed',
             'Install the <strong>NodeJS</strong>.'
         );
@@ -165,10 +165,10 @@ class OroRequirements extends SymfonyRequirements
     /**
      * Adds an Oro specific requirement.
      *
-     * @param Boolean     $fulfilled   Whether the requirement is fulfilled
+     * @param Boolean     $fulfilled Whether the requirement is fulfilled
      * @param string      $testMessage The message for testing the requirement
-     * @param string      $helpHtml    The help text formatted in HTML for resolving the problem
-     * @param string|null $helpText    The help text (when null, it will be inferred from $helpHtml, i.e. stripped from HTML tags)
+     * @param string      $helpHtml The help text formatted in HTML for resolving the problem
+     * @param string|null $helpText The help text (when null, it will be inferred from $helpHtml, i.e. stripped from HTML tags)
      */
     public function addOroRequirement($fulfilled, $testMessage, $helpHtml, $helpText = null)
     {
@@ -182,9 +182,12 @@ class OroRequirements extends SymfonyRequirements
      */
     public function getMandatoryRequirements()
     {
-        return array_filter($this->getRequirements(), function ($requirement) {
-            return !($requirement instanceof PhpIniRequirement) && !($requirement instanceof OroRequirement);
-        });
+        return array_filter(
+            $this->getRequirements(),
+            function ($requirement) {
+                return !($requirement instanceof PhpIniRequirement) && !($requirement instanceof OroRequirement);
+            }
+        );
     }
 
     /**
@@ -194,9 +197,12 @@ class OroRequirements extends SymfonyRequirements
      */
     public function getPhpIniRequirements()
     {
-        return array_filter($this->getRequirements(), function ($requirement) {
-            return $requirement instanceof PhpIniRequirement;
-        });
+        return array_filter(
+            $this->getRequirements(),
+            function ($requirement) {
+                return $requirement instanceof PhpIniRequirement;
+            }
+        );
     }
 
     /**
@@ -206,9 +212,12 @@ class OroRequirements extends SymfonyRequirements
      */
     public function getOroRequirements()
     {
-        return array_filter($this->getRequirements(), function ($requirement) {
-            return $requirement instanceof OroRequirement;
-        });
+        return array_filter(
+            $this->getRequirements(),
+            function ($requirement) {
+                return $requirement instanceof OroRequirement;
+            }
+        );
     }
 
     /**
@@ -224,25 +233,25 @@ class OroRequirements extends SymfonyRequirements
         preg_match('/([\-0-9]+)[\s]*([a-z]*)$/i', trim($val), $matches);
 
         if (isset($matches[1])) {
-            $val = (int) $matches[1];
+            $val = (int)$matches[1];
         }
 
         switch (strtolower($matches[2])) {
             case 'g':
             case 'gb':
                 $val *= 1024;
-                // no break
+            // no break
             case 'm':
             case 'mb':
                 $val *= 1024;
-                // no break
+            // no break
             case 'k':
             case 'kb':
                 $val *= 1024;
-                // no break
+            // no break
         }
 
-        return (float) $val;
+        return (float)$val;
     }
     
 
@@ -278,6 +287,49 @@ class OroRequirements extends SymfonyRequirements
         }
 
         return $recommendations;
+    }
+
+    /**
+     * @return bool
+     */
+    protected function checkNodeExists()
+    {
+        $nodeExists = new ProcessBuilder(array('node', '--version'));
+        $nodeExists = $nodeExists->getProcess();
+
+        if (isset($_SERVER['PATH'])) {
+            $nodeExists->setEnv(['PATH' => $_SERVER['PATH']]);
+        }
+        $nodeExists->run();
+        while ($nodeExists->isRunning()) {
+        }
+
+        return $nodeExists->getErrorOutput() === null;
+    }
+
+    /**
+     * @return bool
+     */
+    protected function checkFileNameLength()
+    {
+        $getConf = new ProcessBuilder(array('getconf', 'NAME_MAX', __DIR__));
+        $getConf = $getConf->getProcess();
+
+        if (isset($_SERVER['PATH'])) {
+            $getConf->setEnv(['PATH' => $_SERVER['PATH']]);
+        }
+        $getConf->run();
+        while ($getConf->isRunning()) {
+        }
+
+        if ($getConf->getErrorOutput()) {
+            // getconf not installed
+            return true;
+        }
+
+        $fileLength = trim($getConf->getOutput());
+
+        return $fileLength == 255;
     }
 }
 
