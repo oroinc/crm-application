@@ -98,6 +98,18 @@ class OroRequirements extends SymfonyRequirements
             );
         }
 
+        // Web installer specific checks
+        if ('cli' !== PHP_SAPI) {
+            $output = $this->checkCliRequirements();
+            $this->addCliRequirement(
+                !$output,
+                'Requirements validation for PHP CLI',
+                $output ? 'FAILED' : 'OK',
+                null,
+                $output
+            );
+        }
+
         $baseDir = realpath(__DIR__ . '/..');
         $mem     = $this->getBytes(ini_get('memory_limit'));
 
@@ -176,6 +188,20 @@ class OroRequirements extends SymfonyRequirements
     }
 
     /**
+     * @param Boolean     $fulfilled Whether the requirement is fulfilled
+     * @param string      $testMessage The message for testing the requirement
+     * @param string      $helpHtml The help text formatted in HTML for resolving the problem
+     * @param string|null $helpText The help text (when null, it will be inferred from $helpHtml, i.e. stripped from HTML tags)
+     * @param string|null $output Command console output
+     */
+    public function addCliRequirement($fulfilled, $testMessage, $helpHtml, $helpText = null, $output)
+    {
+        $requirement = new CliRequirement($fulfilled, $testMessage, $helpHtml, $helpText, false);
+        $requirement->setOutput($output);
+        $this->add($requirement);
+    }
+
+    /**
      * Get the list of mandatory requirements (all requirements excluding PhpIniRequirement)
      *
      * @return array
@@ -185,7 +211,9 @@ class OroRequirements extends SymfonyRequirements
         return array_filter(
             $this->getRequirements(),
             function ($requirement) {
-                return !($requirement instanceof PhpIniRequirement) && !($requirement instanceof OroRequirement);
+                return !($requirement instanceof PhpIniRequirement)
+                && !($requirement instanceof OroRequirement)
+                && !($requirement instanceof CliRequirement);
             }
         );
     }
@@ -216,6 +244,19 @@ class OroRequirements extends SymfonyRequirements
             $this->getRequirements(),
             function ($requirement) {
                 return $requirement instanceof OroRequirement;
+            }
+        );
+    }
+
+    /**
+     * @return array
+     */
+    public function getCliRequirements()
+    {
+        return array_filter(
+            $this->getRequirements(),
+            function ($requirement) {
+                return $requirement instanceof CliRequirement;
             }
         );
     }
@@ -300,8 +341,6 @@ class OroRequirements extends SymfonyRequirements
             $nodeExists->setEnv(['PATH' => $_SERVER['PATH']]);
         }
         $nodeExists->run();
-        while ($nodeExists->isRunning()) {
-        }
 
         return $nodeExists->getErrorOutput() === null;
     }
@@ -318,8 +357,6 @@ class OroRequirements extends SymfonyRequirements
             $getConf->setEnv(['PATH' => $_SERVER['PATH']]);
         }
         $getConf->run();
-        while ($getConf->isRunning()) {
-        }
 
         if ($getConf->getErrorOutput()) {
             // getconf not installed
@@ -330,8 +367,60 @@ class OroRequirements extends SymfonyRequirements
 
         return $fileLength == 255;
     }
+
+    /**
+     * @return bool|string
+     */
+    protected function checkCliRequirements()
+    {
+        if (class_exists('\Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder')) {
+            $finder = new \Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder();
+            $phpExec = $finder->find();
+
+            $command = sprintf(
+                '%s %sconsole oro:platform:check-requirements --env=%s',
+                $phpExec,
+                __DIR__. DIRECTORY_SEPARATOR,
+               'prod'
+            );
+
+            $process = new \Symfony\Component\Process\Process($command);
+
+            $process->run();
+
+            $output = $process->getOutput();
+
+            return $output;
+        }
+
+        return false;
+    }
 }
 
 class OroRequirement extends Requirement
 {
+}
+
+class CliRequirement extends Requirement
+{
+    /**
+     * @var string
+     */
+    protected $output;
+
+    /**
+     * @return string
+     */
+    public function getOutput()
+    {
+        return $this->output;
+    }
+
+    /**
+     * @param string $output
+     */
+    public function setOutput($output)
+    {
+        $this->output = $output;
+    }
 }
