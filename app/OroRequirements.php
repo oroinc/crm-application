@@ -30,8 +30,8 @@ class OroRequirements extends SymfonyRequirements
             version_compare($phpVersion, self::REQUIRED_PHP_VERSION, '>='),
             sprintf('PHP version must be at least %s (%s installed)', self::REQUIRED_PHP_VERSION, $phpVersion),
             sprintf(
-                'You are running PHP version "<strong>%s</strong>", but Oro needs at least PHP "<strong>%s</strong>" to run.
-                                Before using Oro, upgrade your PHP installation, preferably to the latest version.',
+                'You are running PHP version "<strong>%s</strong>", but Oro needs at least PHP "<strong>%s</strong>" to run.' .
+                'Before using Oro, upgrade your PHP installation, preferably to the latest version.',
                 $phpVersion,
                 self::REQUIRED_PHP_VERSION
             ),
@@ -101,13 +101,16 @@ class OroRequirements extends SymfonyRequirements
         // Web installer specific checks
         if ('cli' !== PHP_SAPI) {
             $output = $this->checkCliRequirements();
-            $this->addCliRequirement(
+
+            $requirement = new CliRequirement(
                 !$output,
                 'Requirements validation for PHP CLI',
-                $output ? 'FAILED' : 'OK',
-                null,
-                $output
+                $output ? 'FAILED' : 'OK'
             );
+
+            $requirement->setOutput($output);
+
+            $this->add($requirement);
         }
 
         $baseDir = realpath(__DIR__ . '/..');
@@ -188,20 +191,6 @@ class OroRequirements extends SymfonyRequirements
     }
 
     /**
-     * @param Boolean     $fulfilled Whether the requirement is fulfilled
-     * @param string      $testMessage The message for testing the requirement
-     * @param string      $helpHtml The help text formatted in HTML for resolving the problem
-     * @param string|null $helpText The help text (when null, it will be inferred from $helpHtml, i.e. stripped from HTML tags)
-     * @param string|null $output Command console output
-     */
-    public function addCliRequirement($fulfilled, $testMessage, $helpHtml, $helpText = null, $output)
-    {
-        $requirement = new CliRequirement($fulfilled, $testMessage, $helpHtml, $helpText, false);
-        $requirement->setOutput($output);
-        $this->add($requirement);
-    }
-
-    /**
      * Get the list of mandatory requirements (all requirements excluding PhpIniRequirement)
      *
      * @return array
@@ -212,8 +201,8 @@ class OroRequirements extends SymfonyRequirements
             $this->getRequirements(),
             function ($requirement) {
                 return !($requirement instanceof PhpIniRequirement)
-                && !($requirement instanceof OroRequirement)
-                && !($requirement instanceof CliRequirement);
+                    && !($requirement instanceof OroRequirement)
+                    && !($requirement instanceof CliRequirement);
             }
         );
     }
@@ -369,31 +358,26 @@ class OroRequirements extends SymfonyRequirements
     }
 
     /**
-     * @return bool|string
+     * @return null|string
      */
     protected function checkCliRequirements()
     {
         if (class_exists('\Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder')) {
-            $finder = new \Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder();
-            $phpExec = $finder->find();
-
+            $finder  = new \Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder();
             $command = sprintf(
                 '%s %sconsole oro:platform:check-requirements --env=%s',
-                $phpExec,
-                __DIR__. DIRECTORY_SEPARATOR,
-               'prod'
+                $phpExec = $finder->find(),
+                __DIR__ . DIRECTORY_SEPARATOR,
+                'prod'
             );
 
             $process = new \Symfony\Component\Process\Process($command);
-
             $process->run();
 
-            $output = $process->getOutput();
-
-            return $output;
+            return $process->getOutput();
         }
 
-        return false;
+        return null;
     }
 }
 
