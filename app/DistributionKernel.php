@@ -22,6 +22,7 @@ class DistributionKernel extends Kernel
             new Oro\Bundle\HelpBundle\OroHelpBundle(),
             new Lexik\Bundle\MaintenanceBundle\LexikMaintenanceBundle(),
             new Oro\Bundle\PlatformBundle\OroPlatformBundle(),
+            new Oro\Bundle\InstallerBundle\OroInstallerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev'))) {
