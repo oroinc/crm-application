@@ -63,6 +63,9 @@ function iterateRequirements(array $collection)
             <?php endif; ?>
             <?php echo $requirement->getTestMessage(); ?>
             </span>
+            <?php if ($requirement instanceof CliRequirement && !$requirement->isFulfilled()) : ?>
+                <pre class="output"><?php echo $requirement->getOutput(); ?></pre>
+            <?php endif; ?>
         </td>
         <td><?php echo $requirement->isFulfilled() ? 'OK' : $requirement->getHelpHtml(); ?></td>
     </tr>
@@ -177,61 +180,30 @@ function iterateRequirements(array $collection)
                 </div>
                 <?php endif; ?>
 
-                <table class="table">
-                    <col width="75%" valign="top">
-                    <col width="25%" valign="top">
-                    <thead>
-                        <tr>
-                            <th><?php echo $translator->trans('process.step.check.table.mandatory'); ?></th>
-                            <th><?php echo $translator->trans('process.step.check.table.check'); ?></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php iterateRequirements($collection->getMandatoryRequirements()); ?>
-                    </tbody>
-                </table>
+                <?php
+                $requirements = array(
+                    'mandatory' => $collection->getMandatoryRequirements(),
+                    'php'       => $collection->getPhpIniRequirements(),
+                    'oro'       => $collection->getOroRequirements(),
+                    'cli'       => $collection->getCliRequirements(),
+                    'optional'  => $collection->getRecommendations(),
+                );
 
-                <table class="table">
-                    <col width="75%" valign="top">
-                    <col width="25%" valign="top">
-                    <thead>
-                        <tr>
-                            <th><?php echo $translator->trans('process.step.check.table.php'); ?></th>
-                            <th><?php echo $translator->trans('process.step.check.table.check'); ?></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php iterateRequirements($collection->getPhpIniRequirements()); ?>
-                    </tbody>
-                </table>
-
-                <table class="table">
-                    <col width="75%" valign="top">
-                    <col width="25%" valign="top">
-                    <thead>
-                        <tr>
-                            <th><?php echo $translator->trans('process.step.check.table.oro'); ?></th>
-                            <th><?php echo $translator->trans('process.step.check.table.check'); ?></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php iterateRequirements($collection->getOroRequirements()); ?>
-                    </tbody>
-                </table>
-
-                <table class="table">
-                    <col width="75%" valign="top">
-                    <col width="25%" valign="top">
-                    <thead>
-                        <tr>
-                            <th><?php echo $translator->trans('process.step.check.table.optional'); ?></th>
-                            <th><?php echo $translator->trans('process.step.check.table.check'); ?></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php iterateRequirements($collection->getRecommendations()); ?>
-                    </tbody>
-                </table>
+                foreach($requirements as $type => $requirement) : ?>
+                    <table class="table">
+                        <col width="75%" valign="top">
+                        <col width="25%" valign="top">
+                        <thead>
+                            <tr>
+                                <th><?php echo $translator->trans('process.step.check.table.' . $type); ?></th>
+                                <th><?php echo $translator->trans('process.step.check.table.check'); ?></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php iterateRequirements($requirement); ?>
+                        </tbody>
+                    </table>
+                <?php endforeach; ?>
             </div>
             <div class="button-set">
                 <div class="pull-right">
