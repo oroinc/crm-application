@@ -30,8 +30,8 @@ class OroRequirements extends SymfonyRequirements
             version_compare($phpVersion, self::REQUIRED_PHP_VERSION, '>='),
             sprintf('PHP version must be at least %s (%s installed)', self::REQUIRED_PHP_VERSION, $phpVersion),
             sprintf(
-                'You are running PHP version "<strong>%s</strong>", but Oro needs at least PHP "<strong>%s</strong>" to run.
-                                Before using Oro, upgrade your PHP installation, preferably to the latest version.',
+                'You are running PHP version "<strong>%s</strong>", but Oro needs at least PHP "<strong>%s</strong>" to run.' .
+                'Before using Oro, upgrade your PHP installation, preferably to the latest version.',
                 $phpVersion,
                 self::REQUIRED_PHP_VERSION
             ),
@@ -96,6 +96,21 @@ class OroRequirements extends SymfonyRequirements
                 'Cache folder should not be inside encrypted directory',
                 'Move <strong>app/cache</strong> folder outside encrypted directory.'
             );
+        }
+
+        // Web installer specific checks
+        if ('cli' !== PHP_SAPI) {
+            $output = $this->checkCliRequirements();
+
+            $requirement = new CliRequirement(
+                !$output,
+                'Requirements validation for PHP CLI',
+                $output ? 'FAILED' : 'OK'
+            );
+
+            $requirement->setOutput($output);
+
+            $this->add($requirement);
         }
 
         $baseDir = realpath(__DIR__ . '/..');
@@ -185,7 +200,9 @@ class OroRequirements extends SymfonyRequirements
         return array_filter(
             $this->getRequirements(),
             function ($requirement) {
-                return !($requirement instanceof PhpIniRequirement) && !($requirement instanceof OroRequirement);
+                return !($requirement instanceof PhpIniRequirement)
+                    && !($requirement instanceof OroRequirement)
+                    && !($requirement instanceof CliRequirement);
             }
         );
     }
@@ -216,6 +233,19 @@ class OroRequirements extends SymfonyRequirements
             $this->getRequirements(),
             function ($requirement) {
                 return $requirement instanceof OroRequirement;
+            }
+        );
+    }
+
+    /**
+     * @return array
+     */
+    public function getCliRequirements()
+    {
+        return array_filter(
+            $this->getRequirements(),
+            function ($requirement) {
+                return $requirement instanceof CliRequirement;
             }
         );
     }
@@ -300,8 +330,6 @@ class OroRequirements extends SymfonyRequirements
             $nodeExists->setEnv(['PATH' => $_SERVER['PATH']]);
         }
         $nodeExists->run();
-        while ($nodeExists->isRunning()) {
-        }
 
         return $nodeExists->getErrorOutput() === null;
     }
@@ -318,8 +346,6 @@ class OroRequirements extends SymfonyRequirements
             $getConf->setEnv(['PATH' => $_SERVER['PATH']]);
         }
         $getConf->run();
-        while ($getConf->isRunning()) {
-        }
 
         if ($getConf->getErrorOutput()) {
             // getconf not installed
@@ -330,8 +356,55 @@ class OroRequirements extends SymfonyRequirements
 
         return $fileLength == 255;
     }
+
+    /**
+     * @return null|string
+     */
+    protected function checkCliRequirements()
+    {
+        if (class_exists('\Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder')) {
+            $finder  = new \Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder();
+            $command = sprintf(
+                '%s %sconsole oro:platform:check-requirements --env=%s',
+                $phpExec = $finder->find(),
+                __DIR__ . DIRECTORY_SEPARATOR,
+                'prod'
+            );
+
+            $process = new \Symfony\Component\Process\Process($command);
+            $process->run();
+
+            return $process->getOutput();
+        }
+
+        return null;
+    }
 }
 
 class OroRequirement extends Requirement
 {
+}
+
+class CliRequirement extends Requirement
+{
+    /**
+     * @var string
+     */
+    protected $output;
+
+    /**
+     * @return string
+     */
+    public function getOutput()
+    {
+        return $this->output;
+    }
+
+    /**
+     * @param string $output
+     */
+    public function setOutput($output)
+    {
+        $this->output = $output;
+    }
 }
