@@ -20,6 +20,7 @@ framework:
         handler_id:           %session_handler%
         save_path:            %kernel.root_dir%/cache/sessions
         gc_maxlifetime:       3600
+        cookie_httponly:      true
     fragments:
         enabled:              true
         path:                 /_fragment # used for controller action in template
