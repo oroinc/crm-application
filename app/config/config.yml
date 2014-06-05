@@ -80,10 +80,6 @@ doctrine:
                 user:         "%database_user%"
                 password:     "%database_password%"
                 charset:      UTF8
-        types:
-            date:     Oro\Bundle\LocaleBundle\DoctrineExtensions\DBAL\Types\UTCDateType
-            datetime: Oro\Bundle\LocaleBundle\DoctrineExtensions\DBAL\Types\UTCDateTimeType
-            time:     Oro\Bundle\LocaleBundle\DoctrineExtensions\DBAL\Types\UTCTimeType
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping:         true
