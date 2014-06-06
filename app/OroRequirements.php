@@ -137,7 +137,11 @@ class OroRequirements extends SymfonyRequirements
             'web/uploads/ directory must be writable',
             'Change the permissions of the "<strong>web/uploads/</strong>" directory so that the web server can write into it.'
         );
-
+        $this->addOroRequirement(
+            is_writable($baseDir . '/web/media'),
+            'web/media/ directory must be writable',
+            'Change the permissions of the "<strong>web/media/</strong>" directory so that the web server can write into it.'
+        );
         $this->addOroRequirement(
             is_writable($baseDir . '/web/bundles'),
             'web/bundles/ directory must be writable',
