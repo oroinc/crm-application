@@ -107,7 +107,7 @@ class OroRequirements extends SymfonyRequirements
             $requirement = new CliRequirement(
                 !$output,
                 'Requirements validation for PHP CLI',
-                $output ? 'FAILED' : 'OK'
+                'If you have multiple PHP versions installed, you need to configure ORO_PHP_PATH variable with PHP binary path used by web server'
             );
 
             $requirement->setOutput($output);
