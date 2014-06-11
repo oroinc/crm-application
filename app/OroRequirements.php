@@ -5,6 +5,8 @@ require_once __DIR__ . '/SymfonyRequirements.php';
 use Symfony\Component\Process\ProcessBuilder;
 use Symfony\Component\Intl\Intl;
 
+use Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder;
+
 /**
  * This class specifies all requirements and optional recommendations that are necessary to run the Oro Application.
  */
@@ -105,7 +107,7 @@ class OroRequirements extends SymfonyRequirements
             $requirement = new CliRequirement(
                 !$output,
                 'Requirements validation for PHP CLI',
-                $output ? 'FAILED' : 'OK'
+                'If you have multiple PHP versions installed, you need to configure ORO_PHP_PATH variable with PHP binary path used by web server'
             );
 
             $requirement->setOutput($output);
@@ -367,22 +369,14 @@ class OroRequirements extends SymfonyRequirements
      */
     protected function checkCliRequirements()
     {
-        if (class_exists('\Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder')) {
-            $finder  = new \Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder();
-            $command = sprintf(
-                '%s %sconsole oro:platform:check-requirements --env=%s',
-                $phpExec = $finder->find(),
-                __DIR__ . DIRECTORY_SEPARATOR,
-                'prod'
-            );
+        $finder  = new PhpExecutableFinder();
+        $command = sprintf(
+            '%s %soro-check.php',
+            $finder->find(),
+            __DIR__ . DIRECTORY_SEPARATOR
+        );
 
-            $process = new \Symfony\Component\Process\Process($command);
-            $process->run();
-
-            return $process->getOutput();
-        }
-
-        return null;
+        return shell_exec($command);
     }
 }
 
