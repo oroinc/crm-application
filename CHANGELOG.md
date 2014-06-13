@@ -1,3 +1,14 @@
+CHANGELOG for 1.2.0
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.2.0 versions.
+
+* 1.2.0 (2014-05-28)
+ * Two-side customer data synchronization with Magento
+ * Improvements to Customer view
+ * Improvements to Magento data view
+ * Fixed issue Broken widgets in merged Account view
+ * Fixed Community requests
+
 CHANGELOG for 1.2.0-rc1
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.2.0 RC1 versions.
@@ -6,27 +17,6 @@ This changelog references the relevant changes (new features, changes and bugs) 
  * Improvements to Customer view
  * Improvements to display of Magento data
  * Fixed issue Broken widgets in merged Account view
-
-CHANGELOG for 1.1.0
-===================
-This changelog references the relevant changes (new features, changes and bugs) done in 1.1.0 versions.
-
-* 1.1.0 (2014-04-28)
- * Magento order completion
- * Magento order creation
- * Dashboard management
-
-CHANGELOG for 1.0.1
-===================
-This changelog references the relevant changes (new features, changes and bugs) done in 1.0.1 versions.
-
-* 1.0.1 (2014-04-18)
- * Issue #1049 – Problems with import of several Magento orders per cart
- * Issue #944 – Problems with import of Magento orders from Admin website
- * Issue #971 – Orders and Shopping Cart grids on the Account view are not clickable
- * Issue #970 – Artifacts on the Account view page
- * Issue #934 – Contact widget is not working correctly
- * Issue #931 – ACL is not implemented correctly for Calls and Emails on Magento-related entity pages
 
 CHANGELOG for 1.0.0
 ===================
@@ -54,7 +44,7 @@ This changelog references the relevant changes (new features, changes and bugs) 
  * Improved Workflow
  * Improved Dashboard
  * Magento import performance improvements
- * Other improvements in channels, contacts
+ * Other improvements in channnels, contacts
 
 CHANGELOG for 1.0.0-beta6
 ===================
