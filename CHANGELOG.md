@@ -1,3 +1,23 @@
+CHANGELOG for 1.2.0
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.2.0 versions.
+
+* 1.2.0 (2014-05-28)
+ * Two-side customer data synchronization with Magento
+ * Improvements to Customer view
+ * Improvements to Magento data view
+ * Fixed issue Broken widgets in merged Account view
+ * Fixed Community requests
+
+CHANGELOG for 1.2.0-rc1
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.2.0 RC1 versions.
+
+* 1.2.0 RC1 (2014-05-12)
+ * Improvements to Customer view
+ * Improvements to display of Magento data
+ * Fixed issue Broken widgets in merged Account view
+
 CHANGELOG for 1.0.0
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.0.0 versions.
