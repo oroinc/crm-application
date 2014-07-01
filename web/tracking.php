@@ -26,12 +26,24 @@ function passDataToUrl($url)
     }
     $delimiter = strpos($url, '?') === false ? '?' : '&';
     $url .= $delimiter . $_SERVER['QUERY_STRING'];
+    $url .= '&loggedAt=' . urlencode(getLoggedAt());
 
     $handle = curl_init();
     curl_setopt($handle, CURLOPT_URL, $url);
     curl_setopt($handle, CURLOPT_RETURNTRANSFER, 1);
     curl_exec($handle);
     curl_close($handle);
+}
+
+/**
+ * Get log datetime
+ *
+ * @return string
+ */
+function getLoggedAt()
+{
+    $now = new \DateTime('now', new \DateTimeZone('UTC'));
+    return $now->format(\DateTime::ISO8601);
 }
 
 // Ensure tracking directory exists and read settings
@@ -61,7 +73,9 @@ if ($settings['dynamic_tracking_enabled']) {
     $fileName = date('Ymd-H') . '-' . $rotateInterval . '-' . $currentPart . '.log';
 
     // Add visit to log to file
-    $data = json_encode($_GET) . PHP_EOL;
+    $rawData = $_GET;
+    $rawData['loggedAt'] = getLoggedAt();
+    $data = json_encode($rawData) . PHP_EOL;
     $fh = fopen($trackingFolder . DIRECTORY_SEPARATOR . $fileName, 'a');
     if (flock($fh, LOCK_EX)) {
         fwrite($fh, $data);
@@ -75,7 +89,7 @@ if ($settings['dynamic_tracking_enabled']) {
 if ($settings['piwik_host']) {
     $piwikTrackingUrl = $settings['piwik_host'] . '/piwik.php';
     if ($settings['piwik_token_auth']) {
-        $piwikTrackingUrl .= '?token_auth=' . $settings['piwik_token_auth'];
+        $piwikTrackingUrl .= '?token_auth=' . urlencode($settings['piwik_token_auth']);
     }
 
     passDataToUrl($piwikTrackingUrl);
