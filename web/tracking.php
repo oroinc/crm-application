@@ -24,10 +24,26 @@ function passDataToUrl($url)
     if (strpos($url, 'http') !== 0) {
         $url = 'http://' . $_SERVER['HTTP_HOST'] . $url;
     }
+    // Pass request data to new URL
     $delimiter = strpos($url, '?') === false ? '?' : '&';
     $url .= $delimiter . $_SERVER['QUERY_STRING'];
+
+    // Set visit date time
     $url .= '&loggedAt=' . urlencode(getLoggedAt());
 
+    // Set correct visitor information
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    $url .= '&cip=' . urlencode($ip);
+    $url .= '&ua=' . urlencode($_SERVER['HTTP_USER_AGENT']);
+    $url .= '&lang=' . urlencode($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+
+    // Send visit to new URL
     $handle = curl_init();
     curl_setopt($handle, CURLOPT_URL, $url);
     curl_setopt($handle, CURLOPT_RETURNTRANSFER, 1);
