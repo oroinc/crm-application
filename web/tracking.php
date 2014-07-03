@@ -7,8 +7,8 @@
 $trackingFolder = '../app/logs/tracking';
 $settingsFile = $trackingFolder . DIRECTORY_SEPARATOR . 'settings.ser';
 $settings = array(
-    'dynamic_tracking_enabled' => false,
-    'dynamic_tracking_endpoint' => null,
+    'dynamic_tracking_enabled' => true,
+    'dynamic_tracking_endpoint' => '/tracking/data/create',
     'log_rotate_interval' => 60,
     'piwik_host' => null,
     'piwik_token_auth' => null
