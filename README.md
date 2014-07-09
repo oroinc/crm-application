@@ -104,8 +104,9 @@ php app/console oro:migration:data:load --fixtures-type=demo --env=prod
 ```
 
 ## Web Server Configuration
+=======
 
-OroCRM application is based on the Symfony standard application so web server configuration recomendations are the [same][5].
+OroCRM application is based on the Symfony standard application so web server configuration recommendations are the [same][5].
 
 [1]:  http://symfony.com/doc/2.3/book/installation.html
 [2]:  http://getcomposer.org/
