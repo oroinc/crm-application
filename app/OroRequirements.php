@@ -334,7 +334,7 @@ class OroRequirements extends SymfonyRequirements
         $nodeExists = $nodeExists->getProcess();
 
         if (isset($_SERVER['PATH'])) {
-            $nodeExists->setEnv(['PATH' => $_SERVER['PATH']]);
+            $nodeExists->setEnv(array('PATH' => $_SERVER['PATH']));
         }
         $nodeExists->run();
 
@@ -350,7 +350,7 @@ class OroRequirements extends SymfonyRequirements
         $getConf = $getConf->getProcess();
 
         if (isset($_SERVER['PATH'])) {
-            $getConf->setEnv(['PATH' => $_SERVER['PATH']]);
+            $getConf->setEnv(array('PATH' => $_SERVER['PATH']));
         }
         $getConf->run();
 
