@@ -1,6 +1,5 @@
 {% extends 'OroUIBundle:Default:index.html.twig' %}
 {% oro_title_set({titleTemplate : "%code% - %status%" , params: {'%code%': status_code, '%status%' :status_text }, force : true}) %}
-{% block hash_nav %}{% endblock %}
 {% block head %}
     <meta name="error" content="{{ status_code }}" />
     {{ parent() }}
@@ -8,6 +7,10 @@
 {% block bodyClass %}error-page{% endblock %}
 
 {% block header %}
+
+    {% block breadcrumb %}
+    {% endblock %}
+
     {% if app.user is not null %}
         {{ parent() }}
         {% if status_code == 503 %}
@@ -60,6 +63,8 @@
 {% endblock %}
 
 
+{% block application %}
+{% endblock %}
 {% block head_script %}
     {{ parent() }}
     <script type="text/javascript">require(['oroui/js/init-errors'])</script>
