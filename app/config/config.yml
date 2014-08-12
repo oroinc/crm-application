@@ -57,7 +57,7 @@ doctrine:
         default_connection:   default
         connections:
             default:
-                driver:       pdo_mysql
+                driver:       "%database_driver%"
                 host:         "%database_host%"
                 port:         "%database_port%"
                 dbname:       "%database_name%"
@@ -65,7 +65,7 @@ doctrine:
                 password:     "%database_password%"
                 charset:      UTF8
             report_source:
-                driver:       pdo_mysql
+                driver:       "%database_driver%"
                 host:         "%database_host%"
                 port:         "%database_port%"
                 dbname:       "%database_name%"
@@ -73,7 +73,7 @@ doctrine:
                 password:     "%database_password%"
                 charset:      UTF8
             report_target:
-                driver:       pdo_mysql
+                driver:       "%database_driver%"
                 host:         "%database_host%"
                 port:         "%database_port%"
                 dbname:       "%database_name%"
@@ -93,24 +93,6 @@ doctrine:
         metadata_cache_driver:
             type: service
             id: doctrine.metadata.cache
-
-        dql:
-            datetime_functions:
-                date:         Luxifer\DQL\Datetime\Date
-                datediff:     Luxifer\DQL\Datetime\DateDiff
-                dayofmonth:   Luxifer\DQL\Datetime\DayOfMonth
-                dayofweek:    Luxifer\DQL\Datetime\DayOfWeek
-                dayofyear:    Luxifer\DQL\Datetime\DayOfYear
-                week:         Luxifer\DQL\Datetime\Week
-                day:          Luxifer\DQL\Datetime\Day
-                hour:         Luxifer\DQL\Datetime\Hour
-                minute:       Luxifer\DQL\Datetime\Minute
-                month:        Luxifer\DQL\Datetime\Month
-                quarter:      Luxifer\DQL\Datetime\Quarter
-                second:       Luxifer\DQL\Datetime\Second
-                time:         Luxifer\DQL\Datetime\Time
-                year:         Luxifer\DQL\Datetime\Year
-                convert_tz:   Luxifer\DQL\Datetime\ConvertTZ
 
 # Swiftmailer Configuration
 swiftmailer:
