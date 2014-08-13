@@ -121,11 +121,11 @@ class OroRequirements extends SymfonyRequirements
         $this->addPhpIniRequirement(
             'memory_limit',
             function ($cfgValue) use ($mem) {
-                return $mem >= 256 * 1024 * 1024 || -1 == $mem;
+                return $mem >= 512 * 1024 * 1024 || -1 == $mem;
             },
             false,
-            'memory_limit should be at least 256M',
-            'Set the "<strong>memory_limit</strong>" setting in php.ini<a href="#phpini">*</a> to at least "256M".'
+            'memory_limit should be at least 512M',
+            'Set the "<strong>memory_limit</strong>" setting in php.ini<a href="#phpini">*</a> to at least "512M".'
         );
 
         $this->addRecommendation(
