@@ -12,12 +12,12 @@ use Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder;
  */
 class OroRequirements extends SymfonyRequirements
 {
-    const REQUIRED_PHP_VERSION  = '5.4.4';
+    const REQUIRED_PHP_VERSION  = '5.4.9';
     const REQUIRED_GD_VERSION   = '2.0';
     const REQUIRED_CURL_VERSION = '7.0';
     const REQUIRED_ICU_VERSION  = '3.8';
-    
-    const EXCLUDE_REQUIREMENTS_MASK = '/5\.3\.(3|4|8|16)|5\.4\.0/';
+
+    const EXCLUDE_REQUIREMENTS_MASK = '/5\.3\.(3|4|8|16)|5\.4\.(0|8)/';
 
     public function __construct()
     {
@@ -121,11 +121,11 @@ class OroRequirements extends SymfonyRequirements
         $this->addPhpIniRequirement(
             'memory_limit',
             function ($cfgValue) use ($mem) {
-                return $mem >= 256 * 1024 * 1024 || -1 == $mem;
+                return $mem >= 512 * 1024 * 1024 || -1 == $mem;
             },
             false,
-            'memory_limit should be at least 256M',
-            'Set the "<strong>memory_limit</strong>" setting in php.ini<a href="#phpini">*</a> to at least "256M".'
+            'memory_limit should be at least 512M',
+            'Set the "<strong>memory_limit</strong>" setting in php.ini<a href="#phpini">*</a> to at least "512M".'
         );
 
         $this->addRecommendation(
