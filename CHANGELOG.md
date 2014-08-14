@@ -1,3 +1,14 @@
+CHANGELOG for 1.3.1
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.3.1 versions.
+
+* 1.3.1 (2014-08-14)
+ * Magento Synchronization stabilization improvements 
+ * Fixed issue: Incorrect row count on grids.
+ * Fixed issue: Reports and Segments crash when "Is empty" filter is added.
+ * Fixed issue: Recent Emails dashboard widget is broken.
+ * Fixed issue: Accounts cannot be linked to Contacts from Edit Contact page.
+
 CHANGELOG for 1.3.0
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.3.0 versions.
