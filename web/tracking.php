@@ -86,7 +86,8 @@ if ($settings['dynamic_tracking_enabled']) {
     }
 
     // Construct file name
-    $fileName = date('Ymd-H') . '-' . $rotateInterval . '-' . $currentPart . '.log';
+    $date = new \DateTime('now', new \DateTimeZone('UTC'));
+    $fileName = $date->format('Ymd-H') . '-' . $rotateInterval . '-' . $currentPart . '.log';
 
     // Add visit to log to file
     $rawData = $_GET;
