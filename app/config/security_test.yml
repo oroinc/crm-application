@@ -1,10 +1,11 @@
 security:
     firewalls:
         main:
-            http_basic:
+            organization-http-basic:
                 realm: "Secured REST Area"
             provider: oro_user
-            form_login: false
+            http-basic: false
+            organization-form-login: false
             logout: false
             remember_me: false
             anonymous: true
