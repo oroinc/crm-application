@@ -21,8 +21,27 @@ $settings = array(
  */
 function passDataToUrl($url)
 {
+    // Send visit to new URL
+    $handle = curl_init();
+    curl_setopt($handle, CURLOPT_URL, modifyUrl($url));
+    curl_setopt($handle, CURLOPT_RETURNTRANSFER, 1);
+    curl_exec($handle);
+    curl_close($handle);
+}
+
+/**
+ * @param string $url
+ *
+ * @return string
+ */
+function modifyUrl($url)
+{
     if (strpos($url, 'http') !== 0) {
-        $url = 'http://' . $_SERVER['HTTP_HOST'] . $url;
+        $schema = 'http';
+        if (isset($_SERVER['HTTPS'])) {
+            $schema .= 's';
+        }
+        $url = $schema . '://' . $_SERVER['HTTP_HOST'] . $url;
     }
     // Pass request data to new URL
     $delimiter = strpos($url, '?') === false ? '?' : '&';
@@ -43,12 +62,19 @@ function passDataToUrl($url)
     $url .= '&ua=' . urlencode($_SERVER['HTTP_USER_AGENT']);
     $url .= '&lang=' . urlencode($_SERVER['HTTP_ACCEPT_LANGUAGE']);
 
-    // Send visit to new URL
-    $handle = curl_init();
-    curl_setopt($handle, CURLOPT_URL, $url);
-    curl_setopt($handle, CURLOPT_RETURNTRANSFER, 1);
-    curl_exec($handle);
-    curl_close($handle);
+    return $url;
+}
+
+function passDataToApplication($url)
+{
+    $_SERVER['REQUEST_URI'] = modifyUrl($url);
+    $_GET['loggedAt'] = getLoggedAt();
+    require_once __DIR__.'/../app/bootstrap.php.cache';
+    require_once __DIR__.'/../app/AppKernel.php';
+    $kernel = new AppKernel('prod', false);
+    $kernel->loadClassCache();
+    $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+    $kernel->handle($request);
 }
 
 /**
@@ -74,7 +100,7 @@ if (is_dir($trackingFolder)) {
 // Track visit
 if ($settings['dynamic_tracking_enabled']) {
     // Pass visit to dynamic tracking endpoint
-    passDataToUrl($settings['dynamic_tracking_endpoint']);
+    passDataToApplication($settings['dynamic_tracking_endpoint']);
 } else {
     // Calculate interval part
     $rotateInterval = 60;
