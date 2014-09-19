@@ -59,8 +59,12 @@ function modifyUrl($url)
         $ip = $_SERVER['REMOTE_ADDR'];
     }
     $url .= '&cip=' . urlencode($ip);
-    $url .= '&ua=' . urlencode($_SERVER['HTTP_USER_AGENT']);
-    $url .= '&lang=' . urlencode($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+    if (!empty($_SERVER['HTTP_USER_AGENT'])) {
+        $url .= '&ua=' . urlencode($_SERVER['HTTP_USER_AGENT']);
+    }
+    if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+        $url .= '&lang=' . urlencode($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+    }
 
     return $url;
 }
