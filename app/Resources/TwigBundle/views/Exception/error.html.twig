@@ -49,13 +49,16 @@
                 <div class="popup-content">
                     <p>
                         {% if status_code == 404 %}
-                            {{ 'The page you requested could not be found. Please make sure the path you used is correct'|trans }}
+                            {{ 'The page you requested could not be found. Please make sure the path you used is correct.'|trans }}
                         {% elseif status_code == 403 %}
-                            {{ "You don't have permission to access this page"|trans }}
+                            {{ "You don't have permission to access this page."|trans }}
                         {% else %}
-                            {{ 'The System is currently under maintenance and should be available in a few minutes'|trans }}
+                            {{ 'The System is currently under maintenance and should be available in a few minutes.'|trans }}
                         {% endif %}
                     </p>
+                    {% if status_code == 404 or status_code == 403 %}
+                        <p><a href="#" onclick="window.history.back(); return false;">{{ 'Click to go back'|trans }}</a></p>
+                    {% endif %}
                 </div>
             </div>
         </div>
