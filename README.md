@@ -37,7 +37,7 @@ curl -s https://getcomposer.org/installer | php
 git clone http://github.com/orocrm/crm-application.git
 ```
 
-- Make sure that you have [NodeJS][5] installed or another Js Engine eg. Rhino. (If using NodeJS and Ubuntu ensure you set the config.yml with the following).
+- Make sure that you have [NodeJS][4] installed or another Js Engine eg. Rhino. (If using NodeJS and Ubuntu ensure you set the config.yml with the following).
 ```
 oro_require_js:
     js_engine:                "nodejs"
