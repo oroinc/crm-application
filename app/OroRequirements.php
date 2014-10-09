@@ -4,6 +4,7 @@ require_once __DIR__ . '/SymfonyRequirements.php';
 
 use Symfony\Component\Process\ProcessBuilder;
 use Symfony\Component\Intl\Intl;
+use Symfony\Component\Yaml\Yaml;
 
 use Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder;
 
@@ -18,6 +19,8 @@ class OroRequirements extends SymfonyRequirements
     const REQUIRED_ICU_VERSION  = '3.8';
 
     const EXCLUDE_REQUIREMENTS_MASK = '/5\.3\.(3|4|8|16)|5\.4\.(0|8)/';
+
+    private $_jsMsg;
 
     public function __construct()
     {
@@ -129,9 +132,9 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addRecommendation(
-            $this->checkNodeExists(),
-            'NodeJS should be installed',
-            'Install the <strong>NodeJS</strong>.'
+            $this->checkJsEngine(),
+            $this->_jsMsg,
+            'Install a <strong>JS Engine</strong>.'
         );
 
         $this->addOroRequirement(
@@ -330,20 +333,59 @@ class OroRequirements extends SymfonyRequirements
         return $recommendations;
     }
 
+    private function _checkJsConfig()
+    {
+        $baseDir = realpath(__DIR__ . '/..');
+
+        $configTest = Yaml::parse(
+            file_get_contents($baseDir . '/app/config/config.yml')
+        );
+        if (isset($configTest['oro_require_js'])) {
+            if (isset($configTest['oro_require_js']['js_engine'])) {
+                return $configTest['oro_require_js']['js_engine'];
+            }
+        }
+
+        return null;
+    }
+
     /**
+     * Detect whether a js engine is installed, will reference config.yml for
+     * js_engine settings.
+     *
+     * Checks version command (Not sure if this is universal?)
+     *
+     * Ubuntu requires a config setting
+     * oro_require_js:
+     *    js_engine: "nodejs"
+     *
      * @return bool
      */
-    protected function checkNodeExists()
+    protected function checkJsEngine()
     {
-        $nodeExists = new ProcessBuilder(array('node', '--version'));
-        $nodeExists = $nodeExists->getProcess();
+        $jsConfig = $this->_checkJsConfig();
+
+        if ($jsConfig === null) {
+            $jsConfig = 'node';
+        }
+
+        $jsExists = new ProcessBuilder(array($jsConfig, '--version'));
+        $jsExists = $jsExists->getProcess();
 
         if (isset($_SERVER['PATH'])) {
-            $nodeExists->setEnv(array('PATH' => $_SERVER['PATH']));
+            $jsExists->setEnv(array('PATH' => $_SERVER['PATH']));
         }
-        $nodeExists->run();
+        $jsExists->run();
 
-        return $nodeExists->getErrorOutput() === null;
+        if ($jsExists->getErrorOutput() === null) {
+            $this->_jsMsg = "A JS Engine ('$jsConfig') is installed";
+        } elseif ($jsExists->getErrorOutput() !== null && $jsConfig !== null) {
+            $this->_jsMsg = "A JS Engine ('$jsConfig') is not installed correctly";
+        } else {
+            $this->_jsMsg = "A JS Engine such as NodeJS is not installed correctly";
+        }
+
+        return $jsExists->getErrorOutput() === null;
     }
 
     /**
