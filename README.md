@@ -6,7 +6,6 @@ Welcome to OroCRM the Open Source Customer Relationship Management (CRM) applica
 
 OroCRM is a Symfony 2 based application with the following requirements:
 
-* PHP 5.4.9 or above
 * PHP 5.4.9 or above with command line interface
 * PHP Extensions:
     * GD
