@@ -1,3 +1,46 @@
+CHANGELOG for 1.4.0
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.4.0 versions.
+* 1.4.0 (2014-10-15)
+ * The re-introduction of Channels.
+We started the implementation of a new vision for the Channels in 1.3 version and now we bring Channels back, although under a new definition.
+The general idea behind channels may be explained as follows: a channel in OroCRM represents an outside source customer and sales data, where "customer" and "sales" must be understood in the broadest sense possible. Depending on the nature of the outside source, the channel may or may not require a data integration.
+This new definition leads to multiple noticeable changes across the system.
+ * Accounts.
+Account entity now performs as the "umbrella" entity for all customer identities across multiple channels, displaying all their data in a single view.
+ * Integration management.
+Albeit the Integrations grid still displays all integrations that exist in the system, you now may create only "non-customer" standalone integrations, such as Zendesk integration. The "customer" integrations, such as Magento integration, may be created only in scope of a channel and cannot exist without it.
+ * Channel management UI.
+The UI for channel creation now allows the user to specify channel type. By default there are three channel types: Magento, B2B, and Custom; more channel types may be created by developers.
+Each channel type characterizes the following:
+Whether a channel requires an integration. If the answer is yes (cf. Magento), the integration should be configured along the creation of the channel.
+Which entity will serve as the Customer Identity. This entity cannot be changed by the user.
+Which entities will be enabled in the system along with the channel.
+A specific set of entities comes by default (e.g. Sales Process, Lead, and Opportunity for B2B channel), but the user may remove or add entities if necessary.
+ * B2B functionality.
+B2B functionality, such as Leads or Opportunities will no longer be available by default—in order to work with them the user should create at least one B2B channel first. As a result it is now possible to configure your instance of OroCRM to be fully B2C-oriented and work only with entities that make sense in eCommerce context—with no mandatory Leads and Opportunities at all.
+In order to comply with the new concept of Customer Identity, the new entity named B2B Customer was added to the system. It replaces Account in most cases of our default Sales Process workflows.
+ * Lifetime sales value.
+This feature provides the means to record historical sales for every channel type. The exact definition of what constitutes sales is subject to channel type: for Magento channels lifetime sales are counted as order subtotal (excluding cancelled orders), and for B2B channels it is counted as total value of won opportunities. The common metric allows you to quickly compare sales across channels in the account view, where both per-channel and account total values are displayed.
+ * Marketing lists.
+Marketing lists serve as the basis for marketing activities, such as email campaigns (see below). They represent a target auditory of the activity—that is, people, who will be contacted when the activity takes place. Marketing lists have little value by themselves; they exist in scope of some marketing campaign and its activities.
+Essentially, marketing list is a segment of entities that contain some contact information, such as email or phone number or physical address. Lists are build based on some rules using Oro filtering tool. Similarly to segments, marketing lists can be static or dynamic; the rules are the same. The user can build marketing lists of contacts, Magento customers, leads, etc.
+In addition to filtering rules, the user can manually tweak contents of the marketing list by removing items ("subscribers") from it. Removed subscribers will no longer appear in the list even if they fit the conditions. It is possible to move them back in the list, too.
+Every subscriber can also unsubscribe from the list. In this case, he will remain in the list, but will no longer receive email campaigns that are sent to this list. Note that subscription status is managed on per-list basis; the same contact might be subscribed to one list and unsubscribed from another.
+ * Email campaigns.
+Email campaign is a first example of marketing activity implemented in OroCRM. The big picture is following: Every marketing campaign might contain multiple marketing activities, e.g. an email newsletter, a context ad campaign, a targeted phone advertisement. All these activities serve the common goal of the "big" marketing campaign.
+In its current implementation, email campaign is a one-time dispatch of an email to a list of subscribers. Hence, the campaign consists of three basic parts:
+Recipients—represented by a Marketing list.
+Email itself—the user may choose a template, or create a campaign email from scratch.
+Sending rules—for now, only one-time dispatch is available.
+Email campaign might be tied to a marketing campaign, but it might exist on its own as well.
+ * Ecommerce dashboard
+In addition to default dashboard we have added a special Ecommerce-targeted board with three widgets:
+<ul><li>Average order amount</li>
+   <li>New web customers</li>
+   <li>Average customer lifetime sales</li></ul>
+Every widget displays historical trend for the particular value over the past 12 months. You can also add them to any other dashboard using the Add Widget button.
+
 CHANGELOG for 1.4.0-RC1
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.4.0-RC1 versions.
