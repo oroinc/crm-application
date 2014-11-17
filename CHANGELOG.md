@@ -1,3 +1,20 @@
+CHANGELOG for 1.4.1
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.4.1 versions.
+* 1.4.1 (2014-11-17)
+ * List of improvements and fixed bugs
+ <ul><li>Added MailChimp support changes</li>
+ <li>Added migration for b2b customers</li>
+ <li>Added related entities to segments filters</li>
+ <li>Added shopping cart management to Oro Bridge support</li>
+ <li>Made Email campaign entities configurable</li>
+ <li>Made contact address, email and phone entities extendable</li>
+ <li>Fixed issues with lifetime value after update</li>
+ <li>Fixed upload pictures/avatar to entity</li>
+ <li>Fixed missing Campaign details grid and chart</li>
+ <li>Fixed "Sync data" on cart page with invalid API credentials</li>
+ <li>Fixed duplicates of entities during magento import</li></ul>
+
 CHANGELOG for 1.4.0
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.4.0 versions.
