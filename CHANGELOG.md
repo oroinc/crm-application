@@ -1,3 +1,16 @@
+CHANGELOG for 1.4.2
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.4.2 versions.
+* 1.4.2 (2014-12-02)
+ * List of improvements and fixed bugs
+ <ul><li>Implemented form type guessers for custom fields of existing entities</li>
+ <li>Magento import: Fixed failed queries with empty contact phone</li>
+ <li>Magento import: Removed sensitive data displayed in API request logs</li>
+ <li>Magento import: Fixed duplicated jobs on two way Magento sync</li>
+ <li>Magento import: Fixed incorrect implementation Customer TAX/VAT Number</li>
+ <li>Magento import: Fixed lost address types after magento customer update</li>
+ <li>Zendesk: Detached entities issue after Entity Manager fail</li></ul>
+
 CHANGELOG for 1.4.1
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.4.1 versions.
