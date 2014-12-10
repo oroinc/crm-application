@@ -70,17 +70,17 @@
         },
         {
             "name": "akeneo/batch-bundle",
-            "version": "0.1.2",
+            "version": "0.3.1",
             "target-dir": "Akeneo/Bundle/BatchBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/akeneo/BatchBundle.git",
-                "reference": "a41a2b2141bcb9b7911fc3d5cdc9b5605b551942"
+                "reference": "d9390626ed059eb3e1db5e73433f90ff538f5659"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/akeneo/BatchBundle/zipball/a41a2b2141bcb9b7911fc3d5cdc9b5605b551942",
-                "reference": "a41a2b2141bcb9b7911fc3d5cdc9b5605b551942",
+                "url": "https://api.github.com/repos/akeneo/BatchBundle/zipball/d9390626ed059eb3e1db5e73433f90ff538f5659",
+                "reference": "d9390626ed059eb3e1db5e73433f90ff538f5659",
                 "shasum": ""
             },
             "require": {
@@ -88,9 +88,15 @@
                 "monolog/monolog": ">=1.1.0",
                 "php": ">=5.4.4",
                 "swiftmailer/swiftmailer": ">=4.1.3",
+                "symfony/swiftmailer-bundle": ">=2.3.5",
                 "symfony/symfony": ">=2.1"
             },
             "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.3.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Akeneo\\Bundle\\BatchBundle": ""
@@ -109,7 +115,7 @@
                 "reader",
                 "writer"
             ],
-            "time": "2014-02-24 09:35:36"
+            "time": "2014-12-03 13:09:52"
         },
         {
             "name": "ass/xmlsecurity",
@@ -3300,12 +3306,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/crm.git",
-                "reference": "e24e5071bcc1a53008313c90397a37c1d49e6f7d"
+                "reference": "ec409b1aaafcaad8990fe8738e2f2fe800013274"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/crm/zipball/e24e5071bcc1a53008313c90397a37c1d49e6f7d",
-                "reference": "e24e5071bcc1a53008313c90397a37c1d49e6f7d",
+                "url": "https://api.github.com/repos/orocrm/crm/zipball/ec409b1aaafcaad8990fe8738e2f2fe800013274",
+                "reference": "ec409b1aaafcaad8990fe8738e2f2fe800013274",
                 "shasum": ""
             },
             "require": {
@@ -3335,7 +3341,7 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/orocrm/crm.git",
-            "time": "2014-12-05 19:55:00"
+            "time": "2014-12-08 17:38:15"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -3396,17 +3402,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/platform.git",
-                "reference": "2eae11b9d87273285d76f7bb9b7ccdd4d4a7c652"
+                "reference": "295b62a12f196fe424c19d2e5acd9781c99624b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/2eae11b9d87273285d76f7bb9b7ccdd4d4a7c652",
-                "reference": "2eae11b9d87273285d76f7bb9b7ccdd4d4a7c652",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/295b62a12f196fe424c19d2e5acd9781c99624b7",
+                "reference": "295b62a12f196fe424c19d2e5acd9781c99624b7",
                 "shasum": ""
             },
             "require": {
                 "a2lix/translation-form-bundle": "1.2",
-                "akeneo/batch-bundle": "0.1.2",
+                "akeneo/batch-bundle": "~0.3",
                 "ass/xmlsecurity": "1.0.0",
                 "besimple/soap": "0.2.2",
                 "composer/composer": "1.0.0-alpha8",
@@ -3483,7 +3489,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2014-12-06 07:16:31"
+            "time": "2014-12-10 10:52:47"
         },
         {
             "name": "phpcollection/phpcollection",
