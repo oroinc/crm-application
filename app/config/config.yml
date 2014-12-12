@@ -105,18 +105,20 @@ swiftmailer:
     spool:                    { type: memory }
 
 fos_rest:
+    body_listener:
+            decoders:
+                json: fos_rest.decoder.json
     view:
         failed_validation: HTTP_BAD_REQUEST
         default_engine: php
         formats:
             json: true
-            xml: true
+            xml: false
     format_listener:
-        prefer_extension: true
-    body_listener:
-        decoders:
-            json: fos_rest.decoder.json
-            xml: fos_rest.decoder.xml
+        rules:
+            - { path: '^/api/rest', priorities: [ json ], fallback_format: json, prefer_extension: false }
+            - { path: '^/api/soap', stop: true }
+            - { path: '^/', stop: true }
     routing_loader:
         default_format: json
 
