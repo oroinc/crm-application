@@ -142,6 +142,8 @@ if ($settings['piwik_host']) {
     passDataToUrl($piwikTrackingUrl);
 }
 
+//Disable XSS Auditor
+header('X-XSS-Protection: 0');
 //Send 1x1 blank gif
 header('Content-Type: image/gif');
 echo base64_decode('R0lGODlhAQABAJAAAP8AAAAAACH5BAUQAAAALAAAAAABAAEAAAICBAEAOw==');
