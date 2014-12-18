@@ -1,3 +1,17 @@
+CHANGELOG for 1.5.0
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.5.0 versions.
+* 1.5.0 (2014-12-18)
+ * RFM analytic for Magento channels.
+RFM is a popular set of metrics used to analyze customer value and to determine the best customers, especially for retail and e-commerce. The 1.5.0 release of OroCRM adds the ability to configure RFM metrics for Magento channels.
+The RFM score consists of three metrics:
+ - Recency, that evaluates the number of days that passed since the last purchase. The more recent is the purchase, the better.
+ - Frequency, that evaluates the number of orders placed by the customer in the last 365 days. The more frequently the customer buys, the better.
+ - Monetary value, that evaluates the total amount of orders placed by the customer in the last 365 days. The more money customer spends, the better.
+To construct these metrics, the entire range of values is divided into a small number of categories, or "buckets." The number of buckets usually lies in range of 3 to 10, and scores for R, F, and M range accordingly—from 1 (the best score) to the maximum number of buckets (the worst score). You can change the number of buckets and move their boundaries in order to adjust the scores to characteristic values of your business.
+After the metric is applied, every customer gets a three-number set of RFM scores. R1 F1 M1 identifies the best customers, and the higher the scores are, the worse these customers perform in a particular field.
+RFM scores are displayed on the Magento customer view page and on the customer section of the Account view. You may also re-use these scores in reporting and segmentation.
+
 CHANGELOG for 1.4.0
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.4.0 versions.
