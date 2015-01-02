@@ -6,6 +6,7 @@ use Symfony\Component\Process\ProcessBuilder;
 use Symfony\Component\Intl\Intl;
 
 use Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder;
+use Oro\Bundle\RequireJSBundle\DependencyInjection\Configuration as RequireJSConfiguration;
 
 /**
  * This class specifies all requirements and optional recommendations that are necessary to run the Oro Application.
@@ -129,9 +130,9 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addRecommendation(
-            $this->checkNodeExists(),
-            'NodeJS should be installed',
-            'Install the <strong>NodeJS</strong>.'
+            $this->checkJsEngineExists(),
+            $this->getJsEngineMessage(),
+            'Install <strong>JSEngine</strong>.'
         );
 
         $this->addOroRequirement(
@@ -333,17 +334,21 @@ class OroRequirements extends SymfonyRequirements
     /**
      * @return bool
      */
-    protected function checkNodeExists()
+    protected function checkJsEngineExists()
     {
-        $nodeExists = new ProcessBuilder(array('node', '--version'));
-        $nodeExists = $nodeExists->getProcess();
+        $jsEngine = RequireJSConfiguration::getDefaultJsEngine();
 
-        if (isset($_SERVER['PATH'])) {
-            $nodeExists->setEnv(array('PATH' => $_SERVER['PATH']));
-        }
-        $nodeExists->run();
+        return $jsEngine ? true : false;
+    }
 
-        return $nodeExists->getErrorOutput() === null;
+    /**
+     * @return string
+     */
+    protected function getJsEngineMessage()
+    {
+        $jsEngine = RequireJSConfiguration::getDefaultJsEngine();
+
+        return $jsEngine ? "A JS Engine ($jsEngine) is installed" : 'JSEngine such as NodeJS should be installed';
     }
 
     /**
