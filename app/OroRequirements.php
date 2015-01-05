@@ -129,9 +129,11 @@ class OroRequirements extends SymfonyRequirements
             'Set the "<strong>memory_limit</strong>" setting in php.ini<a href="#phpini">*</a> to at least "512M".'
         );
 
+        $jsEngine = RequireJSConfiguration::getDefaultJsEngine();
+
         $this->addRecommendation(
-            $this->checkJsEngineExists(),
-            $this->getJsEngineMessage(),
+            $jsEngine ? true : false,
+            $jsEngine ? "A JS Engine ($jsEngine) is installed" : 'JSEngine such as NodeJS should be installed',
             'Install <strong>JSEngine</strong>.'
         );
 
@@ -329,26 +331,6 @@ class OroRequirements extends SymfonyRequirements
         }
 
         return $recommendations;
-    }
-
-    /**
-     * @return bool
-     */
-    protected function checkJsEngineExists()
-    {
-        $jsEngine = RequireJSConfiguration::getDefaultJsEngine();
-
-        return $jsEngine ? true : false;
-    }
-
-    /**
-     * @return string
-     */
-    protected function getJsEngineMessage()
-    {
-        $jsEngine = RequireJSConfiguration::getDefaultJsEngine();
-
-        return $jsEngine ? "A JS Engine ($jsEngine) is installed" : 'JSEngine such as NodeJS should be installed';
     }
 
     /**
