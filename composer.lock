@@ -70,17 +70,17 @@
         },
         {
             "name": "akeneo/batch-bundle",
-            "version": "0.3.2",
+            "version": "0.3.3",
             "target-dir": "Akeneo/Bundle/BatchBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/akeneo/BatchBundle.git",
-                "reference": "ecdaa8116bf1974799d0038551ab919224adb91a"
+                "reference": "18f20f5d164165b747914b04dba6a5043c5f1991"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/akeneo/BatchBundle/zipball/ecdaa8116bf1974799d0038551ab919224adb91a",
-                "reference": "ecdaa8116bf1974799d0038551ab919224adb91a",
+                "url": "https://api.github.com/repos/akeneo/BatchBundle/zipball/18f20f5d164165b747914b04dba6a5043c5f1991",
+                "reference": "18f20f5d164165b747914b04dba6a5043c5f1991",
                 "shasum": ""
             },
             "require": {
@@ -115,7 +115,7 @@
                 "reader",
                 "writer"
             ],
-            "time": "2014-12-09 13:18:46"
+            "time": "2014-12-30 17:07:17"
         },
         {
             "name": "ass/xmlsecurity",
@@ -969,22 +969,27 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "v1.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "2f708a85bb3aab5d99dab8be435abd73e0b18acb"
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/2f708a85bb3aab5d99dab8be435abd73e0b18acb",
-                "reference": "2f708a85bb3aab5d99dab8be435abd73e0b18acb",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Doctrine\\Common\\Lexer\\": "lib/"
@@ -996,19 +1001,16 @@
             ],
             "authors": [
                 {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
-                    "role": "Developer of wrapped JMSSerializerBundle"
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
@@ -1017,7 +1019,7 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2013-01-12 18:59:04"
+            "time": "2014-09-09 13:34:57"
         },
         {
             "name": "doctrine/orm",
@@ -3352,12 +3354,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/platform.git",
-                "reference": "22bad3ecbd66b9360dbdbce1a5d900f168eba20e"
+                "reference": "43126ce357c3a5f3fda64ca9d659f53bb4abdde8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/22bad3ecbd66b9360dbdbce1a5d900f168eba20e",
-                "reference": "22bad3ecbd66b9360dbdbce1a5d900f168eba20e",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/43126ce357c3a5f3fda64ca9d659f53bb4abdde8",
+                "reference": "43126ce357c3a5f3fda64ca9d659f53bb4abdde8",
                 "shasum": ""
             },
             "require": {
@@ -3411,6 +3413,7 @@
                 "symfony/monolog-bundle": "2.3.0",
                 "symfony/swiftmailer-bundle": "2.3.*",
                 "symfony/symfony": "2.3.*",
+                "tinymce/tinymce": "4.1.*",
                 "twig/extensions": "1.0.1",
                 "twig/twig": "<=1.16.0",
                 "zendframework/zend-mail": "2.1.5"
@@ -3439,7 +3442,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2014-12-29 07:15:33"
+            "time": "2015-01-05 11:18:41"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -3776,16 +3779,16 @@
         },
         {
             "name": "seld/jsonlint",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "a7bc2ec9520ad15382292591b617c43bdb1fec35"
+                "reference": "863ae85c6d3ef60ca49cb12bd051c4a0648c40c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/a7bc2ec9520ad15382292591b617c43bdb1fec35",
-                "reference": "a7bc2ec9520ad15382292591b617c43bdb1fec35",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/863ae85c6d3ef60ca49cb12bd051c4a0648c40c4",
+                "reference": "863ae85c6d3ef60ca49cb12bd051c4a0648c40c4",
                 "shasum": ""
             },
             "require": {
@@ -3818,7 +3821,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2014-09-05 15:36:20"
+            "time": "2015-01-04 21:18:15"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -4478,6 +4481,37 @@
                 "framework"
             ],
             "time": "2014-12-03 12:04:45"
+        },
+        {
+            "name": "tinymce/tinymce",
+            "version": "4.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tinymce/tinymce-dist.git",
+                "reference": "555fcfa1a09e93732a51950ba3d731050f31d39a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/555fcfa1a09e93732a51950ba3d731050f31d39a",
+                "reference": "555fcfa1a09e93732a51950ba3d731050f31d39a",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "description": "Web based JavaScript HTML WYSIWYG editor control.",
+            "homepage": "http://www.tinymce.com",
+            "keywords": [
+                "editor",
+                "html",
+                "javascript",
+                "richtext",
+                "tinymce",
+                "wysiwyg"
+            ],
+            "time": "2014-11-27 13:24:16"
         },
         {
             "name": "twig/extensions",
