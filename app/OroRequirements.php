@@ -6,6 +6,7 @@ use Symfony\Component\Process\ProcessBuilder;
 use Symfony\Component\Intl\Intl;
 
 use Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder;
+use Oro\Bundle\RequireJSBundle\DependencyInjection\Configuration as RequireJSConfiguration;
 
 /**
  * This class specifies all requirements and optional recommendations that are necessary to run the Oro Application.
@@ -128,10 +129,12 @@ class OroRequirements extends SymfonyRequirements
             'Set the "<strong>memory_limit</strong>" setting in php.ini<a href="#phpini">*</a> to at least "512M".'
         );
 
+        $jsEngine = RequireJSConfiguration::getDefaultJsEngine();
+
         $this->addRecommendation(
-            $this->checkNodeExists(),
-            'NodeJS should be installed',
-            'Install the <strong>NodeJS</strong>.'
+            $jsEngine ? true : false,
+            $jsEngine ? "A JS Engine ($jsEngine) is installed" : 'JSEngine such as NodeJS should be installed',
+            'Install <strong>JSEngine</strong>.'
         );
 
         $this->addOroRequirement(
@@ -294,7 +297,6 @@ class OroRequirements extends SymfonyRequirements
 
         return (float)$val;
     }
-    
 
     /**
      *  {@inheritdoc}
@@ -328,22 +330,6 @@ class OroRequirements extends SymfonyRequirements
         }
 
         return $recommendations;
-    }
-
-    /**
-     * @return bool
-     */
-    protected function checkNodeExists()
-    {
-        $nodeExists = new ProcessBuilder(array('node', '--version'));
-        $nodeExists = $nodeExists->getProcess();
-
-        if (isset($_SERVER['PATH'])) {
-            $nodeExists->setEnv(array('PATH' => $_SERVER['PATH']));
-        }
-        $nodeExists->run();
-
-        return $nodeExists->getErrorOutput() === null;
     }
 
     /**
