@@ -707,16 +707,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "0368bc031976126e5d36d37d2c56155092b6575b"
+                "reference": "a370e5b95e509a7809d11f3d280acfc9310d464b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/0368bc031976126e5d36d37d2c56155092b6575b",
-                "reference": "0368bc031976126e5d36d37d2c56155092b6575b",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/a370e5b95e509a7809d11f3d280acfc9310d464b",
+                "reference": "a370e5b95e509a7809d11f3d280acfc9310d464b",
                 "shasum": ""
             },
             "require": {
@@ -766,7 +766,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2014-10-16 11:56:49"
+            "time": "2015-01-12 21:57:01"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -1191,6 +1191,51 @@
                 "event-dispatcher"
             ],
             "time": "2012-05-30 15:01:08"
+        },
+        {
+            "name": "ezyang/htmlpurifier",
+            "version": "v4.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezyang/htmlpurifier.git",
+                "reference": "6f389f0f25b90d0b495308efcfa073981177f0fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/6f389f0f25b90d0b495308efcfa073981177f0fd",
+                "reference": "6f389f0f25b90d0b495308efcfa073981177f0fd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
+                "files": [
+                    "library/HTMLPurifier.composer.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Edward Z. Yang",
+                    "email": "admin@htmlpurifier.org",
+                    "homepage": "http://ezyang.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Standards compliant HTML filter written in PHP",
+            "homepage": "http://htmlpurifier.org/",
+            "keywords": [
+                "html"
+            ],
+            "time": "2013-11-30 08:25:19"
         },
         {
             "name": "friendsofsymfony/jsrouting-bundle",
@@ -3357,12 +3402,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/platform.git",
-                "reference": "c8d2dbedcddc9f477e6c9626d48500ef52229f50"
+                "reference": "5f2a1bcfeb9ee1979692a5766e83335fde67d773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/c8d2dbedcddc9f477e6c9626d48500ef52229f50",
-                "reference": "c8d2dbedcddc9f477e6c9626d48500ef52229f50",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/5f2a1bcfeb9ee1979692a5766e83335fde67d773",
+                "reference": "5f2a1bcfeb9ee1979692a5766e83335fde67d773",
                 "shasum": ""
             },
             "require": {
@@ -3381,6 +3426,7 @@
                 "ext-intl": "*",
                 "ext-mbstring": "*",
                 "ext-xml": "*",
+                "ezyang/htmlpurifier": "4.6.0",
                 "friendsofsymfony/jsrouting-bundle": "1.5.0",
                 "friendsofsymfony/rest-bundle": "1.5.0-RC2",
                 "genemu/form-bundle": "2.2.1",
@@ -3408,7 +3454,7 @@
                 "rhumsaa/uuid": "2.7.*",
                 "sensio/distribution-bundle": "2.3.4",
                 "sensio/framework-extra-bundle": "2.3.4",
-                "sensio/generator-bundle": "2.3.4",
+                "sensio/generator-bundle": "2.3.5",
                 "stof/doctrine-extensions-bundle": "1.1.0",
                 "sylius/flow-bundle": "0.6.*",
                 "symfony/assetic-bundle": "2.3.0",
@@ -3445,7 +3491,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2015-01-10 07:17:20"
+            "time": "2015-01-13 10:02:54"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -3925,17 +3971,17 @@
         },
         {
             "name": "sensio/generator-bundle",
-            "version": "v2.3.4",
+            "version": "v2.3.5",
             "target-dir": "Sensio/Bundle/GeneratorBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "4a7b126e9c22f858e3584b19ddce6e5bdd7677ee"
+                "reference": "8b7a33aa3d22388443b6de0b0cf184122e9f60d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/4a7b126e9c22f858e3584b19ddce6e5bdd7677ee",
-                "reference": "4a7b126e9c22f858e3584b19ddce6e5bdd7677ee",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/8b7a33aa3d22388443b6de0b0cf184122e9f60d2",
+                "reference": "8b7a33aa3d22388443b6de0b0cf184122e9f60d2",
                 "shasum": ""
             },
             "require": {
@@ -3971,7 +4017,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2013-08-21 18:09:35"
+            "time": "2014-04-28 14:01:06"
         },
         {
             "name": "stof/doctrine-extensions-bundle",
