@@ -223,7 +223,7 @@ function iterateRequirements(array $collection)
         <div class="fade-box"></div>
         <div class="start-content">
             <div class="start-content-holder">
-                <div class="center"><img alt="Insall" src="bundles/oroinstaller/img/cloud.png" /></div>
+                <div class="center"><img alt="Install" src="bundles/oroinstaller/img/cloud.png" /></div>
                 <h2><?php echo $translator->trans('welcome.header'); ?></h2>
                 <h3><?php echo $translator->trans('welcome.content'); ?></h3>
                 <div class="start-footer">
