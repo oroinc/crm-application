@@ -1,3 +1,10 @@
+CHANGELOG for 1.6.0
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.6.0 versions.
+* 1.6.0 (2015-01-19)
+ * Availability of email campaign results for filtering in reports & segments.
+Now email campaign results, such as opens, clicks, bounces, etc., are available for filter queries in reporting and customer segmentation. This also includes campaign statistics received via MailChimp integration
+
 CHANGELOG for 1.5.0
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.5.0 versions.
