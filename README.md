@@ -51,7 +51,7 @@ php composer.phar install --prefer-dist --no-dev
 - Install application and admin user with Installation Wizard by opening install.php in the browser or from CLI:
 
 ```bash  
-php app/console oro:install --env prod
+php app/console --timeout="0" oro:install --env prod
 ```
 
 - Enable WebSockets messaging
