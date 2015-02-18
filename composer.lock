@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "67c39dd470af765fcd4a6a3a5fc89938",
+    "hash": "ba423662cafa7765fd513a4ced6ad7a1",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -335,6 +335,158 @@
                 "sockets"
             ],
             "time": "2013-09-20 00:55:12"
+        },
+        {
+            "name": "components/backbone",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/backbone.git",
+                "reference": "2c539b5e3c4026f6adc43aded941ede5aac8831f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/backbone/zipball/2c539b5e3c4026f6adc43aded941ede5aac8831f",
+                "reference": "2c539b5e3c4026f6adc43aded941ede5aac8831f",
+                "shasum": ""
+            },
+            "require": {
+                "components/underscore": ">=1.4.3"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "backbone.js"
+                    ],
+                    "files": [
+                        "backbone-min.js"
+                    ],
+                    "shim": {
+                        "deps": [
+                            "underscore"
+                        ],
+                        "exports": "Backbone"
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Ashkenas",
+                    "email": "jeremy@documentcloud.org"
+                }
+            ],
+            "description": "Give your JS App some Backbone with Models, Views, Collections, and Events.",
+            "homepage": "http://backbonejs.org",
+            "keywords": [
+                "browser",
+                "client",
+                "controller",
+                "model",
+                "router",
+                "server",
+                "view"
+            ],
+            "time": "2014-10-06 00:37:03"
+        },
+        {
+            "name": "components/jquery",
+            "version": "2.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jquery.git",
+                "reference": "f8edb647d1833fd5d57410ab70860f03534cb2e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jquery/zipball/f8edb647d1833fd5d57410ab70860f03534cb2e8",
+                "reference": "f8edb647d1833fd5d57410ab70860f03534cb2e8",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.js"
+                    ],
+                    "files": [
+                        "jquery.min.js",
+                        "jquery.min.map",
+                        "jquery-migrate.js",
+                        "jquery-migrate.min.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "John Resig",
+                    "email": "jeresig@gmail.com"
+                }
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "time": "2014-12-23 06:48:45"
+        },
+        {
+            "name": "components/underscore",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/underscore.git",
+                "reference": "dc64d58f5d1079e5822d480110b28d724bda06c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/underscore/zipball/dc64d58f5d1079e5822d480110b28d724bda06c2",
+                "reference": "dc64d58f5d1079e5822d480110b28d724bda06c2",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "underscore.js"
+                    ],
+                    "files": [
+                        "underscore-min.js",
+                        "underscore-min.map"
+                    ],
+                    "shim": {
+                        "exports": "_"
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Ashkenas",
+                    "email": "jeremy@documentcloud.org"
+                }
+            ],
+            "description": "JavaScript's functional programming helper library.",
+            "homepage": "http://underscorejs.org",
+            "keywords": [
+                "browser",
+                "client",
+                "functional",
+                "server",
+                "util"
+            ],
+            "time": "2014-09-22 16:48:28"
         },
         {
             "name": "composer/composer",
@@ -2664,7 +2816,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "Knplabs",
+                    "name": "KnpLabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -3353,12 +3505,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/crm.git",
-                "reference": "f11b5d496ec645dc09ee2d1db1d77210e900b5ce"
+                "reference": "0d886396bc9019116b4f8f6961608bc96bfc2852"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/crm/zipball/f11b5d496ec645dc09ee2d1db1d77210e900b5ce",
-                "reference": "f11b5d496ec645dc09ee2d1db1d77210e900b5ce",
+                "url": "https://api.github.com/repos/orocrm/crm/zipball/0d886396bc9019116b4f8f6961608bc96bfc2852",
+                "reference": "0d886396bc9019116b4f8f6961608bc96bfc2852",
                 "shasum": ""
             },
             "require": {
@@ -3388,7 +3540,7 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/orocrm/crm.git",
-            "time": "2015-02-11 17:50:38"
+            "time": "2015-02-16 11:43:14"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -3449,12 +3601,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/platform.git",
-                "reference": "55f9e0f163ab5c9de34671447240af46303caa92"
+                "reference": "e87203a40815def404d37ac4ac1f36d8a214219c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/55f9e0f163ab5c9de34671447240af46303caa92",
-                "reference": "55f9e0f163ab5c9de34671447240af46303caa92",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/e87203a40815def404d37ac4ac1f36d8a214219c",
+                "reference": "e87203a40815def404d37ac4ac1f36d8a214219c",
                 "shasum": ""
             },
             "require": {
@@ -3462,6 +3614,9 @@
                 "akeneo/batch-bundle": "~0.3",
                 "ass/xmlsecurity": "1.0.0",
                 "besimple/soap": "0.2.2",
+                "components/backbone": "1.1.*",
+                "components/jquery": "2.1.*",
+                "components/underscore": "1.7.*",
                 "composer/composer": "1.0.0-alpha9",
                 "doctrine/data-fixtures": "1.0.0",
                 "doctrine/dbal": "2.4.*",
@@ -3538,7 +3693,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2015-02-12 07:20:41"
+            "time": "2015-02-17 09:38:23"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -3872,6 +4027,50 @@
                 "uuid"
             ],
             "time": "2014-10-30 03:36:49"
+        },
+        {
+            "name": "robloach/component-installer",
+            "version": "0.0.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobLoach/component-installer.git",
+                "reference": "1864f25db21fc173e02a359f646acd596c1b0460"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobLoach/component-installer/zipball/1864f25db21fc173e02a359f646acd596c1b0460",
+                "reference": "1864f25db21fc173e02a359f646acd596c1b0460",
+                "shasum": ""
+            },
+            "require": {
+                "kriswallsmith/assetic": "1.*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "composer/composer": "1.*"
+            },
+            "type": "composer-installer",
+            "extra": {
+                "class": "ComponentInstaller\\Installer"
+            },
+            "autoload": {
+                "psr-0": {
+                    "ComponentInstaller": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Loach",
+                    "email": "robloach@gmail.com",
+                    "homepage": "http://robloach.net"
+                }
+            ],
+            "description": "Allows installation of Components via Composer.",
+            "time": "2013-08-31 23:46:48"
         },
         {
             "name": "seld/jsonlint",
