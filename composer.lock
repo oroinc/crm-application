@@ -3509,12 +3509,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/crm.git",
-                "reference": "c10c3790b774dd7ad2c38fd553e10b98312b7cac"
+                "reference": "d8967bd23df4cf7b7dc7750fe6d7f8b18db06043"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/crm/zipball/c10c3790b774dd7ad2c38fd553e10b98312b7cac",
-                "reference": "c10c3790b774dd7ad2c38fd553e10b98312b7cac",
+                "url": "https://api.github.com/repos/orocrm/crm/zipball/d8967bd23df4cf7b7dc7750fe6d7f8b18db06043",
+                "reference": "d8967bd23df4cf7b7dc7750fe6d7f8b18db06043",
                 "shasum": ""
             },
             "require": {
@@ -3544,7 +3544,7 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/orocrm/crm.git",
-            "time": "2015-03-02 19:29:20"
+            "time": "2015-03-04 19:45:28"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -4783,19 +4783,34 @@
         },
         {
             "name": "tinymce/tinymce",
-            "version": "4.1.7",
+            "version": "4.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "555fcfa1a09e93732a51950ba3d731050f31d39a"
+                "reference": "2ab950dc1e451967f51c4c4bfc4ed161f25e90c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/555fcfa1a09e93732a51950ba3d731050f31d39a",
-                "reference": "555fcfa1a09e93732a51950ba3d731050f31d39a",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/2ab950dc1e451967f51c4c4bfc4ed161f25e90c2",
+                "reference": "2ab950dc1e451967f51c4c4bfc4ed161f25e90c2",
                 "shasum": ""
             },
-            "type": "library",
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "tinymce.js",
+                        "plugins/*/plugin.js",
+                        "themes/*/theme.js"
+                    ],
+                    "files": [
+                        "tinymce.min.js",
+                        "plugins/*/plugin.min.js",
+                        "themes/*/theme.min.js",
+                        "skins/**"
+                    ]
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "LGPL-2.1"
@@ -4810,7 +4825,7 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2014-11-27 13:24:16"
+            "time": "2015-03-05 13:01:35"
         },
         {
             "name": "twig/extensions",
