@@ -394,6 +394,43 @@
             "time": "2014-10-06 00:37:03"
         },
         {
+            "name": "components/font-awesome",
+            "version": "4.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/font-awesome.git",
+                "reference": "73acf4d65eadd8d127bafc7bd510240ea3979e83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/font-awesome/zipball/73acf4d65eadd8d127bafc7bd510240ea3979e83",
+                "reference": "73acf4d65eadd8d127bafc7bd510240ea3979e83",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3.x-dev"
+                },
+                "component": {
+                    "styles": [
+                        "css/font-awesome.css"
+                    ],
+                    "files": [
+                        "css/font-awesome.min.css",
+                        "fonts/*"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "OFL-1.1"
+            ],
+            "description": "The iconic font designed for use with Twitter Bootstrap.",
+            "time": "2015-01-26 11:26:16"
+        },
+        {
             "name": "components/jquery",
             "version": "2.1.3",
             "source": {
@@ -1914,6 +1951,119 @@
             "time": "2013-07-30 22:07:23"
         },
         {
+            "name": "hwi/oauth-bundle",
+            "version": "0.3.7",
+            "target-dir": "HWI/Bundle/OAuthBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hwi/HWIOAuthBundle.git",
+                "reference": "a614cb1a87e474637885fa0a6e55690edb416d87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hwi/HWIOAuthBundle/zipball/a614cb1a87e474637885fa0a6e55690edb416d87",
+                "reference": "a614cb1a87e474637885fa0a6e55690edb416d87",
+                "shasum": ""
+            },
+            "require": {
+                "kriswallsmith/buzz": "~0.7",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.1",
+                "symfony/options-resolver": "~2.1",
+                "symfony/security-bundle": "~2.1"
+            },
+            "require-dev": {
+                "doctrine/orm": "~2.2",
+                "symfony/property-access": "~2.5",
+                "symfony/twig-bundle": "~2.1",
+                "symfony/validator": "~2.1"
+            },
+            "suggest": {
+                "doctrine/doctrine-bundle": "to use Doctrine user provider",
+                "friendsofsymfony/user-bundle": "to connect FOSUB with this bundle",
+                "symfony/property-access": "to use FOSUB integration with this bundle",
+                "symfony/twig-bundle": "to use the Twig hwi_oauth_* functions"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "HWI\\Bundle\\OAuthBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/hwi/HWIOAuthBundle/contributors"
+                },
+                {
+                    "name": "Joseph Bielawski",
+                    "email": "stloyd@gmail.com"
+                },
+                {
+                    "name": "Alexander",
+                    "email": "iam.asm89@gmail.com"
+                },
+                {
+                    "name": "Geoffrey Bachelet",
+                    "email": "geoffrey.bachelet@gmail.com"
+                }
+            ],
+            "description": "Support for authenticating users using both OAuth1.0a and OAuth2 in Symfony2.",
+            "homepage": "http://github.com/hwi/HWIOAuthBundle",
+            "keywords": [
+                "37signals",
+                "Authentication",
+                "amazon",
+                "bitbucket",
+                "bitly",
+                "box",
+                "dailymotion",
+                "deviantart",
+                "disqus",
+                "dropbox",
+                "eventbrite",
+                "facebook",
+                "firewall",
+                "flickr",
+                "foursquare",
+                "github",
+                "google",
+                "instagram",
+                "jira",
+                "linkedin",
+                "mail.ru",
+                "oauth",
+                "oauth1",
+                "oauth2",
+                "odnoklassniki",
+                "qq",
+                "salesforce",
+                "security",
+                "sensio connect",
+                "sina weibo",
+                "stack exchange",
+                "stereomood",
+                "trello",
+                "twitch",
+                "twitter",
+                "vkontakte",
+                "windows live",
+                "wordpress",
+                "yahoo",
+                "yandex"
+            ],
+            "time": "2014-11-15 10:36:48"
+        },
+        {
             "name": "imagine/imagine",
             "version": "v0.5.0",
             "source": {
@@ -2822,7 +2972,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "Knplabs",
+                    "name": "KnpLabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -2962,6 +3112,54 @@
                 "minification"
             ],
             "time": "2013-07-19 00:03:27"
+        },
+        {
+            "name": "kriswallsmith/buzz",
+            "version": "v0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kriswallsmith/Buzz.git",
+                "reference": "487760b05d6269a4c2c374364325326cfa65b12c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kriswallsmith/Buzz/zipball/487760b05d6269a4c2c374364325326cfa65b12c",
+                "reference": "487760b05d6269a4c2c374364325326cfa65b12c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "ext-curl": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Buzz": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Lightweight HTTP client",
+            "homepage": "https://github.com/kriswallsmith/Buzz",
+            "keywords": [
+                "curl",
+                "http client"
+            ],
+            "time": "2014-09-15 12:42:36"
         },
         {
             "name": "leafo/lessphp",
@@ -3510,13 +3708,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/orocrm/crm.git",
-                "reference": "0de6642a7de8e83fbc79635d1bc26478cd44778b"
+                "url": "git@github.com:orocrm/crm.git",
+                "reference": "2056ebb33177cecad0e073b8153173087d875725"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/crm/zipball/0de6642a7de8e83fbc79635d1bc26478cd44778b",
-                "reference": "0de6642a7de8e83fbc79635d1bc26478cd44778b",
+                "url": "https://api.github.com/repos/orocrm/crm/zipball/2056ebb33177cecad0e073b8153173087d875725",
+                "reference": "2056ebb33177cecad0e073b8153173087d875725",
                 "shasum": ""
             },
             "require": {
@@ -3546,7 +3744,7 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/orocrm/crm.git",
-            "time": "2015-03-13 09:15:02"
+            "time": "2015-03-20 14:17:21"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -3607,12 +3805,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/platform.git",
-                "reference": "f1ef913fb5e7955131ad72d56c14c96c2854b959"
+                "reference": "e933288081ebeecf9787fd9bb5e9dc250c16ebcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/f1ef913fb5e7955131ad72d56c14c96c2854b959",
-                "reference": "f1ef913fb5e7955131ad72d56c14c96c2854b959",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/e933288081ebeecf9787fd9bb5e9dc250c16ebcd",
+                "reference": "e933288081ebeecf9787fd9bb5e9dc250c16ebcd",
                 "shasum": ""
             },
             "require": {
@@ -3621,6 +3819,7 @@
                 "ass/xmlsecurity": "1.0.0",
                 "besimple/soap": "0.2.2",
                 "components/backbone": "1.1.*",
+                "components/font-awesome": "~4.3.0",
                 "components/jquery": "2.1.*",
                 "components/underscore": "1.7.*",
                 "composer/composer": "1.0.0-alpha9",
@@ -3639,6 +3838,7 @@
                 "friendsofsymfony/rest-bundle": "1.5.0-RC2",
                 "genemu/form-bundle": "2.2.1",
                 "guzzle/http": "3.7.*",
+                "hwi/oauth-bundle": "~0.3",
                 "incenteev/composer-parameter-handler": "2.1.0",
                 "jdare/clank-bundle": "0.1.*",
                 "jms/job-queue-bundle": "1.1.*",
@@ -3699,7 +3899,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2015-03-13 13:48:35"
+            "time": "2015-03-20 15:05:44"
         },
         {
             "name": "phpcollection/phpcollection",
