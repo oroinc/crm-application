@@ -5,14 +5,14 @@
  */
 
 $trackingFolder = '../app/logs/tracking';
-$settingsFile = $trackingFolder . DIRECTORY_SEPARATOR . 'settings.ser';
-$settings = array(
-    'dynamic_tracking_enabled' => true,
+$settingsFile   = $trackingFolder . DIRECTORY_SEPARATOR . 'settings.ser';
+$settings       = [
+    'dynamic_tracking_enabled'  => true,
     'dynamic_tracking_endpoint' => '/tracking/data/create',
-    'log_rotate_interval' => 60,
-    'piwik_host' => null,
-    'piwik_token_auth' => null
-);
+    'log_rotate_interval'       => 60,
+    'piwik_host'                => null,
+    'piwik_token_auth'          => null
+];
 
 /**
  * Pass request to given URL.
@@ -50,15 +50,9 @@ function modifyUrl($url)
     // Set visit date time
     $url .= '&loggedAt=' . urlencode(getLoggedAt());
 
-    // Set correct visitor information
-    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-        $ip = $_SERVER['HTTP_CLIENT_IP'];
-    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    } else {
-        $ip = $_SERVER['REMOTE_ADDR'];
-    }
-    $url .= '&cip=' . urlencode($ip);
+    // Set visit IP address
+    $url .= '&cip=' . urlencode(getClientIp());
+
     if (!empty($_SERVER['HTTP_USER_AGENT'])) {
         $url .= '&ua=' . urlencode($_SERVER['HTTP_USER_AGENT']);
     }
@@ -69,15 +63,34 @@ function modifyUrl($url)
     return $url;
 }
 
+function getClientIp()
+{
+    // Set correct visitor information
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+
+    return $ip;
+}
+
 function passDataToApplication($url)
 {
     $_SERVER['REQUEST_URI'] = modifyUrl($url);
+
     $_GET['loggedAt'] = getLoggedAt();
-    require_once __DIR__.'/../app/bootstrap.php.cache';
-    require_once __DIR__.'/../app/AppKernel.php';
+    $_GET['cip']      = getClientIp();
+    $_GET['ua']       = $_SERVER['HTTP_USER_AGENT'];
+
+    require_once __DIR__ . '/../app/bootstrap.php.cache';
+    require_once __DIR__ . '/../app/AppKernel.php';
     $kernel = new AppKernel('prod', false);
     $kernel->loadClassCache();
     $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+
     $kernel->handle($request);
 }
 
@@ -89,6 +102,7 @@ function passDataToApplication($url)
 function getLoggedAt()
 {
     $now = new \DateTime('now', new \DateTimeZone('UTC'));
+
     return $now->format(\DateTime::ISO8601);
 }
 
@@ -108,22 +122,22 @@ if ($settings['dynamic_tracking_enabled']) {
 } else {
     // Calculate interval part
     $rotateInterval = 60;
-    $currentPart = 1;
+    $currentPart    = 1;
     if ($settings['log_rotate_interval'] > 0 && $settings['log_rotate_interval'] < 60) {
-        $rotateInterval = (int) $settings['log_rotate_interval'];
-        $passingMinute = intval(date('i')) + 1;
-        $currentPart = ceil($passingMinute / $rotateInterval);
+        $rotateInterval = (int)$settings['log_rotate_interval'];
+        $passingMinute  = (int)(date('i')) + 1;
+        $currentPart    = ceil($passingMinute / $rotateInterval);
     }
 
     // Construct file name
-    $date = new \DateTime('now', new \DateTimeZone('UTC'));
+    $date     = new \DateTime('now', new \DateTimeZone('UTC'));
     $fileName = $date->format('Ymd-H') . '-' . $rotateInterval . '-' . $currentPart . '.log';
 
     // Add visit to log to file
-    $rawData = $_GET;
+    $rawData             = $_GET;
     $rawData['loggedAt'] = getLoggedAt();
-    $data = json_encode($rawData) . PHP_EOL;
-    $fh = fopen($trackingFolder . DIRECTORY_SEPARATOR . $fileName, 'a');
+    $data                = json_encode($rawData) . PHP_EOL;
+    $fh                  = fopen($trackingFolder . DIRECTORY_SEPARATOR . $fileName, 'a');
     if (flock($fh, LOCK_EX)) {
         fwrite($fh, $data);
         fflush($fh);
