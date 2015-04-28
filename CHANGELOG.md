@@ -1,3 +1,21 @@
+CHANGELOG for 1.7.0
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.7.0 versions.
+* 1.7.0 (2015-04-28)
+ * Tracking of email conversations and threads
+ * Email signatures
+ * Email attachments
+ * Email contexts
+ * Immediate availability of Magento data after initial synchronization
+ * Automatic accounts discovery on Magento customers sync
+ * Create and Edit Magento customers from OroCRM
+ * Import of Magento newsletter subscribers
+ * Connection between web events and CRM data
+ * Connect guest/anonymous web events to customer after authentication
+ * Abandoned shopping cart campaigns
+ * New widgets for eCommerce dashboard
+ * Dropped support of Magento 1.6 due to API limitations.
+
 CHANGELOG for 1.6.0
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.6.0 versions.
