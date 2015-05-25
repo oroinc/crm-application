@@ -36,8 +36,8 @@ twig:
         bap:
             layout:           ::base.html.twig  # default layout across all Oro bundles
         ws:
-            port:             "%websocket_port%"
-            host:             "%websocket_host%"
+            port:             "%websocket_frontend_port%"  # Websocket port used in JS
+            host:             "%websocket_frontend_host%"  # Websocket host used in JS
 
 # Assetic Configuration
 assetic:
@@ -176,8 +176,8 @@ genemu_form:
 
 clank:
     web_socket_server:
-        port:                 %websocket_port%                # The port the socket server will listen on
-        host:                 %websocket_host%                # (optional) The host ip to bind to
+        port:                 %websocket_bind_port%           # The port the socket server will listen on
+        host:                 %websocket_bind_address%        # (optional) The host ip to bind to
     session_handler:          session.handler.pdo
     periodic:
         -
