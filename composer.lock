@@ -3647,12 +3647,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/crm.git",
-                "reference": "3ffbeb7ad42ee1002afcf77b0681f460471bba44"
+                "reference": "2ad6d2e2e96e0e3d3eeda182872b8be867920b0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/crm/zipball/3ffbeb7ad42ee1002afcf77b0681f460471bba44",
-                "reference": "3ffbeb7ad42ee1002afcf77b0681f460471bba44",
+                "url": "https://api.github.com/repos/orocrm/crm/zipball/2ad6d2e2e96e0e3d3eeda182872b8be867920b0b",
+                "reference": "2ad6d2e2e96e0e3d3eeda182872b8be867920b0b",
                 "shasum": ""
             },
             "require": {
@@ -3682,7 +3682,7 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/orocrm/crm.git",
-            "time": "2015-05-20 13:40:03"
+            "time": "2015-05-22 17:33:12"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -3739,17 +3739,65 @@
             "time": "2015-04-06 18:01:25"
         },
         {
+            "name": "oro/jsplumb",
+            "version": "1.7.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laboro/jsPlumb.git",
+                "reference": "a266c5feadd20aa72ff9887b42479fda0bf9bfca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laboro/jsPlumb/zipball/a266c5feadd20aa72ff9887b42479fda0bf9bfca",
+                "reference": "a266c5feadd20aa72ff9887b42479fda0bf9bfca",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "dom.jsPlumb.js"
+                    ],
+                    "files": [
+                        "dom.jsPlumb.min.js",
+                        "jquery.jsPlumb.js",
+                        "jquery.jsPlumb.min.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Simon Porritt",
+                    "email": "hello@jsplumbtoolkit.com"
+                }
+            ],
+            "description": "jsPlumb provides a means for a developer to visually connect elements on their web pages.",
+            "homepage": "http://jsplumb.org/",
+            "keywords": [
+                "connectivity",
+                "javascript",
+                "svg",
+                "visual"
+            ],
+            "time": "2015-05-13 12:32:21"
+        },
+        {
             "name": "oro/platform",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/platform.git",
-                "reference": "7a8b5b36ef8167d8d7e5258ccbe7b3a413a36812"
+                "reference": "0c0c26ab35d53650074a223f2501625b5c004172"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/7a8b5b36ef8167d8d7e5258ccbe7b3a413a36812",
-                "reference": "7a8b5b36ef8167d8d7e5258ccbe7b3a413a36812",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/0c0c26ab35d53650074a223f2501625b5c004172",
+                "reference": "0c0c26ab35d53650074a223f2501625b5c004172",
                 "shasum": ""
             },
             "require": {
@@ -3797,6 +3845,7 @@
                 "nesbot/carbon": "1.8.*",
                 "ocramius/proxy-manager": "0.4.*",
                 "oro/doctrine-extensions": "1.0.*",
+                "oro/jsplumb": "~1.7",
                 "php": ">=5.4.9",
                 "piwik/device-detector": "~3.0",
                 "rhumsaa/uuid": "2.7.*",
@@ -3839,7 +3888,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2015-05-22 06:29:00"
+            "time": "2015-05-26 06:32:44"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -4228,28 +4277,33 @@
         },
         {
             "name": "robloach/component-installer",
-            "version": "0.0.12",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobLoach/component-installer.git",
-                "reference": "1864f25db21fc173e02a359f646acd596c1b0460"
+                "reference": "319597e78604a86379af0359944290d226b0d416"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobLoach/component-installer/zipball/1864f25db21fc173e02a359f646acd596c1b0460",
-                "reference": "1864f25db21fc173e02a359f646acd596c1b0460",
+                "url": "https://api.github.com/repos/RobLoach/component-installer/zipball/319597e78604a86379af0359944290d226b0d416",
+                "reference": "319597e78604a86379af0359944290d226b0d416",
                 "shasum": ""
             },
             "require": {
+                "composer-plugin-api": "1.0.0",
                 "kriswallsmith/assetic": "1.*",
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "composer/composer": "1.*"
+                "composer/composer": "1.*@alpha",
+                "phpunit/phpunit": "4.*"
             },
-            "type": "composer-installer",
+            "type": "composer-plugin",
             "extra": {
-                "class": "ComponentInstaller\\Installer"
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
+                "class": "ComponentInstaller\\ComponentInstallerPlugin"
             },
             "autoload": {
                 "psr-0": {
@@ -4263,12 +4317,11 @@
             "authors": [
                 {
                     "name": "Rob Loach",
-                    "email": "robloach@gmail.com",
                     "homepage": "http://robloach.net"
                 }
             ],
             "description": "Allows installation of Components via Composer.",
-            "time": "2013-08-31 23:46:48"
+            "time": "2015-05-26 14:53:36"
         },
         {
             "name": "seld/jsonlint",
@@ -4870,16 +4923,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.28",
+            "version": "v2.3.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "56bc4057e3849d38aeb5e9742bc800b0518fe1f0"
+                "reference": "c4da51ce0f2ef890d5ab77d91064f2f579076b24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/56bc4057e3849d38aeb5e9742bc800b0518fe1f0",
-                "reference": "56bc4057e3849d38aeb5e9742bc800b0518fe1f0",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/c4da51ce0f2ef890d5ab77d91064f2f579076b24",
+                "reference": "c4da51ce0f2ef890d5ab77d91064f2f579076b24",
                 "shasum": ""
             },
             "require": {
@@ -4961,20 +5014,20 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "The Symfony PHP framework",
-            "homepage": "http://symfony.com",
+            "homepage": "https://symfony.com",
             "keywords": [
                 "framework"
             ],
-            "time": "2015-05-10 15:02:48"
+            "time": "2015-05-26 21:55:27"
         },
         {
             "name": "tinymce/tinymce",
