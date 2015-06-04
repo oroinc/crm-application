@@ -3301,6 +3301,60 @@
             "time": "2015-03-01 12:03:08"
         },
         {
+            "name": "moment/moment",
+            "version": "2.10.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moment/moment.git",
+                "reference": "25cc720fbaab7323a1016cd0beb6a36e349c41be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moment/moment/zipball/25cc720fbaab7323a1016cd0beb6a36e349c41be",
+                "reference": "25cc720fbaab7323a1016cd0beb6a36e349c41be",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "moment.js"
+                    ],
+                    "files": [
+                        "min/*.js",
+                        "locale/*.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Wood",
+                    "email": "washwithcare@gmail.com"
+                }
+            ],
+            "description": "Parse, validate, manipulate, and display dates in JavaScript.",
+            "homepage": "http://github.com/moment/moment/",
+            "keywords": [
+                "date",
+                "ender",
+                "format",
+                "i18n",
+                "l10n",
+                "moment",
+                "parse",
+                "time",
+                "validate"
+            ],
+            "time": "2015-05-13 07:42:12"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.7.0",
             "source": {
@@ -3647,12 +3701,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/crm.git",
-                "reference": "2ad6d2e2e96e0e3d3eeda182872b8be867920b0b"
+                "reference": "62d7b60d0da9fe3786bc483ad13786ac0c854bfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/crm/zipball/2ad6d2e2e96e0e3d3eeda182872b8be867920b0b",
-                "reference": "2ad6d2e2e96e0e3d3eeda182872b8be867920b0b",
+                "url": "https://api.github.com/repos/orocrm/crm/zipball/62d7b60d0da9fe3786bc483ad13786ac0c854bfb",
+                "reference": "62d7b60d0da9fe3786bc483ad13786ac0c854bfb",
                 "shasum": ""
             },
             "require": {
@@ -3682,7 +3736,7 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/orocrm/crm.git",
-            "time": "2015-05-22 17:33:12"
+            "time": "2015-06-02 14:32:57"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -3787,17 +3841,71 @@
             "time": "2015-05-13 12:32:21"
         },
         {
+            "name": "oro/moment-timezone",
+            "version": "0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orocrm/moment-timezone.git",
+                "reference": "2f3cd6557178ef10bdbef8d8e5c218a37eb7df1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orocrm/moment-timezone/zipball/2f3cd6557178ef10bdbef8d8e5c218a37eb7df1c",
+                "reference": "2f3cd6557178ef10bdbef8d8e5c218a37eb7df1c",
+                "shasum": ""
+            },
+            "require": {
+                "moment/moment": ">=2.6.0",
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "moment-timezone.js"
+                    ],
+                    "files": [
+                        "builds/*.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Wood",
+                    "email": "washwithcare@gmail.com",
+                    "homepage": "http://timwoodcreates.com/"
+                }
+            ],
+            "description": "Parse and display dates in any timezone",
+            "homepage": "http://momentjs.com/timezone/",
+            "keywords": [
+                "date",
+                "iana",
+                "moment",
+                "olson",
+                "time",
+                "timezone",
+                "tz",
+                "zone"
+            ],
+            "time": "2015-05-26 14:29:56"
+        },
+        {
             "name": "oro/platform",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/platform.git",
-                "reference": "98374acceeef79d93dd96900d2f8b3aa6ec5988e"
+                "reference": "978c147e3ed6337ce53b380f1581d3e9c55060ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/98374acceeef79d93dd96900d2f8b3aa6ec5988e",
-                "reference": "98374acceeef79d93dd96900d2f8b3aa6ec5988e",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/978c147e3ed6337ce53b380f1581d3e9c55060ba",
+                "reference": "978c147e3ed6337ce53b380f1581d3e9c55060ba",
                 "shasum": ""
             },
             "require": {
@@ -3846,6 +3954,7 @@
                 "ocramius/proxy-manager": "0.4.*",
                 "oro/doctrine-extensions": "1.0.*",
                 "oro/jsplumb": "~1.7",
+                "oro/moment-timezone": "0.3.*",
                 "php": ">=5.4.9",
                 "piwik/device-detector": "~3.0",
                 "rhumsaa/uuid": "2.7.*",
@@ -3888,7 +3997,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2015-05-29 06:29:10"
+            "time": "2015-06-03 06:30:48"
         },
         {
             "name": "phpcollection/phpcollection",
