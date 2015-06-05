@@ -33,7 +33,7 @@ curl -s https://getcomposer.org/installer | php
 - Clone https://github.com/orocrm/crm-application.git OroCRM project with:
 
 ```bash
-git clone http://github.com/orocrm/crm-application.git
+git clone https://github.com/orocrm/crm-application.git
 ```
 
 
@@ -53,6 +53,7 @@ php composer.phar install --prefer-dist --no-dev
 ```bash  
 php app/console oro:install --env prod
 ```
+**Note:** If the installation process times out, add the `--timeout=0` argument to the command.
 
 - Enable WebSockets messaging
 
