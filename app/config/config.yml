@@ -35,9 +35,6 @@ twig:
     globals:
         bap:
             layout:           ::base.html.twig  # default layout across all Oro bundles
-        ws:
-            port:             "%websocket_frontend_port%"  # Websocket port used in JS
-            host:             "%websocket_frontend_host%"  # Websocket host used in JS
 
 # Assetic Configuration
 assetic:
@@ -173,16 +170,6 @@ escape_wsse_authentication:
 genemu_form:
     select2: ~
     autocomplete: ~
-
-clank:
-    web_socket_server:
-        port:                 %websocket_bind_port%           # The port the socket server will listen on
-        host:                 %websocket_bind_address%        # (optional) The host ip to bind to
-    session_handler:          session.handler.pdo
-    periodic:
-        -
-            service:          "oro_wamp.db_ping"
-            time:             60000                           # the time in milliseconds between the "tick" function being called
 
 a2lix_translation_form:
     locales:                  [en, fr]
