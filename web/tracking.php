@@ -38,7 +38,7 @@ function modifyUrl($url)
 {
     if (strpos($url, 'http') !== 0) {
         $schema = 'http';
-        if (isset($_SERVER['HTTPS'])) {
+        if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') {
             $schema .= 's';
         }
         $url = $schema . '://' . $_SERVER['HTTP_HOST'] . $url;
