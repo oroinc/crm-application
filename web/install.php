@@ -85,29 +85,9 @@ function iterateRequirements(array $collection)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bundles/oroinstaller/css/style.css" />
     <script type="text/javascript" src="bundles/oroinstaller/lib/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="bundles/oroinstaller/js/javascript.js"></script>
     <script type="text/javascript">
         $(function() {
-            $('.progress-bar li:last-child em.fix-bg').width($('.progress-bar li:last-child').width() / 2);
-            $('.progress-bar li:first-child em.fix-bg').width($('.progress-bar li:first-child').width() / 2);
-
-            var splash = $('div.start-box'),
-                body = $('body'),
-                winHeight = $(window).height();
-
-            $('#begin-install').click(function() {
-                splash.hide();
-                body.css({ 'overflow': 'visible', 'height': 'auto' });
-            });
-
-            if ('localStorage' in window && window['localStorage'] !== null) {
-                if (!localStorage.getItem('oroInstallSplash')) {
-                    splash.show().height(winHeight);
-                    body.css({ 'overflow': 'hidden', 'height': winHeight });
-
-                    localStorage.setItem('oroInstallSplash', true);
-                }
-            }
-
             <?php if (!count($majorProblems)) : ?>
             // initiate application in background
             $.get('installer/flow/oro_installer/configure');
@@ -219,7 +199,7 @@ function iterateRequirements(array $collection)
             </div>
         </div>
     </div>
-    <div class="start-box" style="display: none;">
+    <div class="start-box">
         <div class="fade-box"></div>
         <div class="start-content">
             <div class="start-content-holder">
