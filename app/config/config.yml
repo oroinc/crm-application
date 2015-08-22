@@ -150,21 +150,10 @@ services:
          class: Twig_Extensions_Extension_Intl
          tags:
              - { name: twig.extension }
-    doctrine.dbal.default.wrapped_connection:
-        factory_service:      doctrine.dbal.default_connection
-        factory_method:       getWrappedConnection
-        class:                PDO
     doctrine.metadata.cache:
         parent: oro.cache.abstract
         calls:
             - [ setNamespace, [ "doctrine.metadata.cache" ] ]
-    session.handler.pdo:
-        class:                Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler
-        arguments:
-            - "@doctrine.dbal.default.wrapped_connection"
-            -
-              db_table:       oro_session
-              db_id_col:      id
 
 escape_wsse_authentication:
     authentication_provider_class: Oro\Bundle\UserBundle\Security\WsseAuthProvider
