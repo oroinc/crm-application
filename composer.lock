@@ -3623,17 +3623,17 @@
         },
         {
             "name": "nelmio/api-doc-bundle",
-            "version": "2.7.0",
+            "version": "2.9.0",
             "target-dir": "Nelmio/ApiDocBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioApiDocBundle.git",
-                "reference": "3fdb2d4a819d1f71bff0c45880af705a8b124955"
+                "reference": "de31760fd84a45fadbb4fe24db050b5e29ea70d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/3fdb2d4a819d1f71bff0c45880af705a8b124955",
-                "reference": "3fdb2d4a819d1f71bff0c45880af705a8b124955",
+                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/de31760fd84a45fadbb4fe24db050b5e29ea70d1",
+                "reference": "de31760fd84a45fadbb4fe24db050b5e29ea70d1",
                 "shasum": ""
             },
             "require": {
@@ -3647,16 +3647,19 @@
                 "jms/serializer-bundle": "<0.11"
             },
             "require-dev": {
+                "dunglas/api-bundle": "dev-master",
                 "friendsofsymfony/rest-bundle": "~1.0",
                 "jms/serializer-bundle": ">=0.11",
-                "sensio/framework-extra-bundle": "~2.1",
+                "sensio/framework-extra-bundle": "~3.0",
                 "symfony/browser-kit": "~2.1",
                 "symfony/css-selector": "~2.1",
                 "symfony/form": "~2.1",
+                "symfony/serializer": "~2.7@dev",
                 "symfony/validator": "~2.1",
                 "symfony/yaml": "~2.1"
             },
             "suggest": {
+                "dunglas/api-bundle": "For making use of resources definitions of DunglasApiBundle.",
                 "friendsofsymfony/rest-bundle": "For making use of REST information in the doc.",
                 "jms/serializer": "For making use of serializer information in the doc.",
                 "symfony/form": "For using form definitions as input.",
@@ -3665,7 +3668,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7.x-dev"
+                    "dev-master": "2.9.x-dev"
                 }
             },
             "autoload": {
@@ -3694,7 +3697,7 @@
                 "documentation",
                 "rest"
             ],
-            "time": "2014-07-30 09:11:08"
+            "time": "2015-05-16 17:16:14"
         },
         {
             "name": "nesbot/carbon",
@@ -4009,12 +4012,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/platform.git",
-                "reference": "8f1e7db917f34f389b191e30c8f651833b353a86"
+                "reference": "698a06533ede79f875661964c7594dd60825455a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/8f1e7db917f34f389b191e30c8f651833b353a86",
-                "reference": "8f1e7db917f34f389b191e30c8f651833b353a86",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/698a06533ede79f875661964c7594dd60825455a",
+                "reference": "698a06533ede79f875661964c7594dd60825455a",
                 "shasum": ""
             },
             "require": {
@@ -4057,7 +4060,7 @@
                 "liip/imagine-bundle": "0.17.*",
                 "monolog/monolog": "1.8.*",
                 "mtdowling/cron-expression": "1.0.*",
-                "nelmio/api-doc-bundle": "2.7.0",
+                "nelmio/api-doc-bundle": "2.9.0",
                 "nesbot/carbon": "1.8.*",
                 "ocramius/proxy-manager": "0.4.*",
                 "oro/doctrine-extensions": "1.0.*",
@@ -4107,7 +4110,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2015-08-22 06:32:32"
+            "time": "2015-08-24 06:31:31"
         },
         {
             "name": "phpcollection/phpcollection",
