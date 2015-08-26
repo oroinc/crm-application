@@ -1,3 +1,13 @@
+CHANGELOG for 1.8.0
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.8.0 versions.
+* 1.8.0 (2015-08-26)
+ * Improved Email capabilities and features
+ * Email automation
+ * Contact history and last contact date is tracked for all records, allowing to segment them based on number of contacts, or date or direction of last contact
+ * Tags may be used as filtering conditions in segments and grids
+ * UX for Ecommerce Statistics widget has been improved
+
 CHANGELOG for 1.7.0
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.7.0 versions.
