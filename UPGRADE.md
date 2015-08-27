@@ -11,6 +11,7 @@ git checkout <VERSION TO UPGRADE>
 ```bash
 php composer.phar install --prefer-dist
 ```
+  * Disable APC, OpCache, other code accelerators
   * Remove old caches and assets
 ```bash
 rm -rf app/cache/*
