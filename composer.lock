@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "9f55852babcbf92c962419a675ee5416",
+    "content-hash": "654094dbd8d8e62da79de071bac67a20",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -3813,16 +3814,16 @@
         },
         {
             "name": "oro/crm",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/orocrm/crm.git",
-                "reference": "0c8d1af8cb98c8871a0f5906b0b981f96af5ab24"
+                "url": "git@github.com:orocrm/crm.git",
+                "reference": "9105033f03ee410333927b66e627fdd21764ff09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/crm/zipball/0c8d1af8cb98c8871a0f5906b0b981f96af5ab24",
-                "reference": "0c8d1af8cb98c8871a0f5906b0b981f96af5ab24",
+                "url": "https://api.github.com/repos/orocrm/crm/zipball/9105033f03ee410333927b66e627fdd21764ff09",
+                "reference": "9105033f03ee410333927b66e627fdd21764ff09",
                 "shasum": ""
             },
             "require": {
@@ -4012,16 +4013,16 @@
         },
         {
             "name": "oro/platform",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/orocrm/platform.git",
-                "reference": "4f8726bf1cfae8e34a4f0eb1eafb569dcfe3d051"
+                "url": "git@github.com:orocrm/platform.git",
+                "reference": "30859da1c56695891b36f61a26809eff856b671c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/4f8726bf1cfae8e34a4f0eb1eafb569dcfe3d051",
-                "reference": "4f8726bf1cfae8e34a4f0eb1eafb569dcfe3d051",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/30859da1c56695891b36f61a26809eff856b671c",
+                "reference": "30859da1c56695891b36f61a26809eff856b671c",
                 "shasum": ""
             },
             "require": {
@@ -4114,7 +4115,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2015-09-28 20:13:10"
+            "time": "2015-09-29 13:37:25"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -6048,7 +6049,56 @@
             "time": "2013-04-17 13:32:54"
         }
     ],
-    "packages-dev": null,
+    "packages-dev": [
+        {
+            "name": "sensio/generator-bundle",
+            "version": "v2.5.3",
+            "target-dir": "Sensio/Bundle/GeneratorBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
+                "reference": "e50108c2133ee5c9c484555faed50c17a61221d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/e50108c2133ee5c9c484555faed50c17a61221d3",
+                "reference": "e50108c2133ee5c9c484555faed50c17a61221d3",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/console": "~2.5",
+                "symfony/framework-bundle": "~2.2"
+            },
+            "require-dev": {
+                "doctrine/orm": "~2.2,>=2.2.3",
+                "symfony/doctrine-bridge": "~2.2",
+                "twig/twig": "~1.11"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Sensio\\Bundle\\GeneratorBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "This bundle generates code for you",
+            "time": "2015-03-17 06:36:52"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": [],
