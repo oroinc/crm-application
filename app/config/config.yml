@@ -51,49 +51,6 @@ assetic:
         cssmin:
             file: %kernel.root_dir%/Resources/php/cssmin-v3.0.1.php
 
-# Doctrine Configuration
-doctrine:
-    dbal:
-        default_connection:   default
-        connections:
-            default:
-                driver:       "%database_driver%"
-                host:         "%database_host%"
-                port:         "%database_port%"
-                dbname:       "%database_name%"
-                user:         "%database_user%"
-                password:     "%database_password%"
-                charset:      UTF8
-            report_source:
-                driver:       "%database_driver%"
-                host:         "%database_host%"
-                port:         "%database_port%"
-                dbname:       "%database_name%"
-                user:         "%database_user%"
-                password:     "%database_password%"
-                charset:      UTF8
-            report_target:
-                driver:       "%database_driver%"
-                host:         "%database_host%"
-                port:         "%database_port%"
-                dbname:       "%database_name%"
-                user:         "%database_user%"
-                password:     "%database_password%"
-                charset:      UTF8
-    orm:
-        auto_generate_proxy_classes: "%kernel.debug%"
-        auto_mapping:         true
-        class_metadata_factory_name: Oro\Bundle\EntityExtendBundle\Mapping\ExtendClassMetadataFactory
-        resolve_target_entities:
-            Symfony\Component\Security\Core\User\UserInterface: Oro\Bundle\UserBundle\Entity\User
-        mappings:
-            OroDistributionBundle:
-                mapping:   false
-                is_bundle: true
-        metadata_cache_driver:
-            type: service
-            id: doctrine.metadata.cache
-
 # Swiftmailer Configuration
 swiftmailer:
     transport:                "%mailer_transport%"
@@ -150,10 +107,6 @@ services:
          class: Twig_Extensions_Extension_Intl
          tags:
              - { name: twig.extension }
-    doctrine.metadata.cache:
-        parent: oro.cache.abstract
-        calls:
-            - [ setNamespace, [ "doctrine.metadata.cache" ] ]
 
 escape_wsse_authentication:
     authentication_provider_class: Oro\Bundle\UserBundle\Security\WsseAuthProvider
