@@ -72,5 +72,5 @@ security:
             anonymous:                      false
 
     access_control:
-        - { path: ^/admin/, role: ROLE_ADMIN }
-        - { path: ^/api/rest/(latest|v1)/pinbars, role: ROLE_USER }
+        - { path: ^/admin/, role: ROLE_ADMIN, requires_channel: https }
+        - { path: ^/api/rest/(latest|v1)/pinbars, role: ROLE_USER, requires_channel: https }
