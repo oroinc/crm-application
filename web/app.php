@@ -7,15 +7,17 @@ $loader = require_once __DIR__.'/../app/bootstrap.php.cache';
 
 // Use APC for autoloading to improve performance
 // Change 'sf2' by the prefix you want in order to prevent key conflict with another application
-/*
-$loader = new ApcClassLoader('sf2', $loader);
-$loader->register(true);
-*/
+//$loader = new ApcClassLoader('sf2', $loader);
+//$loader->register(true);
 
 require_once __DIR__.'/../app/AppKernel.php';
 //require_once __DIR__.'/../app/AppCache.php';
+$env = array_key_exists('ORO_ENV', $_SERVER) ? $_SERVER['ORO_ENV'] : 'prod';
+$debug = ($env == 'dev' && array_key_exists('ORO_DEBUG', $_SERVER))
+    ? (bool) $_SERVER['ORO_ENV']
+    : false;
 
-$kernel = new AppKernel('prod', false);
+$kernel = new AppKernel($env, $debug);
 $kernel->loadClassCache();
 //$kernel = new AppCache($kernel);
 $request = Request::createFromGlobals();

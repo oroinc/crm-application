@@ -1,0 +1,38 @@
+---
+
+- name: Add PostgreSQL Repository
+  sudo: yes
+  apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt/ {{ ansible_distribution_release }}-pgdg main' state=present
+
+- name: Add Keys for PostgreSQL Repository
+  sudo: yes
+  apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc state=present
+
+- name: Update apt
+  sudo: yes
+  apt: update_cache=yes
+
+- name: Install PostgreSQL Packages
+  sudo: yes
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - postgresql-9.3
+    - postgresql-client-9.3
+    - python-pygresql
+    - python-psycopg2
+
+- name: Create databases
+  sudo: yes
+  sudo_user: postgres
+  postgresql_db: name={{ pgsql.database }} state=present
+
+- name: Import dump
+  sudo: yes
+  sudo_user: postgres
+  shell: psql {{ pgsql.database }} < /vagrant/{{ pgsql.dump }}
+  when: pgsql.dump
+
+- name: Create users
+  sudo: yes
+  sudo_user: postgres
+  postgresql_user: name={{ pgsql.user }} password={{ pgsql.password }} db={{ pgsql.database }} priv=ALL
