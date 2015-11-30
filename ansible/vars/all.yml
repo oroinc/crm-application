@@ -1,0 +1,27 @@
+---
+server:
+    install: '1'
+    packages: [nodejs, npm]
+    timezone: UTC
+    locale: en_US.UTF-8
+vagrant_local:
+    install: '1'
+    vm: { base_box: trusty64, hostname: default, ip: 192.168.33.99, memory: '1024', sharedfolder: ./, syncType: nfs }
+nginx:
+    install: '1'
+    docroot: /vagrant/web
+    servername: orocrm.vb
+pgsql:
+    install: '1'
+    database: orocrm
+    user: vagrant
+    password: crmp@ssw0rd
+    dump: ''
+php:
+    install: '1'
+    ppa: php5-5.6
+    packages: [php5-cli, php5-intl, php5-mcrypt, php5-gd, php5-xmlrpc, php5-pgsql, php5-curl]
+    memory_limit: 512M
+composer:
+    install: '1'
+
