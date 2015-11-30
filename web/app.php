@@ -14,7 +14,7 @@ require_once __DIR__.'/../app/AppKernel.php';
 //require_once __DIR__.'/../app/AppCache.php';
 $env = array_key_exists('ORO_ENV', $_SERVER) ? $_SERVER['ORO_ENV'] : 'prod';
 $debug = ($env == 'dev' && array_key_exists('ORO_DEBUG', $_SERVER))
-    ? (bool) $_SERVER['ORO_ENV']
+    ? (bool) $_SERVER['ORO_DEBUG']
     : false;
 
 $kernel = new AppKernel($env, $debug);
