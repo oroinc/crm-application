@@ -19,9 +19,8 @@ if (file_exists($paramFile)) {
     $data = Yaml::parse($paramFile);
 
     if (is_array($data)
-        && isset($data['parameters'])
         && isset($data['parameters']['installed'])
-        && false != $data['parameters']['installed']
+        && $data['parameters']['installed']
     ) {
         require_once __DIR__.'/../app/DistributionKernel.php';
 
@@ -90,7 +89,13 @@ function iterateRequirements(array $collection)
         $(function() {
             <?php if (!count($majorProblems)) : ?>
             // initiate application in background
-            $.get('installer/flow/oro_installer/configure');
+            $('#status')
+                .text(<?php echo json_encode($translator->trans('process.wait_for_warming_up_cache')); ?>)
+                .prepend($('<span class="icon-wait"></span>'))
+            $.get('installer/flow/oro_installer/configure').always(function() {
+                $('#status').empty();
+                $('#next-button').addClass('primary').removeClass('disabled');
+            });
             <?php endif; ?>
         });
     </script>
@@ -186,13 +191,14 @@ function iterateRequirements(array $collection)
                 <?php endforeach; ?>
             </div>
             <div class="button-set">
+                <div id="status" class="status-box"></div>
                 <div class="pull-right">
                     <?php if (count($majorProblems) || count($minorProblems)): ?>
                     <a href="install.php" class="button icon-reset">
                         <span><?php echo $translator->trans('process.button.refresh'); ?></span>
                     </a>
                     <?php endif; ?>
-                    <a href="<?php echo count($majorProblems) ? 'javascript: void(0);' : 'app.php/installer'; ?>" class="button next <?php echo count($majorProblems) ? 'disabled' : 'primary'; ?>">
+                    <a id="next-button" href="<?php echo count($majorProblems) ? 'javascript: void(0);' : 'app.php/installer'; ?>" class="button next disabled">
                         <span><?php echo $translator->trans('process.button.next'); ?></span>
                     </a>
                 </div>
