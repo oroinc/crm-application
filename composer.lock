@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "148d76acf2ca7660182787f6c7523301",
-    "content-hash": "8551b9a77ffef982af7512161d94705a",
+    "hash": "284750dcdaeadbdd86a308d328a3d2d2",
+    "content-hash": "68f1a3b308dd60a7b745458896ec06b7",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -3845,23 +3845,18 @@
         },
         {
             "name": "oro/crm",
-            "version": "dev-composer-p",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "../../package/crm/",
-                "reference": "b5b71b02c0e3e15ddb201e6a2184bb6abe0f2b21",
+                "reference": "b022c33f1e19d2f9a873f0b170387c01f3ad4f9d",
                 "shasum": null
             },
             "require": {
-                "oro/platform": "@dev",
+                "oro/platform": "self.version",
                 "php": ">=5.4.9"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
                     "OroCRM\\Bundle": "src/"
@@ -4037,11 +4032,11 @@
         },
         {
             "name": "oro/platform",
-            "version": "dev-composer-p",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "../../package/platform/",
-                "reference": "01c5d1bd8ded6058ffa68b6de1dce29122ba87c5",
+                "reference": "b3d34467a8496d241364afea0e175ad8e8e5d12f",
                 "shasum": null
             },
             "require": {
@@ -4111,11 +4106,6 @@
                 "sensio/generator-bundle": "2.5.3"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
                     "Oro\\Component": "src/",
