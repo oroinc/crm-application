@@ -17,8 +17,14 @@
             <directory suffix="Test.php">vendor/oro/crm/src/*/Component/*/Tests/Functional</directory>
         </testsuite>
     </testsuites>
-    <php>
-        <server name="KERNEL_DIR" value="app/" />
-    </php>
 
+
+    <listeners>
+        <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener"/>
+        <listener class="MyBuilder\PhpunitAccelerator\TestListener"/>
+    </listeners>
+
+    <php>
+        <server name="KERNEL_DIR" value="app/"/>
+    </php>
 </phpunit>
