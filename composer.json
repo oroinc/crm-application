@@ -10,23 +10,13 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "../../package/*"
-        },
-        {
             "type": "composer",
             "url": "https://packagist.orocrm.com"
         }
     ],
     "require": {
-        "oro/crm" : "self.version",
-        "oro/platform-serialised-fields" : "self.version",
-        "oro/crm-hangouts-call-bundle" : "self.version",
-        "oro/crm-abandoned-cart" : "self.version",
-        "oro/crm-magento-embedded-contact-us" : "self.version",
-        "oro/crm-mail-chimp" : "self.version",
-        "oro/crm-dotmailer" : "self.version",
-        "oro/crm-zendesk" : "self.version"
+        "oro/platform": "1.x-dev",
+        "oro/crm": "1.x-dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "2.5.3",
