@@ -3892,12 +3892,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-abandoned-cart",
-                "reference": "6585b235e0caf2d463ebbaf42e3fec0cd2077d10",
+                "reference": "81055ef7362ee58bf15c7b6b169153841681ab75",
                 "shasum": null
             },
             "require": {
-                "oro/crm": "1.x-dev",
-                "oro/crm-mail-chimp": "1.x-dev",
+                "oro/crm": "self.version",
+                "oro/crm-mail-chimp": "self.version",
                 "php": ">=5.4.9"
             },
             "type": "library",
@@ -3929,11 +3929,11 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/dotmailer",
-                "reference": "a6a9fbf443cc1523f00b9305a0b921fb9596ad87",
+                "reference": "15c5706146093858e31d164a4a1b262580d2cd4c",
                 "shasum": null
             },
             "require": {
-                "oro/crm": "1.x-dev",
+                "oro/crm": "self.version",
                 "php": ">=5.4.9",
                 "romanpitak/dotmailer-api-v2-client": "1.0.11"
             },
@@ -3967,12 +3967,11 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/google-hangout",
-                "reference": "9d8dbb6e1bbd38e24c9bd6716c6cd86182194d73",
+                "reference": "15e040988a76b23a997b9a9b615e9364c6f14851",
                 "shasum": null
             },
             "require": {
-                "oro/crm": "1.x-dev",
-                "oro/platform": "1.x-dev",
+                "oro/platform": "self.version",
                 "php": ">=5.4.9"
             },
             "type": "symfony-bundle",
@@ -4010,12 +4009,11 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-contact-us",
-                "reference": "ffd24588cdc72a79db641730084c6f260a366822",
+                "reference": "5d5d2799f58cfec7a3142f6f70ca90b73da939d5",
                 "shasum": null
             },
             "require": {
-                "oro/crm": "1.x-dev",
-                "oro/platform": "1.x-dev",
+                "oro/crm": "self.version",
                 "php": ">=5.4.9"
             },
             "type": "library",
@@ -4048,11 +4046,11 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/mailchimp",
-                "reference": "4ce43d36da57ae24d93454cff65bac04a51d718f",
+                "reference": "fefa9cc24d84e67e6eda7174c06fffa8fd9393a8",
                 "shasum": null
             },
             "require": {
-                "oro/crm": "1.x-dev",
+                "oro/crm": "self.version",
                 "php": ">=5.4.9",
                 "zfr/zfr-mailchimp": "~2.0"
             },
@@ -4086,12 +4084,11 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/zendesk",
-                "reference": "d9a012020372fd222df28e43c0c6f4759d087471",
+                "reference": "d1d48e194597cf38b5a1965059dea1a51398fa31",
                 "shasum": null
             },
             "require": {
-                "oro/crm": "1.x-dev",
-                "oro/platform": "1.x-dev",
+                "oro/crm": "self.version",
                 "php": ">=5.4.9"
             },
             "type": "library",
@@ -4284,7 +4281,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "e6b48368c61e7c5ae2b2e96830c8b4a31e22b717",
+                "reference": "a74fd7a404aa77037c67ee0adb201f86159047fd",
                 "shasum": null
             },
             "require": {
@@ -4383,11 +4380,11 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/serialized-fields",
-                "reference": "8f8d066f39c50068001e58e96ea07da08fb19a71",
+                "reference": "f0297bbd40f52c733e03ed93921343aee7b8dbde",
                 "shasum": null
             },
             "require": {
-                "oro/platform": ">=1.5",
+                "oro/platform": "self.version",
                 "php": ">=5.4.9"
             },
             "type": "library",
@@ -4418,6 +4415,54 @@
                 "entity",
                 "fields"
             ]
+        },
+        {
+            "name": "paragonie/random_compat",
+            "version": "v1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "c7e26a21ba357863de030f0b9e701c7d04593774"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/c7e26a21ba357863de030f0b9e701c7d04593774",
+                "reference": "c7e26a21ba357863de030f0b9e701c7d04593774",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*|5.*"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/random.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "keywords": [
+                "csprng",
+                "pseudorandom",
+                "random"
+            ],
+            "time": "2016-03-18 20:34:03"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -5377,6 +5422,65 @@
                 "logging"
             ],
             "time": "2015-01-04 20:21:17"
+        },
+        {
+            "name": "symfony/polyfill-php70",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php70.git",
+                "reference": "386c1be9cad3ab531425211919e78c37971be4ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/386c1be9cad3ab531425211919e78c37971be4ce",
+                "reference": "386c1be9cad3ab531425211919e78c37971be4ce",
+                "shasum": ""
+            },
+            "require": {
+                "paragonie/random_compat": "~1.0",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php70\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2016-01-28 22:42:02"
         },
         {
             "name": "symfony/swiftmailer-bundle",
