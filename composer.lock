@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "354ee16d23657903317c14cd226c268e",
-    "content-hash": "eb3e225ecdd7b5e4495630c1472aa3a0",
+    "hash": "da3ac6b84898f9df4307bc36095a75e2",
+    "content-hash": "80974fc1b81f07b59906d2e09c6feea4",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -1527,7 +1527,7 @@
                 },
                 {
                     "name": "Community contributors",
-                    "homepage": "https://github.com/frieser/FrieserWSSEAuthenticationBundle/graphs/contributors"
+                    "homepage": "https://github.com/escapestudios/EscapeWSSEAuthenticationBundle/graphs/contributors"
                 }
             ],
             "description": "Symfony2 bundle to implement WSSE authentication",
@@ -1668,7 +1668,7 @@
                     "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
                 },
                 {
-                    "name": "William Durand",
+                    "name": "William DURAND",
                     "email": "william.durand1@gmail.com"
                 }
             ],
@@ -3852,11 +3852,16 @@
         {
             "name": "oro/crm",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orocrm/crm.git",
+                "reference": "cd86052c870fa8cbe2f34754d25eaeb1019771b8"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/crm",
-                "reference": "cbb5d285329360e0b9481fe57eeaf9812e63b285",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/orocrm/crm/zipball/cd86052c870fa8cbe2f34754d25eaeb1019771b8",
+                "reference": "cd86052c870fa8cbe2f34754d25eaeb1019771b8",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "self.version",
@@ -3873,6 +3878,7 @@
                     "OroCRM\\Bundle": "src/"
                 }
             },
+            "notification-url": "https://packagist.orocrm.com/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -3883,241 +3889,8 @@
                 }
             ],
             "description": "OroCRM",
-            "homepage": "https://github.com/orocrm/crm.git"
-        },
-        {
-            "name": "oro/crm-abandoned-cart",
-            "version": "dev-master",
-            "target-dir": "src/OroCRM/Bundle/AbandonedCartBundle",
-            "dist": {
-                "type": "path",
-                "url": "../../package/magento-abandoned-cart",
-                "reference": "81055ef7362ee58bf15c7b6b169153841681ab75",
-                "shasum": null
-            },
-            "require": {
-                "oro/crm": "self.version",
-                "oro/crm-mail-chimp": "self.version",
-                "php": ">=5.4.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "OroCRM\\Bundle\\AbandonedCartBundle": "src/"
-                }
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocrm.com"
-                }
-            ],
-            "description": "OroCRM Abandoned Cart"
-        },
-        {
-            "name": "oro/crm-dotmailer",
-            "version": "dev-master",
-            "target-dir": "src/OroCRM/Bundle/DotmailerBundle",
-            "dist": {
-                "type": "path",
-                "url": "../../package/dotmailer",
-                "reference": "15c5706146093858e31d164a4a1b262580d2cd4c",
-                "shasum": null
-            },
-            "require": {
-                "oro/crm": "self.version",
-                "php": ">=5.4.9",
-                "romanpitak/dotmailer-api-v2-client": "1.0.11"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "OroCRM\\Bundle\\DotmailerBundle": "src/"
-                }
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocrm.com"
-                }
-            ],
-            "description": "OroCRM Dotmailer integration",
-            "homepage": "https://github.com/orocrm/OroCRMDotmailerBundle.git"
-        },
-        {
-            "name": "oro/crm-hangouts-call-bundle",
-            "version": "dev-master",
-            "target-dir": "src/OroCRM/Bundle/HangoutsCallBundle",
-            "dist": {
-                "type": "path",
-                "url": "../../package/google-hangout",
-                "reference": "15e040988a76b23a997b9a9b615e9364c6f14851",
-                "shasum": null
-            },
-            "require": {
-                "oro/platform": "self.version",
-                "php": ">=5.4.9"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "OroCRM\\Bundle\\HangoutsCallBundle": "src/"
-                }
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocrm.com"
-                }
-            ],
-            "description": "OroCRM Google Hangouts integration",
-            "homepage": "https://github.com/orocrm/OroCRMHangoutsCallBundle.git",
-            "keywords": [
-                "Google Hangouts",
-                "OroCRM",
-                "integration"
-            ]
-        },
-        {
-            "name": "oro/crm-magento-embedded-contact-us",
-            "version": "dev-master",
-            "target-dir": "src/OroCRM/Bundle/MagentoContactUsBundle",
-            "dist": {
-                "type": "path",
-                "url": "../../package/magento-contact-us",
-                "reference": "5d5d2799f58cfec7a3142f6f70ca90b73da939d5",
-                "shasum": null
-            },
-            "require": {
-                "oro/crm": "self.version",
-                "php": ">=5.4.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "OroCRM\\Bundle\\MagentoContactUsBundle": "src/"
-                }
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocrm.com"
-                }
-            ],
-            "description": "OroCRM Magento Embedded Contact Us package",
-            "homepage": "https://github.com/orocrm/OroCRMMagentoContactUsBundle.git"
-        },
-        {
-            "name": "oro/crm-mail-chimp",
-            "version": "dev-master",
-            "target-dir": "src/OroCRM/Bundle/MailChimpBundle",
-            "dist": {
-                "type": "path",
-                "url": "../../package/mailchimp",
-                "reference": "fefa9cc24d84e67e6eda7174c06fffa8fd9393a8",
-                "shasum": null
-            },
-            "require": {
-                "oro/crm": "self.version",
-                "php": ">=5.4.9",
-                "zfr/zfr-mailchimp": "~2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "OroCRM\\Bundle\\MailChimpBundle": "src/"
-                }
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocrm.com"
-                }
-            ],
-            "description": "OroCRM MailChimp integration",
-            "homepage": "https://github.com/orocrm/OroCRMMailChimpBundle.git"
-        },
-        {
-            "name": "oro/crm-zendesk",
-            "version": "dev-master",
-            "target-dir": "src/OroCRM/Bundle/ZendeskBundle",
-            "dist": {
-                "type": "path",
-                "url": "../../package/zendesk",
-                "reference": "d1d48e194597cf38b5a1965059dea1a51398fa31",
-                "shasum": null
-            },
-            "require": {
-                "oro/crm": "self.version",
-                "php": ">=5.4.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "OroCRM\\Bundle\\ZendeskBundle": "src/"
-                }
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocrm.com"
-                }
-            ],
-            "description": "OroCRM Zendesk Integration",
-            "homepage": "https://github.com/orocrm/OroCRMZendeskBundle.git",
-            "keywords": [
-                "Integration",
-                "OroCRM",
-                "Zendesk"
-            ]
+            "homepage": "https://github.com/orocrm/crm.git",
+            "time": "2016-04-26 06:04:03"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -4278,11 +4051,16 @@
         {
             "name": "oro/platform",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orocrm/platform.git",
+                "reference": "b37231b0a5a775058e36172d12c4a9f7295206bb"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/platform",
-                "reference": "a74fd7a404aa77037c67ee0adb201f86159047fd",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/b37231b0a5a775058e36172d12c4a9f7295206bb",
+                "reference": "b37231b0a5a775058e36172d12c4a9f7295206bb",
+                "shasum": ""
             },
             "require": {
                 "a2lix/translation-form-bundle": "1.3",
@@ -4337,8 +4115,8 @@
                 "stof/doctrine-extensions-bundle": "1.1.0",
                 "sylius/flow-bundle": "0.6.*",
                 "symfony/assetic-bundle": "2.3.0",
+                "symfony/icu": "~1.1",
                 "symfony/monolog-bundle": "2.7.*",
-                "symfony/polyfill-php70": "1.*",
                 "symfony/swiftmailer-bundle": "2.3.*",
                 "symfony/symfony": "2.7.*",
                 "tinymce/tinymce": "4.1.*",
@@ -4362,6 +4140,7 @@
                     "Oro\\Bundle": "src/"
                 }
             },
+            "notification-url": "https://packagist.orocrm.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4372,98 +4151,8 @@
                 }
             ],
             "description": "Business Application Platform (BAP)",
-            "homepage": "https://github.com/orocrm/platform.git"
-        },
-        {
-            "name": "oro/platform-serialised-fields",
-            "version": "dev-master",
-            "target-dir": "src/Oro/Bundle/EntitySerializedFieldsBundle",
-            "dist": {
-                "type": "path",
-                "url": "../../package/serialized-fields",
-                "reference": "f0297bbd40f52c733e03ed93921343aee7b8dbde",
-                "shasum": null
-            },
-            "require": {
-                "oro/platform": "self.version",
-                "php": ">=5.4.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Oro\\Bundle\\EntitySerializedFieldsBundle": "src/"
-                }
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocrm.com"
-                }
-            ],
-            "description": "Oro Platform Serialized Fields",
-            "homepage": "https://github.com/orocrm/OroEntitySerializedFieldsBundle",
-            "keywords": [
-                "Oro",
-                "Platform",
-                "entity",
-                "fields"
-            ]
-        },
-        {
-            "name": "paragonie/random_compat",
-            "version": "v1.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "c7e26a21ba357863de030f0b9e701c7d04593774"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/c7e26a21ba357863de030f0b9e701c7d04593774",
-                "reference": "c7e26a21ba357863de030f0b9e701c7d04593774",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*|5.*"
-            },
-            "suggest": {
-                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "lib/random.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Paragon Initiative Enterprises",
-                    "email": "security@paragonie.com",
-                    "homepage": "https://paragonie.com"
-                }
-            ],
-            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
-            "keywords": [
-                "csprng",
-                "pseudorandom",
-                "random"
-            ],
-            "time": "2016-03-18 20:34:03"
+            "homepage": "https://github.com/orocrm/platform.git",
+            "time": "2016-04-27 13:09:13"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -4833,100 +4522,6 @@
             "time": "2015-08-10 12:35:38"
         },
         {
-            "name": "romanpitak/dotmailer-api-v2-client",
-            "version": "v1.0.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/romanpitak/dotMailer-API-v2-PHP-client.git",
-                "reference": "b0917df8d49e05c46980558268ad280efa66bfc0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/romanpitak/dotMailer-API-v2-PHP-client/zipball/b0917df8d49e05c46980558268ad280efa66bfc0",
-                "reference": "b0917df8d49e05c46980558268ad280efa66bfc0",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": ">=5.3.3",
-                "romanpitak/php-rest-client": ">=v1.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DotMailer\\Api\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Piták",
-                    "email": "roman@pitak.net",
-                    "homepage": "http://pitak.net",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Client library for the dotMailer v2 (REST) API.",
-            "homepage": "https://github.com/romanpitak/dotMailer-API-v2-PHP-client",
-            "keywords": [
-                "api",
-                "client",
-                "dotmailer",
-                "rest",
-                "v2",
-                "version 2"
-            ],
-            "time": "2015-06-11 23:22:29"
-        },
-        {
-            "name": "romanpitak/php-rest-client",
-            "version": "v1.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/romanpitak/PHP-REST-Client.git",
-                "reference": "728b6c44040a13daeb8033953f5f3cdd3dde1980"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/romanpitak/PHP-REST-Client/zipball/728b6c44040a13daeb8033953f5f3cdd3dde1980",
-                "reference": "728b6c44040a13daeb8033953f5f3cdd3dde1980",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "RestClient\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Piták",
-                    "email": "roman@pitak.net",
-                    "homepage": "http://pitak.net",
-                    "role": "Developer"
-                }
-            ],
-            "description": "REST client library.",
-            "homepage": "https://github.com/romanpitak/PHP-REST-Client",
-            "keywords": [
-                "client",
-                "http",
-                "rest"
-            ],
-            "time": "2015-02-19 15:32:16"
-        },
-        {
             "name": "seld/jsonlint",
             "version": "1.4.0",
             "source": {
@@ -5189,16 +4784,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.1",
+            "version": "v5.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421"
+                "reference": "d8db871a54619458a805229a057ea2af33c753e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/0697e6aa65c83edf97bb0f23d8763f94e3f11421",
-                "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/d8db871a54619458a805229a057ea2af33c753e8",
+                "reference": "d8db871a54619458a805229a057ea2af33c753e8",
                 "shasum": ""
             },
             "require": {
@@ -5238,7 +4833,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2015-06-06 14:19:39"
+            "time": "2016-05-01 08:45:47"
         },
         {
             "name": "sylius/flow-bundle",
@@ -5366,6 +4961,55 @@
             "time": "2013-05-16 05:32:23"
         },
         {
+            "name": "symfony/icu",
+            "version": "v1.2.2",
+            "target-dir": "Symfony/Component/Icu",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/icu.git",
+                "reference": "d4d85d6055b87f394d941b45ddd3a9173e1e3d2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/icu/zipball/d4d85d6055b87f394d941b45ddd3a9173e1e3d2a",
+                "reference": "d4d85d6055b87f394d941b45ddd3a9173e1e3d2a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "lib-icu": ">=4.4",
+                "php": ">=5.3.3",
+                "symfony/intl": "~2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Icu\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "Contains an excerpt of the ICU data and classes to load it.",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "icu",
+                "intl"
+            ],
+            "time": "2014-07-25 09:58:17"
+        },
+        {
             "name": "symfony/monolog-bundle",
             "version": "v2.7.1",
             "source": {
@@ -5423,65 +5067,6 @@
                 "logging"
             ],
             "time": "2015-01-04 20:21:17"
-        },
-        {
-            "name": "symfony/polyfill-php70",
-            "version": "v1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "386c1be9cad3ab531425211919e78c37971be4ce"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/386c1be9cad3ab531425211919e78c37971be4ce",
-                "reference": "386c1be9cad3ab531425211919e78c37971be4ce",
-                "shasum": ""
-            },
-            "require": {
-                "paragonie/random_compat": "~1.0",
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php70\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ],
-                "classmap": [
-                    "Resources/stubs"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2016-01-28 22:42:02"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -5813,16 +5398,16 @@
         },
         {
             "name": "vakata/jstree",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vakata/jstree.git",
-                "reference": "c0cd19cd3e0823ca817dd7991549c2fd57db0fad"
+                "reference": "7a976d1bfa545f196a1c8fb904bcdd8d3bb45c71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vakata/jstree/zipball/c0cd19cd3e0823ca817dd7991549c2fd57db0fad",
-                "reference": "c0cd19cd3e0823ca817dd7991549c2fd57db0fad",
+                "url": "https://api.github.com/repos/vakata/jstree/zipball/7a976d1bfa545f196a1c8fb904bcdd8d3bb45c71",
+                "reference": "7a976d1bfa545f196a1c8fb904bcdd8d3bb45c71",
                 "shasum": ""
             },
             "require": {
@@ -5866,7 +5451,7 @@
             ],
             "description": "jsTree is jquery plugin, that provides interactive trees.",
             "homepage": "http://jstree.com",
-            "time": "2016-03-19 23:19:56"
+            "time": "2016-05-04 21:21:39"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -6546,56 +6131,6 @@
                 "zf2"
             ],
             "time": "2013-04-17 13:32:54"
-        },
-        {
-            "name": "zfr/zfr-mailchimp",
-            "version": "v2.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zf-fr/zfr-mailchimp.git",
-                "reference": "226aaae052627903f361bf0471d2bb7acd65fe9e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zf-fr/zfr-mailchimp/zipball/226aaae052627903f361bf0471d2bb7acd65fe9e",
-                "reference": "226aaae052627903f361bf0471d2bb7acd65fe9e",
-                "shasum": ""
-            },
-            "require": {
-                "guzzle/guzzle": "~3.5",
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "ZfrMailChimp\\": "src/"
-                },
-                "classmap": [
-                    "./"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michaël Gallego",
-                    "email": "mic.gallego@gmail.com",
-                    "homepage": "http://www.michaelgallego.fr"
-                }
-            ],
-            "description": "PHP library for interacting with the v2 MailChimp REST API",
-            "homepage": "https://github.com/zf-fr/zfr-mailchimp",
-            "keywords": [
-                "campaign",
-                "mail",
-                "mailchimp"
-            ],
-            "time": "2015-08-27 16:53:57"
         }
     ],
     "packages-dev": [
@@ -6725,14 +6260,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "oro/crm": 20,
-        "oro/platform-serialised-fields": 20,
-        "oro/crm-hangouts-call-bundle": 20,
-        "oro/crm-abandoned-cart": 20,
-        "oro/crm-magento-embedded-contact-us": 20,
-        "oro/crm-mail-chimp": 20,
-        "oro/crm-dotmailer": 20,
-        "oro/crm-zendesk": 20
+        "oro/platform": 20,
+        "oro/crm": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
