@@ -9,16 +9,50 @@
 >
     <testsuites>
         <testsuite name="unit">
-            <directory suffix="Test.php">vendor/oro/crm/src/*/Bundle/*Bundle/Tests/Unit</directory>
-            <directory suffix="Test.php">vendor/oro/crm/src/*/Component/*/Tests/Unit</directory>
+            <directory suffix="Test.php">vendor/oro/crm*/src/*/Bundle/*Bundle/Tests/Unit</directory>
+            <directory suffix="Test.php">vendor/oro/crm*/src/*/Component/*/Tests/Unit</directory>
+            <directory suffix="Test.php">vendor/oro/platform*/src/*/Bundle/*Bundle/Tests/Unit</directory>
+            <directory suffix="Test.php">vendor/oro/platform*/src/*/Component/*/Tests/Unit</directory>
         </testsuite>
         <testsuite name="functional">
-            <directory suffix="Test.php">vendor/oro/crm/src/*/Bundle/*Bundle/Tests/Functional</directory>
-            <directory suffix="Test.php">vendor/oro/crm/src/*/Component/*/Tests/Functional</directory>
+            <directory suffix="Test.php">vendor/oro/crm*/src/*/Bundle/*Bundle/Tests/Functional</directory>
+            <directory suffix="Test.php">vendor/oro/crm*/src/*/Component/*/Tests/Functional</directory>
+            <directory suffix="Test.php">vendor/oro/platform*/src/*/Bundle/*Bundle/Tests/Functional</directory>
+            <directory suffix="Test.php">vendor/oro/platform*/src/*/Component/*/Tests/Functional</directory>
+        </testsuite>
+        <testsuite name="selenium">
+            <directory suffix="Test.php">vendor/oro/crm*/src/*/Bundle/*Bundle/Tests/Selenium</directory>
+            <directory suffix="Test.php">vendor/oro/crm*/src/*/Component/*/Tests/Selenium</directory>
+            <directory suffix="Test.php">vendor/oro/platform*/src/*/Bundle/*Bundle/Tests/Selenium</directory>
+            <directory suffix="Test.php">vendor/oro/platform*/src/*/Component/*/Tests/Selenium</directory>
         </testsuite>
     </testsuites>
     <php>
         <server name="KERNEL_DIR" value="app/" />
+        <const name="PHPUNIT_LOAD_LIMIT" value="1.2"/>
+        <const name="PHPUNIT_PAGE_LIMIT" value="0.5"/>
+        <const name="PHPUNIT_TESTSUITE_BROWSER_PATH_WINNT" value="C:\Dev\phantomjs-1.9.0-windows\phantomjs.exe"/>
+        <const name="PHPUNIT_TESTSUITE_BROWSER_PATH_LINUX" value="/usr/bin/phantomjs"/>
+        <const name="PHPUNIT_TESTSUITE" value="true"/>
+        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_HOST" value="127.0.0.1"/>
+        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PORT" value="4444"/>
+        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM2_BROWSER" value="phantomjs"/>
+        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_TESTS_URL" value="http://localhost.com"/>
+        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_TESTS_URL_COVERAGE" value="http://localhost.com/bundles/orotestframework/scripts/phpunit_coverage.php"/>
+        <const name="MAX_EXECUTION_TIME" value="240000"/>
+        <const name="TIME_OUT" value="5000"/>
+        <const name="viewportWIDTH" value="1900"/>
+        <const name="viewportHEIGHT" value="1080"/>
+        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PATH_LOGS" value="app/log"/>
+        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_LOGIN" value="admin"/>
+        <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PASS" value="admin"/>
     </php>
+    <listeners>
+        <listener class="TestListener" file="vendor/oro/platform/src/Oro/Bundle/TestFrameworkBundle/Test/TestListener.php">
+            <arguments>
+                <string>app/logs</string>
+            </arguments>
+        </listener>
+    </listeners>
 
 </phpunit>
