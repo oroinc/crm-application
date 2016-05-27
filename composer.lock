@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0b79662fdeee9f193cf3e4348dc1b68f",
-    "content-hash": "eb3e225ecdd7b5e4495630c1472aa3a0",
+    "hash": "bf5a5f15fe680edb96a433887990af41",
+    "content-hash": "e7d66fd20ca7800addeb80f7e49f7342",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -3789,36 +3789,38 @@
         },
         {
             "name": "ocramius/proxy-manager",
-            "version": "0.4.1",
+            "version": "0.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/ProxyManager.git",
-                "reference": "880ea3f2458d21781bcf3319b6756e69e9b322c4"
+                "reference": "0ac0eb3e8e04c7fa75caaf1a43c5405623abf8f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/880ea3f2458d21781bcf3319b6756e69e9b322c4",
-                "reference": "880ea3f2458d21781bcf3319b6756e69e9b322c4",
+                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/0ac0eb3e8e04c7fa75caaf1a43c5405623abf8f5",
+                "reference": "0ac0eb3e8e04c7fa75caaf1a43c5405623abf8f5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "zendframework/zend-code": "2.*"
+                "zendframework/zend-code": ">2.2.5,<3.0"
             },
             "require-dev": {
-                "phpmd/phpmd": "1.4.*",
-                "phpunit/phpunit": ">=3.7",
-                "satooshi/php-coveralls": "~0.6",
-                "squizlabs/php_codesniffer": "1.4.*",
-                "zendframework/zend-stdlib": "2.*"
+                "ext-phar": "*",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "1.5.*"
             },
             "suggest": {
-                "zendframework/zend-stdlib": "To use the hydrator proxy"
+                "ocramius/generated-hydrator": "To have very fast object to array to object conversion for ghost objects",
+                "zendframework/zend-json": "To have the JsonRpc adapter (Remote Object feature)",
+                "zendframework/zend-soap": "To have the Soap adapter (Remote Object feature)",
+                "zendframework/zend-stdlib": "To use the hydrator proxy",
+                "zendframework/zend-xmlrpc": "To have the XmlRpc adapter (Remote Object feature)"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.4.x-dev"
+                    "dev-master": "0.6.x-dev"
                 }
             },
             "autoload": {
@@ -3834,8 +3836,7 @@
                 {
                     "name": "Marco Pivetta",
                     "email": "ocramius@gmail.com",
-                    "homepage": "http://ocramius.github.com/",
-                    "role": "Developer"
+                    "homepage": "http://ocramius.github.com/"
                 }
             ],
             "description": "A library providing utilities to generate, instantiate and generally operate with Object Proxies",
@@ -3847,7 +3848,7 @@
                 "proxy pattern",
                 "service proxies"
             ],
-            "time": "2013-06-30 16:44:31"
+            "time": "2014-09-28 14:18:11"
         },
         {
             "name": "oro/crm",
@@ -3855,12 +3856,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "a7fe3cb0804dbaf4c818aa1c411bc1678870fb3d",
+                "reference": "dd4550def5763c5c637f7ec7894b691ce102ce68",
                 "shasum": null
             },
             "require": {
                 "oro/platform": "self.version",
-                "php": ">=5.5.0"
+                "php": ">=5.5.9"
             },
             "type": "library",
             "extra": {
@@ -3892,13 +3893,13 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-abandoned-cart",
-                "reference": "b59452873bb6c1a3c93f23b7c649485d47fc2507",
+                "reference": "6789803dee831dc309bd37b71cf7de22c1755f4a",
                 "shasum": null
             },
             "require": {
                 "oro/crm": "self.version",
                 "oro/crm-mail-chimp": "self.version",
-                "php": ">=5.5.0"
+                "php": ">=5.5.9"
             },
             "type": "library",
             "extra": {
@@ -3929,12 +3930,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/dotmailer",
-                "reference": "222794de78f81b7cad40d4577a6b88c8ba1955bc",
+                "reference": "221625026c7f848039d55bf6441c54b5f5a0f61b",
                 "shasum": null
             },
             "require": {
                 "oro/crm": "self.version",
-                "php": ">=5.5.0",
+                "php": ">=5.5.9",
                 "romanpitak/dotmailer-api-v2-client": "1.0.11"
             },
             "type": "library",
@@ -3967,12 +3968,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/google-hangout",
-                "reference": "e506659545e1376589675236690e3c89bddccb39",
+                "reference": "0bfcdcfe27214291be2542312fe9a74626d68796",
                 "shasum": null
             },
             "require": {
                 "oro/platform": "self.version",
-                "php": ">=5.5.0"
+                "php": ">=5.5.9"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -4009,12 +4010,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-contact-us",
-                "reference": "71d4af1f2e8975378129eebf0ba0717e90bdd6f5",
+                "reference": "db2a1cf6901ce134867ff8f2a706b3eb75a9c045",
                 "shasum": null
             },
             "require": {
                 "oro/crm": "self.version",
-                "php": ">=5.5.0"
+                "php": ">=5.5.9"
             },
             "type": "library",
             "extra": {
@@ -4046,12 +4047,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/mailchimp",
-                "reference": "8e67f21e3bb1782fdf09cfb81ff0c39fc3a3f1a9",
+                "reference": "17a7ac1a7094e91365cc598c5c498440cafcbc49",
                 "shasum": null
             },
             "require": {
                 "oro/crm": "self.version",
-                "php": ">=5.5.0",
+                "php": ">=5.5.9",
                 "zfr/zfr-mailchimp": "~2.0"
             },
             "type": "library",
@@ -4084,12 +4085,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/zendesk",
-                "reference": "e83d150dd3fc3c258711e80b8a8cb8a5846bce39",
+                "reference": "ac8d629249c141ee18e3cb28d0b533eec1a56eec",
                 "shasum": null
             },
             "require": {
                 "oro/crm": "self.version",
-                "php": ">=5.5.0"
+                "php": ">=5.5.9"
             },
             "type": "library",
             "extra": {
@@ -4281,7 +4282,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "0f4b6a80f280d521873091f79d878cf65c21d9d4",
+                "reference": "d3767fc010cd4704d92d2b510d7a4cf7fbc6ba6f",
                 "shasum": null
             },
             "require": {
@@ -4326,11 +4327,11 @@
                 "mtdowling/cron-expression": "1.0.*",
                 "nelmio/api-doc-bundle": "2.9.0",
                 "nesbot/carbon": "1.8.*",
-                "ocramius/proxy-manager": "0.4.*",
+                "ocramius/proxy-manager": "~0.4",
                 "oro/doctrine-extensions": "1.0.*",
                 "oro/jsplumb": "~1.7",
                 "oro/moment-timezone": "0.3.*",
-                "php": ">=5.5.0",
+                "php": ">=5.5.9",
                 "piwik/device-detector": "~3.0",
                 "sensio/distribution-bundle": "4.0.*",
                 "sensio/framework-extra-bundle": "2.3.4",
@@ -4348,6 +4349,11 @@
                 "zendframework/zend-mail": "2.1.5"
             },
             "require-dev": {
+                "behat/behat": "v3.1.0",
+                "behat/mink-extension": "^2.0",
+                "behat/mink-selenium2-driver": "1.*",
+                "behat/symfony2-extension": "2.1.1",
+                "bossa/phpspec2-expect": "~1.0",
                 "sensio/generator-bundle": "2.5.3"
             },
             "type": "library",
@@ -4381,12 +4387,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/serialized-fields",
-                "reference": "e8d3b28a3e0e7dc8a18c730188958a3306b6c9b0",
+                "reference": "557f7ff89242a1b3915333f378ace924c915239f",
                 "shasum": null
             },
             "require": {
                 "oro/platform": "self.version",
-                "php": ">=5.5.0"
+                "php": ">=5.5.9"
             },
             "type": "library",
             "extra": {
