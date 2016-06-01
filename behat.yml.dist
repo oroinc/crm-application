@@ -1,0 +1,13 @@
+imports:
+  - ../../package/platform/src/Oro/Bundle/TestFrameworkBundle/Resources/config/behat.yml.dist
+
+default: &default
+    extensions:
+        Behat\MinkExtension:
+            base_url: 'http://dev-crm.local/'
+
+selenium2:
+    <<: *default
+    extensions:
+        Behat\MinkExtension:
+            base_url: 'http://dev-crm.local/'
