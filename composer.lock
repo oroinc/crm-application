@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bf5a5f15fe680edb96a433887990af41",
-    "content-hash": "e7d66fd20ca7800addeb80f7e49f7342",
+    "hash": "80103e15deb7284ae04abcc33b503021",
+    "content-hash": "80d27a22fc8977588f1fcc72e565fd06",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -1004,16 +1004,16 @@
         },
         {
             "name": "doctrine/doctrine-bundle",
-            "version": "1.6.2",
+            "version": "1.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "e9c2ccf573b59b7cea566390f34254fed3c20ed9"
+                "reference": "fd51907c6c76acaa8a5234822a4f901c1500afc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/e9c2ccf573b59b7cea566390f34254fed3c20ed9",
-                "reference": "e9c2ccf573b59b7cea566390f34254fed3c20ed9",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/fd51907c6c76acaa8a5234822a4f901c1500afc1",
+                "reference": "fd51907c6c76acaa8a5234822a4f901c1500afc1",
                 "shasum": ""
             },
             "require": {
@@ -1030,13 +1030,14 @@
                 "phpunit/phpunit": "~4",
                 "satooshi/php-coveralls": "~0.6.1",
                 "symfony/phpunit-bridge": "~2.7|~3.0",
+                "symfony/property-info": "~2.8|~3.0",
                 "symfony/validator": "~2.2|~3.0",
                 "symfony/yaml": "~2.2|~3.0",
                 "twig/twig": "~1.10"
             },
             "suggest": {
                 "doctrine/orm": "The Doctrine ORM integration is optional in the bundle.",
-                "symfony/web-profiler-bundle": "to use the data collector"
+                "symfony/web-profiler-bundle": "To use the data collector."
             },
             "type": "symfony-bundle",
             "extra": {
@@ -1079,7 +1080,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2016-01-10 17:21:44"
+            "time": "2016-04-21 19:55:56"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -3856,7 +3857,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "dd4550def5763c5c637f7ec7894b691ce102ce68",
+                "reference": "6f5a2e4885cbf854003170d318d6a9ce1f605365",
                 "shasum": null
             },
             "require": {
@@ -3871,7 +3872,8 @@
             },
             "autoload": {
                 "psr-0": {
-                    "OroCRM\\Bundle": "src/"
+                    "OroCRM\\Bundle": "src/",
+                    "Oro\\CRMTaskBundle": "src/"
                 }
             },
             "license": [
@@ -3893,7 +3895,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-abandoned-cart",
-                "reference": "6789803dee831dc309bd37b71cf7de22c1755f4a",
+                "reference": "93f8138ab763d1a2f09c081f418af748fc578707",
                 "shasum": null
             },
             "require": {
@@ -3930,7 +3932,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/dotmailer",
-                "reference": "221625026c7f848039d55bf6441c54b5f5a0f61b",
+                "reference": "6e92fa463524b5ed31d04a2739ab10fc055ffd8c",
                 "shasum": null
             },
             "require": {
@@ -3968,7 +3970,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/google-hangout",
-                "reference": "0bfcdcfe27214291be2542312fe9a74626d68796",
+                "reference": "e962e4f6c533519987244c04cd103709facbde23",
                 "shasum": null
             },
             "require": {
@@ -4010,7 +4012,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-contact-us",
-                "reference": "db2a1cf6901ce134867ff8f2a706b3eb75a9c045",
+                "reference": "66ee79c775ca3d533ce503c7dc63fa5a020ce316",
                 "shasum": null
             },
             "require": {
@@ -4047,7 +4049,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/mailchimp",
-                "reference": "17a7ac1a7094e91365cc598c5c498440cafcbc49",
+                "reference": "880e52308411a33c4fb4511582f72d0b0f589523",
                 "shasum": null
             },
             "require": {
@@ -4079,13 +4081,46 @@
             "homepage": "https://github.com/orocrm/OroCRMMailChimpBundle.git"
         },
         {
+            "name": "oro/crm-task-bundle",
+            "version": "dev-master",
+            "target-dir": "src/OroCRM/Bundle/TaskBundle",
+            "dist": {
+                "type": "path",
+                "url": "../../package/task",
+                "reference": "2e8ef5969650ab45a1a51059bbc4c97b096820f4",
+                "shasum": null
+            },
+            "require": {
+                "oro/platform": "self.version",
+                "php": ">=5.5.9"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "OroCRM\\Bundle\\TaskBundle": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "OroCRM Task Bundle",
+            "keywords": [
+                "OroCRM"
+            ]
+        },
+        {
             "name": "oro/crm-zendesk",
             "version": "dev-master",
             "target-dir": "src/OroCRM/Bundle/ZendeskBundle",
             "dist": {
                 "type": "path",
                 "url": "../../package/zendesk",
-                "reference": "ac8d629249c141ee18e3cb28d0b533eec1a56eec",
+                "reference": "b0ad72ff592c0866b59bcfb05f5328e821eb7e08",
                 "shasum": null
             },
             "require": {
@@ -4282,7 +4317,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "d3767fc010cd4704d92d2b510d7a4cf7fbc6ba6f",
+                "reference": "77748f3f5c006d1d16534fba0e3747ba2709fe19",
                 "shasum": null
             },
             "require": {
@@ -4387,7 +4422,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/serialized-fields",
-                "reference": "557f7ff89242a1b3915333f378ace924c915239f",
+                "reference": "d2d4bff4c176f4192e24533f6e6d974b7c24bb9e",
                 "shasum": null
             },
             "require": {
@@ -4573,16 +4608,16 @@
         },
         {
             "name": "piwik/device-detector",
-            "version": "3.6.1",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/piwik/device-detector.git",
-                "reference": "4f4c2b0ce412fb1b8f679a7c82190783ba697d4c"
+                "reference": "3cb9e117ff2ccc43178965c3582c8817340a02bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/piwik/device-detector/zipball/4f4c2b0ce412fb1b8f679a7c82190783ba697d4c",
-                "reference": "4f4c2b0ce412fb1b8f679a7c82190783ba697d4c",
+                "url": "https://api.github.com/repos/piwik/device-detector/zipball/3cb9e117ff2ccc43178965c3582c8817340a02bd",
+                "reference": "3cb9e117ff2ccc43178965c3582c8817340a02bd",
                 "shasum": ""
             },
             "require": {
@@ -4620,7 +4655,7 @@
                 "parser",
                 "useragent"
             ],
-            "time": "2016-03-31 20:28:09"
+            "time": "2016-06-01 21:26:36"
         },
         {
             "name": "psr/log",
@@ -7683,7 +7718,8 @@
         "oro/crm-magento-embedded-contact-us": 20,
         "oro/crm-mail-chimp": 20,
         "oro/crm-dotmailer": 20,
-        "oro/crm-zendesk": 20
+        "oro/crm-zendesk": 20,
+        "oro/crm-task-bundle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
