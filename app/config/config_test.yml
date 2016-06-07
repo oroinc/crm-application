@@ -3,6 +3,9 @@ imports:
     - { resource: parameters_test.yml }
     - { resource: security_test.yml }
 
+parameters:
+    doctrine.dbal.connection_factory.class: 'Oro\Component\Testing\Doctrine\PersistentConnectionFactory'
+
 framework:
     test: ~
     session:
