@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9b3943c4e9fb4fea63099c1b4c46cbf7",
-    "content-hash": "a1368ab517b0422a394e542d827b425c",
+    "hash": "fa5cddf746bb2936fb8ea5ad6b12f363",
+    "content-hash": "54a6baa1e9b6463669759739f637cbb3",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -3963,7 +3963,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "dd4550def5763c5c637f7ec7894b691ce102ce68",
+                "reference": "6f5a2e4885cbf854003170d318d6a9ce1f605365",
                 "shasum": null
             },
             "require": {
@@ -3978,7 +3978,8 @@
             },
             "autoload": {
                 "psr-0": {
-                    "OroCRM\\Bundle": "src/"
+                    "OroCRM\\Bundle": "src/",
+                    "Oro\\CRMTaskBundle": "src/"
                 }
             },
             "license": [
@@ -4184,6 +4185,39 @@
             ],
             "description": "OroCRM MailChimp integration",
             "homepage": "https://github.com/orocrm/OroCRMMailChimpBundle.git"
+        },
+        {
+            "name": "oro/crm-task-bundle",
+            "version": "dev-master",
+            "target-dir": "src/OroCRM/Bundle/TaskBundle",
+            "dist": {
+                "type": "path",
+                "url": "../../package/task",
+                "reference": "edea0130da60ee78cdc4382a28198b7dd3f984d8",
+                "shasum": null
+            },
+            "require": {
+                "oro/platform": "self.version",
+                "php": ">=5.5.9"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "OroCRM\\Bundle\\TaskBundle": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "OroCRM Task Bundle",
+            "keywords": [
+                "OroCRM"
+            ]
         },
         {
             "name": "oro/crm-zendesk",
@@ -7790,7 +7824,8 @@
         "oro/crm-magento-embedded-contact-us": 20,
         "oro/crm-mail-chimp": 20,
         "oro/crm-dotmailer": 20,
-        "oro/crm-zendesk": 20
+        "oro/crm-zendesk": 20,
+        "oro/crm-task-bundle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
