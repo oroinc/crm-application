@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "23dae7e60bd7c9e6d2daa939fe4adc69",
-    "content-hash": "baa90b845a2d028aa4ac7d3554862514",
+    "hash": "8adade7322e63c7a263013c8b87ce638",
+    "content-hash": "e484b3f2237c8c96e13ed44b8ecf851d",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -1669,7 +1669,7 @@
                     "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
                 },
                 {
-                    "name": "William DURAND",
+                    "name": "William Durand",
                     "email": "william.durand1@gmail.com"
                 }
             ],
@@ -4002,7 +4002,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "f644b7ae08d9d64be8c094482734f26267967d0f",
+                "reference": "b3c43276492113865c6e2d1e9571a3d3227d8050",
                 "shasum": null
             },
             "require": {
@@ -4018,6 +4018,7 @@
             "autoload": {
                 "psr-0": {
                     "OroCRM\\Bundle": "src/",
+                    "Oro\\CRMTaskBundle": "src/",
                     "Oro": "src/"
                 }
             },
@@ -4115,10 +4116,11 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/google-hangout",
-                "reference": "0bfcdcfe27214291be2542312fe9a74626d68796",
+                "reference": "4276a27b8aa3852d7ba4f8f6df80a1e1bcd0d4a8",
                 "shasum": null
             },
             "require": {
+                "oro/call-bundle": "self.version",
                 "oro/platform": "self.version",
                 "php": ">=5.5.9"
             },
@@ -4224,6 +4226,46 @@
             ],
             "description": "OroCRM MailChimp integration",
             "homepage": "https://github.com/orocrm/OroCRMMailChimpBundle.git"
+        },
+        {
+            "name": "oro/crm-task-bundle",
+            "version": "dev-master",
+            "target-dir": "src/OroCRM/Bundle/TaskBundle",
+            "dist": {
+                "type": "path",
+                "url": "../../package/task",
+                "reference": "4326c7d3ba88cd3e789e6c1c701741d7e3d9b26a",
+                "shasum": null
+            },
+            "require": {
+                "oro/platform": "self.version",
+                "php": ">=5.5.9"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "OroCRM\\Bundle\\TaskBundle": "src/"
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Oro, Inc",
+                    "homepage": "http://www.orocrm.com"
+                }
+            ],
+            "description": "OroCRM Task Bundle",
+            "keywords": [
+                "OroCRM",
+                "Task"
+            ]
         },
         {
             "name": "oro/crm-zendesk",
@@ -7296,22 +7338,22 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "3.0.2",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "45ada3e3fd09789fbfbd6d65b3f0901f0030dc61"
+                "reference": "9270140b940ff02e58ec577c237274e92cd40cdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/45ada3e3fd09789fbfbd6d65b3f0901f0030dc61",
-                "reference": "45ada3e3fd09789fbfbd6d65b3f0901f0030dc61",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/9270140b940ff02e58ec577c237274e92cd40cdd",
+                "reference": "9270140b940ff02e58ec577c237274e92cd40cdd",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5",
                 "phpdocumentor/reflection-common": "^1.0@dev",
-                "phpdocumentor/type-resolver": "^0.1.5",
+                "phpdocumentor/type-resolver": "^0.2.0",
                 "webmozart/assert": "^1.0"
             },
             "require-dev": {
@@ -7337,20 +7379,20 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2016-06-06 06:44:13"
+            "time": "2016-06-10 09:48:41"
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "0.1.8",
+            "version": "0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "9891754231e55d42f0d16988ffb799af39f31a12"
+                "reference": "b39c7a5b194f9ed7bd0dd345c751007a41862443"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/9891754231e55d42f0d16988ffb799af39f31a12",
-                "reference": "9891754231e55d42f0d16988ffb799af39f31a12",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/b39c7a5b194f9ed7bd0dd345c751007a41862443",
+                "reference": "b39c7a5b194f9ed7bd0dd345c751007a41862443",
                 "shasum": ""
             },
             "require": {
@@ -7359,7 +7401,7 @@
             },
             "require-dev": {
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^5.2"
+                "phpunit/phpunit": "^5.2||^4.8.24"
             },
             "type": "library",
             "extra": {
@@ -7384,7 +7426,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2016-03-28 10:02:29"
+            "time": "2016-06-10 07:14:17"
         },
         {
             "name": "phpspec/php-diff",
@@ -7678,16 +7720,16 @@
         },
         {
             "name": "sebastian/exporter",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "7ae5513327cb536431847bcc0c10edba2701064e"
+                "reference": "42c4c2eec485ee3e159ec9884f95b431287edde4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/7ae5513327cb536431847bcc0c10edba2701064e",
-                "reference": "7ae5513327cb536431847bcc0c10edba2701064e",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/42c4c2eec485ee3e159ec9884f95b431287edde4",
+                "reference": "42c4c2eec485ee3e159ec9884f95b431287edde4",
                 "shasum": ""
             },
             "require": {
@@ -7695,12 +7737,13 @@
                 "sebastian/recursion-context": "~1.0"
             },
             "require-dev": {
+                "ext-mbstring": "*",
                 "phpunit/phpunit": "~4.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -7740,7 +7783,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2015-06-21 07:55:53"
+            "time": "2016-06-17 09:04:28"
         },
         {
             "name": "sebastian/recursion-context",
@@ -7978,6 +8021,7 @@
         "oro/crm-mail-chimp": 20,
         "oro/crm-dotmailer": 20,
         "oro/crm-zendesk": 20,
+        "oro/crm-task-bundle": 20,
         "oro/call-bundle": 20
     },
     "prefer-stable": true,

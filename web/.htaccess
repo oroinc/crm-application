@@ -1,7 +1,13 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    #RewriteBase /
+    # Maintenance mode rewrites #
+    RewriteCond %{DOCUMENT_ROOT}/maintenance.html -f
+    RewriteCond %{DOCUMENT_ROOT}/../app/cache/maintenance_lock -f
+    RewriteCond %{SCRIPT_FILENAME} !maintenance.html
+    RewriteRule ^.*$ /maintenance.html [R=503,L]
+    ErrorDocument 503 /maintenance.html
+    Header Set Cache-Control "max-age=0, no-store"
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.*)$ app.php [QSA,L]
