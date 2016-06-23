@@ -8,15 +8,19 @@
             "": "src/"
         }
     },
-    "repositories": [
-        {
+    "repositories": {
+        "package": {
+            "type": "path",
+            "url": "../../package/*"
+        },
+        "composer": {
             "type": "composer",
-            "url": "http://packagist.orocrm.com"
+            "url": "https://packagist.orocrm.com"
         }
-    ],
+    },
     "require": {
-        "oro/platform": "1.8.x-dev",
-        "oro/crm": "1.8.x-dev"
+        "oro/platform": "self.version",
+        "oro/crm": "self.version"
     },
     "require-dev": {
         "sensio/generator-bundle": "2.5.3"
