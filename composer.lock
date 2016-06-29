@@ -3166,7 +3166,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "Knplabs",
+                    "name": "KnpLabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -4123,15 +4123,15 @@
             "version": "dev-master",
             "target-dir": "src/OroCRM/Bundle/HangoutsCallBundle",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMHangoutsCallBundle/zipball/c705de8d5a42558ed6c64e5cf60a5a8fce1ce751",
-                "reference": "c705de8d5a42558ed6c64e5cf60a5a8fce1ce751",
-                "shasum": ""
+                "type": "path",
+                "url": "../../package/google-hangout",
+                "reference": "972efed72a2ad39ff9807a28ff43454eb37b65e1",
+                "shasum": null
             },
             "require": {
-                "oro/crm": "1.x-dev",
-                "oro/platform": "1.x-dev",
-                "php": ">=5.4.9"
+                "oro/crm-call-bundle": "self.version",
+                "oro/platform": "self.version",
+                "php": ">=5.5.9"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -4144,7 +4144,6 @@
                     "OroCRM\\Bundle\\HangoutsCallBundle": "src/"
                 }
             },
-            "notification-url": "https://packagist.orocrm.com/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -4160,8 +4159,7 @@
                 "Google Hangouts",
                 "OroCRM",
                 "integration"
-            ],
-            "time": "2016-03-09 16:01:24"
+            ]
         },
         {
             "name": "oro/crm-magento-embedded-contact-us",
@@ -5181,17 +5179,17 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "target-dir": "Sensio/Bundle/DistributionBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "181a47c527a04d2d03986a0b3e9c1b86eaacab40"
+                "reference": "d738952285a1a7d969f9338f735108c9f65bb7f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/181a47c527a04d2d03986a0b3e9c1b86eaacab40",
-                "reference": "181a47c527a04d2d03986a0b3e9c1b86eaacab40",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/d738952285a1a7d969f9338f735108c9f65bb7f2",
+                "reference": "d738952285a1a7d969f9338f735108c9f65bb7f2",
                 "shasum": ""
             },
             "require": {
@@ -5237,7 +5235,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2016-04-25 20:49:44"
+            "time": "2016-06-23 16:10:25"
         },
         {
             "name": "sensio/framework-extra-bundle",
