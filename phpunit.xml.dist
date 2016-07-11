@@ -7,6 +7,11 @@
          colors="true"
          bootstrap="app/autoload.php"
 >
+    <groups>
+        <exclude>
+            <group>soap</group>
+        </exclude>
+    </groups>
     <testsuites>
         <testsuite name="unit">
             <directory suffix="Test.php">vendor/oro/crm*/src/*/Bundle/*Bundle/Tests/Unit</directory>
