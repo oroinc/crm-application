@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fa5cddf746bb2936fb8ea5ad6b12f363",
+    "hash": "86defd9424913ad93c243a75a24b3de7",
     "content-hash": "54a6baa1e9b6463669759739f637cbb3",
     "packages": [
         {
@@ -3970,7 +3970,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "6f5a2e4885cbf854003170d318d6a9ce1f605365",
+                "reference": "99db110b90f347caa374db0d3d891850eaf368fd",
                 "shasum": null
             },
             "require": {
@@ -4200,7 +4200,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/task",
-                "reference": "edea0130da60ee78cdc4382a28198b7dd3f984d8",
+                "reference": "4326c7d3ba88cd3e789e6c1c701741d7e3d9b26a",
                 "shasum": null
             },
             "require": {
@@ -4219,11 +4219,18 @@
                 }
             },
             "license": [
-                "MIT"
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Oro, Inc",
+                    "homepage": "http://www.orocrm.com"
+                }
             ],
             "description": "OroCRM Task Bundle",
             "keywords": [
-                "OroCRM"
+                "OroCRM",
+                "Task"
             ]
         },
         {
@@ -4430,7 +4437,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "db68da95015ed26e65c219c40a53230535203d96",
+                "reference": "62899c8398b713f219c6bf835e7ccc05e5ecfed3",
                 "shasum": null
             },
             "require": {
@@ -4485,7 +4492,7 @@
                 "sensio/framework-extra-bundle": "2.3.4",
                 "stof/doctrine-extensions-bundle": "1.1.0",
                 "sylius/flow-bundle": "0.6.*",
-                "symfony/assetic-bundle": "2.3.0",
+                "symfony/assetic-bundle": "2.7.1",
                 "symfony/monolog-bundle": "2.7.*",
                 "symfony/polyfill-php70": "1.*",
                 "symfony/swiftmailer-bundle": "2.3.*",
@@ -5459,45 +5466,52 @@
         },
         {
             "name": "symfony/assetic-bundle",
-            "version": "v2.3.0",
-            "target-dir": "Symfony/Bundle/AsseticBundle",
+            "version": "v2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/assetic-bundle.git",
-                "reference": "146dd3cb46b302bd471560471c6aaa930483dac1"
+                "reference": "d885ec8451d5a7b077bda81bb19ac9fbff9cdc76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/assetic-bundle/zipball/146dd3cb46b302bd471560471c6aaa930483dac1",
-                "reference": "146dd3cb46b302bd471560471c6aaa930483dac1",
+                "url": "https://api.github.com/repos/symfony/assetic-bundle/zipball/d885ec8451d5a7b077bda81bb19ac9fbff9cdc76",
+                "reference": "d885ec8451d5a7b077bda81bb19ac9fbff9cdc76",
                 "shasum": ""
             },
             "require": {
-                "kriswallsmith/assetic": "~1.1",
+                "kriswallsmith/assetic": "~1.3",
                 "php": ">=5.3.0",
-                "symfony/framework-bundle": "~2.1"
+                "symfony/console": "~2.3|~3.0",
+                "symfony/dependency-injection": "~2.3|~3.0",
+                "symfony/framework-bundle": "~2.3|~3.0",
+                "symfony/yaml": "~2.3|~3.0"
+            },
+            "conflict": {
+                "kriswallsmith/spork": "<=0.2",
+                "twig/twig": "<1.20"
             },
             "require-dev": {
-                "symfony/class-loader": "~2.1",
-                "symfony/console": "~2.1",
-                "symfony/css-selector": "~2.1",
-                "symfony/dom-crawler": "~2.1",
-                "symfony/form": "~2.1",
-                "symfony/twig-bundle": "~2.1",
-                "symfony/yaml": "~2.1"
+                "kriswallsmith/spork": "~0.3",
+                "patchwork/jsqueeze": "~1.0",
+                "symfony/class-loader": "~2.3|~3.0",
+                "symfony/css-selector": "~2.3|~3.0",
+                "symfony/dom-crawler": "~2.3|~3.0",
+                "symfony/phpunit-bridge": "~2.7|~3.0",
+                "symfony/twig-bundle": "~2.3|~3.0"
             },
             "suggest": {
-                "symfony/twig-bundle": "~2.1"
+                "kriswallsmith/spork": "to be able to dump assets in parallel",
+                "symfony/twig-bundle": "to use the Twig integration"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1.x-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Symfony\\Bundle\\AsseticBundle": ""
+                "psr-4": {
+                    "Symfony\\Bundle\\AsseticBundle\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5518,7 +5532,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2013-05-16 05:32:23"
+            "time": "2015-11-17 09:45:47"
         },
         {
             "name": "symfony/monolog-bundle",
