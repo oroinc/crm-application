@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "89f2e0d1c967e25f98225186fbd88abc",
-    "content-hash": "dd9001e7ee6980f5d3ecfeafc64f928e",
+    "hash": "80f0c903980762c9b8db23b918535d43",
+    "content-hash": "6257189649800392ffdaa7c6987878d1",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -3865,10 +3865,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "f644b7ae08d9d64be8c094482734f26267967d0f",
+                "reference": "f501ae9396f1938a6e8c589fb5f00c573ba6f99c",
                 "shasum": null
             },
             "require": {
+                "oro/crm-call-bundle": "self.version",
+                "oro/crm-task-bundle": "self.version",
                 "oro/platform": "self.version",
                 "php": ">=5.5.9"
             },
@@ -7799,16 +7801,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.26",
+            "version": "4.8.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "fc1d8cd5b5de11625979125c5639347896ac2c74"
+                "reference": "c062dddcb68e44b563f66ee319ddae2b5a322a90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fc1d8cd5b5de11625979125c5639347896ac2c74",
-                "reference": "fc1d8cd5b5de11625979125c5639347896ac2c74",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c062dddcb68e44b563f66ee319ddae2b5a322a90",
+                "reference": "c062dddcb68e44b563f66ee319ddae2b5a322a90",
                 "shasum": ""
             },
             "require": {
@@ -7867,7 +7869,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-05-17 03:09:28"
+            "time": "2016-07-21 06:48:14"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -8479,9 +8481,7 @@
         "oro/crm-magento-embedded-contact-us": 20,
         "oro/crm-mail-chimp": 20,
         "oro/crm-dotmailer": 20,
-        "oro/crm-zendesk": 20,
-        "oro/crm-task-bundle": 20,
-        "oro/crm-call-bundle": 20
+        "oro/crm-zendesk": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
