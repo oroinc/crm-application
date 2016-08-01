@@ -1,3 +1,10 @@
+CHANGELOG for 1.9.0
+===================
+This changelog references the relevant changes (new features, changes and bugs) done in 1.9.0 versions.
+  * The application has been upgraded to Symfony 2.8
+  * Added support php 7
+  * Changed minimum required php version to 5.5.9
+
 CHANGELOG for 1.8.0
 ===================
 This changelog references the relevant changes (new features, changes and bugs) done in 1.8.0 versions.
