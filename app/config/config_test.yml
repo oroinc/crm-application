@@ -3,6 +3,9 @@ imports:
     - { resource: parameters_test.yml }
     - { resource: security_test.yml }
 
+parameters:
+    doctrine.dbal.connection_factory.class: 'Oro\Component\Testing\Doctrine\PersistentConnectionFactory'
+
 framework:
     test: ~
     session:
@@ -23,3 +26,7 @@ swiftmailer:
 
 oro_require_js:
     js_engine: ~
+
+oro_message_queue:
+    client:
+        traceable_producer: true
