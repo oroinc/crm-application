@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2b068b20579d63b7eacac8859994e091",
-    "content-hash": "cd0f3c0e0231e7afe506df8c46502b45",
+    "hash": "00e9dbf6533c6f2628df9f451aa2becb",
+    "content-hash": "8df83f6c8ef7e686f6cfdf7f8da11c6d",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -2339,16 +2339,16 @@
         },
         {
             "name": "imagine/imagine",
-            "version": "v0.5.0",
+            "version": "v0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/avalanche123/Imagine.git",
-                "reference": "f64ec666baaa800edcbf237db41121a569230709"
+                "reference": "149041d2a1b517107bfe270ca2b1a17aa341715d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/f64ec666baaa800edcbf237db41121a569230709",
-                "reference": "f64ec666baaa800edcbf237db41121a569230709",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/149041d2a1b517107bfe270ca2b1a17aa341715d",
+                "reference": "149041d2a1b517107bfe270ca2b1a17aa341715d",
                 "shasum": ""
             },
             "require": {
@@ -2363,6 +2363,11 @@
                 "ext-imagick": "to use the Imagick implementation"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.7-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Imagine": "lib/"
@@ -2387,7 +2392,7 @@
                 "image manipulation",
                 "image processing"
             ],
-            "time": "2013-07-10 17:25:36"
+            "time": "2015-09-19 16:54:05"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -3294,7 +3299,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "KnpLabs",
+                    "name": "Knplabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -3350,7 +3355,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "Knplabs",
+                    "name": "KnpLabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -3586,39 +3591,58 @@
         },
         {
             "name": "liip/imagine-bundle",
-            "version": "v0.17.1",
-            "target-dir": "Liip/ImagineBundle",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "23b82d54b766b6880fc17f7d3d9153bd0abf815c"
+                "reference": "b657b6601a24da525645fb5358ce77fdf57889f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/23b82d54b766b6880fc17f7d3d9153bd0abf815c",
-                "reference": "23b82d54b766b6880fc17f7d3d9153bd0abf815c",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/b657b6601a24da525645fb5358ce77fdf57889f1",
+                "reference": "b657b6601a24da525645fb5358ce77fdf57889f1",
                 "shasum": ""
             },
             "require": {
-                "imagine/imagine": "0.5.*",
-                "php": ">=5.3.2",
-                "symfony/filesystem": ">=2.0.16,~2.0",
-                "symfony/finder": ">=2.0.16,~2.0",
-                "symfony/framework-bundle": ">=2.0.16,~2.0",
-                "symfony/options-resolver": ">=2.0.16,~2.0"
+                "imagine/imagine": "~0.5,<0.7",
+                "php": "^5.3.9|^7.0",
+                "symfony/filesystem": "~2.3|~3.0",
+                "symfony/finder": "~2.3|~3.0",
+                "symfony/framework-bundle": "~2.3|~3.0",
+                "symfony/options-resolver": "~2.3|~3.0"
             },
             "require-dev": {
+                "amazonwebservices/aws-sdk-for-php": "~1.0",
+                "aws/aws-sdk-php": "~2.4",
                 "doctrine/cache": "~1.1",
-                "symfony/yaml": ">=2.0.16,~2.0",
-                "twig/twig": ">=1.0,<2.0-dev"
+                "doctrine/orm": "~2.3",
+                "ext-gd": "*",
+                "phpunit/phpunit": "~4.3",
+                "psr/log": "~1.0",
+                "symfony/browser-kit": "~2.3|~3.0",
+                "symfony/console": "~2.3|~3.0",
+                "symfony/dependency-injection": "~2.3|~3.0",
+                "symfony/form": "~2.3|~3.0",
+                "symfony/phpunit-bridge": "~2.3|~3.0",
+                "symfony/yaml": "~2.3|~3.0",
+                "twig/twig": "~1.12"
             },
             "suggest": {
-                "twig/twig": ">=1.0,<2.0-dev"
+                "amazonwebservices/aws-sdk-for-php": "Add it if you'd like to use aws v1 resolver",
+                "aws/aws-sdk-php": "Add it if you'd like to use aws v2 or v3 resolver",
+                "league/flysystem": "If you'd want to use Flysystem binary loader",
+                "monolog/monolog": "If you'd want to write logs",
+                "twig/twig": "If you'd want to use some handy twig filters, version 1.12 or greater required"
             },
             "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
-                "psr-0": {
-                    "Liip\\ImagineBundle": ""
+                "psr-4": {
+                    "Liip\\ImagineBundle\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3637,7 +3661,7 @@
                 "image",
                 "imagine"
             ],
-            "time": "2014-01-24 18:59:15"
+            "time": "2016-05-06 06:27:38"
         },
         {
             "name": "liuggio/ExcelBundle",
@@ -4169,7 +4193,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "3f82971ba951c450a61755a08a3b6f25e18006c6",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4209,7 +4233,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-abandoned-cart",
-                "reference": "09b4426a809674bd451aaaa4d278a871c5387e30",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4246,7 +4270,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/call",
-                "reference": "b74f66cdfa4b8e7764116c80cfa275b7d3688443",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4286,7 +4310,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/dotmailer",
-                "reference": "0eb7087b5a418635010273b7fcc01800ae87d513",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4324,7 +4348,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/google-hangout",
-                "reference": "3dafbbf7024464ff1a1eaa7ca0dce1a89d935f13",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4367,7 +4391,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-contact-us",
-                "reference": "429e28539f1faf9e40a79ad6d77fa08d5c4bc7d4",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4404,7 +4428,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/mailchimp",
-                "reference": "5ea3bf7eb3536e50c882477dc7f1b19a076d03c3",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4442,7 +4466,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/task",
-                "reference": "52b565d8a08ba738f81a8b9c36df2dd09c207727",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4482,7 +4506,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/zendesk",
-                "reference": "0b80e9972f322fafb07f6ad5d8cbc90a29b44de4",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4679,7 +4703,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "9b30b9912cefe68b43162ebbd9abcc986eeeeaad",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4719,7 +4743,7 @@
                 "kriswallsmith/assetic": "1.3.1",
                 "leafo/lessphp": "0.4.0",
                 "lexik/maintenance-bundle": "v1.0.3",
-                "liip/imagine-bundle": "0.17.*",
+                "liip/imagine-bundle": "1.5.*",
                 "liuggio/excelbundle": "~2.1",
                 "monolog/monolog": "1.8.*",
                 "mtdowling/cron-expression": "1.0.*",
@@ -4786,7 +4810,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/serialized-fields",
-                "reference": "3dd4f7f6cc09f65c73cb83a63cb35c64df7f725d",
+                "reference": null,
                 "shasum": null
             },
             "require": {
