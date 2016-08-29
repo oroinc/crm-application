@@ -4,17 +4,23 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a9faf0bbad978e74fd54c6ed9ec28392",
-    "content-hash": "ad31340c8c9e69e2b29cf9b2820f073a",
+    "hash": "76f9af14e9f6eeef7c4cca60ad346cdb",
+    "content-hash": "0873b2b13128899125c0274be5095bcb",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
-            "version": "dev-1.x-symfony2.8",
+            "version": "1.x-dev",
             "target-dir": "A2lix/TranslationFormBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/orocrm/TranslationFormBundle.git",
-                "reference": "1c8e92093213725f04040272d933a93efef50b55"
+                "url": "https://github.com/a2lix/TranslationFormBundle.git",
+                "reference": "5041f05883685d944e2d9b44343709b51a1d476f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/a2lix/TranslationFormBundle/zipball/5041f05883685d944e2d9b44343709b51a1d476f",
+                "reference": "5041f05883685d944e2d9b44343709b51a1d476f",
+                "shasum": ""
             },
             "require": {
                 "symfony/symfony": ">=2.3"
@@ -35,32 +41,33 @@
                     "A2lix\\TranslationFormBundle": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "A2lix",
-                    "homepage": "http://www.a2lix.fr"
+                    "name": "David ALLIX"
                 },
                 {
-                    "name": "David ALLIX"
+                    "name": "A2lix",
+                    "homepage": "http://www.a2lix.fr"
                 }
             ],
             "description": "Translate your doctrine objects easily with a custom form field",
             "homepage": "https://github.com/a2lix/TranslationFormBundle",
             "keywords": [
+                "Symfony2",
                 "doctrine2",
                 "form",
                 "gedmo",
                 "i18n",
                 "internationalization",
                 "knplabs",
-                "symfony2",
                 "translatable",
                 "translation"
             ],
-            "time": "2016-06-17 15:16:41"
+            "time": "2016-08-05 18:11:57"
         },
         {
             "name": "akeneo/batch-bundle",
@@ -2621,20 +2628,23 @@
         },
         {
             "name": "jms/cg",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/cg-library.git",
-                "reference": "0af1113c7409b8636c5244bbae10b2e0ff792e9c"
+                "reference": "2152ea2c48f746a676debb841644ae64cae27835"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/cg-library/zipball/0af1113c7409b8636c5244bbae10b2e0ff792e9c",
-                "reference": "0af1113c7409b8636c5244bbae10b2e0ff792e9c",
+                "url": "https://api.github.com/repos/schmittjoh/cg-library/zipball/2152ea2c48f746a676debb841644ae64cae27835",
+                "reference": "2152ea2c48f746a676debb841644ae64cae27835",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.5"
             },
             "type": "library",
             "extra": {
@@ -2661,7 +2671,7 @@
             "keywords": [
                 "code generation"
             ],
-            "time": "2015-09-13 08:54:43"
+            "time": "2016-04-07 10:21:44"
         },
         {
             "name": "jms/di-extra-bundle",
@@ -3343,7 +3353,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "Knplabs",
+                    "name": "KnpLabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -4158,16 +4168,16 @@
         },
         {
             "name": "oro/crm",
-            "version": "1.10.0",
+            "version": "1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/crm.git",
-                "reference": "dbb77451d81e5852112ff8d8fcb16c7289f3cbc0"
+                "reference": "eb5cb87e187e632004caf6824b505fe6154cd474"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/crm/zipball/dbb77451d81e5852112ff8d8fcb16c7289f3cbc0",
-                "reference": "dbb77451d81e5852112ff8d8fcb16c7289f3cbc0",
+                "url": "https://api.github.com/repos/orocrm/crm/zipball/eb5cb87e187e632004caf6824b505fe6154cd474",
+                "reference": "eb5cb87e187e632004caf6824b505fe6154cd474",
                 "shasum": ""
             },
             "require": {
@@ -4175,6 +4185,10 @@
                 "oro/crm-task-bundle": "1.0.*",
                 "oro/platform": "1.10.*",
                 "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*",
+                "squizlabs/php_codesniffer": "2.3.*"
             },
             "type": "library",
             "extra": {
@@ -4200,7 +4214,7 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/orocrm/crm.git",
-            "time": "2016-08-14 17:50:16"
+            "time": "2016-08-23 07:12:18"
         },
         {
             "name": "oro/crm-call-bundle",
@@ -4454,20 +4468,20 @@
         },
         {
             "name": "oro/platform",
-            "version": "1.10.0",
+            "version": "1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/platform.git",
-                "reference": "9adcb130dacd9037a4efa3a3e41fb85cf852fee5"
+                "reference": "cc1f221b59cf279333efa998c3080a60700cda54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/9adcb130dacd9037a4efa3a3e41fb85cf852fee5",
-                "reference": "9adcb130dacd9037a4efa3a3e41fb85cf852fee5",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/cc1f221b59cf279333efa998c3080a60700cda54",
+                "reference": "cc1f221b59cf279333efa998c3080a60700cda54",
                 "shasum": ""
             },
             "require": {
-                "a2lix/translation-form-bundle": "dev-1.x-symfony2.8",
+                "a2lix/translation-form-bundle": "1.x-dev",
                 "akeneo/batch-bundle": "0.4.2",
                 "ass/xmlsecurity": "1.0.0",
                 "besimple/soap": "0.2.2",
@@ -4536,8 +4550,9 @@
                 "behat/mink-selenium2-driver": "1.*",
                 "behat/symfony2-extension": "2.1.1",
                 "bossa/phpspec2-expect": "~1.0",
-                "nelmio/alice": "^2.1",
-                "sensio/generator-bundle": "2.5.3"
+                "phpunit/phpunit": "4.8.*",
+                "sensio/generator-bundle": "2.5.3",
+                "squizlabs/php_codesniffer": "2.3.*"
             },
             "type": "library",
             "extra": {
@@ -4563,7 +4578,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2016-08-15 18:16:34"
+            "time": "2016-08-23 07:11:52"
         },
         {
             "name": "paragonie/random_compat",
