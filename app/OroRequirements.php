@@ -79,7 +79,7 @@ class OroRequirements extends SymfonyRequirements
 
         $this->addRecommendation(
             extension_loaded('tidy'),
-            'Tidy extension should be available to simplify HTML data for human-readable representation',
+            'Tidy extension should be installed to make sure that any HTML is correctly converted into a text representation.',
             'Install and enable the <strong>Tidy</strong> extension.'
         );
 
