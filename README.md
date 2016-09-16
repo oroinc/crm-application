@@ -37,7 +37,7 @@ git clone https://github.com/orocrm/crm-application.git
 ```
 
 
-- Make sure that you have [NodeJS][4] installed
+- Make sure that you have [NodeJS][3] installed
 
 - Install OroCRM dependencies with composer. If installation process seems too slow you can use "--prefer-dist" option.
   Go to crm-application folder and run composer installation:
@@ -85,7 +85,7 @@ And ensure that timeout has default value
 
     wait_timeout = 28800
 
-See [Optimizing InnoDB Disk I/O][3] for more
+See [Optimizing InnoDB Disk I/O][2] for more
 
 ## PostgreSQL installation notes
 
@@ -106,10 +106,9 @@ php app/console oro:migration:data:load --fixtures-type=demo --env=prod
 
 ## Web Server Configuration
 
-OroCRM application is based on the Symfony standard application so web server configuration recommendations are the [same][5].
+OroCRM application is based on the Symfony standard application so web server configuration recommendations are the [same][4].
 
-[1]:  http://symfony.com/doc/2.3/book/installation.html
-[2]:  http://getcomposer.org/
-[3]:  http://dev.mysql.com/doc/refman/5.6/en/optimizing-innodb-diskio.html
-[4]:  https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
-[5]:  http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html
+[1]:  http://getcomposer.org/
+[2]:  http://dev.mysql.com/doc/refman/5.6/en/optimizing-innodb-diskio.html
+[3]:  https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
+[4]:  http://symfony.com/doc/2.8/setup/web_server_configuration.html
