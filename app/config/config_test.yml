@@ -21,12 +21,14 @@ services:
         tags:
             - { name: twig.extension }
 
+    oro_message_queue.test.message_collector:
+        class: Oro\Bundle\MessageQueueBundle\Test\Functional\MessageCollector
+        decorates: oro_message_queue.client.message_producer
+        arguments:
+            - '@oro_message_queue.test.message_collector.inner'
+
 swiftmailer:
     disable_delivery: true
 
 oro_require_js:
     js_engine: ~
-
-oro_message_queue:
-    client:
-        traceable_producer: true

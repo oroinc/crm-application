@@ -77,6 +77,12 @@ class OroRequirements extends SymfonyRequirements
             'Install and enable the <strong>SOAP</strong> extension.'
         );
 
+        $this->addRecommendation(
+            extension_loaded('tidy'),
+            'Tidy extension should be installed to make sure that any HTML is correctly converted into a text representation.',
+            'Install and enable the <strong>Tidy</strong> extension.'
+        );
+
         // Windows specific checks
         if (defined('PHP_WINDOWS_VERSION_BUILD')) {
             $this->addRecommendation(
