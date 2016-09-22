@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2b068b20579d63b7eacac8859994e091",
-    "content-hash": "cd0f3c0e0231e7afe506df8c46502b45",
+    "hash": "d4bd8a5fb72c6fb95edca98a82dbd0cf",
+    "content-hash": "781dc8bf03dae9afe83ea65f9d0f414c",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -3815,29 +3815,37 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.8.0",
+            "version": "1.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "392ef35fd470638e08d0160d6b1cbab63cb23174"
+                "reference": "f42fbdfd53e306bda545845e4dbfd3e72edb4952"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/392ef35fd470638e08d0160d6b1cbab63cb23174",
-                "reference": "392ef35fd470638e08d0160d6b1cbab63cb23174",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/f42fbdfd53e306bda545845e4dbfd3e72edb4952",
+                "reference": "f42fbdfd53e306bda545845e4dbfd3e72edb4952",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
                 "psr/log": "~1.0"
             },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
             "require-dev": {
-                "aws/aws-sdk-php": "~2.4, >2.4.8",
+                "aws/aws-sdk-php": "^2.4.9",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
-                "phpunit/phpunit": "~3.7.0",
-                "raven/raven": "~0.5",
-                "ruflin/elastica": "0.90.*"
+                "jakub-onderka/php-parallel-lint": "0.9",
+                "php-amqplib/php-amqplib": "~2.4",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "ruflin/elastica": ">=0.90 <3.0",
+                "sentry/sentry": "^0.13",
+                "swiftmailer/swiftmailer": "~5.3"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -3845,14 +3853,17 @@
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "raven/raven": "Allow sending log messages to a Sentry server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "sentry/sentry": "Allow sending log messages to a Sentry server"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -3868,8 +3879,7 @@
                 {
                     "name": "Jordi Boggiano",
                     "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be",
-                    "role": "Developer"
+                    "homepage": "http://seld.be"
                 }
             ],
             "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
@@ -3879,7 +3889,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2014-03-23 19:50:26"
+            "time": "2016-07-29 03:23:52"
         },
         {
             "name": "mtdowling/cron-expression",
@@ -4172,7 +4182,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "3f82971ba951c450a61755a08a3b6f25e18006c6",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4212,7 +4222,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-abandoned-cart",
-                "reference": "09b4426a809674bd451aaaa4d278a871c5387e30",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4249,7 +4259,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/call",
-                "reference": "b74f66cdfa4b8e7764116c80cfa275b7d3688443",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4289,7 +4299,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/dotmailer",
-                "reference": "0eb7087b5a418635010273b7fcc01800ae87d513",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4327,7 +4337,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/google-hangout",
-                "reference": "3dafbbf7024464ff1a1eaa7ca0dce1a89d935f13",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4370,7 +4380,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-contact-us",
-                "reference": "429e28539f1faf9e40a79ad6d77fa08d5c4bc7d4",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4407,7 +4417,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/mailchimp",
-                "reference": "5ea3bf7eb3536e50c882477dc7f1b19a076d03c3",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4445,7 +4455,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/task",
-                "reference": "52b565d8a08ba738f81a8b9c36df2dd09c207727",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4485,7 +4495,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/zendesk",
-                "reference": "0b80e9972f322fafb07f6ad5d8cbc90a29b44de4",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4682,7 +4692,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "9b30b9912cefe68b43162ebbd9abcc986eeeeaad",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -4724,7 +4734,7 @@
                 "lexik/maintenance-bundle": "v1.0.3",
                 "liip/imagine-bundle": "0.17.*",
                 "liuggio/excelbundle": "~2.1",
-                "monolog/monolog": "1.8.*",
+                "monolog/monolog": "^1.17",
                 "mtdowling/cron-expression": "1.0.*",
                 "nelmio/api-doc-bundle": "2.13.0",
                 "nesbot/carbon": "1.8.*",
@@ -4742,7 +4752,7 @@
                 "symfony/monolog-bundle": "2.7.*",
                 "symfony/polyfill-php70": "1.*",
                 "symfony/swiftmailer-bundle": "2.3.*",
-                "symfony/symfony": "2.8.*",
+                "symfony/symfony": "2.8.*, !=2.8.10",
                 "tinymce/tinymce": "4.1.*",
                 "twig/extensions": "1.0.1",
                 "twig/twig": "1.24.*",
@@ -4789,7 +4799,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/serialized-fields",
-                "reference": "3dd4f7f6cc09f65c73cb83a63cb35c64df7f725d",
+                "reference": null,
                 "shasum": null
             },
             "require": {
