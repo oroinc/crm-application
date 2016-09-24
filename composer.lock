@@ -3361,7 +3361,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "KnpLabs",
+                    "name": "Knplabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -3823,29 +3823,37 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.8.0",
+            "version": "1.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "392ef35fd470638e08d0160d6b1cbab63cb23174"
+                "reference": "f42fbdfd53e306bda545845e4dbfd3e72edb4952"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/392ef35fd470638e08d0160d6b1cbab63cb23174",
-                "reference": "392ef35fd470638e08d0160d6b1cbab63cb23174",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/f42fbdfd53e306bda545845e4dbfd3e72edb4952",
+                "reference": "f42fbdfd53e306bda545845e4dbfd3e72edb4952",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
                 "psr/log": "~1.0"
             },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
             "require-dev": {
-                "aws/aws-sdk-php": "~2.4, >2.4.8",
+                "aws/aws-sdk-php": "^2.4.9",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
-                "phpunit/phpunit": "~3.7.0",
-                "raven/raven": "~0.5",
-                "ruflin/elastica": "0.90.*"
+                "jakub-onderka/php-parallel-lint": "0.9",
+                "php-amqplib/php-amqplib": "~2.4",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "ruflin/elastica": ">=0.90 <3.0",
+                "sentry/sentry": "^0.13",
+                "swiftmailer/swiftmailer": "~5.3"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -3853,14 +3861,17 @@
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "raven/raven": "Allow sending log messages to a Sentry server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "sentry/sentry": "Allow sending log messages to a Sentry server"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -3876,8 +3887,7 @@
                 {
                     "name": "Jordi Boggiano",
                     "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be",
-                    "role": "Developer"
+                    "homepage": "http://seld.be"
                 }
             ],
             "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
@@ -3887,7 +3897,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2014-03-23 19:50:26"
+            "time": "2016-07-29 03:23:52"
         },
         {
             "name": "mtdowling/cron-expression",
@@ -4180,12 +4190,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/crm.git",
-                "reference": "c3d3e17738eddb2c7db283ccc8dfa1b203aa078e"
+                "reference": "7dac470f28528a52fbbde3d82cab7e441738e643"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/crm/zipball/c3d3e17738eddb2c7db283ccc8dfa1b203aa078e",
-                "reference": "c3d3e17738eddb2c7db283ccc8dfa1b203aa078e",
+                "url": "https://api.github.com/repos/orocrm/crm/zipball/7dac470f28528a52fbbde3d82cab7e441738e643",
+                "reference": "7dac470f28528a52fbbde3d82cab7e441738e643",
                 "shasum": ""
             },
             "require": {
@@ -4222,7 +4232,7 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/orocrm/crm.git",
-            "time": "2016-09-21 09:21:42"
+            "time": "2016-09-23 06:46:05"
         },
         {
             "name": "oro/crm-abandoned-cart",
@@ -4757,12 +4767,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/platform.git",
-                "reference": "b21e9ec00967cefca10abffc90c22f03009591c6"
+                "reference": "ecbe1f2eebe41e2e2f807fd99de87b11be081b25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/b21e9ec00967cefca10abffc90c22f03009591c6",
-                "reference": "b21e9ec00967cefca10abffc90c22f03009591c6",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/ecbe1f2eebe41e2e2f807fd99de87b11be081b25",
+                "reference": "ecbe1f2eebe41e2e2f807fd99de87b11be081b25",
                 "shasum": ""
             },
             "require": {
@@ -4804,7 +4814,7 @@
                 "lexik/maintenance-bundle": "v1.0.3",
                 "liip/imagine-bundle": "0.17.*",
                 "liuggio/excelbundle": "~2.1",
-                "monolog/monolog": "1.8.*",
+                "monolog/monolog": "^1.17",
                 "mtdowling/cron-expression": "1.0.*",
                 "nelmio/api-doc-bundle": "2.13.0",
                 "nesbot/carbon": "1.8.*",
@@ -4864,7 +4874,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2016-09-21 11:43:08"
+            "time": "2016-09-23 06:10:26"
         },
         {
             "name": "oro/platform-serialised-fields",
