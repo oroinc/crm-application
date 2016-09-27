@@ -21,6 +21,10 @@ parameters:
     websocket_backend_host:  "*"        # Websocket host the application server will connect to
     websocket_backend_port:  8080       # Websocket port the application server will connect to
 
+    # Used to hide backend under specified prefix, should be started with "/", for instance "/admin"
+    # You can use this default value when only backend is present
+    web_backend_prefix:         ''
+
     session_handler:   session.handler.native_file
 
     locale:            en

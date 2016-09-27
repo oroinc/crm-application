@@ -3,7 +3,7 @@
 #
 nelmio_api_doc:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
-    prefix:   /api/doc
+    prefix:   %web_backend_prefix%/api/doc
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
@@ -16,7 +16,7 @@ _imagine:
 # ORO routes
 #
 oro_default:
-    pattern:  /
+    path:  %web_backend_prefix%/
     defaults:
         _controller: OroDashboardBundle:Dashboard:view
 
