@@ -11,9 +11,8 @@ framework:
     session:
         storage_id: session.storage.mock_file
     csrf_protection: true
-    router:   { resource: "%kernel.root_dir%/config/routing.yml" }
     profiler:
-            enabled: false
+        enabled: false
 
 services:
     twig.extension.debug:
@@ -28,6 +27,7 @@ services:
             - '@oro_message_queue.test.message_collector.inner'
 
 swiftmailer:
+    logging: true
     disable_delivery: true
 
 oro_require_js:
