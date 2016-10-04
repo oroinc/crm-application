@@ -4239,6 +4239,42 @@
             "homepage": "https://github.com/orocrm/crm.git"
         },
         {
+            "name": "oro/upgrade-bundle",
+            "version": "dev-master",
+            "target-dir": "src/Oro/Bundle/UpgradeBundle",
+            "dist": {
+                "type": "path",
+                "url": "../../package/upgrade",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "oro/platform": "1.x-dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Oro\\Bundle\\UpgradeBundle": "src/"
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Oro, Inc",
+                    "homepage": "http://www.orocrm.com"
+                }
+            ],
+            "description": "Oro Upgrade Bundle",
+            "homepage": "https://github.com/orocrm/OroUpgradeBundle.git"
+        },
+        {
             "name": "oro/crm-abandoned-cart",
             "version": "dev-master",
             "target-dir": "src/Oro/Bundle/AbandonedCartBundle",
