@@ -71,6 +71,12 @@ class OroRequirements extends SymfonyRequirements
             'Install and enable the <strong>icu</strong> library at least ' . self::REQUIRED_ICU_VERSION . ' version'
         );
 
+        $this->addOroRequirement(
+            class_exists('ZipArchive'),
+            'zip extension should be installed',
+            'Install and enable the <strong>Zip</strong> extension.'
+        );
+
         $this->addRecommendation(
             class_exists('SoapClient'),
             'SOAP extension should be installed (API calls)',
