@@ -4214,6 +4214,40 @@
             "time": "2014-09-28 14:18:11"
         },
         {
+            "name": "oro/calendar-bundle",
+            "version": "dev-master",
+            "target-dir": "Oro/Bundle/CalendarBundle",
+            "dist": {
+                "type": "path",
+                "url": "../../package/calendar",
+                "reference": "735f973be6d9de30659fa8e305df057b593783a8",
+                "shasum": null
+            },
+            "require": {
+                "oro/platform": "1.x-dev",
+                "php": ">=5.5.9"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Oro\\Bundle\\CalendarBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "BAP Calendar Bundle",
+            "keywords": [
+                "BAP",
+                "Calendar"
+            ]
+        },
+        {
             "name": "oro/crm",
             "version": "dev-master",
             "dist": {
@@ -4729,7 +4763,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "de3de33eefbcb66a286686222ccc27179be48b2d",
+                "reference": "9311eee8a4f3a4441990fa6289d706f9370fd080",
                 "shasum": null
             },
             "require": {
@@ -4777,6 +4811,7 @@
                 "nelmio/api-doc-bundle": "2.13.0",
                 "nesbot/carbon": "1.8.*",
                 "ocramius/proxy-manager": "~0.4",
+                "oro/calendar-bundle": "1.x-dev",
                 "oro/doctrine-extensions": "1.0.*",
                 "oro/jsplumb": "~1.7",
                 "oro/moment-timezone": "0.3.*",
@@ -8277,32 +8312,33 @@
         },
         {
             "name": "nelmio/alice",
-            "version": "2.1.4",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/alice.git",
-                "reference": "c8cb3413ab5d1fa76ee84296dafe356b0c703014"
+                "reference": "be940d30a450043c7991f2bc6ad19682db98c8cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/alice/zipball/c8cb3413ab5d1fa76ee84296dafe356b0c703014",
-                "reference": "c8cb3413ab5d1fa76ee84296dafe356b0c703014",
+                "url": "https://api.github.com/repos/nelmio/alice/zipball/be940d30a450043c7991f2bc6ad19682db98c8cf",
+                "reference": "be940d30a450043c7991f2bc6ad19682db98c8cf",
                 "shasum": ""
             },
             "require": {
-                "fzaninotto/faker": "~1.0",
-                "php": ">=5.4",
-                "symfony/yaml": "~2.0|~3.0"
+                "fzaninotto/faker": "^1.0",
+                "php": "^5.6||^7.0",
+                "symfony/yaml": "^2.0||^3.0"
             },
             "require-dev": {
-                "doctrine/common": "~2.3",
-                "phpunit/phpunit": "~4.0",
-                "symfony/property-access": "~2.2|~3.0"
+                "doctrine/common": "^2.3",
+                "phpunit/phpunit": "^5.0||^4.0",
+                "symfony/phpunit-bridge": "^3.0",
+                "symfony/property-access": "^2.2||^3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -8322,6 +8358,10 @@
                 {
                     "name": "Tim Shelburne",
                     "email": "shelburt02@gmail.com"
+                },
+                {
+                    "name": "Théo FIDRY",
+                    "email": "theo.fidry@gmail.com"
                 }
             ],
             "description": "Expressive fixtures generator",
@@ -8331,7 +8371,7 @@
                 "orm",
                 "test"
             ],
-            "time": "2016-01-07 14:44:47"
+            "time": "2016-07-15 19:50:38"
         },
         {
             "name": "phpdocumentor/reflection-common",
