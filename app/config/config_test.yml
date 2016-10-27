@@ -32,3 +32,15 @@ swiftmailer:
 
 oro_require_js:
     js_engine: ~
+
+# configure loose default password requirements for auto-generated test users
+oro_user:
+    settings:
+        password_min_length:
+            value: 2
+        password_upper_case:
+            value: false
+        password_numbers:
+            value: false
+        password_special_chars:
+            value: false

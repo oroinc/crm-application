@@ -83,7 +83,7 @@ function iterateRequirements(array $collection)
     <title><?php echo $translator->trans('title'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bundles/oroinstaller/css/style.css" />
-    <script type="text/javascript" src="bundles/oroinstaller/lib/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="bundles/components/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="bundles/oroinstaller/js/javascript.js"></script>
     <script type="text/javascript">
         $(function() {
