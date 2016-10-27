@@ -5439,15 +5439,16 @@
         },
         {
             "name": "npm-asset/requirejs",
-            "version": "2.1.15",
+            "version": "2.3.2",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/requirejs/-/requirejs-2.1.15.tgz",
+                "url": "https://registry.npmjs.org/requirejs/-/requirejs-2.3.2.tgz",
                 "reference": null,
-                "shasum": "cbcfce55d584ae5983c00a20daa8eade37d18892"
+                "shasum": "0eaa870d4c7db3b15dd1322e6b65b0388fc4b2c6"
             },
             "bin": {
-                "r.js": "./bin/r.js"
+                "r.js": "./bin/r.js",
+                "r_js": "./bin/r.js"
             },
             "type": "npm-asset-library",
             "extra": {
@@ -5458,13 +5459,16 @@
                 "npm-asset-directories": [],
                 "npm-asset-repository": {
                     "type": "git",
-                    "url": "https://github.com/jrburke/r.js.git"
+                    "url": "git+https://github.com/jrburke/r.js.git"
                 },
                 "npm-asset-scripts": [],
                 "npm-asset-engines": {
                     "node": ">=0.4.0"
                 }
             },
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "James Burke",
@@ -5986,7 +5990,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "7f302dd00d0ae78f8a3d70ff0223186789410adc",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -6070,7 +6074,7 @@
                 "nesbot/carbon": "1.8.*",
                 "npm-asset/bootbox": "4.1.0",
                 "npm-asset/bootstrap": "3.0.3",
-                "npm-asset/requirejs": "2.1.15",
+                "npm-asset/requirejs": "2.3.*",
                 "ocramius/proxy-manager": "~0.4",
                 "oro/doctrine-extensions": "1.0.*",
                 "php": ">=5.5.9",
