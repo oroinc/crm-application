@@ -5439,15 +5439,16 @@
         },
         {
             "name": "npm-asset/requirejs",
-            "version": "2.1.15",
+            "version": "2.3.2",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/requirejs/-/requirejs-2.1.15.tgz",
+                "url": "https://registry.npmjs.org/requirejs/-/requirejs-2.3.2.tgz",
                 "reference": null,
-                "shasum": "cbcfce55d584ae5983c00a20daa8eade37d18892"
+                "shasum": "0eaa870d4c7db3b15dd1322e6b65b0388fc4b2c6"
             },
             "bin": {
-                "r.js": "./bin/r.js"
+                "r.js": "./bin/r.js",
+                "r_js": "./bin/r.js"
             },
             "type": "npm-asset-library",
             "extra": {
@@ -5458,13 +5459,16 @@
                 "npm-asset-directories": [],
                 "npm-asset-repository": {
                     "type": "git",
-                    "url": "https://github.com/jrburke/r.js.git"
+                    "url": "git+https://github.com/jrburke/r.js.git"
                 },
                 "npm-asset-scripts": [],
                 "npm-asset-engines": {
                     "node": ">=0.4.0"
                 }
             },
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "James Burke",
@@ -5951,7 +5955,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "c133ac5d9ad1f40cc87a2d2f671ea7763aa149b9",
+                "reference": "bc4f817a74f22a940f1ad6ca8a5d76e5c2dbcfdc",
                 "shasum": null
             },
             "require": {
@@ -6034,7 +6038,7 @@
                 "nesbot/carbon": "1.8.*",
                 "npm-asset/bootbox": "4.1.0",
                 "npm-asset/bootstrap": "3.0.3",
-                "npm-asset/requirejs": "2.1.15",
+                "npm-asset/requirejs": "2.3.*",
                 "ocramius/proxy-manager": "~0.4",
                 "oro/doctrine-extensions": "1.0.*",
                 "php": ">=5.5.9",
@@ -9488,60 +9492,6 @@
             "time": "2015-09-13 19:01:00"
         },
         {
-            "name": "moment/moment",
-            "version": "2.15.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/moment/moment.git",
-                "reference": "dc1e659b34365c98896e73e2e858f9efa4b3d5dc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/moment/moment/zipball/dc1e659b34365c98896e73e2e858f9efa4b3d5dc",
-                "reference": "dc1e659b34365c98896e73e2e858f9efa4b3d5dc",
-                "shasum": ""
-            },
-            "require": {
-                "robloach/component-installer": "*"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "moment.js"
-                    ],
-                    "files": [
-                        "min/*.js",
-                        "locale/*.js"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tim Wood",
-                    "email": "washwithcare@gmail.com"
-                }
-            ],
-            "description": "Parse, validate, manipulate, and display dates in JavaScript.",
-            "homepage": "http://github.com/moment/moment/",
-            "keywords": [
-                "date",
-                "ender",
-                "format",
-                "i18n",
-                "l10n",
-                "moment",
-                "parse",
-                "time",
-                "validate"
-            ],
-            "time": "2016-10-24 06:42:14"
-        },
-        {
             "name": "mybuilder/phpunit-accelerator",
             "version": "v1.1.1",
             "source": {
@@ -9643,108 +9593,6 @@
                 "test"
             ],
             "time": "2016-01-07 14:44:47"
-        },
-        {
-            "name": "oro/jsplumb",
-            "version": "1.7.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laboro/jsPlumb.git",
-                "reference": "fd2046f906646b98b9ea6928ebf6bed9faa9f80c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laboro/jsPlumb/zipball/fd2046f906646b98b9ea6928ebf6bed9faa9f80c",
-                "reference": "fd2046f906646b98b9ea6928ebf6bed9faa9f80c",
-                "shasum": ""
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "dom.jsPlumb.js"
-                    ],
-                    "files": [
-                        "dom.jsPlumb.min.js",
-                        "jquery.jsPlumb.js",
-                        "jquery.jsPlumb.min.js"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT",
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Simon Porritt",
-                    "email": "hello@jsplumbtoolkit.com"
-                }
-            ],
-            "description": "jsPlumb provides a means for a developer to visually connect elements on their web pages.",
-            "homepage": "http://jsplumb.org/",
-            "keywords": [
-                "connectivity",
-                "javascript",
-                "svg",
-                "visual"
-            ],
-            "time": "2015-07-30 09:49:33"
-        },
-        {
-            "name": "oro/moment-timezone",
-            "version": "0.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/orocrm/moment-timezone.git",
-                "reference": "2f3cd6557178ef10bdbef8d8e5c218a37eb7df1c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/moment-timezone/zipball/2f3cd6557178ef10bdbef8d8e5c218a37eb7df1c",
-                "reference": "2f3cd6557178ef10bdbef8d8e5c218a37eb7df1c",
-                "shasum": ""
-            },
-            "require": {
-                "moment/moment": ">=2.6.0",
-                "robloach/component-installer": "*"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "moment-timezone.js"
-                    ],
-                    "files": [
-                        "builds/*.js"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tim Wood",
-                    "email": "washwithcare@gmail.com",
-                    "homepage": "http://timwoodcreates.com/"
-                }
-            ],
-            "description": "Parse and display dates in any timezone",
-            "homepage": "http://momentjs.com/timezone/",
-            "keywords": [
-                "date",
-                "iana",
-                "moment",
-                "olson",
-                "time",
-                "timezone",
-                "tz",
-                "zone"
-            ],
-            "time": "2015-05-26 14:29:56"
         },
         {
             "name": "phpdocumentor/reflection-common",
