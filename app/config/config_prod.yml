@@ -18,3 +18,11 @@ monolog:
             type:  stream
             path:  "%kernel.logs_dir%/%kernel.environment%.log"
             level: error
+        detailed_logs:
+            type:         service
+            id:           oro_logger.monolog.detailed_logs.handler
+            handler:      detailed_logs_nested
+        detailed_logs_nested:
+            type:         stream
+            path:         "%kernel.logs_dir%/%kernel.environment%_detailed.log"
+            level:        debug
