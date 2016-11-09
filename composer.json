@@ -41,6 +41,7 @@
     },
     "scripts": {
         "post-install-cmd": [
+            "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::checkComposerPlugin",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
@@ -49,6 +50,7 @@
             "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
         ],
         "post-update-cmd": [
+            "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::checkComposerPlugin",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
