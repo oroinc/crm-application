@@ -10,27 +10,27 @@ imports:
 monolog:
     handlers:
         detailed_logs:
-            type:         service
-            id:           oro_logger.monolog.detailed_logs.handler
-            handler:      nested
+            type:           service
+            id:             oro_logger.monolog.detailed_logs.handler
+            handler:        nested
         nested:
-            type:         stream
-            path:         "%kernel.logs_dir%/%kernel.environment%.log"
-            level:        debug
+            type:           stream
+            path:           "%kernel.logs_dir%/%kernel.environment%.log"
+            level:          debug
 
         fingers_crossed:
-            type: fingers_crossed
-            action_level: "%logger_notification_level%"
-            handler: deduplicated
-            excluded_404s: [^/]
+            type:           fingers_crossed
+            action_level:   "%logger_notification_level%"
+            handler:        deduplicated
+            excluded_404s:  [^/]
         deduplicated:
-            type: deduplication
-            handler: swift
+            type:           deduplication
+            handler:        swift
         swift:
-            type: swift_mailer
+            type:           swift_mailer
             email_prototype:
-                id: oro_logger.message_factory
-                method: createMessage
-            mailer: swiftmailer.mailer.default
-            level: "%logger_notification_level%"
-            formatter: monolog.formatter.html
+                id:         oro_logger.message_factory
+                method:     createMessage
+            mailer:         swiftmailer.mailer.default
+            level:          "%logger_notification_level%"
+            formatter:      monolog.formatter.html
