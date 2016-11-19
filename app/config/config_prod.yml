@@ -20,7 +20,7 @@ monolog:
 
         fingers_crossed:
             type:           fingers_crossed
-            action_level:   "%logger_notification_level%"
+            action_level:   "%oro_logger.email_notification_level%"
             handler:        deduplicated
             excluded_404s:  [^/]
         deduplicated:
@@ -32,5 +32,5 @@ monolog:
                 id:         oro_logger.message_factory
                 method:     createMessage
             mailer:         swiftmailer.mailer.default
-            level:          "%logger_notification_level%"
+            level:          "%oro_logger.email_notification_level%"
             formatter:      monolog.formatter.html
