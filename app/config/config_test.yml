@@ -18,7 +18,7 @@ monolog:
     handlers:
         fingers_crossed:
             type: fingers_crossed
-            action_level: "%logger_notification_level%"
+            action_level: error
             handler: nested
         nested:
             type: stream
