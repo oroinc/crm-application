@@ -1,5 +1,5 @@
 imports:
-    - { resource: config_prod.yml }
+    - { resource: config.yml }
     - { resource: parameters_test.yml }
     - { resource: security_test.yml }
 
@@ -13,6 +13,17 @@ framework:
     csrf_protection: true
     profiler:
         enabled: false
+
+monolog:
+    handlers:
+        fingers_crossed:
+            type: fingers_crossed
+            action_level: error
+            handler: nested
+        nested:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
 
 services:
     twig.extension.debug:
@@ -38,9 +49,14 @@ oro_user:
     settings:
         password_min_length:
             value: 2
+        password_lower_case:
+            value: false
         password_upper_case:
             value: false
         password_numbers:
             value: false
         password_special_chars:
             value: false
+
+twig:
+    strict_variables: true

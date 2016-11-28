@@ -4,7 +4,7 @@ imports:
 default: &default
     extensions:
         Behat\MinkExtension:
-            base_url: 'http://dev-crm-enterprise.local/'
+            base_url: 'http://dev-crm.local/'
         Behat\Symfony2Extension: ~
         Oro\Bundle\TestFrameworkBundle\Behat\ServiceContainer\OroTestFrameworkExtension:
             application_suites:
@@ -22,3 +22,8 @@ default: &default
 
 selenium2:
     <<: *default
+#    Uncomment this in your behat.yml for run tests with Chrome browser
+#    extensions:
+#        Behat\MinkExtension:
+#            browser_name: chrome
+#            base_url: 'http://dev-crm.local/'
