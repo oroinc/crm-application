@@ -2,11 +2,16 @@ imports:
   - ../../package/platform/src/Oro/Bundle/TestFrameworkBundle/Resources/config/behat.yml.dist
 
 default: &default
+    gherkin:
+        filters:
+            tags: ~@not-automated&&~@skip
     extensions:
         Behat\MinkExtension:
             base_url: 'http://dev-crm.local/'
         Behat\Symfony2Extension: ~
         Oro\Bundle\TestFrameworkBundle\Behat\ServiceContainer\OroTestFrameworkExtension:
+            shared_contexts:
+                - Oro\Bundle\SalesBundle\Tests\Behat\Context\SalesContext
             application_suites:
                 - OroEmailBundle
                 - OroUserBundle
