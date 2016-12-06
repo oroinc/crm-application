@@ -1201,16 +1201,16 @@
         },
         {
             "name": "bower-asset/moment",
-            "version": "2.17.0",
+            "version": "2.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moment/moment.git",
-                "reference": "4710a7935cb347d8b2cf50f5befccfea8180619d"
+                "reference": "b8a297c1f99b3918f44dd9e3d7bd59379a876ba6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moment/moment/zipball/4710a7935cb347d8b2cf50f5befccfea8180619d",
-                "reference": "4710a7935cb347d8b2cf50f5befccfea8180619d",
+                "url": "https://api.github.com/repos/moment/moment/zipball/b8a297c1f99b3918f44dd9e3d7bd59379a876ba6",
+                "reference": "b8a297c1f99b3918f44dd9e3d7bd59379a876ba6",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -3954,23 +3954,24 @@
         },
         {
             "name": "jms/metadata",
-            "version": "1.5.1",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/metadata.git",
-                "reference": "22b72455559a25777cfd28c4ffda81ff7639f353"
+                "reference": "6a06970a10e0a532fb52d3959547123b84a3b3ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/metadata/zipball/22b72455559a25777cfd28c4ffda81ff7639f353",
-                "reference": "22b72455559a25777cfd28c4ffda81ff7639f353",
+                "url": "https://api.github.com/repos/schmittjoh/metadata/zipball/6a06970a10e0a532fb52d3959547123b84a3b3ab",
+                "reference": "6a06970a10e0a532fb52d3959547123b84a3b3ab",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "doctrine/cache": "~1.0"
+                "doctrine/cache": "~1.0",
+                "symfony/cache": "~3.1"
             },
             "type": "library",
             "extra": {
@@ -3985,14 +3986,12 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "Apache"
+                "Apache-2.0"
             ],
             "authors": [
                 {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
-                    "role": "Developer of wrapped JMSSerializerBundle"
+                    "name": "Johannes M. Schmitt",
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "Class/method/property metadata management in PHP",
@@ -4002,7 +4001,7 @@
                 "xml",
                 "yaml"
             ],
-            "time": "2014-07-12 07:13:19"
+            "time": "2016-12-05 10:18:33"
         },
         {
             "name": "jms/parser-lib",
@@ -5526,12 +5525,13 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-abandoned-cart",
-                "reference": "6e9945ce006638ed9f89ca1f79590b61ab1c263c",
+                "reference": "d09dbc4ab19d9bce22ca1f8509fb940d0b9dd9d7",
                 "shasum": null
             },
             "require": {
                 "oro/crm": "1.x-dev",
                 "oro/crm-mail-chimp": "1.x-dev",
+                "oro/marketing": "1.x-dev",
                 "php": ">=5.6"
             },
             "type": "library",
@@ -5604,11 +5604,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/dotmailer",
-                "reference": "11193cdf1fa37b2e0b0b03f0f2767073016ae2e5",
+                "reference": "16aa08b6010d0b57abcd67e318d0bdf748b7719e",
                 "shasum": null
             },
             "require": {
                 "oro/crm": "1.x-dev",
+                "oro/marketing": "1.x-dev",
                 "php": ">=5.6",
                 "romanpitak/dotmailer-api-v2-client": "1.0.11"
             },
@@ -5723,11 +5724,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/mailchimp",
-                "reference": "795f5fe03a02a9f1bd72c205ce39237590afc3e7",
+                "reference": "b9eb2047854768568e95fffcca5b59713970e3ec",
                 "shasum": null
             },
             "require": {
                 "oro/crm": "1.x-dev",
+                "oro/marketing": "1.x-dev",
                 "php": ">=5.6",
                 "zfr/zfr-mailchimp": "2.0.*"
             },
