@@ -719,19 +719,40 @@
         },
         {
             "name": "bower-asset/font-awesome",
-            "version": "v3.2.1",
+            "version": "v4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FortAwesome/Font-Awesome.git",
-                "reference": "b1a8ad47303509e70e56079396fad2afadfd96d5"
+                "reference": "a8386aae19e200ddb0f6845b5feeee5eb7013687"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/b1a8ad47303509e70e56079396fad2afadfd96d5",
-                "reference": "b1a8ad47303509e70e56079396fad2afadfd96d5",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/a8386aae19e200ddb0f6845b5feeee5eb7013687",
+                "reference": "a8386aae19e200ddb0f6845b5feeee5eb7013687",
                 "shasum": ""
             },
-            "type": "bower-asset-library"
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "less/font-awesome.less",
+                    "scss/font-awesome.scss"
+                ],
+                "bower-asset-ignore": [
+                    "*/.*",
+                    "*.json",
+                    "src",
+                    "*.yml",
+                    "Gemfile",
+                    "Gemfile.lock",
+                    "*.md"
+                ]
+            },
+            "license": [
+                "OFL-1.1",
+                "MIT",
+                "CC-BY-3.0"
+            ],
+            "description": "Font Awesome"
         },
         {
             "name": "bower-asset/fullcalendar",
@@ -1492,43 +1513,6 @@
             "time": "2013-09-20 00:55:12"
         },
         {
-            "name": "components/font-awesome",
-            "version": "4.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/components/font-awesome.git",
-                "reference": "73acf4d65eadd8d127bafc7bd510240ea3979e83"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/components/font-awesome/zipball/73acf4d65eadd8d127bafc7bd510240ea3979e83",
-                "reference": "73acf4d65eadd8d127bafc7bd510240ea3979e83",
-                "shasum": ""
-            },
-            "type": "component",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.3.x-dev"
-                },
-                "component": {
-                    "styles": [
-                        "css/font-awesome.css"
-                    ],
-                    "files": [
-                        "css/font-awesome.min.css",
-                        "fonts/*"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT",
-                "OFL-1.1"
-            ],
-            "description": "The iconic font designed for use with Twitter Bootstrap.",
-            "time": "2015-01-26 11:26:16"
-        },
-        {
             "name": "components/jquery",
             "version": "3.1.1",
             "source": {
@@ -1713,16 +1697,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "1.2.3",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "e7f19286a7e7f940950c9069a0f549d483c30ba7"
+                "reference": "7895e4a7e0e05b06e0ebfae96fc154c6a2ba75f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/e7f19286a7e7f940950c9069a0f549d483c30ba7",
-                "reference": "e7f19286a7e7f940950c9069a0f549d483c30ba7",
+                "url": "https://api.github.com/repos/composer/composer/zipball/7895e4a7e0e05b06e0ebfae96fc154c6a2ba75f0",
+                "reference": "7895e4a7e0e05b06e0ebfae96fc154c6a2ba75f0",
                 "shasum": ""
             },
             "require": {
@@ -1786,7 +1770,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2016-12-01 13:33:53"
+            "time": "2016-12-06 21:00:51"
         },
         {
             "name": "composer/semver",
@@ -5935,7 +5919,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "f6919cc9017ca76610d02a76f98623facd50a3cf",
+                "reference": "54cc1d6edbf6a3607209ed57725156357684eec5",
                 "shasum": null
             },
             "require": {
@@ -5956,7 +5940,7 @@
                 "bower-asset/crypto-js": "3.1.7",
                 "bower-asset/datepair": "0.4.4",
                 "bower-asset/flotr2": "dev-master",
-                "bower-asset/font-awesome": "3.2.1",
+                "bower-asset/font-awesome": "4.7.*",
                 "bower-asset/fullcalendar": "2.2.3",
                 "bower-asset/jquery-ajax-queue": "0.0.1",
                 "bower-asset/jquery-cookie": "1.4.1",
@@ -5978,7 +5962,6 @@
                 "bower-asset/underscore": "1.8.3",
                 "bower-asset/uniform": "2.1.1",
                 "bower-asset/when": "2.4.0",
-                "components/font-awesome": "4.3.*",
                 "components/jquery": "3.1.*",
                 "components/jqueryui": "1.12.*",
                 "composer/composer": "1.2.*",
