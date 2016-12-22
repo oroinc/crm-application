@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- http://phpunit.de/manual/4.8/en/appendixes.configuration.html -->
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.8/phpunit.xsd"
-         convertErrorsToExceptions   = "true"
-         convertNoticesToExceptions  = "true"
-         convertWarningsToExceptions = "true"
-         backupGlobals="false"
-         colors="true"
-         bootstrap="app/autoload.php"
->
+<!-- https://phpunit.de/manual/current/en/appendixes.configuration.html -->
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.7/phpunit.xsd"
+        backupGlobals="false"
+        backupStaticAttributes="false"
+        bootstrap="app/autoload.php"
+        cacheTokens="true"
+        stopOnError="false"
+        stopOnFailure="false"
+        stopOnWarning="true"
+        stopOnIncomplete="false"
+        stopOnRisky="false"
+        stopOnSkipped="false"
+        failOnRisky="false"
+        failOnWarning="true"
+        beStrictAboutChangesToGlobalState="false"
+        beStrictAboutOutputDuringTests="false"
+        beStrictAboutResourceUsageDuringSmallTests="false"
+        beStrictAboutTestsThatDoNotTestAnything="false"
+        beStrictAboutTodoAnnotatedTests="false"
+        beStrictAboutCoversAnnotation="false"
+        checkForUnintentionallyCoveredCode="false"
+        enforceTimeLimit="false"
+        verbose="false">
+
     <groups>
         <exclude>
             <group>soap</group>
@@ -19,12 +35,11 @@
     </groups>
     <testsuites>
         <testsuite name="unit">
-            <directory suffix="Test.php">vendor/oro/crm*/src/*/Bundle/*Bundle/Tests/Unit</directory>
-            <directory suffix="Test.php">vendor/oro/crm*/src/*/Component/*/Tests/Unit</directory>
-            <directory suffix="Test.php">vendor/oro/platform*/src/*/Bundle/*Bundle/Tests/Unit</directory>
-            <directory suffix="Test.php">vendor/oro/platform*/src/*/Component/*/Tests/Unit</directory>
-            <directory suffix="Test.php">vendor/oro/calendar-bundle/Oro/Bundle/*Bundle/Tests/Unit</directory>
-            <directory suffix="Test.php">vendor/oro/crm*/src/Oro/Bridge/MarketingCRM/Tests/Unit</directory>
+            <directory>vendor/oro/*/Tests/Unit</directory>
+            <directory>vendor/oro/*/*/Tests/Unit</directory>
+            <directory>vendor/oro/*/*/*/Tests/Unit</directory>
+            <directory>vendor/oro/*/*/*/*/Tests/Unit</directory>
+            <directory>vendor/oro/*/*/*/*/*/Tests/Unit</directory>
         </testsuite>
         <testsuite name="functional">
             <directory suffix="Test.php">vendor/oro/crm*/src/*/Bundle/*Bundle/Tests/Functional</directory>
@@ -178,7 +193,6 @@
 
     <listeners>
         <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener"/>
-        <listener class="MyBuilder\PhpunitAccelerator\TestListener"/>
         <listener class="TestListener" file="vendor/oro/platform/src/Oro/Bundle/TestFrameworkBundle/Test/TestListener.php">
             <arguments>
                 <string>app/logs</string>
