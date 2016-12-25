@@ -1194,16 +1194,16 @@
         },
         {
             "name": "bower-asset/moment-timezone",
-            "version": "0.5.10",
+            "version": "0.5.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moment/moment-timezone.git",
-                "reference": "3e9abbf0e817134c6d03b4cb541f96471238d96c"
+                "reference": "2124976c909dd440bea4499c5fd9c8ca4da95fd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moment/moment-timezone/zipball/3e9abbf0e817134c6d03b4cb541f96471238d96c",
-                "reference": "3e9abbf0e817134c6d03b4cb541f96471238d96c",
+                "url": "https://api.github.com/repos/moment/moment-timezone/zipball/2124976c909dd440bea4499c5fd9c8ca4da95fd8",
+                "reference": "2124976c909dd440bea4499c5fd9c8ca4da95fd8",
                 "shasum": ""
             },
             "require": {
@@ -5221,13 +5221,14 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "3bf668bb9797e1b4c07db3c8d232b2c5053de64f",
+                "reference": "0a672f818fa5d1fa2ac5cbb5ab6dac3c0226aaf2",
                 "shasum": null
             },
             "require": {
                 "oro/calendar-bundle": "1.x-dev",
                 "oro/crm-call-bundle": "1.x-dev",
                 "oro/crm-task-bundle": "1.x-dev",
+                "oro/marketing": "1.x-dev",
                 "oro/platform": "1.x-dev",
                 "php": ">=5.6"
             },
@@ -5261,12 +5262,13 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-abandoned-cart",
-                "reference": "4a93b39cd95cc5994ff9649aa0cc7b3ca91b0f63",
+                "reference": "bd02fe31a6431dc3094e5c4769ce38943110441c",
                 "shasum": null
             },
             "require": {
                 "oro/crm": "1.x-dev",
                 "oro/crm-mail-chimp": "1.x-dev",
+                "oro/marketing": "1.x-dev",
                 "php": ">=5.6"
             },
             "type": "library",
@@ -5339,11 +5341,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/dotmailer",
-                "reference": "5f05b61cf7d11f483434024ffe099ee3824152cd",
+                "reference": "7a66be19cc2d34078716220337d76bb588d7b509",
                 "shasum": null
             },
             "require": {
                 "oro/crm": "1.x-dev",
+                "oro/marketing": "1.x-dev",
                 "php": ">=5.6",
                 "romanpitak/dotmailer-api-v2-client": "1.0.11"
             },
@@ -5458,11 +5461,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/mailchimp",
-                "reference": "795f5fe03a02a9f1bd72c205ce39237590afc3e7",
+                "reference": "b9eb2047854768568e95fffcca5b59713970e3ec",
                 "shasum": null
             },
             "require": {
                 "oro/crm": "1.x-dev",
+                "oro/marketing": "1.x-dev",
                 "php": ">=5.6",
                 "zfr/zfr-mailchimp": "2.0.*"
             },
@@ -5625,6 +5629,42 @@
                 "type"
             ],
             "time": "2016-11-11 15:11:11"
+        },
+        {
+            "name": "oro/marketing",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../package/marketing",
+                "reference": "82f6f070b010a252bb6b247a07faf20b94bbf32e",
+                "shasum": null
+            },
+            "require": {
+                "oro/platform": "1.x-dev",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Oro": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oro, Inc",
+                    "homepage": "http://www.orocrm.com"
+                }
+            ],
+            "description": "BAP marketing-related bundles",
+            "homepage": "https://github.com/orocrm/marketing.git"
         },
         {
             "name": "oro/platform",
@@ -7505,16 +7545,16 @@
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.4.0",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/swiftmailer-bundle.git",
-                "reference": "d7b7bd6bb6e9b32ebc5f9778f94d4b4e4af5d069"
+                "reference": "ad751095576ce0c12a284e30e3fff80c91f27225"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/d7b7bd6bb6e9b32ebc5f9778f94d4b4e4af5d069",
-                "reference": "d7b7bd6bb6e9b32ebc5f9778f94d4b4e4af5d069",
+                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/ad751095576ce0c12a284e30e3fff80c91f27225",
+                "reference": "ad751095576ce0c12a284e30e3fff80c91f27225",
                 "shasum": ""
             },
             "require": {
@@ -7560,7 +7600,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2016-10-27 17:59:30"
+            "time": "2016-12-20 04:44:33"
         },
         {
             "name": "symfony/symfony",
@@ -8107,26 +8147,26 @@
         },
         {
             "name": "zendframework/zend-eventmanager",
-            "version": "3.0.1",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-eventmanager.git",
-                "reference": "5c80bdee0e952be112dcec0968bad770082c3a6e"
+                "reference": "c3bce7b7d47c54040b9ae51bc55491c72513b75d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/5c80bdee0e952be112dcec0968bad770082c3a6e",
-                "reference": "5c80bdee0e952be112dcec0968bad770082c3a6e",
+                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/c3bce7b7d47c54040b9ae51bc55491c72513b75d",
+                "reference": "c3bce7b7d47c54040b9ae51bc55491c72513b75d",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5 || ^7.0"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
                 "athletic/athletic": "^0.1",
                 "container-interop/container-interop": "^1.1.0",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "^2.0",
+                "phpunit/phpunit": "^5.6",
+                "zendframework/zend-coding-standard": "~1.0.0",
                 "zendframework/zend-stdlib": "^2.7.3 || ^3.0"
             },
             "suggest": {
@@ -8136,8 +8176,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev",
-                    "dev-develop": "3.1-dev"
+                    "dev-master": "3.1-dev",
+                    "dev-develop": "3.2-dev"
                 }
             },
             "autoload": {
@@ -8157,7 +8197,7 @@
                 "events",
                 "zf2"
             ],
-            "time": "2016-02-18 20:53:00"
+            "time": "2016-12-19 21:47:12"
         },
         {
             "name": "zendframework/zend-loader",
@@ -9581,16 +9621,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "4.0.3",
+            "version": "4.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "903fd6318d0a90b4770a009ff73e4a4e9c437929"
+                "reference": "c14196e64a78570034afd0b7a9f3757ba71c2a0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/903fd6318d0a90b4770a009ff73e4a4e9c437929",
-                "reference": "903fd6318d0a90b4770a009ff73e4a4e9c437929",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c14196e64a78570034afd0b7a9f3757ba71c2a0a",
+                "reference": "c14196e64a78570034afd0b7a9f3757ba71c2a0a",
                 "shasum": ""
             },
             "require": {
@@ -9640,7 +9680,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-11-28 16:00:31"
+            "time": "2016-12-20 15:22:42"
         },
         {
             "name": "phpunit/php-file-iterator",
