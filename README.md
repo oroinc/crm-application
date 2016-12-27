@@ -33,7 +33,7 @@ curl -s https://getcomposer.org/installer | php
 OroCRM uses [fxpio/composer-asset-plugin][9] to manage dependency on third-party asset libraries. The plugin has to be installed globally (per user):
  
 ```bash
-    composer global require "fxp/composer-asset-plugin:~1.2"
+composer global require "fxp/composer-asset-plugin:~1.2"
 ```
 
 - Clone https://github.com/orocrm/crm-application.git OroCRM project with:
