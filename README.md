@@ -1,55 +1,40 @@
 # OroCRM Application
 
-Welcome to OroCRM the Open Source Customer Relationship Management (CRM) application.
+This is an example of fully functional [OroCRM][1] application which can be used as is or customized to meet
+your business needs.
 
-## Requirements
+## System Requirements
 
-OroCRM is a Symfony 2 based application with the following requirements:
+Before starting installation process, please prepare infrastructure environment based on [system requirements][2]. 
 
-* PHP 5.6 or above with command line interface
-* PHP Extensions:
-    * GD
-    * Mcrypt
-    * JSON
-    * ctype
-    * Tokenizer
-    * SimpleXML
-    * PCRE
-    * ICU
-* MySQL 5.1 or above
-* PostgreSQL 9.1 or above
+## Installation
 
-## Installation instructions
-
-OroCRM uses [Composer][1] to manage package dependencies, this is the a recommended way to install OroCRM.
-
-- If you do not have the Composer yet, download it and follow the instructions on http://getcomposer.org/
-or simply run the following command:
+- Clone OroCRM application repository:
 
 ```bash
-curl -s https://getcomposer.org/installer | php
+    git clone -b x.y.z https://github.com/orocrm/crm-application.git
 ```
 
-OroCRM uses [fxpio/composer-asset-plugin][9] to manage dependency on third-party asset libraries. The plugin has to be installed globally (per user):
- 
-```bash
-composer global require "fxp/composer-asset-plugin:~1.2"
-```
-
-- Clone https://github.com/orocrm/crm-application.git OroCRM project with:
+where x.y.z is latest [release tag](https://github.com/orocrm/crm-application/releases) or use latest master:
 
 ```bash
-git clone https://github.com/orocrm/crm-application.git
+    git clone https://github.com/orocrm/crm-application.git
 ```
 
 
-- Make sure that you have [NodeJS][3] installed
-
-- Install OroCRM dependencies with the Composer. If the installation process is too slow you can use the "--prefer-dist" option.
-  Go to crm-application folder and run Composer installation:
+- Install [Composer][3] globally following official Composer [installation documentation][4]
+and install [fxpio/composer-asset-plugin][5] plugin for it:
 
 ```bash
-php composer.phar install --prefer-dist --no-dev
+    composer global require "fxp/composer-asset-plugin:~1.2"
+```
+
+- Install [Node.js][6].
+
+- Install application dependencies running following command from application folder:
+
+```bash
+    composer install --prefer-dist --no-dev
 ```
 
 - Create the database with the name specified in the previous step (default name is "oro_crm").
@@ -59,97 +44,56 @@ php composer.phar install --prefer-dist --no-dev
 ```bash  
 php app/console oro:install --env prod
 ```
-**Note:** If the installation process times out, add the `--timeout=0` argument to the command.
 
-- Enable WebSockets messaging
+- Configure Web Socket server process and Message Queue consumer process in [Supervisor][7]:
 
-```bash
-php app/console clank:server --env prod
+```ini
+
+[program:orocrm_web_socket]
+command=/path/to/app/console clank:server --env=prod
+numprocs=1
+autostart=true
+startsecs=0
+user=www-data
+redirect_stderr=true
+
+[program:orocrm_message_consumer]
+command=/path/to/app/console oro:message-queue:consume --env=prod
+process_name=%(program_name)s_%(process_num)
+numprocs=5
+autostart=true
+autorestart=true
+startsecs=0
+user=www-data
+redirect_stderr=true
 ```
 
-- Configure crontab or scheduled tasks execution to run command below every minute:
+or run them manually:
 
 ```bash
-php app/console oro:cron --env prod
+php /path/to/app/console clank:server --env prod
+php /path/to/app/console oro:message-queue:consume --env prod
+```
+
+**Note:** port used by Web Socket must be open in firewall for outgoing/incoming connections.
+
+- Configure crontab:
+
+```bash
+*/1 * * * * /path/to/app/console oro:cron --env prod
+```
+
+or scheduled tasks execution to run the command below every minute:
+
+```bash
+php /path/to/app/console oro:cron --env prod
 ```
  
-**Note:** ``app/console`` is a path from project root folder. Please make sure you are using full path for crontab configuration if you are running console command from a different location.
+**Note:** ``/path/to/app/console`` is a full path to `app/console` script in your application.
 
-## Installation notes
-
-Installed PHP Accelerators must be compatible with Symfony and Doctrine (support DOCBLOCKs).
-
-Note that the port used in Websocket must be open in firewall for outgoing/incoming connections.
-
-Using MySQL 5.6 on HDD is potentially risky as it can result in performance issues.
-
-Recommended configuration for this case:
-
-    innodb_file_per_table = 0
-
-Ensure that timeout has the default value
-
-    wait_timeout = 28800
-
-See [Optimizing InnoDB Disk I/O][2] for more information.
-
-The default MySQL character set utf8 uses a maximum of three bytes per character and contains only BMP characters. The [utf8mb4][5] character set uses a maximum of four bytes per character and supports supplemental characters (e.g. emojis). It is [recommended][6] to use utf8mb4 character set in your app/config.yml:
-
-```
-...
-doctrine:
-    dbal:
-        connections:
-            default:
-                driver:       "%database_driver%"
-                host:         "%database_host%"
-                port:         "%database_port%"
-                dbname:       "%database_name%"
-                user:         "%database_user%"
-                password:     "%database_password%"
-                charset:      utf8mb4
-                default_table_options:
-                    charset: utf8mb4
-                    collate: utf8mb4_unicode_ci
-                    row_format: dynamic
-...
-```
-
-Using utf8mb4 might have side effects. MySQL indexes have a default limit of 767 bytes, so any indexed fields with varchar(255) will fail when inserted, because utf8mb4 can have 4 bytes per character (255 * 4 = 1020 bytes), thus the longest data can be 191 (191 * 4 = 764 < 767). To be able to use any 4 byte charset all indexed varchars should be at most varchar(191). To overcome the index size issue, the server can be configured to have large index size by enabling [sysvar_innodb_large_prefix][7]. However, innodb_large_prefix requires some additional settings to work:
-
-- innodb_default_row_format=DYNAMIC (you may also enable it per connection as in the config above)
-- innodb_file_format=Barracuda
-- innodb_file_per_table=1 (see above performance issues with this setting)
-
-More details about this issue can be read [here][8]
-
-## PostgreSQL installation notes
-
-You need to load `uuid-ossp` extension for proper doctrine's `guid` type handling.
-Log into the database and run sql query:
-
-```
-CREATE EXTENSION "uuid-ossp";
-```
-
-## Loading Demo Data using command line
-
-To load sample data you need to run console command
-
-```bash
-php app/console oro:migration:data:load --fixtures-type=demo --env=prod
-```
-
-## Web Server Configuration
-
-OroCRM application is based on the Symfony standard application, so the web server configuration recommendations are the [same][4].
-
-[1]:  http://getcomposer.org/
-[2]:  http://dev.mysql.com/doc/refman/5.6/en/optimizing-innodb-diskio.html
-[3]:  https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
-[4]:  http://symfony.com/doc/2.8/setup/web_server_configuration.html
-[5]:  https://dev.mysql.com/doc/refman/5.6/en/charset-unicode-utf8mb4.html
-[6]:  http://symfony.com/doc/current/doctrine.html#configuring-the-database
-[7]:  http://dev.mysql.com/doc/refman/5.6/en/innodb-parameters.html#sysvar_innodb_large_prefix
-[8]:  https://mathiasbynens.be/notes/mysql-utf8mb4#utf8-to-utf8mb4
-[9]:  https://github.com/fxpio/composer-asset-plugin/blob/master/Resources/doc/index.md
+[1]:    https://github.com/orocrm/crm
+[2]:    https://www.orocrm.com/documentation/index/current/system-requirements
+[3]:    https://getcomposer.org/
+[4]:    https://getcomposer.org/download/
+[5]:    https://github.com/fxpio/composer-asset-plugin/blob/master/Resources/doc/index.md
+[6]:    https://nodejs.org/en/download/package-manager/
