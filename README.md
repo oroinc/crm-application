@@ -1,11 +1,11 @@
 # OroCRM Application
 
-This is an example of fully functional [OroCRM][1] application which can be used as is or customized to meet
+This is an example of a fully functional [OroCRM][1] application which can be used as is or customized to meet
 your business needs.
 
 ## System Requirements
 
-Before starting installation process, please prepare infrastructure environment based on [system requirements][2]. 
+Before starting the installation process, please prepare infrastructure environment based on the [system requirements][2]. 
 
 ## Installation
 
@@ -15,14 +15,14 @@ Before starting installation process, please prepare infrastructure environment 
     git clone -b x.y.z https://github.com/orocrm/crm-application.git
 ```
 
-where x.y.z is latest [release tag](https://github.com/orocrm/crm-application/releases) or use latest master:
+where x.y.z is the latest [release tag](https://github.com/orocrm/crm-application/releases) or use the latest master:
 
 ```bash
     git clone https://github.com/orocrm/crm-application.git
 ```
 
 
-- Install [Composer][3] globally following official Composer [installation documentation][4]
+- Install [Composer][3] globally following the  official Composer [installation documentation][4]
 and install [fxpio/composer-asset-plugin][5] plugin for it:
 
 ```bash
@@ -31,7 +31,7 @@ and install [fxpio/composer-asset-plugin][5] plugin for it:
 
 - Install [Node.js][6].
 
-- Install application dependencies running following command from application folder:
+- Install application dependencies running the following command from the application folder:
 
 ```bash
     composer install --prefer-dist --no-dev
@@ -45,7 +45,7 @@ and install [fxpio/composer-asset-plugin][5] plugin for it:
 php app/console oro:install --env prod
 ```
 
-- Configure Web Socket server process and Message Queue consumer process in [Supervisor][7]:
+- Configure the Web Socket server process and the Message Queue consumer process in [Supervisor][7]:
 
 ```ini
 
@@ -75,7 +75,7 @@ php /path/to/app/console clank:server --env prod
 php /path/to/app/console oro:message-queue:consume --env prod
 ```
 
-**Note:** port used by Web Socket must be open in firewall for outgoing/incoming connections.
+**Note:** the port used by Web Socket must be open in the firewall for outgoing/incoming connections.
 
 - Configure crontab:
 
