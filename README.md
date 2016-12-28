@@ -97,3 +97,4 @@ php /path/to/app/console oro:cron --env prod
 [4]:    https://getcomposer.org/download/
 [5]:    https://github.com/fxpio/composer-asset-plugin/blob/master/Resources/doc/index.md
 [6]:    https://nodejs.org/en/download/package-manager/
+[7]:    http://supervisord.org/
