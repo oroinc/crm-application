@@ -2,6 +2,7 @@ CHANGELOG for 2.0
 =================
 This changelog references the relevant changes (new features, changes and bugs) done in 2.0 versions.
   * Changed minimum required php version to 5.6
+  * Added support of PHP 7.1
 
 CHANGELOG for 1.9.0
 ===================
