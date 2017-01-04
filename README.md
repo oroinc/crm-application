@@ -42,7 +42,7 @@ and install [fxpio/composer-asset-plugin][5] plugin for it:
 - Install the application and the admin user with the Installation Wizard by opening install.php in the browser or from CLI:
 
 ```bash  
-php app/console oro:install --env prod
+php app/console oro:install --env=prod
 ```
 
 - Configure the Web Socket server process and the Message Queue consumer process in [Supervisor][7]:
@@ -71,8 +71,8 @@ redirect_stderr=true
 or run them manually:
 
 ```bash
-php /path/to/app/console clank:server --env prod
-php /path/to/app/console oro:message-queue:consume --env prod
+php /path/to/app/console clank:server --env=prod
+php /path/to/app/console oro:message-queue:consume --env=prod
 ```
 
 **Note:** the port used by Web Socket must be open in the firewall for outgoing/incoming connections.
@@ -80,13 +80,13 @@ php /path/to/app/console oro:message-queue:consume --env prod
 - Configure crontab:
 
 ```bash
-*/1 * * * * /path/to/app/console oro:cron --env prod
+*/1 * * * * /path/to/app/console oro:cron --env=prod
 ```
 
 or scheduled tasks execution to run the command below every minute:
 
 ```bash
-php /path/to/app/console oro:cron --env prod
+php /path/to/app/console oro:cron --env=prod
 ```
  
 **Note:** ``/path/to/app/console`` is a full path to `app/console` script in your application.
