@@ -68,7 +68,7 @@ php composer.phar install --prefer-dist --no-dev
 - Install the application and the admin user with the Installation Wizard by opening install.php in the browser or from CLI:
 
 ```bash  
-php app/console oro:install --env prod
+php app/console --timeout="0" oro:install --env prod
 ```
 **Note:** If the installation process times out, add the `--timeout=0` argument to the command.
 
