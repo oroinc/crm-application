@@ -91,6 +91,10 @@ php /path/to/app/console oro:cron --env=prod
  
 **Note:** ``/path/to/app/console`` is a full path to `app/console` script in your application.
 
+##Using Redis for application caching
+
+To use Redis for application caching, follow the corresponding [configuration instructions][9]
+
 [1]:    https://github.com/orocrm/crm
 [2]:    https://www.orocrm.com/documentation/index/current/system-requirements
 [3]:    https://getcomposer.org/
@@ -98,3 +102,4 @@ php /path/to/app/console oro:cron --env=prod
 [5]:    https://github.com/fxpio/composer-asset-plugin/blob/master/Resources/doc/index.md
 [6]:    https://nodejs.org/en/download/package-manager/
 [7]:    http://supervisord.org/
+[8]:    https://github.com/orocrm/redis-config#configuration
