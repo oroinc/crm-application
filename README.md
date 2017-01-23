@@ -59,7 +59,7 @@ redirect_stderr=true
 
 [program:orocrm_message_consumer]
 command=/path/to/app/console oro:message-queue:consume --env=prod
-process_name=%(program_name)s_%(process_num)
+process_name=%(program_name)s_%(process_num)02d
 numprocs=5
 autostart=true
 autorestart=true
