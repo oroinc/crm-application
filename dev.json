@@ -4,9 +4,8 @@
   "homepage": "https://github.com/orocrm/crm-application.git",
   "license": "OSL-3.0",
   "autoload": {
-    "psr-0": {
-      "": "src/"
-    }
+    "psr-4": {"": "src/"},
+    "exclude-from-classmap": ["**/Tests/"]
   },
   "repositories": [
     {
