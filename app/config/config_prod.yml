@@ -7,6 +7,10 @@ imports:
 #        result_cache_driver: apc
 #        query_cache_driver: apc
 
+doctrine:
+    dbal:
+        logging:            true
+
 monolog:
     handlers:
         detailed_logs:
