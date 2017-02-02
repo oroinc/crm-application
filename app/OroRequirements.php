@@ -131,6 +131,19 @@ class OroRequirements extends SymfonyRequirements
             $this->add($requirement);
         }
 
+        $tmpDir = sys_get_temp_dir();
+        $this->addRequirement(
+            is_writable($tmpDir),
+            sprintf('%s (sys_get_temp_dir()) directory must be writable', $tmpDir),
+            sprintf(
+                'Change the permissions of the "<strong>%s</strong>" directory ' .
+                'or the result of <string>sys_get_temp_dir()</string> ' .
+                'or add the path to php <strong>open_basedir</strong> list. ' .
+                'So that it would be writable.',
+                $tmpDir
+            )
+        );
+
         $baseDir = realpath(__DIR__ . '/..');
         $mem     = $this->getBytes(ini_get('memory_limit'));
 
