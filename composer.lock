@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d4dc73345a91ea3863c353220f40171",
+    "content-hash": "273e0cbdad2cd372681f74d6daac47eb",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -911,12 +911,12 @@
             "version": "1.11.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jzaefferer/jquery-validation.git",
+                "url": "https://github.com/jquery-validation/jquery-validation.git",
                 "reference": "3b39aec630e2ecd336bc36d457d1a645bd91660f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jzaefferer/jquery-validation/zipball/3b39aec630e2ecd336bc36d457d1a645bd91660f",
+                "url": "https://api.github.com/repos/jquery-validation/jquery-validation/zipball/3b39aec630e2ecd336bc36d457d1a645bd91660f",
                 "reference": "3b39aec630e2ecd336bc36d457d1a645bd91660f",
                 "shasum": ""
             },
@@ -1964,28 +1964,29 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a"
+                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
-                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/1a4fb7e902202c33cce8c55989b945612943c2ba",
+                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "doctrine/coding-standard": "~0.1@dev",
+                "phpunit/phpunit": "^5.7"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -2026,7 +2027,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2015-04-14T22:21:58+00:00"
+            "time": "2017-01-03T10:49:41+00:00"
         },
         {
             "name": "doctrine/common",
@@ -5174,28 +5175,28 @@
         },
         {
             "name": "oro/calendar-bundle",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "target-dir": "Oro/Bundle/CalendarBundle",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCalendarBundle.git",
-                "reference": "b7ff86e0ea7f5c0875bcb97fadc161ab6a4d659e"
+                "reference": "33a7f784cd14c575ae6eee5d92cf32504d2dd362"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCalendarBundle/zipball/b7ff86e0ea7f5c0875bcb97fadc161ab6a4d659e",
-                "reference": "b7ff86e0ea7f5c0875bcb97fadc161ab6a4d659e",
+                "url": "https://api.github.com/repos/orocrm/OroCalendarBundle/zipball/33a7f784cd14c575ae6eee5d92cf32504d2dd362",
+                "reference": "33a7f784cd14c575ae6eee5d92cf32504d2dd362",
                 "shasum": ""
             },
             "require": {
                 "bower-asset/fullcalendar": "2.2.3",
-                "oro/platform": "2.0.0",
+                "oro/platform": "2.0.*",
                 "php": ">=5.6"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5219,34 +5220,34 @@
                 "Calendar",
                 "Oro"
             ],
-            "time": "2017-01-16T16:16:21+00:00"
+            "time": "2017-02-06T20:26:48+00:00"
         },
         {
             "name": "oro/crm",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/crm.git",
-                "reference": "c9757c7f98d1cd46c40952495c1fe9c4f3fc9b49"
+                "reference": "a79ab2e46a98d5de41d64a51e537daa7dd0d37b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/crm/zipball/c9757c7f98d1cd46c40952495c1fe9c4f3fc9b49",
-                "reference": "c9757c7f98d1cd46c40952495c1fe9c4f3fc9b49",
+                "url": "https://api.github.com/repos/orocrm/crm/zipball/a79ab2e46a98d5de41d64a51e537daa7dd0d37b0",
+                "reference": "a79ab2e46a98d5de41d64a51e537daa7dd0d37b0",
                 "shasum": ""
             },
             "require": {
-                "oro/calendar-bundle": "2.0.0",
-                "oro/crm-call-bundle": "2.0.0",
-                "oro/crm-task-bundle": "2.0.0",
-                "oro/marketing": "2.0.0",
-                "oro/platform": "2.0.0",
+                "oro/calendar-bundle": "2.0.*",
+                "oro/crm-call-bundle": "2.0.*",
+                "oro/crm-task-bundle": "2.0.*",
+                "oro/marketing": "2.0.*",
+                "oro/platform": "2.0.*",
                 "php": ">=5.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5266,33 +5267,32 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/orocrm/crm.git",
-            "time": "2017-01-16T17:19:21+00:00"
+            "time": "2017-02-06T20:30:37+00:00"
         },
         {
             "name": "oro/crm-abandoned-cart",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "target-dir": "src/Oro/Bundle/AbandonedCartBundle",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCRMAbandonedCartBundle.git",
-                "reference": "5f37e895e3bd18680c681d58bb7e9b04f1baa2c6"
+                "reference": "bf0795f2214b0f0ba3a4c8ee1d98537815d3f89e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMAbandonedCartBundle/zipball/5f37e895e3bd18680c681d58bb7e9b04f1baa2c6",
-                "reference": "5f37e895e3bd18680c681d58bb7e9b04f1baa2c6",
+                "url": "https://api.github.com/repos/orocrm/OroCRMAbandonedCartBundle/zipball/bf0795f2214b0f0ba3a4c8ee1d98537815d3f89e",
+                "reference": "bf0795f2214b0f0ba3a4c8ee1d98537815d3f89e",
                 "shasum": ""
             },
             "require": {
-                "oro/crm": "2.0.0",
-                "oro/crm-mail-chimp": "2.0.0",
-                "oro/marketing": "2.0.0",
+                "oro/crm": "2.0.*",
+                "oro/crm-mail-chimp": "2.0.*",
                 "php": ">=5.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5311,31 +5311,31 @@
                 }
             ],
             "description": "Oro Abandoned Cart",
-            "time": "2017-01-16T16:18:28+00:00"
+            "time": "2017-02-06T20:19:34+00:00"
         },
         {
             "name": "oro/crm-call-bundle",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "target-dir": "src/Oro/Bundle/CallBundle",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCRMCallBundle.git",
-                "reference": "1b191145cd1fdca762f14d1c6439965b1e8c0b36"
+                "reference": "9b0a01be7a4369cce17e5b3297be40f6282c8cbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMCallBundle/zipball/1b191145cd1fdca762f14d1c6439965b1e8c0b36",
-                "reference": "1b191145cd1fdca762f14d1c6439965b1e8c0b36",
+                "url": "https://api.github.com/repos/orocrm/OroCRMCallBundle/zipball/9b0a01be7a4369cce17e5b3297be40f6282c8cbb",
+                "reference": "9b0a01be7a4369cce17e5b3297be40f6282c8cbb",
                 "shasum": ""
             },
             "require": {
-                "oro/platform": "2.0.0",
+                "oro/platform": "2.0.*",
                 "php": ">=5.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5359,33 +5359,32 @@
                 "Call",
                 "Oro"
             ],
-            "time": "2017-01-16T16:20:13+00:00"
+            "time": "2017-02-06T20:18:59+00:00"
         },
         {
             "name": "oro/crm-dotmailer",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "target-dir": "src/Oro/Bundle/DotmailerBundle",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCRMDotmailerBundle.git",
-                "reference": "aa32367fc8e73fe805b0a86f85eba393dc5db1c6"
+                "reference": "46a3cc5928a3b66f1c553a12fcf3cb3f84e84c96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMDotmailerBundle/zipball/aa32367fc8e73fe805b0a86f85eba393dc5db1c6",
-                "reference": "aa32367fc8e73fe805b0a86f85eba393dc5db1c6",
+                "url": "https://api.github.com/repos/orocrm/OroCRMDotmailerBundle/zipball/46a3cc5928a3b66f1c553a12fcf3cb3f84e84c96",
+                "reference": "46a3cc5928a3b66f1c553a12fcf3cb3f84e84c96",
                 "shasum": ""
             },
             "require": {
-                "oro/crm": "2.0.0",
-                "oro/marketing": "2.0.0",
+                "oro/crm": "2.0.*",
                 "php": ">=5.6",
                 "romanpitak/dotmailer-api-v2-client": "1.0.11"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5405,33 +5404,33 @@
             ],
             "description": "Oro Dotmailer integration",
             "homepage": "https://github.com/orocrm/OroCRMDotmailerBundle.git",
-            "time": "2017-01-16T16:22:38+00:00"
+            "time": "2017-02-06T20:18:00+00:00"
         },
         {
             "name": "oro/crm-hangouts-call-bundle",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "target-dir": "src/Oro/Bundle/HangoutsCallBundle",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCRMHangoutsCallBundle.git",
-                "reference": "6612babe9437243d513d35af3170d3e11aac25cc"
+                "reference": "cc903fb66f5f9b1f96da7275b7574116099cb974"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMHangoutsCallBundle/zipball/6612babe9437243d513d35af3170d3e11aac25cc",
-                "reference": "6612babe9437243d513d35af3170d3e11aac25cc",
+                "url": "https://api.github.com/repos/orocrm/OroCRMHangoutsCallBundle/zipball/cc903fb66f5f9b1f96da7275b7574116099cb974",
+                "reference": "cc903fb66f5f9b1f96da7275b7574116099cb974",
                 "shasum": ""
             },
             "require": {
-                "oro/calendar-bundle": "2.0.0",
-                "oro/crm-call-bundle": "2.0.0",
-                "oro/platform": "2.0.0",
+                "oro/calendar-bundle": "2.0.*",
+                "oro/crm-call-bundle": "2.0.*",
+                "oro/platform": "2.0.*",
                 "php": ">=5.6"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5456,31 +5455,31 @@
                 "Oro",
                 "integration"
             ],
-            "time": "2017-01-16T16:24:25+00:00"
+            "time": "2017-02-06T20:16:02+00:00"
         },
         {
             "name": "oro/crm-magento-embedded-contact-us",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "target-dir": "src/Oro/Bundle/MagentoContactUsBundle",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCRMMagentoContactUsBundle.git",
-                "reference": "d0e4bb75e8bde7f1549f36eb1a36be81560e931a"
+                "reference": "41658a8ee4dd7ff5f63be075e2dcca954625cf01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMMagentoContactUsBundle/zipball/d0e4bb75e8bde7f1549f36eb1a36be81560e931a",
-                "reference": "d0e4bb75e8bde7f1549f36eb1a36be81560e931a",
+                "url": "https://api.github.com/repos/orocrm/OroCRMMagentoContactUsBundle/zipball/41658a8ee4dd7ff5f63be075e2dcca954625cf01",
+                "reference": "41658a8ee4dd7ff5f63be075e2dcca954625cf01",
                 "shasum": ""
             },
             "require": {
-                "oro/crm": "2.0.0",
+                "oro/crm": "2.0.*",
                 "php": ">=5.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5500,33 +5499,33 @@
             ],
             "description": "OroCRM Magento Embedded Contact Us package",
             "homepage": "https://github.com/orocrm/OroCRMMagentoContactUsBundle.git",
-            "time": "2017-01-16T16:27:24+00:00"
+            "time": "2017-02-06T20:14:12+00:00"
         },
         {
             "name": "oro/crm-mail-chimp",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "target-dir": "src/Oro/Bundle/MailChimpBundle",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCRMMailChimpBundle.git",
-                "reference": "b326c2a055263a5cdcd5d482e263fc60bec87903"
+                "reference": "906b55508286abe971de02ce90e9ae650fc5a3f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMMailChimpBundle/zipball/b326c2a055263a5cdcd5d482e263fc60bec87903",
-                "reference": "b326c2a055263a5cdcd5d482e263fc60bec87903",
+                "url": "https://api.github.com/repos/orocrm/OroCRMMailChimpBundle/zipball/906b55508286abe971de02ce90e9ae650fc5a3f1",
+                "reference": "906b55508286abe971de02ce90e9ae650fc5a3f1",
                 "shasum": ""
             },
             "require": {
-                "oro/crm": "2.0.0",
-                "oro/marketing": "2.0.0",
+                "oro/crm": "2.0.*",
+                "oro/marketing": "2.0.*",
                 "php": ">=5.6",
                 "zfr/zfr-mailchimp": "2.0.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5546,31 +5545,31 @@
             ],
             "description": "OroCRM MailChimp integration",
             "homepage": "https://github.com/orocrm/OroCRMMailChimpBundle.git",
-            "time": "2017-01-16T16:30:10+00:00"
+            "time": "2017-02-06T20:13:29+00:00"
         },
         {
             "name": "oro/crm-task-bundle",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "target-dir": "src/Oro/Bundle/TaskBundle",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCRMTaskBundle.git",
-                "reference": "e3fc7d60bfc5c6d4bfdf8bdbe4c7d80d5a8af955"
+                "reference": "7ac5ab98fa14d3c02a01ac24e8543cac902e0f89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMTaskBundle/zipball/e3fc7d60bfc5c6d4bfdf8bdbe4c7d80d5a8af955",
-                "reference": "e3fc7d60bfc5c6d4bfdf8bdbe4c7d80d5a8af955",
+                "url": "https://api.github.com/repos/orocrm/OroCRMTaskBundle/zipball/7ac5ab98fa14d3c02a01ac24e8543cac902e0f89",
+                "reference": "7ac5ab98fa14d3c02a01ac24e8543cac902e0f89",
                 "shasum": ""
             },
             "require": {
-                "oro/platform": "2.0.0",
+                "oro/platform": "2.0.*",
                 "php": ">=5.6"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5594,31 +5593,31 @@
                 "Oro",
                 "Task"
             ],
-            "time": "2017-01-16T16:37:54+00:00"
+            "time": "2017-02-06T20:10:46+00:00"
         },
         {
             "name": "oro/crm-zendesk",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "target-dir": "src/Oro/Bundle/ZendeskBundle",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCRMZendeskBundle.git",
-                "reference": "3893cedcebea27656e50de11cd9f8087fd813924"
+                "reference": "2ddcde5a9b739b3310812d5e752e8d571bd6465b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMZendeskBundle/zipball/3893cedcebea27656e50de11cd9f8087fd813924",
-                "reference": "3893cedcebea27656e50de11cd9f8087fd813924",
+                "url": "https://api.github.com/repos/orocrm/OroCRMZendeskBundle/zipball/2ddcde5a9b739b3310812d5e752e8d571bd6465b",
+                "reference": "2ddcde5a9b739b3310812d5e752e8d571bd6465b",
                 "shasum": ""
             },
             "require": {
-                "oro/crm": "2.0.0",
+                "oro/crm": "2.0.*",
                 "php": ">=5.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5643,7 +5642,7 @@
                 "Zendesk",
                 "integration"
             ],
-            "time": "2017-01-16T16:39:29+00:00"
+            "time": "2017-02-06T20:09:13+00:00"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -5701,26 +5700,26 @@
         },
         {
             "name": "oro/marketing",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCRMMarketingBundle.git",
-                "reference": "84f5961e3b5c843f6ceb71dc1b3f71b844410724"
+                "reference": "c1af4d3f9102d0b9854475b900ebe43156faf986"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMMarketingBundle/zipball/84f5961e3b5c843f6ceb71dc1b3f71b844410724",
-                "reference": "84f5961e3b5c843f6ceb71dc1b3f71b844410724",
+                "url": "https://api.github.com/repos/orocrm/OroCRMMarketingBundle/zipball/c1af4d3f9102d0b9854475b900ebe43156faf986",
+                "reference": "c1af4d3f9102d0b9854475b900ebe43156faf986",
                 "shasum": ""
             },
             "require": {
-                "oro/platform": "2.0.0",
+                "oro/platform": "2.0.*",
                 "php": ">=5.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5746,20 +5745,20 @@
                 "Oro",
                 "Tracking"
             ],
-            "time": "2017-01-16T16:32:55+00:00"
+            "time": "2017-02-06T20:12:34+00:00"
         },
         {
             "name": "oro/platform",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/platform.git",
-                "reference": "883409891c321bb99905bc8a525fef4b7b6f189a"
+                "reference": "1e71d7c878b5e102722829d49a11b4ab56361691"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/883409891c321bb99905bc8a525fef4b7b6f189a",
-                "reference": "883409891c321bb99905bc8a525fef4b7b6f189a",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/1e71d7c878b5e102722829d49a11b4ab56361691",
+                "reference": "1e71d7c878b5e102722829d49a11b4ab56361691",
                 "shasum": ""
             },
             "require": {
@@ -5880,7 +5879,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5901,31 +5900,31 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2017-01-13T23:23:05+00:00"
+            "time": "2017-02-06T14:16:19+00:00"
         },
         {
             "name": "oro/platform-serialised-fields",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "target-dir": "src/Oro/Bundle/EntitySerializedFieldsBundle",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroEntitySerializedFieldsBundle.git",
-                "reference": "2aa8e1367ac48fa611810e20136be68556c84978"
+                "reference": "3b23c7a74a4bafb6775898bccbdc6f36499561ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroEntitySerializedFieldsBundle/zipball/2aa8e1367ac48fa611810e20136be68556c84978",
-                "reference": "2aa8e1367ac48fa611810e20136be68556c84978",
+                "url": "https://api.github.com/repos/orocrm/OroEntitySerializedFieldsBundle/zipball/3b23c7a74a4bafb6775898bccbdc6f36499561ac",
+                "reference": "3b23c7a74a4bafb6775898bccbdc6f36499561ac",
                 "shasum": ""
             },
             "require": {
-                "oro/platform": "2.0.0",
+                "oro/platform": "2.0.*",
                 "php": ">=5.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -5951,7 +5950,7 @@
                 "entity",
                 "fields"
             ],
-            "time": "2017-01-16T16:41:28+00:00"
+            "time": "2017-02-06T20:06:18+00:00"
         },
         {
             "name": "oro/redis-config",
@@ -9449,16 +9448,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.5.5",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "399c1f9781e222f6eb6cc238796f5200d1b7f108"
+                "reference": "5a5a9fc8025a08d8919be87d6884d5a92520cefe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/399c1f9781e222f6eb6cc238796f5200d1b7f108",
-                "reference": "399c1f9781e222f6eb6cc238796f5200d1b7f108",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/5a5a9fc8025a08d8919be87d6884d5a92520cefe",
+                "reference": "5a5a9fc8025a08d8919be87d6884d5a92520cefe",
                 "shasum": ""
             },
             "require": {
@@ -9487,7 +9486,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2016-10-31T17:19:45+00:00"
+            "time": "2017-01-26T22:05:40+00:00"
         },
         {
             "name": "nelmio/alice",
@@ -9554,16 +9553,16 @@
         },
         {
             "name": "pdepend/pdepend",
-            "version": "2.4.1",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pdepend/pdepend.git",
-                "reference": "3acfa4fcadbb8b65b8b2ec077408c5ef0e112e68"
+                "reference": "0c50874333149c0dad5a2877801aed148f2767ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/3acfa4fcadbb8b65b8b2ec077408c5ef0e112e68",
-                "reference": "3acfa4fcadbb8b65b8b2ec077408c5ef0e112e68",
+                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/0c50874333149c0dad5a2877801aed148f2767ff",
+                "reference": "0c50874333149c0dad5a2877801aed148f2767ff",
                 "shasum": ""
             },
             "require": {
@@ -9590,7 +9589,7 @@
                 "BSD-3-Clause"
             ],
             "description": "Official version of pdepend to be handled with Composer",
-            "time": "2017-01-11T16:15:35+00:00"
+            "time": "2017-01-19T14:23:36+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -9868,16 +9867,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "4.0.4",
+            "version": "4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "c14196e64a78570034afd0b7a9f3757ba71c2a0a"
+                "reference": "c19cfc7cbb0e9338d8c469c7eedecc2a428b0971"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c14196e64a78570034afd0b7a9f3757ba71c2a0a",
-                "reference": "c14196e64a78570034afd0b7a9f3757ba71c2a0a",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c19cfc7cbb0e9338d8c469c7eedecc2a428b0971",
+                "reference": "c19cfc7cbb0e9338d8c469c7eedecc2a428b0971",
                 "shasum": ""
             },
             "require": {
@@ -9927,7 +9926,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-12-20T15:22:42+00:00"
+            "time": "2017-01-20T15:06:43+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -10112,16 +10111,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.5",
+            "version": "5.7.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "50fd2be8f3e23e91da825f36f08e5f9633076ffe"
+                "reference": "a6ad2472daba76b0689042b7709f86d4f06bcaab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/50fd2be8f3e23e91da825f36f08e5f9633076ffe",
-                "reference": "50fd2be8f3e23e91da825f36f08e5f9633076ffe",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a6ad2472daba76b0689042b7709f86d4f06bcaab",
+                "reference": "a6ad2472daba76b0689042b7709f86d4f06bcaab",
                 "shasum": ""
             },
             "require": {
@@ -10133,16 +10132,16 @@
                 "myclabs/deep-copy": "~1.3",
                 "php": "^5.6 || ^7.0",
                 "phpspec/prophecy": "^1.6.2",
-                "phpunit/php-code-coverage": "^4.0.3",
+                "phpunit/php-code-coverage": "^4.0.4",
                 "phpunit/php-file-iterator": "~1.4",
                 "phpunit/php-text-template": "~1.2",
                 "phpunit/php-timer": "^1.0.6",
                 "phpunit/phpunit-mock-objects": "^3.2",
-                "sebastian/comparator": "~1.2.2",
+                "sebastian/comparator": "^1.2.4",
                 "sebastian/diff": "~1.2",
                 "sebastian/environment": "^1.3.4 || ^2.0",
                 "sebastian/exporter": "~2.0",
-                "sebastian/global-state": "^1.0 || ^2.0",
+                "sebastian/global-state": "^1.1",
                 "sebastian/object-enumerator": "~2.0",
                 "sebastian/resource-operations": "~1.0",
                 "sebastian/version": "~1.0|~2.0",
@@ -10190,7 +10189,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-12-28T07:18:51+00:00"
+            "time": "2017-02-05T15:31:31+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -10253,16 +10252,16 @@
         },
         {
             "name": "phpunit/phpunit-selenium",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giorgiosironi/phpunit-selenium.git",
-                "reference": "d3aa8984c31efcff7c8829b9bd9ad7ab4c94709c"
+                "reference": "343ba4e389ad97046c78fb2c7111e199795e7a80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giorgiosironi/phpunit-selenium/zipball/d3aa8984c31efcff7c8829b9bd9ad7ab4c94709c",
-                "reference": "d3aa8984c31efcff7c8829b9bd9ad7ab4c94709c",
+                "url": "https://api.github.com/repos/giorgiosironi/phpunit-selenium/zipball/343ba4e389ad97046c78fb2c7111e199795e7a80",
+                "reference": "343ba4e389ad97046c78fb2c7111e199795e7a80",
                 "shasum": ""
             },
             "require": {
@@ -10303,6 +10302,10 @@
                     "name": "Sebastian Bergmann",
                     "email": "sb@sebastian-bergmann.de",
                     "role": "original developer"
+                },
+                {
+                    "name": "Paul Briton",
+                    "role": "developer"
                 }
             ],
             "description": "Selenium Server integration for PHPUnit",
@@ -10313,7 +10316,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-04-22T10:41:33+00:00"
+            "time": "2017-01-23T22:12:35+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -10362,16 +10365,16 @@
         },
         {
             "name": "sebastian/comparator",
-            "version": "1.2.2",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f"
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
-                "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
                 "shasum": ""
             },
             "require": {
@@ -10422,7 +10425,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2016-11-19T09:18:40+00:00"
+            "time": "2017-01-29T09:50:25+00:00"
         },
         {
             "name": "sebastian/diff",
