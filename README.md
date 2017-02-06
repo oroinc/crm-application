@@ -93,7 +93,7 @@ php /path/to/app/console oro:cron --env=prod
 
 ##Using Redis for application caching
 
-To use Redis for application caching, follow the corresponding [configuration instructions][9]
+To use Redis for application caching, follow the corresponding [configuration instructions][8]
 
 [1]:    https://github.com/orocrm/crm
 [2]:    https://www.orocrm.com/documentation/index/current/system-requirements
