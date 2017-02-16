@@ -11,7 +11,17 @@ default: &default
         Behat\Symfony2Extension: ~
         Oro\Bundle\TestFrameworkBundle\Behat\ServiceContainer\OroTestFrameworkExtension:
             shared_contexts:
-                - Oro\Bundle\SalesBundle\Tests\Behat\Context\SalesContext
+                - OroSalesBundle::SalesContext
+                - Oro\Bundle\TestFrameworkBundle\Tests\Behat\Context\OroMainContext
+                - Oro\Bundle\TestFrameworkBundle\Tests\Behat\Context\FixturesContext
+                - OroActivityListBundle::ActivityContext
+                - OroDataGridBundle::GridContext
+                - OroSecurityBundle::ACLContext
+                - OroSearchBundle::SearchContext
+                - OroImportExportBundle::ImportExportContext:
+                    - '@oro_entity.entity_alias_resolver'
+                    - '@oro_importexport.processor.registry'
+                - OroAddressBundle::AddressContext
             application_suites:
                 - OroEmailBundle
                 - OroUserBundle

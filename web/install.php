@@ -198,7 +198,7 @@ function iterateRequirements(array $collection)
                         <span><?php echo $translator->trans('process.button.refresh'); ?></span>
                     </a>
                     <?php endif; ?>
-                    <a id="next-button" href="<?php echo count($majorProblems) ? 'javascript: void(0);' : 'app.php/installer'; ?>" class="button next disabled">
+                    <a id="next-button" href="<?php echo count($majorProblems) ? 'javascript: void(0);' : 'installer'; ?>" class="button next disabled">
                         <span><?php echo $translator->trans('process.button.next'); ?></span>
                     </a>
                 </div>
