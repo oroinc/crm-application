@@ -34,15 +34,6 @@ default: &default
                 - OroCRMAccountBundle
                 - OroCRMTaskBundle
                 - OroSalesBundle
-    suites:
-        OroInstallerBundle:
-            type: symfony_bundle
-            bundle: OroInstallerBundle
-            contexts:
-                - Oro\Bundle\InstallerBundle\Tests\Behat\Context\FeatureContext
-                - Behat\MinkExtension\Context\MinkContext
-            paths:
-                - vendor/oro/platform/src/Oro/Bundle/InstallerBundle/Tests/Behat/Features
 
 selenium2:
     <<: *default
