@@ -41,7 +41,13 @@
     },
     "config": {
         "component-dir": "web/bundles/components",
-        "bin-dir": "bin"
+        "bin-dir": "bin",
+        "fxp-asset": {
+            "asset-installer-paths": {
+                "npm-asset-library": "web/bundles/npmassets",
+                "bower-asset-library": "web/bundles/bowerassets"
+            }
+        }
     },
     "scripts": {
         "post-install-cmd": [
