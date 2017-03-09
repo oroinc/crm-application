@@ -26,8 +26,10 @@ where x.y.z is the latest [release tag](https://github.com/orocrm/crm-applicatio
 and install [fxpio/composer-asset-plugin][5] plugin for it:
 
 ```bash
-    composer global require "fxp/composer-asset-plugin:~1.2"
+    composer global require "fxp/composer-asset-plugin:dev-master"
 ```
+**Note:** This is a temporary solution.  After plugin version 1.3.0 is released, the requirement will be changed to version 1.3
+([see related issue](https://github.com/fxpio/composer-asset-plugin/issues/277#issuecomment-282745055)).
 
 - Install [Node.js][6].
 
