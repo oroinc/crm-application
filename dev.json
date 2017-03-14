@@ -38,13 +38,19 @@
     "phpunit/phpunit-selenium": "3.0.*",
     "johnkary/phpunit-speedtrap": "1.0.*",
     "mybuilder/phpunit-accelerator": "1.2.*",
-    "squizlabs/php_codesniffer": "2.7.*",
-    "phpmd/phpmd": "2.5.*",
+    "squizlabs/php_codesniffer": "2.8.*",
+    "phpmd/phpmd": "2.6.*",
     "sebastian/phpcpd": "2.0.*"
   },
   "config": {
     "component-dir": "web/bundles/components",
-    "bin-dir": "bin"
+    "bin-dir": "bin",
+    "fxp-asset": {
+      "asset-installer-paths": {
+        "npm-asset-library": "web/bundles/npmassets",
+        "bower-asset-library": "web/bundles/bowerassets"
+      }
+    }
   },
   "scripts": {
     "post-install-cmd": [
