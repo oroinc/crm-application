@@ -22,18 +22,6 @@ default: &default
                     - '@oro_entity.entity_alias_resolver'
                     - '@oro_importexport.processor.registry'
                 - OroAddressBundle::AddressContext
-            application_suites:
-                - OroEmailBundle
-                - OroUserBundle
-                - OroHelpBundle
-                - OroSearchBundle
-                - OroCRMBundle
-                - OroDashboardBundle
-                - OroNavigationBundle
-                - OroCRMContactBundle
-                - OroCRMAccountBundle
-                - OroCRMTaskBundle
-                - OroSalesBundle
 
 selenium2:
     <<: *default
