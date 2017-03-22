@@ -27,7 +27,7 @@ and install [fxpio/composer-asset-plugin][5] plugin for it:
 
 ```bash
     composer self-update
-    composer global require "fxp/composer-asset-plugin:dev-master"
+    composer global require "fxp/composer-asset-plugin"
 ```
 **Note:** This is a temporary solution.  After plugin version 1.3.0 is released, the requirement will be changed to version 1.3
 ([see related issue](https://github.com/fxpio/composer-asset-plugin/issues/277#issuecomment-282745055)).

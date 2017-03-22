@@ -14,12 +14,12 @@ use Symfony\Component\Process\ProcessBuilder;
  */
 class OroRequirements extends SymfonyRequirements
 {
-    const REQUIRED_PHP_VERSION  = '5.6';
+    const REQUIRED_PHP_VERSION  = '7.0';
     const REQUIRED_GD_VERSION   = '2.0';
     const REQUIRED_CURL_VERSION = '7.0';
     const REQUIRED_ICU_VERSION  = '3.8';
 
-    const EXCLUDE_REQUIREMENTS_MASK = '/5\.[0-5]\./';
+    const EXCLUDE_REQUIREMENTS_MASK = '/5\.[0-6]/';
 
     public function __construct()
     {
