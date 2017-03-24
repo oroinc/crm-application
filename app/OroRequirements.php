@@ -4,7 +4,6 @@ require_once __DIR__ . '/SymfonyRequirements.php';
 
 use Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder;
 use Oro\Bundle\RequireJSBundle\DependencyInjection\Configuration as RequireJSConfiguration;
-use Symfony\Component\HttpFoundation\Request;
 
 use Symfony\Component\Intl\Intl;
 use Symfony\Component\Process\ProcessBuilder;
@@ -374,9 +373,8 @@ class OroRequirements extends SymfonyRequirements
         $getConf = new ProcessBuilder(['getconf', 'NAME_MAX', __DIR__]);
         $getConf = $getConf->getProcess();
 
-        $server = Request::createFromGlobals()->server;
-        if ($server->get('PATH')) {
-            $getConf->setEnv(['PATH' => $server->get('PATH')]);
+        if (isset($_SERVER['PATH'])) {
+            $getConf->setEnv(array('PATH' => $_SERVER['PATH']));
         }
         $getConf->run();
 
