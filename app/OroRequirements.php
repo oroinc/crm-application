@@ -20,7 +20,10 @@ class OroRequirements extends SymfonyRequirements
 
     const EXCLUDE_REQUIREMENTS_MASK = '/5\.[0-6]/';
 
-    public function __construct()
+    /**
+     * @param string $env
+     */
+    public function __construct($env = 'prod')
     {
         parent::__construct();
 
@@ -89,6 +92,19 @@ class OroRequirements extends SymfonyRequirements
             'Install and enable the <strong>Tidy</strong> extension.'
         );
 
+        $tmpDir = sys_get_temp_dir();
+        $this->addRequirement(
+            is_writable($tmpDir),
+            sprintf('%s (sys_get_temp_dir()) directory must be writable', $tmpDir),
+            sprintf(
+                'Change the permissions of the "<strong>%s</strong>" directory ' .
+                'or the result of <string>sys_get_temp_dir()</string> ' .
+                'or add the path to php <strong>open_basedir</strong> list. ' .
+                'So that it would be writable.',
+                $tmpDir
+            )
+        );
+
         // Windows specific checks
         if (defined('PHP_WINDOWS_VERSION_BUILD')) {
             $this->addRecommendation(
@@ -130,19 +146,6 @@ class OroRequirements extends SymfonyRequirements
 
             $this->add($requirement);
         }
-
-        $tmpDir = sys_get_temp_dir();
-        $this->addRequirement(
-            is_writable($tmpDir),
-            sprintf('%s (sys_get_temp_dir()) directory must be writable', $tmpDir),
-            sprintf(
-                'Change the permissions of the "<strong>%s</strong>" directory ' .
-                'or the result of <string>sys_get_temp_dir()</string> ' .
-                'or add the path to php <strong>open_basedir</strong> list. ' .
-                'So that it would be writable.',
-                $tmpDir
-            )
-        );
 
         $baseDir = realpath(__DIR__ . '/..');
         $mem     = $this->getBytes(ini_get('memory_limit'));
@@ -332,7 +335,7 @@ class OroRequirements extends SymfonyRequirements
     }
 
     /**
-     *  {@inheritdoc}
+     * {@inheritdoc}
      */
     public function getRequirements()
     {
@@ -349,7 +352,7 @@ class OroRequirements extends SymfonyRequirements
     }
 
     /**
-     *  {@inheritdoc}
+     * {@inheritdoc}
      */
     public function getRecommendations()
     {
@@ -370,7 +373,7 @@ class OroRequirements extends SymfonyRequirements
      */
     protected function checkFileNameLength()
     {
-        $getConf = new ProcessBuilder(['getconf', 'NAME_MAX', __DIR__]);
+        $getConf = new ProcessBuilder(array('getconf', 'NAME_MAX', __DIR__));
         $getConf = $getConf->getProcess();
 
         if (isset($_SERVER['PATH'])) {
