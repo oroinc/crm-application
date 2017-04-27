@@ -1,5 +1,5 @@
 imports:
-  - ../../package/platform/src/Oro/Bundle/TestFrameworkBundle/Resources/config/behat.yml.dist
+  - ./vendor/oro/platform/src/Oro/Bundle/TestFrameworkBundle/Resources/config/behat.yml.dist
 
 default: &default
     gherkin:
@@ -17,23 +17,12 @@ default: &default
                 - OroActivityListBundle::ActivityContext
                 - OroDataGridBundle::GridContext
                 - OroSecurityBundle::ACLContext
+                - OroSecurityBundle::PermissionContext
                 - OroSearchBundle::SearchContext
                 - OroImportExportBundle::ImportExportContext:
                     - '@oro_entity.entity_alias_resolver'
                     - '@oro_importexport.processor.registry'
                 - OroAddressBundle::AddressContext
-            application_suites:
-                - OroEmailBundle
-                - OroUserBundle
-                - OroHelpBundle
-                - OroSearchBundle
-                - OroCRMBundle
-                - OroDashboardBundle
-                - OroNavigationBundle
-                - OroCRMContactBundle
-                - OroCRMAccountBundle
-                - OroCRMTaskBundle
-                - OroSalesBundle
 
 selenium2:
     <<: *default
