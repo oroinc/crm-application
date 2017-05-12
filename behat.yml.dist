@@ -12,6 +12,8 @@ default: &default
         Oro\Bundle\TestFrameworkBundle\Behat\ServiceContainer\OroTestFrameworkExtension:
             shared_contexts:
                 - Oro\Bundle\SalesBundle\Tests\Behat\Context\SalesContext
+                - Oro\Bundle\FilterBundle\Tests\Behat\Context\FilterContext
+                - Oro\Bundle\QueryDesignerBundle\Tests\Behat\Context\QueryDesignerContext
             application_suites:
                 - OroEmailBundle
                 - OroUserBundle
