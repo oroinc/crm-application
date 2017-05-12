@@ -26,9 +26,11 @@ monolog:
             type:           fingers_crossed
             action_level:   critical
             handler:        deduplicated
+            buffer_size:    1000
         deduplicated:
             type:           deduplication
             handler:        swift
+            buffer_size:    1000
         swift:
             type:           swift_mailer
             email_prototype:
