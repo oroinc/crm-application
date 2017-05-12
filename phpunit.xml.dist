@@ -192,18 +192,28 @@
 
 
     <listeners>
-        <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener"/>
+        <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener">
+            <arguments>
+                <array>
+                    <element key="slowThreshold">
+                        <integer>1000</integer>
+                    </element>
+                </array>
+            </arguments>
+        </listener>
         <listener class="TestListener" file="vendor/oro/platform/src/Oro/Bundle/TestFrameworkBundle/Test/TestListener.php">
             <arguments>
                 <string>app/logs</string>
             </arguments>
         </listener>
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
+        <listener class="MyBuilder\PhpunitAccelerator\TestListener"/>
     </listeners>
 
     <php>
         <env name="SYMFONY_DEPRECATIONS_HELPER" value="weak" />
         <env name="SYMFONY_DEBUG" value="0"/>
+        <env name="SYMFONY_ENV" value="test"/>
         <ini name="error_reporting" value="-1"/>
         <server name="KERNEL_DIR" value="app/"/>
         <const name="PHPUNIT_LOAD_LIMIT" value="1.2"/>
