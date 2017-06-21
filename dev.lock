@@ -226,16 +226,16 @@
         },
         {
             "name": "bower-asset/Autolinker.js",
-            "version": "0.11.0",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gregjacobs/Autolinker.js.git",
-                "reference": "67a09085e72fe50d03deb94b6753be895735676c"
+                "reference": "2b50541dfc0abde6f1e565796623ab0250caa997"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gregjacobs/Autolinker.js/zipball/67a09085e72fe50d03deb94b6753be895735676c",
-                "reference": "67a09085e72fe50d03deb94b6753be895735676c",
+                "url": "https://api.github.com/repos/gregjacobs/Autolinker.js/zipball/2b50541dfc0abde6f1e565796623ab0250caa997",
+                "reference": "2b50541dfc0abde6f1e565796623ab0250caa997",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -254,7 +254,7 @@
             "license": [
                 "MIT"
             ],
-            "description": "Automatically links URLs, email addresses, and Twitter handles in a string of text or HTML.",
+            "description": "Automatically links URLs, email addresses, mentions (Twitter, Instagram) in a string of text or HTML.",
             "keywords": [
                 "anchor",
                 "auto",
@@ -1395,6 +1395,50 @@
                 "shasum": ""
             },
             "type": "bower-asset-library"
+        },
+        {
+            "name": "brick/math",
+            "version": "0.5.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brick/math.git",
+                "reference": "b44a78b01cb79aa4bf17de46a45db968b6958bda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brick/math/zipball/b44a78b01cb79aa4bf17de46a45db968b6958bda",
+                "reference": "b44a78b01cb79aa4bf17de46a45db968b6958bda",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Brick\\Math\\": "src/",
+                    "Brick\\Math\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Arbitrary-precision arithmetic library",
+            "keywords": [
+                "Arbitrary-precision",
+                "BigInteger",
+                "BigRational",
+                "arithmetic",
+                "bigdecimal",
+                "brick",
+                "math"
+            ],
+            "time": "2016-10-17T22:08:04+00:00"
         },
         {
             "name": "cboden/ratchet",
@@ -5805,7 +5849,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "fb14559042262c0c851fc3a20ebdd188db76e4d9",
+                "reference": "f077684a0fd2b8b43aa6d680363f31a8629c5d5d",
                 "shasum": null
             },
             "require": {
@@ -5813,7 +5857,7 @@
                 "akeneo/batch-bundle": "0.4.2",
                 "ass/xmlsecurity": "1.1.1",
                 "bower-asset/autobahnjs": "0.8.0",
-                "bower-asset/autolinker.js": "0.11.0",
+                "bower-asset/autolinker.js": "1.4.*",
                 "bower-asset/backbone": "1.2.3",
                 "bower-asset/backbone-pageable": "1.2.3",
                 "bower-asset/backgrid": "0.3.7",
@@ -5840,6 +5884,7 @@
                 "bower-asset/less": "2.5.*",
                 "bower-asset/lightgallery": "1.2.18",
                 "bower-asset/malihu-custom-scrollbar-plugin": "3.1.5",
+                "bower-asset/moment": "2.18.*",
                 "bower-asset/moment-timezone": "0.5.*",
                 "bower-asset/numeral": "1.5.2",
                 "bower-asset/select2": "3.4.1",
@@ -5848,6 +5893,7 @@
                 "bower-asset/underscore": "1.8.3",
                 "bower-asset/uniform": "2.1.1",
                 "bower-asset/when": "2.4.0",
+                "brick/math": "0.5.*",
                 "components/jquery": "3.1.*",
                 "components/jqueryui": "1.12.*",
                 "composer/composer": "1.4.*",
