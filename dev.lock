@@ -689,30 +689,21 @@
         },
         {
             "name": "bower-asset/fullcalendar",
-            "version": "v2.2.3",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fullcalendar/fullcalendar.git",
-                "reference": "e89b3256062d763eb144f1146dd2db9be1b639a6"
+                "reference": "447ab267528a211b253058dfb5d898b7a2296492"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fullcalendar/fullcalendar/zipball/e89b3256062d763eb144f1146dd2db9be1b639a6",
-                "reference": "e89b3256062d763eb144f1146dd2db9be1b639a6",
+                "url": "https://api.github.com/repos/fullcalendar/fullcalendar/zipball/447ab267528a211b253058dfb5d898b7a2296492",
+                "reference": "447ab267528a211b253058dfb5d898b7a2296492",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/jquery": ">=1.7.1",
-                "bower-asset/moment": ">=2.5.0"
-            },
-            "require-dev": {
-                "bower-asset/bootstrap": "~3.2.0",
-                "bower-asset/jasmine-fixture": "~1.2.0",
-                "bower-asset/jasmine-jquery": "~2.0.3",
-                "bower-asset/jquery-mockjax": "~1.5.4",
-                "bower-asset/jquery-simulate-ext": "~1.3.0",
-                "bower-asset/jquery-ui": ">=1.11.1",
-                "bower-asset/moment-timezone": "~0.2.1"
+                "bower-asset/jquery": ">=2,<4.0",
+                "bower-asset/moment": ">=2.9.0,<3.0.0"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -724,17 +715,21 @@
                     "*",
                     "**/.*",
                     "!/dist/**",
-                    "!/bower.json",
-                    "!/changelog.*",
-                    "!/license.*",
-                    "!/readme.*"
+                    "!/README.*",
+                    "!/LICENSE.*",
+                    "!/CHANGELOG.*",
+                    "!/CONTRIBUTING.*"
                 ]
             },
+            "license": [
+                "MIT"
+            ],
             "description": "Full-sized drag & drop event calendar",
             "keywords": [
                 "calendar",
                 "event",
-                "full-sized"
+                "full-sized",
+                "jquery-plugin"
             ]
         },
         {
@@ -5337,11 +5332,11 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/calendar",
-                "reference": "a6fc82d2b9020736beb5572e934eabd2d2b4d663",
+                "reference": "8e7cb1a4c05b9187eec7446d7c27a0ba188d532b",
                 "shasum": null
             },
             "require": {
-                "bower-asset/fullcalendar": "2.2.3",
+                "bower-asset/fullcalendar": "3.4.0",
                 "oro/platform": "2.x-dev",
                 "php": ">=7.0"
             },
@@ -5874,7 +5869,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "f077684a0fd2b8b43aa6d680363f31a8629c5d5d",
+                "reference": "449dd31cbad225101c24d424c6ec13730ecd6853",
                 "shasum": null
             },
             "require": {
@@ -5895,7 +5890,6 @@
                 "bower-asset/datepair": "0.4.4",
                 "bower-asset/flotr2": "dev-master",
                 "bower-asset/font-awesome": "4.7.*",
-                "bower-asset/fullcalendar": "2.2.3",
                 "bower-asset/jquery": "3.1.1",
                 "bower-asset/jquery-ajax-queue": "0.0.1",
                 "bower-asset/jquery-cookie": "1.4.1",
