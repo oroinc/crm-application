@@ -920,19 +920,42 @@
         },
         {
             "name": "bower-asset/jquery-validate",
-            "version": "1.11.1",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jquery-validation/jquery-validation.git",
-                "reference": "3b39aec630e2ecd336bc36d457d1a645bd91660f"
+                "reference": "29b9c702b9c831419f9f774d2acb86f42f803e11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jquery-validation/jquery-validation/zipball/3b39aec630e2ecd336bc36d457d1a645bd91660f",
-                "reference": "3b39aec630e2ecd336bc36d457d1a645bd91660f",
+                "url": "https://api.github.com/repos/jquery-validation/jquery-validation/zipball/29b9c702b9c831419f9f774d2acb86f42f803e11",
+                "reference": "29b9c702b9c831419f9f774d2acb86f42f803e11",
                 "shasum": ""
             },
-            "type": "bower-asset-library"
+            "require": {
+                "bower-asset/jquery": ">=1.7.2"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "dist/jquery.validate.js",
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "node_modules",
+                    "bower_components",
+                    "test",
+                    "demo",
+                    "lib"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Form validation made easy",
+            "keywords": [
+                "forms",
+                "validate",
+                "validation"
+            ]
         },
         {
             "name": "bower-asset/jquery.numeric",
@@ -5869,7 +5892,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "449dd31cbad225101c24d424c6ec13730ecd6853",
+                "reference": "a97d5f065d3e6ef91cd04f35b6da093a24bab1a7",
                 "shasum": null
             },
             "require": {
@@ -5896,7 +5919,7 @@
                 "bower-asset/jquery-form": "4.2.1",
                 "bower-asset/jquery-mousewheel": "3.1.13",
                 "bower-asset/jquery-ui-multiselect-widget": "1.14",
-                "bower-asset/jquery-validate": "1.11.1",
+                "bower-asset/jquery-validate": "1.16.0",
                 "bower-asset/jquery.numeric": "1.5.0",
                 "bower-asset/json2": "dev-master",
                 "bower-asset/jsplumb": "1.7.*",
@@ -10353,16 +10376,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.20",
+            "version": "5.7.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3cb94a5f8c07a03c8b7527ed7468a2926203f58b"
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3cb94a5f8c07a03c8b7527ed7468a2926203f58b",
-                "reference": "3cb94a5f8c07a03c8b7527ed7468a2926203f58b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3b91adfb64264ddec5a2dee9851f354aa66327db",
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db",
                 "shasum": ""
             },
             "require": {
@@ -10431,7 +10454,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-05-22T07:42:55+00:00"
+            "time": "2017-06-21T08:11:54+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
