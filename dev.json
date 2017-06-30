@@ -15,6 +15,10 @@
     {
       "type": "composer",
       "url": "https://packagist.orocrm.com"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.orocrm.com"
     }
   ],
   "require": {
@@ -52,17 +56,10 @@
   },
   "config": {
     "component-dir": "web/bundles/components",
-    "bin-dir": "bin",
-    "fxp-asset": {
-      "asset-installer-paths": {
-        "npm-asset-library": "web/bundles/npmassets",
-        "bower-asset-library": "web/bundles/bowerassets"
-      }
-    }
+    "bin-dir": "bin"
   },
   "scripts": {
     "post-install-cmd": [
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::checkComposerPlugin",
       "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
@@ -71,7 +68,6 @@
       "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
     ],
     "post-update-cmd": [
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::checkComposerPlugin",
       "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
@@ -114,10 +110,6 @@
         "message_queue_transport": "ORO_MQ_TRANSPORT",
         "message_queue_transport_config": "ORO_MQ_TRANSPORT_CONFIG"
       }
-    },
-    "asset-installer-paths": {
-      "npm-asset-library": "web/bundles/npmassets",
-      "bower-asset-library": "web/bundles/bowerassets"
     }
   }
 }
