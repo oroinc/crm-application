@@ -3002,16 +3002,16 @@
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v2.4.29",
+            "version": "v2.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "f65c02eae3bff1aa57709ea4c8ca26947df95b9c"
+                "reference": "5e2cc07beb0cd24345cbe02eb7afc3b23f9cd488"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/f65c02eae3bff1aa57709ea4c8ca26947df95b9c",
-                "reference": "f65c02eae3bff1aa57709ea4c8ca26947df95b9c",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/5e2cc07beb0cd24345cbe02eb7afc3b23f9cd488",
+                "reference": "5e2cc07beb0cd24345cbe02eb7afc3b23f9cd488",
                 "shasum": ""
             },
             "require": {
@@ -3076,7 +3076,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2017-05-29T17:33:48+00:00"
+            "time": "2017-07-02T09:46:37+00:00"
         },
         {
             "name": "genemu/form-bundle",
@@ -3982,56 +3982,58 @@
         },
         {
             "name": "knplabs/gaufrette",
-            "version": "v0.3.1",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/Gaufrette.git",
-                "reference": "771ad16f4b2e7f9d35f44b201956e83c6fbf5dde"
+                "reference": "7cd2806ba1c2ea11cd125350363cd56b821c9e08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/771ad16f4b2e7f9d35f44b201956e83c6fbf5dde",
-                "reference": "771ad16f4b2e7f9d35f44b201956e83c6fbf5dde",
+                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/7cd2806ba1c2ea11cd125350363cd56b821c9e08",
+                "reference": "7cd2806ba1c2ea11cd125350363cd56b821c9e08",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4"
+                "php": ">=5.6"
             },
             "conflict": {
                 "microsoft/windowsazure": "<0.4.3"
             },
             "require-dev": {
+                "akeneo/phpspec-skip-example-extension": "~1.2",
                 "amazonwebservices/aws-sdk-for-php": "1.5.*",
-                "aws/aws-sdk-php": "^2.4.12",
+                "aws/aws-sdk-php": "^2.4.12||~3",
                 "doctrine/dbal": ">=2.3",
                 "dropbox-php/dropbox-php": "*",
                 "google/apiclient": "~1.1.3",
-                "herzult/php-ssh": "*",
                 "league/flysystem": "~1.0",
+                "microsoft/azure-storage": "~0.15.0",
+                "microsoft/windowsazure": "~0.4",
                 "mikey179/vfsstream": "~1.2.0",
+                "mongodb/mongodb": "~1.1.4",
                 "phpseclib/phpseclib": "^2.0",
                 "phpspec/phpspec": "~2.4",
                 "phpunit/phpunit": "3.7.*",
                 "rackspace/php-opencloud": "^1.9.2"
             },
             "suggest": {
-                "amazonwebservices/aws-sdk-for-php": "to use the legacy Amazon S3 adapters",
-                "aws/aws-sdk-php": "to use the Amazon S3 adapter",
-                "doctrine/dbal": "to use the Doctrine DBAL adapter",
-                "dropbox-php/dropbox-php": "to use the Dropbox adapter",
-                "ext-apc": "to use the APC adapter",
                 "ext-curl": "*",
                 "ext-fileinfo": "This extension is used to automatically detect the content-type of a file in the AwsS3, OpenCloud, AzureBlogStorage and GoogleCloudStorage adapters",
                 "ext-mbstring": "*",
-                "ext-mongo": "*",
-                "ext-zip": "to use the Zip adapter",
+                "gaufrette/aws-s3-adapter": "to use AwsS3 adapter (supports SDK v2 and v3)",
+                "gaufrette/azure-blob-storage-adapter": "to use AzureBlobStorage adapter",
+                "gaufrette/doctrine-dbal-adapter": "to use DBAL adapter",
+                "gaufrette/flysystem-adapter": "to use Flysystem adapter",
+                "gaufrette/ftp-adapter": "to use Ftp adapter",
+                "gaufrette/gridfs-adapter": "to use GridFS adapter",
+                "gaufrette/in-memory-adapter": "to use InMemory adapter",
+                "gaufrette/local-adapter": "to use Local adapter",
+                "gaufrette/opencloud-adapter": "to use Opencloud adapter",
+                "gaufrette/phpseclib-sftp-adapter": "to use PhpseclibSftp adapter",
+                "gaufrette/zip-adapter": "to use Zip adapter",
                 "google/apiclient": "to use GoogleCloudStorage adapter",
-                "herzult/php-ssh": "to use SFtp adapter",
-                "knplabs/knp-gaufrette-bundle": "to use with Symfony2",
-                "league/flysystem": "to use Flysystem adapters",
-                "microsoft/windowsazure": "to use Microsoft Azure Blob Storage adapter",
-                "phpseclib/phpseclib": "to use PhpseclibSftp adapter",
-                "rackspace/php-opencloud": "to use Opencloud adapter"
+                "knplabs/knp-gaufrette-bundle": "to use with Symfony2"
             },
             "type": "library",
             "extra": {
@@ -4066,7 +4068,7 @@
                 "filesystem",
                 "media"
             ],
-            "time": "2017-03-20T01:23:34+00:00"
+            "time": "2017-06-17T10:37:47+00:00"
         },
         {
             "name": "knplabs/knp-gaufrette-bundle",
@@ -4235,7 +4237,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "KnpLabs",
+                    "name": "Knplabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -5260,16 +5262,16 @@
         },
         {
             "name": "oro/crm",
-            "version": "2.2.1",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/crm.git",
-                "reference": "aa8e22206189e4c637e911095aa8fe68c0dfbf67"
+                "reference": "2b0c032758d1c215f4e65b5b6c3d6525d20441d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/crm/zipball/aa8e22206189e4c637e911095aa8fe68c0dfbf67",
-                "reference": "aa8e22206189e4c637e911095aa8fe68c0dfbf67",
+                "url": "https://api.github.com/repos/orocrm/crm/zipball/2b0c032758d1c215f4e65b5b6c3d6525d20441d4",
+                "reference": "2b0c032758d1c215f4e65b5b6c3d6525d20441d4",
                 "shasum": ""
             },
             "require": {
@@ -5320,7 +5322,7 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/orocrm/crm.git",
-            "time": "2017-06-08T15:14:42+00:00"
+            "time": "2017-06-30T08:11:59+00:00"
         },
         {
             "name": "oro/crm-abandoned-cart",
@@ -5568,16 +5570,16 @@
         },
         {
             "name": "oro/crm-mail-chimp",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCRMMailChimpBundle.git",
-                "reference": "1d9513e6d2e6923353a83e0eb740f61a0b4caddf"
+                "reference": "8fc3f776f24fcac1c3416f5d311af18ba608a0f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMMailChimpBundle/zipball/1d9513e6d2e6923353a83e0eb740f61a0b4caddf",
-                "reference": "1d9513e6d2e6923353a83e0eb740f61a0b4caddf",
+                "url": "https://api.github.com/repos/orocrm/OroCRMMailChimpBundle/zipball/8fc3f776f24fcac1c3416f5d311af18ba608a0f3",
+                "reference": "8fc3f776f24fcac1c3416f5d311af18ba608a0f3",
                 "shasum": ""
             },
             "require": {
@@ -5612,20 +5614,20 @@
             ],
             "description": "OroCRM MailChimp integration",
             "homepage": "https://github.com/orocrm/OroCRMMailChimpBundle.git",
-            "time": "2017-05-31T12:11:04+00:00"
+            "time": "2017-06-29T13:28:10+00:00"
         },
         {
             "name": "oro/crm-task-bundle",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCRMTaskBundle.git",
-                "reference": "87fd51d1347ad7496e1136dc410b81656f6fa87e"
+                "reference": "48dced3d62ce72d10bf03ee67a19ea2a254ae497"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMTaskBundle/zipball/87fd51d1347ad7496e1136dc410b81656f6fa87e",
-                "reference": "87fd51d1347ad7496e1136dc410b81656f6fa87e",
+                "url": "https://api.github.com/repos/orocrm/OroCRMTaskBundle/zipball/48dced3d62ce72d10bf03ee67a19ea2a254ae497",
+                "reference": "48dced3d62ce72d10bf03ee67a19ea2a254ae497",
                 "shasum": ""
             },
             "require": {
@@ -5662,7 +5664,7 @@
                 "Oro",
                 "Task"
             ],
-            "time": "2017-05-31T12:11:04+00:00"
+            "time": "2017-06-27T14:17:56+00:00"
         },
         {
             "name": "oro/crm-zendesk",
@@ -5772,16 +5774,16 @@
         },
         {
             "name": "oro/marketing",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/OroCRMMarketingBundle.git",
-                "reference": "773ba463b3b20f678b3a78736c5d0bbd354584ac"
+                "reference": "1f6499a62f456c67e12c5e6fbf7eeb46ee2eca81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/OroCRMMarketingBundle/zipball/773ba463b3b20f678b3a78736c5d0bbd354584ac",
-                "reference": "773ba463b3b20f678b3a78736c5d0bbd354584ac",
+                "url": "https://api.github.com/repos/orocrm/OroCRMMarketingBundle/zipball/1f6499a62f456c67e12c5e6fbf7eeb46ee2eca81",
+                "reference": "1f6499a62f456c67e12c5e6fbf7eeb46ee2eca81",
                 "shasum": ""
             },
             "require": {
@@ -5817,20 +5819,20 @@
                 "Oro",
                 "Tracking"
             ],
-            "time": "2017-05-31T12:11:04+00:00"
+            "time": "2017-06-27T14:17:56+00:00"
         },
         {
             "name": "oro/platform",
-            "version": "2.2.1",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:orocrm/platform.git",
-                "reference": "b659551378bcfc56af02fc0aa6d60b4c45dc62c9"
+                "reference": "c4b74d46142bcad6910dd69bdacaf262ff0c7af0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/platform/zipball/b659551378bcfc56af02fc0aa6d60b4c45dc62c9",
-                "reference": "b659551378bcfc56af02fc0aa6d60b4c45dc62c9",
+                "url": "https://api.github.com/repos/orocrm/platform/zipball/c4b74d46142bcad6910dd69bdacaf262ff0c7af0",
+                "reference": "c4b74d46142bcad6910dd69bdacaf262ff0c7af0",
                 "shasum": ""
             },
             "require": {
@@ -5978,7 +5980,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/orocrm/platform.git",
-            "time": "2017-06-14T07:44:14+00:00"
+            "time": "2017-06-30T11:43:11+00:00"
         },
         {
             "name": "oro/platform-serialised-fields",
@@ -6744,16 +6746,16 @@
         },
         {
             "name": "seld/jsonlint",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "791f8c594f300d246cdf01c6b3e1e19611e301d8"
+                "reference": "50d63f2858d87c4738d5b76a7dcbb99fa8cf7c77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/791f8c594f300d246cdf01c6b3e1e19611e301d8",
-                "reference": "791f8c594f300d246cdf01c6b3e1e19611e301d8",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/50d63f2858d87c4738d5b76a7dcbb99fa8cf7c77",
+                "reference": "50d63f2858d87c4738d5b76a7dcbb99fa8cf7c77",
                 "shasum": ""
             },
             "require": {
@@ -6789,7 +6791,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2017-03-06T16:42:24+00:00"
+            "time": "2017-06-18T15:11:04+00:00"
         },
         {
             "name": "seld/phar-utils",
@@ -9378,16 +9380,16 @@
         },
         {
             "name": "instaclick/php-webdriver",
-            "version": "1.4.3",
+            "version": "1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/instaclick/php-webdriver.git",
-                "reference": "0c20707dcf30a32728fd6bdeeab996c887fdb2fb"
+                "reference": "6fa959452e774dcaed543faad3a9d1a37d803327"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/0c20707dcf30a32728fd6bdeeab996c887fdb2fb",
-                "reference": "0c20707dcf30a32728fd6bdeeab996c887fdb2fb",
+                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/6fa959452e774dcaed543faad3a9d1a37d803327",
+                "reference": "6fa959452e774dcaed543faad3a9d1a37d803327",
                 "shasum": ""
             },
             "require": {
@@ -9395,7 +9397,8 @@
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "satooshi/php-coveralls": "dev-master"
+                "phpunit/phpunit": "^4.8",
+                "satooshi/php-coveralls": "^1.0||^2.0"
             },
             "type": "library",
             "extra": {
@@ -9421,7 +9424,7 @@
                 {
                     "name": "Anthon Pang",
                     "email": "apang@softwaredevelopment.ca",
-                    "role": "Fork maintainer"
+                    "role": "Fork Maintainer"
                 }
             ],
             "description": "PHP WebDriver for Selenium 2",
@@ -9432,7 +9435,7 @@
                 "webdriver",
                 "webtest"
             ],
-            "time": "2015-06-15T20:19:33+00:00"
+            "time": "2017-06-30T04:02:48+00:00"
         },
         {
             "name": "johnkary/phpunit-speedtrap",
@@ -10198,16 +10201,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.20",
+            "version": "5.7.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3cb94a5f8c07a03c8b7527ed7468a2926203f58b"
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3cb94a5f8c07a03c8b7527ed7468a2926203f58b",
-                "reference": "3cb94a5f8c07a03c8b7527ed7468a2926203f58b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3b91adfb64264ddec5a2dee9851f354aa66327db",
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db",
                 "shasum": ""
             },
             "require": {
@@ -10276,7 +10279,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-05-22T07:42:55+00:00"
+            "time": "2017-06-21T08:11:54+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -11202,16 +11205,16 @@
         },
         {
             "name": "theseer/fdomdocument",
-            "version": "1.6.5",
+            "version": "1.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/theseer/fDOMDocument.git",
-                "reference": "8dcfd392135a5bd938c3c83ea71419501ad9855d"
+                "reference": "6e8203e40a32a9c770bcb62fe37e68b948da6dca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/theseer/fDOMDocument/zipball/8dcfd392135a5bd938c3c83ea71419501ad9855d",
-                "reference": "8dcfd392135a5bd938c3c83ea71419501ad9855d",
+                "url": "https://api.github.com/repos/theseer/fDOMDocument/zipball/6e8203e40a32a9c770bcb62fe37e68b948da6dca",
+                "reference": "6e8203e40a32a9c770bcb62fe37e68b948da6dca",
                 "shasum": ""
             },
             "require": {
@@ -11238,7 +11241,7 @@
             ],
             "description": "The classes contained within this repository extend the standard DOM to use exceptions at all occasions of errors instead of PHP warnings or notices. They also add various custom methods and shortcuts for convenience and to simplify the usage of DOM.",
             "homepage": "https://github.com/theseer/fDOMDocument",
-            "time": "2017-04-21T14:50:31+00:00"
+            "time": "2017-06-30T11:53:12+00:00"
         },
         {
             "name": "webmozart/assert",
