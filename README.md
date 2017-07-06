@@ -22,17 +22,9 @@ where x.y.z is the latest [release tag](https://github.com/orocrm/crm-applicatio
 ```
 
 
-- Install [Composer][3] globally following the  official Composer [installation documentation][4]
-and install [fxpio/composer-asset-plugin][5] plugin for it:
+- Install [Composer][3] globally following the  official Composer [installation documentation][4].
 
-```bash
-    composer self-update
-    composer global require "fxp/composer-asset-plugin"
-```
-**Note:** This is a temporary solution.  After plugin version 1.3.0 is released, the requirement will be changed to version 1.3
-([see related issue](https://github.com/fxpio/composer-asset-plugin/issues/277#issuecomment-282745055)).
-
-- Install [Node.js][6].
+- Install [Node.js][5].
 
 - Install application dependencies running the following command from the application folder:
 
@@ -48,7 +40,7 @@ and install [fxpio/composer-asset-plugin][5] plugin for it:
 php app/console oro:install --env=prod
 ```
 
-- Configure the Web Socket server process and the Message Queue consumer process in [Supervisor][7]:
+- Configure the Web Socket server process and the Message Queue consumer process in [Supervisor][6]:
 
 ```ini
 
@@ -113,13 +105,12 @@ See [Symfony Performance](http://symfony.com/doc/current/performance.html)
 
 ## Using Redis for application caching
 
-To use Redis for application caching, follow the corresponding [configuration instructions][8]
+To use Redis for application caching, follow the corresponding [configuration instructions][7]
 
 [1]:    https://github.com/orocrm/crm
 [2]:    https://www.orocrm.com/documentation/index/current/system-requirements
 [3]:    https://getcomposer.org/
 [4]:    https://getcomposer.org/download/
-[5]:    https://github.com/fxpio/composer-asset-plugin/blob/master/Resources/doc/index.md
-[6]:    https://nodejs.org/en/download/package-manager/
-[7]:    http://supervisord.org/
-[8]:    https://github.com/orocrm/redis-config#configuration
+[5]:    https://nodejs.org/en/download/package-manager/
+[6]:    http://supervisord.org/
+[7]:    https://github.com/orocrm/redis-config#configuration
