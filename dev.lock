@@ -917,22 +917,6 @@
             "type": "bower-asset"
         },
         {
-            "name": "bower-asset/uniform",
-            "version": "v2.1.1",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:AudithSoftworks/Uniform.git",
-                "reference": "3e9cd85965c930a6bec28385ad5e65daf8bb3fb5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/AudithSoftworks/Uniform/zipball/3e9cd85965c930a6bec28385ad5e65daf8bb3fb5",
-                "reference": "3e9cd85965c930a6bec28385ad5e65daf8bb3fb5",
-                "shasum": null
-            },
-            "type": "bower-asset"
-        },
-        {
             "name": "bower-asset/when",
             "version": "2.4.0",
             "source": {
@@ -4629,6 +4613,37 @@
             "type": "npm-asset"
         },
         {
+            "name": "npm-asset/jquery",
+            "version": "1.12.4",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/jquery/-/jquery-1.12.4.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "npm-asset/jquery.uniform",
+            "version": "4.2.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/jquery.uniform/-/jquery.uniform-4.2.0.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "npm-asset/jquery": ">=1.6.0,<2.0.0"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
             "name": "npm-asset/requirejs",
             "version": "2.3.3",
             "dist": {
@@ -5264,7 +5279,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "eac71166c28afd86cee6e4fa7db6fb3b4d42d05e",
+                "reference": "1c9b7c9a37b221c78d6abfca33f1c244ba288d98",
                 "shasum": null
             },
             "require": {
@@ -5305,7 +5320,6 @@
                 "bower-asset/text": "2.0.*",
                 "bower-asset/timepicker": "1.11.*",
                 "bower-asset/underscore": "1.8.3",
-                "bower-asset/uniform": "2.1.1",
                 "bower-asset/when": "2.4.0",
                 "brick/math": "0.5.*",
                 "components/jquery": "3.1.*",
@@ -5350,6 +5364,7 @@
                 "nesbot/carbon": "1.21.*",
                 "npm-asset/bootbox": "4.1.0",
                 "npm-asset/bootstrap": "3.0.3",
+                "npm-asset/jquery.uniform": "4.2.0",
                 "npm-asset/requirejs": "2.3.*",
                 "npm-asset/xregexp": "3.2.*",
                 "ocramius/proxy-manager": "0.5.*",
@@ -9833,16 +9848,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.4.3",
+            "version": "3.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "3ab72b65b39b491e0c011e2e09bb2206c2aa8e24"
+                "reference": "a23b761686d50a560cc56233b9ecf49597cc9118"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/3ab72b65b39b491e0c011e2e09bb2206c2aa8e24",
-                "reference": "3ab72b65b39b491e0c011e2e09bb2206c2aa8e24",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/a23b761686d50a560cc56233b9ecf49597cc9118",
+                "reference": "a23b761686d50a560cc56233b9ecf49597cc9118",
                 "shasum": ""
             },
             "require": {
@@ -9888,7 +9903,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-12-08T20:27:08+00:00"
+            "time": "2017-06-30T09:13:00+00:00"
         },
         {
             "name": "phpunit/phpunit-selenium",
@@ -10692,16 +10707,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.2.9",
+            "version": "v3.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "038abe00bcbe7e7fc9854f2b0f3eb6606ccdeab7"
+                "reference": "9e5c470da4b1e3e9cd8e29fecbd7c91eb961d15f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/038abe00bcbe7e7fc9854f2b0f3eb6606ccdeab7",
-                "reference": "038abe00bcbe7e7fc9854f2b0f3eb6606ccdeab7",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/9e5c470da4b1e3e9cd8e29fecbd7c91eb961d15f",
+                "reference": "9e5c470da4b1e3e9cd8e29fecbd7c91eb961d15f",
                 "shasum": ""
             },
             "require": {
@@ -10750,7 +10765,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2017-05-21T17:48:56+00:00"
+            "time": "2017-06-02T09:43:35+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
