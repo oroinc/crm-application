@@ -3,11 +3,11 @@
 This is an example of a fully functional [OroCRM][1] application which can be used as is or customized to meet
 your business needs.
 
-## System Requirements
+### System Requirements
 
 Before starting the installation process, please prepare infrastructure environment based on the [system requirements][2]. 
 
-## Installation
+### Installation
 
 - Clone OroCRM application repository:
 
@@ -103,9 +103,13 @@ opcache.interned_strings_buffer=32
 See [Symfony Performance](http://symfony.com/doc/current/performance.html)
 
 
-## Using Redis for application caching
+### Using Redis for application caching
 
 To use Redis for application caching, follow the corresponding [configuration instructions][7]
+
+### License
+ 
+[OSL-3.0][8] Copyright (c) 2013 - 2017, Oro, Inc.
 
 [1]:    https://github.com/orocrm/crm
 [2]:    https://www.orocrm.com/documentation/index/current/system-requirements
@@ -114,3 +118,4 @@ To use Redis for application caching, follow the corresponding [configuration in
 [5]:    https://nodejs.org/en/download/package-manager/
 [6]:    http://supervisord.org/
 [7]:    https://github.com/orocrm/redis-config#configuration
+[8]:    LICENSE
