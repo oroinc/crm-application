@@ -15,17 +15,26 @@
     {
       "type": "composer",
       "url": "https://packagist.orocrm.com"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.orocrm.com"
     }
   ],
   "require": {
-    "oro/crm": "1.x-dev",
-    "oro/platform-serialised-fields": "1.x-dev",
-    "oro/crm-hangouts-call-bundle": "1.x-dev",
-    "oro/crm-abandoned-cart": "1.x-dev",
-    "oro/crm-magento-embedded-contact-us": "1.x-dev",
-    "oro/crm-mail-chimp": "1.x-dev",
-    "oro/crm-dotmailer": "1.x-dev",
-    "oro/crm-zendesk": "1.x-dev"
+    "oro/crm": "2.x-dev",
+    "oro/platform": "2.x-dev",
+    "oro/crm-task-bundle": "2.x-dev",
+    "oro/crm-call-bundle": "2.x-dev",
+    "oro/calendar-bundle": "2.x-dev",
+    "oro/marketing": "2.x-dev",
+    "oro/platform-serialised-fields": "2.x-dev",
+    "oro/crm-hangouts-call-bundle": "2.x-dev",
+    "oro/crm-abandoned-cart": "2.x-dev",
+    "oro/crm-magento-embedded-contact-us": "2.x-dev",
+    "oro/crm-mail-chimp": "2.x-dev",
+    "oro/crm-dotmailer": "2.x-dev",
+    "oro/crm-zendesk": "2.x-dev"
   },
   "require-dev": {
     "sensio/generator-bundle": "3.1.2",
@@ -40,21 +49,20 @@
     "mybuilder/phpunit-accelerator": "1.2.*",
     "squizlabs/php_codesniffer": "2.8.*",
     "phpmd/phpmd": "2.6.*",
-    "sebastian/phpcpd": "2.0.*"
+    "sebastian/phpcpd": "dev-master#cff7f36c2ae89d59987de25d14fd41a72dd4a703 as 3.1.0",
+    "phpunit/phpcov": "3.1.*",
+    "symfony/phpunit-bridge": "3.2.*",
+    "friendsofphp/php-cs-fixer": "2.1.*"
   },
   "config": {
     "component-dir": "web/bundles/components",
     "bin-dir": "bin",
     "fxp-asset": {
-      "asset-installer-paths": {
-        "npm-asset-library": "web/bundles/npmassets",
-        "bower-asset-library": "web/bundles/bowerassets"
-      }
+      "enabled": false
     }
   },
   "scripts": {
     "post-install-cmd": [
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::checkComposerPlugin",
       "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
@@ -63,7 +71,6 @@
       "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
     ],
     "post-update-cmd": [
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::checkComposerPlugin",
       "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
       "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
@@ -78,11 +85,34 @@
     "symfony-app-dir": "app",
     "symfony-web-dir": "web",
     "incenteev-parameters": {
-      "file": "app/config/parameters.yml"
-    },
-    "asset-installer-paths": {
-      "npm-asset-library": "web/bundles/npmassets",
-      "bower-asset-library": "web/bundles/bowerassets"
+      "file": "app/config/parameters.yml",
+      "env-map": {
+        "database_driver": "ORO_DB_DRIVER",
+        "database_host": "ORO_DB_HOST",
+        "database_port": "ORO_DB_PORT",
+        "database_name": "ORO_DB_NAME",
+        "database_user": "ORO_DB_USER",
+        "database_password": "ORO_DB_PASSWORD",
+        "mailer_transport": "ORO_MAILER_TRANSPORT",
+        "mailer_host": "ORO_MAILER_HOST",
+        "mailer_port": "ORO_MAILER_PORT",
+        "mailer_encryption": "ORO_MAILER_ENCRYPTION",
+        "mailer_user": "ORO_MAILER_USER",
+        "mailer_password": "ORO_MAILER_PASSWORD",
+        "websocket_bind_address": "ORO_WS_BIND_ADDRESS",
+        "websocket_bind_port": "ORO_WS_BIND_PORT",
+        "websocket_frontend_host": "ORO_WS_FRONTEND_HOST",
+        "websocket_frontend_port": "ORO_WS_FRONTEND_PORT",
+        "websocket_backend_host": "ORO_WS_BACKEND_HOST",
+        "websocket_backend_port": "ORO_WS_BACKEND_PORT",
+        "web_backend_prefix": "ORO_WEB_BACKEND_PREFIX",
+        "session_handler": "ORO_SESSION_HANDLER",
+        "locale": "ORO_LOCALE",
+        "secret": "ORO_SECRET",
+        "installed": "ORO_INSTALLED",
+        "message_queue_transport": "ORO_MQ_TRANSPORT",
+        "message_queue_transport_config": "ORO_MQ_TRANSPORT_CONFIG"
+      }
     }
   }
 }

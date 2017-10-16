@@ -2,25 +2,28 @@
 
 require_once __DIR__ . '/SymfonyRequirements.php';
 
-use Symfony\Component\Process\ProcessBuilder;
-use Symfony\Component\Intl\Intl;
-
 use Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder;
 use Oro\Bundle\RequireJSBundle\DependencyInjection\Configuration as RequireJSConfiguration;
+
+use Symfony\Component\Intl\Intl;
+use Symfony\Component\Process\ProcessBuilder;
 
 /**
  * This class specifies all requirements and optional recommendations that are necessary to run the Oro Application.
  */
 class OroRequirements extends SymfonyRequirements
 {
-    const REQUIRED_PHP_VERSION  = '5.6';
+    const REQUIRED_PHP_VERSION  = '7.0';
     const REQUIRED_GD_VERSION   = '2.0';
     const REQUIRED_CURL_VERSION = '7.0';
     const REQUIRED_ICU_VERSION  = '3.8';
 
-    const EXCLUDE_REQUIREMENTS_MASK = '/5\.[0-5]\./';
+    const EXCLUDE_REQUIREMENTS_MASK = '/5\.[0-6]/';
 
-    public function __construct()
+    /**
+     * @param string $env
+     */
+    public function __construct($env = 'prod')
     {
         parent::__construct();
 
@@ -89,6 +92,19 @@ class OroRequirements extends SymfonyRequirements
             'Install and enable the <strong>Tidy</strong> extension.'
         );
 
+        $tmpDir = sys_get_temp_dir();
+        $this->addRequirement(
+            is_writable($tmpDir),
+            sprintf('%s (sys_get_temp_dir()) directory must be writable', $tmpDir),
+            sprintf(
+                'Change the permissions of the "<strong>%s</strong>" directory ' .
+                'or the result of <string>sys_get_temp_dir()</string> ' .
+                'or add the path to php <strong>open_basedir</strong> list. ' .
+                'So that it would be writable.',
+                $tmpDir
+            )
+        );
+
         // Windows specific checks
         if (defined('PHP_WINDOWS_VERSION_BUILD')) {
             $this->addRecommendation(
@@ -131,19 +147,6 @@ class OroRequirements extends SymfonyRequirements
             $this->add($requirement);
         }
 
-        $tmpDir = sys_get_temp_dir();
-        $this->addRequirement(
-            is_writable($tmpDir),
-            sprintf('%s (sys_get_temp_dir()) directory must be writable', $tmpDir),
-            sprintf(
-                'Change the permissions of the "<strong>%s</strong>" directory ' .
-                'or the result of <string>sys_get_temp_dir()</string> ' .
-                'or add the path to php <strong>open_basedir</strong> list. ' .
-                'So that it would be writable.',
-                $tmpDir
-            )
-        );
-
         $baseDir = realpath(__DIR__ . '/..');
         $mem     = $this->getBytes(ini_get('memory_limit'));
 
@@ -184,6 +187,11 @@ class OroRequirements extends SymfonyRequirements
             is_writable($baseDir . '/app/attachment'),
             'app/attachment/ directory must be writable',
             'Change the permissions of the "<strong>app/attachment/</strong>" directory so that the web server can write into it.'
+        );
+        $this->addOroRequirement(
+            is_writable($baseDir . '/app/import_export'),
+            'app/import_export/ directory must be writable',
+            'Change the permissions of the "<strong>app/import_export/</strong>" directory so that the web server can write into it.'
         );
 
         if (is_dir($baseDir . '/web/js')) {
@@ -327,7 +335,7 @@ class OroRequirements extends SymfonyRequirements
     }
 
     /**
-     *  {@inheritdoc}
+     * {@inheritdoc}
      */
     public function getRequirements()
     {
@@ -344,7 +352,7 @@ class OroRequirements extends SymfonyRequirements
     }
 
     /**
-     *  {@inheritdoc}
+     * {@inheritdoc}
      */
     public function getRecommendations()
     {
