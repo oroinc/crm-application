@@ -3939,16 +3939,16 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "5.2.5",
+            "version": "5.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "0d4fda8efdf216ade084a7f0aad5637572ce9835"
+                "reference": "d283e11b6e14c6f4664cf080415c4341293e5bbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/0d4fda8efdf216ade084a7f0aad5637572ce9835",
-                "reference": "0d4fda8efdf216ade084a7f0aad5637572ce9835",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/d283e11b6e14c6f4664cf080415c4341293e5bbd",
+                "reference": "d283e11b6e14c6f4664cf080415c4341293e5bbd",
                 "shasum": ""
             },
             "require": {
@@ -4001,7 +4001,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2017-10-10T13:22:37+00:00"
+            "time": "2017-10-21T13:15:38+00:00"
         },
         {
             "name": "knplabs/gaufrette",
@@ -5260,16 +5260,16 @@
         },
         {
             "name": "oro/crm",
-            "version": "2.0.23",
+            "version": "2.0.24",
             "source": {
                 "type": "git",
                 "url": "git@github.com:oroinc/crm.git",
-                "reference": "aecf3f33118ffef8b5e36a06b544e57e88f94189"
+                "reference": "22ac096811bdb24d4a862cfa527caedf3bfa331b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/crm/zipball/aecf3f33118ffef8b5e36a06b544e57e88f94189",
-                "reference": "aecf3f33118ffef8b5e36a06b544e57e88f94189",
+                "url": "https://api.github.com/repos/oroinc/crm/zipball/22ac096811bdb24d4a862cfa527caedf3bfa331b",
+                "reference": "22ac096811bdb24d4a862cfa527caedf3bfa331b",
                 "shasum": ""
             },
             "require": {
@@ -5317,7 +5317,7 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/oroinc/crm.git",
-            "time": "2017-10-13T23:28:43+00:00"
+            "time": "2017-10-23T23:40:27+00:00"
         },
         {
             "name": "oro/crm-abandoned-cart",
@@ -5800,16 +5800,16 @@
         },
         {
             "name": "oro/platform",
-            "version": "2.0.25",
+            "version": "2.0.26",
             "source": {
                 "type": "git",
                 "url": "git@github.com:oroinc/platform.git",
-                "reference": "6a2afca0f9d96251f3c404dc58636cec5ca25ba6"
+                "reference": "5de6112d1f8f62e5cb822db4cefea39cafafb851"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/platform/zipball/6a2afca0f9d96251f3c404dc58636cec5ca25ba6",
-                "reference": "6a2afca0f9d96251f3c404dc58636cec5ca25ba6",
+                "url": "https://api.github.com/repos/oroinc/platform/zipball/5de6112d1f8f62e5cb822db4cefea39cafafb851",
+                "reference": "5de6112d1f8f62e5cb822db4cefea39cafafb851",
                 "shasum": ""
             },
             "require": {
@@ -5952,7 +5952,7 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/oroinc/platform.git",
-            "time": "2017-10-19T13:25:58+00:00"
+            "time": "2017-10-23T16:07:20+00:00"
         },
         {
             "name": "oro/platform-serialised-fields",
@@ -9507,37 +9507,40 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.6.1",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102"
+                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/8e6e04167378abf1ddb4d3522d8755c5fd90d102",
-                "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
+                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
-                "doctrine/collections": "1.*",
-                "phpunit/phpunit": "~4.1"
+                "doctrine/collections": "^1.0",
+                "doctrine/common": "^2.6",
+                "phpunit/phpunit": "^4.1"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "DeepCopy\\": "src/DeepCopy/"
-                }
+                },
+                "files": [
+                    "src/DeepCopy/deep_copy.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Create deep copies (clones) of your objects",
-            "homepage": "https://github.com/myclabs/DeepCopy",
             "keywords": [
                 "clone",
                 "copy",
@@ -9545,7 +9548,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-04-12T18:52:22+00:00"
+            "time": "2017-10-19T19:58:43+00:00"
         },
         {
             "name": "nelmio/alice",
