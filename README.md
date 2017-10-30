@@ -13,21 +13,6 @@ your business needs.
 System Requirements
 -------------------
 
-OroCRM is a Symfony-based application with the following requirements:
-
-* PHP 7.0 or above
-* Command line interface
-* PHP Extensions
-    * GD
-    * Mcrypt
-    * JSON
-    * ctype
-    * Tokenizer
-    * SimpleXML
-    * PCRE
-    * ICU
-* MySQL 5.1 or above
-
 Please see the OroCRM online documentation for the complete list of [system requirements](https://www.orocrm.com/documentation/current/system-requirements).
 
 Installation
