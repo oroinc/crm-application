@@ -13,12 +13,12 @@ your business needs.
 System Requirements
 -------------------
 
-Please see the OroCRM online documentation for the complete list of [system requirements](https://www.orocrm.com/documentation/current/system-requirements).
+Please see the OroCRM online documentation for the complete list of [system requirements](https://oroinc.com/doc/orocrm/current/system-requirements).
 
 Installation
 ------------
 
-Please see the [Quick Start Installation Hints for OroCRM Community Edition](https://www.orocrm.com/documentation/current/install-upgrade/installation-quick-start-dev/crm) or refer to the online [OroCRM Installation Guide](https://www.orocrm.com/documentation/current/install-upgrade) for the detailed installation steps.
+Please see the [Quick Start Installation Hints for OroCRM Community Edition](https://oroinc.com/doc/orocrm/current/install-upgrade/installation-quick-start-dev/crm) or refer to the online [OroCRM Installation Guide](https://oroinc.com/doc/orocrm/current/install-upgrade) for the detailed installation steps.
 
 License
 -------
