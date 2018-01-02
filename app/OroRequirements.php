@@ -62,6 +62,16 @@ class OroRequirements extends SymfonyRequirements
             'Install and enable the <strong>Mcrypt</strong> extension.'
         );
 
+        if (function_exists('iconv')) {
+            $this->addOroRequirement(
+                false !== @iconv('utf-8', 'ascii//TRANSLIT', 'check string'),
+                'iconv() must not return the false result on converting string "check string"',
+                'Check the configuration of the <strong>iconv</strong> extension, '
+                . 'as it may have been configured incorrectly'
+                . ' (iconv(\'utf-8\', \'ascii//TRANSLIT\', \'check string\') must not return false).'
+            );
+        }
+
         $this->addOroRequirement(
             class_exists('Locale'),
             'intl extension should be available',
