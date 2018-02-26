@@ -353,9 +353,11 @@ class OroRequirements extends SymfonyRequirements
         $requirements = parent::getRequirements();
 
         foreach ($requirements as $key => $requirement) {
-            $testMessage = $requirement->getTestMessage();
-            if (preg_match_all(self::EXCLUDE_REQUIREMENTS_MASK, $testMessage, $matches)) {
-                unset($requirements[$key]);
+            if (!$requirement instanceof OroRequirement) {
+                $testMessage = $requirement->getTestMessage();
+                if (preg_match_all(self::EXCLUDE_REQUIREMENTS_MASK, $testMessage, $matches)) {
+                    unset($requirements[$key]);
+                }
             }
         }
 
