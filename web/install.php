@@ -1,5 +1,5 @@
 <?php
-
+// @codingStandardsIgnoreFile
 if (!isset($_SERVER['HTTP_HOST'])) {
     exit('This script cannot be run from the CLI. Run it from a browser.');
 }
@@ -16,7 +16,7 @@ require_once __DIR__ . '/../app/autoload.php';
 $paramFile = __DIR__ . '/../app/config/parameters.yml';
 
 if (file_exists($paramFile)) {
-    $data = Yaml::parse($paramFile);
+    $data = Yaml::parse(file_get_contents($paramFile));
 
     if (is_array($data)
         && isset($data['parameters']['installed'])

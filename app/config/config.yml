@@ -14,14 +14,14 @@ framework:
     validation:      { enable_annotations: true }
     templating:
         engines: ['twig', 'php']
-        assets_version: %assets_version%
-        assets_version_format: %%s?version=%%s
+        assets_version: "%assets_version%"
+        assets_version_format: "%%s?version=%%s"
     default_locale:           "%locale%"
     trusted_proxies:          ~
     session:
         name:                 CRMID
-        handler_id:           %session_handler%
-        save_path:            %kernel.root_dir%/cache/sessions
+        handler_id:           "%session_handler%"
+        save_path:            "%kernel.root_dir%/cache/sessions"
         gc_maxlifetime:       3600
         cookie_httponly:      true
     fragments:
@@ -34,7 +34,7 @@ framework:
 twig:
     debug:                    "%kernel.debug%"
     strict_variables:         "%kernel.debug%"
-    exception_controller:     "FOS\RestBundle\Controller\ExceptionController::showAction"
+    exception_controller:     "FOS\\RestBundle\\Controller\\ExceptionController::showAction"
     globals:
         bap:
             layout:           ::base.html.twig  # default layout across all Oro bundles
@@ -46,11 +46,11 @@ assetic:
     filters:
         cssrewrite: ~
         lessphp:
-            file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
-            apply_to: "\.less$"
+            file: "%kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php"
+            apply_to: '\.less$'
             paths: ["%kernel.root_dir%/../web/bundles"]
         cssmin:
-            file: %kernel.root_dir%/Resources/php/cssmin-v3.0.1.php
+            file: "%kernel.root_dir%/Resources/php/cssmin-v3.0.1.php"
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -106,12 +106,12 @@ a2lix_translation_form:
 
 lexik_maintenance:
     authorized:
-        path:                 "maintenance|.*\.js"             # "maintenance" is only for demo purposes, remove in production!
+        path:                 'maintenance|.*\.js'             # "maintenance" is only for demo purposes, remove in production!
 #        ips:                  ["127.0.0.1"]                   # Optional. Authorized ip addresses
     driver:
         class:                Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver
         options:
-            file_path:        %kernel.root_dir%/cache/maintenance_lock
+            file_path:        "%kernel.root_dir%/cache/maintenance_lock"
 
 #
 # ORO Bundles config
