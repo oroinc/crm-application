@@ -1,4 +1,5 @@
 <?php
+// @codingStandardsIgnoreFile
 
 require_once __DIR__ . '/SymfonyRequirements.php';
 
@@ -13,12 +14,12 @@ use Symfony\Component\Process\ProcessBuilder;
  */
 class OroRequirements extends SymfonyRequirements
 {
-    const REQUIRED_PHP_VERSION  = '7.0';
+    const REQUIRED_PHP_VERSION  = '7.1';
     const REQUIRED_GD_VERSION   = '2.0';
     const REQUIRED_CURL_VERSION = '7.0';
     const REQUIRED_ICU_VERSION  = '3.8';
 
-    const EXCLUDE_REQUIREMENTS_MASK = '/5\.[0-6]/';
+    const EXCLUDE_REQUIREMENTS_MASK = '/5\.[0-6]|7\.0/';
 
     /**
      * @param string $env
@@ -352,9 +353,11 @@ class OroRequirements extends SymfonyRequirements
         $requirements = parent::getRequirements();
 
         foreach ($requirements as $key => $requirement) {
-            $testMessage = $requirement->getTestMessage();
-            if (preg_match_all(self::EXCLUDE_REQUIREMENTS_MASK, $testMessage, $matches)) {
-                unset($requirements[$key]);
+            if (!$requirement instanceof OroRequirement) {
+                $testMessage = $requirement->getTestMessage();
+                if (preg_match_all(self::EXCLUDE_REQUIREMENTS_MASK, $testMessage, $matches)) {
+                    unset($requirements[$key]);
+                }
             }
         }
 

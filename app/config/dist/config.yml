@@ -1,5 +1,5 @@
 imports:
-    - { resource: @OroDistributionBundle/Resources/config/security.yml }
+    - { resource: '@OroDistributionBundle/Resources/config/security.yml' }
     - { resource: ../parameters.yml }
 
 framework:
@@ -17,8 +17,8 @@ framework:
     trusted_proxies:          ~
     session:
         name:                 BAPID_DIST
-        handler_id:           %session_handler%
-        save_path:            %kernel.root_dir%/cache/sessions
+        handler_id:           "%session_handler%"
+        save_path:            "%kernel.root_dir%/cache/sessions"
         gc_maxlifetime:       3600
         cookie_httponly:      true
     fragments:
@@ -32,10 +32,10 @@ assetic:
     filters:
         cssrewrite: ~
         lessphp:
-            file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
-            apply_to: "\.less$"
+            file: "%kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php"
+            apply_to: '\.less$'
         cssmin:
-            file: %kernel.root_dir%/Resources/php/cssmin-v3.0.1.php
+            file: "%kernel.root_dir%/Resources/php/cssmin-v3.0.1.php"
 
 # Doctrine Configuration
 doctrine:
@@ -63,13 +63,13 @@ lexik_maintenance:
     driver:
         class:                Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver
         options:
-            file_path:        %kernel.root_dir%/cache/maintenance_lock
+            file_path:        "%kernel.root_dir%/cache/maintenance_lock"
 
 services:
     oro.cache.abstract:
         abstract:             true
         class:                Doctrine\Common\Cache\PhpFileCache
-        arguments:            [%kernel.cache_dir%/dist]
+        arguments:            ["%kernel.cache_dir%/dist"]
     twig.extension.intl:
          class:               Twig_Extensions_Extension_Intl
          tags:
@@ -88,5 +88,5 @@ monolog:
     handlers:
         oro_distribution:
             type: stream
-            path: %kernel.logs_dir%/%kernel.environment%.distribution.log
+            path: "%kernel.logs_dir%/%kernel.environment%.distribution.log"
             channels: oro_distribution
