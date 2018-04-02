@@ -60,7 +60,7 @@
     <php>
         <env name="SYMFONY_ENV" value="test"/>
         <env name="SYMFONY_DEBUG" value="0"/>
-        <env name="SYMFONY_DEPRECATIONS_HELPER" value="/UniversalClassLoader|PropertyAccess::getPropertyAccessor|Crawler|HttpKernel|EventDispatcher|Console|FormTypeInterface::setDefaultOptions|DependencyInjection|ResourceInterface::getResource|FrameworkBundle|Bridge\\Doctrine/" />
+       <env name="SYMFONY_DEPRECATIONS_HELPER" value='/UniversalClassLoader|PropertyAccess::getPropertyAccessor|Crawler|HttpKernel|EventDispatcher|Console|FormTypeInterface::setDefaultOptions|DependencyInjection|ResourceInterface::getResource|FrameworkBundle|entry_options|Component\\Validator\\(?!ConstraintViolationInterface|ExecutionContextInterface|ValidatorInterface)|Bridge\\Twig|Yaml|HttpFoundation\\(Request::get|ParameterBag::get)|NumericNodeDefinition::cannotBeEmpty|"precision"|\\CsrfProviderInterface|\\SimpleChoiceList|getErrorsAsString|"deep".*Valid|OptionsResolver|Bridge\\Doctrine/' />
         <ini name="error_reporting" value="-1"/>
         <ini name="memory_limit" value="-1"/>
         <server name="KERNEL_DIR" value="app/"/>
