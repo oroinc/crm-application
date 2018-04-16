@@ -9,7 +9,7 @@
       "app/AppKernel.php",
       "app/AppCache.php"
     ],
-    "exclude-from-classmap": ["**/Tests/"]
+    "exclude-from-classmap": ["**/Tests/", "vendor/symfony/symfony/src/Symfony/Component/Debug"]
   },
   "repositories": [
     {
@@ -40,7 +40,8 @@
     "oro/crm-dotmailer": "2.x-dev",
     "oro/crm-zendesk": "2.x-dev",
     "oro/redis-config": "2.x-dev",
-    "symfony/security-acl": "^3.0"
+    "symfony/security-acl": "^3.0",
+    "symfony/debug": "^3.4"
   },
   "require-dev": {
     "sensio/generator-bundle": "3.1.2",
