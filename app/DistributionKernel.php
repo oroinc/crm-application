@@ -1,9 +1,9 @@
 <?php
 
+use Oro\Bundle\DistributionBundle\OroKernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
-use Symfony\Component\HttpKernel\Kernel;
 
-class DistributionKernel extends Kernel
+class DistributionKernel extends OroKernel
 {
     /**
      * {@inheritdoc}
