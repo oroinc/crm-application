@@ -7,6 +7,9 @@ atlassian-ide-plugin.xml
 composer.phar
 composer.lock
 behat.yml
+/var/
+!var/cache/.gitkeep
+!var/logs/.gitkeep
 /vendor
 build/
 /cov
@@ -26,7 +29,8 @@ build/
 !app/logs/.gitkeep
 behat.yml
 *~
-bin
+bin/*
+!bin/console
 phpunit.xml
 /app/SymfonyRequirements.php
 /web/uploads/behat
