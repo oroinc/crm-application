@@ -5,6 +5,7 @@
   "license": "OSL-3.0",
   "autoload": {
     "psr-4": {"": "src/"},
+    "files": ["app/AppKernel.php"],
     "classmap": ["vendor/oro/platform/src/Oro/Bundle/FormBundle/Form/FormRegistry.php"],
     "exclude-from-classmap": ["/vendor/symfony/symfony/src/Symfony/Component/Form/FormRegistry.php", "**/Tests/"]
   },
@@ -89,6 +90,9 @@
   "extra": {
     "symfony-app-dir": "app",
     "symfony-web-dir": "web",
+    "symfony-var-dir": "var",
+    "symfony-bin-dir": "bin",
+    "symfony-tests-dir": "tests",
     "incenteev-parameters": {
       "file": "app/config/parameters.yml",
       "env-map": {
