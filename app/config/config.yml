@@ -21,7 +21,7 @@ framework:
     session:
         name:                 CRMID
         handler_id:           "%session_handler%"
-        save_path:            "%kernel.root_dir%/cache/sessions"
+        save_path:            '%kernel.root_dir%/../var/sessions/%kernel.environment%'
         gc_maxlifetime:       3600
         cookie_httponly:      true
     fragments:
@@ -111,7 +111,7 @@ lexik_maintenance:
     driver:
         class:                Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver
         options:
-            file_path:        "%kernel.root_dir%/cache/maintenance_lock"
+            file_path:        %kernel.root_dir%/../var/cache/maintenance_lock
 
 #
 # ORO Bundles config
