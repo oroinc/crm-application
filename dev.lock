@@ -492,7 +492,7 @@
             "version": "3.1.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jquery/jquery-dist.git",
+                "url": "https://github.com/jquery/jquery-dist.git",
                 "reference": "1b30f3ad466ebf2714d47eda34dbd7fdf6849fe3"
             },
             "dist": {
@@ -680,22 +680,6 @@
             "license": [
                 "MIT/GPL2"
             ]
-        },
-        {
-            "name": "bower-asset/less",
-            "version": "v2.5.3",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:less/less.git",
-                "reference": "33fa72767e7474f3aedbbff83d8343217c08f58a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/less/less/zipball/33fa72767e7474f3aedbbff83d8343217c08f58a",
-                "reference": "33fa72767e7474f3aedbbff83d8343217c08f58a",
-                "shasum": null
-            },
-            "type": "bower-asset"
         },
         {
             "name": "bower-asset/lightgallery",
@@ -1300,16 +1284,16 @@
         },
         {
             "name": "composer/spdx-licenses",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/spdx-licenses.git",
-                "reference": "7e111c50db92fa2ced140f5ba23b4e261bc77a30"
+                "reference": "cb17687e9f936acd7e7245ad3890f953770dec1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/7e111c50db92fa2ced140f5ba23b4e261bc77a30",
-                "reference": "7e111c50db92fa2ced140f5ba23b4e261bc77a30",
+                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/cb17687e9f936acd7e7245ad3890f953770dec1b",
+                "reference": "cb17687e9f936acd7e7245ad3890f953770dec1b",
                 "shasum": ""
             },
             "require": {
@@ -1357,7 +1341,7 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2018-01-31T13:17:27+00:00"
+            "time": "2018-04-30T10:33:04+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -3912,47 +3896,6 @@
             "time": "2018-03-19T10:34:40+00:00"
         },
         {
-            "name": "leafo/lessphp",
-            "version": "v0.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/leafo/lessphp.git",
-                "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/leafo/lessphp/zipball/51f3f06f0fe78a722dabfd14578444bdd078d9de",
-                "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.3-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "lessc.inc.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT",
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Leaf Corcoran",
-                    "email": "leafot@gmail.com",
-                    "homepage": "http://leafo.net"
-                }
-            ],
-            "description": "lessphp is a compiler for LESS written in PHP.",
-            "homepage": "http://leafo.net/lessphp/",
-            "time": "2013-08-09T17:09:19+00:00"
-        },
-        {
             "name": "leafo/scssphp",
             "version": "v0.6.3",
             "source": {
@@ -5282,7 +5225,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "59cb493a121fcae882123043d5ceaea8cd661af5",
+                "reference": "497d889464627b9b34a19d08c75ef2295984ce1a",
                 "shasum": null
             },
             "require": {
@@ -5313,7 +5256,6 @@
                 "bower-asset/jquery.numeric": "1.5.0",
                 "bower-asset/json2": "dev-master",
                 "bower-asset/jsplumb": "1.7.*",
-                "bower-asset/less": "2.5.*",
                 "bower-asset/lightgallery": "1.4.0",
                 "bower-asset/malihu-custom-scrollbar-plugin": "3.1.5",
                 "bower-asset/moment": "2.18.*",
@@ -5356,7 +5298,6 @@
                 "knplabs/knp-menu": "2.2.*",
                 "knplabs/knp-menu-bundle": "2.1.*",
                 "kriswallsmith/assetic": "1.4.0",
-                "leafo/lessphp": "0.4.0",
                 "leafo/scssphp": "0.6.3",
                 "lexik/maintenance-bundle": "2.1.1",
                 "liip/imagine-bundle": "1.7.*",
@@ -8460,68 +8401,6 @@
     ],
     "packages-dev": [
         {
-            "name": "a2lix/translation-form-bundle",
-            "version": "1.x-dev",
-            "target-dir": "A2lix/TranslationFormBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/a2lix/TranslationFormBundle.git",
-                "reference": "5041f05883685d944e2d9b44343709b51a1d476f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/a2lix/TranslationFormBundle/zipball/5041f05883685d944e2d9b44343709b51a1d476f",
-                "reference": "5041f05883685d944e2d9b44343709b51a1d476f",
-                "shasum": ""
-            },
-            "require": {
-                "symfony/symfony": ">=2.3"
-            },
-            "suggest": {
-                "a2lix/i18n-doctrine-bundle": "For A2lix strategy",
-                "knplabs/doctrine-behaviors": "For Knp strategy",
-                "stof/doctrine-extensions-bundle": "For Gedmo strategy"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "A2lix\\TranslationFormBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David ALLIX"
-                },
-                {
-                    "name": "A2lix",
-                    "homepage": "http://www.a2lix.fr"
-                }
-            ],
-            "description": "Translate your doctrine objects easily with a custom form field",
-            "homepage": "https://github.com/a2lix/TranslationFormBundle",
-            "keywords": [
-                "Symfony2",
-                "doctrine2",
-                "form",
-                "gedmo",
-                "i18n",
-                "internationalization",
-                "knplabs",
-                "translatable",
-                "translation"
-            ],
-            "time": "2016-08-05T18:11:57+00:00"
-        },
-        {
             "name": "behat/behat",
             "version": "v3.2.2",
             "source": {
@@ -8900,6 +8779,22 @@
             "time": "2016-01-13T17:06:48+00:00"
         },
         {
+            "name": "bower-asset/less",
+            "version": "v2.5.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:less/less.git",
+                "reference": "33fa72767e7474f3aedbbff83d8343217c08f58a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/less/less/zipball/33fa72767e7474f3aedbbff83d8343217c08f58a",
+                "reference": "33fa72767e7474f3aedbbff83d8343217c08f58a",
+                "shasum": null
+            },
+            "type": "bower-asset"
+        },
+        {
             "name": "friendsofphp/php-cs-fixer",
             "version": "v2.1.3",
             "source": {
@@ -9125,6 +9020,47 @@
                 "slow"
             ],
             "time": "2017-03-25T17:12:21+00:00"
+        },
+        {
+            "name": "leafo/lessphp",
+            "version": "v0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leafo/lessphp.git",
+                "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leafo/lessphp/zipball/51f3f06f0fe78a722dabfd14578444bdd078d9de",
+                "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lessc.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Leaf Corcoran",
+                    "email": "leafot@gmail.com",
+                    "homepage": "http://leafo.net"
+                }
+            ],
+            "description": "lessphp is a compiler for LESS written in PHP.",
+            "homepage": "http://leafo.net/lessphp/",
+            "time": "2013-08-09T17:09:19+00:00"
         },
         {
             "name": "mybuilder/phpunit-accelerator",
