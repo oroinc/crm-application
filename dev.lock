@@ -425,7 +425,7 @@
                 "shasum": null
             },
             "type": "bower-asset",
-            "time": "2014-07-21T18:45:41+00:00"
+            "time": "2014-07-21 18:45:41"
         },
         {
             "name": "bower-asset/font-awesome",
@@ -650,17 +650,17 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:douglascrockford/JSON-js.git",
-                "reference": "e25ba46913160617935f837836016ea7ed2be08c"
+                "url": "https://github.com/douglascrockford/JSON-js.git",
+                "reference": "58df70e97f9031c58361d38d59997485e7a693a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/douglascrockford/JSON-js/zipball/e25ba46913160617935f837836016ea7ed2be08c",
-                "reference": "e25ba46913160617935f837836016ea7ed2be08c",
+                "url": "https://api.github.com/repos/douglascrockford/JSON-js/zipball/58df70e97f9031c58361d38d59997485e7a693a2",
+                "reference": "58df70e97f9031c58361d38d59997485e7a693a2",
                 "shasum": null
             },
             "type": "bower-asset",
-            "time": "2017-02-08T18:28:50+00:00"
+            "time": "2018-04-29 21:14:49"
         },
         {
             "name": "bower-asset/jsplumb",
@@ -680,22 +680,6 @@
             "license": [
                 "MIT/GPL2"
             ]
-        },
-        {
-            "name": "bower-asset/less",
-            "version": "v2.5.3",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:less/less.git",
-                "reference": "33fa72767e7474f3aedbbff83d8343217c08f58a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/less/less/zipball/33fa72767e7474f3aedbbff83d8343217c08f58a",
-                "reference": "33fa72767e7474f3aedbbff83d8343217c08f58a",
-                "shasum": null
-            },
-            "type": "bower-asset"
         },
         {
             "name": "bower-asset/lightgallery",
@@ -3788,34 +3772,39 @@
             "time": "2018-03-19T10:34:40+00:00"
         },
         {
-            "name": "leafo/lessphp",
-            "version": "v0.4.0",
+            "name": "leafo/scssphp",
+            "version": "v0.6.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/leafo/lessphp.git",
-                "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de"
+                "url": "https://github.com/leafo/scssphp.git",
+                "reference": "a27edad3d16635a222d7204706572e24c338aa17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leafo/lessphp/zipball/51f3f06f0fe78a722dabfd14578444bdd078d9de",
-                "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de",
+                "url": "https://api.github.com/repos/leafo/scssphp/zipball/a27edad3d16635a222d7204706572e24c338aa17",
+                "reference": "a27edad3d16635a222d7204706572e24c338aa17",
                 "shasum": ""
             },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.3-dev"
-                }
+            "require": {
+                "php": ">=5.4.0"
             },
+            "require-dev": {
+                "kherge/box": "~2.5",
+                "phpunit/phpunit": "~3.7",
+                "squizlabs/php_codesniffer": "~2.5"
+            },
+            "bin": [
+                "bin/pscss"
+            ],
+            "type": "library",
             "autoload": {
-                "classmap": [
-                    "lessc.inc.php"
-                ]
+                "psr-4": {
+                    "Leafo\\ScssPhp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT",
-                "GPL-3.0"
+                "MIT"
             ],
             "authors": [
                 {
@@ -3824,9 +3813,16 @@
                     "homepage": "http://leafo.net"
                 }
             ],
-            "description": "lessphp is a compiler for LESS written in PHP.",
-            "homepage": "http://leafo.net/lessphp/",
-            "time": "2013-08-09T17:09:19+00:00"
+            "description": "scssphp is a compiler for SCSS written in PHP.",
+            "homepage": "http://leafo.github.io/scssphp/",
+            "keywords": [
+                "css",
+                "less",
+                "sass",
+                "scss",
+                "stylesheet"
+            ],
+            "time": "2016-01-15T02:50:06+00:00"
         },
         {
             "name": "lexik/maintenance-bundle",
@@ -4610,7 +4606,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "1bc2f2d001161aff71f3510fefe4d9e8f2c8b8dc",
+                "reference": "85be06d9e81d55bdc420374b26147e34a9c747d9",
                 "shasum": null
             },
             "require": {
@@ -4633,6 +4629,7 @@
                 "phpmd/phpmd": "2.6.*",
                 "phpunit/phpcov": "3.1.*",
                 "phpunit/phpunit": "5.7.*",
+                "phpunit/phpunit-selenium": "3.0.*",
                 "sebastian/phpcpd": "dev-master#cff7f36c2ae89d59987de25d14fd41a72dd4a703 as 3.1.0",
                 "sensio/generator-bundle": "3.1.2",
                 "squizlabs/php_codesniffer": "2.8.*",
@@ -5104,7 +5101,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "49d03e9e5c5aea157e88d07c38788d851ad53d8e",
+                "reference": "cbe4b0226c89ff6ad832178491b89dcecf6201ce",
                 "shasum": null
             },
             "require": {
@@ -5135,7 +5132,6 @@
                 "bower-asset/jquery.numeric": "1.5.0",
                 "bower-asset/json2": "dev-master",
                 "bower-asset/jsplumb": "1.7.*",
-                "bower-asset/less": "2.5.*",
                 "bower-asset/lightgallery": "1.4.0",
                 "bower-asset/malihu-custom-scrollbar-plugin": "3.1.5",
                 "bower-asset/moment": "2.18.*",
@@ -5178,7 +5174,7 @@
                 "knplabs/knp-menu-bundle": "2.1.*",
                 "kriswallsmith/assetic": "1.4.0",
                 "kriswallsmith/buzz": "0.16.*",
-                "leafo/lessphp": "0.4.0",
+                "leafo/scssphp": "0.6.3",
                 "lexik/maintenance-bundle": "2.1.1",
                 "liip/imagine-bundle": "1.7.*",
                 "liuggio/excelbundle": "2.1.*",
@@ -5224,9 +5220,6 @@
                 "sensio/generator-bundle": "3.1.2",
                 "squizlabs/php_codesniffer": "2.8.*"
             },
-            "bin": [
-                "bin/oro-form-alias-checker"
-            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -8558,6 +8551,22 @@
             "time": "2016-01-13T17:06:48+00:00"
         },
         {
+            "name": "bower-asset/less",
+            "version": "v2.5.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:less/less.git",
+                "reference": "33fa72767e7474f3aedbbff83d8343217c08f58a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/less/less/zipball/33fa72767e7474f3aedbbff83d8343217c08f58a",
+                "reference": "33fa72767e7474f3aedbbff83d8343217c08f58a",
+                "shasum": null
+            },
+            "type": "bower-asset"
+        },
+        {
             "name": "friendsofphp/php-cs-fixer",
             "version": "v2.1.3",
             "source": {
@@ -8825,6 +8834,47 @@
                 "slow"
             ],
             "time": "2017-03-25T17:12:21+00:00"
+        },
+        {
+            "name": "leafo/lessphp",
+            "version": "v0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leafo/lessphp.git",
+                "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leafo/lessphp/zipball/51f3f06f0fe78a722dabfd14578444bdd078d9de",
+                "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lessc.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Leaf Corcoran",
+                    "email": "leafot@gmail.com",
+                    "homepage": "http://leafo.net"
+                }
+            ],
+            "description": "lessphp is a compiler for LESS written in PHP.",
+            "homepage": "http://leafo.net/lessphp/",
+            "time": "2013-08-09T17:09:19+00:00"
         },
         {
             "name": "mybuilder/phpunit-accelerator",

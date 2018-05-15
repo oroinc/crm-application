@@ -3,6 +3,9 @@
 use Oro\Bundle\DistributionBundle\OroKernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
+/**
+ * @codingStandardsIgnoreFile
+ */
 class DistributionKernel extends OroKernel
 {
     /**
