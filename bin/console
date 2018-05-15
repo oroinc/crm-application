@@ -15,6 +15,9 @@ require __DIR__.'/../vendor/autoload.php';
 
 $input = new ArgvInput();
 $env = $input->getParameterOption(array('--env', '-e'), getenv('SYMFONY_ENV') ?: 'dev');
+if ($env === 'dev' && !isset($_ENV['APP_FRONT_CONTROLLER'])) {
+    $_ENV['APP_FRONT_CONTROLLER'] = 'index_dev.php';
+}
 $debug = getenv('SYMFONY_DEBUG') !== '0' && !$input->hasParameterOption(array('--no-debug', '')) && $env !== 'prod';
 
 if ($debug) {
