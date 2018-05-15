@@ -65,11 +65,6 @@
         <ini name="memory_limit" value="-1"/>
     </php>
     <listeners>
-        <listener class="Oro\Bundle\TestFrameworkBundle\Test\TestListener">
-            <arguments>
-                <string>var/logs</string>
-            </arguments>
-        </listener>
         <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener">
             <arguments>
                 <array>
