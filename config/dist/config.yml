@@ -4,10 +4,13 @@ imports:
 
 framework:
     #esi:             ~
-    translator:      { fallback: en }
+    translator:
+        paths:
+            - '%kernel.project_dir%/translations'
+        fallback: en
     secret:          "%secret%"
     router:
-        resource: "%kernel.root_dir%/config/dist/routing.yml"
+        resource: "%kernel.project_dir%/config/dist/routing.yml"
         strict_requirements: "%kernel.debug%"
     form:            true
     csrf_protection: true
@@ -18,7 +21,7 @@ framework:
     session:
         name:                 BAPID_DIST
         handler_id:           "%session_handler%"
-        save_path:            "%kernel.root_dir%/cache/sessions"
+        save_path:            "%kernel.project_dir%/var/cache/sessions"
         gc_maxlifetime:       3600
         cookie_httponly:      true
     fragments:
@@ -29,10 +32,11 @@ framework:
 assetic:
     debug:                    false
     use_controller:           false
+    read_from:                %kernel.project_dir%/public
     filters:
         cssrewrite: ~
         cssmin:
-            file: "%kernel.root_dir%/Resources/php/cssmin-v3.0.1.php"
+            file: "%kernel.project_dir%/var/php/cssmin-v3.0.1.php"
 
 # Doctrine Configuration
 doctrine:
@@ -60,7 +64,7 @@ lexik_maintenance:
     driver:
         class:                Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver
         options:
-            file_path:        "%kernel.root_dir%/cache/maintenance_lock"
+            file_path:        "%kernel.project_dir%/var/cache/maintenance_lock"
 
 services:
     oro.cache.abstract:

@@ -6,8 +6,8 @@
   "autoload": {
     "psr-4": {"": "src/"},
     "classmap": [
-      "app/AppKernel.php",
-      "app/AppCache.php"
+      "src/AppKernel.php",
+      "src/AppCache.php"
     ],
     "exclude-from-classmap": ["**/Tests/"]
   },
@@ -62,7 +62,7 @@
     "platform": {
       "php": "7.1"
     },
-    "component-dir": "web/bundles/components",
+    "component-dir": "public/bundles/components",
     "bin-dir": "bin",
     "fxp-asset": {
       "enabled": false
@@ -89,13 +89,12 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "extra": {
-    "symfony-app-dir": "app",
-    "symfony-web-dir": "web",
+    "symfony-web-dir": "public",
     "symfony-var-dir": "var",
     "symfony-bin-dir": "bin",
     "symfony-tests-dir": "tests",
     "incenteev-parameters": {
-      "file": "app/config/parameters.yml",
+      "file": "config/parameters.yml",
       "env-map": {
         "database_driver": "ORO_DB_DRIVER",
         "database_host": "ORO_DB_HOST",

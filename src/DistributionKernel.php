@@ -43,9 +43,17 @@ class DistributionKernel extends OroKernel
     /**
      * {@inheritdoc}
      */
+    public function getRootDir()
+    {
+        return __DIR__;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getCacheDir()
     {
-        return $this->rootDir . '/cache/dist/' . $this->environment;
+        return dirname(__DIR__).'/var/cache/dist/' . $this->environment;
     }
 
     /**
@@ -55,7 +63,7 @@ class DistributionKernel extends OroKernel
      */
     public function getLogDir()
     {
-        return $this->rootDir.'/logs/dist';
+        return dirname(__DIR__).'/var/logs/dist';
     }
 
 
@@ -64,6 +72,6 @@ class DistributionKernel extends OroKernel
      */
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__ . '/config/dist/config_' . $this->getEnvironment().'.yml');
+        $loader->load(__DIR__.'/../config/dist/config_' . $this->getEnvironment().'.yml');
     }
 }

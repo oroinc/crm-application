@@ -7,15 +7,17 @@
 
 set_time_limit(0);
 
-//require_once __DIR__.'/bootstrap.php.cache';
-require_once __DIR__.'/autoload.php';
-require_once __DIR__.'/DistributionKernel.php';
+require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__.'/../src/DistributionKernel.php';
 
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
 
 $input = new ArgvInput();
 $env = $input->getParameterOption(array('--env', '-e'), getenv('SYMFONY_ENV') ?: 'dev');
+if ($env === 'dev' && !isset($_ENV['APP_FRONT_CONTROLLER'])) {
+    $_ENV['APP_FRONT_CONTROLLER'] = 'index_dev.php';
+}
 $debug = getenv('SYMFONY_DEBUG') !== '0' && !$input->hasParameterOption(array('--no-debug', '')) && $env !== 'prod';
 
 $kernel = new DistributionKernel($env, $debug);

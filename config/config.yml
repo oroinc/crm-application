@@ -4,10 +4,13 @@ imports:
 
 framework:
     #esi:             ~
-    translator:      { fallback: en }
+    translator:
+        paths:
+            - '%kernel.project_dir%/translations'
+        fallback: en
     secret:          "%secret%"
     router:
-        resource: "%kernel.root_dir%/config/routing.yml"
+        resource: "%kernel.project_dir%/config/routing.yml"
         strict_requirements: "%kernel.debug%"
     form:            true
     csrf_protection: true
@@ -22,7 +25,7 @@ framework:
     session:
         name:                 CRMID
         handler_id:           "%session_handler%"
-        save_path:            '%kernel.root_dir%/../var/sessions/%kernel.environment%'
+        save_path:            '%kernel.project_dir%/var/sessions/%kernel.environment%'
         gc_maxlifetime:       3600
         cookie_httponly:      true
     fragments:
@@ -35,19 +38,20 @@ framework:
 twig:
     debug:                    "%kernel.debug%"
     strict_variables:         "%kernel.debug%"
-    exception_controller:     "FOS\\RestBundle\\Controller\\ExceptionController::showAction"
+    exception_controller:     "Oro\\Bundle\\UIBundle\\Controller\\ExceptionController::showAction"
     globals:
         bap:
-            layout:           ::base.html.twig  # default layout across all Oro bundles
+            layout:           base.html.twig  # default layout across all Oro bundles
 
 # Assetic Configuration
 assetic:
     debug:                    false
     use_controller:           false
+    read_from:                %kernel.project_dir%/public
     filters:
         cssrewrite: ~
         cssmin:
-            file: "%kernel.root_dir%/Resources/php/cssmin-v3.0.1.php"
+            file: "%kernel.project_dir%/var/php/cssmin-v3.0.1.php"
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -108,7 +112,17 @@ lexik_maintenance:
     driver:
         class:                Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver
         options:
-            file_path:        %kernel.root_dir%/../var/cache/maintenance_lock
+            file_path:        %kernel.project_dir%/var/cache/maintenance_lock
+
+liip_imagine:
+    loaders:
+        default:
+            filesystem:
+                data_root: %kernel.project_dir%/public
+    resolvers:
+        default:
+            web_path:
+                web_root: %kernel.project_dir%/public
 
 #
 # ORO Bundles config
