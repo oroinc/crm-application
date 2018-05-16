@@ -137,9 +137,9 @@ class OroRequirements extends SymfonyRequirements
                 $this->checkFileNameLength(),
                 'Maximum supported filename length must be greater or equal 242 characters.' .
                 ' Make sure that the cache folder is not inside the encrypted directory.',
-                'Move <strong>app/cache</strong> folder outside encrypted directory.',
+                'Move <strong>var/cache</strong> folder outside encrypted directory.',
                 'Maximum supported filename length must be greater or equal 242 characters.' .
-                ' Move app/cache folder outside encrypted directory.'
+                ' Move var/cache folder outside encrypted directory.'
             );
         }
 
@@ -180,60 +180,60 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addOroRequirement(
-            is_writable($baseDir . '/web/uploads'),
-            'web/uploads/ directory must be writable',
-            'Change the permissions of the "<strong>web/uploads/</strong>" directory so that the web server can write into it.'
+            is_writable($baseDir . '/public/uploads'),
+            'public/uploads/ directory must be writable',
+            'Change the permissions of the "<strong>public/uploads/</strong>" directory so that the web server can write into it.'
         );
         $this->addOroRequirement(
-            is_writable($baseDir . '/web/media'),
-            'web/media/ directory must be writable',
-            'Change the permissions of the "<strong>web/media/</strong>" directory so that the web server can write into it.'
+            is_writable($baseDir . '/public/media'),
+            'public/media/ directory must be writable',
+            'Change the permissions of the "<strong>public/media/</strong>" directory so that the web server can write into it.'
         );
         $this->addOroRequirement(
-            is_writable($baseDir . '/web/bundles'),
-            'web/bundles/ directory must be writable',
-            'Change the permissions of the "<strong>web/bundles/</strong>" directory so that the web server can write into it.'
+            is_writable($baseDir . '/public/bundles'),
+            'public/bundles/ directory must be writable',
+            'Change the permissions of the "<strong>public/bundles/</strong>" directory so that the web server can write into it.'
         );
         $this->addOroRequirement(
-            is_writable($baseDir . '/app/attachment'),
-            'app/attachment/ directory must be writable',
-            'Change the permissions of the "<strong>app/attachment/</strong>" directory so that the web server can write into it.'
+            is_writable($baseDir . '/var/attachment'),
+            'var/attachment/ directory must be writable',
+            'Change the permissions of the "<strong>var/attachment/</strong>" directory so that the web server can write into it.'
         );
         $this->addOroRequirement(
-            is_writable($baseDir . '/app/import_export'),
-            'app/import_export/ directory must be writable',
-            'Change the permissions of the "<strong>app/import_export/</strong>" directory so that the web server can write into it.'
+            is_writable($baseDir . '/var/import_export'),
+            'var/import_export/ directory must be writable',
+            'Change the permissions of the "<strong>var/import_export/</strong>" directory so that the web server can write into it.'
         );
 
-        if (is_dir($baseDir . '/web/js')) {
+        if (is_dir($baseDir . '/public/js')) {
             $this->addOroRequirement(
-                is_writable($baseDir . '/web/js'),
-                'web/js directory must be writable',
-                'Change the permissions of the "<strong>web/js</strong>" directory so that the web server can write into it.'
+                is_writable($baseDir . '/public/js'),
+                'public/js directory must be writable',
+                'Change the permissions of the "<strong>public/js</strong>" directory so that the web server can write into it.'
             );
         }
 
-        if (is_dir($baseDir . '/web/css')) {
+        if (is_dir($baseDir . '/public/css')) {
             $this->addOroRequirement(
-                is_writable($baseDir . '/web/css'),
-                'web/css directory must be writable',
-                'Change the permissions of the "<strong>web/css</strong>" directory so that the web server can write into it.'
+                is_writable($baseDir . '/public/css'),
+                'public/css directory must be writable',
+                'Change the permissions of the "<strong>public/css</strong>" directory so that the web server can write into it.'
             );
         }
 
-        if (!is_dir($baseDir . '/web/css') || !is_dir($baseDir . '/web/js')) {
+        if (!is_dir($baseDir . '/public/css') || !is_dir($baseDir . '/public/js')) {
             $this->addOroRequirement(
-                is_writable($baseDir . '/web'),
-                'web directory must be writable',
-                'Change the permissions of the "<strong>web</strong>" directory so that the web server can write into it.'
+                is_writable($baseDir . '/public'),
+                'public directory must be writable',
+                'Change the permissions of the "<strong>public</strong>" directory so that the web server can write into it.'
             );
         }
 
-        if (is_file($baseDir . '/app/config/parameters.yml')) {
+        if (is_file($baseDir . '/config/parameters.yml')) {
             $this->addOroRequirement(
-                is_writable($baseDir . '/app/config/parameters.yml'),
-                'app/config/parameters.yml file must be writable',
-                'Change the permissions of the "<strong>app/config/parameters.yml</strong>" file so that the web server can write into it.'
+                is_writable($baseDir . '/config/parameters.yml'),
+                'config/parameters.yml file must be writable',
+                'Change the permissions of the "<strong>config/parameters.yml</strong>" file so that the web server can write into it.'
             );
         }
     }

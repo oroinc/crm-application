@@ -9,7 +9,7 @@
     ErrorDocument 503 /maintenance.html
 
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ app.php [QSA,L]
+    RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
 
 <IfModule mod_deflate.c>

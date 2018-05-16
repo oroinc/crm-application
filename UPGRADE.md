@@ -14,9 +14,9 @@ php composer.phar install --prefer-dist
   * Disable APC, OpCache, other code accelerators
   * Remove old caches and assets
 ```bash
-rm -rf app/cache/*
-rm -rf web/js/*
-rm -rf web/css/*
+rm -rf var/cache/*
+rm -rf public/js/*
+rm -rf public/css/*
 ```
   * Upgrade platform
 ```bash
