@@ -7,6 +7,7 @@
 use Symfony\Component\Config\Loader\LoaderInterface;
 
 use Oro\Bundle\DistributionBundle\OroKernel;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class AppKernel extends OroKernel
 {
@@ -18,6 +19,7 @@ class AppKernel extends OroKernel
 
         if ('dev' === $this->getEnvironment()) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
+            $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             if (class_exists('Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle')) {
                 $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
@@ -34,7 +36,13 @@ class AppKernel extends OroKernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
+        $loader->load(function (ContainerBuilder $container) {
+            $container->setParameter('container.autowiring.strict_mode', true);
+            $container->setParameter('container.dumper.inline_class_loader', true);
+            $container->addObjectResource($this);
+        });
+
+        $loader->load(__DIR__.'/../config/config_'.$this->getEnvironment().'.yml');
     }
 
     /**
