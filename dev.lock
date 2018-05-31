@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b32fc7e7d3ee80c8ccabf1923788635",
+    "content-hash": "39d192e8628a222e1f7e8315b4d640dc",
     "packages": [
         {
             "name": "akeneo/batch-bundle",
@@ -4605,7 +4605,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "83e65ab985b2e12eafc14a9e9ed617a62dccf6c4",
+                "reference": "9d0029b6c2c6b62ffd228d97318e02d8ccd261ae",
                 "shasum": null
             },
             "require": {
@@ -4630,7 +4630,7 @@
                 "sebastian/phpcpd": "dev-master#cff7f36c2ae89d59987de25d14fd41a72dd4a703 as 3.1.0",
                 "sensio/generator-bundle": "3.1.2",
                 "squizlabs/php_codesniffer": "2.8.*",
-                "symfony/phpunit-bridge": "3.2.*"
+                "symfony/phpunit-bridge": "3.4.*"
             },
             "type": "library",
             "extra": {
@@ -10516,23 +10516,23 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.2.14",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "9e5c470da4b1e3e9cd8e29fecbd7c91eb961d15f"
+                "reference": "63cdae00a75862fa543b765ba63d55f6b6397d0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/9e5c470da4b1e3e9cd8e29fecbd7c91eb961d15f",
-                "reference": "9e5c470da4b1e3e9cd8e29fecbd7c91eb961d15f",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/63cdae00a75862fa543b765ba63d55f6b6397d0c",
+                "reference": "63cdae00a75862fa543b765ba63d55f6b6397d0c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "conflict": {
-                "phpunit/phpunit": ">=6.0"
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
             },
             "suggest": {
                 "ext-zip": "Zip support is required when using bin/simple-phpunit",
@@ -10544,7 +10544,11 @@
             "type": "symfony-bridge",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "3.4-dev"
+                },
+                "thanks": {
+                    "name": "phpunit/phpunit",
+                    "url": "https://github.com/sebastianbergmann/phpunit"
                 }
             },
             "autoload": {
@@ -10574,7 +10578,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2017-06-02T09:43:35+00:00"
+            "time": "2018-05-16T12:49:49+00:00"
         },
         {
             "name": "symfony/polyfill-php54",
