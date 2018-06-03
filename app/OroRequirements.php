@@ -14,10 +14,11 @@ use Symfony\Component\Process\ProcessBuilder;
  */
 class OroRequirements extends SymfonyRequirements
 {
-    const REQUIRED_PHP_VERSION  = '7.1';
-    const REQUIRED_GD_VERSION   = '2.0';
+    const REQUIRED_PHP_VERSION = '7.1';
+    const RECOMMENDED_PHP_VERSION = '7.1.17';
+    const REQUIRED_GD_VERSION = '2.0';
     const REQUIRED_CURL_VERSION = '7.0';
-    const REQUIRED_ICU_VERSION  = '3.8';
+    const REQUIRED_ICU_VERSION = '3.8';
 
     const EXCLUDE_REQUIREMENTS_MASK = '/5\.[0-6]|7\.0/';
 
@@ -43,6 +44,13 @@ class OroRequirements extends SymfonyRequirements
                 self::REQUIRED_PHP_VERSION
             ),
             sprintf('Install PHP %s or newer (installed version is %s)', self::REQUIRED_PHP_VERSION, $phpVersion)
+        );
+
+        $this->addRecommendation(
+            version_compare($phpVersion, self::RECOMMENDED_PHP_VERSION, '>='),
+            sprintf('Install PHP %s or newer (installed version is %s)', self::RECOMMENDED_PHP_VERSION, $phpVersion),
+            'The PHP version currently installed in your system contains known critical vulnerabilities. 
+Please upgrade PHP to the latest supported version'
         );
 
         $this->addOroRequirement(
