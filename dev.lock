@@ -2256,6 +2256,54 @@
             "time": "2018-02-08T14:04:44+00:00"
         },
         {
+            "name": "evenement/evenement",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/igorw/evenement.git",
+                "reference": "6ba9a777870ab49f417e703229d53931ed40fd7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/igorw/evenement/zipball/6ba9a777870ab49f417e703229d53931ed40fd7a",
+                "reference": "6ba9a777870ab49f417e703229d53931ed40fd7a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0||^5.7||^4.8.35"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Evenement": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                }
+            ],
+            "description": "Événement is a very simple event dispatching library for PHP",
+            "keywords": [
+                "event-dispatcher",
+                "event-emitter"
+            ],
+            "time": "2017-07-17T17:39:19+00:00"
+        },
+        {
             "name": "ezyang/htmlpurifier",
             "version": "v4.10.0",
             "source": {
@@ -2583,6 +2631,332 @@
                 "uploadable"
             ],
             "time": "2018-05-08T12:28:40+00:00"
+        },
+        {
+            "name": "gos/pnctl-event-loop-emitter",
+            "version": "v0.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GeniusesOfSymfony/PNCTLEventLoopEmitter.git",
+                "reference": "93bb0f0e60e4e1f4025f77c8a4fd9ae0c3b45fb3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GeniusesOfSymfony/PNCTLEventLoopEmitter/zipball/93bb0f0e60e4e1f4025f77c8a4fd9ae0c3b45fb3",
+                "reference": "93bb0f0e60e4e1f4025f77c8a4fd9ae0c3b45fb3",
+                "shasum": ""
+            },
+            "require": {
+                "evenement/evenement": "~2.0|~3.0",
+                "php": ">=5.4",
+                "react/event-loop": "~0.4.0|^0.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gos\\Component\\PnctlEventLoopEmitter\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johann Saunier",
+                    "email": "johann_27@hotmail.fr"
+                }
+            ],
+            "description": "Pnctl event emitter for event loop",
+            "homepage": "https://github.com/GeniusesOfSymfony/PnctlEventLoopEmitter",
+            "keywords": [
+                "Pnctl",
+                "event loop",
+                "reactphp"
+            ],
+            "time": "2018-04-09T11:12:07+00:00"
+        },
+        {
+            "name": "gos/pubsub-router-bundle",
+            "version": "v0.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GeniusesOfSymfony/PubSubRouterBundle.git",
+                "reference": "58ea6c65d603653776bd034748c6ea4e58596f60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GeniusesOfSymfony/PubSubRouterBundle/zipball/58ea6c65d603653776bd034748c6ea4e58596f60",
+                "reference": "58ea6c65d603653776bd034748c6ea4e58596f60",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/cache": "~1.4",
+                "php": ">=5.4",
+                "symfony/framework-bundle": "~2.3|~3.0|~4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gos\\Bundle\\PubSubRouterBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johann Saunier",
+                    "email": "johann_27@hotmail.fr"
+                }
+            ],
+            "description": "Symfony PubSub Router Bundle",
+            "homepage": "https://github.com/GeniusesOfSymfony/PubSubRouterBundle",
+            "keywords": [
+                "PubSub Bundle",
+                "WAMP",
+                "bundle",
+                "pubsub",
+                "redis",
+                "zmq"
+            ],
+            "time": "2018-05-21T12:14:35+00:00"
+        },
+        {
+            "name": "gos/ratchet",
+            "version": "v0.3.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GeniusesOfSymfony/Ratchet.git",
+                "reference": "f72ee4f70f24da1fc232537088e6c368ae4211e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GeniusesOfSymfony/Ratchet/zipball/f72ee4f70f24da1fc232537088e6c368ae4211e0",
+                "reference": "f72ee4f70f24da1fc232537088e6c368ae4211e0",
+                "shasum": ""
+            },
+            "require": {
+                "guzzle/http": "^3.6",
+                "php": ">=5.3.9",
+                "react/socket": "^0.3 || ^0.4",
+                "symfony/http-foundation": "^2.2|^3.0|^4.0",
+                "symfony/routing": "^2.2|^3.0|^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ratchet\\": "src/Ratchet"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Boden",
+                    "email": "cboden@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP WebSocket library",
+            "homepage": "http://socketo.me",
+            "keywords": [
+                "Ratchet",
+                "WebSockets",
+                "server",
+                "sockets"
+            ],
+            "time": "2017-12-12T16:15:11+00:00"
+        },
+        {
+            "name": "gos/ratchet-stack",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GeniusesOfSymfony/RatchetStack.git",
+                "reference": "a7dfc817bf8b786c575022e290ab0769dbf09814"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GeniusesOfSymfony/RatchetStack/zipball/a7dfc817bf8b786c575022e290ab0769dbf09814",
+                "reference": "a7dfc817bf8b786c575022e290ab0769dbf09814",
+                "shasum": ""
+            },
+            "require": {
+                "cboden/ratchet": "^0.3|^0.4",
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gos\\Component\\RatchetStack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johann Saunier",
+                    "email": "johann_27@hotmail.fr"
+                }
+            ],
+            "description": "Ratchet Stack",
+            "homepage": "https://github.com/GeniusesOfSymfony/RatchetStack",
+            "keywords": [
+                "Ratchet",
+                "application",
+                "stack"
+            ],
+            "time": "2018-05-02T13:03:51+00:00"
+        },
+        {
+            "name": "gos/web-socket-bundle",
+            "version": "v1.8.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GeniusesOfSymfony/WebSocketBundle.git",
+                "reference": "a26b71e9014a73b95ddbb02a813157563a296a48"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GeniusesOfSymfony/WebSocketBundle/zipball/a26b71e9014a73b95ddbb02a813157563a296a48",
+                "reference": "a26b71e9014a73b95ddbb02a813157563a296a48",
+                "shasum": ""
+            },
+            "require": {
+                "gos/pnctl-event-loop-emitter": "~0.1",
+                "gos/pubsub-router-bundle": "~0.2",
+                "gos/ratchet": "~0.3.5",
+                "gos/ratchet-stack": "~0.1",
+                "gos/websocket-client": "~0.1.0",
+                "php": ">=5.4",
+                "symfony/framework-bundle": "~2.3|~3.0"
+            },
+            "replace": {
+                "cboden/ratchet": "~0.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "suggest": {
+                "ext-amqp": "*",
+                "ext-libev": "*",
+                "ext-libevent": ">=0.0.5",
+                "ext-zmq": "*",
+                "ocramius/proxy-manager": "~1.0",
+                "symfony/proxy-manager-bridge": "~2.3"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gos\\Bundle\\WebSocketBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Dare",
+                    "email": "jeremy.d.dare@gmail.com"
+                },
+                {
+                    "name": "Johann Saunier",
+                    "email": "johann_27@hotmail.fr"
+                }
+            ],
+            "description": "Symfony Web Socket Bundle",
+            "homepage": "https://github.com/GeniusesOfSymfony/WebSocketBundle",
+            "keywords": [
+                "Ratchet",
+                "WAMP",
+                "Web Socket Bundle",
+                "io",
+                "websocket"
+            ],
+            "time": "2017-09-29T16:00:43+00:00"
+        },
+        {
+            "name": "gos/websocket-client",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GeniusesOfSymfony/WebSocketPhpClient.git",
+                "reference": "13bb38cb01acee648fea1a6ca4ad3dc6148da7fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GeniusesOfSymfony/WebSocketPhpClient/zipball/13bb38cb01acee648fea1a6ca4ad3dc6148da7fe",
+                "reference": "13bb38cb01acee648fea1a6ca4ad3dc6148da7fe",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gos\\Component\\WebSocketClient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johann Saunier",
+                    "email": "johann_27@hotmail.fr"
+                },
+                {
+                    "name": "Martin Bažík",
+                    "email": "martin@bazo.sk"
+                }
+            ],
+            "description": "WAMP client in PHP",
+            "keywords": [
+                "Ratchet",
+                "WAMP",
+                "websocket"
+            ],
+            "time": "2015-08-04T11:43:11+00:00"
         },
         {
             "name": "guzzle/guzzle",
@@ -5125,7 +5499,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "1a088006ad9d37f8bda5c782493ff6e083d04d6e",
+                "reference": "ac47bed4ac275f00b1bb8790eb961e035d3dbc3a",
                 "shasum": null
             },
             "require": {
@@ -5187,6 +5561,7 @@
                 "ezyang/htmlpurifier": "4.10.*",
                 "friendsofsymfony/jsrouting-bundle": "1.6.*",
                 "friendsofsymfony/rest-bundle": "1.8.0",
+                "gos/web-socket-bundle": "1.8.11",
                 "guzzle/guzzle": "3.7.*",
                 "hwi/oauth-bundle": "0.5.*",
                 "incenteev/composer-parameter-handler": "2.1.*",
@@ -5951,6 +6326,180 @@
                 "simple-cache"
             ],
             "time": "2017-10-23T01:57:42+00:00"
+        },
+        {
+            "name": "react/event-loop",
+            "version": "v0.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/event-loop.git",
+                "reference": "8bde03488ee897dc6bb3d91e4e17c353f9c5252f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/8bde03488ee897dc6bb3d91e4e17c353f9c5252f",
+                "reference": "8bde03488ee897dc6bb3d91e4e17c353f9c5252f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "suggest": {
+                "ext-event": "~1.0",
+                "ext-libev": "*",
+                "ext-libevent": ">=0.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\EventLoop\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Event loop abstraction layer that libraries can use for evented I/O.",
+            "keywords": [
+                "asynchronous",
+                "event-loop"
+            ],
+            "time": "2017-04-27T10:56:23+00:00"
+        },
+        {
+            "name": "react/promise",
+            "version": "v2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "f4edc2581617431aea50430749db55cc3fc031b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/f4edc2581617431aea50430749db55cc3fc031b3",
+                "reference": "f4edc2581617431aea50430749db55cc3fc031b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "keywords": [
+                "promise",
+                "promises"
+            ],
+            "time": "2018-06-13T15:59:06+00:00"
+        },
+        {
+            "name": "react/socket",
+            "version": "v0.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/socket.git",
+                "reference": "cf074e53c974df52388ebd09710a9018894745d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/socket/zipball/cf074e53c974df52388ebd09710a9018894745d2",
+                "reference": "cf074e53c974df52388ebd09710a9018894745d2",
+                "shasum": ""
+            },
+            "require": {
+                "evenement/evenement": "~2.0|~1.0",
+                "php": ">=5.3.0",
+                "react/event-loop": "0.4.*|0.3.*",
+                "react/promise": "^2.0 || ^1.1",
+                "react/stream": "^0.4.5"
+            },
+            "require-dev": {
+                "clue/block-react": "^1.1",
+                "phpunit/phpunit": "~4.8",
+                "react/socket-client": "^0.5.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Socket\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Async, streaming plaintext TCP/IP and secure TLS socket server for React PHP",
+            "keywords": [
+                "Socket"
+            ],
+            "time": "2017-01-26T09:23:38+00:00"
+        },
+        {
+            "name": "react/stream",
+            "version": "v0.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/stream.git",
+                "reference": "44dc7f51ea48624110136b535b9ba44fd7d0c1ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/stream/zipball/44dc7f51ea48624110136b535b9ba44fd7d0c1ee",
+                "reference": "44dc7f51ea48624110136b535b9ba44fd7d0c1ee",
+                "shasum": ""
+            },
+            "require": {
+                "evenement/evenement": "^2.0|^1.0",
+                "php": ">=5.3.8"
+            },
+            "require-dev": {
+                "clue/stream-filter": "~1.2",
+                "react/event-loop": "^0.4|^0.3",
+                "react/promise": "^2.0|^1.0"
+            },
+            "suggest": {
+                "react/event-loop": "^0.4",
+                "react/promise": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Stream\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Basic readable and writable stream interfaces that support piping.",
+            "keywords": [
+                "pipe",
+                "stream"
+            ],
+            "time": "2017-01-25T14:44:14+00:00"
         },
         {
             "name": "robloach/component-installer",
