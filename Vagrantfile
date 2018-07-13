@@ -143,6 +143,23 @@ Vagrant.configure("2") do |config|
 
 		echo "\n~~~~~~~~~~~~~~ Prepare MySQL Database ~~~~~~~~~~~~~~\n"
 
+        # --- Change the MySQL Server Configuration ---
+
+        echo "[client]" >> /etc/my.cnf
+        echo "default-character-set = utf8mb4" >> /etc/my.cnf
+        echo "" >> /etc/my.cnf
+        echo "[mysql]" >> /etc/my.cnf
+        echo "default-character-set = utf8mb4" >> /etc/my.cnf
+        echo "" >> /etc/my.cnf
+        echo "[mysqld]" >> /etc/my.cnf
+        echo "innodb_file_per_table = 0" >> /etc/my.cnf
+        echo "wait_timeout = 28800" >> /etc/my.cnf
+        echo "character-set-client-handshake = FALSE" >> /etc/my.cnf
+        echo "character-set-server = utf8mb4" >> /etc/my.cnf
+        echo "collation-server = utf8mb4_unicode_ci" >> /etc/my.cnf
+
+        systemctl restart mysqld
+
 		# --- Change the Default MySQL Password for Root User ---
 
 		MYSQL_INSTALLED_TMP_ROOT_PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}')
@@ -152,13 +169,7 @@ Vagrant.configure("2") do |config|
 		
 		mysql -uroot -p$DB_PASSWORD -e "CREATE DATABASE $DB_NAME"
 	  	mysql -uroot -p$DB_PASSWORD -e "GRANT ALL PRIVILEGES ON $DB_NAME.* to '$DB_USER'@'localhost' identified by '$DB_PASSWORD'"
-
-		# --- Change the MySQL Server Configuration ---
-
-		echo "innodb_file_per_table = 0" >> /etc/my.cnf
-		echo "wait_timeout = 28800" >> /etc/my.cnf
-
-		systemctl restart mysqld
+	  	mysql -uroot -p$DB_PASSWORD -e "FLUSH PRIVILEGES"
 
 		echo "\n~~~~~~~~~~~~~~ Configure Web Server ~~~~~~~~~~~~~~\n"
 
@@ -247,6 +258,21 @@ ____NGINXCONFIGTEMPLATE
 		composer install --prefer-dist --no-dev
 
 		echo "\n~~~~~~~~~~~~~~ Install OroPlatform Community Edition Application ~~~~~~~~~~~~~~\n"
+
+		# --- Configure DBAL parameters before installation ---
+
+		cat >> ./app/config/config.yml <<____DOCTRINECONFIG
+
+doctrine:
+    dbal:
+        charset: utf8mb4
+        default_table_options:
+            charset: utf8mb4
+            collate: utf8mb4_unicode_ci
+
+____DOCTRINECONFIG
+
+		# --- Run the installation command ---
 
 		php ./app/console oro:install --env=prod --timeout=900 --no-debug --application-url="http://$APP_HOST/" --organization-name="Oro Inc" --user-name="$APP_USER" --user-email="admin@example.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="$APP_PASSWORD" --sample-data=$APP_LOAD_DEMO_DATA
 
