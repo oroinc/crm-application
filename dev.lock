@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a491d266c72644048f0f6cc5d1891685",
+    "content-hash": "4d7ade1317bd8e75677892d6afe292f1",
     "packages": [
         {
             "name": "akeneo/batch-bundle",
@@ -12,7 +12,7 @@
             "target-dir": "Akeneo/Bundle/BatchBundle",
             "source": {
                 "type": "git",
-                "url": "git@github.com:laboro/BatchBundle.git",
+                "url": "https://github.com/laboro/BatchBundle.git",
                 "reference": "aff218f6ba5714baae575698c0578bf8da207f41"
             },
             "dist": {
@@ -42,19 +42,21 @@
                     "Akeneo\\Bundle\\BatchBundle": ""
                 }
             },
-            "notification-url": "https://packagist.orocrm.com/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Akeneo Batch Bundle",
             "keywords": [
+                "Akeneo",
                 "Batch",
                 "Job",
                 "Processor",
                 "Reader",
-                "Writer",
-                "akeneo"
+                "Writer"
             ],
+            "support": {
+                "source": "https://github.com/laboro/BatchBundle/tree/0.4.8"
+            },
             "time": "2018-03-20T11:52:51+00:00"
         },
         {
@@ -1539,33 +1541,39 @@
         },
         {
             "name": "doctrine/common",
-            "version": "v2.8.1",
+            "version": "v2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "f68c297ce6455e8fd794aa8ffaf9fa458f6ade66"
+                "reference": "a210246d286c77d2b89040f8691ba7b3a713d2c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/f68c297ce6455e8fd794aa8ffaf9fa458f6ade66",
-                "reference": "f68c297ce6455e8fd794aa8ffaf9fa458f6ade66",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/a210246d286c77d2b89040f8691ba7b3a713d2c1",
+                "reference": "a210246d286c77d2b89040f8691ba7b3a713d2c1",
                 "shasum": ""
             },
             "require": {
-                "doctrine/annotations": "1.*",
-                "doctrine/cache": "1.*",
-                "doctrine/collections": "1.*",
-                "doctrine/inflector": "1.*",
-                "doctrine/lexer": "1.*",
-                "php": "~7.1"
+                "doctrine/annotations": "^1.0",
+                "doctrine/cache": "^1.0",
+                "doctrine/collections": "^1.0",
+                "doctrine/event-manager": "^1.0",
+                "doctrine/inflector": "^1.0",
+                "doctrine/lexer": "^1.0",
+                "doctrine/persistence": "^1.0",
+                "doctrine/reflection": "^1.0",
+                "php": "^7.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7"
+                "doctrine/coding-standard": "^1.0",
+                "phpunit/phpunit": "^6.3",
+                "squizlabs/php_codesniffer": "^3.0",
+                "symfony/phpunit-bridge": "^4.0.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8.x-dev"
+                    "dev-master": "2.9.x-dev"
                 }
             },
             "autoload": {
@@ -1597,10 +1605,14 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
                 }
             ],
             "description": "Common Library for Doctrine projects",
-            "homepage": "http://www.doctrine-project.org",
+            "homepage": "https://www.doctrine-project.org",
             "keywords": [
                 "annotations",
                 "collections",
@@ -1608,7 +1620,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2017-08-31T08:43:38+00:00"
+            "time": "2018-07-12T21:16:12+00:00"
         },
         {
             "name": "doctrine/data-fixtures",
@@ -1672,16 +1684,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.7.1",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "11037b4352c008373561dc6fc836834eed80c3b5"
+                "reference": "c0e5736016a51b427a8cba8bc470fbea78165819"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/11037b4352c008373561dc6fc836834eed80c3b5",
-                "reference": "11037b4352c008373561dc6fc836834eed80c3b5",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/c0e5736016a51b427a8cba8bc470fbea78165819",
+                "reference": "c0e5736016a51b427a8cba8bc470fbea78165819",
                 "shasum": ""
             },
             "require": {
@@ -1743,7 +1755,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2018-04-07T18:44:18+00:00"
+            "time": "2018-07-13T04:49:01+00:00"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -1976,6 +1988,80 @@
             "time": "2017-10-30T19:26:42+00:00"
         },
         {
+            "name": "doctrine/event-manager",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/event-manager.git",
+                "reference": "a520bc093a0170feeb6b14e9d83f3a14452e64b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/a520bc093a0170feeb6b14e9d83f3a14452e64b3",
+                "reference": "a520bc093a0170feeb6b14e9d83f3a14452e64b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "conflict": {
+                "doctrine/common": "<2.9@dev"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^4.0",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "Doctrine Event Manager component",
+            "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
+            "keywords": [
+                "event",
+                "eventdispatcher",
+                "eventmanager"
+            ],
+            "time": "2018-06-11T11:59:03+00:00"
+        },
+        {
             "name": "doctrine/inflector",
             "version": "v1.3.0",
             "source": {
@@ -2152,16 +2238,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.6.1",
+            "version": "v2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "87ee409783a4a322b5597ebaae558661404055a7"
+                "reference": "d2b4dd71d2a276edd65d0c170375b445f8a4a4a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/87ee409783a4a322b5597ebaae558661404055a7",
-                "reference": "87ee409783a4a322b5597ebaae558661404055a7",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/d2b4dd71d2a276edd65d0c170375b445f8a4a4a8",
+                "reference": "d2b4dd71d2a276edd65d0c170375b445f8a4a4a8",
                 "shasum": ""
             },
             "require": {
@@ -2230,7 +2316,160 @@
                 "database",
                 "orm"
             ],
-            "time": "2018-02-27T07:30:56+00:00"
+            "time": "2018-07-12T20:47:13+00:00"
+        },
+        {
+            "name": "doctrine/persistence",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/persistence.git",
+                "reference": "17896f6d56a2794a1619e019596ae627aabd8fd5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/17896f6d56a2794a1619e019596ae627aabd8fd5",
+                "reference": "17896f6d56a2794a1619e019596ae627aabd8fd5",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "^1.0",
+                "doctrine/cache": "^1.0",
+                "doctrine/collections": "^1.0",
+                "doctrine/event-manager": "^1.0",
+                "doctrine/reflection": "^1.0",
+                "php": "^7.1"
+            },
+            "conflict": {
+                "doctrine/common": "<2.9@dev"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^4.0",
+                "phpstan/phpstan": "^0.8",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "Doctrine Persistence abstractions.",
+            "homepage": "https://doctrine-project.org/projects/persistence.html",
+            "keywords": [
+                "persistence"
+            ],
+            "time": "2018-06-14T18:57:48+00:00"
+        },
+        {
+            "name": "doctrine/reflection",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/reflection.git",
+                "reference": "02538d3f95e88eb397a5f86274deb2c6175c2ab6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/reflection/zipball/02538d3f95e88eb397a5f86274deb2c6175c2ab6",
+                "reference": "02538d3f95e88eb397a5f86274deb2c6175c2ab6",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "^1.0",
+                "ext-tokenizer": "*",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^4.0",
+                "doctrine/common": "^2.8",
+                "phpstan/phpstan": "^0.9.2",
+                "phpstan/phpstan-phpunit": "^0.9.4",
+                "phpunit/phpunit": "^7.0",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "Doctrine Reflection component",
+            "homepage": "https://www.doctrine-project.org/projects/reflection.html",
+            "keywords": [
+                "reflection"
+            ],
+            "time": "2018-06-14T14:45:07+00:00"
         },
         {
             "name": "escapestudios/wsse-authentication-bundle",
@@ -2481,7 +2720,7 @@
                     "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
                 },
                 {
-                    "name": "William DURAND",
+                    "name": "William Durand",
                     "email": "william.durand1@gmail.com"
                 }
             ],
@@ -5003,17 +5242,17 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/calendar",
-                "reference": "cdd82111518654091f196a9881b1f56cb46cb933",
+                "reference": "dccb7221e5568c2ab31379ec723dfaf0b3c98356",
                 "shasum": null
             },
             "require": {
                 "bower-asset/fullcalendar": "3.4.0",
-                "oro/platform": "2.x-dev"
+                "oro/platform": "3.0.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5046,15 +5285,15 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "9d0029b6c2c6b62ffd228d97318e02d8ccd261ae",
+                "reference": "9498345e5651f2d1ffa50252acec83cc0b83151c",
                 "shasum": null
             },
             "require": {
-                "oro/calendar-bundle": "2.x-dev",
-                "oro/crm-call-bundle": "2.x-dev",
-                "oro/crm-task-bundle": "2.x-dev",
-                "oro/marketing": "2.x-dev",
-                "oro/platform": "2.x-dev"
+                "oro/calendar-bundle": "3.0.*",
+                "oro/crm-call-bundle": "3.0.*",
+                "oro/crm-task-bundle": "3.0.*",
+                "oro/marketing": "3.0.*",
+                "oro/platform": "3.0.*"
             },
             "require-dev": {
                 "behat/behat": "3.2.2",
@@ -5076,7 +5315,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5105,18 +5344,18 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-abandoned-cart",
-                "reference": "0119e76f412f0344a4795eae131135e17a6d8f46",
+                "reference": "6bb4b982f1030b765e49226636739f52907d8665",
                 "shasum": null
             },
             "require": {
-                "oro/crm": "2.x-dev",
-                "oro/crm-mail-chimp": "2.x-dev",
-                "oro/marketing": "2.x-dev"
+                "oro/crm": "3.0.*",
+                "oro/crm-mail-chimp": "3.0.*",
+                "oro/marketing": "3.0.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5144,16 +5383,16 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/call",
-                "reference": "5f520562c20e0463d389d8efa2a7981263679944",
+                "reference": "9ab63d17da04b3caea057217f298c506bab0674f",
                 "shasum": null
             },
             "require": {
-                "oro/platform": "2.x-dev"
+                "oro/platform": "3.0.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5186,18 +5425,18 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/dotmailer",
-                "reference": "e8c2f0dd78f574f0d3ba16e17b985dfd27a19ee5",
+                "reference": "37dc36d8c001012b2fa4c458796bba7a69819091",
                 "shasum": null
             },
             "require": {
-                "oro/crm": "2.x-dev",
-                "oro/marketing": "2.x-dev",
+                "oro/crm": "3.0.*",
+                "oro/marketing": "3.0.*",
                 "romanpitak/dotmailer-api-v2-client": "1.1.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5226,18 +5465,18 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/google-hangout",
-                "reference": "253ad60e0228e10c5973f2b9c8b12eec35facc59",
+                "reference": "ecd86032542da2c40b7c51099f44d66141b4f5e8",
                 "shasum": null
             },
             "require": {
-                "oro/calendar-bundle": "2.x-dev",
-                "oro/crm-call-bundle": "2.x-dev",
-                "oro/platform": "2.x-dev"
+                "oro/calendar-bundle": "3.0.*",
+                "oro/crm-call-bundle": "3.0.*",
+                "oro/platform": "3.0.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5271,16 +5510,16 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/magento-contact-us",
-                "reference": "7b7bfac887b6d74e2d1f4cd0fc0a84293f60e9c4",
+                "reference": "2e0036e04b224654584e1fde34aee296f321ed74",
                 "shasum": null
             },
             "require": {
-                "oro/crm": "2.x-dev"
+                "oro/crm": "3.0.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5309,18 +5548,18 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/mailchimp",
-                "reference": "641e9725f282f6f816d1dae9cec557eb7d9feb70",
+                "reference": "006978629c249fe75512aecd3db2a769f6825c09",
                 "shasum": null
             },
             "require": {
-                "oro/crm": "2.x-dev",
-                "oro/marketing": "2.x-dev",
+                "oro/crm": "3.0.*",
+                "oro/marketing": "3.0.*",
                 "zfr/zfr-mailchimp": "2.0.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5349,16 +5588,16 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/task",
-                "reference": "558c34511e7359e906594122c506e29a1a35d7b0",
+                "reference": "4180845fdaf8ccb4448fd85ffc19846b799a3b70",
                 "shasum": null
             },
             "require": {
-                "oro/platform": "2.x-dev"
+                "oro/platform": "3.0.*"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5391,16 +5630,16 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/zendesk",
-                "reference": "14956331649a6e56c6c32d6f8233f956d36cee2c",
+                "reference": "efb40d3b9925ceac5709393bff4a6addcbf3e8eb",
                 "shasum": null
             },
             "require": {
-                "oro/crm": "2.x-dev"
+                "oro/crm": "3.0.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5489,16 +5728,16 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/marketing",
-                "reference": "29cd414649a3fc51587a010631c9337f7e8b1b08",
+                "reference": "c097480af4a790cd22fdc32a7cbf28a5f8cbe7cd",
                 "shasum": null
             },
             "require": {
-                "oro/platform": "2.x-dev"
+                "oro/platform": "3.0.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5530,7 +5769,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "36bfe1fc05d1931c7411e8266f14486bd86b93e1",
+                "reference": "50f27abfc2fda2c31d6bda132d7ebf1d126572d7",
                 "shasum": null
             },
             "require": {
@@ -5619,7 +5858,7 @@
                 "npm-asset/xregexp": "3.2.*",
                 "ocramius/proxy-manager": "1.0.*",
                 "oro/doctrine-extensions": "1.2.*",
-                "oro/redis-config": "2.x-dev",
+                "oro/redis-config": "3.0.*",
                 "php": "~7.1.17",
                 "piwik/device-detector": "3.10.*",
                 "robloach/component-installer": "0.2.*",
@@ -5653,7 +5892,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5682,16 +5921,16 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/serialized-fields",
-                "reference": "8cd73fa1b50fb0c4eeb8a4102d67b1676babb8d1",
+                "reference": "6402fe2530c0674dcfc2163d9f83b1533d4bab76",
                 "shasum": null
             },
             "require": {
-                "oro/platform": "2.x-dev"
+                "oro/platform": "3.0.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5727,7 +5966,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/redis-config",
-                "reference": "39386813cbb9a8c586d903d9c0accc1c9106d971",
+                "reference": "21336d5bfb276eb2437200c8550530f1f7d2575c",
                 "shasum": null
             },
             "require": {
@@ -5740,7 +5979,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5762,16 +6001,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.15",
+            "version": "v2.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09"
+                "reference": "29af24f25bab834fcbb38ad2a69fa93b867e070d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/10bcb46e8f3d365170f6de9d05245aa066b81f09",
-                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/29af24f25bab834fcbb38ad2a69fa93b867e070d",
+                "reference": "29af24f25bab834fcbb38ad2a69fa93b867e070d",
                 "shasum": ""
             },
             "require": {
@@ -5807,7 +6046,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-06-08T15:26:40+00:00"
+            "time": "2018-07-04T16:31:37+00:00"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -6585,7 +6824,7 @@
             "version": "v1.1.3",
             "source": {
                 "type": "git",
-                "url": "git@github.com:laboro/dotMailer-API-v2-PHP-client.git",
+                "url": "https://github.com/laboro/dotMailer-API-v2-PHP-client.git",
                 "reference": "36cd6cef8ca1b7c45e9ae109da83014e4cc2d0b7"
             },
             "dist": {
@@ -6605,7 +6844,6 @@
                     "DotMailer\\Api\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.orocrm.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6621,12 +6859,15 @@
             "homepage": "https://github.com/romanpitak/dotMailer-API-v2-PHP-client",
             "keywords": [
                 "API",
+                "REST",
                 "client",
                 "dotMailer",
-                "rest",
                 "v2",
                 "version 2"
             ],
+            "support": {
+                "source": "https://github.com/laboro/dotMailer-API-v2-PHP-client/tree/v1.1.3"
+            },
             "time": "2016-07-01T23:56:02+00:00"
         },
         {
@@ -7802,20 +8043,20 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.4.11",
+            "version": "v3.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "8eb567d8398ce31a402ea8db3e6b5b1faf121cbc"
+                "reference": "c406c5a4f11fc00b60d3ec585125350418c4568d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/8eb567d8398ce31a402ea8db3e6b5b1faf121cbc",
-                "reference": "8eb567d8398ce31a402ea8db3e6b5b1faf121cbc",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/c406c5a4f11fc00b60d3ec585125350418c4568d",
+                "reference": "c406c5a4f11fc00b60d3ec585125350418c4568d",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "~2.4",
+                "doctrine/common": "~2.4@stable",
                 "ext-xml": "*",
                 "fig/link-util": "^1.0",
                 "php": "^5.5.9|>=7.0.8",
@@ -7834,7 +8075,7 @@
             },
             "conflict": {
                 "phpdocumentor/reflection-docblock": "<3.0||>=3.2.0,<3.2.2",
-                "phpdocumentor/type-resolver": "<0.2.1",
+                "phpdocumentor/type-resolver": "<0.3.0",
                 "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
             },
             "provide": {
@@ -7903,7 +8144,7 @@
                 "doctrine/data-fixtures": "1.0.*",
                 "doctrine/dbal": "~2.4",
                 "doctrine/doctrine-bundle": "~1.4",
-                "doctrine/orm": "~2.4,>=2.4.5",
+                "doctrine/orm": "~2.4,>=2.4.5,<=2.7.0",
                 "egulias/email-validator": "~1.2,>=1.2.8|~2.0",
                 "monolog/monolog": "~1.11",
                 "ocramius/proxy-manager": "~0.4|~1.0|~2.0",
@@ -7953,7 +8194,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-05-25T13:16:49+00:00"
+            "time": "2018-07-23T16:37:45+00:00"
         },
         {
             "name": "tinymce/tinymce",
@@ -8105,20 +8346,21 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.35.3",
+            "version": "v1.35.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "b48680b6eb7d16b5025b9bfc4108d86f6b8af86f"
+                "reference": "7e081e98378a1e78c29cc9eba4aefa5d78a05d2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b48680b6eb7d16b5025b9bfc4108d86f6b8af86f",
-                "reference": "b48680b6eb7d16b5025b9bfc4108d86f6b8af86f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7e081e98378a1e78c29cc9eba4aefa5d78a05d2a",
+                "reference": "7e081e98378a1e78c29cc9eba4aefa5d78a05d2a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.3",
+                "symfony/polyfill-ctype": "^1.8"
             },
             "require-dev": {
                 "psr/container": "^1.0",
@@ -8157,16 +8399,16 @@
                 },
                 {
                     "name": "Twig Team",
-                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "homepage": "https://twig.symfony.com/contributors",
                     "role": "Contributors"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
-            "homepage": "http://twig.sensiolabs.org",
+            "homepage": "https://twig.symfony.com",
             "keywords": [
                 "templating"
             ],
-            "time": "2018-03-20T04:25:58+00:00"
+            "time": "2018-07-13T07:12:17+00:00"
         },
         {
             "name": "vakata/jstree",
@@ -8299,7 +8541,7 @@
             ],
             "authors": [
                 {
-                    "name": "William DURAND",
+                    "name": "William Durand",
                     "email": "william.durand1@gmail.com"
                 }
             ],
@@ -9174,16 +9416,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v2.12.1",
+            "version": "v2.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "beef6cbe6dec7205edcd143842a49f9a691859a6"
+                "reference": "dcc87d5414e9d0bd316fce81a5bedb9ce720b183"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/beef6cbe6dec7205edcd143842a49f9a691859a6",
-                "reference": "beef6cbe6dec7205edcd143842a49f9a691859a6",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/dcc87d5414e9d0bd316fce81a5bedb9ce720b183",
+                "reference": "dcc87d5414e9d0bd316fce81a5bedb9ce720b183",
                 "shasum": ""
             },
             "require": {
@@ -9217,7 +9459,7 @@
                 "php-cs-fixer/phpunit-constraint-isidenticalstring": "^1.0.1",
                 "php-cs-fixer/phpunit-constraint-xmlmatchesxsd": "^1.0.1",
                 "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1",
-                "phpunitgoodpractices/traits": "^1.5",
+                "phpunitgoodpractices/traits": "^1.5.1",
                 "symfony/phpunit-bridge": "^4.0"
             },
             "suggest": {
@@ -9261,20 +9503,20 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2018-06-10T08:26:56+00:00"
+            "time": "2018-07-06T10:37:40+00:00"
         },
         {
             "name": "fzaninotto/faker",
-            "version": "v1.7.1",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "d3ed4cc37051c1ca52d22d76b437d14809fc7e0d"
+                "reference": "f72816b43e74063c8b10357394b6bba8cb1c10de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/d3ed4cc37051c1ca52d22d76b437d14809fc7e0d",
-                "reference": "d3ed4cc37051c1ca52d22d76b437d14809fc7e0d",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/f72816b43e74063c8b10357394b6bba8cb1c10de",
+                "reference": "f72816b43e74063c8b10357394b6bba8cb1c10de",
                 "shasum": ""
             },
             "require": {
@@ -9282,7 +9524,7 @@
             },
             "require-dev": {
                 "ext-intl": "*",
-                "phpunit/phpunit": "^4.0 || ^5.0",
+                "phpunit/phpunit": "^4.8.35 || ^5.7",
                 "squizlabs/php_codesniffer": "^1.5"
             },
             "type": "library",
@@ -9311,7 +9553,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2017-08-15T16:48:10+00:00"
+            "time": "2018-07-12T10:23:15+00:00"
         },
         {
             "name": "instaclick/php-webdriver",
@@ -11095,16 +11337,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.11",
+            "version": "v3.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "63cdae00a75862fa543b765ba63d55f6b6397d0c"
+                "reference": "62c8349f21927b9a5975d89ee065e84d233a34e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/63cdae00a75862fa543b765ba63d55f6b6397d0c",
-                "reference": "63cdae00a75862fa543b765ba63d55f6b6397d0c",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/62c8349f21927b9a5975d89ee065e84d233a34e5",
+                "reference": "62c8349f21927b9a5975d89ee065e84d233a34e5",
                 "shasum": ""
             },
             "require": {
@@ -11157,7 +11399,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2018-05-16T12:49:49+00:00"
+            "time": "2018-07-05T11:53:23+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
@@ -11307,22 +11549,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "oro/crm": 20,
-        "oro/platform": 20,
-        "oro/crm-task-bundle": 20,
-        "oro/crm-call-bundle": 20,
-        "oro/calendar-bundle": 20,
-        "oro/marketing": 20,
-        "oro/platform-serialised-fields": 20,
-        "oro/crm-hangouts-call-bundle": 20,
-        "oro/crm-abandoned-cart": 20,
-        "oro/crm-magento-embedded-contact-us": 20,
-        "oro/crm-mail-chimp": 20,
-        "oro/crm-dotmailer": 20,
-        "oro/crm-zendesk": 20,
-        "oro/redis-config": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
