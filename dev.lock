@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc7c5bc46c2bee304fccfa55a56f311e",
+    "content-hash": "9e1ba596bd64b5acac41c2d0c9ec8743",
     "packages": [
         {
             "name": "akeneo/batch-bundle",
@@ -12,7 +12,7 @@
             "target-dir": "Akeneo/Bundle/BatchBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laboro/BatchBundle.git",
+                "url": "git@github.com:laboro/BatchBundle.git",
                 "reference": "aff218f6ba5714baae575698c0578bf8da207f41"
             },
             "dist": {
@@ -9915,6 +9915,49 @@
             "time": "2018-04-07T09:33:52+00:00"
         },
         {
+            "name": "oro/twig-inspector",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../package/twig-inspector",
+                "reference": "0facd8fc7ae9ffb1efd607cde00939dac5df10ca",
+                "shasum": null
+            },
+            "require": {
+                "symfony/config": "^3.4",
+                "symfony/dependency-injection": "^3.4",
+                "symfony/http-foundation": "^3.4",
+                "symfony/http-kernel": "^3.4",
+                "symfony/routing": "^3.4",
+                "twig/twig": "~1.34|~2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Oro\\TwigInspector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Oro, Inc",
+                    "homepage": "http://www.orocrm.com"
+                }
+            ],
+            "description": "Symfony Toolbar extension that allows to inspect twig templates and blocks visually or in source code with comments",
+            "homepage": "https://github.com/oroinc/twig-inspector"
+        },
+        {
             "name": "pdepend/pdepend",
             "version": "2.5.2",
             "source": {
@@ -11839,7 +11882,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "oro/twig-inspector": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
