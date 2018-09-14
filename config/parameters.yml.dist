@@ -15,14 +15,16 @@ parameters:
     mailer_password:   ~
 
     # WebSocket server config
-    websocket_bind_address:    "0.0.0.0"  # The host IP the socket server will bind to
-    websocket_bind_port:       8080       # The port the socket server will listen on  
-    websocket_frontend_host:   "*"        # Websocket host the browser will connect to
-    websocket_frontend_port:   8080       # Websocket port the browser will connect to
-    websocket_frontend_path:   ""         # Websocket url path the browser will connect to (for example "/websocket" or "/ws")
-    websocket_backend_host:    "*"        # Websocket host the application server will connect to
-    websocket_backend_port:    8080       # Websocket port the application server will connect to
-    websocket_backend_path:    ""         # Websocket url path the application server will connect to (for example "/websocket" or "/ws")
+    websocket_bind_address:                "0.0.0.0"  # The host IP the socket server will bind to
+    websocket_bind_port:                   8080       # The port the socket server will listen on
+    websocket_frontend_host:               "*"        # Websocket host the browser will connect to
+    websocket_frontend_port:               8080       # Websocket port the browser will connect to
+    websocket_frontend_path:               ""         # Websocket url path the browser will connect to (for example "/websocket" or "/ws")
+    websocket_backend_host:                "*"        # Websocket host the application server will connect to
+    websocket_backend_port:                8080       # Websocket port the application server will connect to
+    websocket_backend_path:                ""         # Websocket url path the application server will connect to (for example "/websocket" or "/ws")
+    websocket_backend_transport:           tcp        # Socket transport (for example "tcp", "ssl" or "tls")
+    websocket_backend_ssl_context_options: {}         # Socket context options, usually needed when using secure transport
 
     # Used to hide backend under specified prefix, should be started with "/", for instance "/admin"
     # You can use this default value when only backend is present
