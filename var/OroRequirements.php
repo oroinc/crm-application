@@ -103,6 +103,12 @@ class OroRequirements extends SymfonyRequirements
             'Install and enable the <strong>Tidy</strong> extension.'
         );
 
+        $this->addRecommendation(
+            !extension_loaded('phar'),
+            'Phar extension is disabled',
+            'Disable <strong>Phar</strong> extension to reduce the risk of PHP unserialization vulnerability.'
+        );
+
         $tmpDir = sys_get_temp_dir();
         $this->addRequirement(
             is_writable($tmpDir),
