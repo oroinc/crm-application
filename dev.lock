@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e1ba596bd64b5acac41c2d0c9ec8743",
+    "content-hash": "2cc8b9cdcfd0c571fed749fdc505d35b",
     "packages": [
         {
             "name": "akeneo/batch-bundle",
@@ -12,7 +12,7 @@
             "target-dir": "Akeneo/Bundle/BatchBundle",
             "source": {
                 "type": "git",
-                "url": "git@github.com:laboro/BatchBundle.git",
+                "url": "https://github.com/laboro/BatchBundle.git",
                 "reference": "aff218f6ba5714baae575698c0578bf8da207f41"
             },
             "dist": {
@@ -54,6 +54,9 @@
                 "Reader",
                 "Writer"
             ],
+            "support": {
+                "source": "https://github.com/laboro/BatchBundle/tree/0.4.8"
+            },
             "time": "2018-03-20T11:52:51+00:00"
         },
         {
@@ -424,7 +427,7 @@
                 "shasum": null
             },
             "type": "bower-asset",
-            "time": "2014-07-21 18:45:41"
+            "time": "2014-07-21T18:45:41+00:00"
         },
         {
             "name": "bower-asset/font-awesome",
@@ -659,7 +662,7 @@
                 "shasum": null
             },
             "type": "bower-asset",
-            "time": "2018-04-29 21:14:49"
+            "time": "2018-04-29T21:14:49+00:00"
         },
         {
             "name": "bower-asset/jsplumb",
@@ -5361,45 +5364,6 @@
             "homepage": "https://github.com/oroinc/crm.git"
         },
         {
-            "name": "oro/crm-abandoned-cart",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/magento-abandoned-cart",
-                "reference": "73f69ec7507fb971334745618150c25b34bfe69f",
-                "shasum": null
-            },
-            "require": {
-                "oro/crm": "3.1.*",
-                "oro/crm-mail-chimp": "3.1.*",
-                "oro/marketing": "3.1.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\AbandonedCartBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocrm.com"
-                }
-            ],
-            "description": "Oro Abandoned Cart"
-        },
-        {
             "name": "oro/crm-call-bundle",
             "version": "dev-master",
             "dist": {
@@ -5563,46 +5527,6 @@
             ],
             "description": "OroCRM Magento Embedded Contact Us package",
             "homepage": "https://github.com/oroinc/OroCRMMagentoContactUsBundle.git"
-        },
-        {
-            "name": "oro/crm-mail-chimp",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/mailchimp",
-                "reference": "2c17e52036a3d74314107f5e951967f1dcb61936",
-                "shasum": null
-            },
-            "require": {
-                "oro/crm": "3.1.*",
-                "oro/marketing": "3.1.*",
-                "zfr/zfr-mailchimp": "2.0.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\MailChimpBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocrm.com"
-                }
-            ],
-            "description": "OroCRM MailChimp integration",
-            "homepage": "https://github.com/oroinc/OroCRMMailChimpBundle.git"
         },
         {
             "name": "oro/crm-task-bundle",
@@ -6841,7 +6765,7 @@
             "version": "3.0.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:laboro/dotMailer-API-v2-PHP-client.git",
+                "url": "https://github.com/laboro/dotMailer-API-v2-PHP-client.git",
                 "reference": "40a8603a8c7be29afff2a8f0b816f88085f27064"
             },
             "dist": {
@@ -6882,6 +6806,9 @@
                 "v2",
                 "version 2"
             ],
+            "support": {
+                "source": "https://github.com/laboro/dotMailer-API-v2-PHP-client/tree/maintenance/v1.1.3"
+            },
             "time": "2017-05-25T17:29:35+00:00"
         },
         {
@@ -9053,56 +8980,6 @@
                 "zf2"
             ],
             "time": "2015-03-25T20:55:48+00:00"
-        },
-        {
-            "name": "zfr/zfr-mailchimp",
-            "version": "v2.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zf-fr/zfr-mailchimp.git",
-                "reference": "265a640e009580742d6cba2331c5efa0b695cc79"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zf-fr/zfr-mailchimp/zipball/265a640e009580742d6cba2331c5efa0b695cc79",
-                "reference": "265a640e009580742d6cba2331c5efa0b695cc79",
-                "shasum": ""
-            },
-            "require": {
-                "guzzle/guzzle": "~3.5",
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "ZfrMailChimp\\": "src/"
-                },
-                "classmap": [
-                    "./"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michaël Gallego",
-                    "email": "mic.gallego@gmail.com",
-                    "homepage": "http://www.michaelgallego.fr"
-                }
-            ],
-            "description": "PHP library for interacting with the v2 MailChimp REST API",
-            "homepage": "https://github.com/zf-fr/zfr-mailchimp",
-            "keywords": [
-                "campaign",
-                "mail",
-                "mailchimp"
-            ],
-            "time": "2016-11-24T06:46:20+00:00"
         }
     ],
     "packages-dev": [
