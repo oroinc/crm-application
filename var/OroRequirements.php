@@ -26,9 +26,26 @@ class OroRequirements extends SymfonyRequirements
      */
     public function __construct($env = 'prod')
     {
+        $phpVersion  = phpversion();
+
+        /**
+         * We should hide the deprecation varnings for php >= 7.2 because SymfonyRequirements class uses
+         * 'create_function' function that was deprecated in php 7.2.
+         *
+         * @see http://php.net/manual/en/migration72.deprecated.php#migration72.deprecated.create_function-function
+         * @see https://github.com/sensiolabs/SensioDistributionBundle/pull/336
+         */
+        if (version_compare($phpVersion, '7.2', '>=')) {
+            $oldLevel = error_reporting(E_ALL & ~E_DEPRECATED);
+        }
+
         parent::__construct();
 
-        $phpVersion  = phpversion();
+        // restore the previous report level in casse of php > 7.2.
+        if (version_compare($phpVersion, '7.2', '>=')) {
+            error_reporting($oldLevel);
+        }
+
         $gdVersion   = defined('GD_VERSION') ? GD_VERSION : null;
         $curlVersion = function_exists('curl_version') ? curl_version() : null;
         $icuVersion  = Intl::getIcuVersion();
@@ -58,9 +75,9 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addOroRequirement(
-            function_exists('mcrypt_encrypt'),
-            'mcrypt_encrypt() should be available',
-            'Install and enable the <strong>Mcrypt</strong> extension.'
+            function_exists('openssl_encrypt'),
+            'openssl_encrypt() should be available',
+            'Install and enable the <strong>openssl</strong> extension.'
         );
 
         if (function_exists('iconv')) {
