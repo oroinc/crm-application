@@ -1,5 +1,10 @@
 <?php
 /**
+ * The definition of this library was modified to support php 7.2.
+ * String "while (list($i, $path) = each($paths))"
+ * was replaced with do...while construction without each method.
+ */
+/**
  * CssMin - A (simple) css minifier with benefits
  * 
  * --
@@ -2220,8 +2225,10 @@ class CssMin
 		{
 		// Create the class index for autoloading or including
 		$paths = array(dirname(__FILE__));
-		while (list($i, $path) = each($paths))
+		//while (list($i, $path) = each($paths))
+		do
 			{
+			$path = current($paths);
 			$subDirectorys = glob($path . "*", GLOB_MARK | GLOB_ONLYDIR | GLOB_NOSORT);
 			if (is_array($subDirectorys))
 				{
@@ -2240,6 +2247,7 @@ class CssMin
 					}
 				}
 			}
+		while(next($paths));
 		krsort(self::$classIndex);
 		// Only use autoloading if spl_autoload_register() is available and no __autoload() is defined (because 
 		// __autoload() breaks if spl_autoload_register() is used. 
