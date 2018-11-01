@@ -143,22 +143,21 @@ Vagrant.configure("2") do |config|
 
 		echo "\n~~~~~~~~~~~~~~ Prepare MySQL Database ~~~~~~~~~~~~~~\n"
 
-        # --- Change the MySQL Server Configuration ---
+		# --- Change the MySQL Server Configuration ---
 
-        echo "[client]" >> /etc/my.cnf
-        echo "default-character-set = utf8mb4" >> /etc/my.cnf
-        echo "" >> /etc/my.cnf
-        echo "[mysql]" >> /etc/my.cnf
-        echo "default-character-set = utf8mb4" >> /etc/my.cnf
-        echo "" >> /etc/my.cnf
-        echo "[mysqld]" >> /etc/my.cnf
-        echo "innodb_file_per_table = 0" >> /etc/my.cnf
-        echo "wait_timeout = 28800" >> /etc/my.cnf
-        echo "character-set-client-handshake = FALSE" >> /etc/my.cnf
-        echo "character-set-server = utf8mb4" >> /etc/my.cnf
-        echo "collation-server = utf8mb4_unicode_ci" >> /etc/my.cnf
+		echo "[client]" >> /etc/my.cnf
+		echo "default-character-set = utf8mb4" >> /etc/my.cnf
+		echo "" >> /etc/my.cnf
+		echo "[mysql]" >> /etc/my.cnf
+		echo "default-character-set = utf8mb4" >> /etc/my.cnf
+		echo "" >> /etc/my.cnf
+		echo "[mysqld]" >> /etc/my.cnf
+		echo "innodb_file_per_table = 0" >> /etc/my.cnf
+		echo "wait_timeout = 28800" >> /etc/my.cnf
+		echo "character-set-server = utf8mb4" >> /etc/my.cnf
+		echo "collation-server = utf8mb4_unicode_ci" >> /etc/my.cnf
 
-        systemctl restart mysqld
+		systemctl restart mysqld
 
 		# --- Change the Default MySQL Password for Root User ---
 
