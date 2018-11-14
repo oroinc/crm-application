@@ -1916,16 +1916,16 @@
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
-            "version": "1.3.3",
+            "version": "1.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineCacheBundle.git",
-                "reference": "4c8e363f96427924e7e519c5b5119b4f54512697"
+                "reference": "5514c90d9fb595e1095e6d66ebb98ce9ef049927"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/4c8e363f96427924e7e519c5b5119b4f54512697",
-                "reference": "4c8e363f96427924e7e519c5b5119b4f54512697",
+                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/5514c90d9fb595e1095e6d66ebb98ce9ef049927",
+                "reference": "5514c90d9fb595e1095e6d66ebb98ce9ef049927",
                 "shasum": ""
             },
             "require": {
@@ -1938,7 +1938,7 @@
                 "instaclick/coding-standard": "~1.1",
                 "instaclick/object-calisthenics-sniffs": "dev-master",
                 "instaclick/symfony2-coding-standard": "dev-remaster",
-                "phpunit/phpunit": "~4|~5",
+                "phpunit/phpunit": "~4.8.36|~5.6|~6.5|~7.0",
                 "predis/predis": "~0.8",
                 "satooshi/php-coveralls": "^1.0",
                 "squizlabs/php_codesniffer": "~1.5",
@@ -1962,7 +1962,10 @@
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Bundle\\DoctrineCacheBundle\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1995,12 +1998,12 @@
                 }
             ],
             "description": "Symfony Bundle for Doctrine Cache",
-            "homepage": "http://www.doctrine-project.org",
+            "homepage": "https://www.doctrine-project.org",
             "keywords": [
                 "cache",
                 "caching"
             ],
-            "time": "2018-03-27T09:22:12+00:00"
+            "time": "2018-11-09T06:25:35+00:00"
         },
         {
             "name": "doctrine/doctrine-fixtures-bundle",
@@ -4823,16 +4826,16 @@
         },
         {
             "name": "oro/calendar-bundle",
-            "version": "2.6.6",
+            "version": "2.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCalendarBundle.git",
-                "reference": "0326e2e3b6eb4706c7ad28abf198446d601da850"
+                "reference": "5aeedab5ce0a02969a34caef5dd2c5b608f3c92c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/0326e2e3b6eb4706c7ad28abf198446d601da850",
-                "reference": "0326e2e3b6eb4706c7ad28abf198446d601da850",
+                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/5aeedab5ce0a02969a34caef5dd2c5b608f3c92c",
+                "reference": "5aeedab5ce0a02969a34caef5dd2c5b608f3c92c",
                 "shasum": ""
             },
             "require": {
@@ -4873,20 +4876,20 @@
                 "source": "https://github.com/oroinc/OroCalendarBundle/tree/2.6",
                 "issues": "https://github.com/oroinc/OroCalendarBundle/issues"
             },
-            "time": "2018-09-21T13:32:37+00:00"
+            "time": "2018-11-07T11:11:03+00:00"
         },
         {
             "name": "oro/crm",
-            "version": "2.6.23",
+            "version": "2.6.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/crm.git",
-                "reference": "71f2d841819ed38d219c78be3d3a4557a255c5c7"
+                "reference": "0892b6b339f42d89be79da7579a7c125c3c5072f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/crm/zipball/71f2d841819ed38d219c78be3d3a4557a255c5c7",
-                "reference": "71f2d841819ed38d219c78be3d3a4557a255c5c7",
+                "url": "https://api.github.com/repos/oroinc/crm/zipball/0892b6b339f42d89be79da7579a7c125c3c5072f",
+                "reference": "0892b6b339f42d89be79da7579a7c125c3c5072f",
                 "shasum": ""
             },
             "require": {
@@ -4944,7 +4947,7 @@
                 "source": "https://github.com/oroinc/crm/tree/2.6",
                 "issues": "https://github.com/oroinc/crm/issues"
             },
-            "time": "2018-10-25T14:13:30+00:00"
+            "time": "2018-11-08T16:51:09+00:00"
         },
         {
             "name": "oro/crm-abandoned-cart",
@@ -5001,7 +5004,7 @@
             "version": "2.6.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/oroinc/OroCRMCallBundle.git",
+                "url": "git@github.com:oroinc/OroCRMCallBundle.git",
                 "reference": "43ecf2e26dd7aecc6d1500d588a7f50549e065d4"
             },
             "dist": {
@@ -5043,10 +5046,6 @@
                 "Call",
                 "Oro"
             ],
-            "support": {
-                "source": "https://github.com/oroinc/OroCRMCallBundle/tree/2.6",
-                "issues": "https://github.com/oroinc/OroCRMCallBundle/issues"
-            },
             "time": "2018-09-20T06:47:26+00:00"
         },
         {
@@ -5105,7 +5104,7 @@
             "version": "2.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/oroinc/OroCRMHangoutsCallBundle.git",
+                "url": "git@github.com:oroinc/OroCRMHangoutsCallBundle.git",
                 "reference": "ab2371d6d3bf756b9c06ba3dc0299d93ca91da5f"
             },
             "dist": {
@@ -5150,10 +5149,6 @@
                 "Oro",
                 "integration"
             ],
-            "support": {
-                "source": "https://github.com/oroinc/OroCRMHangoutsCallBundle/tree/2.6.0",
-                "issues": "https://github.com/oroinc/OroCRMHangoutsCallBundle/issues"
-            },
             "time": "2018-01-29T15:34:08+00:00"
         },
         {
@@ -5261,7 +5256,7 @@
             "version": "2.6.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/oroinc/OroCRMTaskBundle.git",
+                "url": "git@github.com:oroinc/OroCRMTaskBundle.git",
                 "reference": "1ddf9fad41fe0e1cf57bbf50757e31d176499459"
             },
             "dist": {
@@ -5303,10 +5298,6 @@
                 "Oro",
                 "Task"
             ],
-            "support": {
-                "source": "https://github.com/oroinc/OroCRMTaskBundle/tree/2.6",
-                "issues": "https://github.com/oroinc/OroCRMTaskBundle/issues"
-            },
             "time": "2018-09-20T06:47:26+00:00"
         },
         {
@@ -5420,16 +5411,16 @@
         },
         {
             "name": "oro/marketing",
-            "version": "2.6.6",
+            "version": "2.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMMarketingBundle.git",
-                "reference": "2511a563b53cc5374a94590f35d44ad77f57f1cc"
+                "reference": "af7ce5f1cebc20f0ce777fee83b148586baa360e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/2511a563b53cc5374a94590f35d44ad77f57f1cc",
-                "reference": "2511a563b53cc5374a94590f35d44ad77f57f1cc",
+                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/af7ce5f1cebc20f0ce777fee83b148586baa360e",
+                "reference": "af7ce5f1cebc20f0ce777fee83b148586baa360e",
                 "shasum": ""
             },
             "require": {
@@ -5467,20 +5458,20 @@
             "support": {
                 "source": "https://github.com/oroinc/OroCRMMarketingBundle/tree/2.6"
             },
-            "time": "2018-10-04T12:58:06+00:00"
+            "time": "2018-10-24T15:44:52+00:00"
         },
         {
             "name": "oro/platform",
-            "version": "2.6.34",
+            "version": "2.6.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/platform.git",
-                "reference": "6f3c25a11ee3db1a9e26ca8139bff995885bd096"
+                "reference": "db1d7365ed353eafb01639fc5a01ada47aacccfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/platform/zipball/6f3c25a11ee3db1a9e26ca8139bff995885bd096",
-                "reference": "6f3c25a11ee3db1a9e26ca8139bff995885bd096",
+                "url": "https://api.github.com/repos/oroinc/platform/zipball/db1d7365ed353eafb01639fc5a01ada47aacccfc",
+                "reference": "db1d7365ed353eafb01639fc5a01ada47aacccfc",
                 "shasum": ""
             },
             "require": {
@@ -5637,7 +5628,7 @@
                 "source": "https://github.com/oroinc/platform/tree/2.6",
                 "issues": "https://github.com/oroinc/platform/issues"
             },
-            "time": "2018-10-29T17:39:16+00:00"
+            "time": "2018-11-12T12:28:47+00:00"
         },
         {
             "name": "oro/platform-serialised-fields",
@@ -6326,7 +6317,7 @@
             "version": "3.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laboro/dotMailer-API-v2-PHP-client.git",
+                "url": "git@github.com:laboro/dotMailer-API-v2-PHP-client.git",
                 "reference": "40a8603a8c7be29afff2a8f0b816f88085f27064"
             },
             "dist": {
@@ -6367,9 +6358,6 @@
                 "v2",
                 "version 2"
             ],
-            "support": {
-                "source": "https://github.com/laboro/dotMailer-API-v2-PHP-client/tree/maintenance/v1.1.3"
-            },
             "time": "2017-05-25T17:29:35+00:00"
         },
         {
@@ -8020,16 +8008,16 @@
         },
         {
             "name": "vakata/jstree",
-            "version": "3.3.6",
+            "version": "3.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vakata/jstree.git",
-                "reference": "39d167dc3f931fa95e588d4d106d9b44cbcdb6f9"
+                "reference": "bc5187e5826244dee5ebdc0e9db2e2652fefe928"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vakata/jstree/zipball/39d167dc3f931fa95e588d4d106d9b44cbcdb6f9",
-                "reference": "39d167dc3f931fa95e588d4d106d9b44cbcdb6f9",
+                "url": "https://api.github.com/repos/vakata/jstree/zipball/bc5187e5826244dee5ebdc0e9db2e2652fefe928",
+                "reference": "bc5187e5826244dee5ebdc0e9db2e2652fefe928",
                 "shasum": ""
             },
             "require": {
@@ -8073,7 +8061,7 @@
             ],
             "description": "jsTree is jquery plugin, that provides interactive trees.",
             "homepage": "http://jstree.com",
-            "time": "2018-09-17T12:38:44+00:00"
+            "time": "2018-11-06T21:15:47+00:00"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
