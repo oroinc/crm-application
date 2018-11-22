@@ -126,6 +126,12 @@ class OroRequirements extends SymfonyRequirements
             'Disable <strong>Phar</strong> extension to reduce the risk of PHP unserialization vulnerability.'
         );
 
+        $this->addRecommendation(
+            extension_loaded('imap'),
+            'IMAP extension should be installed for valid email processing on IMAP sync.',
+            'Install and enable the <strong>IMAP</strong> extension.'
+        );
+
         $tmpDir = sys_get_temp_dir();
         $this->addRequirement(
             is_writable($tmpDir),
