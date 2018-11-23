@@ -37,23 +37,6 @@ assetic:
         cssmin:
             file: "%kernel.project_dir%/var/php/cssmin-v3.0.1.php"
 
-# Doctrine Configuration
-doctrine:
-    dbal:
-        default_connection:   default
-        connections:
-            default:
-                driver:       "%database_driver%"
-                host:         "%database_host%"
-                port:         "%database_port%"
-                dbname:       "%database_name%"
-                user:         "%database_user%"
-                password:     "%database_password%"
-                charset:      UTF8
-    orm:
-        auto_generate_proxy_classes: "%kernel.debug%"
-        auto_mapping:         true
-
 # Twig Configuration
 twig:
     debug:                    "%kernel.debug%"
