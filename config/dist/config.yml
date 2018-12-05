@@ -27,16 +27,6 @@ framework:
         enabled:              true
         path:                 /_fragment # used for controller action in template
 
-# Assetic Configuration
-assetic:
-    debug:                    false
-    use_controller:           false
-    read_from:                %kernel.project_dir%/public
-    filters:
-        cssrewrite: ~
-        cssmin:
-            file: "%kernel.project_dir%/var/php/cssmin-v3.0.1.php"
-
 # Twig Configuration
 twig:
     debug:                    "%kernel.debug%"
