@@ -17,7 +17,6 @@ class DistributionKernel extends OroKernel
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
-            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Oro\Bundle\DistributionBundle\OroDistributionBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),

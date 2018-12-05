@@ -42,16 +42,6 @@ twig:
         bap:
             layout:           base.html.twig  # default layout across all Oro bundles
 
-# Assetic Configuration
-assetic:
-    debug:                    false
-    use_controller:           false
-    read_from:                %kernel.project_dir%/public
-    filters:
-        cssrewrite: ~
-        cssmin:
-            file: "%kernel.project_dir%/var/php/cssmin-v3.0.1.php"
-
 # Swiftmailer Configuration
 swiftmailer:
     transport:                "%mailer_transport%"
