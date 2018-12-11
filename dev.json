@@ -70,19 +70,37 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions",
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::installAssets",
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
+      "@build-parameters",
+      "@build-bootstrap",
+      "@install-requirements-file",
+      "@set-permissions",
+      "@install-assets",
+      "@set-assets-version"
     ],
     "post-update-cmd": [
-      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions",
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::installAssets",
+      "@build-parameters",
+      "@build-bootstrap",
+      "@install-requirements-file",
+      "@set-permissions",
+      "@install-assets",
+      "@set-assets-version"
+    ],
+    "build-parameters": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+    ],
+    "build-bootstrap": [
+      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap"
+    ],
+    "install-requirements-file": [
+      "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+    ],
+    "set-permissions": [
+      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions"
+    ],
+    "install-assets": [
+      "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::installAssets"
+    ],
+    "set-assets-version": [
       "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
     ]
   },
