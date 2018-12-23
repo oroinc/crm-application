@@ -7,4 +7,5 @@ framework:
 
 web_profiler:
     toolbar: true
+    excluded_ajax_paths: '^/((index(_[\w]+)|app(_[\w]+)?)\.php/)?(_wdt|bundles)'
     intercept_redirects: false
