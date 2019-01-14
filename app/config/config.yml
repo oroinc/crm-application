@@ -160,3 +160,17 @@ oro_message_queue:
         default: '%message_queue_transport%'
         '%message_queue_transport%': '%message_queue_transport_config%'
     client: ~
+
+oro_attachment:
+    upload_file_mime_types:
+        - application/msword
+        - application/vnd.ms-excel
+        - application/pdf
+        - application/zip
+        - image/gif
+        - image/jpeg
+        - image/png
+    upload_image_mime_types:
+        - image/gif
+        - image/jpeg
+        - image/png
