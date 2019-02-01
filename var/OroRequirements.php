@@ -4,7 +4,6 @@
 require_once __DIR__ . '/../var/SymfonyRequirements.php';
 
 use Oro\Bundle\AssetBundle\NodeJsVersionChecker;
-use Oro\Bundle\InstallerBundle\Process\PhpExecutableFinder;
 use Oro\Bundle\AssetBundle\NodeJsExecutableFinder;
 
 use Symfony\Component\Intl\Intl;
@@ -174,21 +173,6 @@ class OroRequirements extends SymfonyRequirements
             );
         }
 
-        // Web installer specific checks
-        if ('cli' !== PHP_SAPI) {
-            $output = $this->checkCliRequirements();
-
-            $requirement = new CliRequirement(
-                !$output,
-                'Requirements validation for PHP CLI',
-                'If you have multiple PHP versions installed, you need to configure ORO_PHP_PATH variable with PHP binary path used by web server'
-            );
-
-            $requirement->setOutput($output);
-
-            $this->add($requirement);
-        }
-
         $baseDir = realpath(__DIR__ . '/..');
         $mem     = $this->getBytes(ini_get('memory_limit'));
 
@@ -307,8 +291,7 @@ class OroRequirements extends SymfonyRequirements
             $this->getRequirements(),
             function ($requirement) {
                 return !($requirement instanceof PhpIniRequirement)
-                    && !($requirement instanceof OroRequirement)
-                    && !($requirement instanceof CliRequirement);
+                    && !($requirement instanceof OroRequirement);
             }
         );
     }
@@ -339,19 +322,6 @@ class OroRequirements extends SymfonyRequirements
             $this->getRequirements(),
             function ($requirement) {
                 return $requirement instanceof OroRequirement;
-            }
-        );
-    }
-
-    /**
-     * @return array
-     */
-    public function getCliRequirements()
-    {
-        return array_filter(
-            $this->getRequirements(),
-            function ($requirement) {
-                return $requirement instanceof CliRequirement;
             }
         );
     }
@@ -448,47 +418,8 @@ class OroRequirements extends SymfonyRequirements
 
         return $fileLength >= 242;
     }
-
-    /**
-     * @return null|string
-     */
-    protected function checkCliRequirements()
-    {
-        $finder  = new PhpExecutableFinder();
-        $command = sprintf(
-            '%s %soro-check.php',
-            $finder->find(),
-            __DIR__ . DIRECTORY_SEPARATOR
-        );
-
-        return shell_exec($command);
-    }
 }
 
 class OroRequirement extends Requirement
 {
-}
-
-class CliRequirement extends Requirement
-{
-    /**
-     * @var string
-     */
-    protected $output;
-
-    /**
-     * @return string
-     */
-    public function getOutput()
-    {
-        return $this->output;
-    }
-
-    /**
-     * @param string $output
-     */
-    public function setOutput($output)
-    {
-        $this->output = $output;
-    }
 }
