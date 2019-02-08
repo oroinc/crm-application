@@ -5,8 +5,16 @@ nelmio_api_doc:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
     prefix:   %web_backend_prefix%/api/doc
 
-fos_js_routing:
-    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+#
+# This route supports the promise of a backward compatibility break.
+# Use the "oro_navigation_js_routing_js" route instead.
+#
+fos_js_routing_js:
+    path: "/media/js/%oro_navigation.js_routing_filename_prefix%_routes.{_format}"
+    methods: [GET]
+    defaults: { _controller: fos_js_routing.controller:indexAction }
+    requirements:
+        _format: json
 
 _liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.xml"
