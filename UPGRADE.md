@@ -1,25 +1,11 @@
-=======================
+The upgrade instructions are available at [OroCRM website](https://oroinc.com/orocrm/doc/current/install-upgrade/upgrade).
 
-### General
+This file includes only the most important items that should be addressed before attempting to upgrade or during the upgrade of a vanilla Oro application.
 
-  * Pull changes from repository
-```bash
-git pull
-git checkout <VERSION TO UPGRADE>
-```
-  * Upgrade composer dependency
-```bash
-php composer.phar install --prefer-dist
-```
-  * Disable APC, OpCache, other code accelerators
-  * Remove old caches and assets
-```bash
-rm -rf var/cache/*
-rm -rf public/js/*
-rm -rf public/css/*
-```
-  * Upgrade platform
-```bash
-php bin/console oro:platform:update --env=prod
+Please also refer to [CHANGELOG.md](CHANGELOG.md) for a list of significant changes in the code that may affect the upgrade of some customizations.
 
-  
+## 3.1.0
+
+The minimum required PHP version is 7.1.26.
+
+Upgrade PHP before running `composer install` or `composer update`, otherwise composer may download wrong versions of the application packages.
