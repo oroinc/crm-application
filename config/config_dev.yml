@@ -18,9 +18,6 @@ monolog:
             path:  "%kernel.logs_dir%/%kernel.environment%.log"
             level: debug
 
-twig:
-    base_template_class: Oro\Bundle\UIBundle\Twig\Template
-
 oro_message_queue:
     client:
         traceable_producer: true
