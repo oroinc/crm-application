@@ -1,7 +1,12 @@
 <?php
 /**
+ * The definition of this library was modified to support php 7.2.
+ * String "while (list($i, $path) = each($paths))"
+ * was replaced with do...while construction without each method.
+ */
+/**
  * CssMin - A (simple) css minifier with benefits
- * 
+ *
  * --
  * Copyright (c) 2011 Joe Scylla <joe.scylla@gmail.com>
  *
@@ -11,10 +16,10 @@
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -23,17 +28,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  * --
- * 
+ *
  * @package		CssMin
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
  * @copyright	2008 - 2011 Joe Scylla <joe.scylla@gmail.com>
  * @license		http://opensource.org/licenses/mit-license.php MIT License
  * @version		3.0.1
+ * @codingStandardsIgnoreFile
  */
 /**
  * Abstract definition of a CSS token class.
- * 
+ *
  * Every token has to extend this class.
  *
  * @package		CssMin/Tokens
@@ -47,7 +53,7 @@ abstract class aCssToken
 	{
 	/**
 	 * Returns the token as string.
-	 * 
+	 *
 	 * @return string
 	 */
 	abstract public function __toString();
@@ -65,7 +71,7 @@ abstract class aCssToken
  */
 abstract class aCssRulesetStartToken extends aCssToken
 	{
-	
+
 	}
 
 /**
@@ -82,7 +88,7 @@ abstract class aCssRulesetEndToken extends aCssToken
 	{
 	/**
 	 * Implements {@link aCssToken::__toString()}.
-	 * 
+	 *
 	 * @return string
 	 */
 	public function __toString()
@@ -93,10 +99,10 @@ abstract class aCssRulesetEndToken extends aCssToken
 
 /**
  * Abstract definition of a parser plugin.
- * 
- * Every parser plugin have to extend this class. A parser plugin contains the logic to parse one or aspects of a 
+ *
+ * Every parser plugin have to extend this class. A parser plugin contains the logic to parse one or aspects of a
  * stylesheet.
- * 
+ *
  * @package		CssMin/Parser/Plugins
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -108,25 +114,25 @@ abstract class aCssParserPlugin
 	{
 	/**
 	 * Plugin configuration.
-	 * 
+	 *
 	 * @var array
 	 */
 	protected $configuration = array();
 	/**
 	 * The CssParser of the plugin.
-	 * 
+	 *
 	 * @var CssParser
 	 */
 	protected $parser = null;
 	/**
 	 * Plugin buffer.
-	 * 
+	 *
 	 * @var string
 	 */
 	protected $buffer = "";
 	/**
 	 * Constructor.
-	 * 
+	 *
 	 * @param CssParser $parser The CssParser object of this plugin.
 	 * @param array $configuration Plugin configuration [optional]
 	 * @return void
@@ -138,19 +144,19 @@ abstract class aCssParserPlugin
 		}
 	/**
 	 * Returns the array of chars triggering the parser plugin.
-	 * 
+	 *
 	 * @return array
 	 */
 	abstract public function getTriggerChars();
 	/**
 	 * Returns the array of states triggering the parser plugin or FALSE if every state will trigger the parser plugin.
-	 * 
+	 *
 	 * @return array
 	 */
 	abstract public function getTriggerStates();
 	/**
 	 * Parser routine of the plugin.
-	 * 
+	 *
 	 * @param integer $index Current index
 	 * @param string $char Current char
 	 * @param string $previousChar Previous char
@@ -160,9 +166,9 @@ abstract class aCssParserPlugin
 	}
 
 /**
- * Abstract definition of a minifier plugin class. 
- * 
- * Minifier plugin process the parsed tokens one by one to apply changes to the token. Every minifier plugin has to 
+ * Abstract definition of a minifier plugin class.
+ *
+ * Minifier plugin process the parsed tokens one by one to apply changes to the token. Every minifier plugin has to
  * extend this class.
  *
  * @package		CssMin/Minifier/Plugins
@@ -176,19 +182,19 @@ abstract class aCssMinifierPlugin
 	{
 	/**
 	 * Plugin configuration.
-	 * 
+	 *
 	 * @var array
 	 */
 	protected $configuration = array();
 	/**
 	 * The CssMinifier of the plugin.
-	 * 
+	 *
 	 * @var CssMinifier
 	 */
 	protected $minifier = null;
 	/**
 	 * Constructor.
-	 * 
+	 *
 	 * @param CssMinifier $minifier The CssMinifier object of this plugin.
 	 * @param array $configuration Plugin configuration [optional]
 	 * @return void
@@ -200,25 +206,25 @@ abstract class aCssMinifierPlugin
 		}
 	/**
 	 * Apply the plugin to the token.
-	 * 
+	 *
 	 * @param aCssToken $token Token to process
 	 * @return boolean Return TRUE to break the processing of this token; FALSE to continue
 	 */
 	abstract public function apply(aCssToken &$token);
 	/**
 	 * --
-	 * 
+	 *
 	 * @return array
 	 */
 	abstract public function getTriggerTokens();
 	}
 
 /**
- * Abstract definition of a minifier filter class. 
- * 
+ * Abstract definition of a minifier filter class.
+ *
  * Minifier filters allows a pre-processing of the parsed token to add, edit or delete tokens. Every minifier filter
  * has to extend this class.
- * 
+ *
  * @package		CssMin/Minifier/Filters
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -230,19 +236,19 @@ abstract class aCssMinifierFilter
 	{
 	/**
 	 * Filter configuration.
-	 * 
+	 *
 	 * @var array
 	 */
 	protected $configuration = array();
 	/**
 	 * The CssMinifier of the filter.
-	 * 
+	 *
 	 * @var CssMinifier
 	 */
 	protected $minifier = null;
 	/**
 	 * Constructor.
-	 * 
+	 *
 	 * @param CssMinifier $minifier The CssMinifier object of this plugin.
 	 * @param array $configuration Filter configuration [optional]
 	 * @return void
@@ -254,7 +260,7 @@ abstract class aCssMinifierFilter
 		}
 	/**
 	 * Filter the tokens.
-	 * 
+	 *
 	 * @param array $tokens Array of objects of type aCssToken
 	 * @return integer Count of added, changed or removed tokens; a return value large than 0 will rebuild the array
 	 */
@@ -263,9 +269,9 @@ abstract class aCssMinifierFilter
 
 /**
  * Abstract formatter definition.
- * 
+ *
  * Every formatter have to extend this class.
- * 
+ *
  * @package		CssMin/Formatter
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -277,25 +283,25 @@ abstract class aCssFormatter
 	{
 	/**
 	 * Indent string.
-	 * 
+	 *
 	 * @var string
 	 */
 	protected $indent = "    ";
 	/**
 	 * Declaration padding.
-	 * 
+	 *
 	 * @var integer
 	 */
 	protected $padding = 0;
 	/**
 	 * Tokens.
-	 * 
+	 *
 	 * @var array
 	 */
 	protected $tokens = array();
 	/**
 	 * Constructor.
-	 * 
+	 *
 	 * @param array $tokens Array of CssToken
 	 * @param string $indent Indent string [optional]
 	 * @param integer $padding Declaration value padding [optional]
@@ -308,7 +314,7 @@ abstract class aCssFormatter
 		}
 	/**
 	 * Returns the array of aCssToken as formatted string.
-	 * 
+	 *
 	 * @return string
 	 */
 	abstract public function __toString();
@@ -328,31 +334,31 @@ abstract class aCssDeclarationToken extends aCssToken
 	{
 	/**
 	 * Is the declaration flagged as important?
-	 * 
+	 *
 	 * @var boolean
 	 */
 	public $IsImportant = false;
 	/**
 	 * Is the declaration flagged as last one of the ruleset?
-	 * 
+	 *
 	 * @var boolean
 	 */
 	public $IsLast = false;
 	/**
 	 * Property name of the declaration.
-	 * 
+	 *
 	 * @var string
 	 */
 	public $Property = "";
 	/**
 	 * Value of the declaration.
-	 * 
+	 *
 	 * @var string
 	 */
 	public $Value = "";
 	/**
-	 * Set the properties of the @font-face declaration. 
-	 * 
+	 * Set the properties of the @font-face declaration.
+	 *
 	 * @param string $property Property of the declaration
 	 * @param string $value Value of the declaration
 	 * @param boolean $isImportant Is the !important flag is set?
@@ -368,7 +374,7 @@ abstract class aCssDeclarationToken extends aCssToken
 		}
 	/**
 	 * Implements {@link aCssToken::__toString()}.
-	 * 
+	 *
 	 * @return string
 	 */
 	public function __toString()
@@ -389,7 +395,7 @@ abstract class aCssDeclarationToken extends aCssToken
  */
 abstract class aCssAtBlockStartToken extends aCssToken
 	{
-	
+
 	}
 
 /**
@@ -406,7 +412,7 @@ abstract class aCssAtBlockEndToken extends aCssToken
 	{
 	/**
 	 * Implements {@link aCssToken::__toString()}.
-	 * 
+	 *
 	 * @return string
 	 */
 	public function __toString()
@@ -417,7 +423,7 @@ abstract class aCssAtBlockEndToken extends aCssToken
 
 /**
  * {@link aCssFromatter Formatter} returning the CSS source in {@link http://goo.gl/etzLs Whitesmiths indent style}.
- * 
+ *
  * @package		CssMin/Formatter
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -429,7 +435,7 @@ class CssWhitesmithsFormatter extends aCssFormatter
 	{
 	/**
 	 * Implements {@link aCssFormatter::__toString()}.
-	 * 
+	 *
 	 * @return string
 	 */
 	public function __toString()
@@ -525,11 +531,11 @@ class CssWhitesmithsFormatter extends aCssFormatter
 	}
 
 /**
- * This {@link aCssMinifierPlugin} will process var-statement and sets the declaration value to the variable value. 
- * 
+ * This {@link aCssMinifierPlugin} will process var-statement and sets the declaration value to the variable value.
+ *
  * This plugin only apply the variable values. The variable values itself will get parsed by the
  * {@link CssVariablesMinifierFilter}.
- * 
+ *
  * Example:
  * <code>
  * @variables
@@ -538,7 +544,7 @@ class CssWhitesmithsFormatter extends aCssFormatter
  * 		}
  * color: var(defaultColor);
  * </code>
- * 
+ *
  * Will get converted to:
  * <code>
  * color:black;
@@ -555,19 +561,19 @@ class CssVariablesMinifierPlugin extends aCssMinifierPlugin
 	{
 	/**
 	 * Regular expression matching a value.
-	 * 
+	 *
 	 * @var string
 	 */
 	private $reMatch = "/var\((.+)\)/iSU";
 	/**
 	 * Parsed variables.
-	 * 
+	 *
 	 * @var array
 	 */
 	private $variables = null;
 	/**
 	 * Returns the variables.
-	 * 
+	 *
 	 * @return array
 	 */
 	public function getVariables()
@@ -576,7 +582,7 @@ class CssVariablesMinifierPlugin extends aCssMinifierPlugin
 		}
 	/**
 	 * Implements {@link aCssMinifierPlugin::minify()}.
-	 * 
+	 *
 	 * @param aCssToken $token Token to process
 	 * @return boolean Return TRUE to break the processing of this token; FALSE to continue
 	 */
@@ -611,7 +617,7 @@ class CssVariablesMinifierPlugin extends aCssMinifierPlugin
 		}
 	/**
 	 * Implements {@link aMinifierPlugin::getTriggerTokens()}
-	 * 
+	 *
 	 * @return array
 	 */
 	public function getTriggerTokens()
@@ -625,7 +631,7 @@ class CssVariablesMinifierPlugin extends aCssMinifierPlugin
 		}
 	/**
 	 * Sets the variables.
-	 * 
+	 *
 	 * @param array $variables Variables to set
 	 * @return void
 	 */
@@ -636,10 +642,10 @@ class CssVariablesMinifierPlugin extends aCssMinifierPlugin
 	}
 
 /**
- * This {@link aCssMinifierFilter minifier filter} will parse the variable declarations out of @variables at-rule 
- * blocks. The variables will get store in the {@link CssVariablesMinifierPlugin} that will apply the variables to 
+ * This {@link aCssMinifierFilter minifier filter} will parse the variable declarations out of @variables at-rule
+ * blocks. The variables will get store in the {@link CssVariablesMinifierPlugin} that will apply the variables to
  * declaration.
- * 
+ *
  * @package		CssMin/Minifier/Filters
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -651,7 +657,7 @@ class CssVariablesMinifierFilter extends aCssMinifierFilter
 	{
 	/**
 	 * Implements {@link aCssMinifierFilter::filter()}.
-	 * 
+	 *
 	 * @param array $tokens Array of objects of type aCssToken
 	 * @return integer Count of added, changed or removed tokens; a return value large than 0 will rebuild the array
 	 */
@@ -731,9 +737,9 @@ class CssVariablesMinifierFilter extends aCssMinifierFilter
 
 /**
  * {@link aCssParserPlugin Parser plugin} for preserve parsing url() values.
- * 
+ *
  * This plugin return no {@link aCssToken CssToken} but ensures that url() values will get parsed properly.
- * 
+ *
  * @package		CssMin/Parser/Plugins
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -745,7 +751,7 @@ class CssUrlParserPlugin extends aCssParserPlugin
 	{
 	/**
 	 * Implements {@link aCssParserPlugin::getTriggerChars()}.
-	 * 
+	 *
 	 * @return array
 	 */
 	public function getTriggerChars()
@@ -754,7 +760,7 @@ class CssUrlParserPlugin extends aCssParserPlugin
 		}
 	/**
 	 * Implements {@link aCssParserPlugin::getTriggerStates()}.
-	 * 
+	 *
 	 * @return array
 	 */
 	public function getTriggerStates()
@@ -763,7 +769,7 @@ class CssUrlParserPlugin extends aCssParserPlugin
 		}
 	/**
 	 * Implements {@link aCssParserPlugin::parse()}.
-	 * 
+	 *
 	 * @param integer $index Current index
 	 * @param string $char Current char
 	 * @param string $previousChar Previous char
@@ -807,9 +813,9 @@ class CssUrlParserPlugin extends aCssParserPlugin
 
 /**
  * {@link aCssParserPlugin Parser plugin} for preserve parsing string values.
- * 
+ *
  * This plugin return no {@link aCssToken CssToken} but ensures that string values will get parsed properly.
- * 
+ *
  * @package		CssMin/Parser/Plugins
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -821,13 +827,13 @@ class CssStringParserPlugin extends aCssParserPlugin
 	{
 	/**
 	 * Current string delimiter char.
-	 * 
+	 *
 	 * @var string
 	 */
 	private $delimiterChar = null;
 	/**
 	 * Implements {@link aCssParserPlugin::getTriggerChars()}.
-	 * 
+	 *
 	 * @return array
 	 */
 	public function getTriggerChars()
@@ -836,7 +842,7 @@ class CssStringParserPlugin extends aCssParserPlugin
 		}
 	/**
 	 * Implements {@link aCssParserPlugin::getTriggerStates()}.
-	 * 
+	 *
 	 * @return array
 	 */
 	public function getTriggerStates()
@@ -845,7 +851,7 @@ class CssStringParserPlugin extends aCssParserPlugin
 		}
 	/**
 	 * Implements {@link aCssParserPlugin::parse()}.
-	 * 
+	 *
 	 * @param integer $index Current index
 	 * @param string $char Current char
 	 * @param string $previousChar Previous char
@@ -878,7 +884,7 @@ class CssStringParserPlugin extends aCssParserPlugin
 		// End of string
 		elseif ($char === $this->delimiterChar && $state === "T_STRING")
 			{
-			// If the Previous char is a escape char count the amount of the previous escape chars. If the amount of 
+			// If the Previous char is a escape char count the amount of the previous escape chars. If the amount of
 			// escape chars is uneven do not end the string
 			if ($previousChar == "\\")
 				{
@@ -908,7 +914,7 @@ class CssStringParserPlugin extends aCssParserPlugin
 
 /**
  * This {@link aCssMinifierFilter minifier filter} sorts the ruleset declarations of a ruleset by name.
- * 
+ *
  * @package		CssMin/Minifier/Filters
  * @link		http://code.google.com/p/cssmin/
  * @author		Rowan Beentje <http://assanka.net>
@@ -920,7 +926,7 @@ class CssSortRulesetPropertiesMinifierFilter extends aCssMinifierFilter
 	{
 	/**
 	 * Implements {@link aCssMinifierFilter::filter()}.
-	 * 
+	 *
 	 * @param array $tokens Array of objects of type aCssToken
 	 * @return integer Count of added, changed or removed tokens; a return value larger than 0 will rebuild the array
 	 */
@@ -952,7 +958,7 @@ class CssSortRulesetPropertiesMinifierFilter extends aCssMinifierFilter
 			$declarations = array_slice($tokens, $startIndex + 1, $endIndex - $startIndex - 1);
 			// Check whether a sort is required
 			$sortRequired = $lastPropertyName = false;
-			foreach ($declarations as $declaration)	
+			foreach ($declarations as $declaration)
 				{
 				if ($lastPropertyName)
 					{
@@ -987,7 +993,7 @@ class CssSortRulesetPropertiesMinifierFilter extends aCssMinifierFilter
 		}
 	/**
 	 * User defined sort function.
-	 * 
+	 *
 	 * @return integer
 	 */
 	public static function userDefinedSort1($a, $b)
@@ -998,7 +1004,7 @@ class CssSortRulesetPropertiesMinifierFilter extends aCssMinifierFilter
 
 /**
  * This {@link aCssToken CSS token} represents the start of a ruleset.
- * 
+ *
  * @package		CssMin/Tokens
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -1010,14 +1016,14 @@ class CssRulesetStartToken extends aCssRulesetStartToken
 	{
 	/**
 	 * Array of selectors.
-	 * 
+	 *
 	 * @var array
 	 */
 	public $Selectors = array();
 	/**
 	 * Set the properties of a ruleset token.
-	 * 
-	 * @param array $selectors Selectors of the ruleset 
+	 *
+	 * @param array $selectors Selectors of the ruleset
 	 * @return void
 	 */
 	public function __construct(array $selectors = array())
@@ -1026,7 +1032,7 @@ class CssRulesetStartToken extends aCssRulesetStartToken
 		}
 	/**
 	 * Implements {@link aCssToken::__toString()}.
-	 * 
+	 *
 	 * @return string
 	 */
 	public function __toString()
@@ -1037,8 +1043,8 @@ class CssRulesetStartToken extends aCssRulesetStartToken
 
 /**
  * {@link aCssParserPlugin Parser plugin} for parsing ruleset block with including declarations.
- * 
- * Found rulesets will add a {@link CssRulesetStartToken} and {@link CssRulesetEndToken} to the 
+ *
+ * Found rulesets will add a {@link CssRulesetStartToken} and {@link CssRulesetEndToken} to the
  * parser; including declarations as {@link CssRulesetDeclarationToken}.
  *
  * @package		CssMin/Parser/Plugins
@@ -1052,7 +1058,7 @@ class CssRulesetParserPlugin extends aCssParserPlugin
 	{
 	/**
 	 * Implements {@link aCssParserPlugin::getTriggerChars()}.
-	 * 
+	 *
 	 * @return array
 	 */
 	public function getTriggerChars()
@@ -1061,7 +1067,7 @@ class CssRulesetParserPlugin extends aCssParserPlugin
 		}
 	/**
 	 * Implements {@link aCssParserPlugin::getTriggerStates()}.
-	 * 
+	 *
 	 * @return array
 	 */
 	public function getTriggerStates()
@@ -1070,13 +1076,13 @@ class CssRulesetParserPlugin extends aCssParserPlugin
 		}
 	/**
 	 * Selectors.
-	 * 
+	 *
 	 * @var array
 	 */
 	private $selectors = array();
 	/**
 	 * Implements {@link aCssParserPlugin::parse()}.
-	 * 
+	 *
 	 * @param integer $index Current index
 	 * @param string $char Current char
 	 * @param string $previousChar Previous char
@@ -1176,7 +1182,7 @@ class CssRulesetParserPlugin extends aCssParserPlugin
  */
 class CssRulesetEndToken extends aCssRulesetEndToken
 	{
-	
+
 	}
 
 /**
@@ -1193,13 +1199,13 @@ class CssRulesetDeclarationToken extends aCssDeclarationToken
 	{
 	/**
 	 * Media types of the declaration.
-	 * 
+	 *
 	 * @var array
 	 */
 	public $MediaTypes = array("all");
 	/**
-	 * Set the properties of a ddocument- or at-rule @media level declaration. 
-	 * 
+	 * Set the properties of a ddocument- or at-rule @media level declaration.
+	 *
 	 * @param string $property Property of the declaration
 	 * @param string $value Value of the declaration
 	 * @param mixed $mediaTypes Media types of the declaration
@@ -1215,10 +1221,10 @@ class CssRulesetDeclarationToken extends aCssDeclarationToken
 	}
 
 /**
- * This {@link aCssMinifierFilter minifier filter} sets the IsLast property of any last declaration in a ruleset, 
- * @font-face at-rule or @page at-rule block. If the property IsLast is TRUE the decrations will get stringified 
+ * This {@link aCssMinifierFilter minifier filter} sets the IsLast property of any last declaration in a ruleset,
+ * @font-face at-rule or @page at-rule block. If the property IsLast is TRUE the decrations will get stringified
  * without tailing semicolon.
- * 
+ *
  * @package		CssMin/Minifier/Filters
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -1230,7 +1236,7 @@ class CssRemoveLastDelarationSemiColonMinifierFilter extends aCssMinifierFilter
 	{
 	/**
 	 * Implements {@link aCssMinifierFilter::filter()}.
-	 * 
+	 *
 	 * @param array $tokens Array of objects of type aCssToken
 	 * @return integer Count of added, changed or removed tokens; a return value large than 0 will rebuild the array
 	 */
@@ -1241,7 +1247,7 @@ class CssRemoveLastDelarationSemiColonMinifierFilter extends aCssMinifierFilter
 			$current	= get_class($tokens[$i]);
 			$next		= isset($tokens[$i+1]) ? get_class($tokens[$i+1]) : false;
 			if (($current === "CssRulesetDeclarationToken" && $next === "CssRulesetEndToken") ||
-				($current === "CssAtFontFaceDeclarationToken" && $next === "CssAtFontFaceEndToken") || 
+				($current === "CssAtFontFaceDeclarationToken" && $next === "CssAtFontFaceEndToken") ||
 				($current === "CssAtPageDeclarationToken" && $next === "CssAtPageEndToken"))
 				{
 				$tokens[$i]->IsLast = true;
@@ -1252,7 +1258,7 @@ class CssRemoveLastDelarationSemiColonMinifierFilter extends aCssMinifierFilter
 	}
 
 /**
- * This {@link aCssMinifierFilter minifier filter} will remove any empty rulesets (including @keyframes at-rule block 
+ * This {@link aCssMinifierFilter minifier filter} will remove any empty rulesets (including @keyframes at-rule block
  * rulesets).
  *
  * @package		CssMin/Minifier/Filters
@@ -1266,7 +1272,7 @@ class CssRemoveEmptyRulesetsMinifierFilter extends aCssMinifierFilter
 	{
 	/**
 	 * Implements {@link aCssMinifierFilter::filter()}.
-	 * 
+	 *
 	 * @param array $tokens Array of objects of type aCssToken
 	 * @return integer Count of added, changed or removed tokens; a return value large than 0 will rebuild the array
 	 */
@@ -1292,9 +1298,9 @@ class CssRemoveEmptyRulesetsMinifierFilter extends aCssMinifierFilter
 	}
 
 /**
- * This {@link aCssMinifierFilter minifier filter} will remove any empty @font-face, @keyframes, @media and @page 
+ * This {@link aCssMinifierFilter minifier filter} will remove any empty @font-face, @keyframes, @media and @page
  * at-rule blocks.
- * 
+ *
  * @package		CssMin/Minifier/Filters
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -1306,7 +1312,7 @@ class CssRemoveEmptyAtBlocksMinifierFilter extends aCssMinifierFilter
 	{
 	/**
 	 * Implements {@link aCssMinifierFilter::filter()}.
-	 * 
+	 *
 	 * @param array $tokens Array of objects of type aCssToken
 	 * @return integer Count of added, changed or removed tokens; a return value large than 0 will rebuild the array
 	 */
@@ -1334,7 +1340,7 @@ class CssRemoveEmptyAtBlocksMinifierFilter extends aCssMinifierFilter
 
 /**
  * This {@link aCssMinifierFilter minifier filter} will remove any comments from the array of parsed tokens.
- * 
+ *
  * @package		CssMin/Minifier/Filters
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -1346,7 +1352,7 @@ class CssRemoveCommentsMinifierFilter extends aCssMinifierFilter
 	{
 	/**
 	 * Implements {@link aCssMinifierFilter::filter()}.
-	 * 
+	 *
 	 * @param array $tokens Array of objects of type aCssToken
 	 * @return integer Count of added, changed or removed tokens; a return value large than 0 will rebuild the array
 	 */
@@ -1367,7 +1373,7 @@ class CssRemoveCommentsMinifierFilter extends aCssMinifierFilter
 
 /**
  * CSS Parser.
- * 
+ *
  * @package		CssMin/Parser
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -1379,57 +1385,57 @@ class CssParser
 	{
 	/**
 	 * Parse buffer.
-	 * 
+	 *
 	 * @var string
 	 */
 	private $buffer = "";
 	/**
 	 * {@link aCssParserPlugin Plugins}.
-	 * 
+	 *
 	 * @var array
 	 */
 	private $plugins = array();
 	/**
 	 * Source to parse.
-	 * 
+	 *
 	 * @var string
 	 */
 	private $source = "";
 	/**
 	 * Current state.
-	 * 
+	 *
 	 * @var integer
 	 */
 	private $state = "T_DOCUMENT";
 	/**
 	 * Exclusive state.
-	 * 
+	 *
 	 * @var string
 	 */
 	private $stateExclusive = false;
 	/**
 	 * Media types state.
-	 * 
+	 *
 	 * @var mixed
 	 */
 	private $stateMediaTypes = false;
 	/**
 	 * State stack.
-	 * 
+	 *
 	 * @var array
 	 */
 	private $states = array("T_DOCUMENT");
 	/**
 	 * Parsed tokens.
-	 * 
+	 *
 	 * @var array
 	 */
 	private $tokens = array();
 	/**
 	 * Constructer.
-	 * 
+	 *
 	 *  Create instances of the used {@link aCssParserPlugin plugins}.
-	 * 
+	 *
 	 * @param string $source CSS source [optional]
 	 * @param array $plugins Plugin configuration [optional]
 	 * @return void
@@ -1475,7 +1481,7 @@ class CssParser
 		}
 	/**
 	 * Append a token to the array of tokens.
-	 * 
+	 *
 	 * @param aCssToken $token Token to append
 	 * @return void
 	 */
@@ -1485,7 +1491,7 @@ class CssParser
 		}
 	/**
 	 * Clears the current buffer.
-	 * 
+	 *
 	 * @return void
 	 */
 	public function clearBuffer()
@@ -1494,7 +1500,7 @@ class CssParser
 		}
 	/**
 	 * Returns and clear the current buffer.
-	 * 
+	 *
 	 * @param string $trim Chars to use to trim the returned buffer
 	 * @param boolean $tolower if TRUE the returned buffer will get converted to lower case
 	 * @return string
@@ -1507,7 +1513,7 @@ class CssParser
 		}
 	/**
 	 * Returns the current buffer.
-	 * 
+	 *
 	 * @param string $trim Chars to use to trim the returned buffer
 	 * @param boolean $tolower if TRUE the returned buffer will get converted to lower case
 	 * @return string
@@ -1527,16 +1533,16 @@ class CssParser
 		}
 	/**
 	 * Returns the current media types state.
-	 * 
+	 *
 	 * @return array
-	 */	
+	 */
 	public function getMediaTypes()
 		{
 		return $this->stateMediaTypes;
 		}
 	/**
 	 * Returns the CSS source.
-	 * 
+	 *
 	 * @return string
 	 */
 	public function getSource()
@@ -1545,7 +1551,7 @@ class CssParser
 		}
 	/**
 	 * Returns the current state.
-	 * 
+	 *
 	 * @return integer The current state
 	 */
 	public function getState()
@@ -1554,8 +1560,8 @@ class CssParser
 		}
 	/**
 	 * Returns a plugin by class name.
-	 * 
-	 * @param string $name Class name of the plugin 
+	 *
+	 * @param string $name Class name of the plugin
 	 * @return aCssParserPlugin
 	 */
 	public function getPlugin($class)
@@ -1573,7 +1579,7 @@ class CssParser
 		}
 	/**
 	 * Returns the parsed tokens.
-	 * 
+	 *
 	 * @return array
 	 */
 	public function getTokens()
@@ -1582,7 +1588,7 @@ class CssParser
 		}
 	/**
 	 * Returns if the current state equals the passed state.
-	 * 
+	 *
 	 * @param integer $state State to compare with the current state
 	 * @return boolean TRUE is the state equals to the passed state; FALSE if not
 	 */
@@ -1592,7 +1598,7 @@ class CssParser
 		}
 	/**
 	 * Parse the CSS source and return a array with parsed tokens.
-	 * 
+	 *
 	 * @param string $source CSS source
 	 * @return array Array with tokens
 	 */
@@ -1601,7 +1607,7 @@ class CssParser
 		// Reset
 		$this->source = "";
 		$this->tokens = array();
-		// Create a global and plugin lookup table for trigger chars; set array of plugins as local variable and create 
+		// Create a global and plugin lookup table for trigger chars; set array of plugins as local variable and create
 		// several helper variables for plugin handling
 		$globalTriggerChars		= "";
 		$plugins				= $this->plugins;
@@ -1655,7 +1661,7 @@ class CssParser
 			// Extended processing only if the current char is a global trigger char
 			if (strpos($globalTriggerChars, $c) !== false)
 				{
-				// Exclusive state is set; process with the exclusive plugin 
+				// Exclusive state is set; process with the exclusive plugin
 				if ($exclusive)
 					{
 					$tPluginIndex = $pluginIndex[$exclusive];
@@ -1707,7 +1713,7 @@ class CssParser
 		}
 	/**
 	 * Remove the last state of the state stack and return the removed stack value.
-	 * 
+	 *
 	 * @return integer Removed state value
 	 */
 	public function popState()
@@ -1718,7 +1724,7 @@ class CssParser
 		}
 	/**
 	 * Adds a new state onto the state stack.
-	 * 
+	 *
 	 * @param integer $state State to add onto the state stack.
 	 * @return integer The index of the added state in the state stacks
 	 */
@@ -1730,37 +1736,37 @@ class CssParser
 		}
 	/**
 	 * Sets/restores the buffer.
-	 * 
+	 *
 	 * @param string $buffer Buffer to set
 	 * @return void
-	 */	
+	 */
 	public function setBuffer($buffer)
 		{
 		$this->buffer = $buffer;
 		}
 	/**
 	 * Set the exclusive state.
-	 * 
+	 *
 	 * @param string $exclusive Exclusive state
 	 * @return void
-	 */	
+	 */
 	public function setExclusive($exclusive)
 		{
-		$this->stateExclusive = $exclusive; 
+		$this->stateExclusive = $exclusive;
 		}
 	/**
 	 * Set the media types state.
-	 * 
+	 *
 	 * @param array $mediaTypes Media types state
 	 * @return void
-	 */	
+	 */
 	public function setMediaTypes(array $mediaTypes)
 		{
-		$this->stateMediaTypes = $mediaTypes; 
+		$this->stateMediaTypes = $mediaTypes;
 		}
 	/**
 	 * Sets the current state in the state stack; equals to {@link CssParser::popState()} + {@link CssParser::pushState()}.
-	 * 
+	 *
 	 * @param integer $state State to set
 	 * @return integer
 	 */
@@ -1773,7 +1779,7 @@ class CssParser
 		}
 	/**
 	 * Removes the exclusive state.
-	 * 
+	 *
 	 * @return void
 	 */
 	public function unsetExclusive()
@@ -1782,7 +1788,7 @@ class CssParser
 		}
 	/**
 	 * Removes the media types state.
-	 * 
+	 *
 	 * @return void
 	 */
 	public function unsetMediaTypes()
@@ -1793,7 +1799,7 @@ class CssParser
 
 /**
  * {@link aCssFromatter Formatter} returning the CSS source in {@link http://goo.gl/j4XdU OTBS indent style} (The One True Brace Style).
- * 
+ *
  * @package		CssMin/Formatter
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -1805,7 +1811,7 @@ class CssOtbsFormatter extends aCssFormatter
 	{
 	/**
 	 * Implements {@link aCssFormatter::__toString()}.
-	 * 
+	 *
 	 * @return string
 	 */
 	public function __toString()
@@ -1908,7 +1914,7 @@ class CssNullToken extends aCssToken
 	{
 	/**
 	 * Implements {@link aCssToken::__toString()}.
-	 * 
+	 *
 	 * @return string
 	 */
 	public function __toString()
@@ -1919,7 +1925,7 @@ class CssNullToken extends aCssToken
 
 /**
  * CSS Minifier.
- * 
+ *
  * @package		CssMin/Minifier
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -1931,27 +1937,27 @@ class CssMinifier
 	{
 	/**
 	 * {@link aCssMinifierFilter Filters}.
-	 *  
+	 *
 	 * @var array
 	 */
 	private $filters = array();
 	/**
 	 * {@link aCssMinifierPlugin Plugins}.
-	 * 
+	 *
 	 * @var array
 	 */
 	private $plugins = array();
 	/**
 	 * Minified source.
-	 * 
+	 *
 	 * @var string
 	 */
 	private $minified = "";
 	/**
 	 * Constructer.
-	 * 
+	 *
 	 * Creates instances of {@link aCssMinifierFilter filters} and {@link aCssMinifierPlugin plugins}.
-	 * 
+	 *
 	 * @param string $source CSS source [optional]
 	 * @param array $filters Filter configuration [optional]
 	 * @param array $plugins Plugin configuration [optional]
@@ -1962,7 +1968,7 @@ class CssMinifier
 		$filters = array_merge(array
 			(
 			"ImportImports"					=> false,
-			"RemoveComments"				=> true, 
+			"RemoveComments"				=> true,
 			"RemoveEmptyRulesets"			=> true,
 			"RemoveEmptyAtBlocks"			=> true,
 			"ConvertLevel3Properties"		=> false,
@@ -2023,7 +2029,7 @@ class CssMinifier
 		}
 	/**
 	 * Returns the minified Source.
-	 * 
+	 *
 	 * @return string
 	 */
 	public function getMinified()
@@ -2032,7 +2038,7 @@ class CssMinifier
 		}
 	/**
 	 * Returns a plugin by class name.
-	 * 
+	 *
 	 * @param string $name Class name of the plugin
 	 * @return aCssMinifierPlugin
 	 */
@@ -2051,7 +2057,7 @@ class CssMinifier
 		}
 	/**
 	 * Minifies the CSS source.
-	 * 
+	 *
 	 * @param string $source CSS source
 	 * @return string
 	 */
@@ -2129,7 +2135,7 @@ class CssMinifier
 
 /**
  * CssMin - A (simple) css minifier with benefits
- * 
+ *
  * --
  * Copyright (c) 2011 Joe Scylla <joe.scylla@gmail.com>
  *
@@ -2139,10 +2145,10 @@ class CssMinifier
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -2151,7 +2157,7 @@ class CssMinifier
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  * --
- * 
+ *
  * @package		CssMin
  * @link		http://code.google.com/p/cssmin/
  * @author		Joe Scylla <joe.scylla@gmail.com>
@@ -2163,25 +2169,25 @@ class CssMin
 	{
 	/**
 	 * Index of classes
-	 * 
+	 *
 	 * @var array
 	 */
 	private static $classIndex = array();
 	/**
 	 * Parse/minify errors
-	 * 
+	 *
 	 * @var array
 	 */
 	private static $errors = array();
 	/**
 	 * Verbose output.
-	 * 
+	 *
 	 * @var boolean
 	 */
 	private static $isVerbose = false;
 	/**
 	 * {@link http://goo.gl/JrW54 Autoload} function of CssMin.
-	 * 
+	 *
 	 * @param string $class Name of the class
 	 * @return void
 	 */
@@ -2194,7 +2200,7 @@ class CssMin
 		}
 	/**
 	 * Return errors
-	 * 
+	 *
 	 * @return array of {CssError}.
 	 */
 	public static function getErrors()
@@ -2203,7 +2209,7 @@ class CssMin
 		}
 	/**
 	 * Returns if there were errors.
-	 * 
+	 *
 	 * @return boolean
 	 */
 	public static function hasErrors()
@@ -2212,15 +2218,17 @@ class CssMin
 		}
 	/**
 	 * Initialises CssMin.
-	 * 
+	 *
 	 * @return void
 	 */
 	public static function initialise()
 		{
 		// Create the class index for autoloading or including
 		$paths = array(dirname(__FILE__));
-		while (list($i, $path) = each($paths))
+		//while (list($i, $path) = each($paths))
+		do
 			{
+			$path = current($paths);
 			$subDirectorys = glob($path . "*", GLOB_MARK | GLOB_ONLYDIR | GLOB_NOSORT);
 			if (is_array($subDirectorys))
 				{
@@ -2239,6 +2247,7 @@ class CssMin
 					}
 				}
 			}
+		while(next($paths));
 		krsort(self::$classIndex);
 		// Only use autoloading if spl_autoload_register() is available and no __autoload() is defined (because 
 		// __autoload() breaks if spl_autoload_register() is used. 
