@@ -16,6 +16,13 @@ monolog:
             path:  "%kernel.logs_dir%/%kernel.environment%.log"
             level: debug
 
+        # collect all log records to buffer and write them to log file on CLI command error
+        message_queue.consumer.console_error:
+            type: service
+            id: oro_message_queue.log.handler.console_error
+            handler: main
+            level: debug
+
 twig:
     base_template_class: Oro\Bundle\UIBundle\Twig\Template
 
