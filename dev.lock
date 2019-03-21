@@ -678,25 +678,6 @@
             ]
         },
         {
-            "name": "bower-asset/malihu-custom-scrollbar-plugin",
-            "version": "3.1.5",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:malihu/malihu-custom-scrollbar-plugin.git",
-                "reference": "eac2b0af71a7ca06cc19e28d15ba60f6db2dfd29"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/malihu/malihu-custom-scrollbar-plugin/zipball/eac2b0af71a7ca06cc19e28d15ba60f6db2dfd29",
-                "reference": "eac2b0af71a7ca06cc19e28d15ba60f6db2dfd29"
-            },
-            "require": {
-                "bower-asset/jquery": ">=1.6",
-                "bower-asset/jquery-mousewheel": ">=3.0.6"
-            },
-            "type": "bower-asset"
-        },
-        {
             "name": "bower-asset/moment",
             "version": "2.18.1",
             "source": {
@@ -755,12 +736,12 @@
             "version": "3.4.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:ivaynberg/select2.git",
+                "url": "https://github.com/select2/select2.git",
                 "reference": "13dc8a1ff3af6515c23dbca1ae3dcc0b0dc1b0c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ivaynberg/select2/zipball/13dc8a1ff3af6515c23dbca1ae3dcc0b0dc1b0c1",
+                "url": "https://api.github.com/repos/select2/select2/zipball/13dc8a1ff3af6515c23dbca1ae3dcc0b0dc1b0c1",
                 "reference": "13dc8a1ff3af6515c23dbca1ae3dcc0b0dc1b0c1"
             },
             "type": "bower-asset"
@@ -1140,16 +1121,16 @@
         },
         {
             "name": "composer/semver",
-            "version": "1.4.2",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "c7cb9a2095a074d131b65a8a0cd294479d785573"
+                "reference": "46d9139568ccb8d9e7cdd4539cab7347568a5e2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/c7cb9a2095a074d131b65a8a0cd294479d785573",
-                "reference": "c7cb9a2095a074d131b65a8a0cd294479d785573",
+                "url": "https://api.github.com/repos/composer/semver/zipball/46d9139568ccb8d9e7cdd4539cab7347568a5e2e",
+                "reference": "46d9139568ccb8d9e7cdd4539cab7347568a5e2e",
                 "shasum": ""
             },
             "require": {
@@ -1198,7 +1179,7 @@
                 "validation",
                 "versioning"
             ],
-            "time": "2016-08-30T16:08:34+00:00"
+            "time": "2019-03-19T17:25:45+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -5363,6 +5344,18 @@
             ]
         },
         {
+            "name": "npm-asset/overlayscrollbars",
+            "version": "1.6.3",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/overlayscrollbars/-/overlayscrollbars-1.6.3.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
             "name": "npm-asset/requirejs",
             "version": "2.3.3",
             "dist": {
@@ -5996,7 +5989,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "00b9f6d43b9b47f65f6c4d236e68cc55ca5f0afd"
+                "reference": "73aff715a5532117e32a62807c7870ef1b0bdbe1"
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.*",
@@ -6027,7 +6020,6 @@
                 "bower-asset/json2": "dev-master",
                 "bower-asset/jsplumb": "1.7.*",
                 "bower-asset/lightgallery": "1.4.0",
-                "bower-asset/malihu-custom-scrollbar-plugin": "3.1.5",
                 "bower-asset/moment": "2.18.*",
                 "bower-asset/moment-timezone": "0.5.*",
                 "bower-asset/numeral": "2.0.6",
@@ -6078,6 +6070,7 @@
                 "npm-asset/bootbox": "4.1.0",
                 "npm-asset/bootstrap": "3.0.3",
                 "npm-asset/jquery.uniform": "4.2.0",
+                "npm-asset/overlayscrollbars": "1.6.*",
                 "npm-asset/requirejs": "2.3.*",
                 "npm-asset/xregexp": "3.2.*",
                 "ocramius/proxy-manager": "2.1.1",
@@ -8124,41 +8117,44 @@
         },
         {
             "name": "symfony/psr-http-message-bridge",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/psr-http-message-bridge.git",
-                "reference": "53c15a6a7918e6c2ab16ae370ea607fb40cab196"
+                "reference": "9ab9d71f97d5c7d35a121a7fb69f74fee95cd0ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/53c15a6a7918e6c2ab16ae370ea607fb40cab196",
-                "reference": "53c15a6a7918e6c2ab16ae370ea607fb40cab196",
+                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/9ab9d71f97d5c7d35a121a7fb69f74fee95cd0ad",
+                "reference": "9ab9d71f97d5c7d35a121a7fb69f74fee95cd0ad",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0",
+                "php": "^7.1",
                 "psr/http-message": "^1.0",
-                "symfony/http-foundation": "^2.3.42 || ^3.4 || ^4.0"
+                "symfony/http-foundation": "^3.4 || ^4.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^3.4 || 4.0"
+                "nyholm/psr7": "^1.1",
+                "symfony/phpunit-bridge": "^3.4.20 || ^4.0",
+                "zendframework/zend-diactoros": "^1.4.1 || ^2.0"
             },
             "suggest": {
-                "psr/http-factory-implementation": "To use the PSR-17 factory",
-                "psr/http-message-implementation": "To use the HttpFoundation factory",
-                "zendframework/zend-diactoros": "To use the Zend Diactoros factory"
+                "nyholm/psr7": "For a super lightweight PSR-7/17 implementation"
             },
             "type": "symfony-bridge",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Bridge\\PsrHttpMessage\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8179,9 +8175,10 @@
             "keywords": [
                 "http",
                 "http-message",
+                "psr-17",
                 "psr-7"
             ],
-            "time": "2018-08-30T16:28:28+00:00"
+            "time": "2019-03-11T18:22:33+00:00"
         },
         {
             "name": "symfony/security-acl",
@@ -9647,6 +9644,25 @@
                 "symfony"
             ],
             "time": "2018-04-20T15:48:23+00:00"
+        },
+        {
+            "name": "bower-asset/malihu-custom-scrollbar-plugin",
+            "version": "3.1.5",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:malihu/malihu-custom-scrollbar-plugin.git",
+                "reference": "eac2b0af71a7ca06cc19e28d15ba60f6db2dfd29"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/malihu/malihu-custom-scrollbar-plugin/zipball/eac2b0af71a7ca06cc19e28d15ba60f6db2dfd29",
+                "reference": "eac2b0af71a7ca06cc19e28d15ba60f6db2dfd29"
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.6",
+                "bower-asset/jquery-mousewheel": ">=3.0.6"
+            },
+            "type": "bower-asset"
         },
         {
             "name": "composer/xdebug-handler",
