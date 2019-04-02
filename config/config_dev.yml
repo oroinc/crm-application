@@ -14,16 +14,29 @@ web_profiler:
 monolog:
     handlers:
         main:
-            type:  stream
-            path:  "%kernel.logs_dir%/%kernel.environment%.log"
-            level: debug
+            type:      stream
+            path:      "%kernel.logs_dir%/%kernel.environment%.log"
+            level:     debug
+            channels:  ["!consumer"]
 
-        # collect all log records to buffer and write them to log file on CLI command error
+        # only records with level 'notice' and higher should pass to `consumer_%kernel.environment%.log` file
+        filter_consumer:
+            type:      filter
+            min_level: notice
+            handler:   consumer
+        # collect all log records to buffer and write them to 'consumer_%kernel.environment%.log' file on CLI command error
         message_queue.consumer.console_error:
-            type: service
-            id: oro_message_queue.log.handler.console_error
-            handler: main
-            level: debug
+            type:      service
+            id:        oro_message_queue.log.handler.console_error
+            handler:   consumer
+            level:     debug
+        # write all records from 'consumer' consumer channel to 'consumer_%kernel.environment%.log'
+        consumer:
+            type:      rotating_file
+            path:      "%kernel.logs_dir%/consumer_%kernel.environment%.log"
+            level:     debug
+            max_files: 7
+            channels:  ["consumer"]
 
 oro_message_queue:
     client:
