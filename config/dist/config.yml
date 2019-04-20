@@ -27,10 +27,11 @@ framework:
         enabled:              true
         path:                 /_fragment # used for controller action in template
 
-# Twig Configuration
 twig:
     debug:                    "%kernel.debug%"
     strict_variables:         "%kernel.debug%"
+    globals:
+        help_url: https://www.oroinc.com/doc/orocrm/current/install-upgrade
 
 lexik_maintenance:
     driver:
@@ -47,15 +48,6 @@ services:
          class:               Twig_Extensions_Extension_Intl
          tags:
              - { name: twig.extension }
-
-oro_help:
-    defaults:
-        server: http://help.orocrm.com/
-        prefix: Third_Party
-    vendors:
-        Oro:
-            prefix: ~
-            alias: Platform
 
 monolog:
     handlers:

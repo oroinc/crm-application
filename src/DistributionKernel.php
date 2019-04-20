@@ -21,7 +21,6 @@ class DistributionKernel extends OroKernel
             new Oro\Bundle\DistributionBundle\OroDistributionBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
-            new Oro\Bundle\HelpBundle\OroHelpBundle(),
             new Lexik\Bundle\MaintenanceBundle\LexikMaintenanceBundle(),
             new Oro\Bundle\PlatformBundle\OroPlatformBundle(),
             new Oro\Bundle\LoggerBundle\OroLoggerBundle(),
