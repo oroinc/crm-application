@@ -20,7 +20,6 @@ class OroRequirements extends SymfonyRequirements
     const REQUIRED_NODEJS_VERSION  = '>=6.6';
 
     const EXCLUDE_REQUIREMENTS_MASK = '/5\.[0-6]|7\.0/';
-    const UNKNOWN_CURRENCY_ID = 'XXX';
 
     /**
      * @param string $env
@@ -97,12 +96,31 @@ class OroRequirements extends SymfonyRequirements
             'Install and enable the <strong>intl</strong> extension.'
         );
 
-        $numberFormatter = new \NumberFormatter('en', \NumberFormatter::CURRENCY);
-        $prefix = $numberFormatter->getTextAttribute(\NumberFormatter::NEGATIVE_PREFIX);
-        $this->addOroRequirement(
-            \stripos($prefix, self::UNKNOWN_CURRENCY_ID) === false,
+        $localeCurrencies = [
+            'de_DE' => 'EUR',
+            'en_CA' => 'CAD',
+            'en_GB' => 'GBP',
+            'en_US' => 'USD',
+            'fr_FR' => 'EUR',
+            'uk_UA' => 'UAH',
+        ];
+
+        foreach ($localeCurrencies as $locale => $currencyCode) {
+            $numberFormatter = new \NumberFormatter($locale, \NumberFormatter::CURRENCY);
+
+            if ($currencyCode === $numberFormatter->getTextAttribute(\NumberFormatter::CURRENCY_CODE)) {
+                unset($localeCurrencies[$locale]);
+            }
+        }
+
+        $this->addRecommendation(
+            empty($localeCurrencies),
             sprintf('Current version %s of the ICU library should meet the requirements', $icuVersion),
-            'Install another version or try to upgrade the <strong>ICU</strong> library'
+            sprintf(
+                'There may be a problem with currency formatting in <strong>ICU</strong> %s, ' .
+                'please upgrade your <strong>ICU</strong> library.',
+                $icuVersion
+            )
         );
 
         $this->addOroRequirement(
