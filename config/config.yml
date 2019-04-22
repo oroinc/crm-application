@@ -133,21 +133,6 @@ oro_require_js:
         optimize: "uglify2"
         preserveLicenseComments: true
 
-oro_help:
-    defaults:
-        server: http://help.orocrm.com/
-        prefix: Third_Party
-    vendors:
-        Oro:
-            prefix: ~
-            alias: Platform
-        OroCRM:
-            prefix: ~
-            alias: CRM
-    routes:
-        oro_default:
-            uri: Platform/OroDashboardBundle
-
 oro_theme:
     active_theme: oro
 
