@@ -40,5 +40,12 @@ monolog:
             level:          debug
             formatter:      monolog.formatter.html
 
+        # collect all log records to buffer and write them to log file on CLI command error
+        message_queue.consumer.console_error:
+            type: service
+            id: oro_message_queue.log.handler.console_error
+            handler: nested
+            level: debug
+
 oro_require_js:
     build_logger: false
