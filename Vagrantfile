@@ -296,7 +296,7 @@ ____DOCTRINECONFIG
 
 		cat >> /etc/supervisord.conf <<____SUPERVISORDTEMPLATE
 [program:oro_web_socket]
-command=php ./bin/console clank:server --env=prod
+command=php ./bin/console gos:websocket:server --env=prod
 numprocs=1
 autostart=true
 autorestart=true
