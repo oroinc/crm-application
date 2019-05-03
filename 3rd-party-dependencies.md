@@ -32,7 +32,6 @@
 |[bower-asset/jquery-ui-multiselect-widget](https://github.com/ehynds/jquery-ui-multiselect-widget.git)|GPL-2 and MIT|
 |[bower-asset/jquery-validate](https://github.com/jzaefferer/jquery-validation.git)|MIT|
 |[bower-asset/jquery.numeric](https://github.com/SamWM/jquery-numeric.git)|MIT|
-|[bower-asset/json2](https://github.com/douglascrockford/JSON-js.git)|Unlicense|
 |[bower-asset/jsplumb](https://github.com/sporritt/jsPlumb.git)|MIT|
 |[bower-asset/lightgallery](https://github.com/sachinchoolur/lightGallery.git)|GPLv3|
 |[bower-asset/malihu-custom-scrollbar-plugin](https://github.com/malihu/malihu-custom-scrollbar-plugin.git)|MIT|
