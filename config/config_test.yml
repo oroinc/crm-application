@@ -5,6 +5,8 @@ imports:
 
 parameters:
     doctrine.dbal.connection_factory.class: 'Oro\Component\Testing\Doctrine\PersistentConnectionFactory'
+    message_queue_transport: 'dbal'
+    message_queue_transport_config: {}
 
 framework:
     test: ~
@@ -53,7 +55,3 @@ oro_user:
 twig:
     strict_variables: true
     debug: false
-
-oro_message_queue:
-    transport:
-        dbal: null
