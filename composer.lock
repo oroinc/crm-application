@@ -328,21 +328,6 @@
             "type": "bower-asset"
         },
         {
-            "name": "bower-asset/bootstrap",
-            "version": "v4.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "779ad9f174ea5ab7e755f6df0ec9e5912d67dd16"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/779ad9f174ea5ab7e755f6df0ec9e5912d67dd16",
-                "reference": "779ad9f174ea5ab7e755f6df0ec9e5912d67dd16"
-            },
-            "type": "bower-asset"
-        },
-        {
             "name": "bower-asset/chaplin",
             "version": "1.2.0",
             "source": {
@@ -4008,16 +3993,16 @@
         },
         {
             "name": "knplabs/gaufrette",
-            "version": "v0.8.1",
+            "version": "v0.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/Gaufrette.git",
-                "reference": "80cc42e1c5f008a8fc9d02e856c60140c7d1ea19"
+                "reference": "1d44b7ac74256a240704b0fb16d2d66360511a07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/80cc42e1c5f008a8fc9d02e856c60140c7d1ea19",
-                "reference": "80cc42e1c5f008a8fc9d02e856c60140c7d1ea19",
+                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/1d44b7ac74256a240704b0fb16d2d66360511a07",
+                "reference": "1d44b7ac74256a240704b0fb16d2d66360511a07",
                 "shasum": ""
             },
             "require": {
@@ -4093,7 +4078,7 @@
                 "filesystem",
                 "media"
             ],
-            "time": "2019-01-11T10:04:44+00:00"
+            "time": "2019-06-06T09:56:58+00:00"
         },
         {
             "name": "knplabs/knp-gaufrette-bundle",
@@ -4904,17 +4889,17 @@
         },
         {
             "name": "nelmio/api-doc-bundle",
-            "version": "2.13.3",
+            "version": "2.13.4",
             "target-dir": "Nelmio/ApiDocBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioApiDocBundle.git",
-                "reference": "f0a606b6362c363043e01aa079bee2b0b5eb47a2"
+                "reference": "28802f2c44dbbf29aa7f5dc80a10f44d3558f580"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/f0a606b6362c363043e01aa079bee2b0b5eb47a2",
-                "reference": "f0a606b6362c363043e01aa079bee2b0b5eb47a2",
+                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/28802f2c44dbbf29aa7f5dc80a10f44d3558f580",
+                "reference": "28802f2c44dbbf29aa7f5dc80a10f44d3558f580",
                 "shasum": ""
             },
             "require": {
@@ -4985,7 +4970,7 @@
                 "documentation",
                 "rest"
             ],
-            "time": "2017-12-05T06:14:09+00:00"
+            "time": "2019-06-01T13:34:59+00:00"
         },
         {
             "name": "nelmio/security-bundle",
@@ -5097,37 +5082,16 @@
             "time": "2018-05-29T15:23:46+00:00"
         },
         {
-            "name": "npm-asset/bootbox",
-            "version": "v4.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/makeusabrew/bootbox.git",
-                "reference": "f4ced08acee9ba17a542d72d44db8c868f5379c2"
-            },
+            "name": "npm-asset/bootstrap",
+            "version": "4.3.1",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/makeusabrew/bootbox/zipball/f4ced08acee9ba17a542d72d44db8c868f5379c2",
-                "reference": "f4ced08acee9ba17a542d72d44db8c868f5379c2"
+                "type": "tar",
+                "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.3.1.tgz"
             },
             "type": "npm-asset",
             "license": [
                 "MIT"
             ]
-        },
-        {
-            "name": "npm-asset/bootstrap",
-            "version": "v3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "6d03173a1aad98e75f7d33e65b411c519176c59a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6d03173a1aad98e75f7d33e65b411c519176c59a",
-                "reference": "6d03173a1aad98e75f7d33e65b411c519176c59a"
-            },
-            "type": "npm-asset"
         },
         {
             "name": "npm-asset/jquery",
@@ -5150,6 +5114,18 @@
             },
             "require": {
                 "npm-asset/jquery": ">=1.6.0,<2.0.0"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "npm-asset/popper.js",
+            "version": "1.14.7",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/popper.js/-/popper.js-1.14.7.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -5301,16 +5277,16 @@
         },
         {
             "name": "oro/calendar-bundle",
-            "version": "3.1.7",
+            "version": "3.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCalendarBundle.git",
-                "reference": "dc4943a751ae0917828e5b9f583bb41f03982de8"
+                "reference": "d875731a4e68951deed799253e36d074c86c4705"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/dc4943a751ae0917828e5b9f583bb41f03982de8",
-                "reference": "dc4943a751ae0917828e5b9f583bb41f03982de8",
+                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/d875731a4e68951deed799253e36d074c86c4705",
+                "reference": "d875731a4e68951deed799253e36d074c86c4705",
                 "shasum": ""
             },
             "require": {
@@ -5332,7 +5308,7 @@
                 ]
             },
             "license": [
-                "OSL-3.0"
+                "MIT"
             ],
             "authors": [
                 {
@@ -5340,30 +5316,32 @@
                     "homepage": "http://www.orocrm.com"
                 }
             ],
-            "description": "Oro Calendar Bundle",
+            "description": "Calendar bundle for OroPlatform-based applications.\nSee https://oroinc.com/orocrm/doc/current/user-guide/activities/calendars-overview for more information.",
             "homepage": "https://github.com/oroinc/OroCalendarBundle.git",
             "keywords": [
                 "Calendar",
-                "Oro"
+                "Oro",
+                "OroCRM",
+                "OroPlatform"
             ],
             "support": {
                 "source": "https://github.com/oroinc/OroCalendarBundle/tree/3.1",
                 "issues": "https://github.com/oroinc/OroCalendarBundle/issues"
             },
-            "time": "2019-05-16T15:37:36+00:00"
+            "time": "2019-06-04T09:58:21+00:00"
         },
         {
             "name": "oro/crm",
-            "version": "3.1.7",
+            "version": "3.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/crm.git",
-                "reference": "c245dc041b8df0ab391a8fbd2939914171572ba4"
+                "reference": "40ba000f70e3b39ec115e86f1538aa15bdaa5aa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/crm/zipball/c245dc041b8df0ab391a8fbd2939914171572ba4",
-                "reference": "c245dc041b8df0ab391a8fbd2939914171572ba4",
+                "url": "https://api.github.com/repos/oroinc/crm/zipball/40ba000f70e3b39ec115e86f1538aa15bdaa5aa4",
+                "reference": "40ba000f70e3b39ec115e86f1538aa15bdaa5aa4",
                 "shasum": ""
             },
             "require": {
@@ -5418,20 +5396,20 @@
                 "source": "https://github.com/oroinc/crm/tree/3.1",
                 "issues": "https://github.com/oroinc/crm/issues"
             },
-            "time": "2019-05-16T15:36:07+00:00"
+            "time": "2019-06-03T09:30:54+00:00"
         },
         {
             "name": "oro/crm-call-bundle",
-            "version": "3.1.5",
+            "version": "3.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMCallBundle.git",
-                "reference": "3879041c4f046213089e33860491fa6d944f9268"
+                "reference": "9e7d42b66ef27c9ec66e7173f1b83bcbf9829ba2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMCallBundle/zipball/3879041c4f046213089e33860491fa6d944f9268",
-                "reference": "3879041c4f046213089e33860491fa6d944f9268",
+                "url": "https://api.github.com/repos/oroinc/OroCRMCallBundle/zipball/9e7d42b66ef27c9ec66e7173f1b83bcbf9829ba2",
+                "reference": "9e7d42b66ef27c9ec66e7173f1b83bcbf9829ba2",
                 "shasum": ""
             },
             "require": {
@@ -5470,20 +5448,20 @@
                 "source": "https://github.com/oroinc/OroCRMCallBundle/tree/3.1",
                 "issues": "https://github.com/oroinc/OroCRMCallBundle/issues"
             },
-            "time": "2019-04-17T09:46:00+00:00"
+            "time": "2019-06-03T09:33:01+00:00"
         },
         {
             "name": "oro/crm-dotmailer",
-            "version": "3.1.6",
+            "version": "3.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMDotmailerBundle.git",
-                "reference": "b57e7ac95ec387359f07a28480f9fe6a67489850"
+                "reference": "1c82bb998696b35b1f65bd3f7382db003c323ba7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMDotmailerBundle/zipball/b57e7ac95ec387359f07a28480f9fe6a67489850",
-                "reference": "b57e7ac95ec387359f07a28480f9fe6a67489850",
+                "url": "https://api.github.com/repos/oroinc/OroCRMDotmailerBundle/zipball/1c82bb998696b35b1f65bd3f7382db003c323ba7",
+                "reference": "1c82bb998696b35b1f65bd3f7382db003c323ba7",
                 "shasum": ""
             },
             "require": {
@@ -5520,7 +5498,7 @@
                 "source": "https://github.com/oroinc/OroCRMDotmailerBundle/tree/3.1",
                 "issues": "https://github.com/oroinc/OroCRMDotmailerBundle/issues"
             },
-            "time": "2019-05-16T15:37:53+00:00"
+            "time": "2019-06-03T09:32:31+00:00"
         },
         {
             "name": "oro/crm-hangouts-call-bundle",
@@ -5787,16 +5765,16 @@
         },
         {
             "name": "oro/marketing",
-            "version": "3.1.6",
+            "version": "3.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMMarketingBundle.git",
-                "reference": "a78aeb46cae8a366e4b810c729a741e94980a088"
+                "reference": "2a50bc03f1970a0290e85ceda39a5b4f9a128799"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/a78aeb46cae8a366e4b810c729a741e94980a088",
-                "reference": "a78aeb46cae8a366e4b810c729a741e94980a088",
+                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/2a50bc03f1970a0290e85ceda39a5b4f9a128799",
+                "reference": "2a50bc03f1970a0290e85ceda39a5b4f9a128799",
                 "shasum": ""
             },
             "require": {
@@ -5833,20 +5811,20 @@
             "support": {
                 "source": "https://github.com/oroinc/OroCRMMarketingBundle/tree/3.1"
             },
-            "time": "2019-04-17T09:46:22+00:00"
+            "time": "2019-06-03T09:33:21+00:00"
         },
         {
             "name": "oro/platform",
-            "version": "3.1.7",
+            "version": "3.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/platform.git",
-                "reference": "bf516a06801186aaea0299d61372aebfeb2ffbfe"
+                "reference": "03c6aca9f42f9768d1b454f4f118767a5d03bab6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/platform/zipball/bf516a06801186aaea0299d61372aebfeb2ffbfe",
-                "reference": "bf516a06801186aaea0299d61372aebfeb2ffbfe",
+                "url": "https://api.github.com/repos/oroinc/platform/zipball/03c6aca9f42f9768d1b454f4f118767a5d03bab6",
+                "reference": "03c6aca9f42f9768d1b454f4f118767a5d03bab6",
                 "shasum": ""
             },
             "require": {
@@ -5860,7 +5838,6 @@
                 "bower-asset/backgrid-paginator": "0.3.8",
                 "bower-asset/base64": "1.0.*",
                 "bower-asset/bean": "1.0.6",
-                "bower-asset/bootstrap": "4.1.1",
                 "bower-asset/chaplin": "1.2.0",
                 "bower-asset/crypto-js": "3.1.7",
                 "bower-asset/datepair": "0.4.*",
@@ -5927,9 +5904,9 @@
                 "nelmio/api-doc-bundle": "2.13.*",
                 "nelmio/security-bundle": "2.5.*",
                 "nesbot/carbon": "1.29.*",
-                "npm-asset/bootbox": "4.1.0",
-                "npm-asset/bootstrap": "3.0.3",
+                "npm-asset/bootstrap": "4.3.1",
                 "npm-asset/jquery.uniform": "4.2.0",
+                "npm-asset/popper.js": "1.14.7",
                 "npm-asset/requirejs": "2.3.*",
                 "npm-asset/xregexp": "3.2.*",
                 "ocramius/proxy-manager": "2.1.1",
@@ -5946,10 +5923,10 @@
                 "symfony/polyfill-php70": "1.*",
                 "symfony/security-acl": "~3.0.0",
                 "symfony/swiftmailer-bundle": "2.6.*",
-                "symfony/symfony": "3.4.20",
+                "symfony/symfony": "3.4.27",
                 "tinymce/tinymce": "4.6.*",
                 "twig/extensions": "1.5.*",
-                "twig/twig": "1.38.*",
+                "twig/twig": "1.40.*",
                 "vakata/jstree": "3.3.*",
                 "zendframework/zend-mail": "2.10.0"
             },
@@ -5994,7 +5971,7 @@
                 "source": "https://github.com/oroinc/platform/tree/3.1",
                 "issues": "https://github.com/oroinc/platform/issues"
             },
-            "time": "2019-05-16T15:35:46+00:00"
+            "time": "2019-06-04T09:56:29+00:00"
         },
         {
             "name": "oro/platform-serialised-fields",
@@ -8267,16 +8244,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.4.20",
+            "version": "v3.4.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "f6b8ddc362b1cf3fb06548693c3adbb736092412"
+                "reference": "a9bb1182151d81054800aa4fa2680d92a5928a6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/f6b8ddc362b1cf3fb06548693c3adbb736092412",
-                "reference": "f6b8ddc362b1cf3fb06548693c3adbb736092412",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/a9bb1182151d81054800aa4fa2680d92a5928a6a",
+                "reference": "a9bb1182151d81054800aa4fa2680d92a5928a6a",
                 "shasum": ""
             },
             "require": {
@@ -8295,7 +8272,7 @@
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/polyfill-php56": "~1.0",
                 "symfony/polyfill-php70": "~1.6",
-                "twig/twig": "^1.35|^2.4.4"
+                "twig/twig": "^1.40|^2.9"
             },
             "conflict": {
                 "phpdocumentor/reflection-docblock": "<3.0||>=3.2.0,<3.2.2",
@@ -8418,7 +8395,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-12-06T15:24:36+00:00"
+            "time": "2019-05-01T13:04:01+00:00"
         },
         {
             "name": "tinymce/tinymce",
@@ -8569,16 +8546,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.38.4",
+            "version": "v1.40.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "7732e9e7017d751313811bd118de61302e9c8b35"
+                "reference": "35889516bbd6bbe46a600c2c33b03515df4a076e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7732e9e7017d751313811bd118de61302e9c8b35",
-                "reference": "7732e9e7017d751313811bd118de61302e9c8b35",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/35889516bbd6bbe46a600c2c33b03515df4a076e",
+                "reference": "35889516bbd6bbe46a600c2c33b03515df4a076e",
                 "shasum": ""
             },
             "require": {
@@ -8593,7 +8570,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.38-dev"
+                    "dev-master": "1.40-dev"
                 }
             },
             "autoload": {
@@ -8631,7 +8608,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-03-23T14:27:19+00:00"
+            "time": "2019-04-29T14:12:28+00:00"
         },
         {
             "name": "ua-parser/uap-php",
@@ -9656,16 +9633,16 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "d17708133b6c276d6e42ef887a877866b909d892"
+                "reference": "46867cbf8ca9fb8d60c506895449eb799db1184f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/d17708133b6c276d6e42ef887a877866b909d892",
-                "reference": "d17708133b6c276d6e42ef887a877866b909d892",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/46867cbf8ca9fb8d60c506895449eb799db1184f",
+                "reference": "46867cbf8ca9fb8d60c506895449eb799db1184f",
                 "shasum": ""
             },
             "require": {
@@ -9696,7 +9673,7 @@
                 "Xdebug",
                 "performance"
             ],
-            "time": "2019-01-28T20:25:53+00:00"
+            "time": "2019-05-27T17:52:04+00:00"
         },
         {
             "name": "friendsofphp/php-cs-fixer",
@@ -10100,24 +10077,24 @@
         },
         {
             "name": "oro/twig-inspector",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/twig-inspector.git",
-                "reference": "226f54e781801549c467dad3f395982fc6ec9ec5"
+                "reference": "fe8294e16a4d358cf86b94a2c2e51333c80e5c65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/twig-inspector/zipball/226f54e781801549c467dad3f395982fc6ec9ec5",
-                "reference": "226f54e781801549c467dad3f395982fc6ec9ec5",
+                "url": "https://api.github.com/repos/oroinc/twig-inspector/zipball/fe8294e16a4d358cf86b94a2c2e51333c80e5c65",
+                "reference": "fe8294e16a4d358cf86b94a2c2e51333c80e5c65",
                 "shasum": ""
             },
             "require": {
-                "symfony/config": "^3.4",
-                "symfony/dependency-injection": "^3.4",
-                "symfony/http-foundation": "^3.4",
-                "symfony/http-kernel": "^3.4",
-                "symfony/routing": "^3.4",
+                "symfony/config": "^3.4 | ^4.0",
+                "symfony/dependency-injection": "^3.4 | ^4.0",
+                "symfony/http-foundation": "^3.4 | ^4.0",
+                "symfony/http-kernel": "^3.4 | ^4.0",
+                "symfony/routing": "^3.4 | ^4.0",
                 "twig/twig": "~1.34|~2.4"
             },
             "type": "symfony-bundle",
@@ -10152,10 +10129,10 @@
                 "twig"
             ],
             "support": {
-                "source": "https://github.com/oroinc/twig-inspector/tree/1.0.0",
+                "source": "https://github.com/oroinc/twig-inspector/tree/master",
                 "issues": "https://github.com/oroinc/twig-inspector/issues"
             },
-            "time": "2018-08-19T20:22:28+00:00"
+            "time": "2019-05-27T10:05:30+00:00"
         },
         {
             "name": "pdepend/pdepend",
@@ -11679,7 +11656,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.27",
+            "version": "v3.4.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
