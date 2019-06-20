@@ -21,7 +21,9 @@ class AppKernel extends OroKernel
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
-            $bundles[] = new Oro\TwigInspector\Bundle\OroTwigInspectorBundle();
+            if (class_exists('Oro\TwigInspector\Bundle\OroTwigInspectorBundle')) {
+                $bundles[] = new Oro\TwigInspector\Bundle\OroTwigInspectorBundle();
+            }
             if (class_exists('Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle')) {
                 $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
             }
