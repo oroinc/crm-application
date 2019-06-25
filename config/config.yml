@@ -101,17 +101,17 @@ lexik_maintenance:
     driver:
         class:                Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver
         options:
-            file_path:        %kernel.project_dir%/var/cache/maintenance_lock
+            file_path:        '%kernel.project_dir%/var/cache/maintenance_lock'
 
 liip_imagine:
     loaders:
         default:
             filesystem:
-                data_root: %kernel.project_dir%/public
+                data_root: '%kernel.project_dir%/public'
     resolvers:
         default:
             web_path:
-                web_root: %kernel.project_dir%/public
+                web_root: '%kernel.project_dir%/public'
 
 #
 # ORO Bundles config
