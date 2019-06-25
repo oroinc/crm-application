@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dbe03adc08142f24bf9e358c5090061f",
+    "content-hash": "060eb61856b89f1daf9ced387b3cc0ad",
     "packages": [
         {
             "name": "akeneo/batch-bundle",
@@ -4060,16 +4060,16 @@
         },
         {
             "name": "knplabs/gaufrette",
-            "version": "v0.8.1",
+            "version": "v0.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/Gaufrette.git",
-                "reference": "80cc42e1c5f008a8fc9d02e856c60140c7d1ea19"
+                "reference": "1d44b7ac74256a240704b0fb16d2d66360511a07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/80cc42e1c5f008a8fc9d02e856c60140c7d1ea19",
-                "reference": "80cc42e1c5f008a8fc9d02e856c60140c7d1ea19",
+                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/1d44b7ac74256a240704b0fb16d2d66360511a07",
+                "reference": "1d44b7ac74256a240704b0fb16d2d66360511a07",
                 "shasum": ""
             },
             "require": {
@@ -4145,7 +4145,7 @@
                 "filesystem",
                 "media"
             ],
-            "time": "2019-01-11T10:04:44+00:00"
+            "time": "2019-06-06T09:56:58+00:00"
         },
         {
             "name": "knplabs/knp-gaufrette-bundle",
@@ -4457,32 +4457,29 @@
         },
         {
             "name": "lcobucci/jwt",
-            "version": "3.2.5",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lcobucci/jwt.git",
-                "reference": "82be04b4753f8b7693b62852b7eab30f97524f9b"
+                "reference": "a11ec5f4b4d75d1fcd04e133dede4c317aac9e18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/82be04b4753f8b7693b62852b7eab30f97524f9b",
-                "reference": "82be04b4753f8b7693b62852b7eab30f97524f9b",
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/a11ec5f4b4d75d1fcd04e133dede4c317aac9e18",
+                "reference": "a11ec5f4b4d75d1fcd04e133dede4c317aac9e18",
                 "shasum": ""
             },
             "require": {
+                "ext-mbstring": "*",
                 "ext-openssl": "*",
-                "php": ">=5.5"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
-                "mdanter/ecc": "~0.3.1",
                 "mikey179/vfsstream": "~1.5",
                 "phpmd/phpmd": "~2.2",
                 "phpunit/php-invoker": "~1.1",
-                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit": "^5.7 || ^7.3",
                 "squizlabs/php_codesniffer": "~2.3"
-            },
-            "suggest": {
-                "mdanter/ecc": "Required to use Elliptic Curves based algorithms."
             },
             "type": "library",
             "extra": {
@@ -4511,7 +4508,7 @@
                 "JWS",
                 "jwt"
             ],
-            "time": "2018-11-11T12:22:26+00:00"
+            "time": "2019-05-24T18:30:49+00:00"
         },
         {
             "name": "leafo/scssphp",
@@ -4856,7 +4853,7 @@
             "time": "2017-09-09T03:53:30+00:00"
         },
         {
-            "name": "liuggio/ExcelBundle",
+            "name": "liuggio/excelbundle",
             "version": "v2.1.0",
             "source": {
                 "type": "git",
@@ -5533,7 +5530,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/calendar",
-                "reference": "05a8f52ca30cc9e61842f1cdba1e1cea836bce73"
+                "reference": "6a3dd9f661aea537329e36c36da5780e821a3f5f"
             },
             "require": {
                 "bower-asset/fullcalendar": "3.4.0",
@@ -5554,7 +5551,7 @@
                 ]
             },
             "license": [
-                "OSL-3.0"
+                "MIT"
             ],
             "authors": [
                 {
@@ -5562,11 +5559,13 @@
                     "homepage": "http://www.orocrm.com"
                 }
             ],
-            "description": "Oro Calendar Bundle",
+            "description": "Calendar bundle for OroPlatform-based applications.\nSee https://oroinc.com/orocrm/doc/current/user-guide/activities/calendars-overview for more information.",
             "homepage": "https://github.com/oroinc/OroCalendarBundle.git",
             "keywords": [
                 "Calendar",
-                "Oro"
+                "Oro",
+                "OroCRM",
+                "OroPlatform"
             ]
         },
         {
@@ -6016,7 +6015,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "45b6eba5c38ec34534f03ed16d2cedf7170a2fa9"
+                "reference": "b8e1158e0a354113c798ff451cb2bfa5babe1913"
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.*",
@@ -6092,7 +6091,7 @@
                 "liuggio/excelbundle": "2.1.*",
                 "monolog/monolog": "1.23.*",
                 "mtdowling/cron-expression": "1.2.*",
-                "nelmio/api-doc-bundle": "2.13.*",
+                "nelmio/api-doc-bundle": "2.13.3",
                 "nelmio/security-bundle": "2.5.*",
                 "nesbot/carbon": "1.29.*",
                 "npm-asset/bootstrap": "4.3.1",
@@ -9933,16 +9932,16 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "d17708133b6c276d6e42ef887a877866b909d892"
+                "reference": "46867cbf8ca9fb8d60c506895449eb799db1184f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/d17708133b6c276d6e42ef887a877866b909d892",
-                "reference": "d17708133b6c276d6e42ef887a877866b909d892",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/46867cbf8ca9fb8d60c506895449eb799db1184f",
+                "reference": "46867cbf8ca9fb8d60c506895449eb799db1184f",
                 "shasum": ""
             },
             "require": {
@@ -9973,7 +9972,7 @@
                 "Xdebug",
                 "performance"
             ],
-            "time": "2019-01-28T20:25:53+00:00"
+            "time": "2019-05-27T17:52:04+00:00"
         },
         {
             "name": "friendsofphp/php-cs-fixer",
@@ -10362,7 +10361,7 @@
                     "email": "shelburt02@gmail.com"
                 },
                 {
-                    "name": "Théo FIDRY",
+                    "name": "Théo Fidry",
                     "email": "theo.fidry@gmail.com"
                 }
             ],
@@ -10374,6 +10373,66 @@
                 "test"
             ],
             "time": "2018-04-07T09:33:52+00:00"
+        },
+        {
+            "name": "oro/crm-documentation-examples",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../documentation/crm/code_examples",
+                "reference": "8b4d76a2e4ce07d02e5ceca8bcb91ceb06568f1c"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oro, Inc",
+                    "homepage": "http://www.orocrm.com"
+                }
+            ],
+            "description": "OroCRM documentation examples",
+            "keywords": [
+                "OroCRM",
+                "documentation",
+                "example"
+            ]
+        },
+        {
+            "name": "oro/platform-documentation-examples",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../documentation/platform/code_examples",
+                "reference": "5a6aeb74e038bab9f434bd7b497a10d9bcdbd4df"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oro, Inc",
+                    "homepage": "http://www.orocrm.com"
+                }
+            ],
+            "description": "OroPlatform documentation examples",
+            "keywords": [
+                "OroPlatform",
+                "documentation",
+                "example"
+            ]
         },
         {
             "name": "oro/twig-inspector",
@@ -11945,7 +12004,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.27",
+            "version": "v3.4.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
