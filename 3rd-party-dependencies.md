@@ -144,7 +144,6 @@
 |[seld/cli-prompt](https://github.com/Seldaek/cli-prompt.git)|MIT|
 |[seld/jsonlint](https://github.com/Seldaek/jsonlint.git)|MIT|
 |[seld/phar-utils](https://github.com/Seldaek/phar-utils.git)|MIT|
-|[sensio/distribution-bundle](https://github.com/sensiolabs/SensioDistributionBundle.git)|MIT|
 |[sensio/framework-extra-bundle](https://github.com/sensiolabs/SensioFrameworkExtraBundle.git)|MIT|
 |[sensiolabs/security-checker](https://github.com/sensiolabs/security-checker.git)|MIT|
 |[snc/redis-bundle](https://github.com/snc/SncRedisBundle.git)|MIT|
