@@ -820,7 +820,6 @@
 |[scss-tokenizer](https://github.com/sasstools/scss-tokenizer)|MIT|
 |[sebastian/phpcpd](https://github.com/sebastianbergmann/phpcpd.git)|BSD-3-Clause|
 |[semver](https://github.com/npm/node-semver)|ISC|
-|[sensio/generator-bundle](https://github.com/sensiolabs/SensioGeneratorBundle.git)|MIT|
 |[serialize-javascript](https://github.com/yahoo/serialize-javascript)|BSD-3-Clause|
 |[set-blocking](https://github.com/yargs/set-blocking)|ISC|
 |[set-value](https://github.com/jonschlinkert/set-value)|MIT|
