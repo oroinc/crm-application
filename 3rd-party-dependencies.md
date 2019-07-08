@@ -144,7 +144,6 @@
 |[seld/cli-prompt](https://github.com/Seldaek/cli-prompt.git)|MIT|
 |[seld/jsonlint](https://github.com/Seldaek/jsonlint.git)|MIT|
 |[seld/phar-utils](https://github.com/Seldaek/phar-utils.git)|MIT|
-|[sensio/distribution-bundle](https://github.com/sensiolabs/SensioDistributionBundle.git)|MIT|
 |[sensio/framework-extra-bundle](https://github.com/sensiolabs/SensioFrameworkExtraBundle.git)|MIT|
 |[sensiolabs/security-checker](https://github.com/sensiolabs/security-checker.git)|MIT|
 |[snc/redis-bundle](https://github.com/snc/SncRedisBundle.git)|MIT|
@@ -820,7 +819,6 @@
 |[scss-tokenizer](https://github.com/sasstools/scss-tokenizer)|MIT|
 |[sebastian/phpcpd](https://github.com/sebastianbergmann/phpcpd.git)|BSD-3-Clause|
 |[semver](https://github.com/npm/node-semver)|ISC|
-|[sensio/generator-bundle](https://github.com/sensiolabs/SensioGeneratorBundle.git)|MIT|
 |[serialize-javascript](https://github.com/yahoo/serialize-javascript)|BSD-3-Clause|
 |[set-blocking](https://github.com/yargs/set-blocking)|ISC|
 |[set-value](https://github.com/jonschlinkert/set-value)|MIT|

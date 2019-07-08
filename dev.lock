@@ -4,28 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa3c1c5db0e64c3dc9cb797384a54ad1",
+    "content-hash": "2f8752fc9a3eb8a6aff00182778b634a",
     "packages": [
         {
             "name": "akeneo/batch-bundle",
-            "version": "0.4.8",
+            "version": "0.4.9",
             "target-dir": "Akeneo/Bundle/BatchBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laboro/BatchBundle.git",
-                "reference": "aff218f6ba5714baae575698c0578bf8da207f41"
+                "reference": "16bdde056af98b4d8634839ac4f4bf9a7b7025b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laboro/BatchBundle/zipball/aff218f6ba5714baae575698c0578bf8da207f41",
-                "reference": "aff218f6ba5714baae575698c0578bf8da207f41",
+                "url": "https://api.github.com/repos/laboro/BatchBundle/zipball/16bdde056af98b4d8634839ac4f4bf9a7b7025b9",
+                "reference": "16bdde056af98b4d8634839ac4f4bf9a7b7025b9",
                 "shasum": ""
             },
             "require": {
                 "doctrine/orm": "^2.1.3",
                 "monolog/monolog": "^1.1.0",
                 "php": ">=5.4.4",
-                "symfony/swiftmailer-bundle": "^2.3.5",
+                "symfony/swiftmailer-bundle": "3.1.0",
                 "symfony/symfony": "^2.1|~3.0"
             },
             "require-dev": {
@@ -55,9 +55,10 @@
                 "Writer"
             ],
             "support": {
-                "source": "https://github.com/laboro/BatchBundle/tree/0.4.8"
+                "source": "https://github.com/laboro/BatchBundle/tree/0.4.9",
+                "issues": "https://github.com/laboro/BatchBundle/issues"
             },
-            "time": "2018-03-20T11:52:51+00:00"
+            "time": "2019-07-03T15:18:29+00:00"
         },
         {
             "name": "ass/xmlsecurity",
@@ -2391,6 +2392,63 @@
             "time": "2018-06-14T14:45:07+00:00"
         },
         {
+            "name": "egulias/email-validator",
+            "version": "2.1.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/egulias/EmailValidator.git",
+                "reference": "128cc721d771ec2c46ce59698f4ca42b73f71b25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/128cc721d771ec2c46ce59698f4ca42b73f71b25",
+                "reference": "128cc721d771ec2c46ce59698f4ca42b73f71b25",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "^1.0.1",
+                "php": ">= 5.5"
+            },
+            "require-dev": {
+                "dominicsayers/isemail": "dev-master",
+                "phpunit/phpunit": "^4.8.35||^5.7||^6.0",
+                "satooshi/php-coveralls": "^1.0.1"
+            },
+            "suggest": {
+                "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Egulias\\EmailValidator\\": "EmailValidator"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eduardo Gulias Davis"
+                }
+            ],
+            "description": "A library for validating emails against several RFCs",
+            "homepage": "https://github.com/egulias/EmailValidator",
+            "keywords": [
+                "email",
+                "emailvalidation",
+                "emailvalidator",
+                "validation",
+                "validator"
+            ],
+            "time": "2019-06-23T10:14:27+00:00"
+        },
+        {
             "name": "escapestudios/wsse-authentication-bundle",
             "version": "2.3.0",
             "target-dir": "Escape/WSSEAuthenticationBundle",
@@ -4091,26 +4149,29 @@
         },
         {
             "name": "knplabs/knp-gaufrette-bundle",
-            "version": "0.3.0",
+            "version": "v0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpGaufretteBundle.git",
-                "reference": "44cf552e14031517516458b0e394f16dd36a131b"
+                "reference": "ec5489461b307ddda3a56ef06d708de88a225e11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpGaufretteBundle/zipball/44cf552e14031517516458b0e394f16dd36a131b",
-                "reference": "44cf552e14031517516458b0e394f16dd36a131b",
+                "url": "https://api.github.com/repos/KnpLabs/KnpGaufretteBundle/zipball/ec5489461b307ddda3a56ef06d708de88a225e11",
+                "reference": "ec5489461b307ddda3a56ef06d708de88a225e11",
                 "shasum": ""
             },
             "require": {
-                "knplabs/gaufrette": "~0.1.7|~0.2",
-                "symfony/framework-bundle": "~2.0|~3.0"
+                "knplabs/gaufrette": "~0.1.7|~0.2|~0.3|~0.4",
+                "symfony/config": "~2.1|~3.0|~4.0",
+                "symfony/dependency-injection": "~2.1|~3.0|~4.0",
+                "symfony/framework-bundle": "~2.0|~3.0|~4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.2",
-                "symfony/console": "~2.0|~3.0",
-                "symfony/yaml": "~2.0|~3.0"
+                "phpunit/phpunit": "~4.8.35",
+                "symfony/console": "~2.1|~3.0|~4.0",
+                "symfony/filesystem": "~2.1|~3.0|~4.0",
+                "symfony/yaml": "~2.1|~3.0|~4.0"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -4145,7 +4206,7 @@
                 "filesystem",
                 "media"
             ],
-            "time": "2016-01-16T00:12:11+00:00"
+            "time": "2018-01-05T13:15:38+00:00"
         },
         {
             "name": "knplabs/knp-menu",
@@ -4695,56 +4756,55 @@
         },
         {
             "name": "liip/imagine-bundle",
-            "version": "1.9.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "3084c77e984ec669e0d645250a3cb1077d8b92f6"
+                "reference": "66959e113d1976d0b23a2617771c2c65d62ea44b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/3084c77e984ec669e0d645250a3cb1077d8b92f6",
-                "reference": "3084c77e984ec669e0d645250a3cb1077d8b92f6",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/66959e113d1976d0b23a2617771c2c65d62ea44b",
+                "reference": "66959e113d1976d0b23a2617771c2c65d62ea44b",
                 "shasum": ""
             },
             "require": {
-                "imagine/imagine": "^0.6.3|^0.7.0,<0.8",
-                "php": "^5.3.9|^7.0",
-                "symfony/asset": "~2.3|~3.0",
-                "symfony/filesystem": "~2.3|~3.0",
-                "symfony/finder": "~2.3|~3.0",
-                "symfony/framework-bundle": "~2.3|~3.0",
-                "symfony/options-resolver": "~2.3|~3.0",
-                "symfony/process": "~2.3|~3.0",
-                "symfony/templating": "~2.3|~3.0",
-                "symfony/translation": "~2.3|~3.0"
+                "imagine/imagine": "^0.7.1,<0.8",
+                "php": "^7.1",
+                "symfony/asset": "^3.0|^4.0",
+                "symfony/filesystem": "^3.0|^4.0",
+                "symfony/finder": "^3.0|^4.0",
+                "symfony/framework-bundle": "^3.0|^4.0",
+                "symfony/options-resolver": "^3.0|^4.0",
+                "symfony/process": "^3.0|^4.0",
+                "symfony/templating": "^3.0|^4.0",
+                "symfony/translation": "^3.0|^4.0"
             },
             "require-dev": {
-                "amazonwebservices/aws-sdk-for-php": "~1.0",
-                "aws/aws-sdk-php": "~2.4",
-                "doctrine/cache": "~1.1",
-                "doctrine/orm": "~2.3",
+                "amazonwebservices/aws-sdk-for-php": "^1.0",
+                "aws/aws-sdk-php": "^2.4",
+                "doctrine/cache": "^1.1",
+                "doctrine/orm": "^2.3",
+                "enqueue/enqueue-bundle": "^0.7|^0.8",
                 "ext-gd": "*",
-                "friendsofphp/php-cs-fixer": "~1.0",
-                "phpunit/phpunit": "~4.3|~5.0",
-                "psr/log": "~1.0",
-                "satooshi/php-coveralls": "~1.0",
-                "sllh/php-cs-fixer-styleci-bridge": "~2.1",
-                "symfony/browser-kit": "~2.3|~3.0",
-                "symfony/console": "~2.3|~3.0",
-                "symfony/dependency-injection": "~2.3|~3.0",
-                "symfony/form": "~2.3|~3.0",
-                "symfony/phpunit-bridge": "~2.3|~3.0",
-                "symfony/validator": "~2.3|~3.0",
-                "symfony/yaml": "~2.3|~3.0",
-                "twig/twig": "~1.12|~2.0"
+                "friendsofphp/php-cs-fixer": "^2.10",
+                "league/flysystem": "^1.0",
+                "psr/log": "^1.0",
+                "symfony/browser-kit": "^3.0|^4.0",
+                "symfony/console": "^3.0|^4.0",
+                "symfony/dependency-injection": "^3.0|^4.0",
+                "symfony/form": "^3.0|^4.0",
+                "symfony/phpunit-bridge": "^3.0|^4.0",
+                "symfony/validator": "^3.0|^4.0",
+                "symfony/yaml": "^3.0|^4.0",
+                "twig/twig": "^1.12|^2.0"
             },
             "suggest": {
                 "alcaeus/mongo-php-adapter": "required on PHP >= 7.0 to use mongo components with mongodb extension",
                 "amazonwebservices/aws-sdk-for-php": "required to use AWS version 1 cache resolver",
                 "aws/aws-sdk-php": "required to use AWS version 2/3 cache resolver",
                 "doctrine/mongodb-odm": "required to use mongodb-backed doctrine components",
-                "enqueue/enqueue-bundle": "add if you like to process images in background",
+                "enqueue/enqueue-bundle": "^0.7 add if you like to process images in background",
                 "ext-exif": "required to read EXIF metadata from images",
                 "ext-gd": "required to use gd driver",
                 "ext-gmagick": "required to use gmagick driver",
@@ -4792,7 +4852,7 @@
                 "symfony",
                 "transformation"
             ],
-            "time": "2017-09-09T03:53:30+00:00"
+            "time": "2018-04-30T09:53:17+00:00"
         },
         {
             "name": "liuggio/excelbundle",
@@ -5588,7 +5648,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "1a81b588f3b4aae57a1324dc7d0094456b037670",
+                "reference": "c3adbab76e10fe0e97e7ff4a16bdb5729ee0d028",
                 "shasum": null
             },
             "require": {
@@ -5613,7 +5673,6 @@
                 "phpunit/phpcov": "4.0.*",
                 "phpunit/phpunit": "6.5.*",
                 "sebastian/phpcpd": "3.0.*",
-                "sensio/generator-bundle": "3.1.*",
                 "squizlabs/php_codesniffer": "3.3.*",
                 "symfony/phpunit-bridge": "3.4.*"
             },
@@ -6041,11 +6100,11 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "cf5ab1c885b5b0cb0eca4018132bf5c13784ba90",
+                "reference": "1f009c42f225ce84636e349d32a4c4376b68d7d1",
                 "shasum": null
             },
             "require": {
-                "akeneo/batch-bundle": "0.4.*",
+                "akeneo/batch-bundle": "0.4.9",
                 "ass/xmlsecurity": "1.1.1",
                 "bower-asset/autobahnjs": "0.8.0",
                 "bower-asset/autolinker.js": "1.6.*",
@@ -6104,13 +6163,13 @@
                 "jms/cg": "1.2.*",
                 "jms/serializer": "1.12.*",
                 "jms/serializer-bundle": "2.1.0",
-                "knplabs/knp-gaufrette-bundle": "0.3.*",
+                "knplabs/knp-gaufrette-bundle": "0.5.0",
                 "knplabs/knp-menu": "2.3.*",
                 "knplabs/knp-menu-bundle": "2.2.*",
                 "kriswallsmith/buzz": "0.16.*",
                 "leafo/scssphp": "0.6.*",
                 "lexik/maintenance-bundle": "2.1.5",
-                "liip/imagine-bundle": "1.9.*",
+                "liip/imagine-bundle": "2.0.0",
                 "liuggio/excelbundle": "2.1.*",
                 "monolog/monolog": "1.23.*",
                 "mtdowling/cron-expression": "1.2.*",
@@ -6141,7 +6200,7 @@
                 "symfony/monolog-bundle": "3.3.*",
                 "symfony/polyfill-php70": "1.*",
                 "symfony/security-acl": "~3.0.0",
-                "symfony/swiftmailer-bundle": "2.6.*",
+                "symfony/swiftmailer-bundle": "3.1.0",
                 "symfony/symfony": "3.4.27",
                 "tinymce/tinymce": "4.6.*",
                 "twig/extensions": "1.5.*",
@@ -7833,29 +7892,37 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.12",
+            "version": "v6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "181b89f18a90f8925ef805f950d47a7190e9b950"
+                "reference": "5397cd05b0a0f7937c47b0adcb4c60e5ab936b6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/181b89f18a90f8925ef805f950d47a7190e9b950",
-                "reference": "181b89f18a90f8925ef805f950d47a7190e9b950",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/5397cd05b0a0f7937c47b0adcb4c60e5ab936b6a",
+                "reference": "5397cd05b0a0f7937c47b0adcb4c60e5ab936b6a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "egulias/email-validator": "~2.0",
+                "php": ">=7.0.0",
+                "symfony/polyfill-iconv": "^1.0",
+                "symfony/polyfill-intl-idn": "^1.10",
+                "symfony/polyfill-mbstring": "^1.0"
             },
             "require-dev": {
                 "mockery/mockery": "~0.9.1",
-                "symfony/phpunit-bridge": "~3.2"
+                "symfony/phpunit-bridge": "^3.4.19|^4.1.8"
+            },
+            "suggest": {
+                "ext-intl": "Needed to support internationalized email addresses",
+                "true/punycode": "Needed to support internationalized email addresses, if ext-intl is not installed"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.4-dev"
+                    "dev-master": "6.2-dev"
                 }
             },
             "autoload": {
@@ -7883,7 +7950,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2018-07-31T09:26:32+00:00"
+            "time": "2019-04-21T09:21:45+00:00"
         },
         {
             "name": "symfony/http-client",
@@ -8237,6 +8304,65 @@
                 "ctype",
                 "polyfill",
                 "portable"
+            ],
+            "time": "2019-02-06T07:57:58+00:00"
+        },
+        {
+            "name": "symfony/polyfill-iconv",
+            "version": "v1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-iconv.git",
+                "reference": "f037ea22acfaee983e271dd9c3b8bb4150bd8ad7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/f037ea22acfaee983e271dd9c3b8bb4150bd8ad7",
+                "reference": "f037ea22acfaee983e271dd9c3b8bb4150bd8ad7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-iconv": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Iconv\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Iconv extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "iconv",
+                "polyfill",
+                "portable",
+                "shim"
             ],
             "time": "2019-02-06T07:57:58+00:00"
         },
@@ -8827,30 +8953,30 @@
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.6.7",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/swiftmailer-bundle.git",
-                "reference": "c4808f5169efc05567be983909d00f00521c53ec"
+                "reference": "339d2cb0437612d5e02925e1a5edd3059a7d8bcc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/c4808f5169efc05567be983909d00f00521c53ec",
-                "reference": "c4808f5169efc05567be983909d00f00521c53ec",
+                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/339d2cb0437612d5e02925e1a5edd3059a7d8bcc",
+                "reference": "339d2cb0437612d5e02925e1a5edd3059a7d8bcc",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
-                "swiftmailer/swiftmailer": "~4.2|~5.0",
-                "symfony/config": "~2.7|~3.0",
-                "symfony/dependency-injection": "~2.7|~3.0",
-                "symfony/http-kernel": "~2.7|~3.0"
+                "php": ">=7.0.0",
+                "swiftmailer/swiftmailer": "^6.0.1",
+                "symfony/config": "~2.8|~3.0|~4.0",
+                "symfony/dependency-injection": "~2.7|~3.4|~4.0",
+                "symfony/http-kernel": "~2.7|~3.0|~4.0"
             },
             "require-dev": {
-                "symfony/console": "~2.7|~3.0",
-                "symfony/framework-bundle": "~2.7|~3.0",
-                "symfony/phpunit-bridge": "~3.3@dev",
-                "symfony/yaml": "~2.7|~3.0"
+                "symfony/console": "~2.7|~3.4|~4.0",
+                "symfony/framework-bundle": "~2.7|~3.0|~4.0",
+                "symfony/phpunit-bridge": "~3.3|~4.0",
+                "symfony/yaml": "~2.7|~3.0|~4.0"
             },
             "suggest": {
                 "psr/log": "Allows logging"
@@ -8858,7 +8984,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -8882,7 +9008,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2017-10-19T01:06:41+00:00"
+            "time": "2017-09-27T19:18:18+00:00"
         },
         {
             "name": "symfony/symfony",
@@ -12254,60 +12380,6 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03T07:35:21+00:00"
-        },
-        {
-            "name": "sensio/generator-bundle",
-            "version": "v3.1.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "28cbaa244bd0816fd8908b93f90380bcd7b67a65"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/28cbaa244bd0816fd8908b93f90380bcd7b67a65",
-                "reference": "28cbaa244bd0816fd8908b93f90380bcd7b67a65",
-                "shasum": ""
-            },
-            "require": {
-                "symfony/console": "~2.7|~3.0",
-                "symfony/framework-bundle": "~2.7|~3.0",
-                "symfony/process": "~2.7|~3.0",
-                "symfony/yaml": "~2.7|~3.0",
-                "twig/twig": "^1.28.2|^2.0"
-            },
-            "require-dev": {
-                "doctrine/orm": "~2.4",
-                "symfony/doctrine-bridge": "~2.7|~3.0",
-                "symfony/filesystem": "~2.7|~3.0",
-                "symfony/phpunit-bridge": "^3.3"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sensio\\Bundle\\GeneratorBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "This bundle generates code for you",
-            "time": "2017-12-07T15:36:41+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
