@@ -1,5 +1,5 @@
 <?php
-
+// @codingStandardsIgnoreFile
 /*
  * This file is a copy of {@see https://github.com/sensiolabs/SensioDistributionBundle/blob/master/Resources/skeleton/app/SymfonyRequirements.php}
  *
