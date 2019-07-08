@@ -122,6 +122,7 @@
 |[ocramius/package-versions](https://github.com/Ocramius/PackageVersions.git)|MIT|
 |[ocramius/proxy-manager](https://github.com/Ocramius/ProxyManager.git)|MIT|
 |[paragonie/random_compat](https://github.com/paragonie/random_compat.git)|MIT|
+|[php-http/httplug-bundle](https://github.com/php-http/HttplugBundle.git)|MIT|
 |[phpcollection/phpcollection](https://github.com/schmittjoh/php-collection.git)|Apache2|
 |[phpoffice/phpexcel](https://github.com/PHPOffice/PHPExcel.git)|LGPL-2.1|
 |[phpoption/phpoption](https://github.com/schmittjoh/php-option.git)|Apache2|
