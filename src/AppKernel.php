@@ -20,7 +20,6 @@ class AppKernel extends OroKernel
         if ('dev' === $this->getEnvironment()) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
-            $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Oro\TwigInspector\Bundle\OroTwigInspectorBundle();
         }
 
