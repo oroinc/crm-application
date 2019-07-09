@@ -68,7 +68,6 @@
 |[doctrine/orm](https://github.com/doctrine/orm.git)|MIT|
 |[doctrine/persistence](https://github.com/doctrine/persistence.git)|MIT|
 |[doctrine/reflection](https://github.com/doctrine/reflection.git)|MIT|
-|[escapestudios/wsse-authentication-bundle](https://github.com/djoos/EscapeWSSEAuthenticationBundle.git)|MIT|
 |[evenement/evenement](https://github.com/igorw/evenement.git)|MIT|
 |[ezyang/htmlpurifier](https://github.com/ezyang/htmlpurifier.git)|LGPL|
 |[fig/link-util](https://github.com/php-fig/link-util.git)|MIT|
