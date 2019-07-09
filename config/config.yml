@@ -87,9 +87,6 @@ services:
          tags:
              - { name: twig.extension }
 
-escape_wsse_authentication:
-    authentication_provider_class: Oro\Bundle\UserBundle\Security\WsseAuthProvider
-
 oro_translation:
     locales:                  [en, fr]
     templating:               "OroUIBundle:Form:translatable.html.twig"
