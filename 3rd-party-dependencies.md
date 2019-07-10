@@ -43,6 +43,7 @@
 |[bower-asset/timepicker](https://github.com/jonthornton/jquery-timepicker.git)|MIT|
 |[bower-asset/underscore](https://github.com/jashkenas/underscore.git)|MIT|
 |[bower-asset/when](https://github.com/cujojs/when.git)|MIT|
+|[box/spout](https://github.com/box/spout.git)|Apache-2.0|
 |[brick/math](https://github.com/brick/math.git)|MIT|
 |[components/jquery](https://github.com/components/jquery.git)|MIT|
 |[components/jqueryui](https://github.com/components/jqueryui.git)|MIT|
@@ -105,7 +106,6 @@
 |[league/oauth2-server](https://github.com/thephpleague/oauth2-server.git)|MIT|
 |[lexik/maintenance-bundle](https://github.com/lexik/LexikMaintenanceBundle.git)|MIT|
 |[liip/imagine-bundle](https://github.com/liip/LiipImagineBundle.git)|MIT|
-|[liuggio/excelbundle](https://github.com/liuggio/ExcelBundle.git)|MIT|
 |[michelf/php-markdown](https://github.com/michelf/php-markdown.git)|BSD-3-Clause|
 |[monolog/monolog](https://github.com/Seldaek/monolog.git)|MIT|
 |[mtdowling/cron-expression](https://github.com/mtdowling/cron-expression.git)|MIT|
