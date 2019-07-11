@@ -29,7 +29,6 @@ class DistributionKernel extends OroKernel
 
         if ('dev' === $this->getEnvironment()) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
-            $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
         }
 
         return $bundles;
