@@ -26,6 +26,8 @@ class AppKernel extends OroKernel
         }
 
         if ('test' === $this->getEnvironment()) {
+            $bundles[] = new Nelmio\Alice\Bridge\Symfony\NelmioAliceBundle();
+            $bundles[] = new Fidry\AliceDataFixtures\Bridge\Symfony\FidryAliceDataFixturesBundle();
             $bundles[] = new Oro\Bundle\TestFrameworkBundle\OroTestFrameworkBundle();
             $bundles[] = new Oro\Bundle\TestFrameworkCRMBundle\OroTestFrameworkCRMBundle();
         }
