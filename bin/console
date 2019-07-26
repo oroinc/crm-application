@@ -11,6 +11,10 @@ use Symfony\Component\Debug\Debug;
 
 set_time_limit(0);
 
+// Set the project directory as the current working directory
+// for running child processes correctly without specifying the execution directory
+chdir(__DIR__ . DIRECTORY_SEPARATOR . '..');
+
 require __DIR__.'/../vendor/autoload.php';
 
 $input = new ArgvInput();
