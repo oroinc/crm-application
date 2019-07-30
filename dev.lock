@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "060eb61856b89f1daf9ced387b3cc0ad",
+    "content-hash": "919998e59d155bafbd06168a541aa90c",
     "packages": [
         {
             "name": "akeneo/batch-bundle",
@@ -1171,16 +1171,16 @@
         },
         {
             "name": "composer/spdx-licenses",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/spdx-licenses.git",
-                "reference": "a1aa51cf3ab838b83b0867b14e56fc20fbd55b3d"
+                "reference": "7ac1e6aec371357df067f8a688c3d6974df68fa5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/a1aa51cf3ab838b83b0867b14e56fc20fbd55b3d",
-                "reference": "a1aa51cf3ab838b83b0867b14e56fc20fbd55b3d",
+                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/7ac1e6aec371357df067f8a688c3d6974df68fa5",
+                "reference": "7ac1e6aec371357df067f8a688c3d6974df68fa5",
                 "shasum": ""
             },
             "require": {
@@ -1227,7 +1227,7 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2019-03-26T10:23:26+00:00"
+            "time": "2019-07-29T10:31:59+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -3051,8 +3051,8 @@
             "authors": [
                 {
                     "name": "Chris Boden",
-                    "email": "cboden@gmail.com",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "cboden@gmail.com"
                 }
             ],
             "description": "PHP WebSocket library",
@@ -4670,15 +4670,15 @@
             "authors": [
                 {
                     "name": "Alex Bilbie",
+                    "role": "Developer",
                     "email": "hello@alexbilbie.com",
-                    "homepage": "http://www.alexbilbie.com",
-                    "role": "Developer"
+                    "homepage": "http://www.alexbilbie.com"
                 },
                 {
                     "name": "Andy Millington",
+                    "role": "Developer",
                     "email": "andrew@noexceptions.io",
-                    "homepage": "https://www.noexceptions.io",
-                    "role": "Developer"
+                    "homepage": "https://www.noexceptions.io"
                 }
             ],
             "description": "A lightweight and powerful OAuth 2.0 authorization and resource server library with support for all the core specification grants. This library will allow you to secure your API with OAuth and allow your applications users to approve apps that want to access their data from your API.",
@@ -5933,6 +5933,43 @@
                 "type"
             ],
             "time": "2018-11-12T09:15:04+00:00"
+        },
+        {
+            "name": "oro/html5-purifier",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../package/html5-purifier",
+                "reference": "ba437c8c2a9e31d24b5864b04a2604fe84a794f3"
+            },
+            "require": {
+                "oro/platform": "3.1.*",
+                "xemlock/htmlpurifier-html5": "0.1.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Oro\\Bundle\\Html5PurifierBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Oro, Inc",
+                    "homepage": "https://oroinc.com"
+                }
+            ],
+            "description": "Adding HTML5 tags support to WYSIWYG editors"
         },
         {
             "name": "oro/marketing",
@@ -7616,7 +7653,7 @@
         },
         {
             "name": "sensiolabs/security-checker",
-            "version": "v6.0.1",
+            "version": "v6.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/security-checker.git",
@@ -7848,16 +7885,16 @@
         },
         {
             "name": "symfony/http-client",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "e903ab079c99eab322fc5c71eb63fc467cd19a2a"
+                "reference": "7759fabfbdf7f57a1d29655550b49c4ff04891a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/e903ab079c99eab322fc5c71eb63fc467cd19a2a",
-                "reference": "e903ab079c99eab322fc5c71eb63fc467cd19a2a",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/7759fabfbdf7f57a1d29655550b49c4ff04891a5",
+                "reference": "7759fabfbdf7f57a1d29655550b49c4ff04891a5",
                 "shasum": ""
             },
             "require": {
@@ -7906,7 +7943,7 @@
             ],
             "description": "Symfony HttpClient component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-26T07:29:23+00:00"
+            "time": "2019-07-24T10:16:23+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
@@ -7967,16 +8004,16 @@
         },
         {
             "name": "symfony/mime",
-            "version": "v4.3.2",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "ec2c5565de60e03f33d4296a655e3273f0ad1f8b"
+                "reference": "6b7148029b1dd5eda1502064f06d01357b7b2d8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/ec2c5565de60e03f33d4296a655e3273f0ad1f8b",
-                "reference": "ec2c5565de60e03f33d4296a655e3273f0ad1f8b",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/6b7148029b1dd5eda1502064f06d01357b7b2d8b",
+                "reference": "6b7148029b1dd5eda1502064f06d01357b7b2d8b",
                 "shasum": ""
             },
             "require": {
@@ -8022,7 +8059,7 @@
                 "mime",
                 "mime-type"
             ],
-            "time": "2019-06-04T09:22:54+00:00"
+            "time": "2019-07-19T16:21:19+00:00"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -9215,16 +9252,16 @@
         },
         {
             "name": "ua-parser/uap-php",
-            "version": "v3.9.0",
+            "version": "v3.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ua-parser/uap-php.git",
-                "reference": "c7627a8527d7efefad4e8ec593d4a195b9163260"
+                "reference": "2b7130ce5030a880e9d6c4d8463fd181dfd94711"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/c7627a8527d7efefad4e8ec593d4a195b9163260",
-                "reference": "c7627a8527d7efefad4e8ec593d4a195b9163260",
+                "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/2b7130ce5030a880e9d6c4d8463fd181dfd94711",
+                "reference": "2b7130ce5030a880e9d6c4d8463fd181dfd94711",
                 "shasum": ""
             },
             "require": {
@@ -9268,7 +9305,7 @@
                 }
             ],
             "description": "A multi-language port of Browserscope's user agent parser.",
-            "time": "2019-06-22T08:54:17+00:00"
+            "time": "2019-07-15T14:27:12+00:00"
         },
         {
             "name": "vakata/jstree",
@@ -9452,7 +9489,7 @@
             ],
             "authors": [
                 {
-                    "name": "William Durand",
+                    "name": "William DURAND",
                     "email": "william.durand1@gmail.com"
                 }
             ],
@@ -9466,6 +9503,55 @@
                 "negotiation"
             ],
             "time": "2015-10-01T07:42:40+00:00"
+        },
+        {
+            "name": "xemlock/htmlpurifier-html5",
+            "version": "v0.1.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xemlock/htmlpurifier-html5.git",
+                "reference": "32cef47500fb77c2be0f160372095bec15bf0052"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xemlock/htmlpurifier-html5/zipball/32cef47500fb77c2be0f160372095bec15bf0052",
+                "reference": "32cef47500fb77c2be0f160372095bec15bf0052",
+                "shasum": ""
+            },
+            "require": {
+                "ezyang/htmlpurifier": "^4.7",
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^1.1|^2.1",
+                "phpunit/phpunit": ">=4.7 <8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "library/HTMLPurifier/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "xemlock",
+                    "email": "xemlock@gmail.com"
+                }
+            ],
+            "description": "HTML Purifier definitions for HTML5 elements",
+            "keywords": [
+                "HTML5",
+                "Purifier",
+                "html",
+                "htmlpurifier",
+                "security",
+                "xss"
+            ],
+            "time": "2019-04-26T08:53:59+00:00"
         },
         {
             "name": "zendframework/zend-code",
@@ -11082,20 +11168,20 @@
             "authors": [
                 {
                     "name": "Manuel Pichler",
+                    "role": "Project Founder",
                     "email": "github@manuel-pichler.de",
-                    "homepage": "https://github.com/manuelpichler",
-                    "role": "Project Founder"
+                    "homepage": "https://github.com/manuelpichler"
                 },
                 {
                     "name": "Other contributors",
-                    "homepage": "https://github.com/phpmd/phpmd/graphs/contributors",
-                    "role": "Contributors"
+                    "role": "Contributors",
+                    "homepage": "https://github.com/phpmd/phpmd/graphs/contributors"
                 },
                 {
                     "name": "Marc Würth",
+                    "role": "Project Maintainer",
                     "email": "ravage@bluewin.ch",
-                    "homepage": "https://github.com/ravage84",
-                    "role": "Project Maintainer"
+                    "homepage": "https://github.com/ravage84"
                 }
             ],
             "description": "PHPMD is a spin-off project of PHP Depend and aims to be a PHP equivalent of the well known Java tool PMD.",
@@ -11222,8 +11308,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
@@ -11544,8 +11630,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "The PHP Unit Testing framework.",
@@ -12372,16 +12458,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.29",
+            "version": "v3.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "521489968e58dcdb8df153436cc18349737e49e3"
+                "reference": "8f1f27c186496128b861810809c27d956d342417"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/521489968e58dcdb8df153436cc18349737e49e3",
-                "reference": "521489968e58dcdb8df153436cc18349737e49e3",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/8f1f27c186496128b861810809c27d956d342417",
+                "reference": "8f1f27c186496128b861810809c27d956d342417",
                 "shasum": ""
             },
             "require": {
@@ -12433,7 +12519,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2019-06-26T10:03:25+00:00"
+            "time": "2019-07-05T06:33:19+00:00"
         },
         {
             "name": "theseer/fdomdocument",
@@ -12467,8 +12553,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "arne@blankerts.de"
                 }
             ],
             "description": "The classes contained within this repository extend the standard DOM to use exceptions at all occasions of errors instead of PHP warnings or notices. They also add various custom methods and shortcuts for convenience and to simplify the usage of DOM.",
