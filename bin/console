@@ -22,8 +22,7 @@ $env = $input->getParameterOption(array('--env', '-e'), getenv('SYMFONY_ENV') ?:
 if ($env === 'dev' && !isset($_ENV['APP_FRONT_CONTROLLER'])) {
     $_ENV['APP_FRONT_CONTROLLER'] = 'index_dev.php';
 }
-$debug = getenv('SYMFONY_DEBUG') !== '0' && !$input->hasParameterOption(array('--no-debug', '')) && $env !== 'prod';
-
+$debug = getenv('SYMFONY_DEBUG') !== '0' && !$input->hasParameterOption('--no-debug', true) && $env !== 'prod' && $env !== 'test';
 if ($debug) {
     Debug::enable();
 }
