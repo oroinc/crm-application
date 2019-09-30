@@ -20,6 +20,7 @@ default: &default
                 - OroSecurityBundle::ACLContext
                 - OroSecurityBundle::PermissionContext
                 - OroSearchBundle::SearchContext
+                - OroEmailBundle::EmailContext
                 - OroImportExportBundle::ImportExportContext:
                     - '@oro_entity.entity_alias_resolver'
                     - '@oro_importexport.processor.registry'
