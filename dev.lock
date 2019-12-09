@@ -383,26 +383,6 @@
             "type": "bower-asset"
         },
         {
-            "name": "bower-asset/font-awesome",
-            "version": "v4.7.0",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:FortAwesome/Font-Awesome.git",
-                "reference": "a8386aae19e200ddb0f6845b5feeee5eb7013687"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/a8386aae19e200ddb0f6845b5feeee5eb7013687",
-                "reference": "a8386aae19e200ddb0f6845b5feeee5eb7013687"
-            },
-            "type": "bower-asset",
-            "license": [
-                "OFL-1.1",
-                "MIT",
-                "CC-BY-3.0"
-            ]
-        },
-        {
             "name": "bower-asset/fullcalendar",
             "version": "v3.4.0",
             "source": {
@@ -5240,6 +5220,18 @@
             ]
         },
         {
+            "name": "npm-asset/font-awesome",
+            "version": "4.7.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "(OFL-1.1 AND MIT)"
+            ]
+        },
+        {
             "name": "npm-asset/jquery",
             "version": "3.4.1",
             "dist": {
@@ -6031,7 +6023,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "989d155e629e97b9affcb02083fcccff57dec4a8"
+                "reference": "d4c34cbd7a27a65bd2e4be5e19d2be231452e083"
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.11",
@@ -6046,7 +6038,6 @@
                 "bower-asset/crypto-js": "3.1.7",
                 "bower-asset/datepair": "0.4.*",
                 "bower-asset/flotr2": "dev-master",
-                "bower-asset/font-awesome": "4.7.*",
                 "bower-asset/fuse": "3.2.*",
                 "bower-asset/jquery-ajax-queue": "0.0.1",
                 "bower-asset/jquery-cookie": "1.4.1",
@@ -6108,6 +6099,7 @@
                 "npm-asset/bootstrap": "4.3.1",
                 "npm-asset/css-vars-ponyfill": "^2.0",
                 "npm-asset/focus-visible": "5.0.2",
+                "npm-asset/font-awesome": "4.7.*",
                 "npm-asset/jquery": "3.4.*",
                 "npm-asset/jquery-ui": "1.12.*",
                 "npm-asset/jquery.uniform": "4.3.*",
@@ -6134,9 +6126,10 @@
                 "symfony/acl-bundle": "1.0.*",
                 "symfony/monolog-bundle": "3.3.*",
                 "symfony/polyfill-php70": "1.*",
+                "symfony/property-info": "4.4.1",
                 "symfony/security-acl": "~3.0.0",
                 "symfony/swiftmailer-bundle": "3.1.2",
-                "symfony/symfony": "4.4.0",
+                "symfony/symfony": "4.4.1",
                 "tinymce/tinymce": "4.6.*",
                 "twig/extensions": "1.5.*",
                 "twig/twig": "2.10.*",
@@ -9512,16 +9505,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v4.4.0",
+            "version": "v4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "625a4dbfdafcb8cea8ff90a62b9c24b28694938d"
+                "reference": "04863e4457b0a9b2a34b34fe53e7fd4f1203e1c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/625a4dbfdafcb8cea8ff90a62b9c24b28694938d",
-                "reference": "625a4dbfdafcb8cea8ff90a62b9c24b28694938d",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/04863e4457b0a9b2a34b34fe53e7fd4f1203e1c0",
+                "reference": "04863e4457b0a9b2a34b34fe53e7fd4f1203e1c0",
                 "shasum": ""
             },
             "require": {
@@ -9683,7 +9676,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2019-11-21T07:08:41+00:00"
+            "time": "2019-12-01T14:06:54+00:00"
         },
         {
             "name": "tinymce/tinymce",
