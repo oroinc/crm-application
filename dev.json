@@ -6,12 +6,10 @@
   "autoload": {
     "psr-4": {"": "src/"},
     "classmap": [
-      "vendor/oro/platform/src/Oro/Component/Testing/DeprecationErrorHandler.php",
       "src/AppKernel.php",
       "src/AppCache.php"
     ],
     "exclude-from-classmap": [
-      "/vendor/symfony/phpunit-bridge/DeprecationErrorHandler.php",
       "**/Tests/"
     ]
   },
@@ -110,7 +108,7 @@
   "prefer-stable": true,
   "extra": {
     "symfony": {
-      "require": "4.2.*"
+      "require": "4.4.*"
     },
     "symfony-web-dir": "public",
     "symfony-var-dir": "var",
@@ -143,7 +141,8 @@
         "secret": "ORO_SECRET",
         "installed": "ORO_INSTALLED",
         "message_queue_transport": "ORO_MQ_TRANSPORT",
-        "message_queue_transport_config": "ORO_MQ_TRANSPORT_CONFIG"
+        "message_queue_transport_config": "ORO_MQ_TRANSPORT_CONFIG",
+        "deployment_type": "ORO_DEPLOYMENT_TYPE"
       }
     }
   }
