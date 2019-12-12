@@ -26,7 +26,7 @@ monolog:
         message_queue.consumer.console_error:
             type:      service
             id:        oro_message_queue.log.handler.console_error
-            handler:   nested
+            handler:   main
             level:     debug
 
 oro_message_queue:
