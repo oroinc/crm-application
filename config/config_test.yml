@@ -7,6 +7,7 @@ parameters:
     doctrine.dbal.connection_factory.class: 'Oro\Component\Testing\Doctrine\PersistentConnectionFactory'
     message_queue_transport: 'dbal'
     message_queue_transport_config: {}
+    main_log_channels: []
 
 framework:
     test: ~
@@ -26,6 +27,7 @@ monolog:
             type: stream
             path: "%kernel.logs_dir%/%kernel.environment%.log"
             level: debug
+            channels: '%main_log_channels%'
 
 services:
     oro_message_queue.test.message_collector:
