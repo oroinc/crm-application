@@ -1746,16 +1746,16 @@
         },
         {
             "name": "doctrine/persistence",
-            "version": "1.2.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "43526ae63312942e5316100bb3ed589ba1aba491"
+                "reference": "5fde0b8c1261e5089ece1525e68be2be27c8b2a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/43526ae63312942e5316100bb3ed589ba1aba491",
-                "reference": "43526ae63312942e5316100bb3ed589ba1aba491",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/5fde0b8c1261e5089ece1525e68be2be27c8b2a6",
+                "reference": "5fde0b8c1261e5089ece1525e68be2be27c8b2a6",
                 "shasum": ""
             },
             "require": {
@@ -1770,19 +1770,20 @@
                 "doctrine/common": "<2.10@dev"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^5.0",
-                "phpstan/phpstan": "^0.8",
+                "doctrine/coding-standard": "^6.0",
+                "phpstan/phpstan": "^0.11",
                 "phpunit/phpunit": "^7.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                    "Doctrine\\Common\\": "lib/Doctrine/Common",
+                    "Doctrine\\Persistence\\": "lib/Doctrine/Persistence"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1824,7 +1825,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2019-04-23T12:39:21+00:00"
+            "time": "2019-12-13T07:19:40+00:00"
         },
         {
             "name": "doctrine/reflection",
@@ -5233,7 +5234,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "9ce51e56896e878de170e3133fbc2debe32d04d8"
+                "reference": "6dd6c555c8cc49bb9ccdb5bb2108143f89a0cb75"
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.11",
@@ -5248,7 +5249,7 @@
                 "doctrine/doctrine-bundle": "1.9.*",
                 "doctrine/doctrine-fixtures-bundle": "2.4.*",
                 "doctrine/orm": "2.6.3",
-                "doctrine/persistence": "1.2.*",
+                "doctrine/persistence": "1.3.1",
                 "ext-gd": "*",
                 "ext-intl": "*",
                 "ext-mbstring": "*",
@@ -5294,10 +5295,9 @@
                 "symfony/acl-bundle": "1.0.*",
                 "symfony/monolog-bundle": "3.3.*",
                 "symfony/polyfill-php70": "1.*",
-                "symfony/property-info": "4.4.1",
                 "symfony/security-acl": "~3.0.0",
                 "symfony/swiftmailer-bundle": "3.1.2",
-                "symfony/symfony": "4.4.1",
+                "symfony/symfony": "4.4.2",
                 "tinymce/tinymce": "4.6.*",
                 "twig/extensions": "1.5.*",
                 "twig/twig": "2.10.*",
@@ -8718,21 +8718,21 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v4.4.1",
+            "version": "v4.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "04863e4457b0a9b2a34b34fe53e7fd4f1203e1c0"
+                "reference": "5973dacbd9587d9bf1234dfcb546c3cbdfbc4c9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/04863e4457b0a9b2a34b34fe53e7fd4f1203e1c0",
-                "reference": "04863e4457b0a9b2a34b34fe53e7fd4f1203e1c0",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/5973dacbd9587d9bf1234dfcb546c3cbdfbc4c9e",
+                "reference": "5973dacbd9587d9bf1234dfcb546c3cbdfbc4c9e",
                 "shasum": ""
             },
             "require": {
                 "doctrine/event-manager": "~1.0",
-                "doctrine/persistence": "~1.0",
+                "doctrine/persistence": "^1.3",
                 "ext-xml": "*",
                 "php": "^7.1.3",
                 "psr/cache": "~1.0",
@@ -8889,7 +8889,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2019-12-01T14:06:54+00:00"
+            "time": "2019-12-19T16:23:58+00:00"
         },
         {
             "name": "tinymce/tinymce",
