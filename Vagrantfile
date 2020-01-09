@@ -3,7 +3,7 @@
 
 # Use this Vagrant configuration file for local installation of the Oro application.
 # Please, refer to the Oro Applications installation guides for the detailed instructions:
-# https://oroinc.com/orocrm/doc/current/install-upgrade/one-step-automated-installation/vagrant
+# https://doc.oroinc.com/backend/setup/dev-environment/vagrant/
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
