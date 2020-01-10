@@ -14,7 +14,7 @@ use Symfony\Component\Process\Process;
  */
 class OroRequirements extends SymfonyRequirements
 {
-    const REQUIRED_PHP_VERSION  = '7.1.26';
+    const REQUIRED_PHP_VERSION  = '7.3.13';
     const REQUIRED_GD_VERSION   = '2.0';
     const REQUIRED_CURL_VERSION = '7.0';
     const REQUIRED_NODEJS_VERSION  = '>=12.0';

@@ -4,6 +4,12 @@ This file includes only the most important items that should be addressed before
 
 Please also refer to [CHANGELOG.md](CHANGELOG.md) for a list of significant changes in the code that may affect the upgrade of some customizations.
 
+## 4.1.0
+
+The minimum required PHP version is 7.3.13.
+
+Upgrade PHP before running `composer install` or `composer update`, otherwise composer may download wrong versions of the application packages.
+
 ## 3.1.0
 
 The minimum required PHP version is 7.1.26.
