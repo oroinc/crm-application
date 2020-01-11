@@ -7675,16 +7675,16 @@
         },
         {
             "name": "snc/redis-bundle",
-            "version": "2.1.12",
+            "version": "2.1.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/snc/SncRedisBundle.git",
-                "reference": "1f4d2980e56366d875fd3db8c64e58fef04a4e7d"
+                "reference": "7c8652c1811c573ae567c1bcaa5e1c65723c5907"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/snc/SncRedisBundle/zipball/1f4d2980e56366d875fd3db8c64e58fef04a4e7d",
-                "reference": "1f4d2980e56366d875fd3db8c64e58fef04a4e7d",
+                "url": "https://api.github.com/repos/snc/SncRedisBundle/zipball/7c8652c1811c573ae567c1bcaa5e1c65723c5907",
+                "reference": "7c8652c1811c573ae567c1bcaa5e1c65723c5907",
                 "shasum": ""
             },
             "require": {
@@ -7737,7 +7737,7 @@
                 "redis",
                 "symfony"
             ],
-            "time": "2019-10-09T07:26:03+00:00"
+            "time": "2019-12-09T12:56:15+00:00"
         },
         {
             "name": "stof/doctrine-extensions-bundle",
@@ -9114,16 +9114,16 @@
         },
         {
             "name": "ua-parser/uap-php",
-            "version": "v3.9.2",
+            "version": "v3.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ua-parser/uap-php.git",
-                "reference": "eb9c78aeb3984e5834c4f3845e7263dbe4277935"
+                "reference": "a1d4e652eb67be705410433b0a6617d301553cd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/eb9c78aeb3984e5834c4f3845e7263dbe4277935",
-                "reference": "eb9c78aeb3984e5834c4f3845e7263dbe4277935",
+                "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/a1d4e652eb67be705410433b0a6617d301553cd6",
+                "reference": "a1d4e652eb67be705410433b0a6617d301553cd6",
                 "shasum": ""
             },
             "require": {
@@ -9167,7 +9167,7 @@
                 }
             ],
             "description": "A multi-language port of Browserscope's user agent parser.",
-            "time": "2019-11-06T11:37:45+00:00"
+            "time": "2020-01-10T10:34:59+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -10700,12 +10700,17 @@
             "dist": {
                 "type": "path",
                 "url": "../../documentation/code_examples/platform",
-                "reference": "db2653771a867f63dee4ce2f98ccef6bd6e58b3c"
+                "reference": "f1b961108d9dc75936e40a8a94840c4450b51600"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
                     "dev-master": "4.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ACME\\Bundle\\CMSBundle\\": "drafts/draftable-blocks/"
                 }
             },
             "license": [
