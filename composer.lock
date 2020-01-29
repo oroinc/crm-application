@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0bba0997101970da7cc4073f168d349",
+    "content-hash": "5c27d453edd449d7a4082f0b575cc3e0",
     "packages": [
         {
             "name": "akeneo/batch-bundle",
@@ -122,16 +122,16 @@
         },
         {
             "name": "behat/transliterator",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Transliterator.git",
-                "reference": "826ce7e9c2a6664c0d1f381cbb38b1fb80a7ee2c"
+                "reference": "3c4ec1d77c3d05caa1f0bf8fb3aae4845005c7fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Transliterator/zipball/826ce7e9c2a6664c0d1f381cbb38b1fb80a7ee2c",
-                "reference": "826ce7e9c2a6664c0d1f381cbb38b1fb80a7ee2c",
+                "url": "https://api.github.com/repos/Behat/Transliterator/zipball/3c4ec1d77c3d05caa1f0bf8fb3aae4845005c7fc",
+                "reference": "3c4ec1d77c3d05caa1f0bf8fb3aae4845005c7fc",
                 "shasum": ""
             },
             "require": {
@@ -139,7 +139,8 @@
             },
             "require-dev": {
                 "chuyskywalker/rolling-curl": "^3.1",
-                "php-yaoi/php-yaoi": "^1.0"
+                "php-yaoi/php-yaoi": "^1.0",
+                "phpunit/phpunit": "^4.8.36|^6.3"
             },
             "type": "library",
             "extra": {
@@ -148,8 +149,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Behat\\Transliterator": "src/"
+                "psr-4": {
+                    "Behat\\Transliterator\\": "src/Behat/Transliterator"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -162,7 +163,7 @@
                 "slug",
                 "transliterator"
             ],
-            "time": "2017-04-04T11:38:05+00:00"
+            "time": "2020-01-14T16:39:13+00:00"
         },
         {
             "name": "box/spout",
@@ -234,16 +235,16 @@
         },
         {
             "name": "brick/math",
-            "version": "0.8.9",
+            "version": "0.8.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "2667c1659c1dcc681b4207f722180024d12a3626"
+                "reference": "bf4894d6373d396666d280a42ecdf1ad75f8222f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/2667c1659c1dcc681b4207f722180024d12a3626",
-                "reference": "2667c1659c1dcc681b4207f722180024d12a3626",
+                "url": "https://api.github.com/repos/brick/math/zipball/bf4894d6373d396666d280a42ecdf1ad75f8222f",
+                "reference": "bf4894d6373d396666d280a42ecdf1ad75f8222f",
                 "shasum": ""
             },
             "require": {
@@ -274,20 +275,20 @@
                 "brick",
                 "math"
             ],
-            "time": "2020-01-08T09:40:28+00:00"
+            "time": "2020-01-23T00:19:01+00:00"
         },
         {
             "name": "cboden/ratchet",
-            "version": "v0.4.1",
+            "version": "v0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ratchetphp/Ratchet.git",
-                "reference": "0d31f3a8ad4795fd48397712709e55cd07f51360"
+                "reference": "57721e1f184f9e29378fc5363867c47ddda743fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ratchetphp/Ratchet/zipball/0d31f3a8ad4795fd48397712709e55cd07f51360",
-                "reference": "0d31f3a8ad4795fd48397712709e55cd07f51360",
+                "url": "https://api.github.com/repos/ratchetphp/Ratchet/zipball/57721e1f184f9e29378fc5363867c47ddda743fd",
+                "reference": "57721e1f184f9e29378fc5363867c47ddda743fd",
                 "shasum": ""
             },
             "require": {
@@ -295,8 +296,8 @@
                 "php": ">=5.4.2",
                 "ratchet/rfc6455": "^0.2",
                 "react/socket": "^1.0 || ^0.8 || ^0.7 || ^0.6 || ^0.5",
-                "symfony/http-foundation": "^2.6|^3.0|^4.0",
-                "symfony/routing": "^2.6|^3.0|^4.0"
+                "symfony/http-foundation": "^2.6|^3.0|^4.0|^5.0",
+                "symfony/routing": "^2.6|^3.0|^4.0|^5.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.8"
@@ -327,7 +328,7 @@
                 "sockets",
                 "websocket"
             ],
-            "time": "2017-12-12T00:49:31+00:00"
+            "time": "2020-01-27T23:08:40+00:00"
         },
         {
             "name": "clue/stream-filter",
@@ -1909,21 +1910,22 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.14",
+            "version": "2.1.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "c4b8d12921999d8a561004371701dbc2e05b5ece"
+                "reference": "e834eea5306d85d67de5a05db5882911d5b29357"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/c4b8d12921999d8a561004371701dbc2e05b5ece",
-                "reference": "c4b8d12921999d8a561004371701dbc2e05b5ece",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/e834eea5306d85d67de5a05db5882911d5b29357",
+                "reference": "e834eea5306d85d67de5a05db5882911d5b29357",
                 "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "^1.0.1",
-                "php": ">=5.5"
+                "php": ">=5.5",
+                "symfony/polyfill-intl-idn": "^1.10"
             },
             "require-dev": {
                 "dominicsayers/isemail": "^3.0.7",
@@ -1962,7 +1964,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2020-01-05T14:11:20+00:00"
+            "time": "2020-01-20T21:40:59+00:00"
         },
         {
             "name": "evenement/evenement",
@@ -2217,16 +2219,16 @@
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v2.4.38",
+            "version": "v2.4.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "81681364331b131518060e4776300a5346df1eb5"
+                "reference": "c549b40bff560380c53812283d25ce42ee0992e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/81681364331b131518060e4776300a5346df1eb5",
-                "reference": "81681364331b131518060e4776300a5346df1eb5",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/c549b40bff560380c53812283d25ce42ee0992e4",
+                "reference": "c549b40bff560380c53812283d25ce42ee0992e4",
                 "shasum": ""
             },
             "require": {
@@ -2243,7 +2245,7 @@
                 "doctrine/mongodb-odm": ">=1.0.2 <2.0",
                 "doctrine/orm": ">=2.5.0",
                 "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5",
-                "symfony/yaml": "~2.6 || ~3.0 || ~4.0"
+                "symfony/yaml": "^2.6 || ^3.0 || ^4.0 || ^5.0"
             },
             "suggest": {
                 "doctrine/mongodb-odm": "to use the extensions with the MongoDB ODM",
@@ -2295,7 +2297,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2019-11-08T22:33:07+00:00"
+            "time": "2020-01-18T06:26:05+00:00"
         },
         {
             "name": "gos/pnctl-event-loop-emitter",
@@ -3854,6 +3856,7 @@
                 "scss",
                 "stylesheet"
             ],
+            "abandoned": "scssphp/scssphp",
             "time": "2017-02-23T05:07:33+00:00"
         },
         {
@@ -4313,6 +4316,7 @@
                 "cron",
                 "schedule"
             ],
+            "abandoned": "dragonmantank/cron-expression",
             "time": "2019-12-28T04:23:06+00:00"
         },
         {
@@ -4743,16 +4747,16 @@
         },
         {
             "name": "oro/calendar-bundle",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCalendarBundle.git",
-                "reference": "22bac8efe0568f7392d5fa8b2da94d2b9bdbf680"
+                "reference": "4dbfced1aa4b841286c0358410ff5d23858a25b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/22bac8efe0568f7392d5fa8b2da94d2b9bdbf680",
-                "reference": "22bac8efe0568f7392d5fa8b2da94d2b9bdbf680",
+                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/4dbfced1aa4b841286c0358410ff5d23858a25b1",
+                "reference": "4dbfced1aa4b841286c0358410ff5d23858a25b1",
                 "shasum": ""
             },
             "require": {
@@ -4793,23 +4797,23 @@
                 "OroPlatform"
             ],
             "support": {
-                "source": "https://github.com/oroinc/OroCalendarBundle/tree/master",
+                "source": "https://github.com/oroinc/OroCalendarBundle/tree/4.1",
                 "issues": "https://github.com/oroinc/OroCalendarBundle/issues"
             },
-            "time": "2020-01-09T13:58:54+00:00"
+            "time": "2020-01-29T13:42:07+00:00"
         },
         {
             "name": "oro/crm",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/crm.git",
-                "reference": "2fce0a042687fea7ecfc3cc89902ff6b74d45119"
+                "reference": "a666ff180fac14ebedd459441ace6d8923110bda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/crm/zipball/2fce0a042687fea7ecfc3cc89902ff6b74d45119",
-                "reference": "2fce0a042687fea7ecfc3cc89902ff6b74d45119",
+                "url": "https://api.github.com/repos/oroinc/crm/zipball/a666ff180fac14ebedd459441ace6d8923110bda",
+                "reference": "a666ff180fac14ebedd459441ace6d8923110bda",
                 "shasum": ""
             },
             "require": {
@@ -4870,20 +4874,20 @@
                 "source": "https://github.com/oroinc/crm/tree/4.1",
                 "issues": "https://github.com/oroinc/crm/issues"
             },
-            "time": "2020-01-13T13:53:27+00:00"
+            "time": "2020-01-28T11:59:00+00:00"
         },
         {
             "name": "oro/crm-call-bundle",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMCallBundle.git",
-                "reference": "10af9db71617c7eb9c8b245a84e68c4c99cc97ac"
+                "reference": "78c2062d5a2e5100c4fc509c6df4e8a9f0a7e670"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMCallBundle/zipball/10af9db71617c7eb9c8b245a84e68c4c99cc97ac",
-                "reference": "10af9db71617c7eb9c8b245a84e68c4c99cc97ac",
+                "url": "https://api.github.com/repos/oroinc/OroCRMCallBundle/zipball/78c2062d5a2e5100c4fc509c6df4e8a9f0a7e670",
+                "reference": "78c2062d5a2e5100c4fc509c6df4e8a9f0a7e670",
                 "shasum": ""
             },
             "require": {
@@ -4922,23 +4926,24 @@
                 "source": "https://github.com/oroinc/OroCRMCallBundle/tree/4.1",
                 "issues": "https://github.com/oroinc/OroCRMCallBundle/issues"
             },
-            "time": "2020-01-09T13:58:54+00:00"
+            "time": "2020-01-27T16:38:38+00:00"
         },
         {
             "name": "oro/crm-dotmailer",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMDotmailerBundle.git",
-                "reference": "8affdf361a97d2b6c8017e4421199fda1e0cc27b"
+                "reference": "deb310bad2457bc3aa25f11f2a027c2c98f0aba8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMDotmailerBundle/zipball/8affdf361a97d2b6c8017e4421199fda1e0cc27b",
-                "reference": "8affdf361a97d2b6c8017e4421199fda1e0cc27b",
+                "url": "https://api.github.com/repos/oroinc/OroCRMDotmailerBundle/zipball/deb310bad2457bc3aa25f11f2a027c2c98f0aba8",
+                "reference": "deb310bad2457bc3aa25f11f2a027c2c98f0aba8",
                 "shasum": ""
             },
             "require": {
+                "ext-curl": "*",
                 "oro/crm": "4.1.*",
                 "oro/marketing": "4.1.*",
                 "romanpitak/dotmailer-api-v2-client": "3.0.*"
@@ -4972,20 +4977,20 @@
                 "source": "https://github.com/oroinc/OroCRMDotmailerBundle/tree/4.1",
                 "issues": "https://github.com/oroinc/OroCRMDotmailerBundle/issues"
             },
-            "time": "2020-01-09T13:58:54+00:00"
+            "time": "2020-01-28T11:59:00+00:00"
         },
         {
             "name": "oro/crm-hangouts-call-bundle",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMHangoutsCallBundle.git",
-                "reference": "c567d45f63cd1ad47f73566b6dd81dfc699a917f"
+                "reference": "cef93e62930de841b7e1dc30b31ed1d0699ca591"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMHangoutsCallBundle/zipball/c567d45f63cd1ad47f73566b6dd81dfc699a917f",
-                "reference": "c567d45f63cd1ad47f73566b6dd81dfc699a917f",
+                "url": "https://api.github.com/repos/oroinc/OroCRMHangoutsCallBundle/zipball/cef93e62930de841b7e1dc30b31ed1d0699ca591",
+                "reference": "cef93e62930de841b7e1dc30b31ed1d0699ca591",
                 "shasum": ""
             },
             "require": {
@@ -5027,20 +5032,20 @@
                 "source": "https://github.com/oroinc/OroCRMHangoutsCallBundle/tree/4.1",
                 "issues": "https://github.com/oroinc/OroCRMHangoutsCallBundle/issues"
             },
-            "time": "2020-01-09T13:58:54+00:00"
+            "time": "2020-01-24T16:41:11+00:00"
         },
         {
             "name": "oro/crm-magento-embedded-contact-us",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMMagentoContactUsBundle.git",
-                "reference": "c4b0edc98da34d10601aefc81fa6003837e9e3b8"
+                "reference": "585dfaa03d7d69fc2de81d21ac32cb998a79921e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMMagentoContactUsBundle/zipball/c4b0edc98da34d10601aefc81fa6003837e9e3b8",
-                "reference": "c4b0edc98da34d10601aefc81fa6003837e9e3b8",
+                "url": "https://api.github.com/repos/oroinc/OroCRMMagentoContactUsBundle/zipball/585dfaa03d7d69fc2de81d21ac32cb998a79921e",
+                "reference": "585dfaa03d7d69fc2de81d21ac32cb998a79921e",
                 "shasum": ""
             },
             "require": {
@@ -5075,20 +5080,20 @@
                 "source": "https://github.com/oroinc/OroCRMMagentoContactUsBundle/tree/4.1",
                 "issues": "https://github.com/oroinc/OroCRMMagentoContactUsBundle/issues"
             },
-            "time": "2020-01-09T13:58:54+00:00"
+            "time": "2020-01-24T16:41:11+00:00"
         },
         {
             "name": "oro/crm-task-bundle",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMTaskBundle.git",
-                "reference": "4d8db2c131c893e6ac9ece89f062cfa2a1a33ec3"
+                "reference": "154d5e123f3aedb5b3acb1d1017de1ae6c9f6911"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMTaskBundle/zipball/4d8db2c131c893e6ac9ece89f062cfa2a1a33ec3",
-                "reference": "4d8db2c131c893e6ac9ece89f062cfa2a1a33ec3",
+                "url": "https://api.github.com/repos/oroinc/OroCRMTaskBundle/zipball/154d5e123f3aedb5b3acb1d1017de1ae6c9f6911",
+                "reference": "154d5e123f3aedb5b3acb1d1017de1ae6c9f6911",
                 "shasum": ""
             },
             "require": {
@@ -5127,20 +5132,20 @@
                 "source": "https://github.com/oroinc/OroCRMTaskBundle/tree/4.1",
                 "issues": "https://github.com/oroinc/OroCRMTaskBundle/issues"
             },
-            "time": "2020-01-09T13:58:54+00:00"
+            "time": "2020-01-27T16:38:38+00:00"
         },
         {
             "name": "oro/crm-zendesk",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMZendeskBundle.git",
-                "reference": "42bf4da5ede429c67f93c09bd2b25e4ed6ae2b41"
+                "reference": "c751f14e2a9c06c2d25b4f6998799d39939fb457"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMZendeskBundle/zipball/42bf4da5ede429c67f93c09bd2b25e4ed6ae2b41",
-                "reference": "42bf4da5ede429c67f93c09bd2b25e4ed6ae2b41",
+                "url": "https://api.github.com/repos/oroinc/OroCRMZendeskBundle/zipball/c751f14e2a9c06c2d25b4f6998799d39939fb457",
+                "reference": "c751f14e2a9c06c2d25b4f6998799d39939fb457",
                 "shasum": ""
             },
             "require": {
@@ -5180,7 +5185,7 @@
                 "source": "https://github.com/oroinc/OroCRMZendeskBundle/tree/4.1",
                 "issues": "https://github.com/oroinc/OroCRMZendeskBundle/issues"
             },
-            "time": "2020-01-09T13:58:54+00:00"
+            "time": "2020-01-27T16:38:38+00:00"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -5239,19 +5244,20 @@
         },
         {
             "name": "oro/marketing",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMMarketingBundle.git",
-                "reference": "a864476ca0d0ab41bbb54a2047da02e87aa52d1d"
+                "reference": "85d1caccb6f50226e6833eebd8a17718e525f76b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/a864476ca0d0ab41bbb54a2047da02e87aa52d1d",
-                "reference": "a864476ca0d0ab41bbb54a2047da02e87aa52d1d",
+                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/85d1caccb6f50226e6833eebd8a17718e525f76b",
+                "reference": "85d1caccb6f50226e6833eebd8a17718e525f76b",
                 "shasum": ""
             },
             "require": {
+                "ext-curl": "*",
                 "oro/platform": "4.1.*"
             },
             "type": "library",
@@ -5283,22 +5289,22 @@
                 "Tracking"
             ],
             "support": {
-                "source": "https://github.com/oroinc/OroCRMMarketingBundle/tree/master"
+                "source": "https://github.com/oroinc/OroCRMMarketingBundle/tree/4.1"
             },
-            "time": "2020-01-09T13:58:54+00:00"
+            "time": "2020-01-28T11:59:00+00:00"
         },
         {
             "name": "oro/oauth2-server",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/oauth2-server.git",
-                "reference": "8afbb371a9bf38af8a55de9da32c5c1976316a41"
+                "reference": "48c8d918fe00ffe34087caf9d4e178a6587c4b90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/oauth2-server/zipball/8afbb371a9bf38af8a55de9da32c5c1976316a41",
-                "reference": "8afbb371a9bf38af8a55de9da32c5c1976316a41",
+                "url": "https://api.github.com/repos/oroinc/oauth2-server/zipball/48c8d918fe00ffe34087caf9d4e178a6587c4b90",
+                "reference": "48c8d918fe00ffe34087caf9d4e178a6587c4b90",
                 "shasum": ""
             },
             "require": {
@@ -5338,23 +5344,23 @@
                 "ORO"
             ],
             "support": {
-                "source": "https://github.com/oroinc/oauth2-server/tree/master",
+                "source": "https://github.com/oroinc/oauth2-server/tree/4.1.0",
                 "issues": "https://github.com/oroinc/oauth2-server/issues"
             },
-            "time": "2020-01-09T13:58:54+00:00"
+            "time": "2020-01-16T16:40:42+00:00"
         },
         {
             "name": "oro/platform",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/platform.git",
-                "reference": "f93b58253f8a4ba5b9334325a2b4c5c8bc0dd896"
+                "reference": "a0b69d8351842924c191d1572d5f9ffe467aab65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/platform/zipball/f93b58253f8a4ba5b9334325a2b4c5c8bc0dd896",
-                "reference": "f93b58253f8a4ba5b9334325a2b4c5c8bc0dd896",
+                "url": "https://api.github.com/repos/oroinc/platform/zipball/a0b69d8351842924c191d1572d5f9ffe467aab65",
+                "reference": "a0b69d8351842924c191d1572d5f9ffe467aab65",
                 "shasum": ""
             },
             "require": {
@@ -5371,10 +5377,14 @@
                 "doctrine/doctrine-fixtures-bundle": "2.4.*",
                 "doctrine/orm": "2.6.3",
                 "doctrine/persistence": "1.3.1",
+                "ext-dom": "*",
                 "ext-gd": "*",
                 "ext-intl": "*",
+                "ext-json": "*",
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
+                "ext-pcntl": "*",
+                "ext-pdo": "*",
                 "ext-xml": "*",
                 "ext-zip": "*",
                 "ezyang/htmlpurifier": "4.10.*",
@@ -5431,6 +5441,8 @@
                 "behat/mink-extension": "2.3.*",
                 "behat/mink-selenium2-driver": "1.*",
                 "behat/symfony2-extension": "2.1.*",
+                "ext-ftp": "*",
+                "ext-sqlite3": "*",
                 "friendsofphp/php-cs-fixer": "2.12.*",
                 "johnkary/phpunit-speedtrap": "3.0.*",
                 "mybuilder/phpunit-accelerator": "dev-master",
@@ -5443,6 +5455,11 @@
                 "squizlabs/php_codesniffer": "3.3.*",
                 "symfony/phpunit-bridge": "4.3.*",
                 "theofidry/alice-data-fixtures": "1.0.*"
+            },
+            "suggest": {
+                "ext-imap": "To improve parsing of email headers.",
+                "ext-soap": "To enable SOAP API calls.",
+                "ext-tidy": "To improve parsing of email content."
             },
             "type": "library",
             "extra": {
@@ -5520,20 +5537,20 @@
                 "source": "https://github.com/oroinc/platform/tree/4.1",
                 "issues": "https://github.com/oroinc/platform/issues"
             },
-            "time": "2020-01-13T14:55:57+00:00"
+            "time": "2020-01-28T16:02:48+00:00"
         },
         {
             "name": "oro/platform-serialised-fields",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroEntitySerializedFieldsBundle.git",
-                "reference": "6d866d4ffbf7a4ad0a4c23ba0800d6fe7151afa3"
+                "reference": "0c9272930ca48da001ac1abf4df9fd7b8a6ed979"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroEntitySerializedFieldsBundle/zipball/6d866d4ffbf7a4ad0a4c23ba0800d6fe7151afa3",
-                "reference": "6d866d4ffbf7a4ad0a4c23ba0800d6fe7151afa3",
+                "url": "https://api.github.com/repos/oroinc/OroEntitySerializedFieldsBundle/zipball/0c9272930ca48da001ac1abf4df9fd7b8a6ed979",
+                "reference": "0c9272930ca48da001ac1abf4df9fd7b8a6ed979",
                 "shasum": ""
             },
             "require": {
@@ -5574,11 +5591,11 @@
                 "source": "https://github.com/oroinc/OroEntitySerializedFieldsBundle/tree/4.1",
                 "issues": "https://github.com/oroinc/OroEntitySerializedFieldsBundle/issues"
             },
-            "time": "2020-01-09T13:58:54+00:00"
+            "time": "2020-01-24T16:41:11+00:00"
         },
         {
             "name": "oro/redis-config",
-            "version": "4.1.0-rc4",
+            "version": "4.1.0",
             "target-dir": "Oro/Bundle/RedisConfigBundle",
             "source": {
                 "type": "git",
@@ -7437,6 +7454,7 @@
                 }
             ],
             "description": "Allows installation of Components via Composer.",
+            "abandoned": "oomphinc/composer-installers-extender",
             "time": "2015-08-10T12:35:38+00:00"
         },
         {
@@ -9255,16 +9273,16 @@
         },
         {
             "name": "ua-parser/uap-php",
-            "version": "v3.9.3",
+            "version": "v3.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ua-parser/uap-php.git",
-                "reference": "a1d4e652eb67be705410433b0a6617d301553cd6"
+                "reference": "8c1e3c6c7698d197368bfaa0d16734c947d94e99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/a1d4e652eb67be705410433b0a6617d301553cd6",
-                "reference": "a1d4e652eb67be705410433b0a6617d301553cd6",
+                "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/8c1e3c6c7698d197368bfaa0d16734c947d94e99",
+                "reference": "8c1e3c6c7698d197368bfaa0d16734c947d94e99",
                 "shasum": ""
             },
             "require": {
@@ -9308,7 +9326,7 @@
                 }
             ],
             "description": "A multi-language port of Browserscope's user agent parser.",
-            "time": "2020-01-10T10:34:59+00:00"
+            "time": "2020-01-21T09:54:19+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -10527,16 +10545,16 @@
         },
         {
             "name": "instaclick/php-webdriver",
-            "version": "1.4.6",
+            "version": "1.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/instaclick/php-webdriver.git",
-                "reference": "bd9405077ca04129a73059a06873bedb5e138402"
+                "reference": "b5f330e900e9b3edfc18024a5ec8c07136075712"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/bd9405077ca04129a73059a06873bedb5e138402",
-                "reference": "bd9405077ca04129a73059a06873bedb5e138402",
+                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/b5f330e900e9b3edfc18024a5ec8c07136075712",
+                "reference": "b5f330e900e9b3edfc18024a5ec8c07136075712",
                 "shasum": ""
             },
             "require": {
@@ -10582,7 +10600,7 @@
                 "webdriver",
                 "webtest"
             ],
-            "time": "2019-09-23T15:50:44+00:00"
+            "time": "2019-09-25T09:05:11+00:00"
         },
         {
             "name": "johnkary/phpunit-speedtrap",
@@ -10679,16 +10697,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.9.4",
+            "version": "1.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "579bb7356d91f9456ccd505f24ca8b667966a0a7"
+                "reference": "b2c28789e80a97badd14145fda39b545d83ca3ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/579bb7356d91f9456ccd505f24ca8b667966a0a7",
-                "reference": "579bb7356d91f9456ccd505f24ca8b667966a0a7",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/b2c28789e80a97badd14145fda39b545d83ca3ef",
+                "reference": "b2c28789e80a97badd14145fda39b545d83ca3ef",
                 "shasum": ""
             },
             "require": {
@@ -10723,7 +10741,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2019-12-15T19:12:40+00:00"
+            "time": "2020-01-17T21:11:47+00:00"
         },
         {
             "name": "nelmio/alice",
@@ -10807,25 +10825,25 @@
         },
         {
             "name": "oro/twig-inspector",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/twig-inspector.git",
-                "reference": "fe8294e16a4d358cf86b94a2c2e51333c80e5c65"
+                "reference": "5a66e476172b89c1f697fee2bf032acec63065a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/twig-inspector/zipball/fe8294e16a4d358cf86b94a2c2e51333c80e5c65",
-                "reference": "fe8294e16a4d358cf86b94a2c2e51333c80e5c65",
+                "url": "https://api.github.com/repos/oroinc/twig-inspector/zipball/5a66e476172b89c1f697fee2bf032acec63065a0",
+                "reference": "5a66e476172b89c1f697fee2bf032acec63065a0",
                 "shasum": ""
             },
             "require": {
-                "symfony/config": "^3.4 | ^4.0",
-                "symfony/dependency-injection": "^3.4 | ^4.0",
-                "symfony/http-foundation": "^3.4 | ^4.0",
-                "symfony/http-kernel": "^3.4 | ^4.0",
-                "symfony/routing": "^3.4 | ^4.0",
-                "twig/twig": "~1.34|~2.4"
+                "symfony/config": "^4.1.12 | ^5.0",
+                "symfony/dependency-injection": "^4.1.12 | ^5.0",
+                "symfony/http-foundation": "^4.1.12 | ^5.0",
+                "symfony/http-kernel": "^4.1.12 | ^5.0",
+                "symfony/routing": "^4.1.12 | ^5.0",
+                "twig/twig": "^1.34 | ^2.4 | ^3.0"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -10859,23 +10877,23 @@
                 "twig"
             ],
             "support": {
-                "source": "https://github.com/oroinc/twig-inspector/tree/master",
+                "source": "https://github.com/oroinc/twig-inspector/tree/1.0.2",
                 "issues": "https://github.com/oroinc/twig-inspector/issues"
             },
-            "time": "2019-05-27T10:05:30+00:00"
+            "time": "2020-01-28T10:20:35+00:00"
         },
         {
             "name": "pdepend/pdepend",
-            "version": "2.6.1",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pdepend/pdepend.git",
-                "reference": "395b0f356bc0881ef88864bffb4ba1423ca0d111"
+                "reference": "cba74e118ce806f97fcb108c00d61ebf2a5a936e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/395b0f356bc0881ef88864bffb4ba1423ca0d111",
-                "reference": "395b0f356bc0881ef88864bffb4ba1423ca0d111",
+                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/cba74e118ce806f97fcb108c00d61ebf2a5a936e",
+                "reference": "cba74e118ce806f97fcb108c00d61ebf2a5a936e",
                 "shasum": ""
             },
             "require": {
@@ -10909,7 +10927,7 @@
                 "BSD-3-Clause"
             ],
             "description": "Official version of pdepend to be handled with Composer",
-            "time": "2019-12-21T16:33:56+00:00"
+            "time": "2020-01-24T08:09:26+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -11132,24 +11150,24 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.10.1",
+            "version": "v1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "cbe1df668b3fe136bcc909126a0f529a78d4cbbc"
+                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/cbe1df668b3fe136bcc909126a0f529a78d4cbbc",
-                "reference": "cbe1df668b3fe136bcc909126a0f529a78d4cbbc",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
+                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
                 "php": "^5.3|^7.0",
                 "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0|^5.0",
-                "sebastian/comparator": "^1.2.3|^2.0|^3.0",
-                "sebastian/recursion-context": "^1.0|^2.0|^3.0"
+                "sebastian/comparator": "^1.2.3|^2.0|^3.0|^4.0",
+                "sebastian/recursion-context": "^1.0|^2.0|^3.0|^4.0"
             },
             "require-dev": {
                 "phpspec/phpspec": "^2.5 || ^3.2",
@@ -11191,7 +11209,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2019-12-22T21:05:45+00:00"
+            "time": "2020-01-20T15:57:02+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -11868,23 +11886,27 @@
         },
         {
             "name": "sebastian/finder-facade",
-            "version": "1.2.2",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/finder-facade.git",
-                "reference": "4a3174709c2dc565fe5fb26fcf827f6a1fc7b09f"
+                "reference": "167c45d131f7fc3d159f56f191a0a22228765e16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/finder-facade/zipball/4a3174709c2dc565fe5fb26fcf827f6a1fc7b09f",
-                "reference": "4a3174709c2dc565fe5fb26fcf827f6a1fc7b09f",
+                "url": "https://api.github.com/repos/sebastianbergmann/finder-facade/zipball/167c45d131f7fc3d159f56f191a0a22228765e16",
+                "reference": "167c45d131f7fc3d159f56f191a0a22228765e16",
                 "shasum": ""
             },
             "require": {
-                "symfony/finder": "~2.3|~3.0|~4.0",
-                "theseer/fdomdocument": "~1.3"
+                "php": "^7.1",
+                "symfony/finder": "^2.3|^3.0|^4.0|^5.0",
+                "theseer/fdomdocument": "^1.6"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": []
+            },
             "autoload": {
                 "classmap": [
                     "src/"
@@ -11903,7 +11925,7 @@
             ],
             "description": "FinderFacade is a convenience wrapper for Symfony's Finder component.",
             "homepage": "https://github.com/sebastianbergmann/finder-facade",
-            "time": "2017-11-18T17:31:49+00:00"
+            "time": "2020-01-16T08:08:45+00:00"
         },
         {
             "name": "sebastian/global-state",
@@ -12289,16 +12311,16 @@
         },
         {
             "name": "symfony/class-loader",
-            "version": "v3.4.36",
+            "version": "v3.4.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/class-loader.git",
-                "reference": "e212b06996819a2bce026a63da03b7182d05a690"
+                "reference": "bcdf6ff46e115b29be3186391f29e0da82cd6f72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/class-loader/zipball/e212b06996819a2bce026a63da03b7182d05a690",
-                "reference": "e212b06996819a2bce026a63da03b7182d05a690",
+                "url": "https://api.github.com/repos/symfony/class-loader/zipball/bcdf6ff46e115b29be3186391f29e0da82cd6f72",
+                "reference": "bcdf6ff46e115b29be3186391f29e0da82cd6f72",
                 "shasum": ""
             },
             "require": {
@@ -12341,20 +12363,20 @@
             ],
             "description": "Symfony ClassLoader Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-20T13:31:17+00:00"
+            "time": "2020-01-04T12:05:51+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v4.3.9",
+            "version": "v4.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "e1ce1695430a3c8ee876ff1d91ce64871786581f"
+                "reference": "60539d90c2e80d2f33cf6c42cb1ab70362f31cae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/e1ce1695430a3c8ee876ff1d91ce64871786581f",
-                "reference": "e1ce1695430a3c8ee876ff1d91ce64871786581f",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/60539d90c2e80d2f33cf6c42cb1ab70362f31cae",
+                "reference": "60539d90c2e80d2f33cf6c42cb1ab70362f31cae",
                 "shasum": ""
             },
             "require": {
@@ -12406,7 +12428,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2019-11-28T10:34:19+00:00"
+            "time": "2020-01-21T08:20:29+00:00"
         },
         {
             "name": "theofidry/alice-data-fixtures",
@@ -12570,6 +12592,8 @@
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "~7.3.13"
+    },
     "platform-dev": []
 }
