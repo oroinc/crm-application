@@ -60,7 +60,7 @@
         "post-update-cmd": [
             "@build-parameters",
             "@set-permissions",
-            "@install-assets",
+            "@update-assets",
             "@set-assets-version"
         ],
         "build-parameters": [
@@ -71,6 +71,9 @@
         ],
         "install-assets": [
             "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::installAssets"
+        ],
+        "update-assets": [
+            "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::updateAssets"
         ],
         "set-assets-version": [
             "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
