@@ -235,16 +235,16 @@
         },
         {
             "name": "brick/math",
-            "version": "0.8.11",
+            "version": "0.8.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "bf4894d6373d396666d280a42ecdf1ad75f8222f"
+                "reference": "ea9a095b902f5d42126aba4455a64476f5528241"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/bf4894d6373d396666d280a42ecdf1ad75f8222f",
-                "reference": "bf4894d6373d396666d280a42ecdf1ad75f8222f",
+                "url": "https://api.github.com/repos/brick/math/zipball/ea9a095b902f5d42126aba4455a64476f5528241",
+                "reference": "ea9a095b902f5d42126aba4455a64476f5528241",
                 "shasum": ""
             },
             "require": {
@@ -252,7 +252,8 @@
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "2.*",
-                "phpunit/phpunit": "7.*"
+                "phpunit/phpunit": "7.*",
+                "vimeo/psalm": "3.*"
             },
             "type": "library",
             "autoload": {
@@ -275,7 +276,7 @@
                 "brick",
                 "math"
             ],
-            "time": "2020-01-23T00:19:01+00:00"
+            "time": "2020-01-27T13:00:05+00:00"
         },
         {
             "name": "cboden/ratchet",
@@ -3806,60 +3807,6 @@
             "time": "2019-05-24T18:30:49+00:00"
         },
         {
-            "name": "leafo/scssphp",
-            "version": "v0.6.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/leafo/scssphp.git",
-                "reference": "562213cd803e42ea53b0735554794c4022d8db89"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/leafo/scssphp/zipball/562213cd803e42ea53b0735554794c4022d8db89",
-                "reference": "562213cd803e42ea53b0735554794c4022d8db89",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "kherge/box": "~2.5",
-                "phpunit/phpunit": "~3.7",
-                "squizlabs/php_codesniffer": "~2.5"
-            },
-            "bin": [
-                "bin/pscss"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Leafo\\ScssPhp\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Leaf Corcoran",
-                    "email": "leafot@gmail.com",
-                    "homepage": "http://leafo.net"
-                }
-            ],
-            "description": "scssphp is a compiler for SCSS written in PHP.",
-            "homepage": "http://leafo.github.io/scssphp/",
-            "keywords": [
-                "css",
-                "less",
-                "sass",
-                "scss",
-                "stylesheet"
-            ],
-            "abandoned": "scssphp/scssphp",
-            "time": "2017-02-23T05:07:33+00:00"
-        },
-        {
             "name": "league/event",
             "version": "2.2.0",
             "source": {
@@ -5246,7 +5193,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "a8580b3354e71440c4763cdcc5066431a96e197c"
+                "reference": "0edde69639817dcdfbdba1c68d1f59052d0bb819"
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.11",
@@ -5286,7 +5233,6 @@
                 "knplabs/knp-menu": "2.3.*",
                 "knplabs/knp-menu-bundle": "2.2.*",
                 "kriswallsmith/buzz": "1.0.*",
-                "leafo/scssphp": "0.6.*",
                 "lexik/maintenance-bundle": "2.1.5",
                 "liip/imagine-bundle": "2.0.0",
                 "monolog/monolog": "1.23.*",
@@ -9131,16 +9077,16 @@
         },
         {
             "name": "ua-parser/uap-php",
-            "version": "v3.9.4",
+            "version": "v3.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ua-parser/uap-php.git",
-                "reference": "8c1e3c6c7698d197368bfaa0d16734c947d94e99"
+                "reference": "67f8f61bc7fc36fcd23dd6526f6ed5e7a32625c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/8c1e3c6c7698d197368bfaa0d16734c947d94e99",
-                "reference": "8c1e3c6c7698d197368bfaa0d16734c947d94e99",
+                "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/67f8f61bc7fc36fcd23dd6526f6ed5e7a32625c7",
+                "reference": "67f8f61bc7fc36fcd23dd6526f6ed5e7a32625c7",
                 "shasum": ""
             },
             "require": {
@@ -9184,7 +9130,7 @@
                 }
             ],
             "description": "A multi-language port of Browserscope's user agent parser.",
-            "time": "2020-01-21T09:54:19+00:00"
+            "time": "2020-02-03T09:54:22+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -12274,16 +12220,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v4.3.10",
+            "version": "v4.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "60539d90c2e80d2f33cf6c42cb1ab70362f31cae"
+                "reference": "692a73a2e0b76123150709f5eb7e2ea9bf2bad43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/60539d90c2e80d2f33cf6c42cb1ab70362f31cae",
-                "reference": "60539d90c2e80d2f33cf6c42cb1ab70362f31cae",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/692a73a2e0b76123150709f5eb7e2ea9bf2bad43",
+                "reference": "692a73a2e0b76123150709f5eb7e2ea9bf2bad43",
                 "shasum": ""
             },
             "require": {
@@ -12335,7 +12281,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2020-01-21T08:20:29+00:00"
+            "time": "2020-01-31T09:56:21+00:00"
         },
         {
             "name": "theofidry/alice-data-fixtures",
