@@ -116,7 +116,7 @@ Vagrant.configure("2") do |config|
 		echo "\n~~~~~~~~~~~~~~ Install PHP ~~~~~~~~~~~~~~\n"
 		
 		wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm && rpm -Uvh remi-release-7.rpm
-		yum-config-manager --enable remi-php71
+		yum-config-manager --enable remi-php73
 		yum update -y
 
 		yum install -y php-fpm php-cli php-pdo php-mysqlnd php-xml php-soap php-gd php-mbstring php-zip php-intl php-mcrypt php-opcache
