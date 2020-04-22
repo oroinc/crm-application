@@ -235,25 +235,26 @@
         },
         {
             "name": "brick/math",
-            "version": "0.8.14",
+            "version": "0.8.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "6f7a46b5c3d487b277f38fbd17df57d348cace8a"
+                "reference": "9b08d412b9da9455b210459ff71414de7e6241cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/6f7a46b5c3d487b277f38fbd17df57d348cace8a",
-                "reference": "6f7a46b5c3d487b277f38fbd17df57d348cace8a",
+                "url": "https://api.github.com/repos/brick/math/zipball/9b08d412b9da9455b210459ff71414de7e6241cd",
+                "reference": "9b08d412b9da9455b210459ff71414de7e6241cd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "ext-json": "*",
+                "php": "^7.1|^8.0"
             },
             "require-dev": {
-                "php-coveralls/php-coveralls": "2.*",
-                "phpunit/phpunit": "7.*",
-                "vimeo/psalm": "3.*"
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "^7.5.15|^8.5",
+                "vimeo/psalm": "^3.5"
             },
             "type": "library",
             "autoload": {
@@ -276,7 +277,7 @@
                 "brick",
                 "math"
             ],
-            "time": "2020-02-17T13:57:43+00:00"
+            "time": "2020-04-15T15:59:35+00:00"
         },
         {
             "name": "cboden/ratchet",
@@ -5587,7 +5588,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "a6f5da892fe541d42aee0cee79b9c2a62482d148"
+                "reference": "1befeed725449faaa3aed3a9be21a0fe85a4d0d6"
             },
             "require": {
                 "oro/calendar-bundle": "4.1.*",
@@ -5627,7 +5628,24 @@
             },
             "autoload": {
                 "psr-4": {
-                    "": "src/"
+                    "Oro\\Bridge\\CalendarCRM\\": "src/Oro/Bridge/CalendarCRM",
+                    "Oro\\Bridge\\CallCRM\\": "src/Oro/Bridge/CallCRM",
+                    "Oro\\Bridge\\CustomerPortalCRM\\": "src/Oro/Bridge/CustomerPortalCRM",
+                    "Oro\\Bridge\\MarketingCRM\\": "src/Oro/Bridge/MarketingCRM",
+                    "Oro\\Bridge\\TaskCRM\\": "src/Oro/Bridge/TaskCRM",
+                    "Oro\\Bundle\\AccountBundle\\": "src/Oro/Bundle/AccountBundle",
+                    "Oro\\Bundle\\ActivityContactBundle\\": "src/Oro/Bundle/ActivityContactBundle",
+                    "Oro\\Bundle\\AnalyticsBundle\\": "src/Oro/Bundle/AnalyticsBundle",
+                    "Oro\\Bundle\\CaseBundle\\": "src/Oro/Bundle/CaseBundle",
+                    "Oro\\Bundle\\ChannelBundle\\": "src/Oro/Bundle/ChannelBundle",
+                    "Oro\\Bundle\\ContactBundle\\": "src/Oro/Bundle/ContactBundle",
+                    "Oro\\Bundle\\ContactUsBundle\\": "src/Oro/Bundle/ContactUsBundle",
+                    "Oro\\Bundle\\CRMBundle\\": "src/Oro/Bundle/CRMBundle",
+                    "Oro\\Bundle\\DemoDataBundle\\": "src/Oro/Bundle/DemoDataBundle",
+                    "Oro\\Bundle\\MagentoBundle\\": "src/Oro/Bundle/MagentoBundle",
+                    "Oro\\Bundle\\ReportCRMBundle\\": "src/Oro/Bundle/ReportCRMBundle",
+                    "Oro\\Bundle\\SalesBundle\\": "src/Oro/Bundle/SalesBundle",
+                    "Oro\\Bundle\\TestFrameworkCRMBundle\\": "src/Oro/Bundle/TestFrameworkCRMBundle"
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
@@ -5993,7 +6011,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/marketing",
-                "reference": "82d4e5b2f7541371366945e70f4da774e9c74814"
+                "reference": "768912a6e2749562c5821c66db454a0bd13e9001"
             },
             "require": {
                 "ext-curl": "*",
@@ -6006,9 +6024,15 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Oro": "src/"
-                }
+                "psr-4": {
+                    "Oro\\Bundle\\CampaignBundle\\": "src/Oro/Bundle/CampaignBundle",
+                    "Oro\\Bundle\\MarketingActivityBundle\\": "src/Oro/Bundle/MarketingActivityBundle",
+                    "Oro\\Bundle\\MarketingListBundle\\": "src/Oro/Bundle/MarketingListBundle",
+                    "Oro\\Bundle\\TrackingBundle\\": "src/Oro/Bundle/TrackingBundle"
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "license": [
                 "OSL-3.0"
@@ -6079,7 +6103,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "19219913aff851c6523fb548ec0c471be11b3315"
+                "reference": "2ee0a80691a4b12817bbe32c321bf6ba77494d65"
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.11",
@@ -6235,7 +6259,95 @@
             },
             "autoload": {
                 "psr-4": {
-                    "": "src/"
+                    "Oro\\Bundle\\ActionBundle\\": "src/Oro/Bundle/ActionBundle",
+                    "Oro\\Bundle\\ActivityBundle\\": "src/Oro/Bundle/ActivityBundle",
+                    "Oro\\Bundle\\ActivityListBundle\\": "src/Oro/Bundle/ActivityListBundle",
+                    "Oro\\Bundle\\AddressBundle\\": "src/Oro/Bundle/AddressBundle",
+                    "Oro\\Bundle\\ApiBundle\\": "src/Oro/Bundle/ApiBundle",
+                    "Oro\\Bundle\\AssetBundle\\": "src/Oro/Bundle/AssetBundle",
+                    "Oro\\Bundle\\AttachmentBundle\\": "src/Oro/Bundle/AttachmentBundle",
+                    "Oro\\Bundle\\BatchBundle\\": "src/Oro/Bundle/BatchBundle",
+                    "Oro\\Bundle\\BusinessEntitiesBundle\\": "src/Oro/Bundle/BusinessEntitiesBundle",
+                    "Oro\\Bundle\\CacheBundle\\": "src/Oro/Bundle/CacheBundle",
+                    "Oro\\Bundle\\ChartBundle\\": "src/Oro/Bundle/ChartBundle",
+                    "Oro\\Bundle\\CommentBundle\\": "src/Oro/Bundle/CommentBundle",
+                    "Oro\\Bundle\\ConfigBundle\\": "src/Oro/Bundle/ConfigBundle",
+                    "Oro\\Bundle\\CronBundle\\": "src/Oro/Bundle/CronBundle",
+                    "Oro\\Bundle\\CurrencyBundle\\": "src/Oro/Bundle/CurrencyBundle",
+                    "Oro\\Bundle\\DashboardBundle\\": "src/Oro/Bundle/DashboardBundle",
+                    "Oro\\Bundle\\DataAuditBundle\\": "src/Oro/Bundle/DataAuditBundle",
+                    "Oro\\Bundle\\DataGridBundle\\": "src/Oro/Bundle/DataGridBundle",
+                    "Oro\\Bundle\\DigitalAssetBundle\\": "src/Oro/Bundle/DigitalAssetBundle",
+                    "Oro\\Bundle\\DistributionBundle\\": "src/Oro/Bundle/DistributionBundle",
+                    "Oro\\Bundle\\DraftBundle\\": "src/Oro/Bundle/DraftBundle",
+                    "Oro\\Bundle\\EmailBundle\\": "src/Oro/Bundle/EmailBundle",
+                    "Oro\\Bundle\\EmbeddedFormBundle\\": "src/Oro/Bundle/EmbeddedFormBundle",
+                    "Oro\\Bundle\\EntityBundle\\": "src/Oro/Bundle/EntityBundle",
+                    "Oro\\Bundle\\EntityConfigBundle\\": "src/Oro/Bundle/EntityConfigBundle",
+                    "Oro\\Bundle\\EntityExtendBundle\\": "src/Oro/Bundle/EntityExtendBundle",
+                    "Oro\\Bundle\\EntityMergeBundle\\": "src/Oro/Bundle/EntityMergeBundle",
+                    "Oro\\Bundle\\EntityPaginationBundle\\": "src/Oro/Bundle/EntityPaginationBundle",
+                    "Oro\\Bundle\\FeatureToggleBundle\\": "src/Oro/Bundle/FeatureToggleBundle",
+                    "Oro\\Bundle\\FilterBundle\\": "src/Oro/Bundle/FilterBundle",
+                    "Oro\\Bundle\\FormBundle\\": "src/Oro/Bundle/FormBundle",
+                    "Oro\\Bundle\\GaufretteBundle\\": "src/Oro/Bundle/GaufretteBundle",
+                    "Oro\\Bundle\\GoogleIntegrationBundle\\": "src/Oro/Bundle/GoogleIntegrationBundle",
+                    "Oro\\Bundle\\HelpBundle\\": "src/Oro/Bundle/HelpBundle",
+                    "Oro\\Bundle\\ImapBundle\\": "src/Oro/Bundle/ImapBundle",
+                    "Oro\\Bundle\\ImportExportBundle\\": "src/Oro/Bundle/ImportExportBundle",
+                    "Oro\\Bundle\\InstallerBundle\\": "src/Oro/Bundle/InstallerBundle",
+                    "Oro\\Bundle\\IntegrationBundle\\": "src/Oro/Bundle/IntegrationBundle",
+                    "Oro\\Bundle\\LayoutBundle\\": "src/Oro/Bundle/LayoutBundle",
+                    "Oro\\Bundle\\LocaleBundle\\": "src/Oro/Bundle/LocaleBundle",
+                    "Oro\\Bundle\\LoggerBundle\\": "src/Oro/Bundle/LoggerBundle",
+                    "Oro\\Bundle\\MessageQueueBundle\\": "src/Oro/Bundle/MessageQueueBundle",
+                    "Oro\\Bundle\\MigrationBundle\\": "src/Oro/Bundle/MigrationBundle",
+                    "Oro\\Bundle\\NavigationBundle\\": "src/Oro/Bundle/NavigationBundle",
+                    "Oro\\Bundle\\NoteBundle\\": "src/Oro/Bundle/NoteBundle",
+                    "Oro\\Bundle\\NotificationBundle\\": "src/Oro/Bundle/NotificationBundle",
+                    "Oro\\Bundle\\OrganizationBundle\\": "src/Oro/Bundle/OrganizationBundle",
+                    "Oro\\Bundle\\PlatformBundle\\": "src/Oro/Bundle/PlatformBundle",
+                    "Oro\\Bundle\\QueryDesignerBundle\\": "src/Oro/Bundle/QueryDesignerBundle",
+                    "Oro\\Bundle\\ReminderBundle\\": "src/Oro/Bundle/ReminderBundle",
+                    "Oro\\Bundle\\ReportBundle\\": "src/Oro/Bundle/ReportBundle",
+                    "Oro\\Bundle\\ScopeBundle\\": "src/Oro/Bundle/ScopeBundle",
+                    "Oro\\Bundle\\SearchBundle\\": "src/Oro/Bundle/SearchBundle",
+                    "Oro\\Bundle\\SecurityBundle\\": "src/Oro/Bundle/SecurityBundle",
+                    "Oro\\Bundle\\SegmentBundle\\": "src/Oro/Bundle/SegmentBundle",
+                    "Oro\\Bundle\\SidebarBundle\\": "src/Oro/Bundle/SidebarBundle",
+                    "Oro\\Bundle\\SoapBundle\\": "src/Oro/Bundle/SoapBundle",
+                    "Oro\\Bundle\\SSOBundle\\": "src/Oro/Bundle/SSOBundle",
+                    "Oro\\Bundle\\SyncBundle\\": "src/Oro/Bundle/SyncBundle",
+                    "Oro\\Bundle\\TagBundle\\": "src/Oro/Bundle/TagBundle",
+                    "Oro\\Bundle\\TestFrameworkBundle\\": "src/Oro/Bundle/TestFrameworkBundle",
+                    "Oro\\Bundle\\TestGeneratorBundle\\": "src/Oro/Bundle/TestGeneratorBundle",
+                    "Oro\\Bundle\\ThemeBundle\\": "src/Oro/Bundle/ThemeBundle",
+                    "Oro\\Bundle\\TranslationBundle\\": "src/Oro/Bundle/TranslationBundle",
+                    "Oro\\Bundle\\UIBundle\\": "src/Oro/Bundle/UIBundle",
+                    "Oro\\Bundle\\UserBundle\\": "src/Oro/Bundle/UserBundle",
+                    "Oro\\Bundle\\ViewSwitcherBundle\\": "src/Oro/Bundle/ViewSwitcherBundle",
+                    "Oro\\Bundle\\WindowsBundle\\": "src/Oro/Bundle/WindowsBundle",
+                    "Oro\\Bundle\\WorkflowBundle\\": "src/Oro/Bundle/WorkflowBundle",
+                    "Oro\\Bundle\\WsseAuthenticationBundle\\": "src/Oro/Bundle/WsseAuthenticationBundle",
+                    "Oro\\Component\\Action\\": "src/Oro/Component/Action",
+                    "Oro\\Component\\ChainProcessor\\": "src/Oro/Component/ChainProcessor",
+                    "Oro\\Component\\Config\\": "src/Oro/Component/Config",
+                    "Oro\\Component\\ConfigExpression\\": "src/Oro/Component/ConfigExpression",
+                    "Oro\\Component\\DependencyInjection\\": "src/Oro/Component/DependencyInjection",
+                    "Oro\\Component\\DoctrineUtils\\": "src/Oro/Component/DoctrineUtils",
+                    "Oro\\Component\\Duplicator\\": "src/Oro/Component/Duplicator",
+                    "Oro\\Component\\EntitySerializer\\": "src/Oro/Component/EntitySerializer",
+                    "Oro\\Component\\Exception\\": "src/Oro/Component/Exception",
+                    "Oro\\Component\\ExpressionLanguage\\": "src/Oro/Component/ExpressionLanguage",
+                    "Oro\\Component\\Layout\\": "src/Oro/Component/Layout",
+                    "Oro\\Component\\Log\\": "src/Oro/Component/Log",
+                    "Oro\\Component\\Math\\": "src/Oro/Component/Math",
+                    "Oro\\Component\\MessageQueue\\": "src/Oro/Component/MessageQueue",
+                    "Oro\\Component\\PropertyAccess\\": "src/Oro/Component/PropertyAccess",
+                    "Oro\\Component\\PhpUtils\\": "src/Oro/Component/PhpUtils",
+                    "Oro\\Component\\Routing\\": "src/Oro/Component/Routing",
+                    "Oro\\Component\\Testing\\": "src/Oro/Component/Testing",
+                    "Oro\\Component\\TestUtils\\": "src/Oro/Component/TestUtils"
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
@@ -6299,18 +6411,17 @@
         {
             "name": "oro/redis-config",
             "version": "dev-master",
-            "target-dir": "Oro/Bundle/RedisConfigBundle",
             "dist": {
                 "type": "path",
                 "url": "../../package/redis-config",
-                "reference": "0350aa1067998a60dd91e00d455f9d8b63c8bb19"
+                "reference": "2b636209b2f1430772489a808a36e25a602c19e9"
             },
             "require": {
                 "predis/predis": "^1.0",
                 "snc/redis-bundle": "~3.2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "5.7.*"
+                "phpunit/phpunit": "7.5.*"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -6319,9 +6430,12 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Oro\\Bundle\\RedisConfigBundle": "./"
-                }
+                "psr-4": {
+                    "Oro\\Bundle\\RedisConfigBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "license": [
                 "MIT"
@@ -6330,7 +6444,8 @@
             "homepage": "https://github.com/oroinc/redis-config",
             "keywords": [
                 "Oro",
-                "OroCrm",
+                "OroCRM",
+                "OroCommerce",
                 "OroPlatform",
                 "Redis"
             ]
@@ -9930,16 +10045,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "shasum": ""
             },
             "require": {
@@ -9947,7 +10062,7 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-                "vimeo/psalm": "<3.6.0"
+                "vimeo/psalm": "<3.9.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
@@ -9974,7 +10089,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-02-14T12:15:55+00:00"
+            "time": "2020-04-18T12:12:48+00:00"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -12863,16 +12978,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.4",
+            "version": "3.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "dceec07328401de6211037abbb18bda423677e26"
+                "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/dceec07328401de6211037abbb18bda423677e26",
-                "reference": "dceec07328401de6211037abbb18bda423677e26",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
+                "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
                 "shasum": ""
             },
             "require": {
@@ -12910,7 +13025,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-01-30T22:20:29+00:00"
+            "time": "2020-04-17T01:09:41+00:00"
         },
         {
             "name": "symfony/class-loader",
