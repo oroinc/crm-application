@@ -29,13 +29,6 @@ monolog:
             level: debug
             channels: '%main_log_channels%'
 
-services:
-    oro_message_queue.test.message_collector:
-        class: Oro\Bundle\MessageQueueBundle\Test\Functional\MessageCollector
-        decorates: oro_message_queue.client.message_producer
-        arguments:
-            - '@oro_message_queue.test.message_collector.inner'
-
 swiftmailer:
     logging: true
     disable_delivery: true
