@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e327da81cf36b1ed0f5d6c9bb0d90b37",
+    "content-hash": "244342500a8de3fc38e8d3df2abdb7e7",
     "packages": [
         {
             "name": "akeneo/batch-bundle",
@@ -235,25 +235,26 @@
         },
         {
             "name": "brick/math",
-            "version": "0.8.14",
+            "version": "0.8.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "6f7a46b5c3d487b277f38fbd17df57d348cace8a"
+                "reference": "9b08d412b9da9455b210459ff71414de7e6241cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/6f7a46b5c3d487b277f38fbd17df57d348cace8a",
-                "reference": "6f7a46b5c3d487b277f38fbd17df57d348cace8a",
+                "url": "https://api.github.com/repos/brick/math/zipball/9b08d412b9da9455b210459ff71414de7e6241cd",
+                "reference": "9b08d412b9da9455b210459ff71414de7e6241cd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "ext-json": "*",
+                "php": "^7.1|^8.0"
             },
             "require-dev": {
-                "php-coveralls/php-coveralls": "2.*",
-                "phpunit/phpunit": "7.*",
-                "vimeo/psalm": "3.*"
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "^7.5.15|^8.5",
+                "vimeo/psalm": "^3.5"
             },
             "type": "library",
             "autoload": {
@@ -276,7 +277,13 @@
                 "brick",
                 "math"
             ],
-            "time": "2020-02-17T13:57:43+00:00"
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/brick/math",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-15T15:59:35+00:00"
         },
         {
             "name": "cboden/ratchet",
@@ -2127,16 +2134,16 @@
         },
         {
             "name": "friendsofsymfony/rest-bundle",
-            "version": "2.7.3",
+            "version": "2.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "21a27cebe54f02f6499d78db8978162ce7183112"
+                "reference": "3d8501dbdfa48811ef942f5f93c358c80d5ad8eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/21a27cebe54f02f6499d78db8978162ce7183112",
-                "reference": "21a27cebe54f02f6499d78db8978162ce7183112",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/3d8501dbdfa48811ef942f5f93c358c80d5ad8eb",
+                "reference": "3d8501dbdfa48811ef942f5f93c358c80d5ad8eb",
                 "shasum": ""
             },
             "require": {
@@ -2227,7 +2234,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2020-03-28T08:23:35+00:00"
+            "time": "2020-04-23T17:34:09+00:00"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -5560,16 +5567,16 @@
         },
         {
             "name": "oro/crm",
-            "version": "4.1.2",
+            "version": "4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/crm.git",
-                "reference": "af8c00a330af3172c9cf2940a6146db36771b177"
+                "reference": "def2292ed07e11c1d92a1a43057945cc2479b1c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/crm/zipball/af8c00a330af3172c9cf2940a6146db36771b177",
-                "reference": "af8c00a330af3172c9cf2940a6146db36771b177",
+                "url": "https://api.github.com/repos/oroinc/crm/zipball/def2292ed07e11c1d92a1a43057945cc2479b1c6",
+                "reference": "def2292ed07e11c1d92a1a43057945cc2479b1c6",
                 "shasum": ""
             },
             "require": {
@@ -5582,9 +5589,9 @@
             "require-dev": {
                 "behat/behat": "3.4.*",
                 "behat/gherkin": "4.6.0",
-                "behat/mink": "1.7.x-dev#6d637f7",
+                "behat/mink": "dev-master#6d637f7af4816c26ad8a943da2e3f7eef1231bea",
                 "behat/mink-extension": "2.3.*",
-                "behat/mink-selenium2-driver": "1.*",
+                "behat/mink-selenium2-driver": "1.3.1",
                 "behat/symfony2-extension": "2.1.*",
                 "friendsofphp/php-cs-fixer": "2.16.*",
                 "johnkary/phpunit-speedtrap": "3.0.*",
@@ -5610,7 +5617,24 @@
             },
             "autoload": {
                 "psr-4": {
-                    "": "src/"
+                    "Oro\\Bridge\\CalendarCRM\\": "src/Oro/Bridge/CalendarCRM",
+                    "Oro\\Bridge\\CallCRM\\": "src/Oro/Bridge/CallCRM",
+                    "Oro\\Bridge\\CustomerPortalCRM\\": "src/Oro/Bridge/CustomerPortalCRM",
+                    "Oro\\Bridge\\MarketingCRM\\": "src/Oro/Bridge/MarketingCRM",
+                    "Oro\\Bridge\\TaskCRM\\": "src/Oro/Bridge/TaskCRM",
+                    "Oro\\Bundle\\AccountBundle\\": "src/Oro/Bundle/AccountBundle",
+                    "Oro\\Bundle\\ActivityContactBundle\\": "src/Oro/Bundle/ActivityContactBundle",
+                    "Oro\\Bundle\\AnalyticsBundle\\": "src/Oro/Bundle/AnalyticsBundle",
+                    "Oro\\Bundle\\CaseBundle\\": "src/Oro/Bundle/CaseBundle",
+                    "Oro\\Bundle\\ChannelBundle\\": "src/Oro/Bundle/ChannelBundle",
+                    "Oro\\Bundle\\ContactBundle\\": "src/Oro/Bundle/ContactBundle",
+                    "Oro\\Bundle\\ContactUsBundle\\": "src/Oro/Bundle/ContactUsBundle",
+                    "Oro\\Bundle\\CRMBundle\\": "src/Oro/Bundle/CRMBundle",
+                    "Oro\\Bundle\\DemoDataBundle\\": "src/Oro/Bundle/DemoDataBundle",
+                    "Oro\\Bundle\\MagentoBundle\\": "src/Oro/Bundle/MagentoBundle",
+                    "Oro\\Bundle\\ReportCRMBundle\\": "src/Oro/Bundle/ReportCRMBundle",
+                    "Oro\\Bundle\\SalesBundle\\": "src/Oro/Bundle/SalesBundle",
+                    "Oro\\Bundle\\TestFrameworkCRMBundle\\": "src/Oro/Bundle/TestFrameworkCRMBundle"
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
@@ -5631,7 +5655,7 @@
                 "source": "https://github.com/oroinc/crm/tree/4.1",
                 "issues": "https://github.com/oroinc/crm/issues"
             },
-            "time": "2020-03-12T12:21:17+00:00"
+            "time": "2020-04-24T13:53:30+00:00"
         },
         {
             "name": "oro/crm-call-bundle",
@@ -5687,16 +5711,16 @@
         },
         {
             "name": "oro/crm-dotmailer",
-            "version": "4.1.2",
+            "version": "4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMDotmailerBundle.git",
-                "reference": "ddc9dcb8894e84a0c6386420da600b0f0dbfd6e6"
+                "reference": "14abc1929504ea3630d528255258b6f68c1b8958"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMDotmailerBundle/zipball/ddc9dcb8894e84a0c6386420da600b0f0dbfd6e6",
-                "reference": "ddc9dcb8894e84a0c6386420da600b0f0dbfd6e6",
+                "url": "https://api.github.com/repos/oroinc/OroCRMDotmailerBundle/zipball/14abc1929504ea3630d528255258b6f68c1b8958",
+                "reference": "14abc1929504ea3630d528255258b6f68c1b8958",
                 "shasum": ""
             },
             "require": {
@@ -5734,7 +5758,7 @@
                 "source": "https://github.com/oroinc/OroCRMDotmailerBundle/tree/4.1",
                 "issues": "https://github.com/oroinc/OroCRMDotmailerBundle/issues"
             },
-            "time": "2020-03-12T15:29:36+00:00"
+            "time": "2020-04-26T21:51:01+00:00"
         },
         {
             "name": "oro/crm-hangouts-call-bundle",
@@ -5841,16 +5865,16 @@
         },
         {
             "name": "oro/crm-task-bundle",
-            "version": "4.1.1",
+            "version": "4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMTaskBundle.git",
-                "reference": "7a5ea2a1106aeb29bac980c9899c65065ba3d29b"
+                "reference": "f537e7ec5d44b5d2921fed113f88f99fbcb7c46b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMTaskBundle/zipball/7a5ea2a1106aeb29bac980c9899c65065ba3d29b",
-                "reference": "7a5ea2a1106aeb29bac980c9899c65065ba3d29b",
+                "url": "https://api.github.com/repos/oroinc/OroCRMTaskBundle/zipball/f537e7ec5d44b5d2921fed113f88f99fbcb7c46b",
+                "reference": "f537e7ec5d44b5d2921fed113f88f99fbcb7c46b",
                 "shasum": ""
             },
             "require": {
@@ -5889,7 +5913,7 @@
                 "source": "https://github.com/oroinc/OroCRMTaskBundle/tree/4.1",
                 "issues": "https://github.com/oroinc/OroCRMTaskBundle/issues"
             },
-            "time": "2020-02-25T07:34:00+00:00"
+            "time": "2020-04-26T21:51:41+00:00"
         },
         {
             "name": "oro/crm-zendesk",
@@ -6001,16 +6025,16 @@
         },
         {
             "name": "oro/marketing",
-            "version": "4.1.1",
+            "version": "4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMMarketingBundle.git",
-                "reference": "9ae741d36048b791e6e4f539d199432c8cd3a5a9"
+                "reference": "fd8a561fb525ff39e893ff25dcd476dfb8f4584c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/9ae741d36048b791e6e4f539d199432c8cd3a5a9",
-                "reference": "9ae741d36048b791e6e4f539d199432c8cd3a5a9",
+                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/fd8a561fb525ff39e893ff25dcd476dfb8f4584c",
+                "reference": "fd8a561fb525ff39e893ff25dcd476dfb8f4584c",
                 "shasum": ""
             },
             "require": {
@@ -6024,9 +6048,15 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Oro": "src/"
-                }
+                "psr-4": {
+                    "Oro\\Bundle\\CampaignBundle\\": "src/Oro/Bundle/CampaignBundle",
+                    "Oro\\Bundle\\MarketingActivityBundle\\": "src/Oro/Bundle/MarketingActivityBundle",
+                    "Oro\\Bundle\\MarketingListBundle\\": "src/Oro/Bundle/MarketingListBundle",
+                    "Oro\\Bundle\\TrackingBundle\\": "src/Oro/Bundle/TrackingBundle"
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "license": [
                 "OSL-3.0"
@@ -6048,20 +6078,20 @@
             "support": {
                 "source": "https://github.com/oroinc/OroCRMMarketingBundle/tree/4.1"
             },
-            "time": "2020-02-25T07:34:10+00:00"
+            "time": "2020-04-28T16:35:38+00:00"
         },
         {
             "name": "oro/oauth2-server",
-            "version": "4.1.1",
+            "version": "4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/oauth2-server.git",
-                "reference": "cb13f20fc9ff5c34fbcb86f39ad2f146eaecf91e"
+                "reference": "b884adef4844fdacaf1c76514f9b744030c643c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/oauth2-server/zipball/cb13f20fc9ff5c34fbcb86f39ad2f146eaecf91e",
-                "reference": "cb13f20fc9ff5c34fbcb86f39ad2f146eaecf91e",
+                "url": "https://api.github.com/repos/oroinc/oauth2-server/zipball/b884adef4844fdacaf1c76514f9b744030c643c2",
+                "reference": "b884adef4844fdacaf1c76514f9b744030c643c2",
                 "shasum": ""
             },
             "require": {
@@ -6101,23 +6131,23 @@
                 "ORO"
             ],
             "support": {
-                "source": "https://github.com/oroinc/oauth2-server/tree/4.1.1-rc",
+                "source": "https://github.com/oroinc/oauth2-server/tree/4.1.2",
                 "issues": "https://github.com/oroinc/oauth2-server/issues"
             },
-            "time": "2020-02-25T08:47:01+00:00"
+            "time": "2020-04-30T16:01:12+00:00"
         },
         {
             "name": "oro/platform",
-            "version": "4.1.2",
+            "version": "4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/platform.git",
-                "reference": "ebe8c270873555f89938f7cbbfba735bfa4653f2"
+                "reference": "582fcf42182f2664aa4aa398bbc2fe71c74b543b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/platform/zipball/ebe8c270873555f89938f7cbbfba735bfa4653f2",
-                "reference": "ebe8c270873555f89938f7cbbfba735bfa4653f2",
+                "url": "https://api.github.com/repos/oroinc/platform/zipball/582fcf42182f2664aa4aa398bbc2fe71c74b543b",
+                "reference": "582fcf42182f2664aa4aa398bbc2fe71c74b543b",
                 "shasum": ""
             },
             "require": {
@@ -6195,9 +6225,9 @@
             "require-dev": {
                 "behat/behat": "3.4.*",
                 "behat/gherkin": "4.6.0",
-                "behat/mink": "1.7.x-dev#6d637f7",
+                "behat/mink": "dev-master#6d637f7af4816c26ad8a943da2e3f7eef1231bea",
                 "behat/mink-extension": "2.3.*",
-                "behat/mink-selenium2-driver": "1.*",
+                "behat/mink-selenium2-driver": "1.3.1",
                 "behat/symfony2-extension": "2.1.*",
                 "ext-ftp": "*",
                 "ext-sqlite3": "*",
@@ -6274,7 +6304,95 @@
             },
             "autoload": {
                 "psr-4": {
-                    "": "src/"
+                    "Oro\\Bundle\\ActionBundle\\": "src/Oro/Bundle/ActionBundle",
+                    "Oro\\Bundle\\ActivityBundle\\": "src/Oro/Bundle/ActivityBundle",
+                    "Oro\\Bundle\\ActivityListBundle\\": "src/Oro/Bundle/ActivityListBundle",
+                    "Oro\\Bundle\\AddressBundle\\": "src/Oro/Bundle/AddressBundle",
+                    "Oro\\Bundle\\ApiBundle\\": "src/Oro/Bundle/ApiBundle",
+                    "Oro\\Bundle\\AssetBundle\\": "src/Oro/Bundle/AssetBundle",
+                    "Oro\\Bundle\\AttachmentBundle\\": "src/Oro/Bundle/AttachmentBundle",
+                    "Oro\\Bundle\\BatchBundle\\": "src/Oro/Bundle/BatchBundle",
+                    "Oro\\Bundle\\BusinessEntitiesBundle\\": "src/Oro/Bundle/BusinessEntitiesBundle",
+                    "Oro\\Bundle\\CacheBundle\\": "src/Oro/Bundle/CacheBundle",
+                    "Oro\\Bundle\\ChartBundle\\": "src/Oro/Bundle/ChartBundle",
+                    "Oro\\Bundle\\CommentBundle\\": "src/Oro/Bundle/CommentBundle",
+                    "Oro\\Bundle\\ConfigBundle\\": "src/Oro/Bundle/ConfigBundle",
+                    "Oro\\Bundle\\CronBundle\\": "src/Oro/Bundle/CronBundle",
+                    "Oro\\Bundle\\CurrencyBundle\\": "src/Oro/Bundle/CurrencyBundle",
+                    "Oro\\Bundle\\DashboardBundle\\": "src/Oro/Bundle/DashboardBundle",
+                    "Oro\\Bundle\\DataAuditBundle\\": "src/Oro/Bundle/DataAuditBundle",
+                    "Oro\\Bundle\\DataGridBundle\\": "src/Oro/Bundle/DataGridBundle",
+                    "Oro\\Bundle\\DigitalAssetBundle\\": "src/Oro/Bundle/DigitalAssetBundle",
+                    "Oro\\Bundle\\DistributionBundle\\": "src/Oro/Bundle/DistributionBundle",
+                    "Oro\\Bundle\\DraftBundle\\": "src/Oro/Bundle/DraftBundle",
+                    "Oro\\Bundle\\EmailBundle\\": "src/Oro/Bundle/EmailBundle",
+                    "Oro\\Bundle\\EmbeddedFormBundle\\": "src/Oro/Bundle/EmbeddedFormBundle",
+                    "Oro\\Bundle\\EntityBundle\\": "src/Oro/Bundle/EntityBundle",
+                    "Oro\\Bundle\\EntityConfigBundle\\": "src/Oro/Bundle/EntityConfigBundle",
+                    "Oro\\Bundle\\EntityExtendBundle\\": "src/Oro/Bundle/EntityExtendBundle",
+                    "Oro\\Bundle\\EntityMergeBundle\\": "src/Oro/Bundle/EntityMergeBundle",
+                    "Oro\\Bundle\\EntityPaginationBundle\\": "src/Oro/Bundle/EntityPaginationBundle",
+                    "Oro\\Bundle\\FeatureToggleBundle\\": "src/Oro/Bundle/FeatureToggleBundle",
+                    "Oro\\Bundle\\FilterBundle\\": "src/Oro/Bundle/FilterBundle",
+                    "Oro\\Bundle\\FormBundle\\": "src/Oro/Bundle/FormBundle",
+                    "Oro\\Bundle\\GaufretteBundle\\": "src/Oro/Bundle/GaufretteBundle",
+                    "Oro\\Bundle\\GoogleIntegrationBundle\\": "src/Oro/Bundle/GoogleIntegrationBundle",
+                    "Oro\\Bundle\\HelpBundle\\": "src/Oro/Bundle/HelpBundle",
+                    "Oro\\Bundle\\ImapBundle\\": "src/Oro/Bundle/ImapBundle",
+                    "Oro\\Bundle\\ImportExportBundle\\": "src/Oro/Bundle/ImportExportBundle",
+                    "Oro\\Bundle\\InstallerBundle\\": "src/Oro/Bundle/InstallerBundle",
+                    "Oro\\Bundle\\IntegrationBundle\\": "src/Oro/Bundle/IntegrationBundle",
+                    "Oro\\Bundle\\LayoutBundle\\": "src/Oro/Bundle/LayoutBundle",
+                    "Oro\\Bundle\\LocaleBundle\\": "src/Oro/Bundle/LocaleBundle",
+                    "Oro\\Bundle\\LoggerBundle\\": "src/Oro/Bundle/LoggerBundle",
+                    "Oro\\Bundle\\MessageQueueBundle\\": "src/Oro/Bundle/MessageQueueBundle",
+                    "Oro\\Bundle\\MigrationBundle\\": "src/Oro/Bundle/MigrationBundle",
+                    "Oro\\Bundle\\NavigationBundle\\": "src/Oro/Bundle/NavigationBundle",
+                    "Oro\\Bundle\\NoteBundle\\": "src/Oro/Bundle/NoteBundle",
+                    "Oro\\Bundle\\NotificationBundle\\": "src/Oro/Bundle/NotificationBundle",
+                    "Oro\\Bundle\\OrganizationBundle\\": "src/Oro/Bundle/OrganizationBundle",
+                    "Oro\\Bundle\\PlatformBundle\\": "src/Oro/Bundle/PlatformBundle",
+                    "Oro\\Bundle\\QueryDesignerBundle\\": "src/Oro/Bundle/QueryDesignerBundle",
+                    "Oro\\Bundle\\ReminderBundle\\": "src/Oro/Bundle/ReminderBundle",
+                    "Oro\\Bundle\\ReportBundle\\": "src/Oro/Bundle/ReportBundle",
+                    "Oro\\Bundle\\ScopeBundle\\": "src/Oro/Bundle/ScopeBundle",
+                    "Oro\\Bundle\\SearchBundle\\": "src/Oro/Bundle/SearchBundle",
+                    "Oro\\Bundle\\SecurityBundle\\": "src/Oro/Bundle/SecurityBundle",
+                    "Oro\\Bundle\\SegmentBundle\\": "src/Oro/Bundle/SegmentBundle",
+                    "Oro\\Bundle\\SidebarBundle\\": "src/Oro/Bundle/SidebarBundle",
+                    "Oro\\Bundle\\SoapBundle\\": "src/Oro/Bundle/SoapBundle",
+                    "Oro\\Bundle\\SSOBundle\\": "src/Oro/Bundle/SSOBundle",
+                    "Oro\\Bundle\\SyncBundle\\": "src/Oro/Bundle/SyncBundle",
+                    "Oro\\Bundle\\TagBundle\\": "src/Oro/Bundle/TagBundle",
+                    "Oro\\Bundle\\TestFrameworkBundle\\": "src/Oro/Bundle/TestFrameworkBundle",
+                    "Oro\\Bundle\\TestGeneratorBundle\\": "src/Oro/Bundle/TestGeneratorBundle",
+                    "Oro\\Bundle\\ThemeBundle\\": "src/Oro/Bundle/ThemeBundle",
+                    "Oro\\Bundle\\TranslationBundle\\": "src/Oro/Bundle/TranslationBundle",
+                    "Oro\\Bundle\\UIBundle\\": "src/Oro/Bundle/UIBundle",
+                    "Oro\\Bundle\\UserBundle\\": "src/Oro/Bundle/UserBundle",
+                    "Oro\\Bundle\\ViewSwitcherBundle\\": "src/Oro/Bundle/ViewSwitcherBundle",
+                    "Oro\\Bundle\\WindowsBundle\\": "src/Oro/Bundle/WindowsBundle",
+                    "Oro\\Bundle\\WorkflowBundle\\": "src/Oro/Bundle/WorkflowBundle",
+                    "Oro\\Bundle\\WsseAuthenticationBundle\\": "src/Oro/Bundle/WsseAuthenticationBundle",
+                    "Oro\\Component\\Action\\": "src/Oro/Component/Action",
+                    "Oro\\Component\\ChainProcessor\\": "src/Oro/Component/ChainProcessor",
+                    "Oro\\Component\\Config\\": "src/Oro/Component/Config",
+                    "Oro\\Component\\ConfigExpression\\": "src/Oro/Component/ConfigExpression",
+                    "Oro\\Component\\DependencyInjection\\": "src/Oro/Component/DependencyInjection",
+                    "Oro\\Component\\DoctrineUtils\\": "src/Oro/Component/DoctrineUtils",
+                    "Oro\\Component\\Duplicator\\": "src/Oro/Component/Duplicator",
+                    "Oro\\Component\\EntitySerializer\\": "src/Oro/Component/EntitySerializer",
+                    "Oro\\Component\\Exception\\": "src/Oro/Component/Exception",
+                    "Oro\\Component\\ExpressionLanguage\\": "src/Oro/Component/ExpressionLanguage",
+                    "Oro\\Component\\Layout\\": "src/Oro/Component/Layout",
+                    "Oro\\Component\\Log\\": "src/Oro/Component/Log",
+                    "Oro\\Component\\Math\\": "src/Oro/Component/Math",
+                    "Oro\\Component\\MessageQueue\\": "src/Oro/Component/MessageQueue",
+                    "Oro\\Component\\PropertyAccess\\": "src/Oro/Component/PropertyAccess",
+                    "Oro\\Component\\PhpUtils\\": "src/Oro/Component/PhpUtils",
+                    "Oro\\Component\\Routing\\": "src/Oro/Component/Routing",
+                    "Oro\\Component\\Testing\\": "src/Oro/Component/Testing",
+                    "Oro\\Component\\TestUtils\\": "src/Oro/Component/TestUtils"
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
@@ -6295,7 +6413,7 @@
                 "source": "https://github.com/oroinc/platform/tree/4.1",
                 "issues": "https://github.com/oroinc/platform/issues"
             },
-            "time": "2020-03-17T13:22:07+00:00"
+            "time": "2020-04-28T15:16:46+00:00"
         },
         {
             "name": "oro/platform-serialised-fields",
@@ -6353,17 +6471,16 @@
         },
         {
             "name": "oro/redis-config",
-            "version": "4.1.1",
-            "target-dir": "Oro/Bundle/RedisConfigBundle",
+            "version": "4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/redis-config.git",
-                "reference": "87c9d535ef5146124fd0e7f5dd68d079ce24992f"
+                "reference": "b2b5b5613981c85c83aac2ad5e0dcc2c54af04af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/redis-config/zipball/87c9d535ef5146124fd0e7f5dd68d079ce24992f",
-                "reference": "87c9d535ef5146124fd0e7f5dd68d079ce24992f",
+                "url": "https://api.github.com/repos/oroinc/redis-config/zipball/b2b5b5613981c85c83aac2ad5e0dcc2c54af04af",
+                "reference": "b2b5b5613981c85c83aac2ad5e0dcc2c54af04af",
                 "shasum": ""
             },
             "require": {
@@ -6371,7 +6488,7 @@
                 "snc/redis-bundle": "~3.2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "5.7.*"
+                "phpunit/phpunit": "7.5.*"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -6380,9 +6497,12 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Oro\\Bundle\\RedisConfigBundle": "./"
-                }
+                "psr-4": {
+                    "Oro\\Bundle\\RedisConfigBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "license": [
                 "MIT"
@@ -6391,15 +6511,16 @@
             "homepage": "https://github.com/oroinc/redis-config",
             "keywords": [
                 "Oro",
-                "OroCrm",
+                "OroCRM",
+                "OroCommerce",
                 "OroPlatform",
                 "Redis"
             ],
             "support": {
-                "source": "https://github.com/oroinc/redis-config/tree/master",
+                "source": "https://github.com/oroinc/redis-config/tree/4.1",
                 "issues": "https://github.com/oroinc/redis-config/issues"
             },
-            "time": "2020-02-11T10:47:39+00:00"
+            "time": "2020-04-22T14:15:31+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -7015,23 +7136,20 @@
         },
         {
             "name": "phpdocumentor/reflection-common",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a"
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/63a995caa1ca9e5590304cd845c15ad6d482a62a",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~6"
             },
             "type": "library",
             "extra": {
@@ -7063,7 +7181,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2018-08-07T13:53:10+00:00"
+            "time": "2020-04-27T09:25:28+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -8019,16 +8137,16 @@
         },
         {
             "name": "react/stream",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/stream.git",
-                "reference": "50426855f7a77ddf43b9266c22320df5bf6c6ce6"
+                "reference": "7c02b510ee3f582c810aeccd3a197b9c2f52ff1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/50426855f7a77ddf43b9266c22320df5bf6c6ce6",
-                "reference": "50426855f7a77ddf43b9266c22320df5bf6c6ce6",
+                "url": "https://api.github.com/repos/reactphp/stream/zipball/7c02b510ee3f582c810aeccd3a197b9c2f52ff1a",
+                "reference": "7c02b510ee3f582c810aeccd3a197b9c2f52ff1a",
                 "shasum": ""
             },
             "require": {
@@ -8038,7 +8156,7 @@
             },
             "require-dev": {
                 "clue/stream-filter": "~1.2",
-                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
+                "phpunit/phpunit": "^7.0 || ^6.4 || ^5.7 || ^4.8.35"
             },
             "type": "library",
             "autoload": {
@@ -8061,7 +8179,7 @@
                 "stream",
                 "writable"
             ],
-            "time": "2019-01-01T16:15:09+00:00"
+            "time": "2020-05-04T10:17:57+00:00"
         },
         {
             "name": "robloach/component-installer",
@@ -8325,20 +8443,20 @@
         },
         {
             "name": "seld/jsonlint",
-            "version": "1.7.2",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "e2e5d290e4d2a4f0eb449f510071392e00e10d19"
+                "reference": "ff2aa5420bfbc296cf6a0bc785fa5b35736de7c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/e2e5d290e4d2a4f0eb449f510071392e00e10d19",
-                "reference": "e2e5d290e4d2a4f0eb449f510071392e00e10d19",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/ff2aa5420bfbc296cf6a0bc785fa5b35736de7c1",
+                "reference": "ff2aa5420bfbc296cf6a0bc785fa5b35736de7c1",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3 || ^7.0"
+                "php": "^5.3 || ^7.0 || ^8.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
@@ -8370,7 +8488,17 @@
                 "parser",
                 "validator"
             ],
-            "time": "2019-10-24T14:27:39+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/Seldaek",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/seld/jsonlint",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-30T19:05:18+00:00"
         },
         {
             "name": "seld/phar-utils",
@@ -8489,16 +8617,16 @@
         },
         {
             "name": "snc/redis-bundle",
-            "version": "3.2.1",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/snc/SncRedisBundle.git",
-                "reference": "d982d0d75e9b1fbf0a5cdef54041b827f9542d65"
+                "reference": "7d9294b2f90d39a0e2120c6f35a017895482416b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/snc/SncRedisBundle/zipball/d982d0d75e9b1fbf0a5cdef54041b827f9542d65",
-                "reference": "d982d0d75e9b1fbf0a5cdef54041b827f9542d65",
+                "url": "https://api.github.com/repos/snc/SncRedisBundle/zipball/7d9294b2f90d39a0e2120c6f35a017895482416b",
+                "reference": "7d9294b2f90d39a0e2120c6f35a017895482416b",
                 "shasum": ""
             },
             "require": {
@@ -8564,7 +8692,7 @@
                 "redis",
                 "symfony"
             ],
-            "time": "2019-11-18T06:48:22+00:00"
+            "time": "2020-04-30T05:56:02+00:00"
         },
         {
             "name": "stof/doctrine-extensions-bundle",
@@ -10037,34 +10165,34 @@
         },
         {
             "name": "ua-parser/uap-php",
-            "version": "v3.9.7",
+            "version": "v3.9.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ua-parser/uap-php.git",
-                "reference": "7efc2f05b7d9817a59132e5d2e5ca91a1c071f6a"
+                "reference": "fde0bd76ebd21cebfabc90a3a0d927754cb4f739"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/7efc2f05b7d9817a59132e5d2e5ca91a1c071f6a",
-                "reference": "7efc2f05b7d9817a59132e5d2e5ca91a1c071f6a",
+                "url": "https://api.github.com/repos/ua-parser/uap-php/zipball/fde0bd76ebd21cebfabc90a3a0d927754cb4f739",
+                "reference": "fde0bd76ebd21cebfabc90a3a0d927754cb4f739",
                 "shasum": ""
             },
             "require": {
                 "composer/ca-bundle": "^1.1",
-                "php": ">=5.3.0"
+                "php": "^7.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "<8",
-                "symfony/console": "^2.0 || ^3.0 || ^4.0",
-                "symfony/filesystem": "^2.0 || ^3.0 || ^4.0",
-                "symfony/finder": "^2.0 || ^3.0 || ^4.0",
-                "symfony/yaml": "^2.0 || ^3.0 || ^4.0"
+                "phpunit/phpunit": "^7 || ^8 || ^9",
+                "symfony/console": "^3.4 || ^4.3 || ^5.0",
+                "symfony/filesystem": "^3.4 || ^4.3 || ^5.0",
+                "symfony/finder": "^3.4 || ^4.3 || ^5.0",
+                "symfony/yaml": "^3.4 || ^4.3 || ^5.0"
             },
             "suggest": {
-                "symfony/console": "Required for CLI usage - ^2.0 || ^3.0 || ^4.0",
-                "symfony/filesystem": "Required for CLI usage - 2.0 || ^3.0 || ^4.0",
-                "symfony/finder": "Required for CLI usage - ^2.0 || ^3.0 || ^4.0",
-                "symfony/yaml": "Required for CLI usage - ^4.0 || ^5.0"
+                "symfony/console": "Required for CLI usage - ^3.4 || ^4.3 || ^5.0",
+                "symfony/filesystem": "Required for CLI usage - ^3.4 || ^4.3 || ^5.0",
+                "symfony/finder": "Required for CLI usage - ^3.4 || ^4.3 || ^5.0",
+                "symfony/yaml": "Required for CLI usage - ^3.4 || ^4.3 || ^5.0"
             },
             "bin": [
                 "bin/uaparser"
@@ -10090,20 +10218,20 @@
                 }
             ],
             "description": "A multi-language port of Browserscope's user agent parser.",
-            "time": "2020-02-21T09:54:14+00:00"
+            "time": "2020-04-28T08:09:42+00:00"
         },
         {
             "name": "webmozart/assert",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "shasum": ""
             },
             "require": {
@@ -10111,7 +10239,7 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-                "vimeo/psalm": "<3.6.0"
+                "vimeo/psalm": "<3.9.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
@@ -10138,7 +10266,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-02-14T12:15:55+00:00"
+            "time": "2020-04-18T12:12:48+00:00"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -10886,24 +11014,26 @@
         },
         {
             "name": "behat/mink",
-            "version": "1.7.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/Mink.git",
-                "reference": "b2e031b747be637236c55f3158e4da280427bfa3"
+                "reference": "07c6a9fe3fa98c2de074b25d9ed26c22904e3887"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/Mink/zipball/b2e031b747be637236c55f3158e4da280427bfa3",
-                "reference": "b2e031b747be637236c55f3158e4da280427bfa3",
+                "url": "https://api.github.com/repos/minkphp/Mink/zipball/07c6a9fe3fa98c2de074b25d9ed26c22904e3887",
+                "reference": "07c6a9fe3fa98c2de074b25d9ed26c22904e3887",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.1",
-                "symfony/css-selector": "^2.7|^3.0|^4.0"
+                "symfony/css-selector": "^2.7|^3.0|^4.0|^5.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^4.2"
+                "phpunit/phpunit": "^4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20",
+                "symfony/debug": "^2.7|^3.0|^4.0",
+                "symfony/phpunit-bridge": "^3.4.38 || ^5.0.5"
             },
             "suggest": {
                 "behat/mink-browserkit-driver": "extremely fast headless driver for Symfony\\Kernel-based apps (Sf2, Silex)",
@@ -10915,7 +11045,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7.x-dev"
+                    "dev-master": "1.8.x-dev"
                 }
             },
             "autoload": {
@@ -10941,7 +11071,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2020-03-06T06:18:25+00:00"
+            "time": "2020-03-11T15:45:53+00:00"
         },
         {
             "name": "behat/mink-extension",
@@ -11004,30 +11134,30 @@
         },
         {
             "name": "behat/mink-selenium2-driver",
-            "version": "v1.4.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/MinkSelenium2Driver.git",
-                "reference": "312a967dd527f28980cce40850339cd5316da092"
+                "reference": "473a9f3ebe0c134ee1e623ce8a9c852832020288"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/312a967dd527f28980cce40850339cd5316da092",
-                "reference": "312a967dd527f28980cce40850339cd5316da092",
+                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/473a9f3ebe0c134ee1e623ce8a9c852832020288",
+                "reference": "473a9f3ebe0c134ee1e623ce8a9c852832020288",
                 "shasum": ""
             },
             "require": {
                 "behat/mink": "~1.7@dev",
                 "instaclick/php-webdriver": "~1.1",
-                "php": ">=5.4"
+                "php": ">=5.3.1"
             },
             "require-dev": {
-                "mink/driver-testsuite": "dev-master"
+                "symfony/phpunit-bridge": "~2.7"
             },
             "type": "mink-driver",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -11041,14 +11171,14 @@
             ],
             "authors": [
                 {
-                    "name": "Pete Otaqui",
-                    "email": "pete@otaqui.com",
-                    "homepage": "https://github.com/pete-otaqui"
-                },
-                {
                     "name": "Konstantin Kudryashov",
                     "email": "ever.zet@gmail.com",
                     "homepage": "http://everzet.com"
+                },
+                {
+                    "name": "Pete Otaqui",
+                    "email": "pete@otaqui.com",
+                    "homepage": "https://github.com/pete-otaqui"
                 }
             ],
             "description": "Selenium2 (WebDriver) driver for Mink framework",
@@ -11061,7 +11191,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2020-03-11T14:43:21+00:00"
+            "time": "2016-03-05T09:10:18+00:00"
         },
         {
             "name": "behat/symfony2-extension",
@@ -12982,16 +13112,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.4",
+            "version": "3.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "dceec07328401de6211037abbb18bda423677e26"
+                "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/dceec07328401de6211037abbb18bda423677e26",
-                "reference": "dceec07328401de6211037abbb18bda423677e26",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
+                "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
                 "shasum": ""
             },
             "require": {
@@ -13029,11 +13159,11 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-01-30T22:20:29+00:00"
+            "time": "2020-04-17T01:09:41+00:00"
         },
         {
             "name": "symfony/class-loader",
-            "version": "v3.4.39",
+            "version": "v3.4.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/class-loader.git",
