@@ -6,10 +6,12 @@
   "autoload": {
     "psr-4": {"": "src/"},
     "classmap": [
+      "vendor/oro/platform/guzzle/Client.php",
       "src/AppKernel.php",
       "src/AppCache.php"
     ],
     "exclude-from-classmap": [
+      "/vendor/guzzle/guzzle/src/Guzzle/Http/Client.php",
       "**/Tests/"
     ]
   },

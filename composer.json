@@ -5,8 +5,14 @@
     "license": "OSL-3.0",
     "autoload": {
         "psr-4": {"": "src/"},
-        "files": ["src/AppKernel.php"],
-        "exclude-from-classmap": ["**/Tests/"]
+        "classmap": [
+            "src/AppKernel.php",
+            "vendor/oro/platform/guzzle/Client.php"
+        ],
+        "exclude-from-classmap": [
+            "/vendor/guzzle/guzzle/src/Guzzle/Http/Client.php",
+            "**/Tests/"
+        ]
     },
     "repositories": {
         "composer": {
