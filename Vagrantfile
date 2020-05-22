@@ -55,7 +55,7 @@ Vagrant.configure("2") do |config|
    config.vm.provider "virtualbox" do |vb|
      # Display the VirtualBox GUI when booting the machine
   #   vb.gui = true
-  
+
      # Customize the amount of memory on the VM:
      vb.memory = 2048
      vb.cpus = 2
@@ -69,198 +69,206 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
 
-		echo "\n*****************************************************"
-		echo "************* Provision process started *************"
-		echo "*****************************************************\n"
+    echo "\n*****************************************************"
+    echo "************* Provision process started *************"
+    echo "*****************************************************\n"
 
-		# --------------------- Provision configuration ---------------------
-		
-		# --- VM settings ---
-		
-		FORWARDED_PORT=8000
-		
-		# --- Database settings ---
+    # --------------------- Provision configuration ---------------------
 
-		DB_USER="dbuser"
-		DB_PASSWORD="DBP@ssword123"
-		DB_NAME="oro"
+    # --- VM settings ---
 
-		# --- Oro application settings ---
+    FORWARDED_PORT=8000
 
-		APP_HOST="localhost"
-		APP_USER="admin"
-		APP_PASSWORD="adminpass"
-		APP_LOAD_DEMO_DATA="y"		# y | n
+    # --- Database settings ---
 
-		echo "\n*******************************************************"
-		echo "************** Step 1: Environment Setup **************"
-		echo "*******************************************************\n"
+    DB_USER="dbuser"
+    DB_PASSWORD="DBP@ssword123"
+    DB_NAME="oro"
 
-		echo "\n~~~~~~~~~~~~~~ Enable Required Package Repositories ~~~~~~~~~~~~~~\n"
-		
-		yum install -y epel-release
-		yum update -y
+    # --- Oro application settings ---
 
-		echo "\n~~~~~~~~~~~~~~ Install Nginx, NodeJS, Git, Supervisor, and Wget ~~~~~~~~~~~~~~\n"
-		
-		yum install -y nginx wget git nodejs supervisor yum-utils
-		
-		echo "\n~~~~~~~~~~~~~~ Install MySQL ~~~~~~~~~~~~~~\n"
-		
-		wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm && rpm -ivh mysql80-community-release-el7-1.noarch.rpm
-		yum-config-manager --disable mysql80-community
-		yum-config-manager --enable mysql57-community
-		
-		yum install -y mysql-community-server
-		
-		echo "\n~~~~~~~~~~~~~~ Install PHP ~~~~~~~~~~~~~~\n"
-		
-		wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm && rpm -Uvh remi-release-7.rpm
-		yum-config-manager --enable remi-php71
-		yum update -y
+    APP_HOST="localhost"
+    APP_USER="admin"
+    APP_PASSWORD="adminpass"
+    APP_LOAD_DEMO_DATA="y"		# y | n
 
-		yum install -y php-fpm php-cli php-pdo php-mysqlnd php-xml php-soap php-gd php-mbstring php-zip php-intl php-mcrypt php-opcache
-		
-		echo "\n~~~~~~~~~~~~~~ Install Composer ~~~~~~~~~~~~~~\n"
-		
-		php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && php composer-setup.php
-		php -r "unlink('composer-setup.php');"
-		mv composer.phar /usr/bin/composer
-		
-		echo "\n~~~~~~~~~~~~~~ Enable Installed Services ~~~~~~~~~~~~~~\n"
+    echo "$APP_HOST" > /tmp/oro_install_APP_HOST
+    echo "$APP_USER" > /tmp/oro_install_APP_USER
+    echo "$APP_PASSWORD" > /tmp/oro_install_APP_PASSWORD
+    echo "$APP_LOAD_DEMO_DATA" > /tmp/oro_install_APP_LOAD_DEMO_DATA
 
-		systemctl start mysqld php-fpm nginx supervisord
-		systemctl enable mysqld php-fpm nginx supervisord
+    echo "\n*******************************************************"
+    echo "************** Step 1: Environment Setup **************"
+    echo "*******************************************************\n"
 
-		echo "********************************************************************************"
-		echo "************** Step 2: Pre-installation Environment Configuration **************"
-		echo "********************************************************************************"
+    echo "\n~~~~~~~~~~~~~~ Enable Required Package Repositories ~~~~~~~~~~~~~~\n"
 
-		echo "\n~~~~~~~~~~~~~~ Perform Security Configuration ~~~~~~~~~~~~~~\n"
+    yum install -y epel-release
+    yum update -y
 
-		sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
-		setenforce permissive
+    echo "\n~~~~~~~~~~~~~~ Install Nginx, NodeJS, Git, Supervisor, and Wget ~~~~~~~~~~~~~~\n"
 
-		echo "\n~~~~~~~~~~~~~~ Prepare MySQL Database ~~~~~~~~~~~~~~\n"
+    curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
+    yum install -y nginx wget git nodejs supervisor yum-utils
 
-		# --- Change the MySQL Server Configuration ---
+    echo "\n~~~~~~~~~~~~~~ Install MySQL ~~~~~~~~~~~~~~\n"
 
-		echo "[client]" >> /etc/my.cnf
-		echo "default-character-set = utf8mb4" >> /etc/my.cnf
-		echo "" >> /etc/my.cnf
-		echo "[mysql]" >> /etc/my.cnf
-		echo "default-character-set = utf8mb4" >> /etc/my.cnf
-		echo "" >> /etc/my.cnf
-		echo "[mysqld]" >> /etc/my.cnf
-		echo "innodb_file_per_table = 0" >> /etc/my.cnf
-		echo "wait_timeout = 28800" >> /etc/my.cnf
-		echo "character-set-server = utf8mb4" >> /etc/my.cnf
-		echo "collation-server = utf8mb4_unicode_ci" >> /etc/my.cnf
+    wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm && rpm -ivh mysql80-community-release-el7-1.noarch.rpm
+    yum-config-manager --disable mysql80-community
+    yum-config-manager --enable mysql57-community
 
-		systemctl restart mysqld
+    yum install -y mysql-community-server
 
-		# --- Change the Default MySQL Password for Root User ---
+    echo "\n~~~~~~~~~~~~~~ Install PHP ~~~~~~~~~~~~~~\n"
 
-		MYSQL_INSTALLED_TMP_ROOT_PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}')
-		mysqladmin --user=root --password=$MYSQL_INSTALLED_TMP_ROOT_PASSWORD password $DB_PASSWORD
+    wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm && rpm -Uvh remi-release-7.rpm
+    yum-config-manager --enable remi-php74
+    yum update -y
 
-		# --- Create a Database for OroPlatform Community Edition Application and a Dedicated Database User ---
-		
-		mysql -uroot -p$DB_PASSWORD -e "CREATE DATABASE $DB_NAME"
-	  	mysql -uroot -p$DB_PASSWORD -e "GRANT ALL PRIVILEGES ON $DB_NAME.* to '$DB_USER'@'localhost' identified by '$DB_PASSWORD'"
-	  	mysql -uroot -p$DB_PASSWORD -e "FLUSH PRIVILEGES"
+    yum install -y php-fpm php-cli php-pdo php-mysqlnd php-xml php-soap php-gd php-mbstring php-zip php-intl php-opcache
 
-		echo "\n~~~~~~~~~~~~~~ Configure Web Server ~~~~~~~~~~~~~~\n"
+    echo "\n~~~~~~~~~~~~~~ Install Composer ~~~~~~~~~~~~~~\n"
 
-		cat > /etc/nginx/conf.d/default.conf <<____NGINXCONFIGTEMPLATE
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && php composer-setup.php
+    php -r "unlink('composer-setup.php');"
+    mv composer.phar /usr/bin/composer
+    su - vagrant -c 'composer global require symfony/flex'
+
+    echo "\n~~~~~~~~~~~~~~ Enable Installed Services ~~~~~~~~~~~~~~\n"
+
+    systemctl start mysqld php-fpm nginx supervisord
+    systemctl enable mysqld php-fpm nginx supervisord
+
+    echo "********************************************************************************"
+    echo "************** Step 2: Pre-installation Environment Configuration **************"
+    echo "********************************************************************************"
+
+    echo "\n~~~~~~~~~~~~~~ Perform Security Configuration ~~~~~~~~~~~~~~\n"
+
+    sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
+    setenforce permissive
+
+    echo "\n~~~~~~~~~~~~~~ Prepare MySQL Database ~~~~~~~~~~~~~~\n"
+
+    # --- Change the MySQL Server Configuration ---
+
+    echo "[client]" >> /etc/my.cnf
+    echo "default-character-set = utf8mb4" >> /etc/my.cnf
+    echo "" >> /etc/my.cnf
+    echo "[mysql]" >> /etc/my.cnf
+    echo "default-character-set = utf8mb4" >> /etc/my.cnf
+    echo "" >> /etc/my.cnf
+    echo "[mysqld]" >> /etc/my.cnf
+    echo "innodb_file_per_table = 0" >> /etc/my.cnf
+    echo "wait_timeout = 28800" >> /etc/my.cnf
+    echo "character-set-server = utf8mb4" >> /etc/my.cnf
+    echo "collation-server = utf8mb4_unicode_ci" >> /etc/my.cnf
+
+    systemctl restart mysqld
+
+    # --- Change the Default MySQL Password for Root User ---
+
+    MYSQL_INSTALLED_TMP_ROOT_PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}')
+    mysqladmin --user=root --password=$MYSQL_INSTALLED_TMP_ROOT_PASSWORD password $DB_PASSWORD
+
+    # --- Create a Database for OroPlatform Community Edition Application and a Dedicated Database User ---
+
+    mysql -uroot -p$DB_PASSWORD -e "CREATE DATABASE $DB_NAME"
+    mysql -uroot -p$DB_PASSWORD -e "GRANT ALL PRIVILEGES ON $DB_NAME.* to '$DB_USER'@'localhost' identified by '$DB_PASSWORD'"
+    mysql -uroot -p$DB_PASSWORD -e "FLUSH PRIVILEGES"
+
+    echo "\n~~~~~~~~~~~~~~ Configure Web Server ~~~~~~~~~~~~~~\n"
+
+    cat > /etc/nginx/conf.d/default.conf <<____NGINXCONFIGTEMPLATE
 server {
-	server_name $APP_HOST www.$APP_HOST;
-	root  /usr/share/nginx/html/oroapp/public;
+  server_name $APP_HOST www.$APP_HOST;
+  root  /var/www/oroapp/public;
 
-	index index.php;
+  index index.php;
 
-	gzip on;
-	gzip_proxied any;
-	gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
-	gzip_vary on;
+  gzip on;
+  gzip_proxied any;
+  gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+  gzip_vary on;
 
-	location / {
-		# try to serve file directly, fallback to index.php
-		try_files \\$uri /index.php\\$is_args\\$args;
-	}
+  location / {
+    # try to serve file directly, fallback to index.php
+    try_files \\$uri /index.php\\$is_args\\$args;
+  }
 
-	location ~ ^/(index|index_dev|config|install)\\.php(/|$) {
-		fastcgi_pass 127.0.0.1:9000;
-		# or
-		# fastcgi_pass unix:/var/run/php/php7-fpm.sock;
-		fastcgi_split_path_info ^(.+\\.php)(/.*)$;
-		include fastcgi_params;
-		fastcgi_param SCRIPT_FILENAME \\$document_root\\$fastcgi_script_name;
-		fastcgi_param HTTPS off;
-		fastcgi_buffers 64 64k;
-		fastcgi_buffer_size 128k;
-	}
+  location ~ ^/(index|index_dev|config|install)\\.php(/|$) {
+    fastcgi_pass 127.0.0.1:9000;
+    # or
+    # fastcgi_pass unix:/var/run/php/php7-fpm.sock;
+    fastcgi_split_path_info ^(.+\\.php)(/.*)$;
+    include fastcgi_params;
+    fastcgi_param SCRIPT_FILENAME \\$document_root\\$fastcgi_script_name;
+    fastcgi_param HTTPS off;
+    fastcgi_buffers 64 64k;
+    fastcgi_buffer_size 128k;
+  }
 
-	location ~* ^[^(\\.php)]+\\.(jpg|jpeg|gif|png|ico|css|pdf|ppt|txt|bmp|rtf|js)$ {
-		access_log off;
-		expires 1h;
-		add_header Cache-Control public;
-	}
+  location ~* ^[^(\\.php)]+\\.(jpg|jpeg|gif|png|ico|css|pdf|ppt|txt|bmp|rtf|js)$ {
+    access_log off;
+    expires 1h;
+    add_header Cache-Control public;
+  }
 
-	error_log /var/log/nginx/${APP_HOST}_error.log;
-	access_log /var/log/nginx/${APP_HOST}_access.log;
+  error_log /var/log/nginx/${APP_HOST}_error.log;
+  access_log /var/log/nginx/${APP_HOST}_access.log;
 }
 ____NGINXCONFIGTEMPLATE
-		
-		systemctl restart nginx
 
-		echo "\n~~~~~~~~~~~~~~ Configure PHP ~~~~~~~~~~~~~~\n"
+    systemctl restart nginx
 
-		sed -i 's/user = apache/user = nginx/g' /etc/php-fpm.d/www.conf
-		sed -i 's/group = apache/group = nginx/g' /etc/php-fpm.d/www.conf
-		sed -i 's/;catch_workers_output/catch_workers_output/g' /etc/php-fpm.d/www.conf
+    echo "\n~~~~~~~~~~~~~~ Configure PHP ~~~~~~~~~~~~~~\n"
 
-		sed -i 's/memory_limit = [0-9MG]*/memory_limit = 1G/g' /etc/php.ini
-		sed -i 's/;realpath_cache_size = [0-9MGk]*/realpath_cache_size = 4M/g' /etc/php.ini
-		sed -i 's/;realpath_cache_ttl = [0-9]*/realpath_cache_ttl = 600/g' /etc/php.ini
+    sed -i 's/user = apache/user = nginx/g' /etc/php-fpm.d/www.conf
+    sed -i 's/group = apache/group = nginx/g' /etc/php-fpm.d/www.conf
+    sed -i 's/;catch_workers_output/catch_workers_output/g' /etc/php-fpm.d/www.conf
 
-		sed -i 's/opcache.enable=[0-1]/opcache.enable=1/g' /etc/php.d/10-opcache.ini
-		sed -i 's/;opcache.enable_cli=[0-1]/opcache.enable_cli=0/g' /etc/php.d/10-opcache.ini
-		sed -i 's/opcache.memory_consumption=[0-9]*/opcache.memory_consumption=512/g' /etc/php.d/10-opcache.ini
-		sed -i 's/opcache.interned_strings_buffer=[0-9]*/opcache.interned_strings_buffer=32/g' /etc/php.d/10-opcache.ini
-		sed -i 's/opcache.max_accelerated_files=[0-9]*/opcache.max_accelerated_files=32531/g' /etc/php.d/10-opcache.ini
-		sed -i 's/;opcache.save_comments=[0-1]/opcache.save_comments=1/g' /etc/php.d/10-opcache.ini
-		
-		systemctl restart php-fpm
+    sed -i 's/memory_limit = [0-9MG]*/memory_limit = 1G/g' /etc/php.ini
+    sed -i 's/;realpath_cache_size = [0-9MGk]*/realpath_cache_size = 4M/g' /etc/php.ini
+    sed -i 's/;realpath_cache_ttl = [0-9]*/realpath_cache_ttl = 600/g' /etc/php.ini
 
-		echo "********************************************************************************************"
-		echo "************** Step 3: OroPlatform Community Edition Application Installation **************"
-		echo "********************************************************************************************"
+    sed -i 's/opcache.enable=[0-1]/opcache.enable=1/g' /etc/php.d/10-opcache.ini
+    sed -i 's/;opcache.enable_cli=[0-1]/opcache.enable_cli=0/g' /etc/php.d/10-opcache.ini
+    sed -i 's/opcache.memory_consumption=[0-9]*/opcache.memory_consumption=512/g' /etc/php.d/10-opcache.ini
+    sed -i 's/opcache.interned_strings_buffer=[0-9]*/opcache.interned_strings_buffer=32/g' /etc/php.d/10-opcache.ini
+    sed -i 's/opcache.max_accelerated_files=[0-9]*/opcache.max_accelerated_files=32531/g' /etc/php.d/10-opcache.ini
+    sed -i 's/;opcache.save_comments=[0-1]/opcache.save_comments=1/g' /etc/php.d/10-opcache.ini
 
-		echo "\n~~~~~~~~~~~~~~ Get Application Source Code ~~~~~~~~~~~~~~\n"
+    systemctl restart php-fpm
 
-		# --- Copy application source code from the current host folder to the nginx web folder ---
+    echo "********************************************************************************************"
+    echo "************** Step 3: OroPlatform Community Edition Application Installation **************"
+    echo "********************************************************************************************"
 
-		cd /usr/share/nginx/html
-		mkdir oroapp && cd oroapp
-		cp -r /vagrant/* .
+    echo "\n~~~~~~~~~~~~~~ Get Application Source Code ~~~~~~~~~~~~~~\n"
 
-		echo "\n~~~~~~~~~~~~~~ Install Application Dependencies ~~~~~~~~~~~~~~\n"
+    # --- Copy application source code from the current host folder to the nginx web folder ---
 
-		# --- Configure config/parameters.yml (to prevent composer interactive dialog) ---
-		
-		cp ./config/parameters.yml.dist ./config/parameters.yml
-	 	sed -i "s/database_user:[ ]*root/database_user: $DB_USER/g" ./config/parameters.yml
-	 	sed -i "s/database_password:[ ]*~/database_password: '$DB_PASSWORD'/g" ./config/parameters.yml
-	 	sed -i "s/database_name:[ ]*[a-zA-Z0-9_]*/database_name: $DB_NAME/g" ./config/parameters.yml
-		
-		composer install --prefer-dist --no-dev
+    mkdir -p /var/www/oroapp
+    cd /var/www/oroapp
+    cp -r /vagrant/* .
+    chown -R vagrant:vagrant .
 
-		echo "\n~~~~~~~~~~~~~~ Install OroCRM Community Edition Application ~~~~~~~~~~~~~~\n"
+    echo "\n~~~~~~~~~~~~~~ Install Application Dependencies ~~~~~~~~~~~~~~\n"
 
-		# --- Configure DBAL parameters before installation ---
+    # --- Configure config/parameters.yml (to prevent composer interactive dialog) ---
 
-		cat >> ./config/config.yml <<____DOCTRINECONFIG
+    su - vagrant -c 'composer install --prefer-dist --no-dev --optimize-autoloader -n --working-dir=/var/www/oroapp'
+
+    sed -i "s/database_user:[ ]*root/database_user: $DB_USER/g" ./config/parameters.yml
+    sed -i "s/database_password:[ ]*null/database_password: $DB_PASSWORD/g" ./config/parameters.yml
+    sed -i "s/database_name:[ ]*[a-zA-Z0-9_]*/database_name: $DB_NAME/g" ./config/parameters.yml
+    chown vagrant:vagrant /var/www/oroapp/config/parameters.yml
+
+    echo "\n~~~~~~~~~~~~~~ Install OroCRM Community Edition Application ~~~~~~~~~~~~~~\n"
+
+    # --- Configure DBAL parameters before installation ---
+
+    cat >> ./config/config.yml <<____DOCTRINECONFIG
 
 doctrine:
     dbal:
@@ -271,36 +279,36 @@ doctrine:
 
 ____DOCTRINECONFIG
 
-		# --- Run the installation command ---
+    # --- Run the installation command ---
 
-		php ./bin/console oro:install --env=prod --timeout=900 --no-debug --application-url="http://$APP_HOST/" --organization-name="Oro Inc" --user-name="$APP_USER" --user-email="admin@example.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="$APP_PASSWORD" --sample-data=$APP_LOAD_DEMO_DATA --language=en --formatting-code=en_US
+    su - vagrant -c 'APP_HOST=$(cat /tmp/oro_install_APP_HOST) && APP_USER=$(cat /tmp/oro_install_APP_USER) && APP_PASSWORD=$(cat /tmp/oro_install_APP_PASSWORD) && APP_LOAD_DEMO_DATA=$(cat /tmp/oro_install_APP_LOAD_DEMO_DATA) && php /var/www/oroapp/bin/console oro:install --env=prod --timeout=1500 --no-debug --application-url="http://$APP_HOST/" --organization-name="Oro Inc" --user-name="$APP_USER" --user-email="admin@example.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="$APP_PASSWORD" --sample-data=$APP_LOAD_DEMO_DATA --language=en --formatting-code=en_US'
 
-		echo "\n~~~~~~~~~~~~~~ Add Required Permissions for the nginx User ~~~~~~~~~~~~~~\n"
+    echo "\n~~~~~~~~~~~~~~ Add Required Permissions for the nginx User ~~~~~~~~~~~~~~\n"
 
-		setfacl -b -R ./
-		cd /usr/share/nginx/html/oroapp
-		find . -type f -exec chmod 0644 {} \\;
-		find . -type d -exec chmod 0755 {} \\;
-		chown -R nginx:nginx ./var/{sessions,attachment,cache,import_export,logs}
-		chown -R nginx:nginx ./public/{media,uploads,js}
+    setfacl -b -R ./
+    cd /var/www/oroapp
+    find . -type f -exec chmod 0644 {} \\;
+    find . -type d -exec chmod 0755 {} \\;
+    chown -R nginx:nginx ./var/{sessions,attachment,cache,import_export,logs}
+    chown -R nginx:nginx ./public/{media,uploads,js}
 
-		echo "\n*********************************************************************************"
-		echo "************** Step 4: Post-installation Environment Configuration **************"
-		echo "*********************************************************************************\n"
+    echo "\n*********************************************************************************"
+    echo "************** Step 4: Post-installation Environment Configuration **************"
+    echo "*********************************************************************************\n"
 
-		echo "\n~~~~~~~~~~~~~~ Schedule Periodical Command Execution ~~~~~~~~~~~~~~\n"
+    echo "\n~~~~~~~~~~~~~~ Schedule Periodical Command Execution ~~~~~~~~~~~~~~\n"
 
-		echo "*/1 * * * * php /usr/share/nginx/html/oroapp/bin/console oro:cron --env=prod > /dev/null" > /var/spool/cron/nginx
+    echo "*/1 * * * * php /var/www/oroapp/bin/console oro:cron --env=prod > /dev/null" > /var/spool/cron/nginx
 
-		echo "\n~~~~~~~~~~~~~~ Configure and Run Required Background Processes ~~~~~~~~~~~~~~\n"
+    echo "\n~~~~~~~~~~~~~~ Configure and Run Required Background Processes ~~~~~~~~~~~~~~\n"
 
-		cat >> /etc/supervisord.conf <<____SUPERVISORDTEMPLATE
+    cat >> /etc/supervisord.conf <<____SUPERVISORDTEMPLATE
 [program:oro_web_socket]
 command=php ./bin/console gos:websocket:server --env=prod
 numprocs=1
 autostart=true
 autorestart=true
-directory=/usr/share/nginx/html/oroapp
+directory=/var/www/oroapp
 user=nginx
 redirect_stderr=true
 
@@ -310,17 +318,17 @@ process_name=%(program_name)s_%(process_num)02d
 numprocs=5
 autostart=true
 autorestart=true
-directory=/usr/share/nginx/html/oroapp
+directory=/var/www/oroapp
 user=nginx
 redirect_stderr=true
 ____SUPERVISORDTEMPLATE
-		
-		systemctl restart supervisord
 
-		echo "\n**********************************************************************************************************************"
-		echo "************** Congratulations! You’ve Successfully Installed OroCRM Application **********************************"
-		echo "**********************************************************************************************************************\n"
-		echo "\n************** You should now be able to open the homepage http://$APP_HOST:$FORWARDED_PORT/ and use the application. **************\n"
+    systemctl restart supervisord
+
+    echo "\n**********************************************************************************************************************"
+    echo "************** Congratulations! You’ve Successfully Installed OroCRM Application **********************************"
+    echo "**********************************************************************************************************************\n"
+    echo "\n************** You should now be able to open the homepage http://$APP_HOST:$FORWARDED_PORT/ and use the application. **************\n"
    SHELL
 end
 
