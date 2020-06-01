@@ -5,9 +5,15 @@
     "license": "OSL-3.0",
     "autoload": {
         "psr-4": {"": "src/"},
-        "exclude-from-classmap": ["**/Tests/"],
+        "classmap": [
+            "vendor/oro/platform/guzzle/Client.php"
+        ],
+        "exclude-from-classmap": [
+            "/vendor/guzzle/guzzle/src/Guzzle/Http/Client.php",
+            "**/Tests/"
+        ],
         "files": [
-            "vendor/oro/platform/src/Oro/Bundle/LocaleBundle/Intl/Locale.php"
+            "vendor/oro/platform/Locale.php"
         ]
     },
     "repositories": {
@@ -46,12 +52,9 @@
         "sebastian/phpcpd": "3.0.*",
         "phpunit/phpcov": "3.1.*",
         "symfony/phpunit-bridge": "3.2.*",
-        "friendsofphp/php-cs-fixer": "2.1.*"
+        "friendsofphp/php-cs-fixer": ">=2.2.8 <2.2.20"
     },
     "config": {
-        "platform": {
-            "php": "7.1"
-        },
         "component-dir": "web/bundles/components",
         "bin-dir": "bin",
         "fxp-asset": {
