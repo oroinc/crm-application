@@ -1,18 +1,18 @@
 parameters:
-    database_driver:   pdo_mysql
-    database_host:     127.0.0.1
-    database_port:     ~
-    database_name:     oro_crm
-    database_user:     root
-    database_password: ~
+    database_driver:        pdo_mysql
+    database_host:          '%env(ORO_DB_HOST)%'
+    database_port:          '%env(ORO_DB_PORT)%'
+    database_name:          '%env(ORO_DB_NAME)%'
+    database_user:          '%env(ORO_DB_USER)%'
+    database_password:      '%env(ORO_DB_PASSWORD)%'
     database_driver_options: []
 
-    mailer_transport:  smtp
-    mailer_host:       127.0.0.1
-    mailer_port:       ~
-    mailer_encryption: ~
-    mailer_user:       ~
-    mailer_password:   ~
+    mailer_transport:       '%env(ORO_MAILER_TRANSPORT)%'
+    mailer_host:            '%env(ORO_MAILER_HOST)%'
+    mailer_port:            '%env(ORO_MAILER_PORT)%'
+    mailer_encryption:      '%env(ORO_MAILER_ENCRYPTION)%'
+    mailer_user:            '%env(ORO_MAILER_USER)%'
+    mailer_password:        '%env(ORO_MAILER_PASSWORD)%'
 
     # WebSocket server config
     websocket_bind_address:                "0.0.0.0"  # The host IP the socket server will bind to
@@ -32,7 +32,7 @@ parameters:
 
     session_handler:   session.handler.native_file
 
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret:            '%env(ORO_SECRET)%'
     installed:         ~
     assets_version:    ~
     assets_version_strategy: time_hash # A strategy should be used to generate the global assets version, can be:
@@ -44,3 +44,19 @@ parameters:
     message_queue_transport_config: ~
 
     deployment_type: ~
+
+    # Fallback values (used if environmental variables are not set)
+    env(ORO_DB_HOST): 127.0.0.1
+    env(ORO_DB_PORT): null
+    env(ORO_DB_NAME): oro_crm
+    env(ORO_DB_USER): root
+    env(ORO_DB_PASSWORD): null
+
+    env(ORO_MAILER_TRANSPORT): smtp
+    env(ORO_MAILER_HOST): 127.0.0.1
+    env(ORO_MAILER_PORT): null
+    env(ORO_MAILER_ENCRYPTION): null
+    env(ORO_MAILER_USER): null
+    env(ORO_MAILER_PASSWORD): null
+
+    env(ORO_SECRET): ThisTokenIsNotSoSecretChangeIt

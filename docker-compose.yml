@@ -1,0 +1,19 @@
+version: '3.5'
+services:
+  mysql:
+    image: mysql:5.7
+    ports: ['3306']
+    labels:
+      com.symfony.server.service-prefix: ORO_DB
+    volumes:
+      - mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: oro_db_pass
+      MYSQL_DATABASE: oro_db
+      MYSQL_USER: oro_db_user
+      MYSQL_PASSWORD: oro_db_pass
+    healthcheck:
+      test: "mysqladmin ping --silent -u$${MYSQL_USER} -p$${MYSQL_PASSWORD}"
+    restart: on-failure
+volumes:
+  mysql: {}
