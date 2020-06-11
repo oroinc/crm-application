@@ -7,7 +7,7 @@ parameters:
     database_password:      '%env(ORO_DB_PASSWORD)%'
     database_driver_options: []
 
-    mailer_transport:       '%env(ORO_MAILER_TRANSPORT)%'
+    mailer_transport:       '%env(ORO_MAILER_DRIVER)%'
     mailer_host:            '%env(ORO_MAILER_HOST)%'
     mailer_port:            '%env(ORO_MAILER_PORT)%'
     mailer_encryption:      '%env(ORO_MAILER_ENCRYPTION)%'
@@ -52,7 +52,7 @@ parameters:
     env(ORO_DB_USER): root
     env(ORO_DB_PASSWORD): null
 
-    env(ORO_MAILER_TRANSPORT): smtp
+    env(ORO_MAILER_DRIVER): smtp
     env(ORO_MAILER_HOST): 127.0.0.1
     env(ORO_MAILER_PORT): null
     env(ORO_MAILER_ENCRYPTION): null
