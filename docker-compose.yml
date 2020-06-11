@@ -15,5 +15,10 @@ services:
     healthcheck:
       test: "mysqladmin ping --silent -u$${MYSQL_USER} -p$${MYSQL_PASSWORD}"
     restart: on-failure
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports: ['1025', '1080']
+    labels:
+      com.symfony.server.service-prefix: ORO_MAILER
 volumes:
   mysql: {}
