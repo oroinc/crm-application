@@ -67,7 +67,7 @@
     "sebastian/phpcpd": "4.0.*",
     "phpunit/phpcov": "5.0.*",
     "symfony/phpunit-bridge": "4.3.*",
-    "friendsofphp/php-cs-fixer": "2.16.1",
+    "friendsofphp/php-cs-fixer": "2.16.*",
     "oro/twig-inspector": "1.0.*",
     "oro/crm-documentation-examples": "4.1.x-dev",
     "oro/platform-documentation-examples": "4.1.x-dev"
@@ -106,6 +106,9 @@
     ],
     "set-assets-version": [
       "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
+    ],
+    "set-parameters": [
+      "Oro\\Bundle\\InstallerBundle\\Composer\\ParametersHandler::set"
     ]
   },
   "minimum-stability": "dev",
@@ -119,35 +122,7 @@
     "symfony-bin-dir": "bin",
     "symfony-tests-dir": "tests",
     "incenteev-parameters": {
-      "file": "config/parameters.yml",
-      "env-map": {
-        "database_driver": "ORO_DB_DRIVER",
-        "database_host": "ORO_DB_HOST",
-        "database_port": "ORO_DB_PORT",
-        "database_name": "ORO_DB_NAME",
-        "database_user": "ORO_DB_USER",
-        "database_password": "ORO_DB_PASSWORD",
-        "mailer_transport": "ORO_MAILER_TRANSPORT",
-        "mailer_host": "ORO_MAILER_HOST",
-        "mailer_port": "ORO_MAILER_PORT",
-        "mailer_encryption": "ORO_MAILER_ENCRYPTION",
-        "mailer_user": "ORO_MAILER_USER",
-        "mailer_password": "ORO_MAILER_PASSWORD",
-        "websocket_bind_address": "ORO_WS_BIND_ADDRESS",
-        "websocket_bind_port": "ORO_WS_BIND_PORT",
-        "websocket_frontend_host": "ORO_WS_FRONTEND_HOST",
-        "websocket_frontend_port": "ORO_WS_FRONTEND_PORT",
-        "websocket_backend_host": "ORO_WS_BACKEND_HOST",
-        "websocket_backend_port": "ORO_WS_BACKEND_PORT",
-        "web_backend_prefix": "ORO_WEB_BACKEND_PREFIX",
-        "session_handler": "ORO_SESSION_HANDLER",
-        "locale": "ORO_LOCALE",
-        "secret": "ORO_SECRET",
-        "installed": "ORO_INSTALLED",
-        "message_queue_transport": "ORO_MQ_TRANSPORT",
-        "message_queue_transport_config": "ORO_MQ_TRANSPORT_CONFIG",
-        "deployment_type": "ORO_DEPLOYMENT_TYPE"
-      }
+      "file": "config/parameters.yml"
     }
   }
 }
