@@ -4,7 +4,9 @@
     "homepage": "https://github.com/oroinc/crm-application.git",
     "license": "OSL-3.0",
     "autoload": {
-        "psr-4": {"": "src/"},
+        "psr-4": {
+            "": "src/"
+        },
         "classmap": [
             "src/AppKernel.php",
             "vendor/oro/platform/guzzle/Client.php"
@@ -37,7 +39,7 @@
         "behat/mink-extension": "2.3.*",
         "behat/mink-selenium2-driver": "1.3.1",
         "behat/symfony2-extension": "2.1.*",
-        "nelmio/alice": "3.5.*",
+        "nelmio/alice": "3.6.*",
         "theofidry/alice-data-fixtures": "1.0.*",
         "phpunit/phpunit": "7.5.*",
         "johnkary/phpunit-speedtrap": "3.0.*",
@@ -46,15 +48,15 @@
         "phpmd/phpmd": "2.6.*",
         "sebastian/phpcpd": "4.0.*",
         "phpunit/phpcov": "5.0.*",
-        "symfony/phpunit-bridge": "4.3.*",
+        "symfony/phpunit-bridge": "4.4.*",
         "friendsofphp/php-cs-fixer": "2.16.*",
         "oro/twig-inspector": "1.0.*"
-  },
+    },
     "config": {
         "component-dir": "public/bundles/components",
         "bin-dir": "bin",
         "fxp-asset": {
-          "enabled": false
+            "enabled": false
         }
     },
     "scripts": {
@@ -93,7 +95,7 @@
     "prefer-stable": true,
     "extra": {
         "symfony": {
-          "require": "4.4.*"
+            "require": "4.4.*"
         },
         "symfony-web-dir": "public",
         "symfony-var-dir": "var",
