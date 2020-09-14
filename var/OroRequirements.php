@@ -8,9 +8,14 @@ require_once __DIR__ . '/../var/SymfonyRequirements.php';
 
 use Oro\Bundle\AssetBundle\NodeJsExecutableFinder;
 use Oro\Bundle\AssetBundle\NodeJsVersionChecker;
+use Oro\Bundle\AttachmentBundle\Exception\ProcessorsException;
+use Oro\Bundle\AttachmentBundle\Exception\ProcessorsVersionException;
+use Oro\Bundle\AttachmentBundle\ProcessorHelper;
+use Oro\Bundle\AttachmentBundle\ProcessorVersionChecker;
 use Oro\Component\DoctrineUtils\DBAL\DbPrivilegesProvider;
 use Oro\Component\PhpUtils\ArrayUtil;
 use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\Intl\Intl;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Yaml\Yaml;
@@ -211,6 +216,7 @@ class OroRequirements extends SymfonyRequirements
             'memory_limit should be at least 512M',
             'Set the "<strong>memory_limit</strong>" setting in php.ini<a href="#phpini">*</a> to at least "512M".'
         );
+
         $nodeJsExecutableFinder = new NodeJsExecutableFinder();
         $nodeJsExecutable = $nodeJsExecutableFinder->findNodeJs();
         $nodeJsExists = null !== $nodeJsExecutable;
@@ -310,6 +316,49 @@ class OroRequirements extends SymfonyRequirements
                     'Execute "<strong>CREATE EXTENSION IF NOT EXISTS "uuid-ossp";</strong>" SQL command so UUID-OSSP extension will be installed for database.'
                 );
             }
+
+            $this->addProcessorsRequirements(ProcessorHelper::JPEGOPTIM, $config);
+            $this->addProcessorsRequirements(ProcessorHelper::PNGQUANT, $config);
+        }
+    }
+
+    /**
+     * @param string $libraryName
+     * @param array $config
+     */
+    private function addProcessorsRequirements(string $libraryName, array $config): void
+    {
+        $library = null;
+        $recommendation = true;
+        $processorHelper = new ProcessorHelper(new ParameterBag($config));
+        [$libraryName, $version] = ProcessorVersionChecker::getLibraryInfo($libraryName);
+
+        try {
+            $library = $libraryName === ProcessorHelper::JPEGOPTIM
+                ? $processorHelper->getJPEGOptimLibrary()
+                : $processorHelper->getPNGQuantLibrary();
+        } catch (ProcessorsException $exception) {
+            $this->addOroRequirement(
+                null !== $library,
+                sprintf('Library `%s` is installed', $libraryName),
+                sprintf('Library `%s` not found or not executable.', $libraryName)
+            );
+            $recommendation = false;
+        } catch (ProcessorsVersionException $exception) {
+            $this->addOroRequirement(
+                null !== $library,
+                sprintf('Minimum required `%s` library version should be %s', $libraryName, $version),
+                sprintf('Minimum required `%s` library version should be %s', $libraryName, $version)
+            );
+            $library = $exception->getBinary();
+        }
+
+        if ($recommendation) {
+            $this->addRecommendation(
+                null !== $library,
+                sprintf('Library `%s` is installed', $libraryName),
+                sprintf('Library `%s` should be installed', $libraryName)
+            );
         }
     }
 
@@ -400,7 +449,6 @@ class OroRequirements extends SymfonyRequirements
             case 'k':
             case 'kb':
                 $val *= 1024;
-            // no break
         }
 
         return (float)$val;
