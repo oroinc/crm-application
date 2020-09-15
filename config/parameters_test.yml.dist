@@ -41,6 +41,10 @@ parameters:
 
     deployment_type: ~
 
+    # Post processors binary
+    liip_imagine.jpegoptim.binary: null
+    liip_imagine.pngquant.binary: null
+
     # Fallback values (used if environmental variables are not set)
     env(ORO_DB_HOST): 127.0.0.1
     env(ORO_DB_PORT): null
