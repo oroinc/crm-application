@@ -132,6 +132,7 @@ Vagrant.configure("2") do |config|
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && php composer-setup.php
     php -r "unlink('composer-setup.php');"
     mv composer.phar /usr/bin/composer
+    composer self-update --1
     su - vagrant -c 'composer global require symfony/flex'
 
     echo "\n~~~~~~~~~~~~~~ Enable Installed Services ~~~~~~~~~~~~~~\n"
