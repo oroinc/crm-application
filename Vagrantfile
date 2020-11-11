@@ -132,6 +132,7 @@ Vagrant.configure("2") do |config|
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && php composer-setup.php
     php -r "unlink('composer-setup.php');"
     mv composer.phar /usr/bin/composer
+    composer self-update --1
     su - vagrant -c 'composer global require symfony/flex'
 
     echo "\n~~~~~~~~~~~~~~ Enable Installed Services ~~~~~~~~~~~~~~\n"
@@ -259,9 +260,9 @@ ____NGINXCONFIGTEMPLATE
 
     su - vagrant -c 'composer install --prefer-dist --no-dev --optimize-autoloader -n --working-dir=/var/www/oroapp'
 
-    sed -i "s/database_user:[ ]*root/database_user: $DB_USER/g" ./config/parameters.yml
-    sed -i "s/database_password:[ ]*null/database_password: $DB_PASSWORD/g" ./config/parameters.yml
-    sed -i "s/database_name:[ ]*[a-zA-Z0-9_]*/database_name: $DB_NAME/g" ./config/parameters.yml
+    sed -i "/database_user/s/:[[:space:]].*$/: $DB_USER/g" ./config/parameters.yml
+    sed -i "/database_password/s/:[[:space:]].*$/: '$DB_PASSWORD'/g" ./config/parameters.yml
+    sed -i "/database_name/s/:[[:space:]].*$/: $DB_NAME/g" ./config/parameters.yml
     chown vagrant:vagrant /var/www/oroapp/config/parameters.yml
 
     echo "\n~~~~~~~~~~~~~~ Install OroCRM Community Edition Application ~~~~~~~~~~~~~~\n"
