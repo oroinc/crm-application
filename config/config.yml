@@ -82,12 +82,6 @@ stof_doctrine_extensions:
             translatable:     true
             tree:             true
 
-services:
-    twig.extension.intl:
-         class: Twig_Extensions_Extension_Intl
-         tags:
-             - { name: twig.extension }
-
 oro_translation:
     locales:                  [en, fr]
     templating:               "OroUIBundle:Form:translatable.html.twig"
