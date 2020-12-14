@@ -616,7 +616,7 @@ class YamlFileLoader extends Symfony\Component\Config\Loader\FileLoader
     {
         $path = $this->locator->locate($resource);
 
-        $content = Yaml::parse(file_get_contents($path));
+        $content = Yaml::parse(file_get_contents($path), Yaml::PARSE_CONSTANT | Yaml::PARSE_CUSTOM_TAGS);
 
         // empty file
         if (null === $content) {
