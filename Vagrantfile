@@ -290,8 +290,8 @@ ____DOCTRINECONFIG
     cd /var/www/oroapp
     find . -type f -exec chmod 0644 {} \\;
     find . -type d -exec chmod 0755 {} \\;
-    chown -R nginx:nginx ./var/{sessions,attachment,cache,import_export,logs}
-    chown -R nginx:nginx ./public/{media,uploads,js}
+    chown -R nginx:nginx ./var/{sessions,data,cache,logs}
+    chown -R nginx:nginx ./public/{media,js}
 
     echo "\n*********************************************************************************"
     echo "************** Step 4: Post-installation Environment Configuration **************"

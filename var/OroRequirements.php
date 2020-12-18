@@ -240,11 +240,6 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addOroRequirement(
-            is_writable($baseDir . '/public/uploads'),
-            'public/uploads/ directory must be writable',
-            'Change the permissions of the "<strong>public/uploads/</strong>" directory so that the web server can write into it.'
-        );
-        $this->addOroRequirement(
             is_writable($baseDir . '/public/media'),
             'public/media/ directory must be writable',
             'Change the permissions of the "<strong>public/media/</strong>" directory so that the web server can write into it.'
@@ -255,39 +250,16 @@ class OroRequirements extends SymfonyRequirements
             'Change the permissions of the "<strong>public/bundles/</strong>" directory so that the web server can write into it.'
         );
         $this->addOroRequirement(
-            is_writable($baseDir . '/var/attachment'),
-            'var/attachment/ directory must be writable',
-            'Change the permissions of the "<strong>var/attachment/</strong>" directory so that the web server can write into it.'
+            is_writable($baseDir . '/var/data'),
+            'var/data/ directory must be writable',
+            'Change the permissions of the "<strong>var/data/</strong>" directory so that the web server can write into it.'
         );
+
         $this->addOroRequirement(
-            is_writable($baseDir . '/var/import_export'),
-            'var/import_export/ directory must be writable',
-            'Change the permissions of the "<strong>var/import_export/</strong>" directory so that the web server can write into it.'
+            is_writable($baseDir . '/public/js'),
+            'public/js directory must be writable',
+            'Change the permissions of the "<strong>public/js</strong>" directory so that the web server can write into it.'
         );
-
-        if (is_dir($baseDir . '/public/js')) {
-            $this->addOroRequirement(
-                is_writable($baseDir . '/public/js'),
-                'public/js directory must be writable',
-                'Change the permissions of the "<strong>public/js</strong>" directory so that the web server can write into it.'
-            );
-        }
-
-        if (is_dir($baseDir . '/public/css')) {
-            $this->addOroRequirement(
-                is_writable($baseDir . '/public/css'),
-                'public/css directory must be writable',
-                'Change the permissions of the "<strong>public/css</strong>" directory so that the web server can write into it.'
-            );
-        }
-
-        if (!is_dir($baseDir . '/public/css') || !is_dir($baseDir . '/public/js')) {
-            $this->addOroRequirement(
-                is_writable($baseDir . '/public'),
-                'public directory must be writable',
-                'Change the permissions of the "<strong>public</strong>" directory so that the web server can write into it.'
-            );
-        }
 
         if (is_file($baseDir . '/config/parameters.yml')) {
             $this->addOroRequirement(
