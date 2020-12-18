@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6935101444d473e9ab5a20b9566c6ece",
+    "content-hash": "381e2ec56665508da00daedd9bb47c9a",
     "packages": [
         {
             "name": "akeneo/batch-bundle",
@@ -4342,6 +4342,57 @@
             "time": "2014-01-12T16:20:24+00:00"
         },
         {
+            "name": "jean85/pretty-package-versions",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jean85/pretty-package-versions.git",
+                "reference": "75c7effcf3f77501d0e0caa75111aff4daa0dd48"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/75c7effcf3f77501d0e0caa75111aff4daa0dd48",
+                "reference": "75c7effcf3f77501d0e0caa75111aff4daa0dd48",
+                "shasum": ""
+            },
+            "require": {
+                "ocramius/package-versions": "^1.2.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jean85\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alessandro Lai",
+                    "email": "alessandro.lai85@gmail.com"
+                }
+            ],
+            "description": "A wrapper for ocramius/package-versions to get pretty versions strings",
+            "keywords": [
+                "composer",
+                "package",
+                "release",
+                "versions"
+            ],
+            "time": "2018-06-13T13:22:40+00:00"
+        },
+        {
             "name": "jms/cg",
             "version": "1.2.0",
             "source": {
@@ -5971,17 +6022,81 @@
             "time": "2019-12-02T02:32:27+00:00"
         },
         {
-            "name": "monolog/monolog",
-            "version": "1.25.5",
+            "name": "mongodb/mongodb",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0"
+                "url": "https://github.com/mongodb/mongo-php-library.git",
+                "reference": "953dbc19443aa9314c44b7217a16873347e6840d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1817faadd1846cd08be9a49e905dc68823bc38c0",
-                "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0",
+                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/953dbc19443aa9314c44b7217a16873347e6840d",
+                "reference": "953dbc19443aa9314c44b7217a16873347e6840d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-hash": "*",
+                "ext-json": "*",
+                "ext-mongodb": "^1.8.1",
+                "jean85/pretty-package-versions": "^1.2",
+                "php": "^7.0 || ^8.0",
+                "symfony/polyfill-php80": "^1.19"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.5, <3.5.5",
+                "symfony/phpunit-bridge": "5.x-dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MongoDB\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Braun",
+                    "email": "andreas.braun@mongodb.com"
+                },
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com"
+                }
+            ],
+            "description": "MongoDB driver library",
+            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
+            "keywords": [
+                "database",
+                "driver",
+                "mongodb",
+                "persistence"
+            ],
+            "time": "2020-11-25T12:26:02+00:00"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.26.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "2209ddd84e7ef1256b7af205d0717fb62cfc9c33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/2209ddd84e7ef1256b7af205d0717fb62cfc9c33",
+                "reference": "2209ddd84e7ef1256b7af205d0717fb62cfc9c33",
                 "shasum": ""
             },
             "require": {
@@ -5997,7 +6112,7 @@
                 "graylog2/gelf-php": "~1.0",
                 "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
-                "php-parallel-lint/php-parallel-lint": "^1.0",
+                "phpstan/phpstan": "^0.12.59",
                 "phpunit/phpunit": "~4.5",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "sentry/sentry": "^0.13",
@@ -6017,11 +6132,6 @@
                 "sentry/sentry": "Allow sending log messages to a Sentry server"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Monolog\\": "src/Monolog"
@@ -6055,7 +6165,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-23T08:35:51+00:00"
+            "time": "2020-12-14T12:56:38+00:00"
         },
         {
             "name": "mustangostang/spyc",
@@ -6959,6 +7069,59 @@
                 "type"
             ],
             "time": "2018-11-12T09:15:04+00:00"
+        },
+        {
+            "name": "oro/gridfs-config",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../package/gridfs-config",
+                "reference": "c6c8cbe6a086cf037de98358cdc5035c45c5c1e2"
+            },
+            "require": {
+                "ext-mongodb": "*",
+                "knplabs/knp-gaufrette-bundle": "0.5.2",
+                "mongodb/mongodb": "^1.1",
+                "oro/platform": "4.2.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "9.1.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Oro\\Bundle\\GridFSConfigBundle\\": "src/Oro/Bundle/GridFSConfigBundle"
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oro, Inc",
+                    "homepage": "http://oroinc.com"
+                }
+            ],
+            "description": "GridFS adapter configuration for Gaufrette",
+            "homepage": "https://github.com/oroinc/gridfs-config",
+            "keywords": [
+                "GridFS",
+                "Mongo",
+                "MongoDB",
+                "Oro",
+                "OroPlatform"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "oro/mailchimp",
@@ -9477,20 +9640,23 @@
         },
         {
             "name": "seld/cli-prompt",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/cli-prompt.git",
-                "reference": "a19a7376a4689d4d94cab66ab4f3c816019ba8dd"
+                "reference": "b8dfcf02094b8c03b40322c229493bb2884423c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/cli-prompt/zipball/a19a7376a4689d4d94cab66ab4f3c816019ba8dd",
-                "reference": "a19a7376a4689d4d94cab66ab4f3c816019ba8dd",
+                "url": "https://api.github.com/repos/Seldaek/cli-prompt/zipball/b8dfcf02094b8c03b40322c229493bb2884423c5",
+                "reference": "b8dfcf02094b8c03b40322c229493bb2884423c5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.63"
             },
             "type": "library",
             "extra": {
@@ -9521,7 +9687,7 @@
                 "input",
                 "prompt"
             ],
-            "time": "2017-03-18T11:32:45+00:00"
+            "time": "2020-12-15T21:32:01+00:00"
         },
         {
             "name": "seld/jsonlint",
@@ -18411,6 +18577,7 @@
         "oro/crm-zendesk": 20,
         "oro/redis-config": 20,
         "oro/mailchimp": 20,
+        "oro/gridfs-config": 20,
         "behat/mink": 20,
         "oro/crm-documentation-examples": 20,
         "oro/platform-documentation-examples": 20
