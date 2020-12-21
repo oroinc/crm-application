@@ -27,6 +27,7 @@ framework:
         save_path:            '%kernel.project_dir%/var/sessions/%kernel.environment%'
         gc_maxlifetime:       3600
         cookie_httponly:      true
+        cookie_secure:        'auto'
     fragments:
         enabled:              true
         path:                 /_fragment # used for controller action in template
@@ -134,8 +135,14 @@ oro_locale:
 
 oro_attachment:
     upload_file_mime_types:
+        - text/csv
+        - text/plain
         - application/msword
+        - application/vnd.openxmlformats-officedocument.wordprocessingml.document
         - application/vnd.ms-excel
+        - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+        - application/vnd.ms-powerpoint
+        - application/vnd.openxmlformats-officedocument.presentationml.presentation
         - application/pdf
         - application/zip
         - image/gif
