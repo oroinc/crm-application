@@ -6,16 +6,16 @@ Please also refer to [CHANGELOG.md](CHANGELOG.md) for a list of significant chan
 
 ## 4.2.0
 
-The File storage component was implement. Directories `var/attchment` and `var/import-export` are no longer used as storage
+The File storage component was implement. Directories `var/attchment` and `var/import_export` are no longer used as storage
 and has been removed from the git source code.
 
 Files from these directories must be moved to new locations:
 
  - files from `var/attachment` to `var/data/attachments`;
  - files from `var/attachment/protected_mediacache` to `var/data/protected_mediacache`;
- - files from `var/import-export` to `var/data/importexport`.
+ - files from `var/import_export` to `var/data/importexport`.
  
-Files for import should be placed into `var/data/importexport/files` instead of `var/import_export/files`.
+Files for import should be placed into `var/data/import_files` instead of `var/import_export/files`.
 
 Directory `public/uploads` has been removed.
 
