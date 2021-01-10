@@ -5948,6 +5948,69 @@
             "time": "2018-04-30T09:53:17+00:00"
         },
         {
+            "name": "matomo/device-detector",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matomo-org/device-detector.git",
+                "reference": "6b3facc35e7a465bc4223fddfa5fa88c5b327554"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/6b3facc35e7a465bc4223fddfa5fa88c5b327554",
+                "reference": "6b3facc35e7a465bc4223fddfa5fa88c5b327554",
+                "shasum": ""
+            },
+            "require": {
+                "mustangostang/spyc": "*",
+                "php": ">=7.2"
+            },
+            "replace": {
+                "piwik/device-detector": "self.version"
+            },
+            "require-dev": {
+                "matthiasmullie/scrapbook": "^1.4.7",
+                "mayflower/mo4-coding-standard": "dev-master#275cb9d",
+                "phpstan/phpstan": "^0.12.52",
+                "phpunit/phpunit": "^8.5.8",
+                "psr/cache": "^1.0.1",
+                "psr/simple-cache": "^1.0.1",
+                "symfony/yaml": "^5.1.7"
+            },
+            "suggest": {
+                "doctrine/cache": "Can directly be used for caching purpose",
+                "ext-yaml": "Necessary for using the Pecl YAML parser"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DeviceDetector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "The Matomo Team",
+                    "email": "hello@matomo.org",
+                    "homepage": "https://matomo.org/team/"
+                }
+            ],
+            "description": "The Universal Device Detection library, that parses User Agents and detects devices (desktop, tablet, mobile, tv, cars, console, etc.), clients (browsers, media players, mobile apps, feed readers, libraries, etc), operating systems, devices, brands and models.",
+            "homepage": "https://matomo.org",
+            "keywords": [
+                "devicedetection",
+                "parser",
+                "useragent"
+            ],
+            "time": "2021-01-08T14:14:55+00:00"
+        },
+        {
             "name": "michelf/php-markdown",
             "version": "1.9.0",
             "source": {
@@ -7392,7 +7455,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "f0648bef65ed803c66edc5365648ef9e78b41fd8"
+                "reference": "e53ebf47298f45258fb20a44565ae76704dcae45"
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.12",
@@ -7435,6 +7498,7 @@
                 "laminas/laminas-mail": "^2.12.0",
                 "lexik/maintenance-bundle": "2.1.5",
                 "liip/imagine-bundle": "2.0.0",
+                "matomo/device-detector": "~4.1.0",
                 "monolog/monolog": "^1.25.1",
                 "myclabs/deep-copy": "1.10.*",
                 "nelmio/api-doc-bundle": "2.13.3",
@@ -7448,7 +7512,6 @@
                 "php": "~7.4.11",
                 "php-http/httplug-bundle": "1.15.2",
                 "phpdocumentor/reflection-docblock": "4.3.*",
-                "piwik/device-detector": "3.10.*",
                 "psr/container": "^1.0",
                 "psr/simple-cache": "1.0.*",
                 "salsify/json-streaming-parser": "8.2.*",
@@ -8567,61 +8630,6 @@
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "time": "2020-09-17T18:55:26+00:00"
-        },
-        {
-            "name": "piwik/device-detector",
-            "version": "3.10.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/matomo-org/device-detector.git",
-                "reference": "67e96595cd7649b7967533053fcbfbe02d5c55a3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/67e96595cd7649b7967533053fcbfbe02d5c55a3",
-                "reference": "67e96595cd7649b7967533053fcbfbe02d5c55a3",
-                "shasum": ""
-            },
-            "require": {
-                "mustangostang/spyc": "*",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "~1.7",
-                "matthiasmullie/scrapbook": "@stable",
-                "phpunit/phpunit": "^4.8.36",
-                "psr/cache": "^1.0",
-                "psr/simple-cache": "^1.0"
-            },
-            "suggest": {
-                "doctrine/cache": "Can directly be used for caching purpose"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DeviceDetector\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "The Matomo Team",
-                    "email": "hello@matomo.org",
-                    "homepage": "https://matomo.org/team/"
-                }
-            ],
-            "description": "The Universal Device Detection library, that parses User Agents and detects devices (desktop, tablet, mobile, tv, cars, console, etc.), clients (browsers, media players, mobile apps, feed readers, libraries, etc), operating systems, devices, brands and models.",
-            "homepage": "https://matomo.org",
-            "keywords": [
-                "devicedetection",
-                "parser",
-                "useragent"
-            ],
-            "abandoned": "matomo/device-detector",
-            "time": "2018-05-07T19:33:29+00:00"
         },
         {
             "name": "predis/predis",
