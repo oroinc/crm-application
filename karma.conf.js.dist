@@ -1,0 +1,175 @@
+/* eslint indent: ["error", 2] */
+/* eslint-env node */
+const fs = require('fs');
+const glob = require('glob');
+const path = require('path');
+const args = require('minimist')(process.argv.slice(4));
+
+const appDir = path.resolve('.');
+const environment = args.env || 'dev';
+const theme = args.theme || 'admin.oro';
+
+const webpackConfig = (function() {
+  const OroConfig = require('@oroinc/oro-webpack-config-builder');
+  OroConfig
+    .enableLayoutThemes()
+    .setPublicPath('public/')
+    .setCachePath('var/cache');
+
+  const {resolve, module, resolveLoader} = OroConfig.getWebpackConfig()({
+    skipCSS: true,
+    skipBabel: true,
+    theme: theme,
+    symfony: environment
+  }, {})[0];
+
+  const rules = [...module.rules];
+  const index = rules.findIndex(rule => rule.loader === 'config-loader');
+  rules.splice(index, 1, {
+    ...rules[index],
+    options: {
+      ...rules[index].options,
+      relativeTo: appDir
+    }
+  });
+
+  return {
+    resolve: {
+      ...resolve,
+      alias: {
+        ...resolve.alias,
+        'dynamic-imports$':
+            path.resolve('vendor/oro/platform/src/Oro/Bundle/TestFrameworkBundle/Karma/dynamic-imports.js')
+      },
+      modules: [
+        appDir,
+        path.resolve('vendor/oro/platform/src/Oro/Bundle/TestFrameworkBundle/Karma'),
+        ...resolve.modules
+      ]
+    },
+    module: {
+      ...module,
+      rules
+    },
+    resolveLoader
+  };
+})();
+
+const specMask = args.mask || 'vendor/oro/**/Tests/JS/**/*Spec.js';
+const specFileName = args.spec || `var/cache/${environment}/${theme}/indexSpec.js`;
+
+if (!args.spec && !(args['skip-indexing'] && fs.existsSync(specFileName))) {
+  console.log('[%o] Collecting Spec files by mask "%s"...', new Date(), specMask);
+  const files = glob.sync(specMask, {follow: true});
+  console.log('[%o] Found %d Spec files', new Date(), files.length);
+  fs.mkdirSync(path.dirname(specFileName), {recursive: true});
+  fs.writeFileSync(specFileName, files.map(file => `require('${file}');`).join('\n'));
+}
+console.log('[%o] Starting Karma for "%s"...', new Date(), specFileName);
+
+module.exports = function(config) {
+  config.set({
+    // base path, that will be used to resolve files and exclude
+    basePath: '',
+    baseUrl: '/',
+
+    frameworks: ['jasmine'],
+
+    // list of files / patterns to load in the browser
+    files: [
+      specFileName
+    ],
+
+    // list of files to exclude
+    exclude: [],
+
+    preprocessors: {
+      '**/*Spec.js': ['webpack']
+    },
+
+    // use dots reporter, as travis terminal does not support escaping sequences
+    // possible values: 'dots', 'progress'
+    // CLI --reporters progress
+    reporters: ['progress', /* 'coverage', */ 'junit'],
+
+    junitReporter: {
+      // will be resolved to basePath (in the same way as files/exclude patterns)
+      outputDir: 'build/logs',
+      outputFile: 'karma.xml',
+      useBrowserName: false
+    },
+
+    /* coverageReporter: {
+      type: 'html',
+      dir:  'build/logs/js-coverage/'
+    }, */
+
+    // web server port
+    // CLI --port 9876
+    port: 9876,
+
+    // enable / disable colors in the output (reporters and logs)
+    // CLI --colors --no-colors
+    colors: true,
+
+    // level of logging
+    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    // CLI --log-level debug
+    logLevel: config.LOG_INFO,
+
+    // enable / disable watching file and executing tests whenever any file changes
+    // CLI --auto-watch --no-auto-watch
+    autoWatch: true,
+
+    // Start these browsers, currently available:
+    // - Chrome
+    // - ChromeCanary
+    // - Firefox
+    // - Opera
+    // - Safari (only Mac)
+    // - IE (only Windows)
+    // CLI --browsers Chrome,Firefox,Safari
+    // browsers: [process.env.TRAVIS ? 'Firefox' : 'Chrome'],
+    browsers: ['ChromeHeadless'],
+    // browsers: ['Chrome'],
+    // browsers: ['Firefox'],
+
+    // If browser does not capture in given timeout [ms], kill it
+    // CLI --capture-timeout 5000
+    captureTimeout: 20000,
+
+    // Auto run tests on start (when browsers are captured) and exit
+    // CLI --single-run --no-single-run
+    singleRun: false,
+
+    // report which specs are slower than 500ms
+    // CLI --report-slower-than 500
+    reportSlowerThan: 500,
+
+    // Concurrency level
+    // how many browser should be started simultaneous
+    concurrency: Infinity,
+
+    plugins: [
+      'karma-webpack',
+      'karma-jasmine',
+      'karma-junit-reporter',
+      'karma-firefox-launcher',
+      'karma-chrome-launcher'
+    ],
+
+    webpack: {
+      ...webpackConfig,
+      devtool: false,
+      mode: 'none',
+      optimization: {
+        namedModules: true
+      }
+    },
+    webpackMiddleware: {
+      // turn off webpack bash output when running the tests
+      noInfo: true,
+      stats: 'errors-only'
+    }
+  });
+};
