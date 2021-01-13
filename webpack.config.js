@@ -1,4 +1,4 @@
-const OroConfig = require('./vendor/oro/platform/build/webpack-config-builder/oro-webpack-config');
+const OroConfig = require('@oroinc/oro-webpack-config-builder');
 
 OroConfig
     .setPublicPath('public/')
