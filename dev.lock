@@ -2738,16 +2738,16 @@
         },
         {
             "name": "gos/pubsub-router-bundle",
-            "version": "v2.3.0",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GeniusesOfSymfony/PubSubRouterBundle.git",
-                "reference": "cc8710509d09d87519d5dd0f206e8e502546eadb"
+                "reference": "9fd8e79f78703f307de1509df4883d20e4642054"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GeniusesOfSymfony/PubSubRouterBundle/zipball/cc8710509d09d87519d5dd0f206e8e502546eadb",
-                "reference": "cc8710509d09d87519d5dd0f206e8e502546eadb",
+                "url": "https://api.github.com/repos/GeniusesOfSymfony/PubSubRouterBundle/zipball/9fd8e79f78703f307de1509df4883d20e4642054",
+                "reference": "9fd8e79f78703f307de1509df4883d20e4642054",
                 "shasum": ""
             },
             "require": {
@@ -2755,13 +2755,13 @@
                 "symfony/config": "^4.4 || ^5.1",
                 "symfony/console": "^4.4 || ^5.1",
                 "symfony/dependency-injection": "^4.4 || ^5.1",
-                "symfony/framework-bundle": "^4.4 || ^5.1",
+                "symfony/deprecation-contracts": "^2.1",
                 "symfony/http-foundation": "^4.4 || ^5.1",
                 "symfony/http-kernel": "^4.4 || ^5.1",
+                "symfony/polyfill-php80": "^1.22",
                 "symfony/yaml": "^4.4 || ^5.1"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.16.4",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.1.2",
                 "phpstan/extension-installer": "^1.0.5",
                 "phpstan/phpstan": "^0.12.50",
@@ -2801,38 +2801,38 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-11-02T23:47:06+00:00"
+            "time": "2021-01-13T03:18:41+00:00"
         },
         {
             "name": "gos/web-socket-bundle",
-            "version": "v3.3.0",
+            "version": "v3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GeniusesOfSymfony/WebSocketBundle.git",
-                "reference": "77c9eb13ed7e3a15c976dd2cf5c86748aa4218f8"
+                "reference": "c38c64559a5245774c787fc0e327f288c5ae1cff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GeniusesOfSymfony/WebSocketBundle/zipball/77c9eb13ed7e3a15c976dd2cf5c86748aa4218f8",
-                "reference": "77c9eb13ed7e3a15c976dd2cf5c86748aa4218f8",
+                "url": "https://api.github.com/repos/GeniusesOfSymfony/WebSocketBundle/zipball/c38c64559a5245774c787fc0e327f288c5ae1cff",
+                "reference": "c38c64559a5245774c787fc0e327f288c5ae1cff",
                 "shasum": ""
             },
             "require": {
                 "cboden/ratchet": "^0.4.2",
                 "gos/pubsub-router-bundle": "^2.2",
                 "gos/websocket-client": "^1.1",
-                "php": "^7.4",
+                "php": "^7.4 || ^8.0",
                 "psr/log": "^1.1",
                 "react/event-loop": "^1.0",
-                "symfony/config": "^4.4 || ^5.0",
-                "symfony/console": "^4.4 || ^5.0",
-                "symfony/dependency-injection": "^4.4 || ^5.0",
+                "symfony/config": "^4.4 || ^5.1",
+                "symfony/console": "^4.4 || ^5.1",
+                "symfony/dependency-injection": "^4.4 || ^5.1",
                 "symfony/deprecation-contracts": "^2.1",
-                "symfony/event-dispatcher": "^4.4 || ^5.0",
-                "symfony/http-foundation": "^4.4 || ^5.0",
-                "symfony/http-kernel": "^4.4 || ^5.0",
-                "symfony/security-core": "^4.4 || ^5.0",
-                "symfony/serializer": "^4.4 || ^5.0"
+                "symfony/event-dispatcher": "^4.4 || ^5.1",
+                "symfony/http-foundation": "^4.4 || ^5.1",
+                "symfony/http-kernel": "^4.4 || ^5.1",
+                "symfony/security-core": "^4.4 || ^5.1",
+                "symfony/serializer": "^4.4 || ^5.1"
             },
             "conflict": {
                 "gos/react-amqp": "<0.3",
@@ -2841,24 +2841,24 @@
             },
             "require-dev": {
                 "doctrine/cache": "^1.8",
-                "doctrine/dbal": "^2.9",
-                "friendsofphp/php-cs-fixer": "^2.16",
-                "matthiasnoback/symfony-dependency-injection-test": "^4.1",
-                "phpstan/extension-installer": "^1.0.3",
-                "phpstan/phpstan": "^0.12.25",
-                "phpstan/phpstan-phpunit": "^0.12.8",
-                "phpstan/phpstan-symfony": "^0.12.6",
-                "phpunit/phpunit": "^8.5 || ^9.0",
-                "symfony/cache": "^4.4 || ^5.0",
-                "symfony/options-resolver": "^4.4 || ^5.0",
-                "symfony/stopwatch": "^4.4 || ^5.0",
-                "symfony/twig-bundle": "^4.4 || ^5.0",
-                "symfony/web-profiler-bundle": "^4.4 || ^5.0"
+                "doctrine/dbal": "^2.9 || ^3.0",
+                "matthiasnoback/symfony-dependency-injection-test": "^4.2",
+                "phpstan/extension-installer": "^1.0.5",
+                "phpstan/phpstan": "^0.12.50",
+                "phpstan/phpstan-phpunit": "^0.12.16",
+                "phpstan/phpstan-symfony": "^0.12.8",
+                "phpunit/phpunit": "^9.3",
+                "symfony/cache": "^4.4 || ^5.1",
+                "symfony/options-resolver": "^4.4 || ^5.1",
+                "symfony/stopwatch": "^4.4 || ^5.1",
+                "symfony/twig-bundle": "^4.4 || ^5.1",
+                "symfony/web-profiler-bundle": "^4.4 || ^5.1"
             },
             "suggest": {
                 "doctrine/cache": "to use doctrine/cache as a client driver",
                 "doctrine/dbal": "to use Doctrine ping services",
                 "ext-amqp": "* to use the amqp pusher",
+                "ext-pcntl": "* to handle process signals",
                 "ext-pdo": "* to use PDO ping services",
                 "gos/react-amqp": "to use the amqp server push handler",
                 "symfony/cache": "to use symfony/cache as a client driver",
@@ -2867,11 +2867,6 @@
                 "symfony/stopwatch": "to use the data collectors"
             },
             "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Gos\\Bundle\\WebSocketBundle\\": "src/"
@@ -2906,7 +2901,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-07-06T14:19:22+00:00"
+            "time": "2021-01-13T03:31:36+00:00"
         },
         {
             "name": "gos/websocket-client",
@@ -7351,7 +7346,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "d94894c2e5f08e9f24afff09dfb4388828d3ac3a"
+                "reference": "176a77d0e3330d641ad4b67b9f1c9c0c92e81e09"
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.12",
@@ -7381,7 +7376,7 @@
                 "ezyang/htmlpurifier": "4.12.*",
                 "friendsofsymfony/jsrouting-bundle": "2.7.*",
                 "friendsofsymfony/rest-bundle": "2.7.*",
-                "gos/web-socket-bundle": "3.3.*",
+                "gos/web-socket-bundle": "3.6.*",
                 "guzzlehttp/guzzle": "7.2.*",
                 "hwi/oauth-bundle": "1.1.*",
                 "incenteev/composer-parameter-handler": "2.1.*",
