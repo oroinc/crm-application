@@ -7,8 +7,10 @@
         "watch": "./node_modules/webpack/bin/webpack.js --hide-modules --colors --watch --progress --env.skipBabel",
         "build-css": "./node_modules/webpack/bin/webpack.js --hide-modules --colors --env.skipJS",
         "build-js": "./node_modules/webpack/bin/webpack.js --hide-modules --colors --env.skipCSS --env.skipBabel",
-        "lint": "eslint -c vendor/oro/platform/build/.eslintrc.yml --ignore-path vendor/oro/platform/build/.eslintignore",
-        "test": "karma start karma.conf.js.dist --single-run --env=prod"
+        "lint": "npm run lint-path -- vendor/oro",
+        "lint-path": "eslint -c vendor/oro/platform/build/.eslintrc.yml --ignore-path vendor/oro/platform/build/.eslintignore",
+        "test": "npm run test-watch -- --single-run",
+        "test-watch": "karma start karma.conf.js.dist --env=prod"
     },
     "dependencies": {
         "@babel/runtime": "^7.10.4",
