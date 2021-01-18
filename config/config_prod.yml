@@ -51,3 +51,8 @@ monolog:
             id:             oro_message_queue.log.handler.console_error
             handler:        nested
             level:          debug
+
+        filter_consumer:
+            type:          service
+            id:            oro_message_queue.log.handler.verbosity_filter
+            handler:       nested
