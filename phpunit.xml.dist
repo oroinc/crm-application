@@ -3,11 +3,10 @@
 <!-- https://phpunit.de/manual/current/en/appendixes.configuration.html -->
 <phpunit
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.7/phpunit.xsd"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
         backupGlobals="false"
         backupStaticAttributes="false"
         bootstrap="vendor/autoload.php"
-        cacheTokens="true"
         stopOnError="false"
         stopOnFailure="false"
         stopOnWarning="false"
@@ -15,7 +14,7 @@
         stopOnRisky="false"
         stopOnSkipped="false"
         failOnRisky="false"
-        failOnWarning="true"
+        failOnWarning="false"
         beStrictAboutChangesToGlobalState="false"
         beStrictAboutOutputDuringTests="false"
         beStrictAboutResourceUsageDuringSmallTests="false"
@@ -77,40 +76,40 @@
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
         <listener class="Oro\Component\TestUtils\Listener\TestListener"/>
     </listeners>
-    <filter>
-        <whitelist>
+    <coverage>
+        <include>
             <directory>vendor/oro</directory>
-            <exclude>
-                <directory>vendor/oro/*/Command</directory>
-                <directory>vendor/oro/*/*/Command</directory>
-                <directory>vendor/oro/*/*/*/Command</directory>
-                <directory>vendor/oro/*/*/*/*/Command</directory>
-                <directory>vendor/oro/*/*/*/*/*/Command</directory>
+        </include>
+        <exclude>
+            <directory>vendor/oro/*/Command</directory>
+            <directory>vendor/oro/*/*/Command</directory>
+            <directory>vendor/oro/*/*/*/Command</directory>
+            <directory>vendor/oro/*/*/*/*/Command</directory>
+            <directory>vendor/oro/*/*/*/*/*/Command</directory>
 
-                <directory>vendor/oro/*/Controller</directory>
-                <directory>vendor/oro/*/*/Controller</directory>
-                <directory>vendor/oro/*/*/*/Controller</directory>
-                <directory>vendor/oro/*/*/*/*/Controller</directory>
-                <directory>vendor/oro/*/*/*/*/*/Controller</directory>
+            <directory>vendor/oro/*/Controller</directory>
+            <directory>vendor/oro/*/*/Controller</directory>
+            <directory>vendor/oro/*/*/*/Controller</directory>
+            <directory>vendor/oro/*/*/*/*/Controller</directory>
+            <directory>vendor/oro/*/*/*/*/*/Controller</directory>
 
-                <directory>vendor/oro/*/Entity/Repository</directory>
-                <directory>vendor/oro/*/*/Entity/Repository</directory>
-                <directory>vendor/oro/*/*/*/Entity/Repository</directory>
-                <directory>vendor/oro/*/*/*/*/Entity/Repository</directory>
-                <directory>vendor/oro/*/*/*/*/*/Entity/Repository</directory>
+            <directory>vendor/oro/*/Entity/Repository</directory>
+            <directory>vendor/oro/*/*/Entity/Repository</directory>
+            <directory>vendor/oro/*/*/*/Entity/Repository</directory>
+            <directory>vendor/oro/*/*/*/*/Entity/Repository</directory>
+            <directory>vendor/oro/*/*/*/*/*/Entity/Repository</directory>
 
-                <directory>vendor/oro/*/Migrations</directory>
-                <directory>vendor/oro/*/*/Migrations</directory>
-                <directory>vendor/oro/*/*/*/Migrations</directory>
-                <directory>vendor/oro/*/*/*/*/Migrations</directory>
-                <directory>vendor/oro/*/*/*/*/*/Migrations</directory>
+            <directory>vendor/oro/*/Migrations</directory>
+            <directory>vendor/oro/*/*/Migrations</directory>
+            <directory>vendor/oro/*/*/*/Migrations</directory>
+            <directory>vendor/oro/*/*/*/*/Migrations</directory>
+            <directory>vendor/oro/*/*/*/*/*/Migrations</directory>
 
-                <directory>vendor/oro/*/Tests</directory>
-                <directory>vendor/oro/*/*/Tests</directory>
-                <directory>vendor/oro/*/*/*/Tests</directory>
-                <directory>vendor/oro/*/*/*/*/Tests</directory>
-                <directory>vendor/oro/*/*/*/*/*/Tests</directory>
-            </exclude>
-        </whitelist>
-    </filter>
+            <directory>vendor/oro/*/Tests</directory>
+            <directory>vendor/oro/*/*/Tests</directory>
+            <directory>vendor/oro/*/*/*/Tests</directory>
+            <directory>vendor/oro/*/*/*/*/Tests</directory>
+            <directory>vendor/oro/*/*/*/*/*/Tests</directory>
+        </exclude>
+    </coverage>
 </phpunit>
