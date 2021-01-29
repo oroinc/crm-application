@@ -38,7 +38,7 @@ framework:
 twig:
     debug:                    "%kernel.debug%"
     strict_variables:         "%kernel.debug%"
-    exception_controller:     "Oro\\Bundle\\UIBundle\\Controller\\ExceptionController::showAction"
+    exception_controller:     null # use framework.error_controller instead
     globals:
         bap:
             layout:           base.html.twig  # default layout across all Oro bundles
