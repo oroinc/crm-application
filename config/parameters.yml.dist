@@ -5,6 +5,7 @@ parameters:
     database_name:          '%env(ORO_DB_NAME)%'
     database_user:          '%env(ORO_DB_USER)%'
     database_password:      '%env(ORO_DB_PASSWORD)%'
+    database_server_version: '%env(ORO_DB_VERSION)%'
     database_driver_options: []
 
     mailer_transport:       '%env(ORO_MAILER_DRIVER)%'
@@ -55,6 +56,7 @@ parameters:
     env(ORO_DB_NAME): oro_crm
     env(ORO_DB_USER): root
     env(ORO_DB_PASSWORD): null
+    env(ORO_DB_VERSION): null
 
     env(ORO_MAILER_DRIVER): smtp
     env(ORO_MAILER_HOST): 127.0.0.1
