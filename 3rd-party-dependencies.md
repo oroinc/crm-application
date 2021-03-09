@@ -345,6 +345,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |@oroinc/jsplumb|https://github.com/sporritt/jsPlumb/blob/master/README.md|https://github.com/sporritt/jsPlumb||
 |@oroinc/oro-webpack-config-builder|https://npmjs.com/package/@oroinc/oro-webpack-config-builder/blob/master/LICENSE|https://npmjs.com/package/@oroinc/oro-webpack-config-builder|Copyright (c) 2013, Oro, Inc.|
 |@oroinc/select2|https://github.com/select2/select2/blob/master/LICENSE|https://github.com/select2/select2|Copyright 2012 Igor Vaynberg|
+|@romainberger/css-diff|https://github.com/romainberger/css-diff/blob/master/LICENSE.md|https://github.com/romainberger/css-diff|Copyright (c) Romain Berger <romain@romainberger.com>|
 |@types/glob|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/json-schema|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/minimatch|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation. All rights reserved.|
@@ -645,6 +646,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |find-cache-dir|https://github.com/avajs/find-cache-dir/blob/master/license|https://github.com/avajs/find-cache-dir|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 |find-up|https://github.com/sindresorhus/find-up/blob/master/license|https://github.com/sindresorhus/find-up|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
 |findup-sync|https://github.com/gulpjs/findup-sync/blob/master/LICENSE|https://github.com/gulpjs/findup-sync|Copyright (c) 2013-2018 Ben Alman &lt;cowboy@rj3.net&gt;, Blaine Bublitz &lt;blaine.bublitz@gmail.com&gt;, and Eric Schoffstall &lt;yo@contra.io&gt;|
+|findup|https://github.com/Filirom1/findup/blob/master/package.json|https://github.com/Filirom1/findup|Copyright (c) Filirom1 <filirom1@gmail.com>|
 |flat-cache|https://github.com/royriojas/flat-cache/blob/master/LICENSE|https://github.com/royriojas/flat-cache|Copyright (c) 2015 Roy Riojas|
 |flotr2|https://github.com/HumbleSoftware/Flotr2/blob/master/LICENSE|https://github.com/HumbleSoftware/Flotr2|Copyright (c) 2012 Carl Sutherland|
 |flush-write-stream|https://github.com/mafintosh/flush-write-stream/blob/master/LICENSE|https://github.com/mafintosh/flush-write-stream|Copyright (c) 2015 Mathias Buus|
@@ -1075,6 +1077,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |ripemd160|https://github.com/crypto-browserify/ripemd160/blob/master/LICENSE|https://github.com/crypto-browserify/ripemd160|Copyright (c) 2016 crypto-browserify|
 |romanpitak/dotmailer-api-v2-client|https://github.com/laboro/dotMailer-API-v2-PHP-client/blob/master/LICENSE|https://github.com/laboro/dotMailer-API-v2-PHP-client|Copyright (c) 2014-2016 Roman Piták, http://pitak.net &lt;roman@pitak.net&gt;|
 |romanpitak/php-rest-client|https://github.com/romanpitak/PHP-REST-Client/blob/master/LICENSE|https://github.com/romanpitak/PHP-REST-Client|Copyright (c) 2014-2015 Roman Piták, http://pitak.net &lt;roman@pitak.net&gt;|
+|rtlcss|https://github.com/MohammadYounes/rtlcss/blob/master/LICENSE|https://github.com/MohammadYounes/rtlcss|Copyright (c) Mohammad Younes|
 |run-async|https://github.com/SBoudrias/run-async/blob/master/LICENSE|https://github.com/SBoudrias/run-async|Copyright (c) 2014 Simon Boudrias|
 |safe-buffer|https://github.com/feross/safe-buffer/blob/master/LICENSE|https://github.com/feross/safe-buffer|Copyright (c) Feross Aboukhadijeh|
 |safe-regex|https://github.com/substack/safe-regex/blob/master/LICENSE|https://github.com/substack/safe-regex||
@@ -1283,9 +1286,11 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |webpack-dev-server|https://github.com/webpack/webpack-dev-server/blob/master/LICENSE|https://github.com/webpack/webpack-dev-server|Copyright JS Foundation and other contributors|
 |webpack-log|https://github.com/webpack-contrib/webpack-log/blob/master/LICENSE|https://github.com/webpack-contrib/webpack-log|Copyright (c) 2017 webpack-contrib|
 |webpack-merge|https://github.com/survivejs/webpack-merge/blob/master/LICENSE|https://github.com/survivejs/webpack-merge|Copyright (c) 2015 Juho Vepsalainen|
+|webpack-rtl-plugin|https://github.com/romainberger/webpack-rtl-plugin/blob/master/LICENSE.md|https://github.com/romainberger/webpack-rtl-plugin|Copyright (c) Romain Berger <romain@romainberger.com>|
 |webpack-sources|https://github.com/webpack/webpack-sources/blob/master/LICENSE|https://github.com/webpack/webpack-sources|Copyright (c) 2017 JS Foundation and other contributors|
 |whatwg-fetch|https://github.com/github/fetch/blob/master/LICENSE|https://github.com/github/fetch|Copyright (c) 2014-2016 GitHub, Inc.|
 |when|https://github.com/cujojs/when/blob/master/LICENSE.txt|https://github.com/cujojs/when|Copyright (c) 2011 Brian Cavalier|
+|wildcard|https://github.com/DamonOehlman/wildcard/blob/master/package.json|https://github.com/DamonOehlman/wildcard|Damon Oehlman <damon.oehlman@gmail.com>|
 |willdurand/jsonp-callback-validator|https://github.com/willdurand/JsonpCallbackValidator/blob/master/LICENSE|https://github.com/willdurand/JsonpCallbackValidator|Copyright (c) 2013 William Durand &lt;william.durand1@gmail.com&gt;|
 |willdurand/negotiation|https://github.com/willdurand/Negotiation/blob/master/LICENSE|https://github.com/willdurand/Negotiation|Copyright (c) William Durand &lt;will+git@drnd.me&gt;|
 |word-wrap|https://github.com/jonschlinkert/word-wrap/blob/master/LICENSE|https://github.com/jonschlinkert/word-wrap|Copyright (c) 2014-2017, Jon Schlinkert|
