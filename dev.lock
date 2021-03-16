@@ -5449,16 +5449,16 @@
         },
         {
             "name": "nelmio/security-bundle",
-            "version": "v2.10.2",
+            "version": "v2.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioSecurityBundle.git",
-                "reference": "302b0f572361c2b737e903c8cd7f3cb8e187266c"
+                "reference": "40d5ac148ce72e79849da27568833794bd70fec9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioSecurityBundle/zipball/302b0f572361c2b737e903c8cd7f3cb8e187266c",
-                "reference": "302b0f572361c2b737e903c8cd7f3cb8e187266c",
+                "url": "https://api.github.com/repos/nelmio/NelmioSecurityBundle/zipball/40d5ac148ce72e79849da27568833794bd70fec9",
+                "reference": "40d5ac148ce72e79849da27568833794bd70fec9",
                 "shasum": ""
             },
             "require": {
@@ -5476,9 +5476,6 @@
                 "psr/cache": "^1.0",
                 "symfony/phpunit-bridge": "^5.0.5",
                 "twig/twig": "^1.38|^2.10|^3.0"
-            },
-            "suggest": {
-                "ua-parser/uap-php": "To allow adapt CSP directives given the user-agent"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -5514,9 +5511,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nelmio/NelmioSecurityBundle/issues",
-                "source": "https://github.com/nelmio/NelmioSecurityBundle/tree/v2.10.2"
+                "source": "https://github.com/nelmio/NelmioSecurityBundle/tree/v2.10.3"
             },
-            "time": "2021-02-17T14:44:26+00:00"
+            "time": "2021-03-16T08:47:32+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -6428,7 +6425,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "0f60d3502881181b52bc2338679cb72229e13a4a"
+                "reference": "4c55e60a6a9258a618c250c4c1bbdf3296786a8a"
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.14",
@@ -6487,7 +6484,7 @@
                 "psr/simple-cache": "1.0.*",
                 "salsify/json-streaming-parser": "8.2.*",
                 "sensio/framework-extra-bundle": "5.6.*",
-                "stof/doctrine-extensions-bundle": "1.5.*",
+                "stof/doctrine-extensions-bundle": "~1.6.0",
                 "symfony/acl-bundle": "~2.1.0",
                 "symfony/asset": "4.4.18",
                 "symfony/cache": "4.4.18",
@@ -9187,26 +9184,30 @@
         },
         {
             "name": "stof/doctrine-extensions-bundle",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stof/StofDoctrineExtensionsBundle.git",
-                "reference": "c01e73e49cee5eac3353b6c4ebdbb0a151348c85"
+                "reference": "ef469a9d3b8be23d4c746d558742cc1b3e2588cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stof/StofDoctrineExtensionsBundle/zipball/c01e73e49cee5eac3353b6c4ebdbb0a151348c85",
-                "reference": "c01e73e49cee5eac3353b6c4ebdbb0a151348c85",
+                "url": "https://api.github.com/repos/stof/StofDoctrineExtensionsBundle/zipball/ef469a9d3b8be23d4c746d558742cc1b3e2588cb",
+                "reference": "ef469a9d3b8be23d4c746d558742cc1b3e2588cb",
                 "shasum": ""
             },
             "require": {
                 "gedmo/doctrine-extensions": "^2.3.4 || ^3.0.0",
-                "php": "^7.1.3",
-                "symfony/framework-bundle": "^4.3 || ^5.0"
+                "php": "^7.1.3 || ^8.0",
+                "symfony/config": "^4.4 || ^5.2",
+                "symfony/dependency-injection": "^4.4 || ^5.2",
+                "symfony/event-dispatcher": "^4.4 || ^5.2",
+                "symfony/http-kernel": "^4.4 || ^5.2"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^4.4",
-                "symfony/security-bundle": "^4.3 || ^5.0"
+                "symfony/mime": "^4.4 || ^5.2",
+                "symfony/phpunit-bridge": "^v5.2.4",
+                "symfony/security-core": "^4.4 || ^5.2"
             },
             "suggest": {
                 "doctrine/doctrine-bundle": "to use the ORM extensions",
@@ -9216,12 +9217,12 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5.x-dev"
+                    "dev-master": "1.6.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Stof\\DoctrineExtensionsBundle\\": ""
+                    "Stof\\DoctrineExtensionsBundle\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -9234,7 +9235,7 @@
                     "email": "stof@notk.org"
                 }
             ],
-            "description": "Integration of the gedmo/doctrine-extensions with Symfony2",
+            "description": "Integration of the gedmo/doctrine-extensions with Symfony",
             "homepage": "https://github.com/stof/StofDoctrineExtensionsBundle",
             "keywords": [
                 "behaviors",
@@ -9251,9 +9252,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stof/StofDoctrineExtensionsBundle/issues",
-                "source": "https://github.com/stof/StofDoctrineExtensionsBundle/tree/v1.5.0"
+                "source": "https://github.com/stof/StofDoctrineExtensionsBundle/tree/v1.6.0"
             },
-            "time": "2020-09-30T13:25:17+00:00"
+            "time": "2021-03-05T13:09:06+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
