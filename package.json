@@ -3,7 +3,7 @@
     "homepage": "https://doc.oroinc.com/master/frontend/javascript/composer-js-dependencies/",
     "main": "webpack.config.js",
     "scripts": {
-        "build": "./node_modules/webpack/bin/webpack.js --hide-modules --colors --mode=production",
+        "build": "./node_modules/webpack/bin/webpack.js --hide-modules --colors --mode=production --env.skipBabel",
         "watch": "./node_modules/webpack/bin/webpack.js --hide-modules --colors --watch --progress --env.skipBabel",
         "build-css": "./node_modules/webpack/bin/webpack.js --hide-modules --colors --env.skipJS",
         "build-js": "./node_modules/webpack/bin/webpack.js --hide-modules --colors --env.skipCSS --env.skipBabel",
