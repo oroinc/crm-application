@@ -16,26 +16,30 @@ doctrine:
 
 monolog:
     handlers:
-        detailed_logs:
-            type:           service
-            id:             oro_logger.monolog.detailed_logs.handler
-            handler:        nested
-            channels:       '%main_log_channels%'
-        nested:
+        filtered:
+            type: filter
+            min_level: info
+            handler: main
+            channels: '%main_log_channels%' # The channels configuration only works for top-level handlers
+        main:
+            type: fingers_crossed
+            action_level: error
+            handler: grouped
+            buffer_size:    100
+            excluded_http_codes: [ 404, 405 ]
+        grouped:
+            type: group
+            members: [streamed, deduplicated]
+
+        streamed:
             type:           stream
             path:           "%kernel.logs_dir%/%kernel.environment%.log"
             level:          debug
-            channels:       '%main_log_channels%'
 
-        fingers_crossed:
-            type:           fingers_crossed
-            action_level:   critical
-            handler:        deduplicated
-            buffer_size:    1000
         deduplicated:
             type:           deduplication
             handler:        swift
-            buffer_size:    1000
+            time:           10
         swift:
             type:           swift_mailer
             email_prototype:
@@ -45,9 +49,3 @@ monolog:
             level:          debug
             formatter:      monolog.formatter.html
 
-        # collect all log records to buffer on CLI command error
-        message_queue.consumer.console_error:
-            type:           service
-            id:             oro_message_queue.log.handler.console_error
-            handler:        nested
-            level:          debug
