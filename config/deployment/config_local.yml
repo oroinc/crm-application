@@ -3,23 +3,20 @@ parameters:
 
 monolog:
     handlers:
+        # collect all log records to buffer on CLI command error
+        consumer_buffer:
+            type: fingers_crossed
+            action_level: error
+            handler: consumer
+            buffer_size: 100
+            channels: [ 'consumer' ]
         # write all records from 'consumer' consumer channel to 'consumer_%kernel.environment%.log'
         consumer:
             type:          rotating_file
             path:          "%kernel.logs_dir%/consumer_%kernel.environment%.log"
             level:         debug
             max_files:     7
-            channels:      ["consumer"]
             nested:        true
-
-        # collect all log records to buffer on CLI command error
-        message_queue.consumer.console_error:
-            type:          service
-            id:            oro_message_queue.log.handler.console_error
-            handler:       consumer
-            level:         debug
-            channels:      ["consumer"]
-
         # only records filtered by verbosity level should pass to `consumer_%kernel.environment%.log` file
         filter_consumer:
             type:          service
