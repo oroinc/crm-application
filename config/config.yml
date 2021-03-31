@@ -22,6 +22,8 @@ framework:
         version_format: "%%s?version=%%s"
     default_locale: en
     session:
+        # More info about session cookie configuration can be found at
+        # https://doc.oroinc.com/backend/setup/post-install/cookies-configuration/#back-office-session-cookie
         name:                 CRMID
         handler_id:           "%session_handler%"
         save_path:            '%kernel.project_dir%/var/sessions/%kernel.environment%'
