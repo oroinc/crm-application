@@ -4,6 +4,10 @@ This file includes only the most important items that should be addressed before
 
 Please also refer to [CHANGELOG.md](CHANGELOG.md) for a list of significant changes in the code that may affect the upgrade of some customizations.
 
+## 5.0.0-alpha.2
+
+The minimum required PHP version is 8.0.0.
+
 ## 4.2.0
 
 The minimum required PHP version is 7.4.14.
