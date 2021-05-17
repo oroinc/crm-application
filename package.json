@@ -7,8 +7,12 @@
         "watch": "webpack -w --progress --env skipBabel",
         "build-css": "webpack --env skipJS",
         "build-js": "webpack --env skipCSS skipBabel",
-        "lint": "eslint -c vendor/oro/platform/build/.eslintrc.yml --ignore-path vendor/oro/platform/build/.eslintignore",
-        "lint-oro": "npm run lint vendor/oro",
+        "lint": "echo 'Configure own command on a base of following template `npm run eslint vendor/%name% && npm run stylelint vendor/%name%/**/**.{css,scss}`'",
+        "lint-oro": "npm run eslint-oro && npm run stylelint-oro",
+        "eslint": "eslint -c vendor/oro/platform/build/.eslintrc.yml --ignore-path vendor/oro/platform/build/.eslintignore",
+        "eslint-oro": "npm run lint vendor/oro",
+        "stylelint": "stylelint --config .stylelintrc.yml --ignore-path .stylelintignore",
+        "stylelint-oro": "npm run stylelint vendor/oro/**/*.{css,scss}",
         "test": "npm run test-watch -- --single-run",
         "test-watch": "karma start karma.conf.js.dist --env=prod"
     },
@@ -62,6 +66,7 @@
     },
     "devDependencies": {
         "@oroinc/oro-webpack-config-builder": "5.1.0-alpha9",
+        "@oroinc/oro-stylelint-config": "5.1.0-alpha1",
         "eslint": "7.23.0",
         "eslint-config-google": "0.14.0",
         "eslint-plugin-oro": "0.0.3",
@@ -73,7 +78,8 @@
         "karma-firefox-launcher": "2.1.0",
         "karma-jasmine": "4.0.1",
         "karma-junit-reporter": "2.0.1",
-        "karma-webpack": "5.0.0"
+        "karma-webpack": "5.0.0",
+        "stylelint": "^13.13.1"
     },
     "private": true
 }
