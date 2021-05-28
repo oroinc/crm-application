@@ -687,16 +687,16 @@
         },
         {
             "name": "composer/package-versions-deprecated",
-            "version": "1.11.99.1",
+            "version": "1.11.99.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/package-versions-deprecated.git",
-                "reference": "7413f0b55a051e89485c5cb9f765fe24bb02a7b6"
+                "reference": "c6522afe5540d5fc46675043d3ed5a45a740b27c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/package-versions-deprecated/zipball/7413f0b55a051e89485c5cb9f765fe24bb02a7b6",
-                "reference": "7413f0b55a051e89485c5cb9f765fe24bb02a7b6",
+                "url": "https://api.github.com/repos/composer/package-versions-deprecated/zipball/c6522afe5540d5fc46675043d3ed5a45a740b27c",
+                "reference": "c6522afe5540d5fc46675043d3ed5a45a740b27c",
                 "shasum": ""
             },
             "require": {
@@ -740,7 +740,7 @@
             "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
             "support": {
                 "issues": "https://github.com/composer/package-versions-deprecated/issues",
-                "source": "https://github.com/composer/package-versions-deprecated/tree/1.11.99.1"
+                "source": "https://github.com/composer/package-versions-deprecated/tree/1.11.99.2"
             },
             "funding": [
                 {
@@ -756,20 +756,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-11T10:22:58+00:00"
+            "time": "2021-05-24T07:46:03+00:00"
         },
         {
             "name": "composer/semver",
-            "version": "3.2.4",
+            "version": "3.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "a02fdf930a3c1c3ed3a49b5f63859c0c20e10464"
+                "reference": "31f3ea725711245195f62e54ffa402d8ef2fdba9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/a02fdf930a3c1c3ed3a49b5f63859c0c20e10464",
-                "reference": "a02fdf930a3c1c3ed3a49b5f63859c0c20e10464",
+                "url": "https://api.github.com/repos/composer/semver/zipball/31f3ea725711245195f62e54ffa402d8ef2fdba9",
+                "reference": "31f3ea725711245195f62e54ffa402d8ef2fdba9",
                 "shasum": ""
             },
             "require": {
@@ -821,7 +821,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/semver/issues",
-                "source": "https://github.com/composer/semver/tree/3.2.4"
+                "source": "https://github.com/composer/semver/tree/3.2.5"
             },
             "funding": [
                 {
@@ -837,7 +837,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-13T08:59:24+00:00"
+            "time": "2021-05-24T12:41:47+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -1020,28 +1020,30 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.12.1",
+            "version": "1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "b17c5014ef81d212ac539f07a1001832df1b6d3b"
+                "reference": "e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/b17c5014ef81d212ac539f07a1001832df1b6d3b",
-                "reference": "b17c5014ef81d212ac539f07a1001832df1b6d3b",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f",
+                "reference": "e6e7b7d5b45a2f2abc5460cc6396480b2b1d321f",
                 "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "1.*",
                 "ext-tokenizer": "*",
-                "php": "^7.1 || ^8.0"
+                "php": "^7.1 || ^8.0",
+                "psr/cache": "^1 || ^2 || ^3"
             },
             "require-dev": {
-                "doctrine/cache": "1.*",
+                "doctrine/cache": "^1.11 || ^2.0",
                 "doctrine/coding-standard": "^6.0 || ^8.1",
                 "phpstan/phpstan": "^0.12.20",
-                "phpunit/phpunit": "^7.5 || ^9.1.5"
+                "phpunit/phpunit": "^7.5 || ^8.0 || ^9.1.5",
+                "symfony/cache": "^4.4 || ^5.2"
             },
             "type": "library",
             "autoload": {
@@ -1084,22 +1086,22 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/1.12.1"
+                "source": "https://github.com/doctrine/annotations/tree/1.13.1"
             },
-            "time": "2021-02-21T21:00:45+00:00"
+            "time": "2021-05-16T18:07:53+00:00"
         },
         {
             "name": "doctrine/cache",
-            "version": "1.11.0",
+            "version": "1.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "a9c1b59eba5a08ca2770a76eddb88922f504e8e0"
+                "reference": "3bb5588cec00a0268829cc4a518490df6741af9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/a9c1b59eba5a08ca2770a76eddb88922f504e8e0",
-                "reference": "a9c1b59eba5a08ca2770a76eddb88922f504e8e0",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/3bb5588cec00a0268829cc4a518490df6741af9d",
+                "reference": "3bb5588cec00a0268829cc4a518490df6741af9d",
                 "shasum": ""
             },
             "require": {
@@ -1169,7 +1171,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/cache/issues",
-                "source": "https://github.com/doctrine/cache/tree/1.11.0"
+                "source": "https://github.com/doctrine/cache/tree/1.11.3"
             },
             "funding": [
                 {
@@ -1185,7 +1187,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-13T14:46:17+00:00"
+            "time": "2021-05-25T09:01:55+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -4342,16 +4344,16 @@
         },
         {
             "name": "laminas/laminas-code",
-            "version": "4.2.1",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-code.git",
-                "reference": "a1e7f8b6467ac7f277b8e027e8537fa13664a8d8"
+                "reference": "1beb4447f9efd26041eba7eff50614e798c353fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-code/zipball/a1e7f8b6467ac7f277b8e027e8537fa13664a8d8",
-                "reference": "a1e7f8b6467ac7f277b8e027e8537fa13664a8d8",
+                "url": "https://api.github.com/repos/laminas/laminas-code/zipball/1beb4447f9efd26041eba7eff50614e798c353fd",
+                "reference": "1beb4447f9efd26041eba7eff50614e798c353fd",
                 "shasum": ""
             },
             "require": {
@@ -4409,7 +4411,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-04-23T11:54:51+00:00"
+            "time": "2021-05-12T12:41:03+00:00"
         },
         {
             "name": "laminas/laminas-eventmanager",
@@ -4536,16 +4538,16 @@
         },
         {
             "name": "laminas/laminas-mail",
-            "version": "2.14.0",
+            "version": "2.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-mail.git",
-                "reference": "542686aebf480c6902ad7f08b52498e94818bc0a"
+                "reference": "180c6c7baa37cba16fe9fd34af0f346e796cf1a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-mail/zipball/542686aebf480c6902ad7f08b52498e94818bc0a",
-                "reference": "542686aebf480c6902ad7f08b52498e94818bc0a",
+                "url": "https://api.github.com/repos/laminas/laminas-mail/zipball/180c6c7baa37cba16fe9fd34af0f346e796cf1a1",
+                "reference": "180c6c7baa37cba16fe9fd34af0f346e796cf1a1",
                 "shasum": ""
             },
             "require": {
@@ -4567,7 +4569,9 @@
                 "laminas/laminas-config": "^3.4",
                 "laminas/laminas-crypt": "^2.6 || ^3.0",
                 "laminas/laminas-servicemanager": "^3.2.1",
-                "phpunit/phpunit": "^9.3"
+                "phpunit/phpunit": "^9.3",
+                "psalm/plugin-phpunit": "^0.15.1",
+                "vimeo/psalm": "^4.7"
             },
             "suggest": {
                 "laminas/laminas-crypt": "Crammd5 support in SMTP Auth",
@@ -4609,7 +4613,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-03-17T12:41:50+00:00"
+            "time": "2021-05-20T04:00:23+00:00"
         },
         {
             "name": "laminas/laminas-mime",
@@ -6497,7 +6501,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "f70a97b01b2364c916d21be976743fc2881da9d9"
+                "reference": "67daca92e7425b7b9fbaca84240eb76fdf5eba25"
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.14",
@@ -6505,13 +6509,14 @@
                 "box/spout": "~3.1.0",
                 "brick/math": "~0.9.2",
                 "composer/composer": "1.* || 2.*",
-                "doctrine/annotations": "^1.11.1",
+                "doctrine/annotations": "1.13.1",
                 "doctrine/collections": "^1.6.7",
                 "doctrine/data-fixtures": "^1.4.3",
                 "doctrine/dbal": "2.12.*",
                 "doctrine/doctrine-bundle": "2.2.*",
                 "doctrine/doctrine-fixtures-bundle": "^3.3.1",
                 "doctrine/orm": "2.8.1",
+                "doctrine/persistence": "2.1.0",
                 "dragonmantank/cron-expression": "~3.1.0",
                 "ext-dom": "*",
                 "ext-gd": "*",
@@ -6674,7 +6679,7 @@
                     "jquery": "3.5.*",
                     "jquery-ui": "1.12.*",
                     "backbone": "1.4.*",
-                    "underscore": "1.11.*",
+                    "underscore": "1.13.*",
                     "@oroinc/jquery.uniform": "4.3.*",
                     "overlayscrollbars": "1.13.*",
                     "font-awesome": "4.7.*",
@@ -7328,16 +7333,16 @@
         },
         {
             "name": "php-http/message",
-            "version": "1.11.0",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/message.git",
-                "reference": "fb0dbce7355cad4f4f6a225f537c34d013571f29"
+                "reference": "887734d9c515ad9a564f6581a682fff87a6253cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/message/zipball/fb0dbce7355cad4f4f6a225f537c34d013571f29",
-                "reference": "fb0dbce7355cad4f4f6a225f537c34d013571f29",
+                "url": "https://api.github.com/repos/php-http/message/zipball/887734d9c515ad9a564f6581a682fff87a6253cc",
+                "reference": "887734d9c515ad9a564f6581a682fff87a6253cc",
                 "shasum": ""
             },
             "require": {
@@ -7396,9 +7401,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/message/issues",
-                "source": "https://github.com/php-http/message/tree/1.11.0"
+                "source": "https://github.com/php-http/message/tree/1.11.1"
             },
-            "time": "2021-02-01T08:54:58+00:00"
+            "time": "2021-05-24T18:11:08+00:00"
         },
         {
             "name": "php-http/message-factory",
@@ -14110,16 +14115,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.14.4",
+            "version": "v2.14.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "0b4ba691fb99ec7952d25deb36c0a83061b93bbf"
+                "reference": "27e5cf2b05e3744accf39d4c68a3235d9966d260"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/0b4ba691fb99ec7952d25deb36c0a83061b93bbf",
-                "reference": "0b4ba691fb99ec7952d25deb36c0a83061b93bbf",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/27e5cf2b05e3744accf39d4c68a3235d9966d260",
+                "reference": "27e5cf2b05e3744accf39d4c68a3235d9966d260",
                 "shasum": ""
             },
             "require": {
@@ -14173,7 +14178,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v2.14.4"
+                "source": "https://github.com/twigphp/Twig/tree/v2.14.6"
             },
             "funding": [
                 {
@@ -14185,7 +14190,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-10T10:05:55+00:00"
+            "time": "2021-05-16T12:12:47+00:00"
         },
         {
             "name": "ua-parser/uap-php",
