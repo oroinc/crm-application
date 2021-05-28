@@ -19,11 +19,12 @@ The `var/attachment` and `var/import_export` directories are no longer used for 
 All files from these directories must be moved to the new locations:
 - from `var/attachment/protected_mediacache` to `var/data/protected_mediacache`;
 - from `var/attachment` to `var/data/attachments`;
-- from `var/import_export` to `var/data/importexport`.
-
-Files for the standard import should be placed into `var/data/import_files` instead of `var/import_export/files`.
+- from `var/import_export` to `var/data/importexport`;
+- from `var/import_export/files` to `var/data/import_files`.
 
 The `public/uploads` directory has been removed.
+
+The console command `oro:gaufrette:migrate-filestorages` will help to migrate the files to new structure.
 
 ## 4.1.0
 
