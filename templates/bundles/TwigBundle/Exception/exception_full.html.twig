@@ -1,4 +1,4 @@
-{% extends status_code == 403 ? 'OroUIBundle:Default:index.html.twig' : 'TwigBundle::layout.html.twig' %}
+{% extends status_code == 403 ? '@OroUI/Default/index.html.twig' : '@Twig/layout.html.twig' %}
 
 {% block head_script %}
 {% endblock %}
@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block body %}
-    {% include 'TwigBundle:Exception:exception.html.twig' %}
+    {% include '@Twig/Exception/exception.html.twig' %}
 {% endblock %}
 
 {% block content %}
