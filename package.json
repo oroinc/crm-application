@@ -10,7 +10,7 @@
         "lint": "echo 'Configure own command on a base of following template `npm run eslint vendor/%name% && npm run stylelint vendor/%name%/**/**.{css,scss}`'",
         "lint-oro": "npm run eslint-oro && npm run stylelint-oro",
         "eslint": "eslint -c vendor/oro/platform/build/.eslintrc.yml --ignore-path vendor/oro/platform/build/.eslintignore",
-        "eslint-oro": "npm run lint vendor/oro",
+        "eslint-oro": "npm run eslint vendor/oro",
         "stylelint": "stylelint --config .stylelintrc.yml --ignore-path .stylelintignore",
         "stylelint-oro": "npm run stylelint vendor/oro/**/*.{css,scss}",
         "test": "npm run test-watch -- --single-run",
@@ -65,9 +65,9 @@
         "xregexp": "4.3.*"
     },
     "devDependencies": {
-        "@oroinc/oro-webpack-config-builder": "5.1.0-alpha12",
+        "@oroinc/oro-webpack-config-builder": "5.1.0-alpha19",
         "@oroinc/oro-stylelint-config": "5.1.0-alpha1",
-        "eslint": "7.23.0",
+        "eslint": "7.27.0",
         "eslint-config-google": "0.14.0",
         "eslint-plugin-oro": "0.0.3",
         "inject-loader": "^4.0.1",
