@@ -3,12 +3,15 @@
     "homepage": "https://doc.oroinc.com/master/frontend/javascript/composer-js-dependencies/",
     "main": "webpack.config.js",
     "scripts": {
-        "build": "./node_modules/webpack/bin/webpack.js --hide-modules --colors --mode=production",
-        "watch": "./node_modules/webpack/bin/webpack.js --hide-modules --colors --watch --progress --env.skipBabel",
-        "build-css": "./node_modules/webpack/bin/webpack.js --hide-modules --colors --env.skipJS",
-        "build-js": "./node_modules/webpack/bin/webpack.js --hide-modules --colors --env.skipCSS --env.skipBabel",
-        "lint": "eslint -c vendor/oro/platform/build/.eslintrc.yml --ignore-path vendor/oro/platform/build/.eslintignore",
-        "lint-oro": "npm run lint vendor/oro",
+        "build": "webpack --hide-modules --colors --mode=production",
+        "watch": "webpack --hide-modules --colors -w --progress --env.skipBabel",
+        "build-css": "webpack --hide-modules --colors --env.skipJS",
+        "build-js": "webpack --hide-modules --colors --env.skipCSS --env.skipBabel",
+        "lint": "npm run eslint",
+        "lint-oro": "npm run eslint-oro",
+        "eslint": "eslint -c vendor/oro/platform/build/.eslintrc.yml --ignore-path vendor/oro/platform/build/.eslintignore",
+        "eslint-oro": "npm run lint vendor/oro",
+        "stylelint": "stylelint --config .stylelintrc.yml --ignore-path .stylelintignore",
         "test": "npm run test-watch -- --single-run",
         "test-watch": "karma start karma.conf.js.dist --env=prod"
     },
@@ -62,6 +65,7 @@
     },
     "devDependencies": {
         "@oroinc/oro-webpack-config-builder": "4.2.1-dev3",
+        "@oroinc/oro-stylelint-config": "4.2.1-dev1",
         "eslint": "6.5.1",
         "eslint-config-google": "0.14.0",
         "eslint-plugin-oro": "https://api.github.com/repos/laboro/eslint-plugin-oro/tarball/0.0.2",
@@ -72,7 +76,8 @@
         "karma-firefox-launcher": "1.2.0",
         "karma-jasmine": "2.0.1",
         "karma-junit-reporter": "2.0.1",
-        "karma-webpack": "4.0.2"
+        "karma-webpack": "4.0.2",
+        "stylelint": "^13.13.1"
     },
     "private": true
 }
