@@ -4693,16 +4693,16 @@
         },
         {
             "name": "laminas/laminas-stdlib",
-            "version": "3.3.1",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stdlib.git",
-                "reference": "d81c7ffe602ed0e6ecb18691019111c0f4bf1efe"
+                "reference": "e89c2268c9cad25099f562f7f015c28c5dd383c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/d81c7ffe602ed0e6ecb18691019111c0f4bf1efe",
-                "reference": "d81c7ffe602ed0e6ecb18691019111c0f4bf1efe",
+                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/e89c2268c9cad25099f562f7f015c28c5dd383c9",
+                "reference": "e89c2268c9cad25099f562f7f015c28c5dd383c9",
                 "shasum": ""
             },
             "require": {
@@ -4713,9 +4713,11 @@
                 "zendframework/zend-stdlib": "^3.2.1"
             },
             "require-dev": {
-                "laminas/laminas-coding-standard": "~1.0.0",
+                "laminas/laminas-coding-standard": "~2.3.0",
                 "phpbench/phpbench": "^0.17.1",
-                "phpunit/phpunit": "~9.3.7"
+                "phpunit/phpunit": "~9.3.7",
+                "psalm/plugin-phpunit": "^0.16.0",
+                "vimeo/psalm": "^4.7"
             },
             "type": "library",
             "autoload": {
@@ -4747,7 +4749,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2020-11-19T20:18:59+00:00"
+            "time": "2021-06-28T21:37:31+00:00"
         },
         {
             "name": "laminas/laminas-validator",
@@ -6424,7 +6426,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "bbb78d9ec869a64810094e0861b4c0d3d97e7974"
+                "reference": "2739e9ceab756127c3356013accb29b368cbef67"
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.14",
@@ -6441,14 +6443,18 @@
                 "doctrine/orm": "2.8.1",
                 "doctrine/persistence": "2.1.0",
                 "dragonmantank/cron-expression": "~3.1.0",
+                "ext-ctype": "*",
                 "ext-dom": "*",
                 "ext-gd": "*",
+                "ext-iconv": "*",
                 "ext-intl": "*",
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
                 "ext-pcntl": "*",
                 "ext-pdo": "*",
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
                 "ext-xml": "*",
                 "ext-zip": "*",
                 "ezyang/htmlpurifier": "~4.13.0",
@@ -6517,6 +6523,7 @@
                 "symfony/property-access": "~4.4.24",
                 "symfony/property-info": "~4.4.24",
                 "symfony/proxy-manager-bridge": "~4.4.24",
+                "symfony/requirements-checker": "2.0.0",
                 "symfony/routing": "~4.4.24",
                 "symfony/security": "~4.4.24",
                 "symfony/security-acl": "~3.1.0",
@@ -12691,6 +12698,72 @@
             "time": "2021-05-26T11:20:16+00:00"
         },
         {
+            "name": "symfony/requirements-checker",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/requirements-checker.git",
+                "reference": "e3d5565eb69a4a2195905c8669f32e988c8e6be0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/requirements-checker/zipball/e3d5565eb69a4a2195905c8669f32e988c8e6be0",
+                "reference": "e3d5565eb69a4a2195905c8669f32e988c8e6be0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "bin": [
+                "bin/requirements-checker"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Requirements\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Check Symfony requirements and give recommendations",
+            "keywords": [
+                "configuration",
+                "distribution"
+            ],
+            "support": {
+                "issues": "https://github.com/symfony/requirements-checker/issues",
+                "source": "https://github.com/symfony/requirements-checker/tree/v2.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-09-16T06:15:56+00:00"
+        },
+        {
             "name": "symfony/routing",
             "version": "v4.4.25",
             "source": {
@@ -15048,16 +15121,16 @@
         },
         {
             "name": "instaclick/php-webdriver",
-            "version": "1.4.7",
+            "version": "1.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/instaclick/php-webdriver.git",
-                "reference": "b5f330e900e9b3edfc18024a5ec8c07136075712"
+                "reference": "961b12178cb71f8667afaf2f66ab3e000e060e1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/b5f330e900e9b3edfc18024a5ec8c07136075712",
-                "reference": "b5f330e900e9b3edfc18024a5ec8c07136075712",
+                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/961b12178cb71f8667afaf2f66ab3e000e060e1c",
+                "reference": "961b12178cb71f8667afaf2f66ab3e000e060e1c",
                 "shasum": ""
             },
             "require": {
@@ -15105,9 +15178,9 @@
             ],
             "support": {
                 "issues": "https://github.com/instaclick/php-webdriver/issues",
-                "source": "https://github.com/instaclick/php-webdriver/tree/1.x"
+                "source": "https://github.com/instaclick/php-webdriver/tree/1.4.9"
             },
-            "time": "2019-09-25T09:05:11+00:00"
+            "time": "2021-06-28T22:23:20+00:00"
         },
         {
             "name": "johnkary/phpunit-speedtrap",
