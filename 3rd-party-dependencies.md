@@ -824,7 +824,6 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |league/event|https://github.com/thephpleague/event/blob/master/LICENSE|https://github.com/thephpleague/event|Copyright (c) 2014 Frank de Jonge|
 |league/oauth2-server|https://github.com/thephpleague/oauth2-server/blob/master/LICENSE|https://github.com/thephpleague/oauth2-server|Copyright (C) Alex Bilbie|
 |levn|https://github.com/gkz/levn/blob/master/LICENSE|https://github.com/gkz/levn|Copyright (c) George Zahariev|
-|lexik/maintenance-bundle|https://github.com/lexik/LexikMaintenanceBundle/blob/master/LICENSE|https://github.com/lexik/LexikMaintenanceBundle|Copyright (C) 2011-2012 Lexik &lt;dev@lexik.fr&gt;|
 |liip/imagine-bundle|https://github.com/liip/LiipImagineBundle/blob/master/LICENSE|https://github.com/liip/LiipImagineBundle|Copyright © 2010-2016 Liip &amp; Contributors &lt;https://github.com/liip/LiipImagineBundle/graphs/contributors&gt; Copyright © 2004-2011 Bulat Shakirzyanov &lt;https://github.com/avalanche123/AvalancheImagineBundle/graphs/contributors&gt;|
 |load-json-file|https://github.com/sindresorhus/load-json-file/blob/master/license|https://github.com/sindresorhus/load-json-file|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
 |loader-runner|https://github.com/webpack/loader-runner/blob/master/LICENSE|https://github.com/webpack/loader-runner|Copyright (c) Tobias Koppers @sokra|
