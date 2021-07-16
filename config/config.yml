@@ -86,12 +86,11 @@ oro_translation:
     locales:                  [en, fr]
     templating:               "@OroUI/Form/translatable.html.twig"
 
-lexik_maintenance:
+oro_maintenance:
     authorized:
         path:                 'maintenance|.*\.js'             # "maintenance" is only for demo purposes, remove in production!
 #        ips:                  ["127.0.0.1"]                   # Optional. Authorized ip addresses
     driver:
-        class:                Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver
         options:
             file_path:        '%kernel.project_dir%/var/cache/maintenance_lock'
 
