@@ -375,7 +375,6 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |ajv|https://github.com/ajv-validator/ajv/blob/master/LICENSE|https://github.com/ajv-validator/ajv|Copyright (c) 2015-2017 Evgeny Poberezkin|
 |ajv-errors|https://github.com/epoberezkin/ajv-errors/blob/master/LICENSE|https://github.com/epoberezkin/ajv-errors|Copyright (c) 2017 Evgeny Poberezkin|
 |ajv-keywords|https://github.com/epoberezkin/ajv-keywords/blob/master/LICENSE|https://github.com/epoberezkin/ajv-keywords|Copyright (c) 2016 Evgeny Poberezkin|
-|akeneo/batch-bundle|https://github.com/laboro/BatchBundle/blob/master/LICENSE|https://github.com/laboro/BatchBundle|Copyright (c) 2014 Akeneo|
 |alphanum-sort|https://github.com/TrySound/alphanum-sort/blob/master/LICENSE|https://github.com/TrySound/alphanum-sort|Copyright (c) Bogdan Chadkin &lt;trysound@yandex.ru&gt;|
 |amdefine|https://github.com/jrburke/amdefine/blob/master/LICENSE|https://github.com/jrburke/amdefine|Copyright (c) 2011-2016, The Dojo Foundation All rights reserved. Copyright (c) 2011-2016, The Dojo Foundation|
 |ansi-colors|https://github.com/doowb/ansi-colors/blob/master/LICENSE|https://github.com/doowb/ansi-colors|Copyright (c) 2015-present, Brian Woodward.|
