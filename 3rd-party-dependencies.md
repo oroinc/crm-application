@@ -1181,6 +1181,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |symfony/phpunit-bridge|https://github.com/symfony/phpunit-bridge/blob/master/LICENSE|https://github.com/symfony/phpunit-bridge|Copyright (c) 2014-2020 Fabien Potencier|
 |symfony/polyfill-ctype|https://github.com/symfony/polyfill-ctype/blob/master/LICENSE|https://github.com/symfony/polyfill-ctype|Copyright (c) 2018-2019 Fabien Potencier|
 |symfony/polyfill-iconv|https://github.com/symfony/polyfill-iconv/blob/master/LICENSE|https://github.com/symfony/polyfill-iconv|Copyright (c) 2015-2019 Fabien Potencier|
+|symfony/polyfill-intl-grapheme|https://github.com/symfony/polyfill-intl-grapheme/blob/main/LICENSE|https://github.com/symfony/polyfill-intl-grapheme|Copyright (c) 2015-2019 Fabien Potencier|
 |symfony/polyfill-intl-icu|https://github.com/symfony/polyfill-intl-icu/blob/master/LICENSE|https://github.com/symfony/polyfill-intl-icu|Copyright (c) 2004-2020 Fabien Potencier|
 |symfony/polyfill-intl-idn|https://github.com/symfony/polyfill-intl-idn/blob/master/LICENSE|https://github.com/symfony/polyfill-intl-idn|Copyright (c) 2018-2019 Fabien Potencier and Trevor Rowbotham &lt;trevor.rowbotham@pm.me&gt;|
 |symfony/polyfill-intl-normalizer|https://github.com/symfony/polyfill-intl-normalizer/blob/master/LICENSE|https://github.com/symfony/polyfill-intl-normalizer|Copyright (c) 2015-2019 Fabien Potencier|
@@ -1200,6 +1201,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |symfony/security-bundle|https://github.com/symfony/security-bundle/blob/master/LICENSE|https://github.com/symfony/security-bundle|Copyright (c) 2004-2020 Fabien Potencier|
 |symfony/serializer|https://github.com/symfony/serializer/blob/master/LICENSE|https://github.com/symfony/serializer|Copyright (c) 2004-2020 Fabien Potencier|
 |symfony/stopwatch|https://github.com/symfony/stopwatch/blob/master/LICENSE|https://github.com/symfony/stopwatch|Copyright (c) 2004-2020 Fabien Potencier|
+|symfony/string|https://github.com/symfony/string/blob/5.3/LICENSE|https://github.com/symfony/string|Copyright (c) 2019-2021 Fabien Potencier|
 |symfony/swiftmailer-bundle|https://github.com/symfony/swiftmailer-bundle/blob/master/LICENSE|https://github.com/symfony/swiftmailer-bundle|Copyright (c) Fabien Potencier|
 |symfony/templating|https://github.com/symfony/templating/blob/master/LICENSE|https://github.com/symfony/templating|Copyright (c) 2004-2020 Fabien Potencier|
 |symfony/translation|https://github.com/symfony/translation/blob/master/LICENSE|https://github.com/symfony/translation|Copyright (c) 2004-2020 Fabien Potencier|
