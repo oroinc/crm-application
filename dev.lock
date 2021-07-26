@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "997e114186cc2ce7d09eb7ae4b3a28ce",
+    "content-hash": "99a41eb8a4878adeecea8cf9d3ed6bbe",
     "packages": [
         {
             "name": "ass/xmlsecurity",
@@ -454,16 +454,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.1.4",
+            "version": "2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "5701b38ec6c66dd143658e6aa18e1808d2d5dc4b"
+                "reference": "ac679902e9f66b85a8f9d8c1c88180f609a8745d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/5701b38ec6c66dd143658e6aa18e1808d2d5dc4b",
-                "reference": "5701b38ec6c66dd143658e6aa18e1808d2d5dc4b",
+                "url": "https://api.github.com/repos/composer/composer/zipball/ac679902e9f66b85a8f9d8c1c88180f609a8745d",
+                "reference": "ac679902e9f66b85a8f9d8c1c88180f609a8745d",
                 "shasum": ""
             },
             "require": {
@@ -532,7 +532,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.1.4"
+                "source": "https://github.com/composer/composer/tree/2.1.5"
             },
             "funding": [
                 {
@@ -548,7 +548,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-22T11:55:24+00:00"
+            "time": "2021-07-23T08:35:47+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -5777,7 +5777,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/crm",
-                "reference": "55e47b08307b338b54bb11d3f1ca47d116d0e67b"
+                "reference": "6351a643529df88574fc4b49b4468345487be41e"
             },
             "require": {
                 "oro/calendar-bundle": "5.0.*",
@@ -5791,8 +5791,8 @@
                 "behat/gherkin": "~4.7.1",
                 "behat/mink": "~1.8.1",
                 "behat/mink-selenium2-driver": "~1.4.0",
-                "behat/symfony2-extension": "~2.1.5",
                 "friends-of-behat/mink-extension": "~v2.5.0",
+                "friends-of-behat/symfony-extension": "~2.2.0",
                 "friendsofphp/php-cs-fixer": "~2.18.2",
                 "johnkary/phpunit-speedtrap": "~3.3.0",
                 "nelmio/alice": "~3.8.0",
@@ -6295,7 +6295,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "01f30bd7e35304b0302d79649781bb1c1ab4015c"
+                "reference": "9950e00790ba800ce5c8ed73bec268b96efad8d0"
             },
             "require": {
                 "ass/xmlsecurity": "1.1.1",
@@ -6419,10 +6419,10 @@
                 "behat/gherkin": "~4.7.1",
                 "behat/mink": "~1.8.1",
                 "behat/mink-selenium2-driver": "~1.4.0",
-                "behat/symfony2-extension": "~2.1.5",
                 "ext-ftp": "*",
                 "ext-sqlite3": "*",
                 "friends-of-behat/mink-extension": "~v2.5.0",
+                "friends-of-behat/symfony-extension": "~2.2.0",
                 "friendsofphp/php-cs-fixer": "~2.18.2",
                 "johnkary/phpunit-speedtrap": "~3.3.0",
                 "nelmio/alice": "~3.8.0",
@@ -14946,71 +14946,6 @@
             "time": "2020-03-11T14:43:21+00:00"
         },
         {
-            "name": "behat/symfony2-extension",
-            "version": "2.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Behat/Symfony2Extension.git",
-                "reference": "d7c834487426a784665f9c1e61132274dbf2ea26"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Symfony2Extension/zipball/d7c834487426a784665f9c1e61132274dbf2ea26",
-                "reference": "d7c834487426a784665f9c1e61132274dbf2ea26",
-                "shasum": ""
-            },
-            "require": {
-                "behat/behat": "^3.4.3",
-                "php": ">=5.3.3",
-                "symfony/framework-bundle": "~2.0|~3.0|~4.0"
-            },
-            "require-dev": {
-                "behat/mink": "~1.7@dev",
-                "behat/mink-browserkit-driver": "~1.3@dev",
-                "behat/mink-extension": "~2.0",
-                "phpspec/phpspec": "~2.0|~3.0|~4.0",
-                "phpunit/phpunit": "~4.0|~5.0",
-                "symfony/symfony": "~2.1|~3.0|~4.0"
-            },
-            "type": "behat-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Behat\\Symfony2Extension": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christophe Coevoet",
-                    "email": "stof@notk.org"
-                },
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com"
-                }
-            ],
-            "description": "Symfony2 framework extension for Behat",
-            "homepage": "http://behat.org",
-            "keywords": [
-                "BDD",
-                "framework",
-                "symfony"
-            ],
-            "support": {
-                "issues": "https://github.com/Behat/Symfony2Extension/issues",
-                "source": "https://github.com/Behat/Symfony2Extension/tree/master"
-            },
-            "time": "2018-04-20T15:48:23+00:00"
-        },
-        {
             "name": "fakerphp/faker",
             "version": "v1.15.0",
             "source": {
@@ -15139,6 +15074,75 @@
                 "source": "https://github.com/FriendsOfBehat/MinkExtension/tree/v2.5.0"
             },
             "time": "2021-01-21T09:27:44+00:00"
+        },
+        {
+            "name": "friends-of-behat/symfony-extension",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfBehat/SymfonyExtension.git",
+                "reference": "9954f5d4c34d5522ded781ba62b07e06fa71bd10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfBehat/SymfonyExtension/zipball/9954f5d4c34d5522ded781ba62b07e06fa71bd10",
+                "reference": "9954f5d4c34d5522ded781ba62b07e06fa71bd10",
+                "shasum": ""
+            },
+            "require": {
+                "behat/behat": "^3.6.1",
+                "php": "^7.3 || ^8.0",
+                "symfony/dependency-injection": "^4.4 || ^5.1",
+                "symfony/http-kernel": "^4.4 || ^5.1",
+                "symfony/proxy-manager-bridge": "^4.4 || ^5.1"
+            },
+            "require-dev": {
+                "behat/mink-selenium2-driver": "^1.3",
+                "friends-of-behat/mink": "^1.9",
+                "friends-of-behat/mink-browserkit-driver": "^1.5",
+                "friends-of-behat/mink-extension": "^2.5",
+                "friends-of-behat/page-object-extension": "^0.3.2",
+                "friends-of-behat/service-container-extension": "^1.1",
+                "sylius-labs/coding-standard": "^3.2",
+                "symfony/browser-kit": "^4.4 || ^5.1",
+                "symfony/framework-bundle": "^4.4 || ^5.1",
+                "symfony/process": "^4.4 || ^5.1",
+                "symfony/yaml": "^4.4 || ^5.1",
+                "vimeo/psalm": "4.4.1"
+            },
+            "suggest": {
+                "friends-of-behat/mink": "^1.9",
+                "friends-of-behat/mink-browserkit-driver": "^1.5",
+                "friends-of-behat/mink-extension": "^2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FriendsOfBehat\\SymfonyExtension\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kamil Kokot",
+                    "email": "kamil@kokot.me",
+                    "homepage": "https://kamilkokot.com"
+                }
+            ],
+            "description": "Integrates Behat with Symfony.",
+            "support": {
+                "issues": "https://github.com/FriendsOfBehat/SymfonyExtension/issues",
+                "source": "https://github.com/FriendsOfBehat/SymfonyExtension/tree/v2.2.0"
+            },
+            "time": "2021-02-04T15:45:42+00:00"
         },
         {
             "name": "friendsofphp/php-cs-fixer",
