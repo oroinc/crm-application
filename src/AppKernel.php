@@ -31,6 +31,13 @@ class AppKernel extends OroKernel
             $bundles[] = new Oro\Bundle\TestFrameworkCRMBundle\OroTestFrameworkCRMBundle();
         }
 
+        // Temporary solution. Should be rewritten after BAP-19975
+        if (class_exists('FriendsOfBehat\SymfonyExtension\Bundle\FriendsOfBehatSymfonyExtensionBundle')
+            && in_array($this->getEnvironment(), ['dev', 'prod'], true)
+        ) {
+            $bundles[] = new FriendsOfBehat\SymfonyExtension\Bundle\FriendsOfBehatSymfonyExtensionBundle();
+        }
+
         return array_merge(parent::registerBundles(), $bundles);
     }
 
