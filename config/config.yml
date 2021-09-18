@@ -16,8 +16,7 @@ framework:
     csrf_protection: true
     validation:      { enable_annotations: true }
     assets:
-        version: "%assets_version%"
-        version_format: "%%s?version=%%s"
+        version_strategy: 'Oro\Bundle\AssetBundle\VersionStrategy\BuildVersionStrategy'
     default_locale: en
     session:
         # More info about session cookie configuration can be found at
