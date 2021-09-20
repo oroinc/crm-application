@@ -35,11 +35,6 @@ parameters:
 
     secret:            '%env(ORO_SECRET)%'
     installed:         ~
-    assets_version:    ~
-    assets_version_strategy: time_hash # A strategy should be used to generate the global assets version, can be:
-                                       # null        - the assets version stays unchanged
-                                       # time_hash   - a hash of the current time
-                                       # incremental - the next assets version is the previous version is incremented by one (e.g. 'ver1' -> 'ver2' or '1' -> '2')
 
     message_queue_transport: 'dbal'
     message_queue_transport_config: ~
