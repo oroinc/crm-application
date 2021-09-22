@@ -12,7 +12,8 @@ framework:
     router:
         resource: "%kernel.project_dir%/config/routing.yml"
         strict_requirements: "%kernel.debug%"
-    form:            true
+    form:
+        legacy_error_messages: false
     csrf_protection: true
     validation:      { enable_annotations: true }
     assets:
@@ -37,7 +38,6 @@ framework:
 twig:
     debug:                    "%kernel.debug%"
     strict_variables:         "%kernel.debug%"
-    exception_controller:     null # use framework.error_controller instead
     globals:
         bap:
             layout:           base.html.twig  # default layout across all Oro bundles
