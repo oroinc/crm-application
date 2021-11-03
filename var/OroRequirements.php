@@ -28,7 +28,7 @@ class OroRequirements extends SymfonyRequirements
     const REQUIRED_PHP_VERSION  = '7.4.14';
     const REQUIRED_GD_VERSION   = '2.0';
     const REQUIRED_CURL_VERSION = '7.0';
-    const REQUIRED_NODEJS_VERSION  = '>=12.0';
+    const REQUIRED_NODEJS_VERSION  = '>=12.0,<15.0';
 
     const EXCLUDE_REQUIREMENTS_MASK = '/5\.[0-6]|7\.0/';
 
@@ -228,8 +228,8 @@ class OroRequirements extends SymfonyRequirements
 
         $this->addOroRequirement(
             NodeJsVersionChecker::satisfies($nodeJsExecutable, self::REQUIRED_NODEJS_VERSION),
-            sprintf('NodeJS "%s" version must be installed.', self::REQUIRED_NODEJS_VERSION),
-            sprintf('Upgrade <strong>NodeJS</strong> to "%s" version.', self::REQUIRED_NODEJS_VERSION)
+            'NodeJS version 12 - 14 must be installed.',
+            'Switch <strong>NodeJS</strong> to version 12 - 14.'
         );
 
         $npmExists = null !== $nodeJsExecutableFinder->findNpm();
