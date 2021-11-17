@@ -8,6 +8,9 @@ framework:
     router:   { resource: "%kernel.project_dir%/config/routing_dev.yml" }
     profiler: { only_exceptions: false }
     ide: phpstorm
+#    mailer:
+#        envelope:
+#            recipients: ['me@example.com']
 
 web_profiler:
     toolbar: true
@@ -25,6 +28,3 @@ monolog:
 oro_message_queue:
     client:
         traceable_producer: true
-
-#swiftmailer:
-#    delivery_addresses: ['me@example.com']
