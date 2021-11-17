@@ -33,6 +33,10 @@ framework:
         path:                 /_fragment # used for controller action in template
     serializer:
         enabled:              true
+    mailer:
+        transports:
+            main: 'oro://system-config?fallback=%mailer_dsn%'
+            oro_user_email_origin: 'oro://user-email-origin'
 
 # Twig Configuration
 twig:
@@ -41,16 +45,6 @@ twig:
     globals:
         bap:
             layout:           base.html.twig  # default layout across all Oro bundles
-
-# Swiftmailer Configuration
-swiftmailer:
-    transport:                "%mailer_transport%"
-    host:                     "%mailer_host%"
-    port:                     "%mailer_port%"
-    encryption:               "%mailer_encryption%"
-    username:                 "%mailer_user%"
-    password:                 "%mailer_password%"
-    spool:                    { type: memory }
 
 fos_js_routing:
     routes_to_expose: ['oro_.*']

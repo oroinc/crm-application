@@ -32,14 +32,13 @@ monolog:
 
         deduplicated:
             type:           deduplication
-            handler:        swift
+            handler:        symfony_mailer
             time:           10
-        swift:
-            type:           swift_mailer
+        symfony_mailer:
+            type:           symfony_mailer
             email_prototype:
-                id:         oro_logger.message_factory
-                method:     createMessage
-            mailer:         swiftmailer.mailer.default
+                id:         oro_logger.monolog.email_factory.error_log_notification
+                method:     createEmail
             level:          debug
             formatter:      monolog.formatter.html
 

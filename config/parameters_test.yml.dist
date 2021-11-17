@@ -8,12 +8,7 @@ parameters:
     database_server_version: '%env(ORO_DB_VERSION)%'
     database_driver_options: []
 
-    mailer_transport:       '%env(ORO_MAILER_DRIVER)%'
-    mailer_host:            '%env(ORO_MAILER_HOST)%'
-    mailer_port:            '%env(ORO_MAILER_PORT)%'
-    mailer_encryption:      '%env(ORO_MAILER_ENCRYPTION)%'
-    mailer_user:            '%env(ORO_MAILER_USER)%'
-    mailer_password:        '%env(ORO_MAILER_PASSWORD)%'
+    mailer_dsn:             '%env(ORO_MAILER_DSN)%'
 
     # WebSocket server config
     websocket_bind_address:                "0.0.0.0"  # The host IP the socket server will bind to
@@ -52,11 +47,6 @@ parameters:
     env(ORO_DB_PASSWORD): null
     env(ORO_DB_VERSION): null
 
-    env(ORO_MAILER_DRIVER): smtp
-    env(ORO_MAILER_HOST): 127.0.0.1
-    env(ORO_MAILER_PORT): null
-    env(ORO_MAILER_ENCRYPTION): null
-    env(ORO_MAILER_USER): null
-    env(ORO_MAILER_PASSWORD): null
+    env(ORO_MAILER_DSN): 'smtp://127.0.0.1'
 
     env(ORO_SECRET): ThisTokenIsNotSoSecretChangeIt
