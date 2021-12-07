@@ -3490,16 +3490,16 @@
         },
         {
             "name": "hwi/oauth-bundle",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hwi/HWIOAuthBundle.git",
-                "reference": "7a5846f0fcd747ce7fe1c712b2c48d7e0a5bdafb"
+                "reference": "ae5ad223d4068d31e500054afc1d441f5849a886"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hwi/HWIOAuthBundle/zipball/7a5846f0fcd747ce7fe1c712b2c48d7e0a5bdafb",
-                "reference": "7a5846f0fcd747ce7fe1c712b2c48d7e0a5bdafb",
+                "url": "https://api.github.com/repos/hwi/HWIOAuthBundle/zipball/ae5ad223d4068d31e500054afc1d441f5849a886",
+                "reference": "ae5ad223d4068d31e500054afc1d441f5849a886",
                 "shasum": ""
             },
             "require": {
@@ -3518,6 +3518,18 @@
                 "symfony/yaml": "^4.4|^5.1"
             },
             "conflict": {
+                "symfony/cache": "^6.0",
+                "symfony/config": "^6.0",
+                "symfony/dependency-injection": "^6.0",
+                "symfony/doctrine-bridge": "^6.0",
+                "symfony/error-handler": "^6.0",
+                "symfony/http-foundation": "^6.0",
+                "symfony/password-hasher": "^6.0",
+                "symfony/property-info": "^6.0",
+                "symfony/security-core": "^6.0",
+                "symfony/security-csrf": "^6.0",
+                "symfony/security-http": "^6.0",
+                "symfony/twig-bridge": "^6.0",
                 "twig/twig": "<1.34"
             },
             "require-dev": {
@@ -3528,10 +3540,11 @@
                 "php-http/guzzle6-adapter": "^2.0",
                 "php-http/httplug-bundle": "^1.7",
                 "phpstan/phpstan": "^0.12.91",
-                "phpunit/phpunit": "^9.5",
+                "phpunit/phpunit": "^9.5.5",
                 "symfony/browser-kit": "^4.4|^5.1",
                 "symfony/css-selector": "^4.4|^5.1",
                 "symfony/monolog-bundle": "^3.4",
+                "symfony/phpunit-bridge": "^5.3",
                 "symfony/property-access": "^4.4|^5.1",
                 "symfony/stopwatch": "^5.1",
                 "symfony/translation": "^4.4|^5.1",
@@ -3556,6 +3569,7 @@
                     "HWI\\Bundle\\OAuthBundle\\": ""
                 },
                 "exclude-from-classmap": [
+                    "/Test/",
                     "/Tests/"
                 ]
             },
@@ -3652,9 +3666,9 @@
             ],
             "support": {
                 "issues": "https://github.com/hwi/HWIOAuthBundle/issues",
-                "source": "https://github.com/hwi/HWIOAuthBundle/tree/1.4.2"
+                "source": "https://github.com/hwi/HWIOAuthBundle/tree/1.4.3"
             },
-            "time": "2021-08-09T09:54:56+00:00"
+            "time": "2021-12-07T08:29:28+00:00"
         },
         {
             "name": "imagine/imagine",
@@ -4780,21 +4794,21 @@
         },
         {
             "name": "matomo/device-detector",
-            "version": "5.0.0",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matomo-org/device-detector.git",
-                "reference": "f7f0509f284bda14890909de53da9bb0f7494532"
+                "reference": "ebd8a07e4b69088c0e34f29ec72dc162c34c9264"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/f7f0509f284bda14890909de53da9bb0f7494532",
-                "reference": "f7f0509f284bda14890909de53da9bb0f7494532",
+                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/ebd8a07e4b69088c0e34f29ec72dc162c34c9264",
+                "reference": "ebd8a07e4b69088c0e34f29ec72dc162c34c9264",
                 "shasum": ""
             },
             "require": {
                 "mustangostang/spyc": "*",
-                "php": ">=7.2"
+                "php": "^7.2|^8.0"
             },
             "replace": {
                 "piwik/device-detector": "self.version"
@@ -4845,7 +4859,7 @@
                 "source": "https://github.com/matomo-org/matomo",
                 "wiki": "https://dev.matomo.org/"
             },
-            "time": "2021-11-12T08:08:31+00:00"
+            "time": "2021-12-07T11:40:16+00:00"
         },
         {
             "name": "michelf/php-markdown",
@@ -6005,10 +6019,9 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/gridfs-config",
-                "reference": "901ee28d995d75d9c301927e9559d595d172cba2"
+                "reference": "d541b084c86c65285eda3d4be07707dd9c717c67"
             },
             "require": {
-                "ext-mongodb": "1.9.*",
                 "knplabs/knp-gaufrette-bundle": "~0.7.1",
                 "mongodb/mongodb": "^1.1",
                 "oro/platform": "5.0.*"
