@@ -91,6 +91,12 @@ class OroRequirements extends SymfonyRequirements
             'Install and enable the <strong>openssl</strong> extension.'
         );
 
+        $this->addOroRequirement(
+            extension_loaded('mbstring'),
+            'mbstring extension should be installed',
+            'Install and enable the <strong>mbstring</strong> extension.'
+        );
+
         if (function_exists('iconv')) {
             $this->addOroRequirement(
                 false !== @iconv('utf-8', 'ascii//TRANSLIT', 'check string'),
