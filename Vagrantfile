@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "centos/7"
+  config.vm.box = "generic/oracle8"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.56.10"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -47,7 +47,8 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder "../data", "/vagrant_data"
+  # config.vm.synced_folder "../data", "/home/vagrant/www"
+  config.vm.synced_folder "./", "/vagrant"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -57,7 +58,7 @@ Vagrant.configure("2") do |config|
   #   vb.gui = true
 
      # Customize the amount of memory on the VM:
-     vb.memory = 2048
+     vb.memory = 4096
      vb.cpus = 2
    end
   #
@@ -78,12 +79,18 @@ Vagrant.configure("2") do |config|
     # --- VM settings ---
 
     FORWARDED_PORT=8000
+    ORO_PHP_MODULE_VERSION=8.1
+    ORO_NODEJS_MODULE_VERSION=16
 
     # --- Database settings ---
 
     DB_USER="dbuser"
     DB_PASSWORD="DBP@ssword123"
     DB_NAME="oro"
+
+    echo "$DB_USER" > /tmp/oro_install_DB_USER
+    echo "$DB_PASSWORD" > /tmp/oro_install_DB_PASSWORD
+    echo "$DB_NAME" > /tmp/oro_install_DB_NAME
 
     # --- Oro application settings ---
 
@@ -101,40 +108,35 @@ Vagrant.configure("2") do |config|
     echo "************** Step 1: Environment Setup **************"
     echo "*******************************************************\n"
 
+    dnf -y install dnf-plugin-config-manager https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+    dnf -y module enable mysql:8.0 nodejs:${ORO_NODEJS_MODULE_VERSION} php:remi-${ORO_PHP_MODULE_VERSION}
+    dnf -y upgrade
+
     echo "\n~~~~~~~~~~~~~~ Enable Required Package Repositories ~~~~~~~~~~~~~~\n"
 
-    yum install -y epel-release
-    yum update -y
+    if [[ ! -e /etc/yum.repos.d/oropublic.repo ]]; then
+	    TMP_FILE=$(mktemp)
+	    cat >"$TMP_FILE" <<__EOF__
+[oropublic]
+name=OroPublic
+baseurl=https://nexus.oro.cloud/repository/oropublic/8/x86_64/
+enabled=1
+gpgcheck=0
+module_hotfixes=1
+__EOF__
+    	mv -f "$TMP_FILE" "/etc/yum.repos.d/oropublic.repo"
+    fi
 
-    echo "\n~~~~~~~~~~~~~~ Install Nginx, NodeJS, Git, Supervisor, and Wget ~~~~~~~~~~~~~~\n"
-
-    curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
-    yum install -y nginx wget git nodejs supervisor yum-utils
-
-    echo "\n~~~~~~~~~~~~~~ Install MySQL ~~~~~~~~~~~~~~\n"
-
-    wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm && rpm -ivh mysql80-community-release-el7-1.noarch.rpm
-
-    yum install -y mysql-community-server
-
-    echo "\n~~~~~~~~~~~~~~ Install PHP ~~~~~~~~~~~~~~\n"
-
-    wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm && rpm -Uvh remi-release-7.rpm
-    yum-config-manager --enable remi-php74
-    yum update -y
-
-    yum install -y php-fpm php-cli php-pdo php-mysqlnd php-xml php-soap php-gd php-mbstring php-zip php-intl php-opcache
+    echo "\n~~~~~~~~~~~~~~ Install Nginx, Install PHP, NodeJS, Wget ~~~~~~~~~~~~~~\n"
+    dnf -y --setopt=install_weak_deps=False --best install pngquant jpegoptim findutils rsync glibc-langpack-en psmisc wget bzip2 unzip p7zip p7zip-plugins parallel \
+    patch nodejs npm git-core jq bc mysql-server \
+    php-common php-cli php-fpm php-opcache php-mbstring php-mysqlnd php-pgsql php-pdo php-json php-process php-ldap php-gd php-intl php-bcmath php-xml php-soap php-sodium php-tidy php-imap php-pecl-zip php-pecl-mongodb
+    dnf -y --setopt=install_weak_deps=False --best --nogpgcheck install oro-nginx oro-nginx-mod-http-cache_purge oro-nginx-mod-http-cookie_flag oro-nginx-mod-http-geoip oro-nginx-mod-http-gridfs oro-nginx-mod-http-headers_more oro-nginx-mod-http-naxsi oro-nginx-mod-http-njs oro-nginx-mod-http-pagespeed oro-nginx-mod-http-sorted_querystring oro-nginx-mod-http-testcookie_access oro-nginx-mod-http-xslt-filter
 
     echo "\n~~~~~~~~~~~~~~ Install Composer ~~~~~~~~~~~~~~\n"
-
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && php composer-setup.php
     php -r "unlink('composer-setup.php');"
     mv composer.phar /usr/bin/composer
-
-    echo "\n~~~~~~~~~~~~~~ Enable Installed Services ~~~~~~~~~~~~~~\n"
-
-    systemctl start mysqld php-fpm nginx supervisord
-    systemctl enable mysqld php-fpm nginx supervisord
 
     echo "********************************************************************************"
     echo "************** Step 2: Pre-installation Environment Configuration **************"
@@ -144,6 +146,7 @@ Vagrant.configure("2") do |config|
 
     sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
     setenforce permissive
+    systemctl disable --now firewalld
 
     echo "\n~~~~~~~~~~~~~~ Prepare MySQL Database ~~~~~~~~~~~~~~\n"
 
@@ -166,8 +169,7 @@ Vagrant.configure("2") do |config|
 
     # --- Change the Default MySQL Password for Root User ---
 
-    MYSQL_INSTALLED_TMP_ROOT_PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}')
-    mysqladmin --user=root --password="$MYSQL_INSTALLED_TMP_ROOT_PASSWORD" password "$DB_PASSWORD"
+    mysqladmin --user=root password "$DB_PASSWORD"
 
     # --- Create a Database for OroPlatform Community Edition Application and a Dedicated Database User ---
 
@@ -196,9 +198,7 @@ server {
   }
 
   location ~ ^/(index|index_dev|config|install)\\.php(/|$) {
-    fastcgi_pass 127.0.0.1:9000;
-    # or
-    # fastcgi_pass unix:/var/run/php/php7-fpm.sock;
+    fastcgi_pass php-fpm;
     fastcgi_split_path_info ^(.+\\.php)(/.*)$;
     include fastcgi_params;
     fastcgi_param SCRIPT_FILENAME \\$document_root\\$fastcgi_script_name;
@@ -218,8 +218,6 @@ server {
 }
 ____NGINXCONFIGTEMPLATE
 
-    systemctl restart nginx
-
     echo "\n~~~~~~~~~~~~~~ Configure PHP ~~~~~~~~~~~~~~\n"
 
     sed -i 's/user = apache/user = nginx/g' /etc/php-fpm.d/www.conf
@@ -237,12 +235,14 @@ ____NGINXCONFIGTEMPLATE
     sed -i 's/opcache.max_accelerated_files=[0-9]*/opcache.max_accelerated_files=32531/g' /etc/php.d/10-opcache.ini
     sed -i 's/;opcache.save_comments=[0-1]/opcache.save_comments=1/g' /etc/php.d/10-opcache.ini
 
-    systemctl restart php-fpm
+    echo "\n~~~~~~~~~~~~~~ Enable Installed Services ~~~~~~~~~~~~~~\n"
+
+    systemctl enable mysqld php-fpm nginx
+    systemctl restart php-fpm nginx
 
     echo "********************************************************************************************"
-    echo "**************** Step 3: OroCRM Community Edition Application Installation *****************"
+    echo "************************** Step 3: Oro Application Installation ****************************"
     echo "********************************************************************************************"
-
     echo "\n~~~~~~~~~~~~~~ Get Application Source Code ~~~~~~~~~~~~~~\n"
 
     # --- Copy application source code from the current host folder to the nginx web folder ---
@@ -254,31 +254,18 @@ ____NGINXCONFIGTEMPLATE
 
     echo "\n~~~~~~~~~~~~~~ Install Application Dependencies ~~~~~~~~~~~~~~\n"
 
-    # --- Configure config/parameters.yml (to prevent composer interactive dialog) ---
+    # --- Install Dependencies ---
 
     su - vagrant -c 'composer install --no-progress --prefer-dist --no-dev --optimize-autoloader -n --working-dir=/var/www/oroapp'
+
+    # --- Configure config/parameters.yml (to prevent composer interactive dialog) ---
 
     sed -i "/database_user/s/:[[:space:]].*$/: $DB_USER/g" ./config/parameters.yml
     sed -i "/database_password/s/:[[:space:]].*$/: '$DB_PASSWORD'/g" ./config/parameters.yml
     sed -i "/database_name/s/:[[:space:]].*$/: $DB_NAME/g" ./config/parameters.yml
     chown vagrant:vagrant /var/www/oroapp/config/parameters.yml
 
-    echo "\n~~~~~~~~~~~~~~ Install OroCRM Community Edition Application ~~~~~~~~~~~~~~\n"
-
-    # --- Configure DBAL parameters before installation ---
-
-    cat >> ./config/config.yml <<____DOCTRINECONFIG
-
-doctrine:
-    dbal:
-        charset: utf8mb4
-        default_table_options:
-            charset: utf8mb4
-            collate: utf8mb4_unicode_ci
-
-____DOCTRINECONFIG
-
-    # --- Run the installation command ---
+    echo "\n~~~~~~~~~~~~~~ Install Oro Application ~~~~~~~~~~~~~~\n"
 
     su - vagrant -c 'APP_HOST=$(cat /tmp/oro_install_APP_HOST) && APP_USER=$(cat /tmp/oro_install_APP_USER) && APP_PASSWORD=$(cat /tmp/oro_install_APP_PASSWORD) && APP_LOAD_DEMO_DATA=$(cat /tmp/oro_install_APP_LOAD_DEMO_DATA) && php /var/www/oroapp/bin/console oro:install --env=prod --timeout=1500 --no-debug --application-url="http://$APP_HOST/" --organization-name="Oro Inc" --user-name="$APP_USER" --user-email="admin@example.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="$APP_PASSWORD" --sample-data=$APP_LOAD_DEMO_DATA --language=en --formatting-code=en_US'
 
@@ -301,33 +288,51 @@ ____DOCTRINECONFIG
 
     echo "\n~~~~~~~~~~~~~~ Configure and Run Required Background Processes ~~~~~~~~~~~~~~\n"
 
-    cat >> /etc/supervisord.conf <<____SUPERVISORDTEMPLATE
-[program:oro_web_socket]
-command=php ./bin/console gos:websocket:server --env=prod
-numprocs=1
-autostart=true
-autorestart=true
-directory=/var/www/oroapp
-user=nginx
-redirect_stderr=true
+    cat >> /etc/systemd/system/oro-message-queue.service <<__EOF__
+[Unit]
+Description=ORO consumer for /var/www/oroapp
+After="mysqld"
 
-[program:oro_message_consumer]
-command=php ./bin/console oro:message-queue:consume --env=prod
-process_name=%(program_name)s_%(process_num)02d
-numprocs=5
-autostart=true
-autorestart=true
-directory=/var/www/oroapp
-user=nginx
-redirect_stderr=true
-____SUPERVISORDTEMPLATE
+[Service]
+Type=simple
+User=nginx
+WorkingDirectory=/var/www/oroapp
+ExecStart=/usr/bin/php /var/www/oroapp/bin/console oro:message-queue:consume --env=prod --memory-limit=500
+Restart=always
+RestartSec=3s
+TimeoutStopSec=3s
+KillMode=control-group
+PrivateTmp=true
 
-    systemctl restart supervisord
+[Install]
+WantedBy=multi-user.target
+__EOF__
+
+    cat >> /etc/systemd/system/oro-clank-server.service <<__EOF__
+[Unit]
+Description=ORO clank server for /var/www/oroapp
+After="mysqld"
+
+[Service]
+Type=simple
+User=nginx
+WorkingDirectory=/var/www/oroapp
+ExecStart=/usr/bin/php /var/www/oroapp/bin/console gos:websocket:server --env=prod
+Restart=always
+RestartSec=3s
+KillMode=control-group
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+__EOF__
+
+    systemctl enable --now oro-message-queue.service oro-clank-server.service
 
     echo "\n**********************************************************************************************************************"
-    echo "**************** Congratulations! You’ve Successfully Installed OroCRM Application *************************************"
-    echo "**********************************************************************************************************************\n"
-    echo "\n************** You should now be able to open the homepage http://$APP_HOST:$FORWARDED_PORT/ and use the application. **************\n"
+    echo "************** Congratulations! You’ve Successfully Installed OroCommerce Application **********************************"
+    echo "***********************************************************************************************************************\n"
+    echo "\n************** You should now be able to open the homepage http://$APP_HOST:$FORWARDED_PORT/ and use the application. ************\n"
    SHELL
 end
 
