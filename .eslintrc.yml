@@ -1,0 +1,62 @@
+extends:
+  - google
+  - "plugin:oro/recommended"
+parserOptions:
+  ecmaVersion: 2020
+  sourceType: module
+env:
+  browser: true
+  commonjs: true
+  amd: true
+  jasmine: true
+globals:
+  Promise: true
+
+rules:
+  # turn off ES6 code style check
+  arrow-parens: ['error', 'as-needed']
+  oro/named-constructor: 'error'
+
+  # customization
+  indent: ['error', 4, {'SwitchCase': 1}]
+  max-len:
+    - 'error'
+    - code: 120
+      comments: 160
+      tabWidth: 4
+      ignoreComments: true
+      ignoreTrailingComments: true
+      ignoreRegExpLiterals: true
+      ignorePattern: '^\s*const\s.+=\s*require\s*\(|\.extend\(\/\*\*\s+@lends\s.+\*\/\{$'
+  comma-dangle: ['error', 'never']
+  eqeqeq: ['error', 'smart']
+  no-useless-call: 'error'
+  no-useless-concat: 'error'
+  no-loop-func: 'error'
+  no-eval: 'error'
+  no-undef: 'error'
+  no-unused-vars:
+    - 'error'
+    - ignoreRestSiblings: true
+      args: 'none'
+  operator-linebreak:
+    - 'error'
+    - 'after'
+    - overrides:
+        "?": 'before'
+        ":": 'before'
+  new-cap:
+    - 'error'
+    - newIsCap: true
+      properties: false
+  quote-props:
+    - 'error'
+    - 'consistent-as-needed'
+    - keywords: true
+      numbers: true
+  valid-jsdoc: 'off' # has to be turned on in a future
+  no-useless-escape: 'off' # has to be turned on in a future
+  require-jsdoc: 'off' # has to be turned on in a future
+  no-invalid-this: 'off' # has to be turned on in a future
+  space-infix-ops:
+    - 'error'
