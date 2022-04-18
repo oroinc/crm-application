@@ -4,6 +4,20 @@ This file includes only the most important items that should be addressed before
 
 Please also refer to [CHANGELOG.md](CHANGELOG.md) for a list of significant changes in the code that may affect the upgrade of some customizations.
 
+## 4.2.10
+
+The `oro.email.update_visibilities_for_organization` MQ process can take a long time when updating from the old versions
+if the system has many email addresses (in User, Customer user, Lead, Contact, RFP request, Mailbox entities).
+During performance tests with 1M of email addresses, this process  took  approximately 10 minutes.
+
+It is recommended to add these MQ topics to the `oro.index` queue:
+
+- `oro.email.recalculate_email_visibility`
+- `oro.email.update_visibilities`
+- `oro.email.update_visibilities_for_organization`
+- `oro.email.update_email_visibilities_for_organization`
+- `oro.email.update_email_visibilities_for_organization_chunk`
+
 ## 4.2.1
 
 - The link at the calendar events search items was changed,
