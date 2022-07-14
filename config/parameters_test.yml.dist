@@ -39,6 +39,8 @@ parameters:
     liip_imagine.jpegoptim.binary: null
     liip_imagine.pngquant.binary: null
 
+    tracking_data_folder: '%env(ORO_TRACKING_DATA_FOLDER)%'
+
     # Fallback values (used if environmental variables are not set)
     env(ORO_DB_HOST): 127.0.0.1
     env(ORO_DB_PORT): null
@@ -50,3 +52,5 @@ parameters:
     env(ORO_MAILER_DSN): 'smtp://127.0.0.1'
 
     env(ORO_SECRET): ThisTokenIsNotSoSecretChangeIt
+
+    env(ORO_TRACKING_DATA_FOLDER): null
