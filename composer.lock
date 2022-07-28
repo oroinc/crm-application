@@ -385,16 +385,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "fd5dd441932a7e10ca6e5b490e272d34c8430640"
+                "reference": "30897edbfb15e784fe55587b4f73ceefd3c4d98c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/fd5dd441932a7e10ca6e5b490e272d34c8430640",
-                "reference": "fd5dd441932a7e10ca6e5b490e272d34c8430640",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/30897edbfb15e784fe55587b4f73ceefd3c4d98c",
+                "reference": "30897edbfb15e784fe55587b4f73ceefd3c4d98c",
                 "shasum": ""
             },
             "require": {
@@ -441,7 +441,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.3.2"
+                "source": "https://github.com/composer/ca-bundle/tree/1.3.3"
             },
             "funding": [
                 {
@@ -457,7 +457,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-24T11:56:16+00:00"
+            "time": "2022-07-20T07:14:26+00:00"
         },
         {
             "name": "composer/composer",
@@ -1857,34 +1857,31 @@
         },
         {
             "name": "doctrine/event-manager",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/event-manager.git",
-                "reference": "41370af6a30faa9dc0368c4a6814d596e81aba7f"
+                "reference": "eb2ecf80e3093e8f3c2769ac838e27d8ede8e683"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/41370af6a30faa9dc0368c4a6814d596e81aba7f",
-                "reference": "41370af6a30faa9dc0368c4a6814d596e81aba7f",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/eb2ecf80e3093e8f3c2769ac838e27d8ede8e683",
+                "reference": "eb2ecf80e3093e8f3c2769ac838e27d8ede8e683",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0"
             },
             "conflict": {
-                "doctrine/common": "<2.9@dev"
+                "doctrine/common": "<2.9"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^6.0",
-                "phpunit/phpunit": "^7.0"
+                "doctrine/coding-standard": "^9",
+                "phpstan/phpstan": "~1.4.10 || ^1.5.4",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "vimeo/psalm": "^4.22"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\": "lib/Doctrine/Common"
@@ -1931,7 +1928,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/event-manager/issues",
-                "source": "https://github.com/doctrine/event-manager/tree/1.1.x"
+                "source": "https://github.com/doctrine/event-manager/tree/1.1.2"
             },
             "funding": [
                 {
@@ -1947,7 +1944,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-29T18:28:51+00:00"
+            "time": "2022-07-27T22:18:11+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -4560,16 +4557,16 @@
         },
         {
             "name": "laminas/laminas-stdlib",
-            "version": "3.10.1",
+            "version": "3.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stdlib.git",
-                "reference": "0d669074845fc80a99add0f64025192f143ef836"
+                "reference": "aad7d2b11ba0069ba0d9b40f6dde3c2fa664b57f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/0d669074845fc80a99add0f64025192f143ef836",
-                "reference": "0d669074845fc80a99add0f64025192f143ef836",
+                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/aad7d2b11ba0069ba0d9b40f6dde3c2fa664b57f",
+                "reference": "aad7d2b11ba0069ba0d9b40f6dde3c2fa664b57f",
                 "shasum": ""
             },
             "require": {
@@ -4582,7 +4579,7 @@
                 "laminas/laminas-coding-standard": "~2.3.0",
                 "phpbench/phpbench": "^1.0",
                 "phpunit/phpunit": "^9.3.7",
-                "psalm/plugin-phpunit": "^0.16.0",
+                "psalm/plugin-phpunit": "^0.17.0",
                 "vimeo/psalm": "^4.7"
             },
             "type": "library",
@@ -4615,7 +4612,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-06-10T14:49:09+00:00"
+            "time": "2022-07-27T12:28:58+00:00"
         },
         {
             "name": "laminas/laminas-validator",
@@ -5995,16 +5992,16 @@
         },
         {
             "name": "oro/calendar-bundle",
-            "version": "5.0.3",
+            "version": "5.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCalendarBundle.git",
-                "reference": "473bfad4fec65aebd3c4382549c282f147e4f26a"
+                "reference": "7944a43047e1bba497e622d3c4fcc61680cb9b68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/473bfad4fec65aebd3c4382549c282f147e4f26a",
-                "reference": "473bfad4fec65aebd3c4382549c282f147e4f26a",
+                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/7944a43047e1bba497e622d3c4fcc61680cb9b68",
+                "reference": "7944a43047e1bba497e622d3c4fcc61680cb9b68",
                 "shasum": ""
             },
             "require": {
@@ -6047,22 +6044,22 @@
             ],
             "support": {
                 "issues": "https://github.com/oroinc/OroCalendarBundle/issues",
-                "source": "https://github.com/oroinc/OroCalendarBundle/tree/5.0.3"
+                "source": "https://github.com/oroinc/OroCalendarBundle/tree/5.0.4"
             },
-            "time": "2022-07-07T10:59:17+00:00"
+            "time": "2022-07-22T10:54:09+00:00"
         },
         {
             "name": "oro/crm",
-            "version": "5.0.5",
+            "version": "5.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/crm.git",
-                "reference": "0d94ac42e8ff152406535972b641a3604e7df882"
+                "reference": "ddeb984061878a49e53ce0949e6c99ef5f551725"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/crm/zipball/0d94ac42e8ff152406535972b641a3604e7df882",
-                "reference": "0d94ac42e8ff152406535972b641a3604e7df882",
+                "url": "https://api.github.com/repos/oroinc/crm/zipball/ddeb984061878a49e53ce0949e6c99ef5f551725",
+                "reference": "ddeb984061878a49e53ce0949e6c99ef5f551725",
                 "shasum": ""
             },
             "require": {
@@ -6144,9 +6141,9 @@
             "homepage": "https://github.com/oroinc/crm.git",
             "support": {
                 "issues": "https://github.com/oroinc/crm/issues",
-                "source": "https://github.com/oroinc/crm/tree/5.0.5"
+                "source": "https://github.com/oroinc/crm/tree/5.0.6"
             },
-            "time": "2022-07-07T10:58:43+00:00"
+            "time": "2022-07-22T10:53:23+00:00"
         },
         {
             "name": "oro/crm-call-bundle",
@@ -6364,16 +6361,16 @@
         },
         {
             "name": "oro/crm-zendesk",
-            "version": "5.0.0",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMZendeskBundle.git",
-                "reference": "0bb2efb51aa71fc6c574e0ed9c16dd950120325c"
+                "reference": "d8a105e6fd3fd1333dc4abb109e6f71d9464f540"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMZendeskBundle/zipball/0bb2efb51aa71fc6c574e0ed9c16dd950120325c",
-                "reference": "0bb2efb51aa71fc6c574e0ed9c16dd950120325c",
+                "url": "https://api.github.com/repos/oroinc/OroCRMZendeskBundle/zipball/d8a105e6fd3fd1333dc4abb109e6f71d9464f540",
+                "reference": "d8a105e6fd3fd1333dc4abb109e6f71d9464f540",
                 "shasum": ""
             },
             "require": {
@@ -6412,9 +6409,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oroinc/OroCRMZendeskBundle/issues",
-                "source": "https://github.com/oroinc/OroCRMZendeskBundle/tree/5.0.0"
+                "source": "https://github.com/oroinc/OroCRMZendeskBundle/tree/5.0.1"
             },
-            "time": "2022-01-17T10:52:10+00:00"
+            "time": "2022-06-27T09:40:19+00:00"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -6476,16 +6473,16 @@
         },
         {
             "name": "oro/marketing",
-            "version": "5.0.4",
+            "version": "5.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCRMMarketingBundle.git",
-                "reference": "7959d076abaf1845b789fa21239e7bbac8559ab6"
+                "reference": "4a908f5ec329823dd9a8e6eddbff74fb7947dce8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/7959d076abaf1845b789fa21239e7bbac8559ab6",
-                "reference": "7959d076abaf1845b789fa21239e7bbac8559ab6",
+                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/4a908f5ec329823dd9a8e6eddbff74fb7947dce8",
+                "reference": "4a908f5ec329823dd9a8e6eddbff74fb7947dce8",
                 "shasum": ""
             },
             "require": {
@@ -6528,9 +6525,9 @@
                 "tracking"
             ],
             "support": {
-                "source": "https://github.com/oroinc/OroCRMMarketingBundle/tree/5.0.4"
+                "source": "https://github.com/oroinc/OroCRMMarketingBundle/tree/5.0.5"
             },
-            "time": "2022-06-14T10:19:57+00:00"
+            "time": "2022-07-14T12:10:51+00:00"
         },
         {
             "name": "oro/oauth2-server",
@@ -6591,16 +6588,16 @@
         },
         {
             "name": "oro/platform",
-            "version": "5.0.6",
+            "version": "5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/platform.git",
-                "reference": "0c93149940778bd75b9c411b800deea5f74ab315"
+                "reference": "1d1e5f67803da3d82a56e5a910f9c887d1946e77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/platform/zipball/0c93149940778bd75b9c411b800deea5f74ab315",
-                "reference": "0c93149940778bd75b9c411b800deea5f74ab315",
+                "url": "https://api.github.com/repos/oroinc/platform/zipball/1d1e5f67803da3d82a56e5a910f9c887d1946e77",
+                "reference": "1d1e5f67803da3d82a56e5a910f9c887d1946e77",
                 "shasum": ""
             },
             "require": {
@@ -6921,9 +6918,9 @@
             "homepage": "https://github.com/oroinc/platform.git",
             "support": {
                 "issues": "https://github.com/oroinc/platform/issues",
-                "source": "https://github.com/oroinc/platform/tree/5.0.6"
+                "source": "https://github.com/oroinc/platform/tree/5.0.7"
             },
-            "time": "2022-07-07T10:58:37+00:00"
+            "time": "2022-07-22T10:53:16+00:00"
         },
         {
             "name": "oro/platform-serialised-fields",
@@ -6982,16 +6979,16 @@
         },
         {
             "name": "oro/redis-config",
-            "version": "5.0.4",
+            "version": "5.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/redis-config.git",
-                "reference": "f6eb176598af851018a72d3592bb41d40819b652"
+                "reference": "aa4243f915cee88bfb585de1c245c0e803746b4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/redis-config/zipball/f6eb176598af851018a72d3592bb41d40819b652",
-                "reference": "f6eb176598af851018a72d3592bb41d40819b652",
+                "url": "https://api.github.com/repos/oroinc/redis-config/zipball/aa4243f915cee88bfb585de1c245c0e803746b4e",
+                "reference": "aa4243f915cee88bfb585de1c245c0e803746b4e",
                 "shasum": ""
             },
             "require": {
@@ -7030,9 +7027,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oroinc/redis-config/issues",
-                "source": "https://github.com/oroinc/redis-config/tree/5.0.4"
+                "source": "https://github.com/oroinc/redis-config/tree/5.0.5"
             },
-            "time": "2022-06-20T14:43:48+00:00"
+            "time": "2022-07-15T07:30:24+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -15853,16 +15850,16 @@
         },
         {
             "name": "fakerphp/faker",
-            "version": "v1.19.0",
+            "version": "v1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "d7f08a622b3346766325488aa32ddc93ccdecc75"
+                "reference": "37f751c67a5372d4e26353bd9384bc03744ec77b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/d7f08a622b3346766325488aa32ddc93ccdecc75",
-                "reference": "d7f08a622b3346766325488aa32ddc93ccdecc75",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/37f751c67a5372d4e26353bd9384bc03744ec77b",
+                "reference": "37f751c67a5372d4e26353bd9384bc03744ec77b",
                 "shasum": ""
             },
             "require": {
@@ -15889,7 +15886,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "v1.19-dev"
+                    "dev-main": "v1.20-dev"
                 }
             },
             "autoload": {
@@ -15914,9 +15911,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v1.19.0"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.20.0"
             },
-            "time": "2022-02-02T17:38:57+00:00"
+            "time": "2022-07-20T13:12:54+00:00"
         },
         {
             "name": "friends-of-behat/mink-extension",
