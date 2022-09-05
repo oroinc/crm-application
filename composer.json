@@ -57,6 +57,9 @@
         "bin-dir": "bin",
         "fxp-asset": {
           "enabled": false
+        },
+        "allow-plugins": {
+            "symfony/flex": true
         }
     },
     "scripts": {
@@ -64,13 +67,15 @@
             "@build-parameters",
             "@set-permissions",
             "@install-assets",
-            "@set-assets-version"
+            "@set-assets-version",
+            "@auto-scripts"
         ],
         "post-update-cmd": [
             "@build-parameters",
             "@set-permissions",
             "@update-assets",
-            "@set-assets-version"
+            "@set-assets-version",
+            "@auto-scripts"
         ],
         "build-parameters": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
@@ -89,7 +94,11 @@
         ],
         "set-parameters": [
             "Oro\\Bundle\\InstallerBundle\\Composer\\ParametersHandler::set"
-        ]
+        ],
+        "auto-scripts": {
+            "oro:assets:install --env=prod": "symfony-cmd",
+            "cache:clear --env=prod": "symfony-cmd"
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -102,7 +111,8 @@
         "symfony-bin-dir": "bin",
         "symfony-tests-dir": "tests",
         "incenteev-parameters": {
-            "file": "config/parameters.yml"
+            "file": "config/parameters.yml",
+            "keep-outdated": true
         }
     }
 }
