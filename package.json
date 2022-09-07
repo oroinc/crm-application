@@ -2,11 +2,16 @@
     "description": "THE FILE IS GENERATED PROGRAMMATICALLY, ALL MANUAL CHANGES IN DEPENDENCIES SECTION WILL BE LOST",
     "homepage": "https://doc.oroinc.com/master/frontend/javascript/composer-js-dependencies/",
     "main": "webpack.config.js",
+    "engines": {
+        "npm": ">=8.0.0 <9",
+        "node": ">=16.0.0 <17"
+    },
     "scripts": {
-        "build": "webpack --mode=production --env skipBabel",
-        "watch": "webpack -w --progress --env skipBabel",
-        "build-css": "webpack --env skipJS",
-        "build-js": "webpack --env skipCSS skipBabel",
+        "webpack": "webpack",
+        "build": "npm run webpack -- --mode=production --env skipBabel",
+        "watch": "npm run webpack -- -w --progress --env skipBabel",
+        "build-css": "npm run webpack -- --env skipJS",
+        "build-js": "npm run webpack -- --env skipCSS skipBabel",
         "lint": "echo 'Configure own command on a base of following template `npm run eslint vendor/%name% && npm run stylelint vendor/%name%/**/**.{css,scss}`'",
         "lint-oro": "npm run eslint-oro && npm run stylelint-oro",
         "eslint": "eslint -c .eslintrc.yml --ignore-path .eslintignore",

@@ -52,7 +52,7 @@ All files from these directories must be moved to the new locations:
 
 The `public/uploads` directory has been removed.
 
-The console command `oro:gaufrette:migrate-filestorages` will help to migrate the files to new structure.
+The console command `oro:gaufrette:migrate-filestorages` will help migrate the files to new structure.
 
 ## 4.1.0
 
