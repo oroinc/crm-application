@@ -3037,29 +3037,32 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.8.5",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268"
+                "reference": "a119247127ff95789a2d95c347cd74721fbedaa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/337e3ad8e5716c15f9657bd214d16cc5e69df268",
-                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/a119247127ff95789a2d95c347cd74721fbedaa4",
+                "reference": "a119247127ff95789a2d95c347cd74721fbedaa4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0",
-                "psr/http-message": "~1.0",
-                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
+                "php": "^7.2.5 || ^8.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.0",
+                "ralouphie/getallheaders": "^3.0"
             },
             "provide": {
+                "psr/http-factory-implementation": "1.0",
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "ext-zlib": "*",
-                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.10"
+                "bamarni/composer-bin-plugin": "^1.4.1",
+                "http-interop/http-factory-tests": "^0.9",
+                "phpunit/phpunit": "^8.5.8 || ^9.3.10"
             },
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
@@ -3067,13 +3070,10 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
-                "files": [
-                    "src/functions_include.php"
-                ],
                 "psr-4": {
                     "GuzzleHttp\\Psr7\\": "src/"
                 }
@@ -3112,6 +3112,11 @@
                     "name": "Tobias Schultze",
                     "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://sagikazarmark.hu"
                 }
             ],
             "description": "PSR-7 message implementation that also provides common utility methods",
@@ -3127,7 +3132,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.8.5"
+                "source": "https://github.com/guzzle/psr7/tree/2.2.2"
             },
             "funding": [
                 {
@@ -3143,7 +3148,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-20T21:51:18+00:00"
+            "time": "2022-06-08T19:55:23+00:00"
         },
         {
             "name": "hwi/oauth-bundle",
@@ -5007,16 +5012,16 @@
         },
         {
             "name": "nette/php-generator",
-            "version": "v3.6.8",
+            "version": "v3.6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/php-generator.git",
-                "reference": "9073c8ac505b5f65af3bc2d1665be7d256e2dbe3"
+                "reference": "d31782f7bd2ae84ad06f863391ec3fb77ca4d0a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/php-generator/zipball/9073c8ac505b5f65af3bc2d1665be7d256e2dbe3",
-                "reference": "9073c8ac505b5f65af3bc2d1665be7d256e2dbe3",
+                "url": "https://api.github.com/repos/nette/php-generator/zipball/d31782f7bd2ae84ad06f863391ec3fb77ca4d0a6",
+                "reference": "d31782f7bd2ae84ad06f863391ec3fb77ca4d0a6",
                 "shasum": ""
             },
             "require": {
@@ -5069,9 +5074,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/php-generator/issues",
-                "source": "https://github.com/nette/php-generator/tree/v3.6.8"
+                "source": "https://github.com/nette/php-generator/tree/v3.6.9"
             },
-            "time": "2022-09-12T22:13:59+00:00"
+            "time": "2022-10-04T11:49:47+00:00"
         },
         {
             "name": "nette/utils",
@@ -5819,7 +5824,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "6437649d3071b83826308e6d0aa74278a060d273"
+                "reference": "1622a3327985b49aa851021e6cfa02db4ba77754"
             },
             "require": {
                 "ass/xmlsecurity": "1.1.1",
@@ -5856,7 +5861,7 @@
                 "gedmo/doctrine-extensions": "3.5.0",
                 "gos/web-socket-bundle": "~3.14.0",
                 "guzzlehttp/guzzle": "~7.4.0",
-                "guzzlehttp/psr7": "~1.8.3",
+                "guzzlehttp/psr7": "~2.2.0",
                 "hwi/oauth-bundle": "~1.4.2",
                 "incenteev/composer-parameter-handler": "2.1.*",
                 "knplabs/knp-gaufrette-bundle": "~0.7.1",
