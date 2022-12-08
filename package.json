@@ -8,10 +8,10 @@
     },
     "scripts": {
         "webpack": "check-engine && webpack",
-        "build": "npm run webpack -- --mode=production --env skipBabel",
-        "watch": "npm run webpack -- -w --progress --env skipBabel",
+        "build": "npm run webpack -- --mode=production",
+        "watch": "npm run webpack -- -w --progress",
         "build-css": "npm run webpack -- --env skipJS",
-        "build-js": "npm run webpack -- --env skipCSS skipBabel",
+        "build-js": "npm run webpack -- --env skipCSS",
         "lint": "echo 'Configure own command on a base of following template `npm run eslint vendor/%name% && npm run stylelint vendor/%name%/**/**.{css,scss}`'",
         "lint-oro": "npm run eslint-oro && npm run stylelint-oro",
         "eslint": "check-engine && eslint -c .eslintrc.yml --ignore-path .eslintignore",
@@ -70,7 +70,7 @@
     },
     "devDependencies": {
         "@oroinc/oro-stylelint-config": "5.1.0-alpha3",
-        "@oroinc/oro-webpack-config-builder": "5.1.0-alpha41",
+        "@oroinc/oro-webpack-config-builder": "5.1.0-alpha43",
         "check-engine": "^1.10.1",
         "eslint": "~8.29.0",
         "eslint-config-google": "~0.14.0",

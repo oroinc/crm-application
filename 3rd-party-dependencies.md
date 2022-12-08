@@ -645,7 +645,6 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |guzzlehttp/psr7|https://github.com/guzzle/psr7/blob/master/LICENSE|https://github.com/guzzle/psr7|Copyright (c) 2015 Michael Dowling &lt;mtdowling@gmail.com&gt; Copyright (c) 2015 Márk Sági-Kazár &lt;mark.sagikazar@gmail.com&gt; Copyright (c) 2015 Graham Campbell &lt;hello@gjcampbell.co.uk&gt; Copyright (c) 2016 Tobias Schultze &lt;webmaster@tubo-world.de&gt; Copyright (c) 2016 George Mponos &lt;gmponos@gmail.com&gt; Copyright (c) 2018 Tobias Nyholm &lt;tobias.nyholm@gmail.com&gt;|
 |gzip-size|https://github.com/sindresorhus/gzip-size/blob/master/license|https://github.com/sindresorhus/gzip-size|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 |handle-thing|https://github.com/indutny/handle-thing/blob/master/README.md|https://github.com/indutny/handle-thing|Copyright Fedor Indutny, 2015.|
-|happypack|https://github.com/amireh/happypack/blob/master/LICENSE|https://github.com/amireh/happypack|Copyright (c) 2017 Ahmad Amireh|
 |hard-rejection|https://github.com/sindresorhus/hard-rejection/blob/master/license|https://github.com/sindresorhus/hard-rejection|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
 |has|https://github.com/tarruda/has/blob/master/LICENSE-MIT|https://github.com/tarruda/has||
 |has-ansi|https://github.com/sindresorhus/has-ansi/blob/master/license|https://github.com/sindresorhus/has-ansi||
