@@ -80,7 +80,7 @@ Vagrant.configure("2") do |config|
 
     FORWARDED_PORT=8000
     ORO_PHP_MODULE_VERSION=8.1
-    ORO_NODEJS_MODULE_VERSION=16
+    ORO_NODEJS_MODULE_VERSION=18
 
     # --- Database settings ---
 
