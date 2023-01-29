@@ -4,6 +4,10 @@ This file includes only the most important items that should be addressed before
 
 Please also refer to [CHANGELOG.md](CHANGELOG.md) for a list of significant changes in the code that may affect the upgrade of some customizations.
 
+### 5.1.0 RC
+
+* Added `.env-app` files support and removed most of the parameters from the config/parameters.yml in favor of environment variables with DSNs. For more details, see [the migration guide](https://doc.oroinc.com/master/backend/setup/dev-environment/env-vars/).
+
 ## 5.0.0
 
 The `oro.email.update_visibilities_for_organization` MQ process can take a long time when updating from the old versions

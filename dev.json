@@ -8,8 +8,7 @@
       "App\\": "src/"
     },
     "classmap": [
-      "src/AppKernel.php",
-      "src/AppCache.php"
+      "src/AppKernel.php"
     ],
     "exclude-from-classmap": [
       "**/Tests/"
@@ -45,7 +44,6 @@
     "oro/crm-hangouts-call-bundle": "5.1.x-dev",
     "oro/crm-dotmailer": "5.1.x-dev",
     "oro/crm-zendesk": "5.1.x-dev",
-    "oro/redis-config": "5.1.x-dev",
     "oro/mailchimp": "5.1.x-dev",
     "oro/gridfs-config": "5.1.x-dev"
   },
@@ -84,6 +82,8 @@
       "enabled": false
     },
     "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "symfony/runtime": true,
       "symfony/flex": true
     }
   },
@@ -117,11 +117,8 @@
     "set-assets-version": [
       "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
     ],
-    "set-parameters": [
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ParametersHandler::set"
-    ],
     "auto-scripts": {
-      "oro:assets:install --env=prod": "symfony-cmd"
+      "oro:assets:install": "symfony-cmd"
     }
   },
   "minimum-stability": "dev",
@@ -129,6 +126,12 @@
   "extra": {
     "symfony": {
       "require": "~5.4.0"
+    },
+    "runtime": {
+      "dotenv_path": ".env-app",
+      "env_var_name": "ORO_ENV",
+      "debug_var_name": "ORO_DEBUG",
+      "prod_envs": ["prod", "behat_test"]
     },
     "symfony-web-dir": "public",
     "symfony-var-dir": "var",
