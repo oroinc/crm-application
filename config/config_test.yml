@@ -1,12 +1,10 @@
 imports:
     - { resource: config.yml }
-    - { resource: parameters_test.yml }
     - { resource: security_test.yml }
 
 parameters:
     doctrine.dbal.connection_factory.class: 'Oro\Component\Testing\Doctrine\PersistentConnectionFactory'
-    message_queue_transport: 'dbal'
-    message_queue_transport_config: {}
+    message_queue_transport_dsn: 'dbal:'
     main_log_channels: []
 
 framework:

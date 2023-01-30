@@ -6,7 +6,7 @@
         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
         backupGlobals="false"
         backupStaticAttributes="false"
-        bootstrap="vendor/autoload.php"
+        bootstrap="config/bootstrap_test.php"
         stopOnError="false"
         stopOnFailure="false"
         stopOnWarning="false"
@@ -56,8 +56,8 @@
         </testsuite>
     </testsuites>
     <php>
-        <env name="SYMFONY_ENV" value="test"/>
-        <env name="SYMFONY_DEBUG" value="0"/>
+        <env name="ORO_ENV" value="test"/>
+        <env name="ORO_DEBUG" value="0"/>
         <env name="SYMFONY_DEPRECATIONS_HELPER" value="weak" />
         <ini name="error_reporting" value="-1"/>
         <ini name="memory_limit" value="-1"/>

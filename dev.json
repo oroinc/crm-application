@@ -8,8 +8,7 @@
       "App\\": "src/"
     },
     "classmap": [
-      "src/AppKernel.php",
-      "src/AppCache.php"
+      "src/AppKernel.php"
     ],
     "exclude-from-classmap": [
       "**/Tests/"
@@ -34,7 +33,7 @@
     }
   ],
   "require": {
-    "php": "~8.1.0",
+    "php": "~8.2.0",
     "oro/crm": "5.1.x-dev",
     "oro/platform": "5.1.x-dev",
     "oro/crm-task-bundle": "5.1.x-dev",
@@ -45,34 +44,33 @@
     "oro/crm-hangouts-call-bundle": "5.1.x-dev",
     "oro/crm-dotmailer": "5.1.x-dev",
     "oro/crm-zendesk": "5.1.x-dev",
-    "oro/redis-config": "5.1.x-dev",
     "oro/mailchimp": "5.1.x-dev",
     "oro/gridfs-config": "5.1.x-dev"
   },
   "require-dev": {
-    "behat/behat": "~3.10.0",
+    "behat/behat": "~3.12.0",
     "behat/gherkin": "~4.9.0",
-    "behat/mink": "~1.9.0",
-    "friends-of-behat/mink-extension": "~v2.5.0",
-    "behat/mink-selenium2-driver": "~1.5.0",
-    "friends-of-behat/symfony-extension": "~2.2.0",
-    "nelmio/alice": "~3.9.0",
-    "theofidry/alice-data-fixtures": "~1.4.0",
-    "phpunit/phpunit": "9.5.13",
-    "johnkary/phpunit-speedtrap": "~4.0.0",
-    "squizlabs/php_codesniffer": "~3.6.0",
-    "phpmd/phpmd": "~2.11.1",
-    "sebastian/phpcpd": "6.0.*",
-    "symfony/phpunit-bridge": "~5.4.0",
-    "symfony/browser-kit": "~5.4.0",
-    "symfony/css-selector": "~5.4.0",
-    "symfony/debug-bundle": "~5.4.0",
-    "symfony/dom-crawler": "~5.4.0",
-    "symfony/stopwatch": "~5.4.0",
-    "symfony/var-dumper": "~5.4.0",
-    "symfony/var-exporter": "~5.4.0",
-    "symfony/web-profiler-bundle": "~5.4.0",
-    "friendsofphp/php-cs-fixer": "~3.4.0",
+    "behat/mink": "~1.10.0",
+    "friends-of-behat/mink-extension": "~v2.7.2",
+    "behat/mink-selenium2-driver": "~1.6.0",
+    "friends-of-behat/symfony-extension": "~2.4.0",
+    "nelmio/alice": "~3.12.1",
+    "theofidry/alice-data-fixtures": "~1.6.0",
+    "phpunit/phpunit": "~9.5.27",
+    "johnkary/phpunit-speedtrap": "~4.0.1",
+    "squizlabs/php_codesniffer": "~3.7.1",
+    "phpmd/phpmd": "~2.13.0",
+    "sebastian/phpcpd": "~6.0.3",
+    "symfony/phpunit-bridge": "~5.4.17",
+    "symfony/browser-kit": "~5.4.11",
+    "symfony/css-selector": "~5.4.17",
+    "symfony/debug-bundle": "~5.4.11",
+    "symfony/dom-crawler": "~5.4.17",
+    "symfony/stopwatch": "~5.4.13",
+    "symfony/var-dumper": "~5.4.17",
+    "symfony/var-exporter": "~5.4.17",
+    "symfony/web-profiler-bundle": "~5.4.17",
+    "friendsofphp/php-cs-fixer": "~3.13.2",
     "oro/twig-inspector": "1.0.*",
     "oro/crm-documentation-examples": "5.1.x-dev",
     "oro/platform-documentation-examples": "5.1.x-dev",
@@ -84,6 +82,8 @@
       "enabled": false
     },
     "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "symfony/runtime": true,
       "symfony/flex": true
     }
   },
@@ -117,11 +117,8 @@
     "set-assets-version": [
       "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
     ],
-    "set-parameters": [
-      "Oro\\Bundle\\InstallerBundle\\Composer\\ParametersHandler::set"
-    ],
     "auto-scripts": {
-      "oro:assets:install --env=prod": "symfony-cmd"
+      "oro:assets:install": "symfony-cmd"
     }
   },
   "minimum-stability": "dev",
@@ -129,6 +126,12 @@
   "extra": {
     "symfony": {
       "require": "~5.4.0"
+    },
+    "runtime": {
+      "dotenv_path": ".env-app",
+      "env_var_name": "ORO_ENV",
+      "debug_var_name": "ORO_DEBUG",
+      "prod_envs": ["prod", "behat_test"]
     },
     "symfony-web-dir": "public",
     "symfony-var-dir": "var",

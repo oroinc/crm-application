@@ -8,7 +8,11 @@ default: &default
     extensions:
         Behat\MinkExtension:
             base_url: 'http://dev-crm.local/'
-        FriendsOfBehat\SymfonyExtension: ~
+        FriendsOfBehat\SymfonyExtension:
+            kernel:
+                environment: 'prod'
+                debug: false
+                class: AppKernel
         Oro\Bundle\TestFrameworkBundle\Behat\ServiceContainer\OroTestFrameworkExtension:
             shared_contexts:
                 - Oro\Bundle\SalesBundle\Tests\Behat\Context\SalesContext
