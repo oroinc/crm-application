@@ -6,7 +6,15 @@ Please also refer to [CHANGELOG.md](CHANGELOG.md) for a list of significant chan
 
 ### 5.1.0 RC
 
-* Added `.env-app` files support and removed most of the parameters from the config/parameters.yml in favor of environment variables with DSNs. For more details, see [the migration guide](https://doc.oroinc.com/master/backend/setup/dev-environment/env-vars/).
+Added `.env-app` files support and removed most of the parameters from the config/parameters.yml in favor of environment variables with DSNs. For more details, see [the migration guide](https://doc.oroinc.com/master/backend/setup/dev-environment/env-vars/).
+
+* The supported PHP version is 8.2
+* The supported PostgreSQL version is 15
+* The supported NodeJS version is 18
+* The supported Redis version is 7
+* The supported RabbitMQ version is 3.11
+* The supported PHP MongoDB extension version is 1.15
+* The supported MongoDB version is 6.0
 
 ## 5.0.0
 
