@@ -1,5 +1,5 @@
 imports:
-    - { resource: parameters.yml }
+    - { resource: parameters.yml, ignore_errors: not_found }
     - { resource: security.yml }
     - { resource: doctrine.yml }
 
@@ -8,6 +8,7 @@ parameters:
     # depends on them. These parameter values cannot be changed in runtime without the application cache rebuild.
     web_backend_prefix: ''
     database_server_version: '13.7'
+    secret: '%env(ORO_SECRET)%'
     database_dsn: '%env(ORO_DB_DSN)%'
     mailer_dsn: '%env(ORO_MAILER_DSN)%'
     websocket_server_dsn: '%env(ORO_WEBSOCKET_SERVER_DSN)%' # The websocket server will listen on this address and port.
