@@ -66,21 +66,16 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "@build-parameters",
             "@set-permissions",
             "@install-assets",
             "@set-assets-version",
             "@auto-scripts"
         ],
         "post-update-cmd": [
-            "@build-parameters",
             "@set-permissions",
             "@update-assets",
             "@set-assets-version",
             "@auto-scripts"
-        ],
-        "build-parameters": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
         ],
         "set-permissions": [
             "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions"
@@ -93,6 +88,9 @@
         ],
         "set-assets-version": [
             "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setAssetsVersion"
+        ],
+        "set-parameters": [
+            "Oro\\Bundle\\InstallerBundle\\Composer\\ParametersHandler::set"
         ],
         "auto-scripts": {
             "oro:assets:install": "symfony-cmd",
@@ -114,10 +112,6 @@
         "symfony-web-dir": "public",
         "symfony-var-dir": "var",
         "symfony-bin-dir": "bin",
-        "symfony-tests-dir": "tests",
-        "incenteev-parameters": {
-            "file": "config/parameters.yml",
-            "keep-outdated": true
-        }
+        "symfony-tests-dir": "tests"
     }
 }
