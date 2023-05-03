@@ -1,28 +1,32 @@
 version: '3.5'
 services:
-  mysql:
-    image: mysql:8
-    ports: ['3306']
+  pgsql:
+    image: oroinc/pgsql:13.7-1-alpine
+    ports: ['5432']
     labels:
       com.symfony.server.service-prefix: ORO_DB
-    volumes:
-      - mysql:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: oro_db_pass
-      MYSQL_DATABASE: oro_db
-      MYSQL_USER: oro_db_user
-      MYSQL_PASSWORD: oro_db_pass
-    command: ["--default-authentication-plugin=mysql_native_password"]
+      POSTGRES_USER: oro_db_user
+      POSTGRES_DB: oro_db
+      POSTGRES_PASSWORD: oro_db_pass
+      POSTGRES_ROOT_PASSWORD: oro_db_pass
+    volumes:
+      - postgres:/var/lib/postgresql/data
     healthcheck:
-      test: "mysqladmin ping --silent -u$${MYSQL_USER} -p$${MYSQL_PASSWORD}"
+      test: "pg_isready -U$${POSTGRES_USER} -d$${POSTGRES_DB}"
       interval: 5s
       timeout: 30s
       start_period: 40s
     restart: on-failure
+  redis:
+    image: redis:6-alpine
+    ports: ["6379"]
+    labels:
+      com.symfony.server.service-prefix: ORO_REDIS
   mailcatcher:
     image: schickling/mailcatcher
     ports: ['1025', '1080']
     labels:
       com.symfony.server.service-prefix: ORO_MAILER
 volumes:
-  mysql: {}
+  postgres: {}

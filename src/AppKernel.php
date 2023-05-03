@@ -37,7 +37,6 @@ class AppKernel extends OroKernel
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $loader->load(function (ContainerBuilder $container) {
-            $container->setParameter('container.autowiring.strict_mode', true);
             $container->setParameter('container.dumper.inline_class_loader', true);
             $container->addObjectResource($this);
         });

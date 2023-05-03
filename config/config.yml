@@ -1,7 +1,44 @@
 imports:
-    - { resource: parameters.yml }
+    - { resource: parameters.yml, ignore_errors: not_found }
     - { resource: security.yml }
     - { resource: doctrine.yml }
+
+parameters:
+    # Some parameter values are not set from environment variables because Symfony service container build
+    # depends on them. These parameter values cannot be changed in runtime without the application cache rebuild.
+    web_backend_prefix: ''
+    database_server_version: '13.7'
+    secret: '%env(ORO_SECRET)%'
+    database_dsn: '%env(ORO_DB_DSN)%'
+    mailer_dsn: '%env(ORO_MAILER_DSN)%'
+    websocket_server_dsn: '%env(ORO_WEBSOCKET_SERVER_DSN)%' # The websocket server will listen on this address and port.
+    websocket_frontend_dsn: '%env(ORO_WEBSOCKET_FRONTEND_DSN)%' # The host, port and path for the browser to connect to.
+    websocket_backend_dsn: '%env(ORO_WEBSOCKET_BACKEND_DSN)%' # The host, port and path for the server-side code to connect to.
+    search_engine_dsn: '%env(ORO_SEARCH_ENGINE_DSN)%'
+    session_handler_dsn: '%env(ORO_SESSION_DSN)%'
+    message_queue_transport_dsn: '%env(ORO_MQ_DSN)%'
+    liip_imagine.jpegoptim.binary: '%env(ORO_JPEGOPTIM_BINARY)%'
+    liip_imagine.pngquant.binary: '%env(ORO_PNGQUANT_BINARY)%'
+    tracking_data_folder: '%env(ORO_TRACKING_DATA_FOLDER)%'
+
+    env(ORO_SECRET): ThisTokenIsNotSoSecretChangeIt
+    env(ORO_DB_URL): 'postgresql://root@127.0.0.1/oro_crm'
+    env(ORO_DB_DSN): '%env(ORO_DB_URL)%'
+    env(ORO_MAILER_DSN): 'native://default'
+    env(ORO_SEARCH_URL): 'orm:'
+    env(ORO_SEARCH_ENGINE_DSN): '%env(ORO_SEARCH_URL)%?prefix=oro_search'
+    env(ORO_SESSION_DSN): 'native:'
+    env(ORO_WEBSOCKET_SERVER_DSN): '//0.0.0.0:8080'
+    env(ORO_WEBSOCKET_FRONTEND_DSN): '//*:8080/ws'
+    env(ORO_WEBSOCKET_BACKEND_DSN): 'tcp://127.0.0.1:8080'
+    env(ORO_MQ_DSN): 'dbal:'
+    env(ORO_JPEGOPTIM_BINARY): ''
+    env(ORO_PNGQUANT_BINARY): ''
+    env(ORO_REDIS_URL): 'redis://127.0.0.1:6379'
+    env(ORO_REDIS_SESSION_DSN): '%env(ORO_REDIS_URL)%/0'
+    env(ORO_REDIS_CACHE_DSN): '%env(ORO_REDIS_URL)%/1'
+    env(ORO_REDIS_DOCTRINE_DSN): '%env(ORO_REDIS_URL)%/2'
+    env(ORO_TRACKING_DATA_FOLDER): null
 
 framework:
     #esi:             ~
@@ -80,10 +117,6 @@ oro_ui:
 
 oro_theme:
     active_theme: oro
-
-oro_message_queue:
-    transport:
-        '%message_queue_transport%': '%message_queue_transport_config%'
 
 oro_locale:
     formatting_code: en
