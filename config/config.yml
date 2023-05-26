@@ -63,7 +63,7 @@ framework:
         name:                 CRMID
         handler_id:           "%session_handler%"
         save_path:            '%kernel.project_dir%/var/sessions/%kernel.environment%'
-        gc_maxlifetime:       3600
+        gc_maxlifetime:       7200 #120 minutes
         cookie_httponly:      true
         cookie_secure:        'auto'
     fragments:
