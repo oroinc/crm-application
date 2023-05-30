@@ -42,6 +42,8 @@ parameters:
 
     tracking_data_folder: '%env(ORO_TRACKING_DATA_FOLDER)%'
 
+    maintenance_lock_file_path: '%env(ORO_MAINTENANCE_LOCK_FILE_PATH)%'
+
     # Fallback values (used if environmental variables are not set)
     env(ORO_DB_HOST): 127.0.0.1
     env(ORO_DB_PORT): null
@@ -55,3 +57,5 @@ parameters:
     env(ORO_SECRET): ThisTokenIsNotSoSecretChangeIt
 
     env(ORO_TRACKING_DATA_FOLDER): null
+    env(ORO_MAINTENANCE_LOCK_FILE_PATH): '%kernel.project_dir%/var/cache/maintenance_lock'
+
