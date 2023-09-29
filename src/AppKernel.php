@@ -11,7 +11,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class AppKernel extends OroKernel
 {
-    public function registerBundles()
+    public function registerBundles(): iterable
     {
         $bundles = array(
         //bundles
