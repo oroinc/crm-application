@@ -21,6 +21,8 @@ parameters:
     liip_imagine.pngquant.binary: '%env(ORO_PNGQUANT_BINARY)%'
     tracking_data_folder: '%env(ORO_TRACKING_DATA_FOLDER)%'
     maintenance_lock_file_path: '%env(resolve:ORO_MAINTENANCE_LOCK_FILE_PATH)%'
+    oauth2_public_key: '%env(resolve:ORO_OAUTH_PUBLIC_KEY_PATH)%'
+    oauth2_private_key: '%env(resolve:ORO_OAUTH_PRIVATE_KEY_PATH)%'
 
     env(ORO_SECRET): ThisTokenIsNotSoSecretChangeIt
     env(ORO_DB_URL): 'postgresql://root@127.0.0.1/oro_crm'
@@ -41,6 +43,8 @@ parameters:
     env(ORO_REDIS_DOCTRINE_DSN): '%env(ORO_REDIS_URL)%/2'
     env(ORO_TRACKING_DATA_FOLDER): null
     env(ORO_MAINTENANCE_LOCK_FILE_PATH): '%kernel.project_dir%/var/maintenance/maintenance_lock'
+    env(ORO_OAUTH_PUBLIC_KEY_PATH): '%kernel.project_dir%/var/oauth_public.key'
+    env(ORO_OAUTH_PRIVATE_KEY_PATH): '%kernel.project_dir%/var/oauth_private.key'
 
 framework:
     #esi:             ~
