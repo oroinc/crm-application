@@ -17,6 +17,11 @@ class AppKernel extends OroKernel
         //bundles
         );
 
+        if ($this->isDebug()) {
+            ini_set('memory_limit', -1);
+            ini_set('max_execution_time', 0);
+        }
+
         if ('dev' === $this->getEnvironment()) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             if (class_exists('Oro\TwigInspector\Bundle\OroTwigInspectorBundle')) {
