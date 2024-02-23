@@ -27,7 +27,7 @@ monolog:
 
         streamed:
             type:           stream
-            path:           "%kernel.logs_dir%/%kernel.environment%.log"
+            path:           "%log_path%"
             level:          debug
 
         deduplicated:

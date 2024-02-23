@@ -29,7 +29,7 @@ monolog:
             channels: [ "!event" ]
         nested:
             type: stream
-            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            path: "%log_path%"
             level: debug
             channels: '%main_log_channels%'
 
