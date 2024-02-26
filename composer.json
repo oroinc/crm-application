@@ -67,23 +67,23 @@
     "scripts": {
         "post-install-cmd": [
             "@set-permissions",
-            "@install-assets",
+            "@install-npm-assets",
             "@set-assets-version",
-            "@auto-scripts"
+            "@install-assets"
         ],
         "post-update-cmd": [
             "@set-permissions",
-            "@update-assets",
+            "@update-npm-assets",
             "@set-assets-version",
-            "@auto-scripts"
+            "@install-assets"
         ],
         "set-permissions": [
             "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions"
         ],
-        "install-assets": [
+        "install-npm-assets": [
             "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::installAssets"
         ],
-        "update-assets": [
+        "update-npm-assets": [
             "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::updateAssets"
         ],
         "set-assets-version": [
@@ -92,9 +92,93 @@
         "set-parameters": [
             "Oro\\Bundle\\InstallerBundle\\Composer\\ParametersHandler::set"
         ],
-        "auto-scripts": {
-            "oro:assets:install": "symfony-cmd"
-        }
+        "install-assets": [
+            "console oro:assets:install --no-interaction --no-ansi"
+        ],
+        "upgrade:full": [
+            "@health",
+            "@platform:update:dry-run",
+            "@notification:start",
+            "@maintenance:lock",
+            "@global:lock",
+            "@platform:update",
+            "@cache",
+            "@maintenance:unlock",
+            "@notification:finish"
+        ],
+        "upgrade:rolling": [
+            "@health",
+            "@platform:update:dry-run",
+            "@notification:start",
+            "@platform:update",
+            "@cache",
+            "@notification:finish"
+        ],
+        "upgrade:source": [
+            "console cache:warmup --no-interaction --no-ansi",
+            "@health",
+            "console oro:check-requirements --no-interaction --no-ansi",
+            "@notification:start",
+            "console oro:translation:update --all --no-interaction --no-ansi",
+            "console oro:translation:load --no-interaction --no-ansi",
+            "console oro:translation:dump --no-interaction --no-ansi",
+            "console fos:js-routing:dump --no-interaction --no-ansi",
+            "@notification:finish"
+        ],
+        "schema-update": [
+            "Composer\\Config::disableProcessTimeout",
+            "console cache:warmup --no-interaction --no-ansi",
+            "@health",
+            "console oro:entity-extend:update --dry-run --no-interaction --no-ansi",
+            "@maintenance:lock",
+            "@global:lock",
+            "console oro:entity-extend:update --no-interaction --no-ansi",
+            "@maintenance:unlock"
+        ],
+        "health": [
+            "console monitor:health doctrine_dbal --no-interaction --no-ansi",
+            "console monitor:health mail_transport --no-interaction --no-ansi",
+            "console monitor:health rabbitmq_server --no-interaction --no-ansi",
+            "console monitor:health elasticsearch --no-interaction --no-ansi",
+            "console monitor:health redis_cache --no-interaction --no-ansi",
+            "console monitor:health redis_doctrine_cache --no-interaction --no-ansi",
+            "console monitor:health redis_session_storage --no-interaction --no-ansi"
+        ],
+        "platform:update:dry-run": [
+            "console oro:platform:update --timeout=0 --no-interaction --no-ansi"
+        ],
+        "platform:update": [
+            "Composer\\Config::disableProcessTimeout",
+            "console oro:platform:update --timeout=0 --force --skip-search-reindexation --no-interaction --no-ansi"
+        ],
+        "cache": [
+            "console cache:clear --no-interaction --no-ansi"
+        ],
+        "cache:api": [
+            "console cache:warmup --no-interaction --no-ansi",
+            "console oro:api:cache:clear --no-interaction --no-ansi",
+            "console oro:api:doc:cache:clear --no-interaction --no-ansi"
+        ],
+        "cache:translation": [
+            "console cache:warmup --no-interaction --no-ansi",
+            "console oro:translation:rebuild-cache --no-interaction --no-ansi"
+        ],
+        "global:lock": "touch ${ORO_GLOBAL_LOCK_FILE_PATH:-var/maintenance/global_lock}",
+        "global:unlock": "rm -f ${ORO_GLOBAL_LOCK_FILE_PATH:-var/maintenance/global_lock}",
+        "maintenance:lock": [
+            "console oro:maintenance-notification --message=Maintenance\\ start --subject=At\\ $ORO_APP_URL --no-interaction --no-ansi",
+            "console oro:maintenance:lock --no-interaction --no-ansi"
+        ],
+        "maintenance:unlock": [
+            "console oro:maintenance:unlock --no-interaction --no-ansi",
+            "console oro:maintenance-notification --message=Maintenance\\ finish --subject=At\\ $ORO_APP_URL --no-interaction --no-ansi"
+        ],
+        "notification:start": [
+            "console oro:maintenance-notification --message=Deploy\\ start --subject=At\\ $ORO_APP_URL --no-interaction --no-ansi"
+        ],
+        "notification:finish": [
+            "console oro:maintenance-notification --message=Deploy\\ finish --subject=At\\ $ORO_APP_URL --no-interaction --no-ansi"
+        ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
