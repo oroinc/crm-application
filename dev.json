@@ -110,8 +110,19 @@
       "@health",
       "@platform:update:dry-run",
       "@notification:start",
-      "@maintenance:lock",
       "@global:lock",
+      "@maintenance:lock",
+      "@platform:update --skip-search-reindexation",
+      "@cache",
+      "@maintenance:unlock",
+      "@notification:finish"
+    ],
+    "upgrade:full:reindex": [
+      "@health",
+      "@platform:update:dry-run",
+      "@notification:start",
+      "@global:lock",
+      "@maintenance:lock",
       "@platform:update",
       "@cache",
       "@maintenance:unlock",
@@ -121,7 +132,15 @@
       "@health",
       "@platform:update:dry-run",
       "@notification:start",
-      "@platform:update",
+      "@platform:update --skip-search-reindexation",
+      "@cache",
+      "@notification:finish"
+    ],
+    "upgrade:rolling:reindex": [
+      "@health",
+      "@platform:update:dry-run",
+      "@notification:start",
+      "@platform:update --skip-search-reindexation",
       "@cache",
       "@notification:finish"
     ],
@@ -141,8 +160,8 @@
       "console cache:warmup --no-interaction --no-ansi",
       "@health",
       "console oro:entity-extend:update --dry-run --no-interaction --no-ansi",
-      "@maintenance:lock",
       "@global:lock",
+      "@maintenance:lock",
       "console oro:entity-extend:update --no-interaction --no-ansi",
       "@maintenance:unlock"
     ],
@@ -160,7 +179,7 @@
     ],
     "platform:update": [
       "Composer\\Config::disableProcessTimeout",
-      "console oro:platform:update --timeout=0 --force --skip-search-reindexation --no-interaction --no-ansi"
+      "console oro:platform:update --timeout=0 --force --no-interaction --no-ansi"
     ],
     "cache": [
       "console cache:clear --no-interaction --no-ansi"
