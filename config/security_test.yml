@@ -6,8 +6,8 @@ security:
             organization-http-basic:
                 realm: "Secured REST Area"
             provider: oro_user
+            entry_point: organization_http_basic
             http-basic: false
             organization-form-login: false
             logout: false
             organization-remember-me: false
-            anonymous: true
