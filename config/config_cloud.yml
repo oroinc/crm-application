@@ -4,9 +4,6 @@ imports:
 parameters:
     env(ORO_LOG_PATH): "php://stderr"
 
-    multi_host_operation_directory: '%env(ORO_MULTIHOST_OPERATION_FOLDER)%'
-    env(ORO_MULTIHOST_OPERATION_FOLDER): '%kernel.project_dir%/var/multihost'
-    env(ORO_MULTIHOST_ENABLED): true
 
     sftp_root_path: '%env(ORO_SFTP_ROOT_PATH)%'
     env(ORO_SFTP_ROOT_PATH): '%kernel.project_dir%/var/sftp'
