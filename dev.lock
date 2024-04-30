@@ -5659,7 +5659,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "5de8f79ab28acda22831dc8efd5fd68f2bf092f1"
+                "reference": "01e46fdab889141ce8c6c8bfe44945a0ab67f82c"
             },
             "require": {
                 "ass/xmlsecurity": "1.1.1",
@@ -5780,7 +5780,8 @@
                 "symfony/web-link": "~6.4.0",
                 "symfony/yaml": "~6.4.0",
                 "twig/twig": "~3.5.0",
-                "xemlock/htmlpurifier-html5": "0.1.10"
+                "xemlock/htmlpurifier-html5": "0.1.10",
+                "zircote/swagger-php": "4.8.*"
             },
             "provide": {
                 "psr/http-factory-implementation": "^1.0"
@@ -14258,6 +14259,87 @@
                 "source": "https://github.com/xemlock/htmlpurifier-html5/tree/master"
             },
             "time": "2019-04-26T08:53:59+00:00"
+        },
+        {
+            "name": "zircote/swagger-php",
+            "version": "4.8.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zircote/swagger-php.git",
+                "reference": "2357fafbb084be0f9eda7b5c1a659704fed65b28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/2357fafbb084be0f9eda7b5c1a659704fed65b28",
+                "reference": "2357fafbb084be0f9eda7b5c1a659704fed65b28",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.2",
+                "psr/log": "^1.1 || ^2.0 || ^3.0",
+                "symfony/deprecation-contracts": "^2 || ^3",
+                "symfony/finder": ">=2.2",
+                "symfony/yaml": ">=3.3"
+            },
+            "require-dev": {
+                "composer/package-versions-deprecated": "^1.11",
+                "doctrine/annotations": "^1.7 || ^2.0",
+                "friendsofphp/php-cs-fixer": "^2.17 || ^3.47.1",
+                "phpstan/phpstan": "^1.6",
+                "phpunit/phpunit": ">=8",
+                "vimeo/psalm": "^4.23"
+            },
+            "suggest": {
+                "doctrine/annotations": "^1.7 || ^2.0"
+            },
+            "bin": [
+                "bin/openapi"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "OpenApi\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Allen",
+                    "email": "zircote@gmail.com"
+                },
+                {
+                    "name": "Bob Fanger",
+                    "email": "bfanger@gmail.com",
+                    "homepage": "https://bfanger.nl"
+                },
+                {
+                    "name": "Martin Rademacher",
+                    "email": "mano@radebatz.net",
+                    "homepage": "https://radebatz.net"
+                }
+            ],
+            "description": "swagger-php - Generate interactive documentation for your RESTful API using phpdoc annotations",
+            "homepage": "https://github.com/zircote/swagger-php/",
+            "keywords": [
+                "api",
+                "json",
+                "rest",
+                "service discovery"
+            ],
+            "support": {
+                "issues": "https://github.com/zircote/swagger-php/issues",
+                "source": "https://github.com/zircote/swagger-php/tree/4.8.7"
+            },
+            "time": "2024-03-23T06:35:46+00:00"
         }
     ],
     "packages-dev": [
