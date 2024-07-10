@@ -2531,6 +2531,58 @@
             "time": "2022-11-14T20:25:40+00:00"
         },
         {
+            "name": "google/recaptcha",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/google/recaptcha.git",
+                "reference": "d59a801e98a4e9174814a6d71bbc268dff1202df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/google/recaptcha/zipball/d59a801e98a4e9174814a6d71bbc268dff1202df",
+                "reference": "d59a801e98a4e9174814a6d71bbc268dff1202df",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.14",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ReCaptcha\\": "src/ReCaptcha"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Client library for reCAPTCHA, a free service that protects websites from spam and abuse.",
+            "homepage": "https://www.google.com/recaptcha/",
+            "keywords": [
+                "Abuse",
+                "captcha",
+                "recaptcha",
+                "spam"
+            ],
+            "support": {
+                "forum": "https://groups.google.com/forum/#!forum/recaptcha",
+                "issues": "https://github.com/google/recaptcha/issues",
+                "source": "https://github.com/google/recaptcha"
+            },
+            "time": "2023-02-18T17:41:46+00:00"
+        },
+        {
             "name": "gos/pubsub-router-bundle",
             "version": "v2.8.0",
             "source": {
@@ -5662,7 +5714,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "368ac10be4d4305e918bb05d17530b20b6142142"
+                "reference": "deb7aebc531d62298ce13610d4694428ea8adce5"
             },
             "require": {
                 "ass/xmlsecurity": "1.1.1",
@@ -5697,6 +5749,7 @@
                 "friendsofsymfony/jsrouting-bundle": "3.2.*",
                 "friendsofsymfony/rest-bundle": "~3.5.0",
                 "gedmo/doctrine-extensions": "~3.10.0",
+                "google/recaptcha": "^1.3",
                 "gos/web-socket-bundle": "~3.15.0",
                 "guzzlehttp/guzzle": "~7.5.0",
                 "guzzlehttp/psr7": "~2.4.0",
