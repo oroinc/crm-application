@@ -1,6 +1,7 @@
 extends:
   - google
   - "plugin:oro/recommended"
+  - "plugin:no-jquery/deprecated"
 parserOptions:
   ecmaVersion: 2022
   sourceType: module
@@ -11,7 +12,8 @@ env:
   jasmine: true
 globals:
   Promise: true
-
+plugins:
+  - 'no-jquery'
 rules:
   # turn off ES6 code style check
   arrow-parens: ['error', 'as-needed']
