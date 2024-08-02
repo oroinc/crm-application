@@ -1,6 +1,7 @@
 extends:
   - google
   - "plugin:oro/recommended"
+  - "plugin:no-jquery/deprecated"
 parserOptions:
   ecmaVersion: 2022
   sourceType: module
@@ -11,7 +12,8 @@ env:
   jasmine: true
 globals:
   Promise: true
-
+plugins:
+  - 'no-jquery'
 rules:
   # turn off ES6 code style check
   arrow-parens: ['error', 'as-needed']
@@ -60,3 +62,38 @@ rules:
   no-invalid-this: 'off' # has to be turned on in a future
   space-infix-ops:
     - 'error'
+  'no-jquery/no-event-shorthand': 'error'
+  'no-jquery/no-trim': 'error'
+  'no-jquery/no-sizzle':
+    - 'error'
+    - allowPositional: false
+      allowOther: true
+  'no-jquery/no-camel-case': 'error'
+  'no-jquery/no-is-function': 'error'
+  'no-jquery/no-is-numeric': 'error'
+  'no-jquery/no-is-window': 'error'
+  'no-jquery/no-now': 'error'
+  'no-jquery/no-proxy': 'error'
+  'no-jquery/no-type': 'error'
+  'no-jquery/no-hold-ready': 'error'
+  'no-jquery/no-is-array': 'error'
+  'no-jquery/no-node-name': 'error'
+  'no-jquery/no-bind': 'error'
+  'no-jquery/no-delegate': 'error'
+  'no-jquery/no-fx-interval': 'error'
+  'no-jquery/no-parse-json': 'error'
+  'no-jquery/no-ready-shorthand': 'error'
+  'no-jquery/no-unique': 'error'
+  'no-jquery/no-context-prop': 'error'
+  'no-jquery/no-support': 'error'
+  'no-jquery/no-and-self': 'error'
+  'no-jquery/no-error-shorthand': 'error'
+  'no-jquery/no-load-shorthand': 'error'
+  'no-jquery/no-on-ready': 'error'
+  'no-jquery/no-size': 'error'
+  'no-jquery/no-unload-shorthand': 'error'
+  'no-jquery/no-live': 'error'
+  'no-jquery/no-sub': 'error'
+  'no-jquery/no-selector-prop': 'error'
+  'no-jquery/no-box-model': 'error'
+  'no-jquery/no-browser': 'error'
