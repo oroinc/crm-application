@@ -20,4 +20,4 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
 
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
-return fn() => new AppKernel('dev', true);
+return fn () => new AppKernel('dev', true);
