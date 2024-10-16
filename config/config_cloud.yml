@@ -11,7 +11,7 @@ parameters:
     gaufrette_adapter.public: 'gridfs:%env(ORO_MONGODB_DSN_PUBLIC)%'
     gaufrette_adapter.private: 'gridfs:%env(ORO_MONGODB_DSN_PRIVATE)%'
     gaufrette_adapter.import_files: 'local:%env(ORO_IMPORT_EXPORT_PATH)%'
-    env(ORO_IMPORT_EXPORT_PATH): '%kernel.project_dir%/var/importfiles'
+    env(ORO_IMPORT_EXPORT_PATH): '%kernel.project_dir%/var/data/import_files'
 
     redis_dsn_cache: '%env(ORO_REDIS_CACHE_DSN)%'
     redis_dsn_doctrine: '%env(ORO_REDIS_DOCTRINE_DSN)%'
