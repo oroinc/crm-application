@@ -69,13 +69,21 @@
             "@set-permissions",
             "@install-npm-assets",
             "@set-assets-version",
+            "@execute-post-install-package-scripts",
             "@install-assets"
         ],
         "post-update-cmd": [
             "@set-permissions",
             "@update-npm-assets",
             "@set-assets-version",
+            "@execute-post-update-package-scripts",
             "@install-assets"
+        ],
+        "execute-post-install-package-scripts": [
+            "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::executePostInstallPackageScripts"
+        ],
+        "execute-post-update-package-scripts": [
+            "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::executePostUpdatePackageScripts"
         ],
         "set-permissions": [
             "Oro\\Bundle\\InstallerBundle\\Composer\\ScriptHandler::setPermissions"
