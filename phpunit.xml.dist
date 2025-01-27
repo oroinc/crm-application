@@ -64,15 +64,6 @@
         <server name="KERNEL_DIR" value="src/"/>
     </php>
     <listeners>
-        <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener">
-            <arguments>
-                <array>
-                    <element key="slowThreshold">
-                        <integer>1000</integer>
-                    </element>
-                </array>
-            </arguments>
-        </listener>
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
         <listener class="Oro\Component\TestUtils\Listener\TestListener"/>
     </listeners>
