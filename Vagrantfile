@@ -11,6 +11,7 @@ memory = ( ENV['MEMORY'] || 8192 ).to_i
 cpus = ( ENV['CPUS'] || 4 ).to_i
 
 licence = (ENV['licence']).to_s
+licenсestart = (ENV['licenсestart']).to_s
 gittoken = (ENV['gittoken']).to_s
 
 if ARGV[0] == "up" || ARGV[0] == "provision"
@@ -50,6 +51,9 @@ $scriptBuild = <<-'SCRIPT'
     cp -rf /vagrant /srv/ ||:
     if [[ "X$LICENCE_KEY" != 'X' ]]; then
         echo "ORO_ENTERPRISE_LICENCE=$LICENCE_KEY" >> "/srv/docker-build/docker-compose/.env"
+    fi
+    if [[ "X$LICENCE_KEY_START" != 'X' ]]; then
+        echo "ORO_ENTERPRISE_LICENCE_START=$LICENCE_KEY_START" >> "/srv/docker-build/docker-compose/.env"
     fi
     echo 'ORO_WEBSOCKET_FRONTEND_DSN=//*:8000/ws' >> "/srv/docker-build/docker-compose/.env"
     export ORO_PROJECT=''
@@ -110,12 +114,12 @@ Vagrant.configure(2) do |config|
 
     config.vm.provision "InstallBaseSystem", type: "shell" do |s|
         s.inline= $scriptInstallBaseSystem
-        s.env = {LICENCE_KEY:licence, GITHUB_TOKEN:gittoken, ORO_BASELINE_VERSION:oro_baseline_version}
+        s.env = {LICENCE_KEY:licence, LICENCE_KEY_START:licenсestart, GITHUB_TOKEN:gittoken, ORO_BASELINE_VERSION:oro_baseline_version}
         s.sensitive = true
     end
     config.vm.provision "Build", type: "shell" do |s|
         s.inline = $scriptBuild
-        s.env = {LICENCE_KEY:licence, GITHUB_TOKEN:gittoken, ORO_BASELINE_VERSION:oro_baseline_version}
+        s.env = {LICENCE_KEY:licence, LICENCE_KEY_START:licenсestart, GITHUB_TOKEN:gittoken, ORO_BASELINE_VERSION:oro_baseline_version}
         s.sensitive = true
     end
     config.vm.provision "Install", type: "shell", inline: $scriptInstall
