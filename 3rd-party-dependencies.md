@@ -19,22 +19,32 @@ Full license terms are available below.
 |@ampproject/remapping|https://github.com/ampproject/remapping/blob/master/LICENSE|https://github.com/ampproject/remapping||
 |@humanwhocodes/config-array|https://github.com/humanwhocodes/config-array/blob/master/LICENSE|https://github.com/humanwhocodes/config-array||
 |@humanwhocodes/module-importer|https://github.com/humanwhocodes/module-importer/blob/master/LICENSE|https://github.com/humanwhocodes/module-importer||
+|@jsonjoy.com/base64|https://github.com/jsonjoy-com/base64/blob/master/LICENSE|https://github.com/jsonjoy-com/base64|Copyright 2024 jsonjoy.com|
+|@jsonjoy.com/json-pack|https://github.com/jsonjoy-com/json-pack/blob/master/LICENSE|https://github.com/jsonjoy-com/json-pack|Copyright 2024 jsonjoy.com|
+|@jsonjoy.com/util|https://github.com/jsonjoy-com/util/blob/master/LICENSE|https://github.com/jsonjoy-com/util|Copyright 2024 jsonjoy.com|
+|@swc/core|https://github.com/swc-project/swc/blob/master/|https://github.com/swc-project/swc||
+|@swc/core-darwin-arm64|https://github.com/swc-project/swc/blob/master/README.md|https://github.com/swc-project/swc||
+|@swc/counter|https://github.com/swc-project/pkgs/blob/master/README.md|https://github.com/swc-project/pkgs||
+|@swc/types|https://github.com/swc-project/swc/blob/master/LICENSE|https://github.com/swc-project/swc|Copyright 2024 SWC contributors.|
 |@webassemblyjs/leb128|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE.txt|https://github.com/xtuc/webassemblyjs|Copyright 2012 The Obvious Corporation. http://obvious.com/|
 |@xtuc/long|https://github.com/dcodeIO/long.js/blob/master/LICENSE|https://github.com/dcodeIO/long.js||
-|Base64|https://github.com/davidchambers/Base64.js/blob/master/LICENSE|https://github.com/davidchambers/Base64.js||
+|Base64|https://github.com/davidchambers/Base64.js/blob/master/LICENSE|https://github.com/davidchambers/Base64.js|Copyright 2019 David Chambers  Copyright (c) 2011..2019 David Chambers &lt;dc@davidchambers.me&gt;|
 |ansi-html-community|https://github.com/mahdyar/ansi-html-community/blob/master/LICENSE|https://github.com/mahdyar/ansi-html-community||
 |box/spout|https://github.com/box/spout/blob/master/LICENSE|https://github.com/box/spout|Copyright 2017 Box, Inc. All rights reserved.|
-|doctrine|https://github.com/eslint/doctrine/blob/master/LICENSE|https://github.com/eslint/doctrine||
-|eslint-config-google|https://github.com/google/eslint-config-google/blob/master/LICENSE|https://github.com/google/eslint-config-google||
+|detect-libc|https://github.com/lovell/detect-libc/blob/master/LICENSE|https://github.com/lovell/detect-libc|Copyright 2017 Lovell Fuller|
+|doctrine|https://github.com/eslint/doctrine/blob/master/LICENSE|https://github.com/eslint/doctrine|Copyright JS Foundation and other contributors, https://js.foundation  Copyright (C) 2012, 2011 [Ariya Hidayat](http://ariya.ofilabs.com/about)  (twitter: [@ariyahidayat](http://twitter.com/ariyahidayat)) and other contributors.|
+|eslint-config-google|https://github.com/google/eslint-config-google/blob/master/LICENSE|https://github.com/google/eslint-config-google|Copyright 2015 Google Inc.|
 |eslint-visitor-keys|https://github.com/eslint/eslint-visitor-keys/blob/master/LICENSE|https://github.com/eslint/eslint-visitor-keys||
-|faye-websocket|https://github.com/faye/faye-websocket-node/blob/master/LICENSE.md|https://github.com/faye/faye-websocket-node||
-|fuse.js|https://github.com/krisk/Fuse/blob/master/LICENSE|https://github.com/krisk/Fuse||
-|human-signals|https://github.com/ehmicky/human-signals/blob/master/LICENSE|https://github.com/ehmicky/human-signals||
-|log4js|https://github.com/log4js-node/log4js-node/blob/master/LICENSE|https://github.com/log4js-node/log4js-node||
+|faye-websocket|https://github.com/faye/faye-websocket-node/blob/master/LICENSE.md|https://github.com/faye/faye-websocket-node|Copyright 2010-2021 James Coglan|
+|fuse.js|https://github.com/krisk/Fuse/blob/master/LICENSE|https://github.com/krisk/Fuse|Copyright 2017 Kirollos Risk|
+|log4js|https://github.com/log4js-node/log4js-node/blob/master/LICENSE|https://github.com/log4js-node/log4js-node|Copyright 2015 Gareth Jones (with contributions from many other people)|
+|memfs|https://github.com/streamich/memfs/blob/master/LICENSE|https://github.com/streamich/memfs|Copyright 2023 Vadim @streamich Dalecky &lt;vadimsdaleckis@gmail.com&gt; and other contributors|
 |spdx-correct|https://github.com/jslicense/spdx-correct.js/blob/master/LICENSE|https://github.com/jslicense/spdx-correct.js||
+|tree-dump|https://github.com/streamich/tree-dump/blob/master/LICENSE|https://github.com/streamich/tree-dump|Copyright 2024 Vadim @streamich Dalecky|
 |validate-npm-package-license|https://github.com/kemitchell/validate-npm-package-license.js/blob/master/LICENSE|https://github.com/kemitchell/validate-npm-package-license.js||
-|websocket-driver|https://github.com/faye/websocket-driver-node/blob/master/LICENSE.md|https://github.com/faye/websocket-driver-node||
-|websocket-extensions|https://github.com/faye/websocket-extensions-node/blob/master/LICENSE.md|https://github.com/faye/websocket-extensions-node||
+|websocket-driver|https://github.com/faye/websocket-driver-node/blob/master/LICENSE.md|https://github.com/faye/websocket-driver-node|Copyright 2010-2020 James Coglan|
+|websocket-extensions|https://github.com/faye/websocket-extensions-node/blob/master/LICENSE.md|https://github.com/faye/websocket-extensions-node|Copyright 2014-2020 James Coglan|
+|zircote/swagger-php|https://github.com/zircote/swagger-php/blob/master/LICENSE|https://github.com/zircote/swagger-php||
 
 
 ## 2-Clause BSD License
@@ -50,24 +60,23 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
 |--------------|---------------|-------------------|----------------|
 |cheerio-select|https://github.com/cheeriojs/cheerio-select/blob/master/LICENSE|https://github.com/cheeriojs/cheerio-select|Copyright (c) Felix Böhm All rights reserved.|
 |css-select|https://github.com/fb55/css-select/blob/master/LICENSE|https://github.com/fb55/css-select|Copyright (c) Felix Böhm All rights reserved.|
-|css-what|https://github.com/fb55/css-what/blob/master/LICENSE|https://github.com/fb55/css-what||
-|default-gateway|https://github.com/silverwind/default-gateway/blob/master/LICENSE|https://github.com/silverwind/default-gateway||
-|domelementtype|https://github.com/fb55/domelementtype/blob/master/LICENSE|https://github.com/fb55/domelementtype||
+|css-what|https://github.com/fb55/css-what/blob/master/LICENSE|https://github.com/fb55/css-what|Copyright (c) Felix Böhm All rights reserved.|
+|domelementtype|https://github.com/fb55/domelementtype/blob/master/LICENSE|https://github.com/fb55/domelementtype|Copyright (c) Felix Böhm All rights reserved.|
 |domhandler|https://github.com/fb55/domhandler/blob/master/LICENSE|https://github.com/fb55/domhandler|Copyright (c) Felix Böhm All rights reserved.|
 |domutils|https://github.com/fb55/domutils/blob/master/LICENSE|https://github.com/fb55/domutils|Copyright (c) Felix Böhm All rights reserved.|
 |entities|https://github.com/fb55/entities/blob/master/LICENSE|https://github.com/fb55/entities|Copyright (c) Felix Böhm All rights reserved.|
 |eslint-scope|https://github.com/eslint/eslint-scope/blob/master/LICENSE|https://github.com/eslint/eslint-scope|Copyright JS Foundation and other contributors, https://js.foundation Copyright (C) 2012-2013 Yusuke Suzuki (twitter: @Constellation) and other contributors.|
 |espree|https://github.com/eslint/espree/blob/master/LICENSE|https://github.com/eslint/espree|Copyright (c) Open JS Foundation All rights reserved.|
-|esrecurse|https://github.com/estools/esrecurse/blob/master/README.md|https://github.com/estools/esrecurse||
-|estraverse|https://github.com/estools/estraverse/blob/master/LICENSE.BSD|https://github.com/estools/estraverse||
-|esutils|https://github.com/estools/esutils/blob/master/LICENSE.BSD|https://github.com/estools/esutils||
-|glob-to-regexp|https://github.com/fitzgen/glob-to-regexp/blob/master/README.md|https://github.com/fitzgen/glob-to-regexp||
-|normalize-package-data|https://github.com/npm/normalize-package-data/blob/master/LICENSE|https://github.com/npm/normalize-package-data||
-|nth-check|https://github.com/fb55/nth-check/blob/master/LICENSE|https://github.com/fb55/nth-check||
-|regjsparser|https://github.com/jviereck/regjsparser/blob/master/LICENSE.BSD|https://github.com/jviereck/regjsparser||
+|esrecurse|https://github.com/estools/esrecurse/blob/master/README.md|https://github.com/estools/esrecurse|Copyright (C) 2014 [Yusuke Suzuki](https://github.com/Constellation)  (twitter: [@Constellation](https://twitter.com/Constellation)) and other contributors.|
+|estraverse|https://github.com/estools/estraverse/blob/master/LICENSE.BSD|https://github.com/estools/estraverse|Copyright (C) 2012-2016 [Yusuke Suzuki](http://github.com/Constellation)  (twitter: [@Constellation](http://twitter.com/Constellation)) and other contributors.|
+|esutils|https://github.com/estools/esutils/blob/master/LICENSE.BSD|https://github.com/estools/esutils|Copyright (C) 2013 [Yusuke Suzuki](http://github.com/Constellation)  (twitter: [@Constellation](http://twitter.com/Constellation)) and other contributors.|
+|glob-to-regexp|https://github.com/fitzgen/glob-to-regexp/blob/master/README.md|https://github.com/fitzgen/glob-to-regexp|Copyright (c) 2013, Nick Fitzgerald|
+|normalize-package-data|https://github.com/npm/normalize-package-data/blob/master/LICENSE|https://github.com/npm/normalize-package-data|Copyright (c) Meryn Stol (&quot;Author&quot;) All rights reserved.|
+|nth-check|https://github.com/fb55/nth-check/blob/master/LICENSE|https://github.com/fb55/nth-check|Copyright (c) Felix Böhm All rights reserved.|
+|regjsparser|https://github.com/jviereck/regjsparser/blob/master/LICENSE.BSD|https://github.com/jviereck/regjsparser|Copyright (c) Julian Viereck and Contributors, All Rights Reserved.|
 |terser|https://github.com/terser/terser/blob/master/LICENSE|https://github.com/terser/terser|Copyright 2012-2018 (c) Mihai Bazon &lt;mihai.bazon@gmail.com&gt;|
 |tslib|https://github.com/Microsoft/tslib/blob/master/LICENSE.txt|https://github.com/Microsoft/tslib|Copyright (c) Microsoft Corporation.|
-|uri-js|https://github.com/garycourt/uri-js/blob/master/LICENSE|https://github.com/garycourt/uri-js||
+|uri-js|https://github.com/garycourt/uri-js/blob/master/LICENSE|https://github.com/garycourt/uri-js|Copyright 2011 Gary Court. All rights reserved.|
 
 
 ## 3-Clause BSD License
@@ -82,13 +91,14 @@ This software is provided by the copyright holders and contributors “as is” 
 |Component Name|Link to License|Link to Source Code|Copyright notice|
 |--------------|---------------|-------------------|----------------|
 |@humanwhocodes/object-schema|https://github.com/humanwhocodes/object-schema/blob/master/LICENSE|https://github.com/humanwhocodes/object-schema|Copyright (c) 2019, Human Who Codes All rights reserved.|
-|@xtuc/ieee754|https://github.com/feross/ieee754/blob/master/LICENSE|https://github.com/feross/ieee754||
+|@xtuc/ieee754|https://github.com/feross/ieee754/blob/master/LICENSE|https://github.com/feross/ieee754|Copyright (c) 2008, Fair Oaks Labs, Inc. All rights reserved.|
 |ass/xmlsecurity|https://github.com/aschamberger/XmlSecurity/blob/master/LICENSE.md|https://github.com/aschamberger/XmlSecurity|Copyright (c) 2012, Andreas Schamberger &lt;mail@andreass.net&gt; All rights reserved.  Copyright (c) 2007-2010, Robert Richards &lt;rrichards@cdatazone.org&gt;. All rights reserved.|
-|esquery|https://github.com/estools/esquery/blob/master/license.txt|https://github.com/estools/esquery||
+|esquery|https://github.com/estools/esquery/blob/master/license.txt|https://github.com/estools/esquery|Copyright (c) 2013, Joel Feenstra All rights reserved.|
+|fast-uri|https://github.com/fastify/fast-uri/blob/master/LICENSE|https://github.com/fastify/fast-uri|Copyright (c) 2021 The Fastify Team Copyright (c) 2011-2021, Gary Court until https://github.com/garycourt/uri-js/commit/a1acf730b4bba3f1097c9f52e7d9d3aba8cdcaae|
+|flat|https://github.com/hughsk/flat/blob/master/LICENSE|https://github.com/hughsk/flat|Copyright (c) 2014, Hugh Kennedy All rights reserved.|
+|google/recaptcha|https://github.com/google/recaptcha/blob/master/LICENSE|https://github.com/google/recaptcha|Copyright (c) 2019, Google Inc. All rights reserved.|
 |laminas/laminas-code|https://github.com/laminas/laminas-code/blob/master/LICENSE.md|https://github.com/laminas/laminas-code|Copyright (c) 2020 Laminas Project a Series of LF Projects, LLC.|
 |laminas/laminas-loader|https://github.com/laminas/laminas-loader/blob/master/LICENSE.md|https://github.com/laminas/laminas-loader|Copyright (c) 2020 Laminas Project a Series of LF Projects, LLC.|
-|laminas/laminas-mail|https://github.com/laminas/laminas-mail/blob/master/LICENSE.md|https://github.com/laminas/laminas-mail|Copyright (c) 2020 Laminas Project a Series of LF Projects, LLC.|
-|laminas/laminas-mime|https://github.com/laminas/laminas-mime/blob/master/LICENSE.md|https://github.com/laminas/laminas-mime|Copyright (c) 2020 Laminas Project a Series of LF Projects, LLC.|
 |laminas/laminas-servicemanager|https://github.com/laminas/laminas-servicemanager/blob/master/LICENSE.md|https://github.com/laminas/laminas-servicemanager|Copyright (c) 2020 Laminas Project a Series of LF Projects, LLC.|
 |laminas/laminas-stdlib|https://github.com/laminas/laminas-stdlib/blob/master/LICENSE.md|https://github.com/laminas/laminas-stdlib|Copyright (c) 2020 Laminas Project a Series of LF Projects, LLC.|
 |laminas/laminas-validator|https://github.com/laminas/laminas-validator/blob/master/LICENSE.md|https://github.com/laminas/laminas-validator|Copyright (c) 2020 Laminas Project a Series of LF Projects, LLC.|
@@ -96,13 +106,15 @@ This software is provided by the copyright holders and contributors “as is” 
 |nette/php-generator|https://github.com/nette/php-generator/blob/master/LICENSE.md|https://github.com/nette/php-generator|Copyright (c) 2004, 2014 David Grudl (https://davidgrudl.com) All rights reserved.|
 |nette/utils|https://github.com/nette/utils/blob/master/LICENSE.md|https://github.com/nette/utils|Copyright (c) 2004, 2014 David Grudl (https://davidgrudl.com) All rights reserved.|
 |nikic/php-parser|https://github.com/nikic/PHP-Parser/blob/master/LICENSE|https://github.com/nikic/PHP-Parser|Copyright (c) 2011, Nikita Popov All rights reserved.|
-|node-forge|https://github.com/digitalbazaar/forge/blob/master/LICENSE|https://github.com/digitalbazaar/forge||
+|node-forge|https://github.com/digitalbazaar/forge/blob/master/LICENSE|https://github.com/digitalbazaar/forge|Copyright (c) 2010, Digital Bazaar, Inc. All rights reserved. Copyright (C) 1989, 1991 Free Software Foundation, Inc.|
+|oroinc/laminas-mail|https://github.com/oroinc/laminas-mail/blob/master/LICENSE.md|https://github.com/oroinc/laminas-mail|Copyright (c) 2020 Laminas Project a Series of LF Projects, LLC.|
+|oroinc/laminas-mime|https://github.com/oroinc/laminas-mime/blob/master/LICENSE.md|https://github.com/oroinc/laminas-mime|Copyright (c) 2020 Laminas Project a Series of LF Projects, LLC.|
 |phpmd/phpmd|https://github.com/phpmd/phpmd/blob/master/LICENSE|https://github.com/phpmd/phpmd|Copyright (c) 2008, Manuel Pichler All rights reserved.|
 |phpunit/phpunit|https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE|https://github.com/sebastianbergmann/phpunit|Copyright (c) 2001-2023, Sebastian Bergmann All rights reserved.|
-|qs|https://github.com/ljharb/qs/blob/master/LICENSE.md|https://github.com/ljharb/qs||
-|sebastian/phpcpd|https://github.com/sebastianbergmann/phpcpd/blob/master/LICENSE|https://github.com/sebastianbergmann/phpcpd|Copyright (c) 2009-2020, Sebastian Bergmann &lt;sebastian@phpunit.de&gt;. All rights reserved.|
+|qs|https://github.com/ljharb/qs/blob/master/LICENSE.md|https://github.com/ljharb/qs|Copyright (c) 2014, Nathan LaFreniere and other [contributors](https://github.com/ljharb/qs/graphs/contributors) All rights reserved.|
+|sebastian/diff|https://github.com/sebastianbergmann/diff/blob/master/LICENSE|https://github.com/sebastianbergmann/diff|Copyright (c) 2002-2020, Sebastian Bergmann &lt;sebastian@phpunit.de&gt;. All rights reserved.|
 |serialize-javascript|https://github.com/yahoo/serialize-javascript/blob/master/LICENSE|https://github.com/yahoo/serialize-javascript|Copyright 2014 Yahoo! Inc. All rights reserved.|
-|source-map|https://github.com/mozilla/source-map/blob/master/LICENSE|https://github.com/mozilla/source-map||
+|source-map|https://github.com/mozilla/source-map/blob/master/LICENSE|https://github.com/mozilla/source-map|Copyright (c) 2009-2011, Mozilla Foundation and contributors All rights reserved.|
 |source-map-js|https://github.com/7rulnik/source-map-js/blob/master/LICENSE|https://github.com/7rulnik/source-map-js|Copyright (c) 2009-2011, Mozilla Foundation and contributors All rights reserved.|
 |squizlabs/php_codesniffer|https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/master/licence.txt|https://github.com/PHPCSStandards/PHP_CodeSniffer|Copyright (c) 2012, Squiz Pty Ltd (ABN 77 084 670 600) All rights reserved.|
 |table|https://github.com/gajus/table/blob/master/LICENSE|https://github.com/gajus/table|Copyright (c) 2018, Gajus Kuizinas (http://gajus.com/) All rights reserved.|
@@ -125,7 +137,7 @@ Full license Terms are available below.
 |matomo/device-detector|https://github.com/matomo-org/device-detector/blob/master/LICENSE|https://github.com/matomo-org/device-detector|Copyright (C) 2007 Free Software Foundation, Inc. &lt;https://fsf.org/&gt;|
 |nette/php-generator|https://github.com/nette/php-generator/blob/master/LICENSE.md|https://github.com/nette/php-generator|Copyright (c) 2004, 2014 David Grudl (https://davidgrudl.com) All rights reserved.|
 |nette/utils|https://github.com/nette/utils/blob/master/LICENSE.md|https://github.com/nette/utils|Copyright (c) 2004, 2014 David Grudl (https://davidgrudl.com) All rights reserved.|
-|node-forge|https://github.com/digitalbazaar/forge/blob/master/LICENSE|https://github.com/digitalbazaar/forge||
+|node-forge|https://github.com/digitalbazaar/forge/blob/master/LICENSE|https://github.com/digitalbazaar/forge|Copyright (c) 2010, Digital Bazaar, Inc. All rights reserved. Copyright (C) 1989, 1991 Free Software Foundation, Inc.|
 
 
 ## ISC License
@@ -136,47 +148,47 @@ THE SOFTWARE IS PROVIDED “AS IS” AND THE AUTHOR DISCLAIMS ALL WARRANTIES WIT
 
 |Component Name|Link to License|Link to Source Code|Copyright notice|
 |--------------|---------------|-------------------|----------------|
-|@trysound/sax|https://github.com/svg/sax/blob/master/LICENSE|https://github.com/svg/sax||
+|@trysound/sax|https://github.com/svg/sax/blob/master/LICENSE|https://github.com/svg/sax|Copyright (c) Isaac Z. Schlueter and Contributors|
 |@ungap/structured-clone|https://github.com/ungap/structured-clone/blob/master/LICENSE|https://github.com/ungap/structured-clone|Copyright (c) 2021, Andrea Giammarchi, @WebReflection|
-|anymatch|https://github.com/micromatch/anymatch/blob/master/LICENSE|https://github.com/micromatch/anymatch||
+|anymatch|https://github.com/micromatch/anymatch/blob/master/LICENSE|https://github.com/micromatch/anymatch|Copyright (c) 2019 Elan Shanker, Paul Miller (https://paulmillr.com)|
 |boolbase|https://github.com/fb55/boolbase/blob/master/README.md|https://github.com/fb55/boolbase||
-|cliui|https://github.com/yargs/cliui/blob/master/LICENSE.txt|https://github.com/yargs/cliui||
+|cliui|https://github.com/yargs/cliui/blob/master/LICENSE.txt|https://github.com/yargs/cliui|Copyright (c) 2015, Contributors|
 |common-path-prefix|https://github.com/novemberborn/common-path-prefix/blob/master/LICENSE|https://github.com/novemberborn/common-path-prefix|Copyright (c) 2016, Mark Wubben|
 |css-declaration-sorter|https://github.com/Siilwyn/css-declaration-sorter/blob/master/license.md|https://github.com/Siilwyn/css-declaration-sorter|Copyright (c)|
 |electron-to-chromium|https://github.com/kilian/electron-to-chromium/blob/master/LICENSE|https://github.com/kilian/electron-to-chromium|Copyright 2018 Kilian Valkhof|
 |fastq|https://github.com/mcollina/fastq/blob/master/LICENSE|https://github.com/mcollina/fastq|Copyright (c) 2015-2020, Matteo Collina &lt;matteo.collina@gmail.com&gt;|
 |flatted|https://github.com/WebReflection/flatted/blob/master/LICENSE|https://github.com/WebReflection/flatted|Copyright (c) 2018-2020, Andrea Giammarchi, @WebReflection|
-|fs.realpath|https://github.com/isaacs/fs.realpath/blob/master/LICENSE|https://github.com/isaacs/fs.realpath||
-|get-caller-file|https://github.com/stefanpenner/get-caller-file/blob/master/LICENSE.md|https://github.com/stefanpenner/get-caller-file||
-|glob|https://github.com/isaacs/node-glob/blob/master/LICENSE|https://github.com/isaacs/node-glob||
-|glob-parent|https://github.com/gulpjs/glob-parent/blob/master/LICENSE|https://github.com/gulpjs/glob-parent||
-|graceful-fs|https://github.com/isaacs/node-graceful-fs/blob/master/LICENSE|https://github.com/isaacs/node-graceful-fs||
-|hosted-git-info|https://github.com/npm/hosted-git-info/blob/master/LICENSE|https://github.com/npm/hosted-git-info||
-|icss-utils|https://github.com/css-modules/icss-utils/blob/master/LICENSE.md|https://github.com/css-modules/icss-utils||
-|inflight|https://github.com/npm/inflight/blob/master/LICENSE|https://github.com/npm/inflight||
-|inherits|https://github.com/isaacs/inherits/blob/master/LICENSE|https://github.com/isaacs/inherits||
-|ini|https://github.com/isaacs/ini/blob/master/LICENSE|https://github.com/isaacs/ini||
-|isexe|https://github.com/isaacs/isexe/blob/master/LICENSE|https://github.com/isaacs/isexe||
-|lru-cache|https://github.com/isaacs/node-lru-cache/blob/master/LICENSE|https://github.com/isaacs/node-lru-cache||
-|minimalistic-assert|https://github.com/calvinmetcalf/minimalistic-assert/blob/master/LICENSE|https://github.com/calvinmetcalf/minimalistic-assert||
+|fs.realpath|https://github.com/isaacs/fs.realpath/blob/master/LICENSE|https://github.com/isaacs/fs.realpath|Copyright (c) Isaac Z. Schlueter and Contributors  Copyright Joyent, Inc. and other Node contributors.|
+|get-caller-file|https://github.com/stefanpenner/get-caller-file/blob/master/LICENSE.md|https://github.com/stefanpenner/get-caller-file|Copyright 2018 Stefan Penner|
+|glob|https://github.com/isaacs/node-glob/blob/master/LICENSE|https://github.com/isaacs/node-glob|Copyright (c) Isaac Z. Schlueter and Contributors|
+|glob-parent|https://github.com/gulpjs/glob-parent/blob/master/LICENSE|https://github.com/gulpjs/glob-parent|Copyright (c) 2015, 2019 Elan Shanker, 2021 Blaine Bublitz &lt;blaine.bublitz@gmail.com&gt;, Eric Schoffstall &lt;yo@contra.io&gt; and other contributors|
+|graceful-fs|https://github.com/isaacs/node-graceful-fs/blob/master/LICENSE|https://github.com/isaacs/node-graceful-fs|Copyright (c) 2011-2022 Isaac Z. Schlueter, Ben Noordhuis, and Contributors|
+|hosted-git-info|https://github.com/npm/hosted-git-info/blob/master/LICENSE|https://github.com/npm/hosted-git-info|Copyright (c) 2015, Rebecca Turner|
+|icss-utils|https://github.com/css-modules/icss-utils/blob/master/LICENSE.md|https://github.com/css-modules/icss-utils|Copyright 2018 Glen Maddern|
+|inflight|https://github.com/npm/inflight/blob/master/LICENSE|https://github.com/npm/inflight|Copyright (c) Isaac Z. Schlueter|
+|inherits|https://github.com/isaacs/inherits/blob/master/LICENSE|https://github.com/isaacs/inherits|Copyright (c) Isaac Z. Schlueter|
+|ini|https://github.com/isaacs/ini/blob/master/LICENSE|https://github.com/isaacs/ini|Copyright (c) Isaac Z. Schlueter and Contributors|
+|isexe|https://github.com/isaacs/isexe/blob/master/LICENSE|https://github.com/isaacs/isexe|Copyright (c) Isaac Z. Schlueter and Contributors|
+|lru-cache|https://github.com/isaacs/node-lru-cache/blob/master/LICENSE|https://github.com/isaacs/node-lru-cache|Copyright (c) Isaac Z. Schlueter and Contributors|
+|minimalistic-assert|https://github.com/calvinmetcalf/minimalistic-assert/blob/master/LICENSE|https://github.com/calvinmetcalf/minimalistic-assert|Copyright 2015 Calvin Metcalf|
 |minimatch|https://github.com/isaacs/minimatch/blob/master/LICENSE|https://github.com/isaacs/minimatch|Copyright (c) 2011-2023 Isaac Z. Schlueter and Contributors|
-|once|https://github.com/isaacs/once/blob/master/LICENSE|https://github.com/isaacs/once||
-|picocolors|https://github.com/alexeyraspopov/picocolors/blob/master/LICENSE|https://github.com/alexeyraspopov/picocolors||
-|postcss-modules-extract-imports|https://github.com/css-modules/postcss-modules-extract-imports/blob/master/LICENSE|https://github.com/css-modules/postcss-modules-extract-imports||
+|once|https://github.com/isaacs/once/blob/master/LICENSE|https://github.com/isaacs/once|Copyright (c) Isaac Z. Schlueter and Contributors|
+|picocolors|https://github.com/alexeyraspopov/picocolors/blob/master/LICENSE|https://github.com/alexeyraspopov/picocolors|Copyright (c) 2021-2024 Oleksii Raspopov, Kostiantyn Denysov, Anton Verinov|
+|postcss-modules-extract-imports|https://github.com/css-modules/postcss-modules-extract-imports/blob/master/LICENSE|https://github.com/css-modules/postcss-modules-extract-imports|Copyright 2015 Glen Maddern|
 |postcss-modules-scope|https://github.com/css-modules/postcss-modules-scope/blob/master/LICENSE|https://github.com/css-modules/postcss-modules-scope|Copyright (c) 2015, Glen Maddern|
-|postcss-modules-values|https://github.com/css-modules/postcss-modules-values/blob/master/LICENSE|https://github.com/css-modules/postcss-modules-values||
-|rimraf|https://github.com/isaacs/rimraf/blob/master/LICENSE|https://github.com/isaacs/rimraf||
+|postcss-modules-values|https://github.com/css-modules/postcss-modules-values/blob/master/LICENSE|https://github.com/css-modules/postcss-modules-values|Copyright (c) 2015, Glen Maddern|
+|rimraf|https://github.com/isaacs/rimraf/blob/master/LICENSE|https://github.com/isaacs/rimraf|Copyright (c) Isaac Z. Schlueter and Contributors|
 |semver|https://github.com/npm/node-semver/blob/master/LICENSE|https://github.com/npm/node-semver|Copyright (c) Isaac Z. Schlueter and Contributors|
-|setprototypeof|https://github.com/wesleytodd/setprototypeof/blob/master/LICENSE|https://github.com/wesleytodd/setprototypeof||
+|setprototypeof|https://github.com/wesleytodd/setprototypeof/blob/master/LICENSE|https://github.com/wesleytodd/setprototypeof|Copyright (c) 2015, Wes Todd|
 |signal-exit|https://github.com/tapjs/signal-exit/blob/master/LICENSE.txt|https://github.com/tapjs/signal-exit|Copyright (c) 2015-2023 Benjamin Coe, Isaac Z. Schlueter, and Contributors|
-|style-search|https://github.com/davidtheclark/style-search/blob/master/LICENSE|https://github.com/davidtheclark/style-search||
+|style-search|https://github.com/davidtheclark/style-search/blob/master/LICENSE|https://github.com/davidtheclark/style-search|Copyright (c) 2016, David Clark|
 |text-loader|https://github.com/dfenstermaker/text-loader/blob/master/README.md|https://github.com/dfenstermaker/text-loader||
 |which|https://github.com/npm/node-which/blob/master/LICENSE|https://github.com/npm/node-which|Copyright (c) Isaac Z. Schlueter and Contributors|
-|wrappy|https://github.com/npm/wrappy/blob/master/LICENSE|https://github.com/npm/wrappy||
+|wrappy|https://github.com/npm/wrappy/blob/master/LICENSE|https://github.com/npm/wrappy|Copyright (c) Isaac Z. Schlueter and Contributors|
 |write-file-atomic|https://github.com/npm/write-file-atomic/blob/master/LICENSE.md|https://github.com/npm/write-file-atomic|Copyright (c) 2015, Rebecca Turner|
-|y18n|https://github.com/yargs/y18n/blob/master/LICENSE|https://github.com/yargs/y18n||
-|yallist|https://github.com/isaacs/yallist/blob/master/LICENSE|https://github.com/isaacs/yallist||
-|yargs-parser|https://github.com/yargs/yargs-parser/blob/master/LICENSE.txt|https://github.com/yargs/yargs-parser||
+|y18n|https://github.com/yargs/y18n/blob/master/LICENSE|https://github.com/yargs/y18n|Copyright (c) 2015, Contributors|
+|yallist|https://github.com/isaacs/yallist/blob/master/LICENSE|https://github.com/isaacs/yallist|Copyright (c) Isaac Z. Schlueter and Contributors|
+|yargs-parser|https://github.com/yargs/yargs-parser/blob/master/LICENSE.txt|https://github.com/yargs/yargs-parser|Copyright (c) 2016, Contributors|
 
 
 ## MIT License
@@ -190,20 +202,16 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 |Component Name|Link to License|Link to Source Code|Copyright notice|
 |--------------|---------------|-------------------|----------------|
-|@aashutoshrathi/word-wrap|https://github.com/aashutoshrathi/word-wrap/blob/master/LICENSE|https://github.com/aashutoshrathi/word-wrap|Copyright (c) 2014-2016, Jon Schlinkert|
 |@babel/code-frame|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/compat-data|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/core|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/generator|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-annotate-as-pure|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
-|@babel/helper-builder-binary-assignment-operator-visitor|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-compilation-targets|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-create-class-features-plugin|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-create-regexp-features-plugin|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
-|@babel/helper-define-polyfill-provider|https://github.com/babel/babel-polyfills/blob/master/LICENSE|https://github.com/babel/babel-polyfills||
+|@babel/helper-define-polyfill-provider|https://github.com/babel/babel-polyfills/blob/master/LICENSE|https://github.com/babel/babel-polyfills|Copyright (c) 2014-present Nicolò Ribaudo and other contributors|
 |@babel/helper-environment-visitor|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
-|@babel/helper-function-name|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
-|@babel/helper-hoist-variables|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-member-expression-to-functions|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-module-imports|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-module-transforms|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
@@ -211,49 +219,46 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |@babel/helper-plugin-utils|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-remap-async-to-generator|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-replace-supers|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
-|@babel/helper-simple-access|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-skip-transparent-expression-wrappers|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
-|@babel/helper-split-export-declaration|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-string-parser|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-validator-identifier|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-validator-option|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helper-wrap-function|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/helpers|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
-|@babel/highlight|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/parser|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (C) 2012-2014 by various contributors (see AUTHORS)|
 |@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
-|@babel/plugin-proposal-async-generator-functions|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-proposal-class-properties|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-proposal-class-static-block|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-proposal-dynamic-import|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-proposal-export-namespace-from|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-proposal-json-strings|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-proposal-logical-assignment-operators|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-proposal-nullish-coalescing-operator|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-proposal-numeric-separator|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-proposal-object-rest-spread|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-proposal-optional-catch-binding|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-proposal-optional-chaining|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-proposal-private-methods|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
+|@babel/plugin-proposal-async-generator-functions|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-proposal-class-properties|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-proposal-class-static-block|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-proposal-dynamic-import|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-proposal-export-namespace-from|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-proposal-json-strings|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-proposal-logical-assignment-operators|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-proposal-nullish-coalescing-operator|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-proposal-numeric-separator|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-proposal-object-rest-spread|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-proposal-optional-catch-binding|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-proposal-optional-chaining|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-proposal-private-methods|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/plugin-proposal-private-property-in-object|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
-|@babel/plugin-proposal-unicode-property-regex|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-async-generators|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-class-properties|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-class-static-block|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-dynamic-import|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-export-namespace-from|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
+|@babel/plugin-proposal-unicode-property-regex|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-async-generators|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-class-properties|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-class-static-block|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-dynamic-import|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-export-namespace-from|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/plugin-syntax-import-assertions|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/plugin-syntax-import-meta|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
-|@babel/plugin-syntax-json-strings|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-logical-assignment-operators|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-nullish-coalescing-operator|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-numeric-separator|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-object-rest-spread|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-optional-catch-binding|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-optional-chaining|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-private-property-in-object|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
-|@babel/plugin-syntax-top-level-await|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel||
+|@babel/plugin-syntax-json-strings|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-logical-assignment-operators|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-nullish-coalescing-operator|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-numeric-separator|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-object-rest-spread|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-optional-catch-binding|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-optional-chaining|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-private-property-in-object|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
+|@babel/plugin-syntax-top-level-await|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/plugin-transform-arrow-functions|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/plugin-transform-async-to-generator|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/plugin-transform-block-scoped-functions|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
@@ -290,7 +295,6 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |@babel/plugin-transform-unicode-regex|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/preset-env|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/preset-modules|https://github.com/babel/preset-modules/blob/master/LICENSE|https://github.com/babel/preset-modules|Copyright (c) 2020 Babel|
-|@babel/regjsgen|https://github.com/bnjmnt4n/regjsgen/blob/master/LICENSE-MIT.txt|https://github.com/bnjmnt4n/regjsgen||
 |@babel/runtime|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/runtime-corejs3|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
 |@babel/template|https://github.com/babel/babel/blob/master/LICENSE|https://github.com/babel/babel|Copyright (c) 2014-present Sebastian McKenzie and other contributors|
@@ -303,13 +307,14 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |@codemirror/search|https://github.com/codemirror/search/blob/master/LICENSE|https://github.com/codemirror/search|Copyright (C) 2018-2021 by Marijn Haverbeke &lt;marijn@haverbeke.berlin&gt; and others|
 |@codemirror/state|https://github.com/codemirror/state/blob/master/LICENSE|https://github.com/codemirror/state|Copyright (C) 2018-2021 by Marijn Haverbeke &lt;marijn@haverbeke.berlin&gt; and others|
 |@codemirror/view|https://github.com/codemirror/view/blob/master/LICENSE|https://github.com/codemirror/view|Copyright (C) 2018-2021 by Marijn Haverbeke &lt;marijn@haverbeke.berlin&gt; and others|
-|@colors/colors|https://github.com/DABH/colors.js/blob/master/LICENSE|https://github.com/DABH/colors.js||
+|@colors/colors|https://github.com/DABH/colors.js/blob/master/LICENSE|https://github.com/DABH/colors.js|Copyright (c) Marak Squires  Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)  - Copyright (c) DABH (https://github.com/DABH)|
 |@csstools/css-parser-algorithms|https://github.com/csstools/postcss-plugins/blob/master/LICENSE.md|https://github.com/csstools/postcss-plugins|Copyright 2022 Romain Menke, Antonio Laguna &lt;antonio@laguna.es&gt;|
 |@csstools/css-tokenizer|https://github.com/csstools/postcss-plugins/blob/master/LICENSE.md|https://github.com/csstools/postcss-plugins|Copyright 2022 Romain Menke, Antonio Laguna &lt;antonio@laguna.es&gt;|
 |@csstools/media-query-list-parser|https://github.com/csstools/postcss-plugins/blob/master/LICENSE.md|https://github.com/csstools/postcss-plugins|Copyright 2022 Romain Menke, Antonio Laguna &lt;antonio@laguna.es&gt;|
 |@csstools/selector-specificity|https://github.com/csstools/postcss-plugins/blob/master/LICENSE.md|https://github.com/csstools/postcss-plugins|Copyright © CSSTools Contributors|
-|@discoveryjs/json-ext|https://github.com/discoveryjs/json-ext/blob/master/LICENSE|https://github.com/discoveryjs/json-ext||
-|@eslint-community/eslint-utils|https://github.com/eslint-community/eslint-utils/blob/master/LICENSE|https://github.com/eslint-community/eslint-utils||
+|@discoveryjs/json-ext|https://github.com/discoveryjs/json-ext/blob/master/LICENSE|https://github.com/discoveryjs/json-ext|Copyright (c) 2020-2024 Roman Dvornov &lt;rdvornov@gmail.com&gt;|
+|@esbuild/darwin-arm64|https://github.com/evanw/esbuild/blob/master/README.md|https://github.com/evanw/esbuild||
+|@eslint-community/eslint-utils|https://github.com/eslint-community/eslint-utils/blob/master/LICENSE|https://github.com/eslint-community/eslint-utils|Copyright (c) 2018 Toru Nagashima|
 |@eslint-community/regexpp|https://github.com/eslint-community/regexpp/blob/master/LICENSE|https://github.com/eslint-community/regexpp|Copyright (c) 2018 Toru Nagashima|
 |@eslint/eslintrc|https://github.com/eslint/eslintrc/blob/master/LICENSE|https://github.com/eslint/eslintrc|Copyright OpenJS Foundation and other contributors, &lt;www.openjsf.org&gt;|
 |@eslint/js|https://github.com/eslint/eslint/blob/master/LICENSE|https://github.com/eslint/eslint|Copyright OpenJS Foundation and other contributors, &lt;www.openjsf.org&gt;|
@@ -327,36 +332,39 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |@lezer/highlight|https://github.com/lezer-parser/highlight/blob/master/LICENSE|https://github.com/lezer-parser/highlight|Copyright (C) 2018 by Marijn Haverbeke &lt;marijn@haverbeke.berlin&gt; and others|
 |@lezer/lezer|https://github.com/lezer-parser/lezer-grammar/blob/master/LICENSE|https://github.com/lezer-parser/lezer-grammar|Copyright (C) 2018 by Marijn Haverbeke &lt;marijn@haverbeke.berlin&gt; and others|
 |@lezer/lr|https://github.com/lezer-parser/lr/blob/master/LICENSE|https://github.com/lezer-parser/lr|Copyright (C) 2018 by Marijn Haverbeke &lt;marijn@haverbeke.berlin&gt; and others|
-|@nodelib/fs.scandir|https://github.com/nodelib/nodelib/blob/master/LICENSE|https://github.com/nodelib/nodelib||
-|@nodelib/fs.stat|https://github.com/nodelib/nodelib/blob/master/LICENSE|https://github.com/nodelib/nodelib||
-|@nodelib/fs.walk|https://github.com/nodelib/nodelib/blob/master/LICENSE|https://github.com/nodelib/nodelib||
-|@oroinc/autobahnjs|https://github.com/crossbario/autobahn-js/blob/master/LICENSE|https://github.com/crossbario/autobahn-js||
-|@oroinc/backbone.pageable|https://github.com/wyuenho/backbone-pageable/blob/master/LICENSE-MIT|https://github.com/wyuenho/backbone-pageable||
-|@oroinc/bootstrap|https://github.com/twbs/bootstrap/blob/master/LICENSE|https://github.com/twbs/bootstrap||
+|@marijn/find-cluster-break|https://github.com/marijnh/find-cluster-break/blob/master/LICENSE|https://github.com/marijnh/find-cluster-break|Copyright (C) 2024 by Marijn Haverbeke &lt;marijn@haverbeke.berlin&gt;|
+|@nodelib/fs.scandir|https://github.com/nodelib/nodelib/blob/master/LICENSE|https://github.com/nodelib/nodelib|Copyright (c) Denis Malinochkin|
+|@nodelib/fs.stat|https://github.com/nodelib/nodelib/blob/master/LICENSE|https://github.com/nodelib/nodelib|Copyright (c) Denis Malinochkin|
+|@nodelib/fs.walk|https://github.com/nodelib/nodelib/blob/master/LICENSE|https://github.com/nodelib/nodelib|Copyright (c) Denis Malinochkin|
+|@oroinc/autobahnjs|https://github.com/crossbario/autobahn-js/blob/master/LICENSE|https://github.com/crossbario/autobahn-js|Copyright (c) 2011,2012 Tavendo GmbH.|
+|@oroinc/backbone.pageable|https://github.com/wyuenho/backbone-pageable/blob/master/LICENSE-MIT|https://github.com/wyuenho/backbone-pageable|Copyright (c) 2012 Jimmy Yuen Ho Wong|
+|@oroinc/bootstrap|https://github.com/twbs/bootstrap/blob/master/LICENSE|https://github.com/twbs/bootstrap|Copyright (c) 2011-2019 Twitter, Inc. Copyright (c) 2011-2019 The Bootstrap Authors|
 |@oroinc/font-awesome|https://github.com/FortAwesome/Font-Awesome/blob/master/README.md|https://github.com/FortAwesome/Font-Awesome||
-|@oroinc/jquery-ajax-queue|https://github.com/flydreamers/ajaxQueue/blob/master/LICENSE|https://github.com/flydreamers/ajaxQueue||
-|@oroinc/jquery.nicescroll|https://github.com/inuyaksa/jquery.nicescroll/blob/master/README.md|https://github.com/inuyaksa/jquery.nicescroll||
-|@oroinc/jquery.uniform|https://github.com/AudithSoftworks/Uniform/blob/master/LICENSE.txt|https://github.com/AudithSoftworks/Uniform||
+|@oroinc/jquery-ajax-queue|https://github.com/flydreamers/ajaxQueue/blob/master/LICENSE|https://github.com/flydreamers/ajaxQueue|Copyright (c) 2015 flydreamers|
+|@oroinc/jquery.nicescroll|https://github.com/inuyaksa/jquery.nicescroll/blob/master/README.md|https://github.com/inuyaksa/jquery.nicescroll|Copyright 2011-15 InuYaksa|
+|@oroinc/jquery.uniform|https://github.com/AudithSoftworks/Uniform/blob/master/LICENSE.txt|https://github.com/AudithSoftworks/Uniform|Copyright (c) &lt;Shahriyar Imanov&gt;|
 |@oroinc/jsplumb|https://github.com/sporritt/jsPlumb/blob/master/README.md|https://github.com/sporritt/jsPlumb||
 |@oroinc/oro-stylelint-config||https://npmjs.com/package/@oroinc/oro-stylelint-config|Copyright (c) 2013, Oro, Inc.|
-|@oroinc/oro-webpack-config-builder||https://npmjs.com/package/@oroinc/oro-webpack-config-builder|Copyright (c) 2013, Oro, Inc.|
-|@oroinc/select2|https://github.com/select2/select2/blob/master/LICENSE|https://github.com/select2/select2||
+|@oroinc/oro-webpack-config-builder||https://npmjs.com/package/@oroinc/oro-webpack-config-builder|Copyright (c) 2024 Oro Inc.|
+|@oroinc/select2|https://github.com/select2/select2/blob/master/LICENSE|https://github.com/select2/select2|Copyright 2012 Igor Vaynberg|
 |@oroinc/slick-carousel|https://github.com/kenwheeler/slick/blob/master/LICENSE|https://github.com/kenwheeler/slick|Copyright (c) 2013-2016|
+|@parcel/watcher|https://github.com/parcel-bundler/watcher/blob/master/LICENSE|https://github.com/parcel-bundler/watcher|Copyright (c) 2017-present Devon Govett|
+|@parcel/watcher-darwin-arm64|https://github.com/parcel-bundler/watcher/blob/master/LICENSE|https://github.com/parcel-bundler/watcher|Copyright (c) 2017-present Devon Govett|
 |@polka/url|https://github.com/lukeed/polka/blob/master/readme.md|https://github.com/lukeed/polka||
 |@sinclair/typebox|https://github.com/sinclairzx81/typebox/blob/master/license|https://github.com/sinclairzx81/typebox|Copyright (c) 2017-2023 Haydn Paterson (sinclair) &lt;haydn.developer@gmail.com&gt;|
-|@socket.io/component-emitter|https://github.com/socketio/emitter/blob/master/LICENSE|https://github.com/socketio/emitter||
+|@socket.io/component-emitter|https://github.com/socketio/emitter/blob/master/LICENSE|https://github.com/socketio/emitter|Copyright (c) 2014 Component contributors &lt;dev@component.io&gt;|
+|@swc/core-darwin-arm64|https://github.com/swc-project/swc/blob/master/README.md|https://github.com/swc-project/swc||
 |@types/body-parser|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/bonjour|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/connect|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/connect-history-api-fallback|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
-|@types/cookie|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped||
 |@types/cors|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/eslint|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/eslint-scope|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/estree|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/express|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/express-serve-static-core|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
-|@types/html-minifier-terser|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped||
+|@types/html-minifier-terser|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/http-errors|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/http-proxy|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/istanbul-lib-coverage|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
@@ -370,7 +378,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |@types/normalize-package-data|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/qs|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/range-parser|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
-|@types/retry|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped||
+|@types/retry|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/send|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/serve-index|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@types/serve-static|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
@@ -380,13 +388,13 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |@types/yargs-parser|https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/LICENSE|https://github.com/DefinitelyTyped/DefinitelyTyped|Copyright (c) Microsoft Corporation.|
 |@webassemblyjs/ast|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE|https://github.com/xtuc/webassemblyjs|Copyright (c) 2018 Sven Sauleau &lt;sven@sauleau.com&gt;|
 |@webassemblyjs/floating-point-hex-parser|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE|https://github.com/xtuc/webassemblyjs|Copyright (c) 2017 Mauro Bringolf|
-|@webassemblyjs/helper-api-error|https://github.com/xtuc/webassemblyjs/blob/master/|https://github.com/xtuc/webassemblyjs||
+|@webassemblyjs/helper-api-error|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE|https://github.com/xtuc/webassemblyjs|Copyright (c) 2018 Sven Sauleau &lt;sven@sauleau.com&gt;|
 |@webassemblyjs/helper-buffer|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE|https://github.com/xtuc/webassemblyjs|Copyright (c) 2018 Sven Sauleau &lt;sven@sauleau.com&gt;|
-|@webassemblyjs/helper-numbers|https://github.com/xtuc/webassemblyjs/blob/master/|https://github.com/xtuc/webassemblyjs||
-|@webassemblyjs/helper-wasm-bytecode|https://github.com/xtuc/webassemblyjs/blob/master/|https://github.com/xtuc/webassemblyjs||
+|@webassemblyjs/helper-numbers|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE|https://github.com/xtuc/webassemblyjs|Copyright (c) 2018 Sven Sauleau &lt;sven@sauleau.com&gt;|
+|@webassemblyjs/helper-wasm-bytecode|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE|https://github.com/xtuc/webassemblyjs|Copyright (c) 2018 Sven Sauleau &lt;sven@sauleau.com&gt;|
 |@webassemblyjs/helper-wasm-section|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE|https://github.com/xtuc/webassemblyjs|Copyright (c) 2018 Sven Sauleau &lt;sven@sauleau.com&gt;|
-|@webassemblyjs/ieee754|https://github.com/xtuc/webassemblyjs/blob/master/|https://github.com/xtuc/webassemblyjs||
-|@webassemblyjs/utf8|https://github.com/xtuc/webassemblyjs/blob/master/|https://github.com/xtuc/webassemblyjs||
+|@webassemblyjs/ieee754|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE|https://github.com/xtuc/webassemblyjs|Copyright (c) 2018 Sven Sauleau &lt;sven@sauleau.com&gt;|
+|@webassemblyjs/utf8|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE|https://github.com/xtuc/webassemblyjs|Copyright (c) 2018 Sven Sauleau &lt;sven@sauleau.com&gt;|
 |@webassemblyjs/wasm-edit|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE|https://github.com/xtuc/webassemblyjs|Copyright (c) 2018 Sven Sauleau &lt;sven@sauleau.com&gt;|
 |@webassemblyjs/wasm-gen|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE|https://github.com/xtuc/webassemblyjs|Copyright (c) 2018 Sven Sauleau &lt;sven@sauleau.com&gt;|
 |@webassemblyjs/wasm-opt|https://github.com/xtuc/webassemblyjs/blob/master/LICENSE|https://github.com/xtuc/webassemblyjs|Copyright (c) 2018 Sven Sauleau &lt;sven@sauleau.com&gt;|
@@ -395,122 +403,125 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |@webpack-cli/configtest|https://github.com/webpack/webpack-cli/blob/master/LICENSE|https://github.com/webpack/webpack-cli|Copyright JS Foundation and other contributors|
 |@webpack-cli/info|https://github.com/webpack/webpack-cli/blob/master/LICENSE|https://github.com/webpack/webpack-cli|Copyright JS Foundation and other contributors|
 |@webpack-cli/serve|https://github.com/webpack/webpack-cli/blob/master/LICENSE|https://github.com/webpack/webpack-cli|Copyright JS Foundation and other contributors|
-|accepts|https://github.com/jshttp/accepts/blob/master/LICENSE|https://github.com/jshttp/accepts||
+|accepts|https://github.com/jshttp/accepts/blob/master/LICENSE|https://github.com/jshttp/accepts|Copyright (c) 2014 Jonathan Ong &lt;me@jongleberry.com&gt; Copyright (c) 2015 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
 |acorn|https://github.com/acornjs/acorn/blob/master/LICENSE|https://github.com/acornjs/acorn||
-|acorn-import-assertions|https://github.com/xtuc/acorn-import-assertions/blob/master/README.md|https://github.com/xtuc/acorn-import-assertions||
-|acorn-jsx|https://github.com/acornjs/acorn-jsx/blob/master/LICENSE|https://github.com/acornjs/acorn-jsx||
+|acorn-jsx|https://github.com/acornjs/acorn-jsx/blob/master/LICENSE|https://github.com/acornjs/acorn-jsx|Copyright (C) 2012-2017 by Ingvar Stepanyan|
 |acorn-walk|https://github.com/acornjs/acorn/blob/master/LICENSE|https://github.com/acornjs/acorn|Copyright (C) 2012-2020 by various contributors (see AUTHORS)|
-|adjust-sourcemap-loader|https://github.com/bholloway/adjust-sourcemap-loader/blob/master/LICENSE|https://github.com/bholloway/adjust-sourcemap-loader||
-|ajv|https://github.com/ajv-validator/ajv/blob/master/LICENSE|https://github.com/ajv-validator/ajv||
-|ajv-formats|https://github.com/ajv-validator/ajv-formats/blob/master/LICENSE|https://github.com/ajv-validator/ajv-formats||
-|ajv-keywords|https://github.com/epoberezkin/ajv-keywords/blob/master/LICENSE|https://github.com/epoberezkin/ajv-keywords||
-|ansi-regex|https://github.com/chalk/ansi-regex/blob/master/license|https://github.com/chalk/ansi-regex||
-|ansi-styles|https://github.com/chalk/ansi-styles/blob/master/license|https://github.com/chalk/ansi-styles||
-|array-back|https://github.com/75lb/array-back/blob/master/LICENSE|https://github.com/75lb/array-back||
-|array-flatten|https://github.com/blakeembrey/array-flatten/blob/master/LICENSE|https://github.com/blakeembrey/array-flatten||
-|array-union|https://github.com/sindresorhus/array-union/blob/master/license|https://github.com/sindresorhus/array-union||
-|arrify|https://github.com/sindresorhus/arrify/blob/master/license|https://github.com/sindresorhus/arrify||
-|asap|https://github.com/kriskowal/asap/blob/master/LICENSE.md|https://github.com/kriskowal/asap||
-|astral-regex|https://github.com/kevva/astral-regex/blob/master/license|https://github.com/kevva/astral-regex||
-|autolinker|https://github.com/gregjacobs/Autolinker.js/blob/master/LICENSE|https://github.com/gregjacobs/Autolinker.js||
+|adjust-sourcemap-loader|https://github.com/bholloway/adjust-sourcemap-loader/blob/master/LICENSE|https://github.com/bholloway/adjust-sourcemap-loader|Copyright (c) 2019 Ben Holloway|
+|ajv|https://github.com/ajv-validator/ajv/blob/master/LICENSE|https://github.com/ajv-validator/ajv|Copyright (c) 2015-2021 Evgeny Poberezkin|
+|ajv-formats|https://github.com/ajv-validator/ajv-formats/blob/master/LICENSE|https://github.com/ajv-validator/ajv-formats|Copyright (c) 2020 Evgeny Poberezkin|
+|ajv-keywords|https://github.com/epoberezkin/ajv-keywords/blob/master/LICENSE|https://github.com/epoberezkin/ajv-keywords|Copyright (c) 2016 Evgeny Poberezkin|
+|ansi-regex|https://github.com/chalk/ansi-regex/blob/master/license|https://github.com/chalk/ansi-regex|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|ansi-styles|https://github.com/chalk/ansi-styles/blob/master/license|https://github.com/chalk/ansi-styles|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|array-back|https://github.com/75lb/array-back/blob/master/LICENSE|https://github.com/75lb/array-back|Copyright (c) 2015-19 Lloyd Brookes &lt;75pound@gmail.com&gt;|
+|array-flatten|https://github.com/blakeembrey/array-flatten/blob/master/LICENSE|https://github.com/blakeembrey/array-flatten|Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com)|
+|array-union|https://github.com/sindresorhus/array-union/blob/master/license|https://github.com/sindresorhus/array-union|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|arrify|https://github.com/sindresorhus/arrify/blob/master/license|https://github.com/sindresorhus/arrify|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|asap|https://github.com/kriskowal/asap/blob/master/LICENSE.md|https://github.com/kriskowal/asap|Copyright 2009–2014 Contributors. All rights reserved.|
+|astral-regex|https://github.com/kevva/astral-regex/blob/master/license|https://github.com/kevva/astral-regex|Copyright (c) Kevin Mårtensson &lt;kevinmartensson@gmail.com&gt; (github.com/kevva)|
+|autolinker|https://github.com/gregjacobs/Autolinker.js/blob/master/LICENSE|https://github.com/gregjacobs/Autolinker.js|Copyright (c) 2014 Gregory Jacobs (http://greg-jacobs.com)|
 |autoprefixer|https://github.com/postcss/autoprefixer/blob/master/LICENSE|https://github.com/postcss/autoprefixer|Copyright 2013 Andrey Sitnik &lt;andrey@sitnik.ru&gt;|
 |babel-loader|https://github.com/babel/babel-loader/blob/master/LICENSE|https://github.com/babel/babel-loader|Copyright (c) 2014-2019 Luís Couto &lt;hello@luiscouto.pt&gt;|
-|babel-plugin-polyfill-corejs2|https://github.com/babel/babel-polyfills/blob/master/LICENSE|https://github.com/babel/babel-polyfills||
-|babel-plugin-polyfill-corejs3|https://github.com/babel/babel-polyfills/blob/master/LICENSE|https://github.com/babel/babel-polyfills||
-|babel-plugin-polyfill-regenerator|https://github.com/babel/babel-polyfills/blob/master/LICENSE|https://github.com/babel/babel-polyfills||
+|babel-plugin-polyfill-corejs2|https://github.com/babel/babel-polyfills/blob/master/LICENSE|https://github.com/babel/babel-polyfills|Copyright (c) 2014-present Nicolò Ribaudo and other contributors|
+|babel-plugin-polyfill-corejs3|https://github.com/babel/babel-polyfills/blob/master/LICENSE|https://github.com/babel/babel-polyfills|Copyright (c) 2014-present Nicolò Ribaudo and other contributors|
+|babel-plugin-polyfill-regenerator|https://github.com/babel/babel-polyfills/blob/master/LICENSE|https://github.com/babel/babel-polyfills|Copyright (c) 2014-present Nicolò Ribaudo and other contributors|
 |babel-runtime|https://github.com/babel/babel/blob/master/README.md|https://github.com/babel/babel||
-|backbone|https://github.com/jashkenas/backbone/blob/master/LICENSE|https://github.com/jashkenas/backbone||
-|backgrid|https://github.com/cloudflare/backgrid/blob/master/LICENSE-MIT|https://github.com/cloudflare/backgrid||
-|balanced-match|https://github.com/juliangruber/balanced-match/blob/master/LICENSE.md|https://github.com/juliangruber/balanced-match||
-|base64id|https://github.com/faeldt/base64id/blob/master/LICENSE|https://github.com/faeldt/base64id||
-|batch|https://github.com/visionmedia/batch/blob/master/LICENSE|https://github.com/visionmedia/batch||
-|bean|https://github.com/fat/bean/blob/master/LICENSE|https://github.com/fat/bean||
+|backbone|https://github.com/jashkenas/backbone/blob/master/LICENSE|https://github.com/jashkenas/backbone|Copyright (c) 2010-2022 Jeremy Ashkenas, DocumentCloud|
+|backgrid|https://github.com/cloudflare/backgrid/blob/master/LICENSE-MIT|https://github.com/cloudflare/backgrid|Copyright (c) 2012-present Cloudflare, Inc.|
+|balanced-match|https://github.com/juliangruber/balanced-match/blob/master/LICENSE.md|https://github.com/juliangruber/balanced-match|Copyright (c) 2013 Julian Gruber &amp;lt;julian@juliangruber.com&amp;gt;|
+|base64id|https://github.com/faeldt/base64id/blob/master/LICENSE|https://github.com/faeldt/base64id|Copyright (c) 2012-2016 Kristian Faeldt &lt;faeldt_kristian@cyberagent.co.jp&gt;|
+|batch|https://github.com/visionmedia/batch/blob/master/LICENSE|https://github.com/visionmedia/batch|Copyright (c) 2013 TJ Holowaychuk &lt;tj@vision-media.ca&gt;|
+|bean|https://github.com/fat/bean/blob/master/LICENSE|https://github.com/fat/bean|Copyright 2011-2012, Jacob Thornton (the &quot;Original Author&quot;) All rights reserved.|
 |behat/behat|https://github.com/Behat/Behat/blob/master/LICENSE|https://github.com/Behat/Behat|Copyright (c) 2016 Konstantin Kudryashov &lt;ever.zet@gmail.com&gt;|
 |behat/gherkin|https://github.com/Behat/Gherkin/blob/master/LICENSE|https://github.com/Behat/Gherkin|Copyright (c) 2011-2013 Konstantin Kudryashov &lt;ever.zet@gmail.com&gt;|
 |behat/mink|https://github.com/minkphp/Mink/blob/master/LICENSE|https://github.com/minkphp/Mink|Copyright (c) 2011-2015 Konstantin Kudryashov &lt;ever.zet@gmail.com&gt;|
 |behat/mink-selenium2-driver||https://github.com/minkphp/MinkSelenium2Driver||
-|big.js|https://github.com/MikeMcl/big.js/blob/master/LICENCE|https://github.com/MikeMcl/big.js||
+|big.js|https://github.com/MikeMcl/big.js/blob/master/LICENCE|https://github.com/MikeMcl/big.js|Copyright (c) 2018 Michael Mclaughlin|
 |binary-extensions|https://github.com/sindresorhus/binary-extensions/blob/master/license|https://github.com/sindresorhus/binary-extensions|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com) Copyright (c) Paul Miller (https://paulmillr.com)|
-|bindings|https://github.com/TooTallNate/node-bindings/blob/master/LICENSE.md|https://github.com/TooTallNate/node-bindings||
-|bluebird|https://github.com/petkaantonov/bluebird/blob/master/LICENSE|https://github.com/petkaantonov/bluebird||
-|body-parser|https://github.com/expressjs/body-parser/blob/master/LICENSE|https://github.com/expressjs/body-parser||
+|bindings|https://github.com/TooTallNate/node-bindings/blob/master/LICENSE.md|https://github.com/TooTallNate/node-bindings|Copyright (c) 2012 Nathan Rajlich &amp;lt;nathan@tootallnate.net&amp;gt;|
+|bluebird|https://github.com/petkaantonov/bluebird/blob/master/LICENSE|https://github.com/petkaantonov/bluebird|Copyright (c) 2013-2018 Petka Antonov|
+|body-parser|https://github.com/expressjs/body-parser/blob/master/LICENSE|https://github.com/expressjs/body-parser|Copyright (c) 2014 Jonathan Ong &lt;me@jongleberry.com&gt; Copyright (c) 2014-2015 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
 |bonjour-service|https://github.com/onlxltd/bonjour-service/blob/master/LICENSE|https://github.com/onlxltd/bonjour-service|Copyright (https://github.com/onlxltd/bonjour-service) (c) 2021 ON LX Limited  Copyright (Bonjour - https://github.com/watson/bonjour) (c) 2015-2016 Thomas Watson Steen|
-|brace-expansion|https://github.com/juliangruber/brace-expansion/blob/master/LICENSE|https://github.com/juliangruber/brace-expansion||
-|braces|https://github.com/micromatch/braces/blob/master/LICENSE|https://github.com/micromatch/braces||
+|brace-expansion|https://github.com/juliangruber/brace-expansion/blob/master/LICENSE|https://github.com/juliangruber/brace-expansion|Copyright (c) 2013 Julian Gruber &lt;julian@juliangruber.com&gt;|
+|braces|https://github.com/micromatch/braces/blob/master/LICENSE|https://github.com/micromatch/braces|Copyright (c) 2014-present, Jon Schlinkert.|
 |brick/math|https://github.com/brick/math/blob/master/LICENSE|https://github.com/brick/math|Copyright (c) 2013-present Benjamin Morel|
 |browserslist|https://github.com/browserslist/browserslist/blob/master/LICENSE|https://github.com/browserslist/browserslist|Copyright 2014 Andrey Sitnik &lt;andrey@sitnik.ru&gt; and other contributors|
-|buffer-from|https://github.com/LinusU/buffer-from/blob/master/LICENSE|https://github.com/LinusU/buffer-from||
-|bytes|https://github.com/visionmedia/bytes.js/blob/master/LICENSE|https://github.com/visionmedia/bytes.js||
-|call-bind|https://github.com/ljharb/call-bind/blob/master/LICENSE|https://github.com/ljharb/call-bind|Copyright (c) 2020 Jordan Harband|
-|callsites|https://github.com/sindresorhus/callsites/blob/master/license|https://github.com/sindresorhus/callsites||
-|camel-case|https://github.com/blakeembrey/change-case/blob/master/LICENSE|https://github.com/blakeembrey/change-case||
+|buffer-from|https://github.com/LinusU/buffer-from/blob/master/LICENSE|https://github.com/LinusU/buffer-from|Copyright (c) 2016, 2018 Linus Unnebäck|
+|bundle-name|https://github.com/sindresorhus/bundle-name/blob/master/license|https://github.com/sindresorhus/bundle-name|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|bytes|https://github.com/visionmedia/bytes.js/blob/master/LICENSE|https://github.com/visionmedia/bytes.js|Copyright (c) 2012-2014 TJ Holowaychuk &lt;tj@vision-media.ca&gt; Copyright (c) 2015 Jed Watson &lt;jed.watson@me.com&gt;|
+|call-bind-apply-helpers|https://github.com/ljharb/call-bind-apply-helpers/blob/master/LICENSE|https://github.com/ljharb/call-bind-apply-helpers|Copyright (c) 2024 Jordan Harband|
+|call-bound|https://github.com/ljharb/call-bound/blob/master/LICENSE|https://github.com/ljharb/call-bound|Copyright (c) 2024 Jordan Harband|
+|callsites|https://github.com/sindresorhus/callsites/blob/master/license|https://github.com/sindresorhus/callsites|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|camel-case|https://github.com/blakeembrey/change-case/blob/master/LICENSE|https://github.com/blakeembrey/change-case|Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com)|
 |camelcase|https://github.com/sindresorhus/camelcase/blob/master/license|https://github.com/sindresorhus/camelcase|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 |camelcase-keys|https://github.com/sindresorhus/camelcase-keys/blob/master/license|https://github.com/sindresorhus/camelcase-keys|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
-|caniuse-api|https://github.com/nyalab/caniuse-api/blob/master/LICENSE|https://github.com/nyalab/caniuse-api||
+|caniuse-api|https://github.com/nyalab/caniuse-api/blob/master/LICENSE|https://github.com/nyalab/caniuse-api|Copyright (c) 2014 Sébastien Balayn|
 |cboden/ratchet|https://github.com/ratchetphp/Ratchet/blob/master/LICENSE|https://github.com/ratchetphp/Ratchet|Copyright (c) 2011 Chris Boden|
-|chalk|https://github.com/chalk/chalk/blob/master/license|https://github.com/chalk/chalk||
+|chalk|https://github.com/chalk/chalk/blob/master/license|https://github.com/chalk/chalk|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
 |check-engine|https://github.com/mohlsen/check-engine/blob/master/LICENSE|https://github.com/mohlsen/check-engine|Copyright (c) 2016 Mike Ohlsen|
 |cheerio|https://github.com/cheeriojs/cheerio/blob/master/LICENSE|https://github.com/cheeriojs/cheerio|Copyright (c) 2016 Matt Mueller|
-|chokidar|https://github.com/paulmillr/chokidar/blob/master/LICENSE|https://github.com/paulmillr/chokidar|Copyright (c) 2012-2019 Paul Miller (https://paulmillr.com), Elan Shanker|
-|chrome-trace-event|https://github.com/samccone/chrome-trace-event/blob/master/LICENSE.txt|https://github.com/samccone/chrome-trace-event||
+|chokidar|https://github.com/paulmillr/chokidar/blob/master/LICENSE|https://github.com/paulmillr/chokidar|Copyright (c) 2012 Paul Miller (https://paulmillr.com), Elan Shanker|
+|chrome-trace-event|https://github.com/samccone/chrome-trace-event/blob/master/LICENSE.txt|https://github.com/samccone/chrome-trace-event|Copyright (c) 2015 Joyent Inc. All rights reserved.|
 |ci-info|https://github.com/watson/ci-info/blob/master/LICENSE|https://github.com/watson/ci-info|Copyright (c) 2016 Thomas Watson Steen|
 |clean-css|https://github.com/clean-css/clean-css/blob/master/LICENSE|https://github.com/clean-css/clean-css|Copyright (C) 2017 JakubPawlowicz.com|
-|clone-deep|https://github.com/jonschlinkert/clone-deep/blob/master/LICENSE|https://github.com/jonschlinkert/clone-deep||
+|clone-deep|https://github.com/jonschlinkert/clone-deep/blob/master/LICENSE|https://github.com/jonschlinkert/clone-deep|Copyright (c) 2014-2018, Jon Schlinkert.|
 |clue/stream-filter|https://github.com/clue/stream-filter/blob/master/LICENSE|https://github.com/clue/stream-filter|Copyright (c) 2015 Christian Lück|
 |codemirror|https://github.com/codemirror/basic-setup/blob/master/LICENSE|https://github.com/codemirror/basic-setup|Copyright (C) 2018-2021 by Marijn Haverbeke &lt;marijnh@gmail.com&gt; and others|
-|color-convert|https://github.com/Qix-/color-convert/blob/master/LICENSE|https://github.com/Qix-/color-convert||
-|color-name|https://github.com/colorjs/color-name/blob/master/LICENSE|https://github.com/colorjs/color-name||
-|colord|https://github.com/omgovich/colord/blob/master/LICENSE.md|https://github.com/omgovich/colord||
+|color-convert|https://github.com/Qix-/color-convert/blob/master/LICENSE|https://github.com/Qix-/color-convert|Copyright (c) 2011-2016 Heather Arthur &lt;fayearthur@gmail.com&gt;|
+|color-name|https://github.com/colorjs/color-name/blob/master/LICENSE|https://github.com/colorjs/color-name|Copyright (c) 2015 Dmitry Ivanov|
+|colord|https://github.com/omgovich/colord/blob/master/LICENSE.md|https://github.com/omgovich/colord|Copyright (c) 2020 Vlad Shilov omgovich@ya.ru|
 |colorette|https://github.com/jorgebucaran/colorette/blob/master/LICENSE.md|https://github.com/jorgebucaran/colorette|Copyright © Jorge Bucaran &lt;&lt;https://jorgebucaran.com&gt;&gt;|
-|colors|https://github.com/Marak/colors.js/blob/master/LICENSE|https://github.com/Marak/colors.js||
-|command-line-usage|https://github.com/75lb/command-line-usage/blob/master/LICENSE|https://github.com/75lb/command-line-usage||
-|commander|https://github.com/tj/commander.js/blob/master/LICENSE|https://github.com/tj/commander.js||
+|colors|https://github.com/Marak/colors.js/blob/master/LICENSE|https://github.com/Marak/colors.js|Copyright (c) Marak Squires  Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|command-line-usage|https://github.com/75lb/command-line-usage/blob/master/LICENSE|https://github.com/75lb/command-line-usage|Copyright (c) 2015-22 Lloyd Brookes &lt;75pound@gmail.com&gt;|
+|commander|https://github.com/tj/commander.js/blob/master/LICENSE|https://github.com/tj/commander.js|Copyright (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;|
 |composer/ca-bundle|https://github.com/composer/ca-bundle/blob/master/LICENSE|https://github.com/composer/ca-bundle|Copyright (C) 2016 Composer|
 |composer/semver|https://github.com/composer/semver/blob/master/LICENSE|https://github.com/composer/semver|Copyright (C) 2015 Composer|
-|compressible|https://github.com/jshttp/compressible/blob/master/LICENSE|https://github.com/jshttp/compressible||
-|compression|https://github.com/expressjs/compression/blob/master/LICENSE|https://github.com/expressjs/compression||
+|compressible|https://github.com/jshttp/compressible/blob/master/LICENSE|https://github.com/jshttp/compressible|Copyright (c) 2013 Jonathan Ong &lt;me@jongleberry.com&gt; Copyright (c) 2014 Jeremiah Senkpiel &lt;fishrock123@rocketmail.com&gt; Copyright (c) 2015 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
+|compression|https://github.com/expressjs/compression/blob/master/LICENSE|https://github.com/expressjs/compression|Copyright (c) 2014 Jonathan Ong &lt;me@jongleberry.com&gt; Copyright (c) 2014-2015 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
 |concat-map|https://github.com/substack/node-concat-map/blob/master/LICENSE|https://github.com/substack/node-concat-map||
-|connect|https://github.com/senchalabs/connect/blob/master/LICENSE|https://github.com/senchalabs/connect||
-|connect-history-api-fallback|https://github.com/bripkens/connect-history-api-fallback/blob/master/LICENSE|https://github.com/bripkens/connect-history-api-fallback||
-|content-disposition|https://github.com/jshttp/content-disposition/blob/master/LICENSE|https://github.com/jshttp/content-disposition||
-|content-type|https://github.com/jshttp/content-type/blob/master/LICENSE|https://github.com/jshttp/content-type||
+|connect|https://github.com/senchalabs/connect/blob/master/LICENSE|https://github.com/senchalabs/connect|Copyright (c) 2010 Sencha Inc. Copyright (c) 2011 LearnBoost Copyright (c) 2011-2014 TJ Holowaychuk Copyright (c) 2015 Douglas Christopher Wilson|
+|connect-history-api-fallback|https://github.com/bripkens/connect-history-api-fallback/blob/master/LICENSE|https://github.com/bripkens/connect-history-api-fallback|Copyright (c) 2022 Ben Blackmore and contributors|
+|content-disposition|https://github.com/jshttp/content-disposition/blob/master/LICENSE|https://github.com/jshttp/content-disposition|Copyright (c) 2014-2017 Douglas Christopher Wilson|
+|content-type|https://github.com/jshttp/content-type/blob/master/LICENSE|https://github.com/jshttp/content-type|Copyright (c) 2015 Douglas Christopher Wilson|
 |convert-source-map|https://github.com/thlorenz/convert-source-map/blob/master/LICENSE|https://github.com/thlorenz/convert-source-map|Copyright 2013 Thorsten Lorenz.  All rights reserved.|
 |cookie|https://github.com/jshttp/cookie/blob/master/LICENSE|https://github.com/jshttp/cookie|Copyright (c) 2012-2014 Roman Shtylman &lt;shtylman@gmail.com&gt; Copyright (c) 2015 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
-|cookie-signature|https://github.com/visionmedia/node-cookie-signature/blob/master/Readme.md|https://github.com/visionmedia/node-cookie-signature||
-|core-js|https://github.com/zloirock/core-js/blob/master/LICENSE|https://github.com/zloirock/core-js|Copyright (c) 2014-2024 Denis Pushkarev|
-|core-js-compat|https://github.com/zloirock/core-js/blob/master/LICENSE|https://github.com/zloirock/core-js|Copyright (c) 2014-2024 Denis Pushkarev|
-|core-js-pure|https://github.com/zloirock/core-js/blob/master/LICENSE|https://github.com/zloirock/core-js|Copyright (c) 2014-2024 Denis Pushkarev|
-|core-util-is|https://github.com/isaacs/core-util-is/blob/master/LICENSE|https://github.com/isaacs/core-util-is||
-|cors|https://github.com/expressjs/cors/blob/master/LICENSE|https://github.com/expressjs/cors||
+|cookie-signature|https://github.com/visionmedia/node-cookie-signature/blob/master/Readme.md|https://github.com/visionmedia/node-cookie-signature|Copyright (c) 2012 LearnBoost &amp;lt;tj@learnboost.com&amp;gt;|
+|core-js|https://github.com/zloirock/core-js/blob/master/LICENSE|https://github.com/zloirock/core-js|Copyright (c) 2014-2025 Denis Pushkarev|
+|core-js-compat|https://github.com/zloirock/core-js/blob/master/LICENSE|https://github.com/zloirock/core-js|Copyright (c) 2014-2025 Denis Pushkarev|
+|core-js-pure|https://github.com/zloirock/core-js/blob/master/LICENSE|https://github.com/zloirock/core-js|Copyright (c) 2014-2025 Denis Pushkarev|
+|core-util-is|https://github.com/isaacs/core-util-is/blob/master/LICENSE|https://github.com/isaacs/core-util-is|Copyright Node.js contributors. All rights reserved.|
+|cors|https://github.com/expressjs/cors/blob/master/LICENSE|https://github.com/expressjs/cors|Copyright (c) 2013 Troy Goode &lt;troygoode@gmail.com&gt;|
 |cosmiconfig|https://github.com/cosmiconfig/cosmiconfig/blob/master/LICENSE|https://github.com/cosmiconfig/cosmiconfig|Copyright (c) 2015 David Clark|
 |crelt|https://github.com/marijnh/crelt/blob/master/LICENSE|https://github.com/marijnh/crelt|Copyright (C) 2020 by Marijn Haverbeke &lt;marijn@haverbeke.berlin&gt;|
-|cross-spawn|https://github.com/moxystudio/node-cross-spawn/blob/master/LICENSE|https://github.com/moxystudio/node-cross-spawn||
+|cross-spawn|https://github.com/moxystudio/node-cross-spawn/blob/master/LICENSE|https://github.com/moxystudio/node-cross-spawn|Copyright (c) 2018 Made With MOXY Lda &lt;hello@moxy.studio&gt;|
 |crypto-js|https://github.com/brix/crypto-js/blob/master/LICENSE|https://github.com/brix/crypto-js|Copyright (c) 2009-2013 Jeff Mott   Copyright (c) 2013-2016 Evan Vosberg|
 |css-functions-list|https://github.com/niksy/css-functions-list/blob/master/LICENSE.md|https://github.com/niksy/css-functions-list|Copyright (c) Ivan Nikolić &lt;http://ivannikolic.com&gt;|
 |css-loader|https://github.com/webpack-contrib/css-loader/blob/master/LICENSE|https://github.com/webpack-contrib/css-loader|Copyright JS Foundation and other contributors|
 |css-minimizer-webpack-plugin|https://github.com/webpack-contrib/css-minimizer-webpack-plugin/blob/master/LICENSE|https://github.com/webpack-contrib/css-minimizer-webpack-plugin|Copyright JS Foundation and other contributors|
-|css-tree|https://github.com/csstree/csstree/blob/master/LICENSE|https://github.com/csstree/csstree||
-|cssesc|https://github.com/mathiasbynens/cssesc/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/cssesc||
+|css-tree|https://github.com/csstree/csstree/blob/master/LICENSE|https://github.com/csstree/csstree|Copyright (C) 2016-2022 by Roman Dvornov|
+|cssesc|https://github.com/mathiasbynens/cssesc/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/cssesc|Copyright Mathias Bynens &lt;https://mathiasbynens.be/&gt;|
 |cssnano|https://github.com/cssnano/cssnano/blob/master/LICENSE-MIT|https://github.com/cssnano/cssnano|Copyright (c) Ben Briggs &lt;beneb.info@gmail.com&gt; (http://beneb.info)|
 |cssnano-preset-default|https://github.com/cssnano/cssnano/blob/master/LICENSE-MIT|https://github.com/cssnano/cssnano|Copyright (c) Ben Briggs &lt;beneb.info@gmail.com&gt; (http://beneb.info)|
 |cssnano-utils|https://github.com/cssnano/cssnano/blob/master/LICENSE|https://github.com/cssnano/cssnano|Copyright (c) Ben Briggs &lt;beneb.info@gmail.com&gt; (http://beneb.info)|
 |csso|https://github.com/css/csso/blob/master/LICENSE|https://github.com/css/csso|Copyright (C) 2015-2021 by Roman Dvornov Copyright (C) 2011-2015 by Sergey Kryzhanovsky|
-|custom-event|https://github.com/webmodules/custom-event/blob/master/LICENSE|https://github.com/webmodules/custom-event||
-|date-format|https://github.com/nomiddlename/date-format/blob/master/LICENSE|https://github.com/nomiddlename/date-format||
+|custom-event|https://github.com/webmodules/custom-event/blob/master/LICENSE|https://github.com/webmodules/custom-event|Copyright (c) 2015 Nathan Rajlich|
+|date-format|https://github.com/nomiddlename/date-format/blob/master/LICENSE|https://github.com/nomiddlename/date-format|Copyright (c) 2013 Gareth Jones|
 |datepair.js|https://github.com/jonthornton/Datepair.js/blob/master/README.md|https://github.com/jonthornton/Datepair.js||
-|debug|https://github.com/debug-js/debug/blob/master/LICENSE|https://github.com/debug-js/debug||
+|debounce|https://github.com/component/debounce/blob/master/LICENSE|https://github.com/component/debounce|Copyright (c) 2012-2018 The Debounce Contributors. See CONTRIBUTORS.|
+|debug|https://github.com/debug-js/debug/blob/master/LICENSE|https://github.com/debug-js/debug|Copyright (c) 2014-2017 TJ Holowaychuk &lt;tj@vision-media.ca&gt; Copyright (c) 2018-2021 Josh Junon|
 |decamelize|https://github.com/sindresorhus/decamelize/blob/master/license|https://github.com/sindresorhus/decamelize|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
-|decamelize-keys|https://github.com/sindresorhus/decamelize-keys/blob/master/license|https://github.com/sindresorhus/decamelize-keys||
-|deep-extend|https://github.com/unclechu/node-deep-extend/blob/master/LICENSE|https://github.com/unclechu/node-deep-extend||
-|deep-is|https://github.com/thlorenz/deep-is/blob/master/LICENSE|https://github.com/thlorenz/deep-is||
-|deepmerge|https://github.com/TehShrike/deepmerge/blob/master/license.txt|https://github.com/TehShrike/deepmerge||
-|define-data-property|https://github.com/ljharb/define-data-property/blob/master/LICENSE|https://github.com/ljharb/define-data-property|Copyright (c) 2023 Jordan Harband|
-|define-lazy-prop|https://github.com/sindresorhus/define-lazy-prop/blob/master/license|https://github.com/sindresorhus/define-lazy-prop||
-|depd|https://github.com/dougwilson/nodejs-depd/blob/master/LICENSE|https://github.com/dougwilson/nodejs-depd||
-|destroy|https://github.com/stream-utils/destroy/blob/master/LICENSE|https://github.com/stream-utils/destroy||
-|detect-node|https://github.com/iliakan/detect-node/blob/master/LICENSE|https://github.com/iliakan/detect-node||
-|di|https://github.com/vojtajina/node-di/blob/master/LICENSE|https://github.com/vojtajina/node-di||
-|dir-glob|https://github.com/kevva/dir-glob/blob/master/license|https://github.com/kevva/dir-glob||
+|decamelize-keys|https://github.com/sindresorhus/decamelize-keys/blob/master/license|https://github.com/sindresorhus/decamelize-keys|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com), Dmirty Sobolev &lt;disobolev@icloud.com&gt;|
+|deep-extend|https://github.com/unclechu/node-deep-extend/blob/master/LICENSE|https://github.com/unclechu/node-deep-extend|Copyright (c) 2013-2018, Viacheslav Lotsmanov|
+|deep-is|https://github.com/thlorenz/deep-is/blob/master/LICENSE|https://github.com/thlorenz/deep-is|Copyright (c) 2012, 2013 Thorsten Lorenz &lt;thlorenz@gmx.de&gt; Copyright (c) 2012 James Halliday &lt;mail@substack.net&gt; Copyright (c) 2009 Thomas Robinson &lt;280north.com&gt;|
+|deepmerge|https://github.com/TehShrike/deepmerge/blob/master/license.txt|https://github.com/TehShrike/deepmerge|Copyright (c) 2012 James Halliday, Josh Duff, and other contributors|
+|default-browser|https://github.com/sindresorhus/default-browser/blob/master/license|https://github.com/sindresorhus/default-browser|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|default-browser-id|https://github.com/sindresorhus/default-browser-id/blob/master/license|https://github.com/sindresorhus/default-browser-id|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|define-lazy-prop|https://github.com/sindresorhus/define-lazy-prop/blob/master/license|https://github.com/sindresorhus/define-lazy-prop|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|depd|https://github.com/dougwilson/nodejs-depd/blob/master/LICENSE|https://github.com/dougwilson/nodejs-depd|Copyright (c) 2014-2018 Douglas Christopher Wilson|
+|destroy|https://github.com/stream-utils/destroy/blob/master/LICENSE|https://github.com/stream-utils/destroy|Copyright (c) 2014 Jonathan Ong me@jongleberry.com Copyright (c) 2015-2022 Douglas Christopher Wilson doug@somethingdoug.com|
+|detect-node|https://github.com/iliakan/detect-node/blob/master/LICENSE|https://github.com/iliakan/detect-node|Copyright (c) 2017 Ilya Kantor|
+|di|https://github.com/vojtajina/node-di/blob/master/LICENSE|https://github.com/vojtajina/node-di|Copyright (C) 2013 Vojta Jína.|
+|dir-glob|https://github.com/kevva/dir-glob/blob/master/license|https://github.com/kevva/dir-glob|Copyright (c) Kevin Mårtensson &lt;kevinmartensson@gmail.com&gt; (github.com/kevva)|
 |dns-packet|https://github.com/mafintosh/dns-packet/blob/master/LICENSE|https://github.com/mafintosh/dns-packet|Copyright (c) 2016 Mathias Buus|
 |doctrine/annotations|https://github.com/doctrine/annotations/blob/master/LICENSE|https://github.com/doctrine/annotations|Copyright (c) 2006-2013 Doctrine Project|
 |doctrine/cache|https://github.com/doctrine/cache/blob/master/LICENSE|https://github.com/doctrine/cache|Copyright (c) 2006-2015 Doctrine Project|
@@ -528,76 +539,81 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |doctrine/orm|https://github.com/doctrine/orm/blob/master/LICENSE|https://github.com/doctrine/orm|Copyright (c) Doctrine Project|
 |doctrine/persistence|https://github.com/doctrine/persistence/blob/master/LICENSE|https://github.com/doctrine/persistence|Copyright (c) 2006-2015 Doctrine Project|
 |doctrine/sql-formatter|https://github.com/doctrine/sql-formatter/blob/master/LICENSE.txt|https://github.com/doctrine/sql-formatter|Copyright (c) 2013 Jeremy Dorn &lt;jeremy@jeremydorn.com&gt;|
-|dom-converter|https://github.com/AriaMinaei/dom-converter/blob/master/LICENSE|https://github.com/AriaMinaei/dom-converter||
+|dom-converter|https://github.com/AriaMinaei/dom-converter/blob/master/LICENSE|https://github.com/AriaMinaei/dom-converter|Copyright (c) 2013 Aria Minaei|
 |dom-serialize|https://github.com/webmodules/dom-serialize/blob/master/README.md|https://github.com/webmodules/dom-serialize||
 |dom-serializer|https://github.com/cheeriojs/dom-serializer/blob/master/LICENSE|https://github.com/cheeriojs/dom-serializer|Copyright (c) 2014 The cheeriojs contributors|
-|dot-case|https://github.com/blakeembrey/change-case/blob/master/LICENSE|https://github.com/blakeembrey/change-case||
+|dot-case|https://github.com/blakeembrey/change-case/blob/master/LICENSE|https://github.com/blakeembrey/change-case|Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com)|
 |dragonmantank/cron-expression|https://github.com/dragonmantank/cron-expression/blob/master/LICENSE|https://github.com/dragonmantank/cron-expression|Copyright (c) 2011 Michael Dowling &lt;mtdowling@gmail.com&gt;, 2016 Chris Tankersley &lt;chris@ctankersley.com&gt;, and contributors|
-|duplexer|https://github.com/Raynos/duplexer/blob/master/LICENCE|https://github.com/Raynos/duplexer||
-|ee-first|https://github.com/jonathanong/ee-first/blob/master/LICENSE|https://github.com/jonathanong/ee-first||
+|dunder-proto|https://github.com/es-shims/dunder-proto/blob/master/LICENSE|https://github.com/es-shims/dunder-proto|Copyright (c) 2024 ECMAScript Shims|
+|duplexer|https://github.com/Raynos/duplexer/blob/master/LICENCE|https://github.com/Raynos/duplexer|Copyright (c) 2012 Raynos.|
+|ee-first|https://github.com/jonathanong/ee-first/blob/master/LICENSE|https://github.com/jonathanong/ee-first|Copyright (c) 2014 Jonathan Ong me@jongleberry.com|
 |egulias/email-validator|https://github.com/egulias/EmailValidator/blob/master/LICENSE|https://github.com/egulias/EmailValidator|Copyright (c) 2013-2023 Eduardo Gulias Davis|
-|emoji-regex|https://github.com/mathiasbynens/emoji-regex/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/emoji-regex||
-|emojis-list|https://github.com/kikobeats/emojis-list/blob/master/LICENSE.md|https://github.com/kikobeats/emojis-list||
-|encodeurl|https://github.com/pillarjs/encodeurl/blob/master/LICENSE|https://github.com/pillarjs/encodeurl||
-|engine.io|https://github.com/socketio/engine.io/blob/master/LICENSE|https://github.com/socketio/engine.io|Copyright (c) 2014 Guillermo Rauch &lt;guillermo@learnboost.com&gt;|
-|engine.io-parser|https://github.com/socketio/engine.io-parser/blob/master/LICENSE|https://github.com/socketio/engine.io-parser|Copyright (c) 2016 Guillermo Rauch (@rauchg)|
+|emoji-regex|https://github.com/mathiasbynens/emoji-regex/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/emoji-regex|Copyright Mathias Bynens &lt;https://mathiasbynens.be/&gt;|
+|emojis-list|https://github.com/kikobeats/emojis-list/blob/master/LICENSE.md|https://github.com/kikobeats/emojis-list|Copyright © 2015 Kiko Beats|
+|encodeurl|https://github.com/pillarjs/encodeurl/blob/master/LICENSE|https://github.com/pillarjs/encodeurl|Copyright (c) 2016 Douglas Christopher Wilson|
+|engine.io|https://github.com/socketio/socket.io/blob/master/LICENSE|https://github.com/socketio/socket.io|Copyright (c) 2014-present Guillermo Rauch and Socket.IO contributors|
+|engine.io-parser|https://github.com/socketio/socket.io/blob/master/LICENSE|https://github.com/socketio/socket.io|Copyright (c) 2014-present Guillermo Rauch and Socket.IO contributors|
 |enhanced-resolve|https://github.com/webpack/enhanced-resolve/blob/master/LICENSE|https://github.com/webpack/enhanced-resolve|Copyright JS Foundation and other contributors|
-|ent|https://github.com/substack/node-ent/blob/master/LICENSE|https://github.com/substack/node-ent||
+|ent|https://github.com/ljharb/ent/blob/master/LICENSE|https://github.com/ljharb/ent|Copyright (c) 2011 James Halliday and contributors|
 |envinfo|https://github.com/tabrindle/envinfo/blob/master/LICENSE|https://github.com/tabrindle/envinfo|Copyright (c) 2018 Trevor Brindle|
-|error-ex|https://github.com/qix-/node-error-ex/blob/master/LICENSE|https://github.com/qix-/node-error-ex||
+|error-ex|https://github.com/qix-/node-error-ex/blob/master/LICENSE|https://github.com/qix-/node-error-ex|Copyright (c) 2015 JD Ballard|
 |es-define-property|https://github.com/ljharb/es-define-property/blob/master/LICENSE|https://github.com/ljharb/es-define-property|Copyright (c) 2024 Jordan Harband|
 |es-errors|https://github.com/ljharb/es-errors/blob/master/LICENSE|https://github.com/ljharb/es-errors|Copyright (c) 2024 Jordan Harband|
 |es-module-lexer|https://github.com/guybedford/es-module-lexer/blob/master/LICENSE|https://github.com/guybedford/es-module-lexer|Copyright (C) 2018-2022 Guy Bedford|
+|es-object-atoms|https://github.com/ljharb/es-object-atoms/blob/master/LICENSE|https://github.com/ljharb/es-object-atoms|Copyright (c) 2024 Jordan Harband|
+|esbuild|https://github.com/evanw/esbuild/blob/master/LICENSE.md|https://github.com/evanw/esbuild|Copyright (c) 2020 Evan Wallace|
+|esbuild-loader|https://github.com/privatenumber/esbuild-loader/blob/master/LICENSE|https://github.com/privatenumber/esbuild-loader|Copyright (c) Hiroki Osame &lt;hiroki.osame@gmail.com&gt;|
 |escalade|https://github.com/lukeed/escalade/blob/master/license|https://github.com/lukeed/escalade|Copyright (c) Luke Edwards &lt;luke.edwards05@gmail.com&gt; (lukeed.com)|
-|escape-html|https://github.com/component/escape-html/blob/master/LICENSE|https://github.com/component/escape-html||
-|escape-string-regexp|https://github.com/sindresorhus/escape-string-regexp/blob/master/license|https://github.com/sindresorhus/escape-string-regexp||
+|escape-html|https://github.com/component/escape-html/blob/master/LICENSE|https://github.com/component/escape-html|Copyright (c) 2012-2013 TJ Holowaychuk Copyright (c) 2015 Andreas Lubbe Copyright (c) 2015 Tiancheng &quot;Timothy&quot; Gu|
+|escape-string-regexp|https://github.com/sindresorhus/escape-string-regexp/blob/master/license|https://github.com/sindresorhus/escape-string-regexp|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 |eslint|https://github.com/eslint/eslint/blob/master/LICENSE|https://github.com/eslint/eslint|Copyright OpenJS Foundation and other contributors, &lt;www.openjsf.org&gt;|
-|etag|https://github.com/jshttp/etag/blob/master/LICENSE|https://github.com/jshttp/etag||
+|eslint-plugin-no-jquery|https://github.com/wikimedia/eslint-plugin-no-jquery/blob/master/LICENSE|https://github.com/wikimedia/eslint-plugin-no-jquery|Copyright (c) 2019 Ed Sanders, David Graham and others|
+|etag|https://github.com/jshttp/etag/blob/master/LICENSE|https://github.com/jshttp/etag|Copyright (c) 2014-2016 Douglas Christopher Wilson|
 |evenement/evenement|https://github.com/igorw/evenement/blob/master/LICENSE|https://github.com/igorw/evenement|Copyright (c) 2011 Igor Wiedler|
-|eventemitter3|https://github.com/primus/eventemitter3/blob/master/LICENSE|https://github.com/primus/eventemitter3||
-|events|https://github.com/Gozala/events/blob/master/LICENSE|https://github.com/Gozala/events||
-|execa|https://github.com/sindresorhus/execa/blob/master/license|https://github.com/sindresorhus/execa||
-|exports-loader|https://github.com/webpack-contrib/exports-loader/blob/master/LICENSE|https://github.com/webpack-contrib/exports-loader||
-|expose-loader|https://github.com/webpack-contrib/expose-loader/blob/master/LICENSE|https://github.com/webpack-contrib/expose-loader||
+|eventemitter3|https://github.com/primus/eventemitter3/blob/master/LICENSE|https://github.com/primus/eventemitter3|Copyright (c) 2014 Arnout Kazemier|
+|events|https://github.com/Gozala/events/blob/master/LICENSE|https://github.com/Gozala/events|Copyright Joyent, Inc. and other Node contributors.|
+|exports-loader|https://github.com/webpack-contrib/exports-loader/blob/master/LICENSE|https://github.com/webpack-contrib/exports-loader|Copyright JS Foundation and other contributors|
+|expose-loader|https://github.com/webpack-contrib/expose-loader/blob/master/LICENSE|https://github.com/webpack-contrib/expose-loader|Copyright JS Foundation and other contributors|
 |express|https://github.com/expressjs/express/blob/master/LICENSE|https://github.com/expressjs/express|Copyright (c) 2009-2014 TJ Holowaychuk &lt;tj@vision-media.ca&gt; Copyright (c) 2013-2014 Roman Shtylman &lt;shtylman+expressjs@gmail.com&gt; Copyright (c) 2014-2015 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
-|extend|https://github.com/justmoon/node-extend/blob/master/LICENSE|https://github.com/justmoon/node-extend||
-|fast-deep-equal|https://github.com/epoberezkin/fast-deep-equal/blob/master/LICENSE|https://github.com/epoberezkin/fast-deep-equal||
+|extend|https://github.com/justmoon/node-extend/blob/master/LICENSE|https://github.com/justmoon/node-extend|Copyright (c) 2014 Stefan Thomas|
+|fast-deep-equal|https://github.com/epoberezkin/fast-deep-equal/blob/master/LICENSE|https://github.com/epoberezkin/fast-deep-equal|Copyright (c) 2017 Evgeny Poberezkin|
 |fast-glob|https://github.com/mrmlnc/fast-glob/blob/master/LICENSE|https://github.com/mrmlnc/fast-glob|Copyright (c) Denis Malinochkin|
-|fast-json-stable-stringify|https://github.com/epoberezkin/fast-json-stable-stringify/blob/master/LICENSE|https://github.com/epoberezkin/fast-json-stable-stringify||
-|fast-levenshtein|https://github.com/hiddentao/fast-levenshtein/blob/master/LICENSE.md|https://github.com/hiddentao/fast-levenshtein||
-|fastest-levenshtein|https://github.com/ka-weihe/fastest-levenshtein/blob/master/LICENSE.md|https://github.com/ka-weihe/fastest-levenshtein||
+|fast-json-stable-stringify|https://github.com/epoberezkin/fast-json-stable-stringify/blob/master/LICENSE|https://github.com/epoberezkin/fast-json-stable-stringify|Copyright (c) 2017 Evgeny Poberezkin Copyright (c) 2013 James Halliday|
+|fast-levenshtein|https://github.com/hiddentao/fast-levenshtein/blob/master/LICENSE.md|https://github.com/hiddentao/fast-levenshtein|Copyright (c) 2013 [Ramesh Nair](http://www.hiddentao.com/)|
+|fastest-levenshtein|https://github.com/ka-weihe/fastest-levenshtein/blob/master/LICENSE.md|https://github.com/ka-weihe/fastest-levenshtein|Copyright (c) 2020 Kasper Unn Weihe|
 |file-entry-cache|https://github.com/jaredwray/file-entry-cache/blob/master/LICENSE|https://github.com/jaredwray/file-entry-cache|Copyright (c) Roy Riojas &amp; Jared Wray|
-|file-loader|https://github.com/webpack-contrib/file-loader/blob/master/LICENSE|https://github.com/webpack-contrib/file-loader||
-|file-uri-to-path|https://github.com/TooTallNate/file-uri-to-path/blob/master/LICENSE|https://github.com/TooTallNate/file-uri-to-path||
-|fill-range|https://github.com/jonschlinkert/fill-range/blob/master/LICENSE|https://github.com/jonschlinkert/fill-range||
-|finalhandler|https://github.com/pillarjs/finalhandler/blob/master/LICENSE|https://github.com/pillarjs/finalhandler||
+|file-loader|https://github.com/webpack-contrib/file-loader/blob/master/LICENSE|https://github.com/webpack-contrib/file-loader|Copyright JS Foundation and other contributors|
+|file-uri-to-path|https://github.com/TooTallNate/file-uri-to-path/blob/master/LICENSE|https://github.com/TooTallNate/file-uri-to-path|Copyright (c) 2014 Nathan Rajlich &lt;nathan@tootallnate.net&gt;|
+|fill-range|https://github.com/jonschlinkert/fill-range/blob/master/LICENSE|https://github.com/jonschlinkert/fill-range|Copyright (c) 2014-present, Jon Schlinkert.|
+|finalhandler|https://github.com/pillarjs/finalhandler/blob/master/LICENSE|https://github.com/pillarjs/finalhandler|Copyright (c) 2014-2022 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
 |find-cache-dir|https://github.com/sindresorhus/find-cache-dir/blob/master/license|https://github.com/sindresorhus/find-cache-dir|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com) Copyright (c) James Talmage &lt;james@talmage.io&gt; (https://github.com/jamestalmage)|
 |find-up|https://github.com/sindresorhus/find-up/blob/master/license|https://github.com/sindresorhus/find-up|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 |flat-cache|https://github.com/jaredwray/flat-cache/blob/master/LICENSE|https://github.com/jaredwray/flat-cache|Copyright (c) Roy Riojas and Jared Wray|
-|flotr2|https://github.com/HumbleSoftware/Flotr2/blob/master/LICENSE|https://github.com/HumbleSoftware/Flotr2||
+|flotr2|https://github.com/HumbleSoftware/Flotr2/blob/master/LICENSE|https://github.com/HumbleSoftware/Flotr2|Copyright (c) 2012 Carl Sutherland|
 |follow-redirects|https://github.com/follow-redirects/follow-redirects/blob/master/LICENSE|https://github.com/follow-redirects/follow-redirects|Copyright 2014–present Olivier Lalonde &lt;olalonde@gmail.com&gt;, James Talmage &lt;james@talmage.io&gt;, Ruben Verborgh|
-|forwarded|https://github.com/jshttp/forwarded/blob/master/LICENSE|https://github.com/jshttp/forwarded||
+|forwarded|https://github.com/jshttp/forwarded/blob/master/LICENSE|https://github.com/jshttp/forwarded|Copyright (c) 2014-2017 Douglas Christopher Wilson|
 |fraction.js|https://github.com/rawify/Fraction.js/blob/master/LICENSE|https://github.com/rawify/Fraction.js|Copyright (c) 2023 Robert Eisele|
-|fresh|https://github.com/jshttp/fresh/blob/master/LICENSE|https://github.com/jshttp/fresh||
+|fresh|https://github.com/jshttp/fresh/blob/master/LICENSE|https://github.com/jshttp/fresh|Copyright (c) 2012 TJ Holowaychuk &lt;tj@vision-media.ca&gt; Copyright (c) 2016-2017 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
 |friends-of-behat/mink-extension|https://github.com/FriendsOfBehat/MinkExtension/blob/master/LICENSE|https://github.com/FriendsOfBehat/MinkExtension|Copyright (c) 2012 Konstantin Kudryashov &lt;ever.zet@gmail.com&gt;|
 |friends-of-behat/symfony-extension|https://github.com/FriendsOfBehat/SymfonyExtension/blob/master/LICENSE|https://github.com/FriendsOfBehat/SymfonyExtension|Copyright (c) 2016-2019 Kamil Kokot|
-|friendsofphp/php-cs-fixer|https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/LICENSE|https://github.com/PHP-CS-Fixer/PHP-CS-Fixer|Copyright (c) 2012-2022 Fabien Potencier, Dariusz Rumiński|
+|friendsofphp/php-cs-fixer|https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/LICENSE|https://github.com/PHP-CS-Fixer/PHP-CS-Fixer|Copyright (c) 2012+ Fabien Potencier, Dariusz Rumiński|
 |friendsofphp/proxy-manager-lts|https://github.com/FriendsOfPHP/proxy-manager-lts/blob/master/LICENSE|https://github.com/FriendsOfPHP/proxy-manager-lts|Copyright (c) 2013 Marco Pivetta|
 |friendsofsymfony/jsrouting-bundle|https://github.com/FriendsOfSymfony/FOSJsRoutingBundle/blob/master/Resources/meta/LICENSE|https://github.com/FriendsOfSymfony/FOSJsRoutingBundle|Copyright (c) FriendsOfSymfony &lt;http://friendsofsymfony.github.com/&gt;|
 |friendsofsymfony/rest-bundle|https://github.com/FriendsOfSymfony/FOSRestBundle/blob/master/LICENSE|https://github.com/FriendsOfSymfony/FOSRestBundle|Copyright (c) 2011-2021 FriendsOfSymfony &lt;http://friendsofsymfony.github.com/&gt;|
-|fs-extra|https://github.com/jprichardson/node-fs-extra/blob/master/LICENSE|https://github.com/jprichardson/node-fs-extra||
+|fs-extra|https://github.com/jprichardson/node-fs-extra/blob/master/LICENSE|https://github.com/jprichardson/node-fs-extra|Copyright (c) 2011-2017 JP Richardson|
 |fsevents|https://github.com/fsevents/fsevents/blob/master/LICENSE|https://github.com/fsevents/fsevents|Copyright (C) 2010-2020 by Philipp Dunkel, Ben Noordhuis, Elan Shankar, Paul Miller|
-|fullcalendar|https://github.com/fullcalendar/fullcalendar/blob/master/LICENSE.txt|https://github.com/fullcalendar/fullcalendar||
+|fullcalendar|https://github.com/fullcalendar/fullcalendar/blob/master/LICENSE.txt|https://github.com/fullcalendar/fullcalendar|Copyright (c) 2015 Adam Shaw|
 |function-bind|https://github.com/Raynos/function-bind/blob/master/LICENSE|https://github.com/Raynos/function-bind|Copyright (c) 2013 Raynos.|
 |gedmo/doctrine-extensions|https://github.com/doctrine-extensions/DoctrineExtensions/blob/master/LICENSE|https://github.com/doctrine-extensions/DoctrineExtensions|Copyright (c) 2011-2015 Gediminas Morkevičius|
-|gensync|https://github.com/loganfsmyth/gensync/blob/master/LICENSE|https://github.com/loganfsmyth/gensync||
+|gensync|https://github.com/loganfsmyth/gensync/blob/master/LICENSE|https://github.com/loganfsmyth/gensync|Copyright 2018 Logan Smyth &lt;loganfsmyth@gmail.com&gt;|
 |get-intrinsic|https://github.com/ljharb/get-intrinsic/blob/master/LICENSE|https://github.com/ljharb/get-intrinsic|Copyright (c) 2020 Jordan Harband|
-|get-stream|https://github.com/sindresorhus/get-stream/blob/master/license|https://github.com/sindresorhus/get-stream||
-|global-modules|https://github.com/jonschlinkert/global-modules/blob/master/LICENSE|https://github.com/jonschlinkert/global-modules||
-|global-prefix|https://github.com/jonschlinkert/global-prefix/blob/master/LICENSE|https://github.com/jonschlinkert/global-prefix||
+|get-proto|https://github.com/ljharb/get-proto/blob/master/LICENSE|https://github.com/ljharb/get-proto|Copyright (c) 2025 Jordan Harband|
+|get-tsconfig|https://github.com/privatenumber/get-tsconfig/blob/master/LICENSE|https://github.com/privatenumber/get-tsconfig|Copyright (c) Hiroki Osame &lt;hiroki.osame@gmail.com&gt;|
+|global-modules|https://github.com/jonschlinkert/global-modules/blob/master/LICENSE|https://github.com/jonschlinkert/global-modules|Copyright (c) 2015-present, Jon Schlinkert.|
+|global-prefix|https://github.com/jonschlinkert/global-prefix/blob/master/LICENSE|https://github.com/jonschlinkert/global-prefix|Copyright (c) 2015-present, Jon Schlinkert.|
 |globals|https://github.com/sindresorhus/globals/blob/master/license|https://github.com/sindresorhus/globals|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
-|globby|https://github.com/sindresorhus/globby/blob/master/license|https://github.com/sindresorhus/globby||
-|globjoin|https://github.com/amobiz/globjoin/blob/master/LICENSE|https://github.com/amobiz/globjoin||
+|globby|https://github.com/sindresorhus/globby/blob/master/license|https://github.com/sindresorhus/globby|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|globjoin|https://github.com/amobiz/globjoin/blob/master/LICENSE|https://github.com/amobiz/globjoin|Copyright (c) 2016 amobiz|
 |gopd|https://github.com/ljharb/gopd/blob/master/LICENSE|https://github.com/ljharb/gopd|Copyright (c) 2022 Jordan Harband|
 |gos/pubsub-router-bundle|https://github.com/GeniusesOfSymfony/PubSubRouterBundle/blob/master/LICENSE|https://github.com/GeniusesOfSymfony/PubSubRouterBundle|Copyright (c) 2015 Johann Saunier &lt;johann_27@hotmail.fr&gt;|
 |gos/web-socket-bundle|https://github.com/GeniusesOfSymfony/WebSocketBundle/blob/master/LICENSE|https://github.com/GeniusesOfSymfony/WebSocketBundle|Copyright (c) 2015 Johann Saunier &lt;johann_27@hotmail.fr&gt;|
@@ -606,88 +622,88 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |guzzlehttp/guzzle|https://github.com/guzzle/guzzle/blob/master/LICENSE|https://github.com/guzzle/guzzle|Copyright (c) 2011 Michael Dowling &lt;mtdowling@gmail.com&gt; Copyright (c) 2012 Jeremy Lindblom &lt;jeremeamia@gmail.com&gt; Copyright (c) 2014 Graham Campbell &lt;hello@gjcampbell.co.uk&gt; Copyright (c) 2015 Márk Sági-Kazár &lt;mark.sagikazar@gmail.com&gt; Copyright (c) 2015 Tobias Schultze &lt;webmaster@tubo-world.de&gt; Copyright (c) 2016 Tobias Nyholm &lt;tobias.nyholm@gmail.com&gt; Copyright (c) 2016 George Mponos &lt;gmponos@gmail.com&gt;|
 |guzzlehttp/promises|https://github.com/guzzle/promises/blob/master/LICENSE|https://github.com/guzzle/promises|Copyright (c) 2015 Michael Dowling &lt;mtdowling@gmail.com&gt; Copyright (c) 2015 Graham Campbell &lt;hello@gjcampbell.co.uk&gt; Copyright (c) 2017 Tobias Schultze &lt;webmaster@tubo-world.de&gt; Copyright (c) 2020 Tobias Nyholm &lt;tobias.nyholm@gmail.com&gt;|
 |guzzlehttp/psr7|https://github.com/guzzle/psr7/blob/master/LICENSE|https://github.com/guzzle/psr7|Copyright (c) 2015 Michael Dowling &lt;mtdowling@gmail.com&gt; Copyright (c) 2015 Márk Sági-Kazár &lt;mark.sagikazar@gmail.com&gt; Copyright (c) 2015 Graham Campbell &lt;hello@gjcampbell.co.uk&gt; Copyright (c) 2016 Tobias Schultze &lt;webmaster@tubo-world.de&gt; Copyright (c) 2016 George Mponos &lt;gmponos@gmail.com&gt; Copyright (c) 2018 Tobias Nyholm &lt;tobias.nyholm@gmail.com&gt;|
-|gzip-size|https://github.com/sindresorhus/gzip-size/blob/master/license|https://github.com/sindresorhus/gzip-size||
-|handle-thing|https://github.com/indutny/handle-thing/blob/master/README.md|https://github.com/indutny/handle-thing||
-|hard-rejection|https://github.com/sindresorhus/hard-rejection/blob/master/license|https://github.com/sindresorhus/hard-rejection||
-|has-flag|https://github.com/sindresorhus/has-flag/blob/master/license|https://github.com/sindresorhus/has-flag||
-|has-property-descriptors|https://github.com/inspect-js/has-property-descriptors/blob/master/LICENSE|https://github.com/inspect-js/has-property-descriptors|Copyright (c) 2022 Inspect JS|
-|has-proto|https://github.com/inspect-js/has-proto/blob/master/LICENSE|https://github.com/inspect-js/has-proto|Copyright (c) 2022 Inspect JS|
-|has-symbols|https://github.com/inspect-js/has-symbols/blob/master/LICENSE|https://github.com/inspect-js/has-symbols||
+|gzip-size|https://github.com/sindresorhus/gzip-size/blob/master/license|https://github.com/sindresorhus/gzip-size|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|handle-thing|https://github.com/indutny/handle-thing/blob/master/README.md|https://github.com/indutny/handle-thing|Copyright Fedor Indutny, 2015.|
+|hard-rejection|https://github.com/sindresorhus/hard-rejection/blob/master/license|https://github.com/sindresorhus/hard-rejection|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|has-flag|https://github.com/sindresorhus/has-flag/blob/master/license|https://github.com/sindresorhus/has-flag|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|has-symbols|https://github.com/inspect-js/has-symbols/blob/master/LICENSE|https://github.com/inspect-js/has-symbols|Copyright (c) 2016 Jordan Harband|
+|has-tostringtag|https://github.com/inspect-js/has-tostringtag/blob/master/LICENSE|https://github.com/inspect-js/has-tostringtag|Copyright (c) 2021 Inspect JS|
 |hasown|https://github.com/inspect-js/hasOwn/blob/master/LICENSE|https://github.com/inspect-js/hasOwn|Copyright (c) Jordan Harband and contributors|
-|he|https://github.com/mathiasbynens/he/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/he||
-|hpack.js|https://github.com/indutny/hpack.js/blob/master/README.md|https://github.com/indutny/hpack.js||
-|html-entities|https://github.com/mdevils/html-entities/blob/master/LICENSE|https://github.com/mdevils/html-entities|Copyright (c) 2021 Dulin Marat|
-|html-minifier-terser|https://github.com/terser/html-minifier-terser/blob/master/LICENSE|https://github.com/terser/html-minifier-terser||
+|he|https://github.com/mathiasbynens/he/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/he|Copyright Mathias Bynens &lt;https://mathiasbynens.be/&gt;|
+|hpack.js|https://github.com/indutny/hpack.js/blob/master/README.md|https://github.com/indutny/hpack.js|Copyright Fedor Indutny, 2015.|
+|html-escaper|https://github.com/WebReflection/html-escaper/blob/master/LICENSE.txt|https://github.com/WebReflection/html-escaper|Copyright (C) 2017-present by Andrea Giammarchi - @WebReflection|
+|html-minifier-terser|https://github.com/terser/html-minifier-terser/blob/master/LICENSE|https://github.com/terser/html-minifier-terser|Copyright (c) 2010-2019 Juriy &quot;kangax&quot; Zaytsev|
 |html-tags|https://github.com/sindresorhus/html-tags/blob/master/license|https://github.com/sindresorhus/html-tags|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 |html-webpack-plugin|https://github.com/jantimon/html-webpack-plugin/blob/master/LICENSE|https://github.com/jantimon/html-webpack-plugin|Copyright JS Foundation and other contributors|
-|htmlparser2|https://github.com/fb55/htmlparser2/blob/master/LICENSE|https://github.com/fb55/htmlparser2||
-|http-deceiver|https://github.com/indutny/http-deceiver/blob/master/README.md|https://github.com/indutny/http-deceiver||
-|http-errors|https://github.com/jshttp/http-errors/blob/master/LICENSE|https://github.com/jshttp/http-errors||
-|http-parser-js|https://github.com/creationix/http-parser-js/blob/master/LICENSE.md|https://github.com/creationix/http-parser-js||
-|http-proxy|https://github.com/http-party/node-http-proxy/blob/master/LICENSE|https://github.com/http-party/node-http-proxy||
-|http-proxy-middleware|https://github.com/chimurai/http-proxy-middleware/blob/master/LICENSE|https://github.com/chimurai/http-proxy-middleware||
+|htmlparser2|https://github.com/fb55/htmlparser2/blob/master/LICENSE|https://github.com/fb55/htmlparser2|Copyright 2010, 2011, Chris Winberry &lt;chris@winberry.net&gt;. All rights reserved.|
+|http-deceiver|https://github.com/indutny/http-deceiver/blob/master/README.md|https://github.com/indutny/http-deceiver|Copyright Fedor Indutny, 2015.|
+|http-errors|https://github.com/jshttp/http-errors/blob/master/LICENSE|https://github.com/jshttp/http-errors|Copyright (c) 2014 Jonathan Ong me@jongleberry.com Copyright (c) 2016 Douglas Christopher Wilson doug@somethingdoug.com|
+|http-parser-js|https://github.com/creationix/http-parser-js/blob/master/LICENSE.md|https://github.com/creationix/http-parser-js|Copyright (c) 2015 Tim Caswell (https://github.com/creationix) and other contributors. All rights reserved. Copyright io.js contributors. All rights reserved.  Copyright Node.js contributors. All rights reserved.  Copyright Joyent, Inc. and other Node contributors. All rights reserved.|
+|http-proxy|https://github.com/http-party/node-http-proxy/blob/master/LICENSE|https://github.com/http-party/node-http-proxy|Copyright (c) 2010-2016 Charlie Robbins, Jarrett Cruger &amp; the Contributors.|
+|http-proxy-middleware|https://github.com/chimurai/http-proxy-middleware/blob/master/LICENSE|https://github.com/chimurai/http-proxy-middleware|Copyright (c) 2015 Steven Chim|
 |hwi/oauth-bundle|https://github.com/hwi/HWIOAuthBundle/blob/master/LICENSE|https://github.com/hwi/HWIOAuthBundle|Copyright (c) 2012-2019 Hardware Info - https://hardware.info|
-|iconv-lite|https://github.com/ashtuchkin/iconv-lite/blob/master/LICENSE|https://github.com/ashtuchkin/iconv-lite||
+|hyperdyperid|https://github.com/streamich/hyperdyperid/blob/master/LICENSE|https://github.com/streamich/hyperdyperid|Copyright (c) 2020 Vadim @streamich Dalecky|
+|iconv-lite|https://github.com/ashtuchkin/iconv-lite/blob/master/LICENSE|https://github.com/ashtuchkin/iconv-lite|Copyright (c) 2011 Alexander Shtuchkin|
 |ignore|https://github.com/kaelzhang/node-ignore/blob/master/LICENSE-MIT|https://github.com/kaelzhang/node-ignore|Copyright (c) 2013 Kael Zhang &lt;i@kael.me&gt;, contributors http://kael.me/|
 |imagine/imagine|https://github.com/php-imagine/Imagine/blob/master/LICENSE|https://github.com/php-imagine/Imagine|Copyright (c) 2004-2012 Bulat Shakirzyanov|
 |immutable|https://github.com/immutable-js/immutable-js/blob/master/LICENSE|https://github.com/immutable-js/immutable-js|Copyright (c) 2014-present, Lee Byron and other contributors.|
-|import-fresh|https://github.com/sindresorhus/import-fresh/blob/master/license|https://github.com/sindresorhus/import-fresh||
-|import-lazy|https://github.com/sindresorhus/import-lazy/blob/master/license|https://github.com/sindresorhus/import-lazy||
-|import-local|https://github.com/sindresorhus/import-local/blob/master/license|https://github.com/sindresorhus/import-local||
-|imports-loader|https://github.com/webpack-contrib/imports-loader/blob/master/LICENSE|https://github.com/webpack-contrib/imports-loader||
-|imurmurhash|https://github.com/jensyt/imurmurhash-js/blob/master/README.md|https://github.com/jensyt/imurmurhash-js||
+|import-fresh|https://github.com/sindresorhus/import-fresh/blob/master/license|https://github.com/sindresorhus/import-fresh|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|import-lazy|https://github.com/sindresorhus/import-lazy/blob/master/license|https://github.com/sindresorhus/import-lazy|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|import-local|https://github.com/sindresorhus/import-local/blob/master/license|https://github.com/sindresorhus/import-local|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|imports-loader|https://github.com/webpack-contrib/imports-loader/blob/master/LICENSE|https://github.com/webpack-contrib/imports-loader|Copyright JS Foundation and other contributors|
+|imurmurhash|https://github.com/jensyt/imurmurhash-js/blob/master/README.md|https://github.com/jensyt/imurmurhash-js|Copyright (c) 2013 Gary Court, Jens Taylor|
 |indent-string|https://github.com/sindresorhus/indent-string/blob/master/license|https://github.com/sindresorhus/indent-string|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
-|interpret|https://github.com/gulpjs/interpret/blob/master/LICENSE|https://github.com/gulpjs/interpret||
+|interpret|https://github.com/gulpjs/interpret/blob/master/LICENSE|https://github.com/gulpjs/interpret|Copyright (c) 2014-2018, 2022 Tyler Kellen &lt;tyler@sleekcode.net&gt;, Blaine Bublitz &lt;blaine.bublitz@gmail.com&gt;, and Eric Schoffstall &lt;yo@contra.io&gt;|
 |ipaddr.js|https://github.com/whitequark/ipaddr.js/blob/master/LICENSE|https://github.com/whitequark/ipaddr.js|Copyright (C) 2011-2017 whitequark &lt;whitequark@whitequark.org&gt;|
-|is-arrayish|https://github.com/qix-/node-is-arrayish/blob/master/LICENSE|https://github.com/qix-/node-is-arrayish||
-|is-binary-path|https://github.com/sindresorhus/is-binary-path/blob/master/license|https://github.com/sindresorhus/is-binary-path||
+|is-arrayish|https://github.com/qix-/node-is-arrayish/blob/master/LICENSE|https://github.com/qix-/node-is-arrayish|Copyright (c) 2015 JD Ballard|
+|is-binary-path|https://github.com/sindresorhus/is-binary-path/blob/master/license|https://github.com/sindresorhus/is-binary-path|Copyright (c) 2019 Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com), Paul Miller (https://paulmillr.com)|
 |is-core-module|https://github.com/inspect-js/is-core-module/blob/master/LICENSE|https://github.com/inspect-js/is-core-module|Copyright (c) 2014 Dave Justice|
-|is-docker|https://github.com/sindresorhus/is-docker/blob/master/license|https://github.com/sindresorhus/is-docker||
-|is-extglob|https://github.com/jonschlinkert/is-extglob/blob/master/LICENSE|https://github.com/jonschlinkert/is-extglob||
-|is-fullwidth-code-point|https://github.com/sindresorhus/is-fullwidth-code-point/blob/master/license|https://github.com/sindresorhus/is-fullwidth-code-point||
-|is-glob|https://github.com/micromatch/is-glob/blob/master/LICENSE|https://github.com/micromatch/is-glob||
-|is-number|https://github.com/jonschlinkert/is-number/blob/master/LICENSE|https://github.com/jonschlinkert/is-number||
-|is-path-inside|https://github.com/sindresorhus/is-path-inside/blob/master/license|https://github.com/sindresorhus/is-path-inside||
-|is-plain-obj|https://github.com/sindresorhus/is-plain-obj/blob/master/license|https://github.com/sindresorhus/is-plain-obj||
-|is-plain-object|https://github.com/jonschlinkert/is-plain-object/blob/master/LICENSE|https://github.com/jonschlinkert/is-plain-object||
-|is-stream|https://github.com/sindresorhus/is-stream/blob/master/license|https://github.com/sindresorhus/is-stream||
-|is-wsl|https://github.com/sindresorhus/is-wsl/blob/master/license|https://github.com/sindresorhus/is-wsl||
-|isarray|https://github.com/juliangruber/isarray/blob/master/README.md|https://github.com/juliangruber/isarray||
-|isbinaryfile|https://github.com/gjtorikian/isBinaryFile/blob/master/LICENSE.txt|https://github.com/gjtorikian/isBinaryFile||
-|isobject|https://github.com/jonschlinkert/isobject/blob/master/LICENSE|https://github.com/jonschlinkert/isobject||
-|jasmine-core|https://github.com/jasmine/jasmine/blob/master/README.md|https://github.com/jasmine/jasmine||
-|jasmine-jquery|https://github.com/velesin/jasmine-jquery/blob/master/LICENSE|https://github.com/velesin/jasmine-jquery||
+|is-docker|https://github.com/sindresorhus/is-docker/blob/master/license|https://github.com/sindresorhus/is-docker|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|is-extglob|https://github.com/jonschlinkert/is-extglob/blob/master/LICENSE|https://github.com/jonschlinkert/is-extglob|Copyright (c) 2014-2016, Jon Schlinkert|
+|is-fullwidth-code-point|https://github.com/sindresorhus/is-fullwidth-code-point/blob/master/license|https://github.com/sindresorhus/is-fullwidth-code-point|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|is-glob|https://github.com/micromatch/is-glob/blob/master/LICENSE|https://github.com/micromatch/is-glob|Copyright (c) 2014-2017, Jon Schlinkert.|
+|is-inside-container|https://github.com/sindresorhus/is-inside-container/blob/master/license|https://github.com/sindresorhus/is-inside-container|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|is-network-error|https://github.com/sindresorhus/is-network-error/blob/master/license|https://github.com/sindresorhus/is-network-error|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|is-number|https://github.com/jonschlinkert/is-number/blob/master/LICENSE|https://github.com/jonschlinkert/is-number|Copyright (c) 2014-present, Jon Schlinkert.|
+|is-path-inside|https://github.com/sindresorhus/is-path-inside/blob/master/license|https://github.com/sindresorhus/is-path-inside|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|is-plain-obj|https://github.com/sindresorhus/is-plain-obj/blob/master/license|https://github.com/sindresorhus/is-plain-obj|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|is-plain-object|https://github.com/jonschlinkert/is-plain-object/blob/master/LICENSE|https://github.com/jonschlinkert/is-plain-object|Copyright (c) 2014-2017, Jon Schlinkert.|
+|is-regex|https://github.com/inspect-js/is-regex/blob/master/LICENSE|https://github.com/inspect-js/is-regex|Copyright (c) 2014 Jordan Harband|
+|is-wsl|https://github.com/sindresorhus/is-wsl/blob/master/license|https://github.com/sindresorhus/is-wsl|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|isarray|https://github.com/juliangruber/isarray/blob/master/README.md|https://github.com/juliangruber/isarray|Copyright (c) 2013 Julian Gruber &amp;lt;julian@juliangruber.com&amp;gt;|
+|isbinaryfile|https://github.com/gjtorikian/isBinaryFile/blob/master/LICENSE.txt|https://github.com/gjtorikian/isBinaryFile|Copyright (c) 2019 Garen J. Torikian|
+|isobject|https://github.com/jonschlinkert/isobject/blob/master/LICENSE|https://github.com/jonschlinkert/isobject|Copyright (c) 2014-2017, Jon Schlinkert.|
+|jasmine-core|https://github.com/jasmine/jasmine/blob/master/README.md|https://github.com/jasmine/jasmine|Copyright (c) 2008-2022 Jasmine Maintainers. This software is licensed under the [MIT License](https://github.com/jasmine/jasmine/blob/main/MIT.LICENSE).|
+|jasmine-jquery|https://github.com/velesin/jasmine-jquery/blob/master/LICENSE|https://github.com/velesin/jasmine-jquery|Copyright (c) 2010-2014 Wojciech Zawistowski, Travis Jeffery|
 |jest-util|https://github.com/jestjs/jest/blob/master/LICENSE|https://github.com/jestjs/jest|Copyright (c) Meta Platforms, Inc. and affiliates.|
 |jest-worker|https://github.com/jestjs/jest/blob/master/LICENSE|https://github.com/jestjs/jest|Copyright (c) Meta Platforms, Inc. and affiliates.|
 |jiti|https://github.com/unjs/jiti/blob/master/LICENSE|https://github.com/unjs/jiti|Copyright (c) Pooya Parsa &lt;pooya@pi0.io&gt;|
-|johnkary/phpunit-speedtrap|https://github.com/johnkary/phpunit-speedtrap/blob/master/LICENSE|https://github.com/johnkary/phpunit-speedtrap|Copyright (c) 2014 John Kary|
-|jquery|https://github.com/jquery/jquery/blob/master/LICENSE.txt|https://github.com/jquery/jquery||
+|jquery|https://github.com/jquery/jquery/blob/master/LICENSE.txt|https://github.com/jquery/jquery|Copyright OpenJS Foundation and other contributors, https://openjsf.org/|
 |jquery-form|https://github.com/jquery-form/form/blob/master/LICENSE|https://github.com/jquery-form/form||
-|jquery-mousewheel|https://github.com/jquery/jquery-mousewheel/blob/master/LICENSE.txt|https://github.com/jquery/jquery-mousewheel||
-|jquery-numeric|https://github.com/SamWM/jquery-numeric/blob/master/LICENSE|https://github.com/SamWM/jquery-numeric||
-|jquery-ui|https://github.com/jquery/jquery-ui/blob/master/LICENSE.txt|https://github.com/jquery/jquery-ui||
+|jquery-mousewheel|https://github.com/jquery/jquery-mousewheel/blob/master/LICENSE.txt|https://github.com/jquery/jquery-mousewheel|Copyright jQuery Foundation and other contributors https://jquery.org/|
+|jquery-ui|https://github.com/jquery/jquery-ui/blob/master/LICENSE.txt|https://github.com/jquery/jquery-ui|Copyright OpenJS Foundation and other contributors, https://openjsf.org/|
 |jquery-ui-multiselect-widget|https://github.com/ehynds/jquery-ui-multiselect-widget/blob/master/README.markdown|https://github.com/ehynds/jquery-ui-multiselect-widget||
-|jquery-validation|https://github.com/jquery-validation/jquery-validation/blob/master/LICENSE.md|https://github.com/jquery-validation/jquery-validation||
+|jquery-validation|https://github.com/jquery-validation/jquery-validation/blob/master/LICENSE.md|https://github.com/jquery-validation/jquery-validation|Copyright Jörn Zaefferer|
 |jquery.cookie|https://github.com/carhartl/jquery-cookie/blob/master/README.md|https://github.com/carhartl/jquery-cookie||
-|js-tokens|https://github.com/lydell/js-tokens/blob/master/LICENSE|https://github.com/lydell/js-tokens||
-|js-yaml|https://github.com/nodeca/js-yaml/blob/master/LICENSE|https://github.com/nodeca/js-yaml||
-|jsesc|https://github.com/mathiasbynens/jsesc/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/jsesc||
+|js-tokens|https://github.com/lydell/js-tokens/blob/master/LICENSE|https://github.com/lydell/js-tokens|Copyright (c) 2014, 2015, 2016, 2017, 2018 Simon Lydell|
+|js-yaml|https://github.com/nodeca/js-yaml/blob/master/LICENSE|https://github.com/nodeca/js-yaml|Copyright (C) 2011-2015 by Vitaly Puzrin|
+|jsesc|https://github.com/mathiasbynens/jsesc/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/jsesc|Copyright Mathias Bynens &lt;https://mathiasbynens.be/&gt;|
 |json-buffer|https://github.com/dominictarr/json-buffer/blob/master/LICENSE|https://github.com/dominictarr/json-buffer|Copyright (c) 2013 Dominic Tarr|
-|json-parse-even-better-errors|https://github.com/npm/json-parse-even-better-errors/blob/master/LICENSE.md|https://github.com/npm/json-parse-even-better-errors||
-|json-schema-traverse|https://github.com/epoberezkin/json-schema-traverse/blob/master/LICENSE|https://github.com/epoberezkin/json-schema-traverse||
+|json-parse-even-better-errors|https://github.com/npm/json-parse-even-better-errors/blob/master/LICENSE.md|https://github.com/npm/json-parse-even-better-errors|Copyright 2017 Kat Marchán Copyright npm, Inc.|
+|json-schema-traverse|https://github.com/epoberezkin/json-schema-traverse/blob/master/LICENSE|https://github.com/epoberezkin/json-schema-traverse|Copyright (c) 2017 Evgeny Poberezkin|
 |json-stable-stringify-without-jsonify|https://github.com/samn/json-stable-stringify/blob/master/LICENSE|https://github.com/samn/json-stable-stringify||
-|json5|https://github.com/json5/json5/blob/master/LICENSE.md|https://github.com/json5/json5||
-|jsonfile|https://github.com/jprichardson/node-jsonfile/blob/master/LICENSE|https://github.com/jprichardson/node-jsonfile||
-|jstree|https://github.com/vakata/jstree/blob/master/LICENSE-MIT|https://github.com/vakata/jstree||
+|json5|https://github.com/json5/json5/blob/master/LICENSE.md|https://github.com/json5/json5|Copyright (c) 2012-2018 Aseem Kishore, and [others].|
+|jsonfile|https://github.com/jprichardson/node-jsonfile/blob/master/LICENSE|https://github.com/jprichardson/node-jsonfile|Copyright (c) 2012-2015, JP Richardson &lt;jprichardson@gmail.com&gt;|
+|jstree|https://github.com/vakata/jstree/blob/master/LICENSE-MIT|https://github.com/vakata/jstree|Copyright (c) 2014 Ivan Bozhanov|
 |karma|https://github.com/karma-runner/karma/blob/master/LICENSE|https://github.com/karma-runner/karma|Copyright (C) 2011-2021 Google, Inc.|
-|karma-chrome-launcher|https://github.com/karma-runner/karma-chrome-launcher/blob/master/LICENSE|https://github.com/karma-runner/karma-chrome-launcher||
+|karma-chrome-launcher|https://github.com/karma-runner/karma-chrome-launcher/blob/master/LICENSE|https://github.com/karma-runner/karma-chrome-launcher|Copyright (C) 2011-2013 Google, Inc.|
 |karma-firefox-launcher|https://github.com/karma-runner/karma-firefox-launcher/blob/master/LICENSE|https://github.com/karma-runner/karma-firefox-launcher|Copyright (C) 2011-2013 Google, Inc.|
-|karma-jasmine|https://github.com/karma-runner/karma-jasmine/blob/master/LICENSE|https://github.com/karma-runner/karma-jasmine||
-|karma-junit-reporter|https://github.com/karma-runner/karma-junit-reporter/blob/master/LICENSE|https://github.com/karma-runner/karma-junit-reporter||
+|karma-jasmine|https://github.com/karma-runner/karma-jasmine/blob/master/LICENSE|https://github.com/karma-runner/karma-jasmine|Copyright (C) 2011-2013 Google, Inc.|
+|karma-junit-reporter|https://github.com/karma-runner/karma-junit-reporter/blob/master/LICENSE|https://github.com/karma-runner/karma-junit-reporter|Copyright (C) 2011-2013 Google, Inc.|
 |karma-webpack|https://github.com/webpack-contrib/karma-webpack/blob/master/LICENSE|https://github.com/webpack-contrib/karma-webpack|Copyright JS Foundation and other contributors|
 |keyv|https://github.com/jaredwray/keyv/blob/master/README.md|https://github.com/jaredwray/keyv||
-|kind-of|https://github.com/jonschlinkert/kind-of/blob/master/LICENSE|https://github.com/jonschlinkert/kind-of||
-|klona|https://github.com/lukeed/klona/blob/master/license|https://github.com/lukeed/klona||
+|kind-of|https://github.com/jonschlinkert/kind-of/blob/master/LICENSE|https://github.com/jonschlinkert/kind-of|Copyright (c) 2014-2017, Jon Schlinkert.|
+|klona|https://github.com/lukeed/klona/blob/master/license|https://github.com/lukeed/klona|Copyright (c) Luke Edwards &lt;luke.edwards05@gmail.com&gt; (lukeed.com)|
 |known-css-properties|https://github.com/known-css/known-css-properties/blob/master/LICENSE|https://github.com/known-css/known-css-properties|Copyright (c) 2017 Mavrix Technologies|
 |knplabs/gaufrette|https://github.com/KnpLabs/Gaufrette/blob/master/LICENSE|https://github.com/KnpLabs/Gaufrette|Copyright (c) 2010 Antoine Hérault|
 |knplabs/knp-gaufrette-bundle|https://github.com/KnpLabs/KnpGaufretteBundle/blob/master/LICENSE|https://github.com/KnpLabs/KnpGaufretteBundle|Copyright (C) 2011 by Antoine Hérault &lt;antoine.herault@gmail.com&gt;|
@@ -695,103 +711,101 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |knplabs/knp-menu-bundle|https://github.com/KnpLabs/KnpMenuBundle/blob/master/LICENSE|https://github.com/KnpLabs/KnpMenuBundle|Copyright (c) 2011 KnpLabs - http://www.knplabs.com|
 |kriswallsmith/buzz|https://github.com/kriswallsmith/Buzz/blob/master/LICENSE|https://github.com/kriswallsmith/Buzz|Copyright (c) 2010-2011 Kris Wallsmith|
 |launch-editor|https://github.com/yyx990803/launch-editor/blob/master/LICENSE|https://github.com/yyx990803/launch-editor|Copyright (c) 2017-present, Yuxi (Evan) You|
-|levn|https://github.com/gkz/levn/blob/master/LICENSE|https://github.com/gkz/levn||
+|levn|https://github.com/gkz/levn/blob/master/LICENSE|https://github.com/gkz/levn|Copyright (c) George Zahariev|
 |lezer-loader|https://github.com/jared-hughes/lezer-loader/blob/master/README.md|https://github.com/jared-hughes/lezer-loader||
 |liip/imagine-bundle|https://github.com/liip/LiipImagineBundle/blob/master/LICENSE|https://github.com/liip/LiipImagineBundle|Copyright © 2010-2016 Liip &amp; Contributors &lt;https://github.com/liip/LiipImagineBundle/graphs/contributors&gt; Copyright © 2004-2011 Bulat Shakirzyanov &lt;https://github.com/avalanche123/AvalancheImagineBundle/graphs/contributors&gt;|
 |lilconfig|https://github.com/antonk52/lilconfig/blob/master/LICENSE|https://github.com/antonk52/lilconfig|Copyright (c) 2022 Anton Kastritskiy|
-|lines-and-columns|https://github.com/eventualbuddha/lines-and-columns/blob/master/LICENSE|https://github.com/eventualbuddha/lines-and-columns||
-|loader-runner|https://github.com/webpack/loader-runner/blob/master/LICENSE|https://github.com/webpack/loader-runner||
-|loader-utils|https://github.com/webpack/loader-utils/blob/master/LICENSE|https://github.com/webpack/loader-utils||
+|lines-and-columns|https://github.com/eventualbuddha/lines-and-columns/blob/master/LICENSE|https://github.com/eventualbuddha/lines-and-columns|Copyright (c) 2015 Brian Donovan|
+|loader-runner|https://github.com/webpack/loader-runner/blob/master/LICENSE|https://github.com/webpack/loader-runner|Copyright (c) Tobias Koppers @sokra|
+|loader-utils|https://github.com/webpack/loader-utils/blob/master/LICENSE|https://github.com/webpack/loader-utils|Copyright JS Foundation and other contributors|
 |locate-path|https://github.com/sindresorhus/locate-path/blob/master/license|https://github.com/sindresorhus/locate-path|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
-|lodash|https://github.com/lodash/lodash/blob/master/LICENSE|https://github.com/lodash/lodash||
-|lodash.debounce|https://github.com/lodash/lodash/blob/master/LICENSE|https://github.com/lodash/lodash||
-|lodash.memoize|https://github.com/lodash/lodash/blob/master/LICENSE|https://github.com/lodash/lodash||
-|lodash.merge|https://github.com/lodash/lodash/blob/master/LICENSE|https://github.com/lodash/lodash||
-|lodash.truncate|https://github.com/lodash/lodash/blob/master/LICENSE|https://github.com/lodash/lodash||
-|lodash.uniq|https://github.com/lodash/lodash/blob/master/LICENSE|https://github.com/lodash/lodash||
-|lower-case|https://github.com/blakeembrey/change-case/blob/master/LICENSE|https://github.com/blakeembrey/change-case||
-|map-obj|https://github.com/sindresorhus/map-obj/blob/master/license|https://github.com/sindresorhus/map-obj||
-|mathml-tag-names|https://github.com/wooorm/mathml-tag-names/blob/master/license|https://github.com/wooorm/mathml-tag-names||
-|media-typer|https://github.com/jshttp/media-typer/blob/master/LICENSE|https://github.com/jshttp/media-typer||
+|lodash|https://github.com/lodash/lodash/blob/master/LICENSE|https://github.com/lodash/lodash|Copyright OpenJS Foundation and other contributors &lt;https://openjsf.org/&gt;|
+|lodash.debounce|https://github.com/lodash/lodash/blob/master/LICENSE|https://github.com/lodash/lodash|Copyright jQuery Foundation and other contributors &lt;https://jquery.org/&gt;|
+|lodash.memoize|https://github.com/lodash/lodash/blob/master/LICENSE|https://github.com/lodash/lodash|Copyright jQuery Foundation and other contributors &lt;https://jquery.org/&gt;|
+|lodash.merge|https://github.com/lodash/lodash/blob/master/LICENSE|https://github.com/lodash/lodash|Copyright OpenJS Foundation and other contributors &lt;https://openjsf.org/&gt;|
+|lodash.truncate|https://github.com/lodash/lodash/blob/master/LICENSE|https://github.com/lodash/lodash|Copyright jQuery Foundation and other contributors &lt;https://jquery.org/&gt;|
+|lodash.uniq|https://github.com/lodash/lodash/blob/master/LICENSE|https://github.com/lodash/lodash|Copyright jQuery Foundation and other contributors &lt;https://jquery.org/&gt;|
+|lower-case|https://github.com/blakeembrey/change-case/blob/master/LICENSE|https://github.com/blakeembrey/change-case|Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com)|
+|map-obj|https://github.com/sindresorhus/map-obj/blob/master/license|https://github.com/sindresorhus/map-obj|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|math-intrinsics|https://github.com/es-shims/math-intrinsics/blob/master/LICENSE|https://github.com/es-shims/math-intrinsics|Copyright (c) 2024 ECMAScript Shims|
+|mathml-tag-names|https://github.com/wooorm/mathml-tag-names/blob/master/license|https://github.com/wooorm/mathml-tag-names|Copyright (c) 2016 Titus Wormer &lt;tituswormer@gmail.com&gt;|
+|media-typer|https://github.com/jshttp/media-typer/blob/master/LICENSE|https://github.com/jshttp/media-typer|Copyright (c) 2014 Douglas Christopher Wilson|
 |meow|https://github.com/sindresorhus/meow/blob/master/license|https://github.com/sindresorhus/meow|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
-|merge-descriptors|https://github.com/component/merge-descriptors/blob/master/LICENSE|https://github.com/component/merge-descriptors||
-|merge-stream|https://github.com/grncdr/merge-stream/blob/master/LICENSE|https://github.com/grncdr/merge-stream||
-|merge2|https://github.com/teambition/merge2/blob/master/LICENSE|https://github.com/teambition/merge2||
-|methods|https://github.com/jshttp/methods/blob/master/LICENSE|https://github.com/jshttp/methods||
-|micromatch|https://github.com/micromatch/micromatch/blob/master/LICENSE|https://github.com/micromatch/micromatch||
-|mime|https://github.com/broofa/mime/blob/master/LICENSE|https://github.com/broofa/mime||
-|mime-db|https://github.com/jshttp/mime-db/blob/master/LICENSE|https://github.com/jshttp/mime-db||
-|mime-types|https://github.com/jshttp/mime-types/blob/master/LICENSE|https://github.com/jshttp/mime-types||
-|mimic-fn|https://github.com/sindresorhus/mimic-fn/blob/master/license|https://github.com/sindresorhus/mimic-fn||
-|min-indent|https://github.com/thejameskyle/min-indent/blob/master/license|https://github.com/thejameskyle/min-indent||
+|merge-descriptors|https://github.com/sindresorhus/merge-descriptors/blob/master/LICENSE|https://github.com/sindresorhus/merge-descriptors|Copyright (c) 2013 Jonathan Ong &lt;me@jongleberry.com&gt; Copyright (c) 2015 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
+|merge-stream|https://github.com/grncdr/merge-stream/blob/master/LICENSE|https://github.com/grncdr/merge-stream|Copyright (c) Stephen Sugden &lt;me@stephensugden.com&gt; (stephensugden.com)|
+|merge2|https://github.com/teambition/merge2/blob/master/LICENSE|https://github.com/teambition/merge2|Copyright (c) 2014-2020 Teambition|
+|methods|https://github.com/jshttp/methods/blob/master/LICENSE|https://github.com/jshttp/methods|Copyright (c) 2013-2014 TJ Holowaychuk &lt;tj@vision-media.ca&gt; Copyright (c) 2015-2016 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
+|micromatch|https://github.com/micromatch/micromatch/blob/master/LICENSE|https://github.com/micromatch/micromatch|Copyright (c) 2014-present, Jon Schlinkert.|
+|mime|https://github.com/broofa/mime/blob/master/LICENSE|https://github.com/broofa/mime|Copyright (c) 2010 Benjamin Thomas, Robert Kieffer|
+|mime-db|https://github.com/jshttp/mime-db/blob/master/LICENSE|https://github.com/jshttp/mime-db|Copyright (c) 2014 Jonathan Ong &lt;me@jongleberry.com&gt; Copyright (c) 2015-2022 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
+|mime-types|https://github.com/jshttp/mime-types/blob/master/LICENSE|https://github.com/jshttp/mime-types|Copyright (c) 2014 Jonathan Ong &lt;me@jongleberry.com&gt; Copyright (c) 2015 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
+|min-indent|https://github.com/thejameskyle/min-indent/blob/master/license|https://github.com/thejameskyle/min-indent|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com), James Kyle &lt;me@thejameskyle.com&gt; (thejameskyle.com)|
 |mini-css-extract-plugin|https://github.com/webpack-contrib/mini-css-extract-plugin/blob/master/LICENSE|https://github.com/webpack-contrib/mini-css-extract-plugin|Copyright JS Foundation and other contributors|
 |minimist|https://github.com/minimistjs/minimist/blob/master/LICENSE|https://github.com/minimistjs/minimist||
-|minimist-options|https://github.com/vadimdemedes/minimist-options/blob/master/license|https://github.com/vadimdemedes/minimist-options||
-|mkdirp|https://github.com/substack/node-mkdirp/blob/master/LICENSE|https://github.com/substack/node-mkdirp||
-|moment|https://github.com/moment/moment/blob/master/LICENSE|https://github.com/moment/moment||
+|minimist-options|https://github.com/vadimdemedes/minimist-options/blob/master/license|https://github.com/vadimdemedes/minimist-options|Copyright (c) Vadim Demedes &lt;vdemedes@gmail.com&gt; (vadimdemedes.com)|
+|mkdirp|https://github.com/substack/node-mkdirp/blob/master/LICENSE|https://github.com/substack/node-mkdirp|Copyright 2010 James Halliday (mail@substack.net)|
+|moment|https://github.com/moment/moment/blob/master/LICENSE|https://github.com/moment/moment|Copyright (c) JS Foundation and other contributors|
 |moment-timezone|https://github.com/moment/moment-timezone/blob/master/LICENSE|https://github.com/moment/moment-timezone|Copyright (c) JS Foundation and other contributors|
 |monolog/monolog|https://github.com/Seldaek/monolog/blob/master/LICENSE|https://github.com/Seldaek/monolog|Copyright (c) 2011-2020 Jordi Boggiano|
-|mrmime|https://github.com/lukeed/mrmime/blob/master/license|https://github.com/lukeed/mrmime||
-|ms|https://github.com/vercel/ms/blob/master/license.md|https://github.com/vercel/ms||
-|multicast-dns|https://github.com/mafintosh/multicast-dns/blob/master/LICENSE|https://github.com/mafintosh/multicast-dns||
+|mrmime|https://github.com/lukeed/mrmime/blob/master/license|https://github.com/lukeed/mrmime|Copyright (c) Luke Edwards &lt;luke.edwards05@gmail.com&gt; (https://lukeed.com)|
+|ms|https://github.com/vercel/ms/blob/master/license.md|https://github.com/vercel/ms|Copyright (c) 2020 Vercel, Inc.|
+|multicast-dns|https://github.com/mafintosh/multicast-dns/blob/master/LICENSE|https://github.com/mafintosh/multicast-dns|Copyright (c) 2015 Mathias Buus|
 |mustangostang/spyc||https://github.com/mustangostang/spyc||
 |myclabs/deep-copy|https://github.com/myclabs/DeepCopy/blob/master/LICENSE|https://github.com/myclabs/DeepCopy|Copyright (c) 2013 My C-Sense|
-|nan|https://github.com/nodejs/nan/blob/master/LICENSE.md|https://github.com/nodejs/nan||
+|nan|https://github.com/nodejs/nan/blob/master/LICENSE.md|https://github.com/nodejs/nan|Copyright (c) 2018 [NAN contributors](&lt;https://github.com/nodejs/nan#wg-members collaborators&gt;)|
 |nanoid|https://github.com/ai/nanoid/blob/master/LICENSE|https://github.com/ai/nanoid|Copyright 2017 Andrey Sitnik &lt;andrey@sitnik.ru&gt;|
-|natural-compare|https://github.com/litejs/natural-compare-lite/blob/master/README.md|https://github.com/litejs/natural-compare-lite||
-|negotiator|https://github.com/jshttp/negotiator/blob/master/LICENSE|https://github.com/jshttp/negotiator||
+|natural-compare|https://github.com/litejs/natural-compare-lite/blob/master/README.md|https://github.com/litejs/natural-compare-lite|Copyright (c) 2012-2015 Lauri Rooden &amp;lt;lauri@rooden.ee&amp;gt;|
+|negotiator|https://github.com/jshttp/negotiator/blob/master/LICENSE|https://github.com/jshttp/negotiator|Copyright (c) 2012-2014 Federico Romero Copyright (c) 2012-2014 Isaac Z. Schlueter Copyright (c) 2014-2015 Douglas Christopher Wilson|
 |nelmio/alice|https://github.com/nelmio/alice/blob/master/LICENSE|https://github.com/nelmio/alice|Copyright (c) 2012 Nelmio|
 |nelmio/security-bundle|https://github.com/nelmio/NelmioSecurityBundle/blob/master/LICENSE|https://github.com/nelmio/NelmioSecurityBundle|Copyright (c) 2011 Nelmio|
-|neo-async|https://github.com/suguru03/neo-async/blob/master/LICENSE|https://github.com/suguru03/neo-async||
-|nesbot/carbon|https://github.com/briannesbitt/Carbon/blob/master/LICENSE|https://github.com/briannesbitt/Carbon|Copyright (C) Brian Nesbitt|
-|no-case|https://github.com/blakeembrey/change-case/blob/master/LICENSE|https://github.com/blakeembrey/change-case||
+|neo-async|https://github.com/suguru03/neo-async/blob/master/LICENSE|https://github.com/suguru03/neo-async|Copyright (c) 2014-2018 Suguru Motegi Based on Async.js, Copyright Caolan McMahon|
+|nesbot/carbon|https://github.com/CarbonPHP/carbon/blob/master/LICENSE|https://github.com/CarbonPHP/carbon|Copyright (C) Brian Nesbitt|
+|no-case|https://github.com/blakeembrey/change-case/blob/master/LICENSE|https://github.com/blakeembrey/change-case|Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com)|
+|node-addon-api|https://github.com/nodejs/node-addon-api/blob/master/LICENSE.md|https://github.com/nodejs/node-addon-api|Copyright (c) 2017 [Node.js API collaborators](https://github.com/nodejs/node-addon-api#collaborators)|
 |node-releases|https://github.com/chicoxyzzy/node-releases/blob/master/LICENSE|https://github.com/chicoxyzzy/node-releases|Copyright (c) 2017 Sergey Rubanov (https://github.com/chicoxyzzy)|
-|normalize-path|https://github.com/jonschlinkert/normalize-path/blob/master/LICENSE|https://github.com/jonschlinkert/normalize-path||
-|normalize-range|https://github.com/jamestalmage/normalize-range/blob/master/license|https://github.com/jamestalmage/normalize-range||
-|npm-run-path|https://github.com/sindresorhus/npm-run-path/blob/master/license|https://github.com/sindresorhus/npm-run-path||
-|numeral|https://github.com/adamwdraper/Numeral-js/blob/master/LICENSE|https://github.com/adamwdraper/Numeral-js||
-|object-assign|https://github.com/sindresorhus/object-assign/blob/master/license|https://github.com/sindresorhus/object-assign||
+|normalize-path|https://github.com/jonschlinkert/normalize-path/blob/master/LICENSE|https://github.com/jonschlinkert/normalize-path|Copyright (c) 2014-2018, Jon Schlinkert.|
+|normalize-range|https://github.com/jamestalmage/normalize-range/blob/master/license|https://github.com/jamestalmage/normalize-range|Copyright (c) James Talmage &lt;james@talmage.io&gt; (github.com/jamestalmage)|
+|numeral|https://github.com/adamwdraper/Numeral-js/blob/master/LICENSE|https://github.com/adamwdraper/Numeral-js|Copyright (c) 2016 Adam Draper|
+|object-assign|https://github.com/sindresorhus/object-assign/blob/master/license|https://github.com/sindresorhus/object-assign|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
 |object-inspect|https://github.com/inspect-js/object-inspect/blob/master/LICENSE|https://github.com/inspect-js/object-inspect|Copyright (c) 2013 James Halliday|
-|obuf|https://github.com/indutny/offset-buffer/blob/master/LICENSE|https://github.com/indutny/offset-buffer||
-|on-finished|https://github.com/jshttp/on-finished/blob/master/LICENSE|https://github.com/jshttp/on-finished||
-|on-headers|https://github.com/jshttp/on-headers/blob/master/LICENSE|https://github.com/jshttp/on-headers||
-|onetime|https://github.com/sindresorhus/onetime/blob/master/license|https://github.com/sindresorhus/onetime||
-|open|https://github.com/sindresorhus/open/blob/master/license|https://github.com/sindresorhus/open||
-|opener|https://github.com/domenic/opener/blob/master/LICENSE.txt|https://github.com/domenic/opener||
+|obuf|https://github.com/indutny/offset-buffer/blob/master/LICENSE|https://github.com/indutny/offset-buffer|Copyright Fedor Indutny, 2015.|
+|on-finished|https://github.com/jshttp/on-finished/blob/master/LICENSE|https://github.com/jshttp/on-finished|Copyright (c) 2013 Jonathan Ong &lt;me@jongleberry.com&gt; Copyright (c) 2014 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
+|on-headers|https://github.com/jshttp/on-headers/blob/master/LICENSE|https://github.com/jshttp/on-headers|Copyright (c) 2014 Douglas Christopher Wilson|
+|open|https://github.com/sindresorhus/open/blob/master/license|https://github.com/sindresorhus/open|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|opener|https://github.com/domenic/opener/blob/master/LICENSE.txt|https://github.com/domenic/opener|Copyright © 2012–2020 Domenic Denicola &lt;d@domenic.me&gt;  Copyright (C) 2004 Sam Hocevar &lt;sam@hocevar.net&gt;  Copyright © 2012–2020 Domenic Denicola &lt;d@domenic.me&gt;|
 |optionator|https://github.com/gkz/optionator/blob/master/LICENSE|https://github.com/gkz/optionator|Copyright (c) George Zahariev|
-|overlayscrollbars|https://github.com/KingSora/OverlayScrollbars/blob/master/LICENSE|https://github.com/KingSora/OverlayScrollbars||
+|overlayscrollbars|https://github.com/KingSora/OverlayScrollbars/blob/master/LICENSE|https://github.com/KingSora/OverlayScrollbars|Copyright (c) 2017 Rene Haas|
 |p-limit|https://github.com/sindresorhus/p-limit/blob/master/license|https://github.com/sindresorhus/p-limit|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 |p-locate|https://github.com/sindresorhus/p-locate/blob/master/license|https://github.com/sindresorhus/p-locate|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
-|p-retry|https://github.com/sindresorhus/p-retry/blob/master/license|https://github.com/sindresorhus/p-retry||
-|p-try|https://github.com/sindresorhus/p-try/blob/master/license|https://github.com/sindresorhus/p-try||
-|param-case|https://github.com/blakeembrey/change-case/blob/master/LICENSE|https://github.com/blakeembrey/change-case||
-|parent-module|https://github.com/sindresorhus/parent-module/blob/master/license|https://github.com/sindresorhus/parent-module||
-|parse-json|https://github.com/sindresorhus/parse-json/blob/master/license|https://github.com/sindresorhus/parse-json||
+|p-retry|https://github.com/sindresorhus/p-retry/blob/master/license|https://github.com/sindresorhus/p-retry|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|p-try|https://github.com/sindresorhus/p-try/blob/master/license|https://github.com/sindresorhus/p-try|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|param-case|https://github.com/blakeembrey/change-case/blob/master/LICENSE|https://github.com/blakeembrey/change-case|Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com)|
+|parent-module|https://github.com/sindresorhus/parent-module/blob/master/license|https://github.com/sindresorhus/parent-module|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|parse-json|https://github.com/sindresorhus/parse-json/blob/master/license|https://github.com/sindresorhus/parse-json|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 |parse5|https://github.com/inikulin/parse5/blob/master/LICENSE|https://github.com/inikulin/parse5|Copyright (c) 2013-2019 Ivan Nikulin (ifaaan@gmail.com, https://github.com/inikulin)|
 |parse5-htmlparser2-tree-adapter|https://github.com/inikulin/parse5/blob/master/LICENSE|https://github.com/inikulin/parse5|Copyright (c) 2013-2019 Ivan Nikulin (ifaaan@gmail.com, https://github.com/inikulin)|
-|parseurl|https://github.com/pillarjs/parseurl/blob/master/LICENSE|https://github.com/pillarjs/parseurl||
-|pascal-case|https://github.com/blakeembrey/change-case/blob/master/LICENSE|https://github.com/blakeembrey/change-case||
-|path|https://github.com/jinder/path/blob/master/LICENSE|https://github.com/jinder/path||
+|parseurl|https://github.com/pillarjs/parseurl/blob/master/LICENSE|https://github.com/pillarjs/parseurl|Copyright (c) 2014 Jonathan Ong &lt;me@jongleberry.com&gt; Copyright (c) 2014-2017 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
+|pascal-case|https://github.com/blakeembrey/change-case/blob/master/LICENSE|https://github.com/blakeembrey/change-case|Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com)|
+|path|https://github.com/jinder/path/blob/master/LICENSE|https://github.com/jinder/path|Copyright Joyent, Inc. and other Node contributors. All rights reserved.|
 |path-exists|https://github.com/sindresorhus/path-exists/blob/master/license|https://github.com/sindresorhus/path-exists|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
-|path-is-absolute|https://github.com/sindresorhus/path-is-absolute/blob/master/license|https://github.com/sindresorhus/path-is-absolute||
-|path-key|https://github.com/sindresorhus/path-key/blob/master/license|https://github.com/sindresorhus/path-key||
-|path-parse|https://github.com/jbgutierrez/path-parse/blob/master/LICENSE|https://github.com/jbgutierrez/path-parse||
-|path-to-regexp|https://github.com/component/path-to-regexp/blob/master/LICENSE|https://github.com/component/path-to-regexp||
-|path-type|https://github.com/sindresorhus/path-type/blob/master/license|https://github.com/sindresorhus/path-type||
+|path-is-absolute|https://github.com/sindresorhus/path-is-absolute/blob/master/license|https://github.com/sindresorhus/path-is-absolute|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|path-key|https://github.com/sindresorhus/path-key/blob/master/license|https://github.com/sindresorhus/path-key|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|path-parse|https://github.com/jbgutierrez/path-parse/blob/master/LICENSE|https://github.com/jbgutierrez/path-parse|Copyright (c) 2015 Javier Blanco|
+|path-to-regexp|https://github.com/pillarjs/path-to-regexp/blob/master/LICENSE|https://github.com/pillarjs/path-to-regexp|Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com)|
+|path-type|https://github.com/sindresorhus/path-type/blob/master/license|https://github.com/sindresorhus/path-type|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
 |php-http/client-common|https://github.com/php-http/client-common/blob/master/LICENSE|https://github.com/php-http/client-common|Copyright (c) 2015-2016 PHP HTTP Team &lt;team@php-http.org&gt;|
 |php-http/discovery|https://github.com/php-http/discovery/blob/master/LICENSE|https://github.com/php-http/discovery|Copyright (c) 2015-2016 PHP HTTP Team &lt;team@php-http.org&gt;|
 |php-http/httplug|https://github.com/php-http/httplug/blob/master/LICENSE|https://github.com/php-http/httplug|Copyright (c) 2014 Eric GELOEN &lt;geloen.eric@gmail.com&gt; Copyright (c) 2015 PHP HTTP Team &lt;team@php-http.org&gt;|
 |php-http/httplug-bundle|https://github.com/php-http/HttplugBundle/blob/master/LICENSE|https://github.com/php-http/HttplugBundle|Copyright (c) 2015 PHP HTTP Team &lt;team@php-http.org&gt;|
 |php-http/logger-plugin|https://github.com/php-http/logger-plugin/blob/master/LICENSE|https://github.com/php-http/logger-plugin|Copyright (c) 2015-2016 PHP HTTP Team &lt;team@php-http.org&gt;|
 |php-http/message|https://github.com/php-http/message/blob/master/LICENSE|https://github.com/php-http/message|Copyright (c) 2015-2016 PHP HTTP Team &lt;team@php-http.org&gt;|
-|php-http/message-factory|https://github.com/php-http/message-factory/blob/master/LICENSE|https://github.com/php-http/message-factory|Copyright (c) 2015-2016 PHP HTTP Team &lt;team@php-http.org&gt;|
 |php-http/promise|https://github.com/php-http/promise/blob/master/LICENSE|https://github.com/php-http/promise|Copyright (c) 2015-2016 PHP HTTP Team &lt;team@php-http.org&gt;|
 |php-http/stopwatch-plugin|https://github.com/php-http/stopwatch-plugin/blob/master/LICENSE|https://github.com/php-http/stopwatch-plugin|Copyright (c) 2015-2016 PHP HTTP Team &lt;team@php-http.org&gt;|
 |phpdocumentor/reflection-common|https://github.com/phpDocumentor/ReflectionCommon/blob/master/LICENSE|https://github.com/phpDocumentor/ReflectionCommon|Copyright (c) 2015 phpDocumentor|
 |phpdocumentor/reflection-docblock|https://github.com/phpDocumentor/ReflectionDocBlock/blob/master/LICENSE|https://github.com/phpDocumentor/ReflectionDocBlock|Copyright (c) 2010 Mike van Riel|
 |phpdocumentor/type-resolver|https://github.com/phpDocumentor/TypeResolver/blob/master/LICENSE|https://github.com/phpDocumentor/TypeResolver|Copyright (c) 2010 Mike van Riel|
-|phpstan/phpdoc-parser|https://github.com/phpstan/phpdoc-parser/blob/master/LICENSE|https://github.com/phpstan/phpdoc-parser|Copyright (c) 2016 Ondřej Mirtes|
-|picomatch|https://github.com/micromatch/picomatch/blob/master/LICENSE|https://github.com/micromatch/picomatch||
+|phpstan/phpdoc-parser|https://github.com/phpstan/phpdoc-parser/blob/master/LICENSE|https://github.com/phpstan/phpdoc-parser|Copyright (c) 2016 Ondřej Mirtes Copyright (c) 2025 PHPStan s.r.o.|
+|picomatch|https://github.com/micromatch/picomatch/blob/master/LICENSE|https://github.com/micromatch/picomatch|Copyright (c) 2017-present, Jon Schlinkert.|
 |pkg-dir|https://github.com/sindresorhus/pkg-dir/blob/master/license|https://github.com/sindresorhus/pkg-dir|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 |popper.js|https://github.com/FezVrasta/popper.js/blob/master/README.md|https://github.com/FezVrasta/popper.js||
 |postcss|https://github.com/postcss/postcss/blob/master/LICENSE|https://github.com/postcss/postcss|Copyright 2013 Andrey Sitnik &lt;andrey@sitnik.ru&gt;|
@@ -823,20 +837,20 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |postcss-ordered-values|https://github.com/cssnano/cssnano/blob/master/LICENSE-MIT|https://github.com/cssnano/cssnano|Copyright (c) Ben Briggs &lt;beneb.info@gmail.com&gt; (http://beneb.info)|
 |postcss-reduce-initial|https://github.com/cssnano/cssnano/blob/master/LICENSE-MIT|https://github.com/cssnano/cssnano|Copyright (c) Ben Briggs &lt;beneb.info@gmail.com&gt; (http://beneb.info)|
 |postcss-reduce-transforms|https://github.com/cssnano/cssnano/blob/master/LICENSE-MIT|https://github.com/cssnano/cssnano|Copyright (c) Ben Briggs &lt;beneb.info@gmail.com&gt; (http://beneb.info)|
-|postcss-resolve-nested-selector||https://npmjs.com/package/postcss-resolve-nested-selector||
-|postcss-safe-parser|https://github.com/postcss/postcss-safe-parser/blob/master/LICENSE|https://github.com/postcss/postcss-safe-parser||
+|postcss-resolve-nested-selector|https://github.com/csstools/postcss-resolve-nested-selector/blob/master/LICENSE|https://github.com/csstools/postcss-resolve-nested-selector|Copyright (c) 2016 David Clark Copyright © CSSTools Contributors|
+|postcss-safe-parser|https://github.com/postcss/postcss-safe-parser/blob/master/LICENSE|https://github.com/postcss/postcss-safe-parser|Copyright 2013 Andrey Sitnik &lt;andrey@sitnik.ru&gt;|
 |postcss-scss|https://github.com/postcss/postcss-scss/blob/master/LICENSE|https://github.com/postcss/postcss-scss|Copyright 2013 Andrey Sitnik &lt;andrey@sitnik.ru&gt;|
 |postcss-selector-parser|https://github.com/postcss/postcss-selector-parser/blob/master/LICENSE-MIT|https://github.com/postcss/postcss-selector-parser|Copyright (c) Ben Briggs &lt;beneb.info@gmail.com&gt; (http://beneb.info)|
 |postcss-svgo|https://github.com/cssnano/cssnano/blob/master/LICENSE-MIT|https://github.com/cssnano/cssnano|Copyright (c) Ben Briggs &lt;beneb.info@gmail.com&gt; (http://beneb.info)|
 |postcss-unique-selectors|https://github.com/cssnano/cssnano/blob/master/LICENSE-MIT|https://github.com/cssnano/cssnano|Copyright (c) Ben Briggs &lt;beneb.info@gmail.com&gt; (http://beneb.info)|
-|postcss-value-parser|https://github.com/TrySound/postcss-value-parser/blob/master/LICENSE|https://github.com/TrySound/postcss-value-parser||
+|postcss-value-parser|https://github.com/TrySound/postcss-value-parser/blob/master/LICENSE|https://github.com/TrySound/postcss-value-parser|Copyright (c) Bogdan Chadkin &lt;trysound@yandex.ru&gt;|
 |predis/predis|https://github.com/predis/predis/blob/master/LICENSE|https://github.com/predis/predis|Copyright (c) 2009-2016 Daniele Alessandri|
-|prelude-ls|https://github.com/gkz/prelude-ls/blob/master/LICENSE|https://github.com/gkz/prelude-ls||
-|pretty-error|https://github.com/AriaMinaei/pretty-error/blob/master/LICENSE|https://github.com/AriaMinaei/pretty-error||
-|printf|https://github.com/adaltas/node-printf/blob/master/LICENSE|https://github.com/adaltas/node-printf||
-|process|https://github.com/shtylman/node-process/blob/master/LICENSE|https://github.com/shtylman/node-process||
-|process-nextick-args|https://github.com/calvinmetcalf/process-nextick-args/blob/master/license.md|https://github.com/calvinmetcalf/process-nextick-args||
-|proxy-addr|https://github.com/jshttp/proxy-addr/blob/master/LICENSE|https://github.com/jshttp/proxy-addr||
+|prelude-ls|https://github.com/gkz/prelude-ls/blob/master/LICENSE|https://github.com/gkz/prelude-ls|Copyright (c) George Zahariev|
+|pretty-error|https://github.com/AriaMinaei/pretty-error/blob/master/LICENSE|https://github.com/AriaMinaei/pretty-error|Copyright (c) 2013 Aria Minaei|
+|printf|https://github.com/adaltas/node-printf/blob/master/LICENSE|https://github.com/adaltas/node-printf|Copyright (c) 2008 Adaltas|
+|process|https://github.com/shtylman/node-process/blob/master/LICENSE|https://github.com/shtylman/node-process|Copyright (c) 2013 Roman Shtylman &lt;shtylman@gmail.com&gt;|
+|process-nextick-args|https://github.com/calvinmetcalf/process-nextick-args/blob/master/license.md|https://github.com/calvinmetcalf/process-nextick-args|Copyright (c) 2015 Calvin Metcalf|
+|proxy-addr|https://github.com/jshttp/proxy-addr/blob/master/LICENSE|https://github.com/jshttp/proxy-addr|Copyright (c) 2014-2016 Douglas Christopher Wilson|
 |psr/cache|https://github.com/php-fig/cache/blob/master/LICENSE.txt|https://github.com/php-fig/cache|Copyright (c) 2015 PHP Framework Interoperability Group|
 |psr/clock|https://github.com/php-fig/clock/blob/master/LICENSE|https://github.com/php-fig/clock|Copyright (c) 2017 PHP Framework Interoperability Group|
 |psr/container|https://github.com/php-fig/container/blob/master/LICENSE|https://github.com/php-fig/container|Copyright (c) 2013-2016 container-interop Copyright (c) 2016 PHP Framework Interoperability Group|
@@ -848,14 +862,14 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |psr/log|https://github.com/php-fig/log/blob/master/LICENSE|https://github.com/php-fig/log|Copyright (c) 2012 PHP Framework Interoperability Group|
 |psr/simple-cache|https://github.com/php-fig/simple-cache/blob/master/LICENSE.md|https://github.com/php-fig/simple-cache|Copyright (c) 2016 PHP Framework Interoperability Group|
 |punycode|https://github.com/mathiasbynens/punycode.js/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/punycode.js|Copyright Mathias Bynens &lt;https://mathiasbynens.be/&gt;|
-|qjobs|https://github.com/franck34/qjobs/blob/master/LICENCE|https://github.com/franck34/qjobs||
-|queue-microtask|https://github.com/feross/queue-microtask/blob/master/LICENSE|https://github.com/feross/queue-microtask||
+|qjobs|https://github.com/franck34/qjobs/blob/master/LICENCE|https://github.com/franck34/qjobs|Copyright (c) 2013-2018 Franck34|
+|queue-microtask|https://github.com/feross/queue-microtask/blob/master/LICENSE|https://github.com/feross/queue-microtask|Copyright (c) Feross Aboukhadijeh|
 |quick-lru|https://github.com/sindresorhus/quick-lru/blob/master/license|https://github.com/sindresorhus/quick-lru|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
 |ralouphie/getallheaders|https://github.com/ralouphie/getallheaders/blob/master/LICENSE|https://github.com/ralouphie/getallheaders|Copyright (c) 2014 Ralph Khattar|
-|randombytes|https://github.com/crypto-browserify/randombytes/blob/master/LICENSE|https://github.com/crypto-browserify/randombytes||
-|range-parser|https://github.com/jshttp/range-parser/blob/master/LICENSE|https://github.com/jshttp/range-parser||
+|randombytes|https://github.com/crypto-browserify/randombytes/blob/master/LICENSE|https://github.com/crypto-browserify/randombytes|Copyright (c) 2017 crypto-browserify|
+|range-parser|https://github.com/jshttp/range-parser/blob/master/LICENSE|https://github.com/jshttp/range-parser|Copyright (c) 2012-2014 TJ Holowaychuk &lt;tj@vision-media.ca&gt; Copyright (c) 2015-2016 Douglas Christopher Wilson &lt;doug@somethingdoug.com|
 |ratchet/rfc6455|https://github.com/ratchetphp/RFC6455/blob/master/LICENSE|https://github.com/ratchetphp/RFC6455|Copyright (c) 2011 Chris Boden|
-|raw-body|https://github.com/stream-utils/raw-body/blob/master/LICENSE|https://github.com/stream-utils/raw-body||
+|raw-body|https://github.com/stream-utils/raw-body/blob/master/LICENSE|https://github.com/stream-utils/raw-body|Copyright (c) 2013-2014 Jonathan Ong &lt;me@jongleberry.com&gt; Copyright (c) 2014-2022 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
 |react/cache|https://github.com/reactphp/cache/blob/master/LICENSE|https://github.com/reactphp/cache|Copyright (c) 2012 Christian Lück, Cees-Jan Kiewiet, Jan Sorgalla, Chris Boden, Igor Wiedler|
 |react/dns|https://github.com/reactphp/dns/blob/master/LICENSE|https://github.com/reactphp/dns|Copyright (c) 2012 Christian Lück, Cees-Jan Kiewiet, Jan Sorgalla, Chris Boden, Igor Wiedler|
 |react/event-loop|https://github.com/reactphp/event-loop/blob/master/LICENSE|https://github.com/reactphp/event-loop|Copyright (c) 2012 Christian Lück, Cees-Jan Kiewiet, Jan Sorgalla, Chris Boden, Igor Wiedler|
@@ -864,108 +878,114 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |react/stream|https://github.com/reactphp/stream/blob/master/LICENSE|https://github.com/reactphp/stream|Copyright (c) 2012 Christian Lück, Cees-Jan Kiewiet, Jan Sorgalla, Chris Boden, Igor Wiedler|
 |read-pkg|https://github.com/sindresorhus/read-pkg/blob/master/license|https://github.com/sindresorhus/read-pkg|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 |read-pkg-up|https://github.com/sindresorhus/read-pkg-up/blob/master/license|https://github.com/sindresorhus/read-pkg-up|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
-|readable-stream|https://github.com/nodejs/readable-stream/blob/master/LICENSE|https://github.com/nodejs/readable-stream||
-|readdirp|https://github.com/paulmillr/readdirp/blob/master/LICENSE|https://github.com/paulmillr/readdirp||
-|rechoir|https://github.com/gulpjs/rechoir/blob/master/LICENSE|https://github.com/gulpjs/rechoir||
+|readable-stream|https://github.com/nodejs/readable-stream/blob/master/LICENSE|https://github.com/nodejs/readable-stream|Copyright Node.js contributors. All rights reserved.  Copyright Joyent, Inc. and other Node contributors. All rights reserved.|
+|readdirp|https://github.com/paulmillr/readdirp/blob/master/LICENSE|https://github.com/paulmillr/readdirp|Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com)|
+|rechoir|https://github.com/gulpjs/rechoir/blob/master/LICENSE|https://github.com/gulpjs/rechoir|Copyright (c) 2014-2019, 2021 Tyler Kellen &lt;tyler@sleekcode.net&gt;, Blaine Bublitz &lt;blaine.bublitz@gmail.com&gt;, and Eric Schoffstall &lt;yo@contra.io&gt;|
 |redent|https://github.com/sindresorhus/redent/blob/master/license|https://github.com/sindresorhus/redent|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
-|reduce-flatten|https://github.com/75lb/reduce-flatten/blob/master/LICENSE|https://github.com/75lb/reduce-flatten||
-|regenerate|https://github.com/mathiasbynens/regenerate/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/regenerate||
+|reduce-flatten|https://github.com/75lb/reduce-flatten/blob/master/LICENSE|https://github.com/75lb/reduce-flatten|Copyright (c) 2016-18 Lloyd Brookes &lt;75pound@gmail.com&gt;|
+|regenerate|https://github.com/mathiasbynens/regenerate/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/regenerate|Copyright Mathias Bynens &lt;https://mathiasbynens.be/&gt;|
 |regenerate-unicode-properties|https://github.com/mathiasbynens/regenerate-unicode-properties/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/regenerate-unicode-properties|Copyright Mathias Bynens &lt;https://mathiasbynens.be/&gt;|
 |regenerator-runtime|https://github.com/facebook/regenerator/blob/master/LICENSE|https://github.com/facebook/regenerator|Copyright (c) 2014-present, Facebook, Inc.|
 |regenerator-transform|https://github.com/facebook/regenerator/blob/master/LICENSE|https://github.com/facebook/regenerator|Copyright (c) 2014-present, Facebook, Inc.|
-|regex-parser|https://github.com/IonicaBizau/regex-parser.js/blob/master/LICENSE|https://github.com/IonicaBizau/regex-parser.js|Copyright (c) 2014-24 Ionică Bizău &lt;bizauionica@gmail.com&gt; (https://ionicabizau.net)|
-|regexpu-core|https://github.com/mathiasbynens/regexpu-core/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/regexpu-core||
-|relateurl|https://github.com/stevenvachon/relateurl/blob/master/license|https://github.com/stevenvachon/relateurl||
-|renderkid|https://github.com/AriaMinaei/RenderKid/blob/master/LICENSE|https://github.com/AriaMinaei/RenderKid||
-|require-directory|https://github.com/troygoode/node-require-directory/blob/master/LICENSE|https://github.com/troygoode/node-require-directory||
-|require-from-string|https://github.com/floatdrop/require-from-string/blob/master/license|https://github.com/floatdrop/require-from-string||
-|requires-port|https://github.com/unshiftio/requires-port/blob/master/LICENSE|https://github.com/unshiftio/requires-port||
+|regex-parser|https://github.com/IonicaBizau/regex-parser.js/blob/master/LICENSE|https://github.com/IonicaBizau/regex-parser.js|Copyright (c) 2014-25 Ionică Bizău &lt;bizauionica@gmail.com&gt; (https://ionicabizau.net)|
+|regexpu-core|https://github.com/mathiasbynens/regexpu-core/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/regexpu-core|Copyright Mathias Bynens &lt;https://mathiasbynens.be/&gt;|
+|regjsgen|https://github.com/bnjmnt4n/regjsgen/blob/master/LICENSE-MIT.txt|https://github.com/bnjmnt4n/regjsgen|Copyright 2014-2020 Benjamin Tan &lt;https://ofcr.se/&gt;|
+|relateurl|https://github.com/stevenvachon/relateurl/blob/master/license|https://github.com/stevenvachon/relateurl|Copyright (c) Steven Vachon &lt;contact@svachon.com&gt; (svachon.com)|
+|renderkid|https://github.com/AriaMinaei/RenderKid/blob/master/LICENSE|https://github.com/AriaMinaei/RenderKid|Copyright (c) 2015 Aria Minaei|
+|require-directory|https://github.com/troygoode/node-require-directory/blob/master/LICENSE|https://github.com/troygoode/node-require-directory|Copyright (c) 2011 Troy Goode &lt;troygoode@gmail.com&gt;|
+|require-from-string|https://github.com/floatdrop/require-from-string/blob/master/license|https://github.com/floatdrop/require-from-string|Copyright (c) Vsevolod Strukchinsky &lt;floatdrop@gmail.com&gt; (github.com/floatdrop)|
+|requires-port|https://github.com/unshiftio/requires-port/blob/master/LICENSE|https://github.com/unshiftio/requires-port|Copyright (c) 2015 Unshift.io, Arnout Kazemier,  the Contributors.|
 |resolve|https://github.com/browserify/resolve/blob/master/LICENSE|https://github.com/browserify/resolve|Copyright (c) 2012 James Halliday|
-|resolve-cwd|https://github.com/sindresorhus/resolve-cwd/blob/master/license|https://github.com/sindresorhus/resolve-cwd||
-|resolve-from|https://github.com/sindresorhus/resolve-from/blob/master/license|https://github.com/sindresorhus/resolve-from||
-|resolve-url-loader|https://github.com/bholloway/resolve-url-loader/blob/master/LICENSE|https://github.com/bholloway/resolve-url-loader||
-|retry|https://github.com/tim-kos/node-retry/blob/master/License|https://github.com/tim-kos/node-retry||
-|reusify|https://github.com/mcollina/reusify/blob/master/LICENSE|https://github.com/mcollina/reusify||
+|resolve-cwd|https://github.com/sindresorhus/resolve-cwd/blob/master/license|https://github.com/sindresorhus/resolve-cwd|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|resolve-from|https://github.com/sindresorhus/resolve-from/blob/master/license|https://github.com/sindresorhus/resolve-from|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|resolve-pkg-maps|https://github.com/privatenumber/resolve-pkg-maps/blob/master/LICENSE|https://github.com/privatenumber/resolve-pkg-maps|Copyright (c) Hiroki Osame &lt;hiroki.osame@gmail.com&gt;|
+|resolve-url-loader|https://github.com/bholloway/resolve-url-loader/blob/master/LICENSE|https://github.com/bholloway/resolve-url-loader|Copyright (c) 2016 Ben Holloway|
+|retry|https://github.com/tim-kos/node-retry/blob/master/License|https://github.com/tim-kos/node-retry|Copyright (c) 2011: Tim Koschützki (tim@debuggable.com)|
+|reusify|https://github.com/mcollina/reusify/blob/master/LICENSE|https://github.com/mcollina/reusify|Copyright (c) 2015-2024 Matteo Collina|
 |rfdc|https://github.com/davidmarkclements/rfdc/blob/master/LICENSE|https://github.com/davidmarkclements/rfdc|Copyright 2019 &quot;David Mark Clements &lt;david.mark.clements@gmail.com&gt;&quot;|
 |romanpitak/dotmailer-api-v2-client|https://github.com/laboro/dotMailer-API-v2-PHP-client/blob/master/LICENSE|https://github.com/laboro/dotMailer-API-v2-PHP-client|Copyright (c) 2014-2016 Roman Piták, http://pitak.net &lt;roman@pitak.net&gt;|
 |romanpitak/php-rest-client|https://github.com/romanpitak/PHP-REST-Client/blob/master/LICENSE|https://github.com/romanpitak/PHP-REST-Client|Copyright (c) 2014-2015 Roman Piták, http://pitak.net &lt;roman@pitak.net&gt;|
-|rtlcss|https://github.com/MohammadYounes/rtlcss/blob/master/LICENSE|https://github.com/MohammadYounes/rtlcss||
-|rtlcss-webpack-plugin|https://github.com/wix/rtlcss-webpack-plugin/blob/master/LICENSE|https://github.com/wix/rtlcss-webpack-plugin||
-|run-parallel|https://github.com/feross/run-parallel/blob/master/LICENSE|https://github.com/feross/run-parallel||
-|safe-buffer|https://github.com/feross/safe-buffer/blob/master/LICENSE|https://github.com/feross/safe-buffer||
-|safer-buffer|https://github.com/ChALkeR/safer-buffer/blob/master/LICENSE|https://github.com/ChALkeR/safer-buffer||
+|rtlcss|https://github.com/MohammadYounes/rtlcss/blob/master/LICENSE|https://github.com/MohammadYounes/rtlcss|Copyright (c) 2014-2016  Mohammad Younes|
+|rtlcss-webpack-plugin|https://github.com/wix/rtlcss-webpack-plugin/blob/master/LICENSE|https://github.com/wix/rtlcss-webpack-plugin|Copyright (c) 2018 Wix.com|
+|run-applescript|https://github.com/sindresorhus/run-applescript/blob/master/license|https://github.com/sindresorhus/run-applescript|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|run-parallel|https://github.com/feross/run-parallel/blob/master/LICENSE|https://github.com/feross/run-parallel|Copyright (c) Feross Aboukhadijeh|
+|safe-buffer|https://github.com/feross/safe-buffer/blob/master/LICENSE|https://github.com/feross/safe-buffer|Copyright (c) Feross Aboukhadijeh|
+|safe-regex-test|https://github.com/ljharb/safe-regex-test/blob/master/LICENSE|https://github.com/ljharb/safe-regex-test|Copyright (c) 2022 Jordan Harband|
+|safer-buffer|https://github.com/ChALkeR/safer-buffer/blob/master/LICENSE|https://github.com/ChALkeR/safer-buffer|Copyright (c) 2018 Nikita Skovoroda &lt;chalkerx@gmail.com&gt;|
 |salsify/json-streaming-parser|https://github.com/salsify/jsonstreamingparser/blob/master/LICENSE.txt|https://github.com/salsify/jsonstreamingparser|Copyright © 2013 &lt;copyright holders&gt;|
-|sass|https://github.com/sass/dart-sass/blob/master/LICENSE|https://github.com/sass/dart-sass|Copyright (c) 2016, Google Inc.  Copyright 2012, the Dart project authors.  Copyright 2019, the Dart project authors.  Copyright 2013, the Dart project authors.  Copyright (c) 2013-2021 Brendan Duncan. All rights reserved. Copyright 2013, the Dart project authors.   Copyright 2015, the Dart project authors.   Copyright 2016, the Dart project authors.  Copyright 2014, the Dart project authors. All rights reserved. Redistribution and use in source and binary forms, with or without Copyright 2019, the Dart project authors. All rights reserved. Redistribution and use in source and binary forms, with or without Copyright (c) 2018, Jennifer Thakar. All rights reserved. Copyright 2015, the Dart project authors.  Copyright 2014, the Dart project authors.   Copyright 2017, the Dart project authors. All rights reserved. Redistribution and use in source and binary forms, with or without Copyright 2020, the Dart project authors.   Copyright 2013, Google Inc. All rights reserved. Copyright (c) 2006-2012 The Authors  Copyright 2014, the Dart project authors.  Copyright 2017, the Dart project authors.   Copyright 2012, the Dart project authors.  Copyright 2017, the Dart project authors. All rights reserved. Redistribution and use in source and binary forms, with or without Copyright 2021, the Dart project authors.  Copyright 2012, the Dart project authors.   Copyright (c) 2017, Anatoly Pulyaevskiy. All rights reserved. Copyright (c) 2015 Michael Bullington  Copyright 2012, the Dart project authors. All rights reserved. Redistribution and use in source and binary forms, with or without Copyright 2019, the Dart project authors.   Copyright (c) 2006-2023 Lukas Renggli. All rights reserved. Copyright (c) 2000 - 2019 The Legion of the Bouncy Castle Inc. (https://www.bouncycastle.org)  Copyright (c) 2020 Leo Farias  Copyright (c) 2015, Anders Holmgren. All rights reserved. Copyright 2018, the Dart project authors.  Copyright 2018, the Dart project authors.   Copyright 2016, the Dart project authors.   Copyright 2017, the Dart project authors.  Copyright (c) 2014, the tuple project authors. All rights reserved. Copyright 2013, the Dart project authors. All rights reserved. Redistribution and use in source and binary forms, with or without Copyright (c) 2006-2022 Lukas Renggli. All rights reserved. Copyright (c) 2014, the Dart project authors. Copyright (c) 2006, Kirill Simonov.|
+|sass|https://github.com/sass/dart-sass/blob/master/LICENSE|https://github.com/sass/dart-sass|Copyright (c) 2016, Google Inc.  Copyright 2012, the Dart project authors.  Copyright 2019, the Dart project authors.  Copyright 2024, the Dart project authors.  Copyright 2013, the Dart project authors.  Copyright (c) 2013-2021 Brendan Duncan. All rights reserved. Copyright 2013, the Dart project authors.   Copyright 2015, the Dart project authors.   Copyright 2016, the Dart project authors.  Copyright 2014, the Dart project authors. All rights reserved.  Redistribution and use in source and binary forms, with or without  Copyright 2019, the Dart project authors. All rights reserved. Redistribution and use in source and binary forms, with or without Copyright (c) 2018, Jennifer Thakar. All rights reserved. Copyright 2015, the Dart project authors.  Copyright 2014, the Dart project authors.   Copyright (c) 2021 Kilian Schulte  Copyright 2019, the Dart project authors.   Copyright 2017, the Dart project authors. All rights reserved. Redistribution and use in source and binary forms, with or without Copyright 2014, the Dart project authors.  Copyright 2020, the Dart project authors.   Copyright 2013, Google Inc. All rights reserved. Copyright (c) 2006-2012 The Authors  Copyright 2017, the Dart project authors.   Copyright 2012, the Dart project authors.  Copyright 2017, the Dart project authors. All rights reserved. Redistribution and use in source and binary forms, with or without Copyright 2021, the Dart project authors.  Copyright 2012, the Dart project authors.   Copyright 2020, the Dart project authors.  Copyright 2023, the Dart project authors.  Copyright (c) 2017, Anatoly Pulyaevskiy. All rights reserved. Copyright (c) 2015 Michael Bullington  Copyright 2012, the Dart project authors. All rights reserved. Redistribution and use in source and binary forms, with or without Copyright (c) 2006-2025 Lukas Renggli. All rights reserved. Copyright (c) 2020 Leo Farias  Copyright 2018, the Dart project authors.  Copyright 2018, the Dart project authors.   Copyright 2016, the Dart project authors.   Copyright 2017, the Dart project authors.  Copyright 2023, the Dart project authors.  Copyright 2024, the Dart project authors.   Copyright (c) 2006-2023 Lukas Renggli. All rights reserved. Copyright (c) 2014, the Dart project authors. Copyright (c) 2006, Kirill Simonov.|
 |sass-loader|https://github.com/webpack-contrib/sass-loader/blob/master/LICENSE|https://github.com/webpack-contrib/sass-loader|Copyright JS Foundation and other contributors|
 |schema-utils|https://github.com/webpack/schema-utils/blob/master/LICENSE|https://github.com/webpack/schema-utils|Copyright JS Foundation and other contributors|
-|scriptjs|https://github.com/ded/script.js/blob/master/LICENSE|https://github.com/ded/script.js||
-|select-hose|https://github.com/indutny/select-hose/blob/master/README.md|https://github.com/indutny/select-hose||
+|scriptjs|https://github.com/ded/script.js/blob/master/LICENSE|https://github.com/ded/script.js|Copyright (c) 2011 - 2015 Dustin Diaz &lt;dustin@dustindiaz.com&gt;|
+|select-hose|https://github.com/indutny/select-hose/blob/master/README.md|https://github.com/indutny/select-hose|Copyright Fedor Indutny, 2015.|
 |selfsigned|https://github.com/jfromaniello/selfsigned/blob/master/LICENSE|https://github.com/jfromaniello/selfsigned|Copyright (c) 2013 José F. Romaniello|
-|send|https://github.com/pillarjs/send/blob/master/LICENSE|https://github.com/pillarjs/send||
+|send|https://github.com/pillarjs/send/blob/master/LICENSE|https://github.com/pillarjs/send|Copyright (c) 2012 TJ Holowaychuk Copyright (c) 2014-2022 Douglas Christopher Wilson|
 |sensio/framework-extra-bundle|https://github.com/sensiolabs/SensioFrameworkExtraBundle/blob/master/LICENSE|https://github.com/sensiolabs/SensioFrameworkExtraBundle|Copyright (c) 2010-2020 Fabien Potencier|
-|serve-index|https://github.com/expressjs/serve-index/blob/master/LICENSE|https://github.com/expressjs/serve-index||
-|serve-static|https://github.com/expressjs/serve-static/blob/master/LICENSE|https://github.com/expressjs/serve-static||
-|set-function-length|https://github.com/ljharb/set-function-length/blob/master/LICENSE|https://github.com/ljharb/set-function-length|Copyright (c) Jordan Harband and contributors|
-|shallow-clone|https://github.com/jonschlinkert/shallow-clone/blob/master/LICENSE|https://github.com/jonschlinkert/shallow-clone||
-|shebang-command|https://github.com/kevva/shebang-command/blob/master/license|https://github.com/kevva/shebang-command||
-|shebang-regex|https://github.com/sindresorhus/shebang-regex/blob/master/license|https://github.com/sindresorhus/shebang-regex||
+|serve-index|https://github.com/expressjs/serve-index/blob/master/LICENSE|https://github.com/expressjs/serve-index|Copyright (c) 2010 Sencha Inc. Copyright (c) 2011 LearnBoost Copyright (c) 2011 TJ Holowaychuk Copyright (c) 2014-2015 Douglas Christopher Wilson|
+|serve-static|https://github.com/expressjs/serve-static/blob/master/LICENSE|https://github.com/expressjs/serve-static|Copyright (c) 2010 Sencha Inc. Copyright (c) 2011 LearnBoost Copyright (c) 2011 TJ Holowaychuk Copyright (c) 2014-2016 Douglas Christopher Wilson|
+|shallow-clone|https://github.com/jonschlinkert/shallow-clone/blob/master/LICENSE|https://github.com/jonschlinkert/shallow-clone|Copyright (c) 2015-present, Jon Schlinkert.|
+|shebang-command|https://github.com/kevva/shebang-command/blob/master/license|https://github.com/kevva/shebang-command|Copyright (c) Kevin Mårtensson &lt;kevinmartensson@gmail.com&gt; (github.com/kevva)|
+|shebang-regex|https://github.com/sindresorhus/shebang-regex/blob/master/license|https://github.com/sindresorhus/shebang-regex|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
 |shell-quote|https://github.com/ljharb/shell-quote/blob/master/LICENSE|https://github.com/ljharb/shell-quote|Copyright (c) 2013 James Halliday (mail@substack.net)|
 |side-channel|https://github.com/ljharb/side-channel/blob/master/LICENSE|https://github.com/ljharb/side-channel|Copyright (c) 2019 Jordan Harband|
+|side-channel-list|https://github.com/ljharb/side-channel-list/blob/master/LICENSE|https://github.com/ljharb/side-channel-list|Copyright (c) 2024 Jordan Harband|
+|side-channel-map|https://github.com/ljharb/side-channel-map/blob/master/LICENSE|https://github.com/ljharb/side-channel-map|Copyright (c) 2024 Jordan Harband|
+|side-channel-weakmap|https://github.com/ljharb/side-channel-weakmap/blob/master/LICENSE|https://github.com/ljharb/side-channel-weakmap|Copyright (c) 2019 Jordan Harband|
 |sirv|https://github.com/lukeed/sirv/blob/master/readme.md|https://github.com/lukeed/sirv||
-|slash|https://github.com/sindresorhus/slash/blob/master/license|https://github.com/sindresorhus/slash||
-|slice-ansi|https://github.com/chalk/slice-ansi/blob/master/license|https://github.com/chalk/slice-ansi||
-|socket.io|https://github.com/socketio/socket.io/blob/master/LICENSE|https://github.com/socketio/socket.io|Copyright (c) 2014-2018 Automattic &lt;dev@cloudup.com&gt;|
+|slash|https://github.com/sindresorhus/slash/blob/master/license|https://github.com/sindresorhus/slash|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|slice-ansi|https://github.com/chalk/slice-ansi/blob/master/license|https://github.com/chalk/slice-ansi|Copyright (c) DC &lt;threedeecee@gmail.com&gt; Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|socket.io|https://github.com/socketio/socket.io/blob/master/LICENSE|https://github.com/socketio/socket.io|Copyright (c) 2014-present Guillermo Rauch and Socket.IO contributors|
 |socket.io-adapter|https://github.com/socketio/socket.io-adapter/blob/master/LICENSE|https://github.com/socketio/socket.io-adapter|Copyright (c) 2014 Guillermo Rauch &lt;guillermo@learnboost.com&gt;|
 |socket.io-parser|https://github.com/socketio/socket.io-parser/blob/master/LICENSE|https://github.com/socketio/socket.io-parser|Copyright (c) 2014 Guillermo Rauch &lt;guillermo@learnboost.com&gt;|
-|sockjs|https://github.com/sockjs/sockjs-node/blob/master/LICENSE|https://github.com/sockjs/sockjs-node||
-|source-map-support|https://github.com/evanw/node-source-map-support/blob/master/LICENSE.md|https://github.com/evanw/node-source-map-support||
-|spdx-expression-parse|https://github.com/jslicense/spdx-expression-parse.js/blob/master/LICENSE|https://github.com/jslicense/spdx-expression-parse.js||
-|spdy|https://github.com/indutny/node-spdy/blob/master/README.md|https://github.com/indutny/node-spdy||
-|spdy-transport|https://github.com/spdy-http2/spdy-transport/blob/master/README.md|https://github.com/spdy-http2/spdy-transport||
-|statuses|https://github.com/jshttp/statuses/blob/master/LICENSE|https://github.com/jshttp/statuses||
+|sockjs|https://github.com/sockjs/sockjs-node/blob/master/LICENSE|https://github.com/sockjs/sockjs-node|Copyright (C) 2011 VMware, Inc.|
+|source-list-map|https://github.com/webpack/source-list-map/blob/master/LICENSE|https://github.com/webpack/source-list-map|Copyright 2017 JS Foundation|
+|source-map-support|https://github.com/evanw/node-source-map-support/blob/master/LICENSE.md|https://github.com/evanw/node-source-map-support|Copyright (c) 2014 Evan Wallace|
+|spdx-expression-parse|https://github.com/jslicense/spdx-expression-parse.js/blob/master/LICENSE|https://github.com/jslicense/spdx-expression-parse.js|Copyright (c) 2015 Kyle E. Mitchell &amp; other authors listed in AUTHORS|
+|spdy|https://github.com/indutny/node-spdy/blob/master/README.md|https://github.com/indutny/node-spdy|Copyright Fedor Indutny, 2015.|
+|spdy-transport|https://github.com/spdy-http2/spdy-transport/blob/master/README.md|https://github.com/spdy-http2/spdy-transport|Copyright Fedor Indutny, 2015.|
+|statuses|https://github.com/jshttp/statuses/blob/master/LICENSE|https://github.com/jshttp/statuses|Copyright (c) 2014 Jonathan Ong &lt;me@jongleberry.com&gt; Copyright (c) 2016 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
 |stof/doctrine-extensions-bundle|https://github.com/stof/StofDoctrineExtensionsBundle/blob/master/LICENSE|https://github.com/stof/StofDoctrineExtensionsBundle|Copyright (c) 2010 Christophe Coevoet|
-|streamroller|https://github.com/log4js-node/streamroller/blob/master/LICENSE|https://github.com/log4js-node/streamroller||
-|string-width|https://github.com/sindresorhus/string-width/blob/master/license|https://github.com/sindresorhus/string-width||
-|string_decoder|https://github.com/nodejs/string_decoder/blob/master/LICENSE|https://github.com/nodejs/string_decoder||
-|strip-ansi|https://github.com/chalk/strip-ansi/blob/master/license|https://github.com/chalk/strip-ansi||
-|strip-comments|https://github.com/jonschlinkert/strip-comments/blob/master/LICENSE|https://github.com/jonschlinkert/strip-comments||
-|strip-final-newline|https://github.com/sindresorhus/strip-final-newline/blob/master/license|https://github.com/sindresorhus/strip-final-newline||
+|streamroller|https://github.com/log4js-node/streamroller/blob/master/LICENSE|https://github.com/log4js-node/streamroller|Copyright (c) 2013 Gareth Jones|
+|string-width|https://github.com/sindresorhus/string-width/blob/master/license|https://github.com/sindresorhus/string-width|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|string_decoder|https://github.com/nodejs/string_decoder/blob/master/LICENSE|https://github.com/nodejs/string_decoder|Copyright Node.js contributors. All rights reserved.  Copyright Joyent, Inc. and other Node contributors. All rights reserved.|
+|strip-ansi|https://github.com/chalk/strip-ansi/blob/master/license|https://github.com/chalk/strip-ansi|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (sindresorhus.com)|
+|strip-comments|https://github.com/jonschlinkert/strip-comments/blob/master/LICENSE|https://github.com/jonschlinkert/strip-comments|Copyright (c) 2014-present, Jon Schlinkert.|
 |strip-indent|https://github.com/sindresorhus/strip-indent/blob/master/license|https://github.com/sindresorhus/strip-indent|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
-|strip-json-comments|https://github.com/sindresorhus/strip-json-comments/blob/master/license|https://github.com/sindresorhus/strip-json-comments||
+|strip-json-comments|https://github.com/sindresorhus/strip-json-comments/blob/master/license|https://github.com/sindresorhus/strip-json-comments|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 |style-loader|https://github.com/webpack-contrib/style-loader/blob/master/LICENSE|https://github.com/webpack-contrib/style-loader|Copyright JS Foundation and other contributors|
 |style-mod|https://github.com/marijnh/style-mod/blob/master/LICENSE|https://github.com/marijnh/style-mod|Copyright (C) 2018 by Marijn Haverbeke &lt;marijn@haverbeke.berlin&gt; and others|
 |stylehacks|https://github.com/cssnano/cssnano/blob/master/LICENSE-MIT|https://github.com/cssnano/cssnano|Copyright (c) Ben Briggs &lt;beneb.info@gmail.com&gt; (http://beneb.info)|
 |stylelint|https://github.com/stylelint/stylelint/blob/master/LICENSE|https://github.com/stylelint/stylelint|Copyright (c) 2015 - present Maxime Thirouin, David Clark &amp; Richard Hallows|
-|stylelint-config-recommended|https://github.com/stylelint/stylelint-config-recommended/blob/master/LICENSE|https://github.com/stylelint/stylelint-config-recommended||
-|stylelint-config-recommended-scss|https://github.com/stylelint-scss/stylelint-config-recommended-scss/blob/master/LICENSE|https://github.com/stylelint-scss/stylelint-config-recommended-scss||
-|stylelint-config-standard|https://github.com/stylelint/stylelint-config-standard/blob/master/LICENSE|https://github.com/stylelint/stylelint-config-standard||
+|stylelint-config-recommended|https://github.com/stylelint/stylelint-config-recommended/blob/master/LICENSE|https://github.com/stylelint/stylelint-config-recommended|Copyright (c) 2018 - present stylelint|
+|stylelint-config-recommended-scss|https://github.com/stylelint-scss/stylelint-config-recommended-scss/blob/master/LICENSE|https://github.com/stylelint-scss/stylelint-config-recommended-scss|Copyright (c) 2016 Krister Kari|
+|stylelint-config-standard|https://github.com/stylelint/stylelint-config-standard/blob/master/LICENSE|https://github.com/stylelint/stylelint-config-standard|Copyright (c) 2015 - present stylelint authors|
 |stylelint-declaration-strict-value|https://github.com/AndyOGo/stylelint-declaration-strict-value/blob/master/LICENSE|https://github.com/AndyOGo/stylelint-declaration-strict-value|Copyright (c) 2016 Andreas Deuschlinger|
 |stylelint-scss|https://github.com/stylelint-scss/stylelint-scss/blob/master/LICENSE|https://github.com/stylelint-scss/stylelint-scss|Copyright (c) 2016 Krister Kari|
 |stylelint-stylistic|https://github.com/elirasza/stylelint-stylistic/blob/master/LICENSE.md|https://github.com/elirasza/stylelint-stylistic|Copyright © 2023, elirasza / Thibaud Laurent (thibaud.laurent@elira.fr)|
-|supports-color|https://github.com/chalk/supports-color/blob/master/license|https://github.com/chalk/supports-color||
-|supports-hyperlinks|https://github.com/jamestalmage/supports-hyperlinks/blob/master/license|https://github.com/jamestalmage/supports-hyperlinks||
-|supports-preserve-symlinks-flag|https://github.com/inspect-js/node-supports-preserve-symlinks-flag/blob/master/LICENSE|https://github.com/inspect-js/node-supports-preserve-symlinks-flag||
-|svg-tags|https://github.com/element-io/svg-tags/blob/master/LICENSE|https://github.com/element-io/svg-tags||
+|supports-color|https://github.com/chalk/supports-color/blob/master/license|https://github.com/chalk/supports-color|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
+|supports-hyperlinks|https://github.com/chalk/supports-hyperlinks/blob/master/license|https://github.com/chalk/supports-hyperlinks|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com) Copyright (c) James Talmage &lt;james@talmage.io&gt; (https://github.com/jamestalmage)|
+|supports-preserve-symlinks-flag|https://github.com/inspect-js/node-supports-preserve-symlinks-flag/blob/master/LICENSE|https://github.com/inspect-js/node-supports-preserve-symlinks-flag|Copyright (c) 2022 Inspect JS|
+|svg-tags|https://github.com/element-io/svg-tags/blob/master/LICENSE|https://github.com/element-io/svg-tags|Copyright (c) 2014 Athan Reines.|
 |svgo|https://github.com/svg/svgo/blob/master/LICENSE|https://github.com/svg/svgo|Copyright (c) Kir Belevich|
 |svgstore|https://github.com/svgstore/svgstore/blob/master/license|https://github.com/svgstore/svgstore|Copyright (c) Shannon Moeller &lt;me@shannonmoeller.com&gt; (shannonmoeller.com)|
 |symfony/acl-bundle|https://github.com/symfony/acl-bundle/blob/master/LICENSE|https://github.com/symfony/acl-bundle|Copyright (c) 2004-2021 Fabien Potencier|
 |symfony/asset|https://github.com/symfony/asset/blob/master/LICENSE|https://github.com/symfony/asset|Copyright (c) 2004-present Fabien Potencier|
 |symfony/browser-kit|https://github.com/symfony/browser-kit/blob/master/LICENSE|https://github.com/symfony/browser-kit|Copyright (c) 2004-present Fabien Potencier|
 |symfony/cache|https://github.com/symfony/cache/blob/master/LICENSE|https://github.com/symfony/cache|Copyright (c) 2016-present Fabien Potencier|
-|symfony/cache-contracts|https://github.com/symfony/cache-contracts/blob/master/LICENSE|https://github.com/symfony/cache-contracts|Copyright (c) 2018-2022 Fabien Potencier|
+|symfony/cache-contracts|https://github.com/symfony/cache-contracts/blob/master/LICENSE|https://github.com/symfony/cache-contracts|Copyright (c) 2018-present Fabien Potencier|
 |symfony/clock|https://github.com/symfony/clock/blob/master/LICENSE|https://github.com/symfony/clock|Copyright (c) 2022-present Fabien Potencier|
 |symfony/config|https://github.com/symfony/config/blob/master/LICENSE|https://github.com/symfony/config|Copyright (c) 2004-present Fabien Potencier|
 |symfony/console|https://github.com/symfony/console/blob/master/LICENSE|https://github.com/symfony/console|Copyright (c) 2004-present Fabien Potencier|
 |symfony/css-selector|https://github.com/symfony/css-selector/blob/master/LICENSE|https://github.com/symfony/css-selector|Copyright (c) 2004-present Fabien Potencier|
 |symfony/debug-bundle|https://github.com/symfony/debug-bundle/blob/master/LICENSE|https://github.com/symfony/debug-bundle|Copyright (c) 2014-present Fabien Potencier|
 |symfony/dependency-injection|https://github.com/symfony/dependency-injection/blob/master/LICENSE|https://github.com/symfony/dependency-injection|Copyright (c) 2004-present Fabien Potencier|
-|symfony/deprecation-contracts|https://github.com/symfony/deprecation-contracts/blob/master/LICENSE|https://github.com/symfony/deprecation-contracts|Copyright (c) 2020-2022 Fabien Potencier|
+|symfony/deprecation-contracts|https://github.com/symfony/deprecation-contracts/blob/master/LICENSE|https://github.com/symfony/deprecation-contracts|Copyright (c) 2020-present Fabien Potencier|
 |symfony/doctrine-bridge|https://github.com/symfony/doctrine-bridge/blob/master/LICENSE|https://github.com/symfony/doctrine-bridge|Copyright (c) 2004-present Fabien Potencier|
 |symfony/dom-crawler|https://github.com/symfony/dom-crawler/blob/master/LICENSE|https://github.com/symfony/dom-crawler|Copyright (c) 2004-present Fabien Potencier|
 |symfony/dotenv|https://github.com/symfony/dotenv/blob/master/LICENSE|https://github.com/symfony/dotenv|Copyright (c) 2016-present Fabien Potencier|
 |symfony/error-handler|https://github.com/symfony/error-handler/blob/master/LICENSE|https://github.com/symfony/error-handler|Copyright (c) 2019-present Fabien Potencier|
 |symfony/event-dispatcher|https://github.com/symfony/event-dispatcher/blob/master/LICENSE|https://github.com/symfony/event-dispatcher|Copyright (c) 2004-present Fabien Potencier|
-|symfony/event-dispatcher-contracts|https://github.com/symfony/event-dispatcher-contracts/blob/master/LICENSE|https://github.com/symfony/event-dispatcher-contracts|Copyright (c) 2018-2022 Fabien Potencier|
+|symfony/event-dispatcher-contracts|https://github.com/symfony/event-dispatcher-contracts/blob/master/LICENSE|https://github.com/symfony/event-dispatcher-contracts|Copyright (c) 2018-present Fabien Potencier|
 |symfony/expression-language|https://github.com/symfony/expression-language/blob/master/LICENSE|https://github.com/symfony/expression-language|Copyright (c) 2004-present Fabien Potencier|
 |symfony/filesystem|https://github.com/symfony/filesystem/blob/master/LICENSE|https://github.com/symfony/filesystem|Copyright (c) 2004-present Fabien Potencier|
 |symfony/finder|https://github.com/symfony/finder/blob/master/LICENSE|https://github.com/symfony/finder|Copyright (c) 2004-present Fabien Potencier|
@@ -992,16 +1012,17 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |symfony/polyfill-intl-normalizer|https://github.com/symfony/polyfill-intl-normalizer/blob/master/LICENSE|https://github.com/symfony/polyfill-intl-normalizer|Copyright (c) 2015-present Fabien Potencier|
 |symfony/polyfill-mbstring|https://github.com/symfony/polyfill-mbstring/blob/master/LICENSE|https://github.com/symfony/polyfill-mbstring|Copyright (c) 2015-present Fabien Potencier|
 |symfony/polyfill-php70||https://github.com/symfony/polyfill-php70||
-|symfony/polyfill-php72|https://github.com/symfony/polyfill-php72/blob/master/LICENSE|https://github.com/symfony/polyfill-php72|Copyright (c) 2015-present Fabien Potencier|
+|symfony/polyfill-php72||https://github.com/symfony/polyfill-php72||
 |symfony/polyfill-php73|https://github.com/symfony/polyfill-php73/blob/master/LICENSE|https://github.com/symfony/polyfill-php73|Copyright (c) 2018-present Fabien Potencier|
 |symfony/polyfill-php80|https://github.com/symfony/polyfill-php80/blob/master/LICENSE|https://github.com/symfony/polyfill-php80|Copyright (c) 2020-present Fabien Potencier|
 |symfony/polyfill-php81|https://github.com/symfony/polyfill-php81/blob/master/LICENSE|https://github.com/symfony/polyfill-php81|Copyright (c) 2021-present Fabien Potencier|
 |symfony/polyfill-php83|https://github.com/symfony/polyfill-php83/blob/master/LICENSE|https://github.com/symfony/polyfill-php83|Copyright (c) 2022-present Fabien Potencier|
+|symfony/polyfill-php84|https://github.com/symfony/polyfill-php84/blob/master/LICENSE|https://github.com/symfony/polyfill-php84|Copyright (c) 2024-present Fabien Potencier|
 |symfony/process|https://github.com/symfony/process/blob/master/LICENSE|https://github.com/symfony/process|Copyright (c) 2004-present Fabien Potencier|
 |symfony/property-access|https://github.com/symfony/property-access/blob/master/LICENSE|https://github.com/symfony/property-access|Copyright (c) 2004-present Fabien Potencier|
 |symfony/property-info|https://github.com/symfony/property-info/blob/master/LICENSE|https://github.com/symfony/property-info|Copyright (c) 2015-present Fabien Potencier|
 |symfony/proxy-manager-bridge|https://github.com/symfony/proxy-manager-bridge/blob/master/LICENSE|https://github.com/symfony/proxy-manager-bridge|Copyright (c) 2004-present Fabien Potencier|
-|symfony/requirements-checker|https://github.com/symfony/requirements-checker/blob/master/LICENSE|https://github.com/symfony/requirements-checker|Copyright (c) 2010-2020 Fabien Potencier|
+|symfony/requirements-checker|https://github.com/symfony/requirements-checker/blob/master/LICENSE|https://github.com/symfony/requirements-checker|Copyright (c) 2010-present Fabien Potencier|
 |symfony/routing|https://github.com/symfony/routing/blob/master/LICENSE|https://github.com/symfony/routing|Copyright (c) 2004-present Fabien Potencier|
 |symfony/runtime|https://github.com/symfony/runtime/blob/master/LICENSE|https://github.com/symfony/runtime|Copyright (c) 2021-present Fabien Potencier|
 |symfony/security-acl|https://github.com/symfony/security-acl/blob/master/LICENSE|https://github.com/symfony/security-acl|Copyright (c) 2004-2021 Fabien Potencier|
@@ -1010,12 +1031,12 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |symfony/security-csrf|https://github.com/symfony/security-csrf/blob/master/LICENSE|https://github.com/symfony/security-csrf|Copyright (c) 2004-present Fabien Potencier|
 |symfony/security-http|https://github.com/symfony/security-http/blob/master/LICENSE|https://github.com/symfony/security-http|Copyright (c) 2004-present Fabien Potencier|
 |symfony/serializer|https://github.com/symfony/serializer/blob/master/LICENSE|https://github.com/symfony/serializer|Copyright (c) 2004-present Fabien Potencier|
-|symfony/service-contracts|https://github.com/symfony/service-contracts/blob/master/LICENSE|https://github.com/symfony/service-contracts|Copyright (c) 2018-2022 Fabien Potencier|
+|symfony/service-contracts|https://github.com/symfony/service-contracts/blob/master/LICENSE|https://github.com/symfony/service-contracts|Copyright (c) 2018-present Fabien Potencier|
 |symfony/stopwatch|https://github.com/symfony/stopwatch/blob/master/LICENSE|https://github.com/symfony/stopwatch|Copyright (c) 2004-present Fabien Potencier|
 |symfony/string|https://github.com/symfony/string/blob/master/LICENSE|https://github.com/symfony/string|Copyright (c) 2019-present Fabien Potencier|
 |symfony/templating|https://github.com/symfony/templating/blob/master/LICENSE|https://github.com/symfony/templating|Copyright (c) 2004-present Fabien Potencier|
 |symfony/translation|https://github.com/symfony/translation/blob/master/LICENSE|https://github.com/symfony/translation|Copyright (c) 2004-present Fabien Potencier|
-|symfony/translation-contracts|https://github.com/symfony/translation-contracts/blob/master/LICENSE|https://github.com/symfony/translation-contracts|Copyright (c) 2018-2022 Fabien Potencier|
+|symfony/translation-contracts|https://github.com/symfony/translation-contracts/blob/master/LICENSE|https://github.com/symfony/translation-contracts|Copyright (c) 2018-present Fabien Potencier|
 |symfony/twig-bridge|https://github.com/symfony/twig-bridge/blob/master/LICENSE|https://github.com/symfony/twig-bridge|Copyright (c) 2004-present Fabien Potencier|
 |symfony/twig-bundle|https://github.com/symfony/twig-bundle/blob/master/LICENSE|https://github.com/symfony/twig-bundle|Copyright (c) 2004-present Fabien Potencier|
 |symfony/validator|https://github.com/symfony/validator/blob/master/LICENSE|https://github.com/symfony/validator|Copyright (c) 2004-present Fabien Potencier|
@@ -1024,65 +1045,65 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 |symfony/web-link|https://github.com/symfony/web-link/blob/master/LICENSE|https://github.com/symfony/web-link|Copyright (c) 2004-present Fabien Potencier|
 |symfony/web-profiler-bundle|https://github.com/symfony/web-profiler-bundle/blob/master/LICENSE|https://github.com/symfony/web-profiler-bundle|Copyright (c) 2004-present Fabien Potencier|
 |symfony/yaml|https://github.com/symfony/yaml/blob/master/LICENSE|https://github.com/symfony/yaml|Copyright (c) 2004-present Fabien Potencier|
-|table-layout|https://github.com/75lb/table-layout/blob/master/LICENSE|https://github.com/75lb/table-layout||
-|tapable|https://github.com/webpack/tapable/blob/master/LICENSE|https://github.com/webpack/tapable||
+|table-layout|https://github.com/75lb/table-layout/blob/master/LICENSE|https://github.com/75lb/table-layout|Copyright (c) 2015-21 Lloyd Brookes &lt;75pound@gmail.com&gt;|
+|tapable|https://github.com/webpack/tapable/blob/master/LICENSE|https://github.com/webpack/tapable|Copyright JS Foundation and other contributors|
 |terser-webpack-plugin|https://github.com/webpack-contrib/terser-webpack-plugin/blob/master/LICENSE|https://github.com/webpack-contrib/terser-webpack-plugin|Copyright JS Foundation and other contributors|
 |text-table|https://github.com/substack/text-table/blob/master/LICENSE|https://github.com/substack/text-table||
 |theofidry/alice-data-fixtures|https://github.com/theofidry/AliceDataFixtures/blob/master/LICENSE|https://github.com/theofidry/AliceDataFixtures|Copyright (c) 2016 Théo FIDRY &lt;theo.fidry@gmail.com&gt;|
-|thunky|https://github.com/mafintosh/thunky/blob/master/LICENSE|https://github.com/mafintosh/thunky||
-|timepicker|https://github.com/jonthornton/jquery-timepicker/blob/master/LICENSE|https://github.com/jonthornton/jquery-timepicker||
+|thunky|https://github.com/mafintosh/thunky/blob/master/LICENSE|https://github.com/mafintosh/thunky|Copyright (c) 2018 Mathias Buus|
+|timepicker|https://github.com/jonthornton/jquery-timepicker/blob/master/LICENSE|https://github.com/jonthornton/jquery-timepicker|Copyright © 2021 Jon Thornton|
 |tinymce|https://github.com/tinymce/tinymce/blob/master/license.txt|https://github.com/tinymce/tinymce|Copyright (c) 2022 Ephox Corporation DBA Tiny Technologies, Inc.|
 |tmp|https://github.com/raszi/node-tmp/blob/master/LICENSE|https://github.com/raszi/node-tmp|Copyright (c) 2014 KARASZI István|
-|to-fast-properties|https://github.com/sindresorhus/to-fast-properties/blob/master/license|https://github.com/sindresorhus/to-fast-properties||
-|to-regex-range|https://github.com/micromatch/to-regex-range/blob/master/LICENSE|https://github.com/micromatch/to-regex-range||
-|toidentifier|https://github.com/component/toidentifier/blob/master/LICENSE|https://github.com/component/toidentifier||
-|totalist|https://github.com/lukeed/totalist/blob/master/license|https://github.com/lukeed/totalist||
+|to-regex-range|https://github.com/micromatch/to-regex-range/blob/master/LICENSE|https://github.com/micromatch/to-regex-range|Copyright (c) 2015-present, Jon Schlinkert.|
+|toidentifier|https://github.com/component/toidentifier/blob/master/LICENSE|https://github.com/component/toidentifier|Copyright (c) 2016 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
+|totalist|https://github.com/lukeed/totalist/blob/master/license|https://github.com/lukeed/totalist|Copyright (c) Luke Edwards &lt;luke.edwards05@gmail.com&gt; (lukeed.com)|
 |trim-newlines|https://github.com/sindresorhus/trim-newlines/blob/master/license|https://github.com/sindresorhus/trim-newlines|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
-|type-check|https://github.com/gkz/type-check/blob/master/LICENSE|https://github.com/gkz/type-check||
+|type-check|https://github.com/gkz/type-check/blob/master/LICENSE|https://github.com/gkz/type-check|Copyright (c) George Zahariev|
 |type-fest|https://github.com/sindresorhus/type-fest/blob/master/license|https://github.com/sindresorhus/type-fest|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
-|type-is|https://github.com/jshttp/type-is/blob/master/LICENSE|https://github.com/jshttp/type-is||
-|typical|https://github.com/75lb/typical/blob/master/LICENSE|https://github.com/75lb/typical||
-|ua-parser-js|https://github.com/faisalman/ua-parser-js/blob/master/license.md|https://github.com/faisalman/ua-parser-js|Copyright (c) 2012-2023 Faisal Salman &lt;&lt;f@faisalman.com&gt;&gt;|
+|type-is|https://github.com/jshttp/type-is/blob/master/LICENSE|https://github.com/jshttp/type-is|Copyright (c) 2014 Jonathan Ong &lt;me@jongleberry.com&gt; Copyright (c) 2014-2015 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
+|typical|https://github.com/75lb/typical/blob/master/LICENSE|https://github.com/75lb/typical|Copyright (c) 2014-19 Lloyd Brookes &lt;75pound@gmail.com&gt;|
+|ua-parser-js|https://github.com/faisalman/ua-parser-js/blob/master/license.md|https://github.com/faisalman/ua-parser-js|Copyright (c) 2012-2024 Faisal Salman &lt;&lt;f@faisalman.com&gt;&gt;|
 |ua-parser/uap-php|https://github.com/ua-parser/uap-php/blob/master/LICENSE|https://github.com/ua-parser/uap-php|Copyright (c) 2011-2012 Dave Olsen, http://dmolsen.com|
-|underscore|https://github.com/jashkenas/underscore/blob/master/LICENSE|https://github.com/jashkenas/underscore||
-|undici-types|https://github.com/nodejs/undici/blob/master/README.md|https://github.com/nodejs/undici||
-|unicode-canonical-property-names-ecmascript|https://github.com/mathiasbynens/unicode-canonical-property-names-ecmascript/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/unicode-canonical-property-names-ecmascript||
-|unicode-match-property-ecmascript|https://github.com/mathiasbynens/unicode-match-property-ecmascript/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/unicode-match-property-ecmascript||
-|unicode-match-property-value-ecmascript|https://github.com/mathiasbynens/unicode-match-property-value-ecmascript/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/unicode-match-property-value-ecmascript||
-|unicode-property-aliases-ecmascript|https://github.com/mathiasbynens/unicode-property-aliases-ecmascript/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/unicode-property-aliases-ecmascript||
+|underscore|https://github.com/jashkenas/underscore/blob/master/LICENSE|https://github.com/jashkenas/underscore|Copyright (c) 2009-2022 Jeremy Ashkenas, Julian Gonggrijp, and DocumentCloud and Investigative Reporters &amp; Editors|
+|undici-types|https://github.com/nodejs/undici/blob/master/LICENSE|https://github.com/nodejs/undici|Copyright (c) Matteo Collina and Undici contributors|
+|unicode-canonical-property-names-ecmascript|https://github.com/mathiasbynens/unicode-canonical-property-names-ecmascript/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/unicode-canonical-property-names-ecmascript|Copyright Mathias Bynens &lt;https://mathiasbynens.be/&gt;|
+|unicode-match-property-ecmascript|https://github.com/mathiasbynens/unicode-match-property-ecmascript/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/unicode-match-property-ecmascript|Copyright Mathias Bynens &lt;https://mathiasbynens.be/&gt;|
+|unicode-match-property-value-ecmascript|https://github.com/mathiasbynens/unicode-match-property-value-ecmascript/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/unicode-match-property-value-ecmascript|Copyright Mathias Bynens &lt;https://mathiasbynens.be/&gt;|
+|unicode-property-aliases-ecmascript|https://github.com/mathiasbynens/unicode-property-aliases-ecmascript/blob/master/LICENSE-MIT.txt|https://github.com/mathiasbynens/unicode-property-aliases-ecmascript|Copyright Mathias Bynens &lt;https://mathiasbynens.be/&gt;|
 |universalify|https://github.com/RyanZim/universalify/blob/master/LICENSE|https://github.com/RyanZim/universalify|Copyright (c) 2017, Ryan Zimmerman &lt;opensrc@ryanzim.com&gt;|
-|unpipe|https://github.com/stream-utils/unpipe/blob/master/LICENSE|https://github.com/stream-utils/unpipe||
+|unpipe|https://github.com/stream-utils/unpipe/blob/master/LICENSE|https://github.com/stream-utils/unpipe|Copyright (c) 2015 Douglas Christopher Wilson &lt;doug@somethingdoug.com&gt;|
 |update-browserslist-db|https://github.com/browserslist/update-db/blob/master/LICENSE|https://github.com/browserslist/update-db|Copyright 2022 Andrey Sitnik &lt;andrey@sitnik.ru&gt; and other contributors|
-|url-loader|https://github.com/webpack-contrib/url-loader/blob/master/LICENSE|https://github.com/webpack-contrib/url-loader||
-|util|https://github.com/defunctzombie/node-util/blob/master/LICENSE|https://github.com/defunctzombie/node-util||
-|util-deprecate|https://github.com/TooTallNate/util-deprecate/blob/master/LICENSE|https://github.com/TooTallNate/util-deprecate||
-|utila|https://github.com/AriaMinaei/utila/blob/master/LICENSE|https://github.com/AriaMinaei/utila||
-|utils-merge|https://github.com/jaredhanson/utils-merge/blob/master/LICENSE|https://github.com/jaredhanson/utils-merge||
-|uuid|https://github.com/uuidjs/uuid/blob/master/LICENSE.md|https://github.com/uuidjs/uuid||
-|vary|https://github.com/jshttp/vary/blob/master/LICENSE|https://github.com/jshttp/vary||
-|void-elements|https://github.com/hemanth/void-elements/blob/master/LICENSE|https://github.com/hemanth/void-elements||
+|url-loader|https://github.com/webpack-contrib/url-loader/blob/master/LICENSE|https://github.com/webpack-contrib/url-loader|Copyright JS Foundation and other contributors|
+|util|https://github.com/defunctzombie/node-util/blob/master/LICENSE|https://github.com/defunctzombie/node-util|Copyright Joyent, Inc. and other Node contributors. All rights reserved.|
+|util-deprecate|https://github.com/TooTallNate/util-deprecate/blob/master/LICENSE|https://github.com/TooTallNate/util-deprecate|Copyright (c) 2014 Nathan Rajlich &lt;nathan@tootallnate.net&gt;|
+|utila|https://github.com/AriaMinaei/utila/blob/master/LICENSE|https://github.com/AriaMinaei/utila|Copyright (c) 2014 Aria Minaei|
+|utils-merge|https://github.com/jaredhanson/utils-merge/blob/master/LICENSE|https://github.com/jaredhanson/utils-merge|Copyright (c) 2013-2017 Jared Hanson|
+|uuid|https://github.com/uuidjs/uuid/blob/master/LICENSE.md|https://github.com/uuidjs/uuid|Copyright (c) 2010-2020 Robert Kieffer and other contributors|
+|vary|https://github.com/jshttp/vary/blob/master/LICENSE|https://github.com/jshttp/vary|Copyright (c) 2014-2017 Douglas Christopher Wilson|
+|void-elements|https://github.com/hemanth/void-elements/blob/master/LICENSE|https://github.com/hemanth/void-elements|Copyright (c) 2014 hemanth|
 |w3c-keyname|https://github.com/marijnh/w3c-keyname/blob/master/LICENSE|https://github.com/marijnh/w3c-keyname|Copyright (C) 2016 by Marijn Haverbeke &lt;marijn@haverbeke.berlin&gt; and others|
 |watchpack|https://github.com/webpack/watchpack/blob/master/LICENSE|https://github.com/webpack/watchpack|Copyright JS Foundation and other contributors|
-|wbuf|https://github.com/indutny/wbuf/blob/master/README.md|https://github.com/indutny/wbuf||
+|wbuf|https://github.com/indutny/wbuf/blob/master/README.md|https://github.com/indutny/wbuf|Copyright Fedor Indutny, 2014.|
 |webmozart/assert|https://github.com/webmozarts/assert/blob/master/LICENSE|https://github.com/webmozarts/assert|Copyright (c) 2014 Bernhard Schussek|
 |webpack|https://github.com/webpack/webpack/blob/master/LICENSE|https://github.com/webpack/webpack|Copyright JS Foundation and other contributors|
-|webpack-bundle-analyzer|https://github.com/webpack-contrib/webpack-bundle-analyzer/blob/master/LICENSE|https://github.com/webpack-contrib/webpack-bundle-analyzer||
+|webpack-bundle-analyzer|https://github.com/webpack-contrib/webpack-bundle-analyzer/blob/master/LICENSE|https://github.com/webpack-contrib/webpack-bundle-analyzer|Copyright JS Foundation and other contributors|
 |webpack-cli|https://github.com/webpack/webpack-cli/blob/master/LICENSE|https://github.com/webpack/webpack-cli|Copyright JS Foundation and other contributors|
 |webpack-dev-middleware|https://github.com/webpack/webpack-dev-middleware/blob/master/LICENSE|https://github.com/webpack/webpack-dev-middleware|Copyright JS Foundation and other contributors|
 |webpack-dev-server|https://github.com/webpack/webpack-dev-server/blob/master/LICENSE|https://github.com/webpack/webpack-dev-server|Copyright JS Foundation and other contributors|
-|webpack-merge|https://github.com/survivejs/webpack-merge/blob/master/LICENSE|https://github.com/survivejs/webpack-merge||
-|webpack-sources|https://github.com/webpack/webpack-sources/blob/master/LICENSE|https://github.com/webpack/webpack-sources||
-|when|https://github.com/cujojs/when/blob/master/LICENSE.txt|https://github.com/cujojs/when||
+|webpack-merge|https://github.com/survivejs/webpack-merge/blob/master/LICENSE|https://github.com/survivejs/webpack-merge|Copyright (c) 2015 Juho Vepsalainen|
+|webpack-sources|https://github.com/webpack/webpack-sources/blob/master/LICENSE|https://github.com/webpack/webpack-sources|Copyright (c) 2017 JS Foundation and other contributors|
+|when|https://github.com/cujojs/when/blob/master/LICENSE.txt|https://github.com/cujojs/when|Copyright (c) 2011 Brian Cavalier|
 |wildcard|https://github.com/DamonOehlman/wildcard/blob/master/LICENSE|https://github.com/DamonOehlman/wildcard|Copyright (c) 2023 Damon Oehlman &amp;lt;damon.oehlman@gmail.com&amp;gt;|
 |willdurand/jsonp-callback-validator|https://github.com/willdurand/JsonpCallbackValidator/blob/master/LICENSE|https://github.com/willdurand/JsonpCallbackValidator|Copyright (c) 2013 William Durand &lt;william.durand1@gmail.com&gt;|
 |willdurand/negotiation|https://github.com/willdurand/Negotiation/blob/master/LICENSE|https://github.com/willdurand/Negotiation|Copyright (c) William Durand &lt;will+git@drnd.me&gt;|
-|wordwrapjs|https://github.com/75lb/wordwrapjs/blob/master/LICENSE|https://github.com/75lb/wordwrapjs||
-|wrap-ansi|https://github.com/chalk/wrap-ansi/blob/master/license|https://github.com/chalk/wrap-ansi||
+|word-wrap|https://github.com/jonschlinkert/word-wrap/blob/master/LICENSE|https://github.com/jonschlinkert/word-wrap|Copyright (c) 2014-2016, Jon Schlinkert|
+|wordwrapjs|https://github.com/75lb/wordwrapjs/blob/master/LICENSE|https://github.com/75lb/wordwrapjs|Copyright (c) 2015-21 Lloyd Brookes &lt;75pound@gmail.com&gt;|
+|wrap-ansi|https://github.com/chalk/wrap-ansi/blob/master/license|https://github.com/chalk/wrap-ansi|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 |ws|https://github.com/websockets/ws/blob/master/LICENSE|https://github.com/websockets/ws|Copyright (c) 2011 Einar Otto Stangvik &lt;einaros@gmail.com&gt; Copyright (c) 2013 Arnout Kazemier and contributors Copyright (c) 2016 Luigi Pinca and contributors|
 |xemlock/htmlpurifier-html5|https://github.com/xemlock/htmlpurifier-html5/blob/master/LICENSE|https://github.com/xemlock/htmlpurifier-html5|Copyright (c) 2015 Xemlock|
-|xmlbuilder|https://github.com/oozcitak/xmlbuilder-js/blob/master/LICENSE|https://github.com/oozcitak/xmlbuilder-js||
-|xregexp|https://github.com/slevithan/xregexp/blob/master/LICENSE|https://github.com/slevithan/xregexp||
-|yargs|https://github.com/yargs/yargs/blob/master/LICENSE|https://github.com/yargs/yargs||
+|xmlbuilder|https://github.com/oozcitak/xmlbuilder-js/blob/master/LICENSE|https://github.com/oozcitak/xmlbuilder-js|Copyright (c) 2013 Ozgur Ozcitak|
+|xregexp|https://github.com/slevithan/xregexp/blob/master/LICENSE|https://github.com/slevithan/xregexp|Copyright (c) 2007-present Steven Levithan &lt;https://xregexp.com/&gt;|
+|yargs|https://github.com/yargs/yargs/blob/master/LICENSE|https://github.com/yargs/yargs|Copyright 2014 Contributors (ben@npmjs.com)|
 |yocto-queue|https://github.com/sindresorhus/yocto-queue/blob/master/license|https://github.com/sindresorhus/yocto-queue|Copyright (c) Sindre Sorhus &lt;sindresorhus@gmail.com&gt; (https://sindresorhus.com)|
 
 
@@ -1125,8 +1146,8 @@ DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 
 |Component Name|Link to License|Link to Source Code|Copyright notice|
 |--------------|---------------|-------------------|----------------|
-|Base64|https://github.com/davidchambers/Base64.js/blob/master/LICENSE|https://github.com/davidchambers/Base64.js||
-|opener|https://github.com/domenic/opener/blob/master/LICENSE.txt|https://github.com/domenic/opener||
+|Base64|https://github.com/davidchambers/Base64.js/blob/master/LICENSE|https://github.com/davidchambers/Base64.js|Copyright 2019 David Chambers  Copyright (c) 2011..2019 David Chambers &lt;dc@davidchambers.me&gt;|
+|opener|https://github.com/domenic/opener/blob/master/LICENSE.txt|https://github.com/domenic/opener|Copyright © 2012–2020 Domenic Denicola &lt;d@domenic.me&gt;  Copyright (C) 2004 Sam Hocevar &lt;sam@hocevar.net&gt;  Copyright © 2012–2020 Domenic Denicola &lt;d@domenic.me&gt;|
 
 
 ## SIL Open Font License
@@ -1145,8 +1166,7 @@ Full license Terms are available below.
 
 |Component Name|Link to License|Link to Source Code|Copyright notice|
 |--------------|---------------|-------------------|----------------|
-|fs-monkey|https://github.com/streamich/fs-monkey/blob/master/LICENSE|https://github.com/streamich/fs-monkey||
-|memfs|https://github.com/streamich/memfs/blob/master/LICENSE|https://github.com/streamich/memfs||
+|thingies|https://github.com/streamich/thingies/blob/master/LICENSE|https://github.com/streamich/thingies|Copyright (c) 2020 Vadim @streamich Dalecky|
 
 
 ## Creative Common by 1.0, 3.0 and 4.0
@@ -1179,38 +1199,78 @@ Full license Terms are available below.
 
 |Component Name|Link to License|Link to Source Code|Copyright notice|
 |--------------|---------------|-------------------|----------------|
-|argparse|https://github.com/nodeca/argparse/blob/master/LICENSE|https://github.com/nodeca/argparse||
+|argparse|https://github.com/nodeca/argparse/blob/master/LICENSE|https://github.com/nodeca/argparse|Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020 Python Software Foundation; Copyright (c) 1995-2001 Corporation for National Research Initiatives; All Rights Copyright (c) 1991 - 1995, Stichting Mathematisch Centrum Amsterdam, The Netherlands.  All rights reserved.|
 
 
 
 
 ## Apache License, Version 2.0
 
-Version 2.0, January 2004 http://www.apache.org/licenses/<br />
+Version 2.0, January 2004<br />
+http://www.apache.org/licenses/<br />
+<br />
 TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION<br />
-Definitions. “License” shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.<br />
+<br />
+Definitions.<br />
+“License” shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.<br />
+<br />
 “Licensor” shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.<br />
+<br />
 “Legal Entity” shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, “control” means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.<br />
+<br />
 “You” (or “Your”) shall mean an individual or Legal Entity exercising permissions granted by this License.<br />
+<br />
 “Source” form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.<br />
+<br />
 “Object” form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.<br />
+<br />
 “Work” shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below).<br />
+<br />
 “Derivative Works” shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof.<br />
+<br />
 “Contribution” shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, “submitted” means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as “Not a Contribution.”<br />
+<br />
 “Contributor” shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work.<br />
-Grant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form. Grant of Patent License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed. Redistribution. You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions: You must give any other recipients of the Work or Derivative Works a copy of this License; and You must cause any modified files to carry prominent notices stating that You changed the files; and You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and If the Work includes a “NOTICE” text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License. You may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.<br />
-Submission of Contributions. Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions. Trademarks. This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file. Disclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License. Limitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages. Accepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability. END OF TERMS AND CONDITIONS<br />
+<br />
+Grant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.<br />
+Grant of Patent License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.<br />
+Redistribution. You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:<br />
+You must give any other recipients of the Work or Derivative Works a copy of this License; and<br />
+You must cause any modified files to carry prominent notices stating that You changed the files; and<br />
+You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and<br />
+If the Work includes a “NOTICE” text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License.<br />
+You may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.<br />
+<br />
+Submission of Contributions. Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.<br />
+Trademarks. This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.<br />
+Disclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.<br />
+Limitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.<br />
+Accepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.<br />
+END OF TERMS AND CONDITIONS<br />
+<br />
 APPENDIX: How to apply the Apache License to your work<br />
+<br />
 To apply the Apache License to your work, attach the following boilerplate notice, with the fields enclosed by brackets “[]” replaced with your own identifying information. (Don’t include the brackets!) The text should be enclosed in the appropriate comment syntax for the file format. We also recommend that a file or class name and description of purpose be included on the same “printed page” as the copyright notice for easier identification within third-party archives.<br />
+<br />
 Copyright [yyyy] [name of copyright owner]<br />
+<br />
 Licensed under the Apache License, Version 2.0 (the “License”);<br />
+<br />
 you may not use this file except in compliance with the License.<br />
-You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0<br />
+<br />
+You may obtain a copy of the License at<br />
+http://www.apache.org/licenses/LICENSE-2.0<br />
+<br />
 Unless required by applicable law or agreed to in writing, software<br />
+<br />
 distributed under the License is distributed on an “AS IS” BASIS,<br />
+<br />
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br />
+<br />
 See the License for the specific language governing permissions and<br />
-limitations under the License.
+<br />
+limitations under the License.<br />
+
 ## GNU Lesser General Public License, Version 2.1
 
 Version 2.1, February 1999<br />
