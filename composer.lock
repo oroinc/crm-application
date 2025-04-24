@@ -1125,26 +1125,29 @@
         },
         {
             "name": "doctrine/deprecations",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
-                "reference": "31610dbb31faa98e6b5447b62340826f54fbc4e9"
+                "reference": "459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/31610dbb31faa98e6b5447b62340826f54fbc4e9",
-                "reference": "31610dbb31faa98e6b5447b62340826f54fbc4e9",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38",
+                "reference": "459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0"
             },
+            "conflict": {
+                "phpunit/phpunit": "<=7.5 || >=13"
+            },
             "require-dev": {
-                "doctrine/coding-standard": "^9 || ^12",
-                "phpstan/phpstan": "1.4.10 || 2.0.3",
+                "doctrine/coding-standard": "^9 || ^12 || ^13",
+                "phpstan/phpstan": "1.4.10 || 2.1.11",
                 "phpstan/phpstan-phpunit": "^1.0 || ^2",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6 || ^10.5 || ^11.5 || ^12",
                 "psr/log": "^1 || ^2 || ^3"
             },
             "suggest": {
@@ -1164,9 +1167,9 @@
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
-                "source": "https://github.com/doctrine/deprecations/tree/1.1.4"
+                "source": "https://github.com/doctrine/deprecations/tree/1.1.5"
             },
-            "time": "2024-12-07T21:18:45+00:00"
+            "time": "2025-04-07T20:06:18+00:00"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -5406,16 +5409,16 @@
         },
         {
             "name": "oro/calendar-bundle",
-            "version": "6.1.0",
+            "version": "6.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/OroCalendarBundle.git",
-                "reference": "e297a004c415fc8c4af8e3eeeb340183e24af8be"
+                "reference": "d008bfa2a7c5b9ec21c06ba005b1e96b7bbc33cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/e297a004c415fc8c4af8e3eeeb340183e24af8be",
-                "reference": "e297a004c415fc8c4af8e3eeeb340183e24af8be",
+                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/d008bfa2a7c5b9ec21c06ba005b1e96b7bbc33cd",
+                "reference": "d008bfa2a7c5b9ec21c06ba005b1e96b7bbc33cd",
                 "shasum": ""
             },
             "require": {
@@ -5458,22 +5461,22 @@
             ],
             "support": {
                 "issues": "https://github.com/oroinc/OroCalendarBundle/issues",
-                "source": "https://github.com/oroinc/OroCalendarBundle/tree/6.1.0"
+                "source": "https://github.com/oroinc/OroCalendarBundle/tree/6.1.1"
             },
-            "time": "2025-03-31T11:51:51+00:00"
+            "time": "2025-04-16T14:09:51+00:00"
         },
         {
             "name": "oro/crm",
-            "version": "6.1.0",
+            "version": "6.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/crm.git",
-                "reference": "24dd96910eea8da7484b08e4db2cccdc97799f89"
+                "reference": "bf30b72c00cadb5c01700594be1bcac34d54ce14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/crm/zipball/24dd96910eea8da7484b08e4db2cccdc97799f89",
-                "reference": "24dd96910eea8da7484b08e4db2cccdc97799f89",
+                "url": "https://api.github.com/repos/oroinc/crm/zipball/bf30b72c00cadb5c01700594be1bcac34d54ce14",
+                "reference": "bf30b72c00cadb5c01700594be1bcac34d54ce14",
                 "shasum": ""
             },
             "require": {
@@ -5552,9 +5555,9 @@
             "homepage": "https://github.com/oroinc/crm.git",
             "support": {
                 "issues": "https://github.com/oroinc/crm/issues",
-                "source": "https://github.com/oroinc/crm/tree/6.1.0"
+                "source": "https://github.com/oroinc/crm/tree/6.1.1"
             },
-            "time": "2025-03-31T11:51:51+00:00"
+            "time": "2025-04-03T12:44:01+00:00"
         },
         {
             "name": "oro/crm-call-bundle",
@@ -5890,16 +5893,16 @@
         },
         {
             "name": "oro/oauth2-server",
-            "version": "6.1.0",
+            "version": "6.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/oauth2-server.git",
-                "reference": "45862e48883760e5a895a612714aeffea48eb200"
+                "reference": "1dc624e69dd2f0e2c2247df00f0bedb5bfd230b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/oauth2-server/zipball/45862e48883760e5a895a612714aeffea48eb200",
-                "reference": "45862e48883760e5a895a612714aeffea48eb200",
+                "url": "https://api.github.com/repos/oroinc/oauth2-server/zipball/1dc624e69dd2f0e2c2247df00f0bedb5bfd230b5",
+                "reference": "1dc624e69dd2f0e2c2247df00f0bedb5bfd230b5",
                 "shasum": ""
             },
             "require": {
@@ -5941,22 +5944,22 @@
             ],
             "support": {
                 "issues": "https://github.com/oroinc/oauth2-server/issues",
-                "source": "https://github.com/oroinc/oauth2-server/tree/6.1.0"
+                "source": "https://github.com/oroinc/oauth2-server/tree/6.1.1"
             },
-            "time": "2025-03-27T17:46:49+00:00"
+            "time": "2025-04-10T14:17:11+00:00"
         },
         {
             "name": "oro/platform",
-            "version": "6.1.0",
+            "version": "6.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/platform.git",
-                "reference": "79617fa97ff88ef20e2630eccf65ea6968efd3bf"
+                "reference": "7e81a71b6c20a3d79674b4d267b3bee97a5e1b45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/platform/zipball/79617fa97ff88ef20e2630eccf65ea6968efd3bf",
-                "reference": "79617fa97ff88ef20e2630eccf65ea6968efd3bf",
+                "url": "https://api.github.com/repos/oroinc/platform/zipball/7e81a71b6c20a3d79674b4d267b3bee97a5e1b45",
+                "reference": "7e81a71b6c20a3d79674b4d267b3bee97a5e1b45",
                 "shasum": ""
             },
             "require": {
@@ -6284,9 +6287,9 @@
             "homepage": "https://github.com/oroinc/platform.git",
             "support": {
                 "issues": "https://github.com/oroinc/platform/issues",
-                "source": "https://github.com/oroinc/platform/tree/6.1.0"
+                "source": "https://github.com/oroinc/platform/tree/6.1.1"
             },
-            "time": "2025-03-31T11:51:51+00:00"
+            "time": "2025-04-17T07:08:41+00:00"
         },
         {
             "name": "oro/platform-serialised-fields",
@@ -7170,16 +7173,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.6.1",
+            "version": "5.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "e5e784149a09bd69d9a5e3b01c5cbd2e2bd653d8"
+                "reference": "92dde6a5919e34835c506ac8c523ef095a95ed62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/e5e784149a09bd69d9a5e3b01c5cbd2e2bd653d8",
-                "reference": "e5e784149a09bd69d9a5e3b01c5cbd2e2bd653d8",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/92dde6a5919e34835c506ac8c523ef095a95ed62",
+                "reference": "92dde6a5919e34835c506ac8c523ef095a95ed62",
                 "shasum": ""
             },
             "require": {
@@ -7228,9 +7231,9 @@
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
             "support": {
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.1"
+                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.2"
             },
-            "time": "2024-12-07T09:39:29+00:00"
+            "time": "2025-04-13T19:20:35+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -18695,12 +18698,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "~8.4.0"
     },
-    "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
 }
