@@ -19,7 +19,8 @@
         "stylelint": "check-engine && stylelint --config .stylelintrc.yml --ignore-path .stylelintignore",
         "stylelint-oro": "npm run stylelint vendor/oro/**/*.{css,scss}",
         "test": "npm run test-watch -- --single-run",
-        "test-watch": "check-engine && karma start karma.conf.js.dist"
+        "test-watch": "check-engine && karma start karma.conf.js.dist",
+        "validate-css": "stylelint --config .stylelintrc-css.yml --ignore-path .stylelintignore-css public/build/**/*.css"
     },
     "dependencies": {
         "@babel/runtime": "^7.16.3",
