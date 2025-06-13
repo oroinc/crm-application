@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   pgsql:
-    image: oroinc/pgsql:13.7-1-alpine
+    image: oroinc/pgsql:17.4-alpine
     ports: ['5432']
     labels:
       com.symfony.server.service-prefix: ORO_DB
@@ -19,7 +19,7 @@ services:
       start_period: 40s
     restart: on-failure
   redis:
-    image: redis:6-alpine
+    image: redis:7.4.2-alpine
     ports: ["6379"]
     labels:
       com.symfony.server.service-prefix: ORO_REDIS
