@@ -3668,30 +3668,30 @@
         },
         {
             "name": "knplabs/knp-gaufrette-bundle",
-            "version": "v0.8.0",
+            "version": "v0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpGaufretteBundle.git",
-                "reference": "6bf6ef3d27959ba017d4a169f4b74e11ca665b66"
+                "reference": "910a16cd7a7af5d72a98975f3e59a0c6feadec32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpGaufretteBundle/zipball/6bf6ef3d27959ba017d4a169f4b74e11ca665b66",
-                "reference": "6bf6ef3d27959ba017d4a169f4b74e11ca665b66",
+                "url": "https://api.github.com/repos/KnpLabs/KnpGaufretteBundle/zipball/910a16cd7a7af5d72a98975f3e59a0c6feadec32",
+                "reference": "910a16cd7a7af5d72a98975f3e59a0c6feadec32",
                 "shasum": ""
             },
             "require": {
                 "knplabs/gaufrette": "^0.11",
-                "php": ">=7.1",
-                "symfony/config": "^4.4|^5.0|^6.0",
-                "symfony/dependency-injection": "^4.4|^5.0|^6.0",
-                "symfony/framework-bundle": "^4.4|^5.0|^6.0"
+                "php": "^7.4 || ^8.0",
+                "symfony/config": "^5.0|^6.0|^7.0",
+                "symfony/dependency-injection": "^5.0|^6.0|^7.0",
+                "symfony/http-kernel": "^5.0|^6.0|^7.0"
             },
             "require-dev": {
-                "symfony/console": "^4.4|^5.0|^6.0",
-                "symfony/filesystem": "^4.0|^5.0|^6.0",
-                "symfony/phpunit-bridge": "^5.4",
-                "symfony/yaml": "^4.0|^5.0|^6.0"
+                "symfony/console": "^5.0|^6.0|^7.0",
+                "symfony/filesystem": "^5.0|^6.0|^7.0",
+                "symfony/phpunit-bridge": "^7.0",
+                "symfony/yaml": "^5.0|^6.0|^7.0"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -3728,37 +3728,39 @@
             ],
             "support": {
                 "issues": "https://github.com/KnpLabs/KnpGaufretteBundle/issues",
-                "source": "https://github.com/KnpLabs/KnpGaufretteBundle/tree/v0.8.0"
+                "source": "https://github.com/KnpLabs/KnpGaufretteBundle/tree/v0.9.0"
             },
-            "time": "2022-10-21T14:49:30+00:00"
+            "time": "2023-12-18T09:53:43+00:00"
         },
         {
             "name": "knplabs/knp-menu",
-            "version": "v3.3.0",
+            "version": "v3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenu.git",
-                "reference": "8bd3dc2afa22c65617c563c5e25e62d6e23e98c7"
+                "reference": "79d325909a1d428a93f1a0f55e90177830e283bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/8bd3dc2afa22c65617c563c5e25e62d6e23e98c7",
-                "reference": "8bd3dc2afa22c65617c563c5e25e62d6e23e98c7",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/79d325909a1d428a93f1a0f55e90177830e283bb",
+                "reference": "79d325909a1d428a93f1a0f55e90177830e283bb",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.3 || ^8.0"
+                "php": "^8.1"
             },
             "conflict": {
-                "twig/twig": "<1.40 || >=2,<2.9"
+                "symfony/http-foundation": "<5.4",
+                "twig/twig": "<2.16"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.5",
-                "psr/container": "^1.0",
-                "symfony/http-foundation": "^4.4 || ^5.0 || ^6.0",
-                "symfony/phpunit-bridge": "^5.3",
-                "symfony/routing": "^4.4 || ^5.0 || ^6.0",
-                "twig/twig": "^1.40 || ^2.9 || ^3.0"
+                "phpstan/phpstan": "^2.1",
+                "phpunit/phpunit": "^9.6",
+                "psr/container": "^1.0 || ^2.0",
+                "symfony/http-foundation": "^5.4 || ^6.0 || ^7.0",
+                "symfony/phpunit-bridge": "^7.0",
+                "symfony/routing": "^5.4 || ^6.0 || ^7.0",
+                "twig/twig": "^2.16 || ^3.0"
             },
             "suggest": {
                 "twig/twig": "for the TwigRenderer and the integration with your templates"
@@ -3766,7 +3768,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.3-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
@@ -3800,34 +3802,37 @@
             ],
             "support": {
                 "issues": "https://github.com/KnpLabs/KnpMenu/issues",
-                "source": "https://github.com/KnpLabs/KnpMenu/tree/v3.3.0"
+                "source": "https://github.com/KnpLabs/KnpMenu/tree/v3.8.0"
             },
-            "time": "2021-10-23T15:01:04+00:00"
+            "time": "2025-06-13T15:03:33+00:00"
         },
         {
             "name": "knplabs/knp-menu-bundle",
-            "version": "v3.2.0",
+            "version": "v3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "a0b4224f872d74ae939589eb1ccf0e11291370a9"
+                "reference": "eabe07859751a0ed77c04dcb6b908fcd2c336cf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/a0b4224f872d74ae939589eb1ccf0e11291370a9",
-                "reference": "a0b4224f872d74ae939589eb1ccf0e11291370a9",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/eabe07859751a0ed77c04dcb6b908fcd2c336cf3",
+                "reference": "eabe07859751a0ed77c04dcb6b908fcd2c336cf3",
                 "shasum": ""
             },
             "require": {
-                "knplabs/knp-menu": "^3.1",
-                "php": "^7.2 || ^8.0",
-                "symfony/framework-bundle": "^3.4 | ^4.4 | ^5.0 | ^6.0"
+                "knplabs/knp-menu": "^3.8",
+                "php": "^8.1",
+                "symfony/config": "^5.4 | ^6.0 | ^7.0",
+                "symfony/dependency-injection": "^5.4 | ^6.0 | ^7.0",
+                "symfony/deprecation-contracts": "^2.5 | ^3.3",
+                "symfony/http-kernel": "^5.4 | ^6.0 | ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.5 | ^9.5",
-                "symfony/expression-language": "^3.4 | ^4.4 | ^5.0 | ^6.0",
-                "symfony/phpunit-bridge": "^5.2 | ^6.0",
-                "symfony/templating": "^3.4 | ^4.4 | ^5.0 | ^6.0"
+                "phpunit/phpunit": "^10.5 | ^11.5 | ^12.1",
+                "symfony/expression-language": "^5.4 | ^6.0 | ^7.0",
+                "symfony/phpunit-bridge": "^6.0 | ^7.0",
+                "symfony/templating": "^5.4 | ^6.0 | ^7.0"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -3864,9 +3869,9 @@
             ],
             "support": {
                 "issues": "https://github.com/KnpLabs/KnpMenuBundle/issues",
-                "source": "https://github.com/KnpLabs/KnpMenuBundle/tree/v3.2.0"
+                "source": "https://github.com/KnpLabs/KnpMenuBundle/tree/v3.6.0"
             },
-            "time": "2021-10-24T07:53:34+00:00"
+            "time": "2025-06-14T11:37:33+00:00"
         },
         {
             "name": "kriswallsmith/buzz",
@@ -4293,51 +4298,53 @@
         },
         {
             "name": "liip/imagine-bundle",
-            "version": "2.10.0",
+            "version": "2.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "93bfc6dde87f135f9c3e63330cff23122448f4ee"
+                "reference": "f80dc13e9a454682b8c2255b3487829d2f8a7fe4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/93bfc6dde87f135f9c3e63330cff23122448f4ee",
-                "reference": "93bfc6dde87f135f9c3e63330cff23122448f4ee",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/f80dc13e9a454682b8c2255b3487829d2f8a7fe4",
+                "reference": "f80dc13e9a454682b8c2255b3487829d2f8a7fe4",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "imagine/imagine": "^1.3.2",
-                "php": "^7.1|^8.0",
-                "symfony/filesystem": "^3.4|^4.4|^5.3|^6.0",
-                "symfony/finder": "^3.4|^4.4|^5.3|^6.0",
-                "symfony/framework-bundle": "^3.4.23|^4.4|^5.3|^6.0",
-                "symfony/mime": "^4.4|^5.3|^6.0",
-                "symfony/options-resolver": "^3.4|^4.4|^5.3|^6.0",
-                "symfony/process": "^3.4|^4.4|^5.3|^6.0",
+                "php": "^7.2|^8.0",
+                "symfony/deprecation-contracts": "^2.5 || ^3",
+                "symfony/filesystem": "^3.4|^4.4|^5.3|^6.0|^7.0",
+                "symfony/finder": "^3.4|^4.4|^5.3|^6.0|^7.0",
+                "symfony/framework-bundle": "^3.4.23|^4.4|^5.3|^6.0|^7.0",
+                "symfony/mime": "^4.4|^5.3|^6.0|^7.0",
+                "symfony/options-resolver": "^3.4|^4.4|^5.3|^6.0|^7.0",
+                "symfony/process": "^3.4|^4.4|^5.3|^6.0|^7.0",
                 "twig/twig": "^1.44|^2.9|^3.0"
             },
             "require-dev": {
                 "amazonwebservices/aws-sdk-for-php": "^1.0",
-                "aws/aws-sdk-php": "^2.4",
+                "aws/aws-sdk-php": "^2.4|^3.0",
                 "doctrine/cache": "^1.11|^2.0",
                 "doctrine/persistence": "^1.3|^2.0",
                 "enqueue/enqueue-bundle": "^0.9|^0.10",
                 "ext-gd": "*",
                 "league/flysystem": "^1.0|^2.0|^3.0",
-                "phpstan/phpstan": "^0.12.64",
+                "phpstan/phpstan": "^1.10.0",
                 "psr/cache": "^1.0|^2.0|^3.0",
                 "psr/log": "^1.0",
-                "symfony/browser-kit": "^3.4|^4.4|^5.3|^6.0",
-                "symfony/cache": "^3.4|^4.4|^5.3|^6.0",
-                "symfony/console": "^3.4|^4.4|^5.3|^6.0",
-                "symfony/dependency-injection": "^3.4|^4.4|^5.3|^6.0",
-                "symfony/form": "^3.4|^4.4|^5.3|^6.0",
-                "symfony/messenger": "^4.4|^5.3|^6.0",
-                "symfony/phpunit-bridge": "^5.3",
+                "symfony/asset": "^3.4|^4.4|^5.3|^6.0|^7.0",
+                "symfony/browser-kit": "^3.4|^4.4|^5.3|^6.0|^7.0",
+                "symfony/cache": "^3.4|^4.4|^5.3|^6.0|^7.0",
+                "symfony/console": "^3.4|^4.4|^5.3|^6.0|^7.0",
+                "symfony/dependency-injection": "^3.4|^4.4|^5.3|^6.0|^7.0",
+                "symfony/form": "^3.4|^4.4|^5.3|^6.0|^7.0",
+                "symfony/messenger": "^4.4|^5.3|^6.0|^7.0",
+                "symfony/phpunit-bridge": "^7.0.2",
                 "symfony/templating": "^3.4|^4.4|^5.3|^6.0",
-                "symfony/validator": "^3.4|^4.4|^5.3|^6.0",
-                "symfony/yaml": "^3.4|^4.4|^5.3|^6.0"
+                "symfony/validator": "^3.4|^4.4|^5.3|^6.0|^7.0",
+                "symfony/yaml": "^3.4|^4.4|^5.3|^6.0|^7.0"
             },
             "suggest": {
                 "alcaeus/mongo-php-adapter": "required for mongodb components",
@@ -4349,10 +4356,12 @@
                 "ext-gd": "required to use gd driver",
                 "ext-gmagick": "required to use gmagick driver",
                 "ext-imagick": "required to use imagick driver",
+                "ext-json": "required to read JSON manifest versioning",
                 "ext-mongodb": "required for mongodb components",
                 "league/flysystem": "required to use FlySystem data loader or cache resolver",
                 "monolog/monolog": "A psr/log compatible logger is required to enable logging",
                 "rokka/imagine-vips": "required to use 'vips' driver",
+                "symfony/asset": "If you want to use asset versioning",
                 "symfony/messenger": "If you like to process images in background",
                 "symfony/templating": "required to use deprecated Templating component instead of Twig"
             },
@@ -4376,7 +4385,7 @@
                 }
             ],
             "description": "This bundle provides an image manipulation abstraction toolkit for Symfony-based projects.",
-            "homepage": "http://liip.ch",
+            "homepage": "https://www.liip.ch",
             "keywords": [
                 "bundle",
                 "image",
@@ -4390,9 +4399,9 @@
             ],
             "support": {
                 "issues": "https://github.com/liip/LiipImagineBundle/issues",
-                "source": "https://github.com/liip/LiipImagineBundle/tree/2.10.0"
+                "source": "https://github.com/liip/LiipImagineBundle/tree/2.14.0"
             },
-            "time": "2022-12-01T13:19:59+00:00"
+            "time": "2025-09-03T06:33:10+00:00"
         },
         {
             "name": "matomo/device-detector",
@@ -4878,42 +4887,40 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.73.0",
+            "version": "3.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPHP/carbon.git",
-                "reference": "9228ce90e1035ff2f0db84b40ec2e023ed802075"
+                "reference": "8e3643dcd149ae0fe1d2ff4f2c8e4bbfad7c165f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/9228ce90e1035ff2f0db84b40ec2e023ed802075",
-                "reference": "9228ce90e1035ff2f0db84b40ec2e023ed802075",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/8e3643dcd149ae0fe1d2ff4f2c8e4bbfad7c165f",
+                "reference": "8e3643dcd149ae0fe1d2ff4f2c8e4bbfad7c165f",
                 "shasum": ""
             },
             "require": {
-                "carbonphp/carbon-doctrine-types": "*",
+                "carbonphp/carbon-doctrine-types": "<100.0",
                 "ext-json": "*",
-                "php": "^7.1.8 || ^8.0",
+                "php": "^8.1",
                 "psr/clock": "^1.0",
+                "symfony/clock": "^6.3.12 || ^7.0",
                 "symfony/polyfill-mbstring": "^1.0",
-                "symfony/polyfill-php80": "^1.16",
-                "symfony/translation": "^3.4 || ^4.0 || ^5.0 || ^6.0"
+                "symfony/translation": "^4.4.18 || ^5.2.1 || ^6.0 || ^7.0"
             },
             "provide": {
                 "psr/clock-implementation": "1.0"
             },
             "require-dev": {
-                "doctrine/dbal": "^2.0 || ^3.1.4 || ^4.0",
-                "doctrine/orm": "^2.7 || ^3.0",
-                "friendsofphp/php-cs-fixer": "^3.0",
-                "kylekatarnls/multi-tester": "^2.0",
-                "ondrejmirtes/better-reflection": "<6",
-                "phpmd/phpmd": "^2.9",
-                "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^0.12.99 || ^1.7.14",
-                "phpunit/php-file-iterator": "^2.0.5 || ^3.0.6",
-                "phpunit/phpunit": "^7.5.20 || ^8.5.26 || ^9.5.20",
-                "squizlabs/php_codesniffer": "^3.4"
+                "doctrine/dbal": "^3.6.3 || ^4.0",
+                "doctrine/orm": "^2.15.2 || ^3.0",
+                "friendsofphp/php-cs-fixer": "^v3.87.1",
+                "kylekatarnls/multi-tester": "^2.5.3",
+                "phpmd/phpmd": "^2.15.0",
+                "phpstan/extension-installer": "^1.4.3",
+                "phpstan/phpstan": "^2.1.22",
+                "phpunit/phpunit": "^10.5.53",
+                "squizlabs/php_codesniffer": "^3.13.4"
             },
             "bin": [
                 "bin/carbon"
@@ -4964,8 +4971,8 @@
             ],
             "support": {
                 "docs": "https://carbon.nesbot.com/docs",
-                "issues": "https://github.com/briannesbitt/Carbon/issues",
-                "source": "https://github.com/briannesbitt/Carbon"
+                "issues": "https://github.com/CarbonPHP/carbon/issues",
+                "source": "https://github.com/CarbonPHP/carbon"
             },
             "funding": [
                 {
@@ -4981,7 +4988,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-01-08T20:10:23+00:00"
+            "time": "2025-09-06T13:39:36+00:00"
         },
         {
             "name": "nette/php-generator",
@@ -5596,10 +5603,10 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/gridfs-config",
-                "reference": "29536788516b62a684744df5beed0f9a2e048628"
+                "reference": "9b91e8a8856953f5d2ed26113840317a947c4bee"
             },
             "require": {
-                "knplabs/knp-gaufrette-bundle": "~0.8.0",
+                "knplabs/knp-gaufrette-bundle": "~0.9.0",
                 "mongodb/mongodb": "1.15.*",
                 "oro/platform": "6.1.*"
             },
@@ -5743,7 +5750,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../package/platform",
-                "reference": "a5c7a08a510f645d9868f84236e3110360fec291"
+                "reference": "259044bc180c9bc2b081140d1e67dfbec166f4a8"
             },
             "require": {
                 "ass/xmlsecurity": "1.1.1",
@@ -5784,16 +5791,16 @@
                 "guzzlehttp/guzzle": "~7.9.0",
                 "guzzlehttp/psr7": "~2.7.0",
                 "hwi/oauth-bundle": "2.1.0",
-                "knplabs/knp-gaufrette-bundle": "~0.8.0",
-                "knplabs/knp-menu": "~3.3.0",
-                "knplabs/knp-menu-bundle": "~3.2.0",
+                "knplabs/knp-gaufrette-bundle": "~0.9.0",
+                "knplabs/knp-menu": "~3.8.0",
+                "knplabs/knp-menu-bundle": "~3.6.0",
                 "kriswallsmith/buzz": "~1.2.0",
-                "liip/imagine-bundle": "~2.10.0",
+                "liip/imagine-bundle": "~2.14.0",
                 "matomo/device-detector": "~6.0.6",
                 "monolog/monolog": "~2.10.0",
                 "myclabs/deep-copy": "1.12.*",
                 "nelmio/security-bundle": "~3.4.0",
-                "nesbot/carbon": "~2.73.0",
+                "nesbot/carbon": "~3.10.3",
                 "nette/php-generator": "~4.1.3",
                 "ocramius/proxy-manager": "~2.11.1",
                 "oro/api-doc-bundle": "2.1.*",
