@@ -82,7 +82,7 @@
   "scripts": {
     "post-install-cmd": [
       "@set-permissions",
-      "@install-npm-assets",
+      "@pnpm-install-root",
       "@set-assets-version",
       "@execute-post-install-package-scripts",
       "@install-assets"
@@ -116,7 +116,7 @@
       "Oro\\Bundle\\InstallerBundle\\Composer\\ParametersHandler::set"
     ],
     "install-assets": [
-      "console oro:assets:install --no-interaction --no-ansi"
+      "console oro:assets:install --symlink --no-interaction --no-ansi"
     ],
     "upgrade:full": [
       "@health",
@@ -220,6 +220,10 @@
     ],
     "notification:finish": [
       "console oro:maintenance-notification --message=Deploy\\ finish --subject=At\\ $ORO_APP_URL --no-interaction --no-ansi"
+    ],
+    "pnpm-install-root": [
+      "cd ../../ && pnpm install --prefer-offline",
+      "cd ../../ && pnpm run build --no-private"
     ]
   },
   "minimum-stability": "dev",
