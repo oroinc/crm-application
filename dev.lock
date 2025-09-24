@@ -2576,12 +2576,12 @@
             "version": "v2.8.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/GeniusesOfSymfony/PubSubRouterBundle.git",
+                "url": "https://github.com/oroinc/PubSubRouterBundle.git",
                 "reference": "f91b170d521c19e5fc3ec1c401652536c2d0f007"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GeniusesOfSymfony/PubSubRouterBundle/zipball/f91b170d521c19e5fc3ec1c401652536c2d0f007",
+                "url": "https://api.github.com/repos/oroinc/PubSubRouterBundle/zipball/f91b170d521c19e5fc3ec1c401652536c2d0f007",
                 "reference": "f91b170d521c19e5fc3ec1c401652536c2d0f007",
                 "shasum": ""
             },
@@ -2612,7 +2612,11 @@
                     "Gos\\Bundle\\PubSubRouterBundle\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Gos\\Bundle\\PubSubRouterBundle\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -2625,21 +2629,20 @@
             "description": "Symfony PubSub Router Bundle",
             "homepage": "https://github.com/GeniusesOfSymfony/PubSubRouterBundle",
             "keywords": [
+                "Bundle",
+                "PubSub",
                 "PubSub Bundle",
+                "Redis",
                 "WAMP",
-                "bundle",
-                "pubsub",
-                "redis",
-                "zmq"
+                "ZMQ"
             ],
             "support": {
-                "issues": "https://github.com/GeniusesOfSymfony/PubSubRouterBundle/issues",
-                "source": "https://github.com/GeniusesOfSymfony/PubSubRouterBundle/tree/v2.8.0"
+                "source": "https://github.com/oroinc/PubSubRouterBundle/tree/v2.8.0"
             },
             "funding": [
                 {
-                    "url": "https://github.com/mbabker",
-                    "type": "github"
+                    "type": "github",
+                    "url": "https://github.com/mbabker"
                 }
             ],
             "time": "2022-09-20T01:46:13+00:00"
@@ -2649,12 +2652,12 @@
             "version": "v3.15.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/GeniusesOfSymfony/WebSocketBundle.git",
+                "url": "https://github.com/oroinc/WebSocketBundle.git",
                 "reference": "1c718de6434b87e28c65376fa61b159d24053aae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GeniusesOfSymfony/WebSocketBundle/zipball/1c718de6434b87e28c65376fa61b159d24053aae",
+                "url": "https://api.github.com/repos/oroinc/WebSocketBundle/zipball/1c718de6434b87e28c65376fa61b159d24053aae",
                 "reference": "1c718de6434b87e28c65376fa61b159d24053aae",
                 "shasum": ""
             },
@@ -2725,7 +2728,11 @@
                     "Gos\\Bundle\\WebSocketBundle\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Gos\\Bundle\\WebSocketBundle\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -2742,20 +2749,19 @@
             "description": "Symfony Web Socket Bundle",
             "homepage": "https://github.com/GeniusesOfSymfony/WebSocketBundle",
             "keywords": [
+                "IO",
                 "Ratchet",
                 "WAMP",
                 "Web Socket Bundle",
-                "io",
-                "websocket"
+                "Websocket"
             ],
             "support": {
-                "issues": "https://github.com/GeniusesOfSymfony/WebSocketBundle/issues",
-                "source": "https://github.com/GeniusesOfSymfony/WebSocketBundle/tree/v3.15.0"
+                "source": "https://github.com/oroinc/WebSocketBundle/tree/v3.15.0"
             },
             "funding": [
                 {
-                    "url": "https://github.com/mbabker",
-                    "type": "github"
+                    "type": "github",
+                    "url": "https://github.com/mbabker"
                 }
             ],
             "time": "2022-09-20T02:03:09+00:00"
@@ -3933,16 +3939,16 @@
         },
         {
             "name": "laminas/laminas-loader",
-            "version": "2.11.1",
+            "version": "2.13.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laminas/laminas-loader.git",
-                "reference": "c507d5eccb969f7208434e3980680a1f6c0b1d8d"
+                "url": "https://github.com/oroinc/laminas-loader.git",
+                "reference": "73e23161eb842d1cf47ad6ed8fa8e88154399d75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-loader/zipball/c507d5eccb969f7208434e3980680a1f6c0b1d8d",
-                "reference": "c507d5eccb969f7208434e3980680a1f6c0b1d8d",
+                "url": "https://api.github.com/repos/oroinc/laminas-loader/zipball/73e23161eb842d1cf47ad6ed8fa8e88154399d75",
+                "reference": "73e23161eb842d1cf47ad6ed8fa8e88154399d75",
                 "shasum": ""
             },
             "require": {
@@ -3961,32 +3967,47 @@
                     "Laminas\\Loader\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "LaminasTest\\Loader\\": "test/"
+                }
+            },
+            "scripts": {
+                "check": [
+                    "@cs-check",
+                    "@test"
+                ],
+                "cs-check": [
+                    "phpcs"
+                ],
+                "cs-fix": [
+                    "phpcbf"
+                ],
+                "test": [
+                    "phpunit --colors=always"
+                ],
+                "test-coverage": [
+                    "phpunit --colors=always --coverage-clover clover.xml"
+                ]
+            },
             "license": [
                 "BSD-3-Clause"
             ],
-            "description": "Autoloading and plugin loading strategies",
+            "description": "A fork of laminas/laminas-loader",
             "homepage": "https://laminas.dev",
             "keywords": [
                 "laminas",
                 "loader"
             ],
             "support": {
-                "chat": "https://laminas.dev/chat",
                 "docs": "https://docs.laminas.dev/laminas-loader/",
-                "forum": "https://discourse.laminas.dev",
                 "issues": "https://github.com/laminas/laminas-loader/issues",
+                "source": "https://github.com/laminas/laminas-loader",
                 "rss": "https://github.com/laminas/laminas-loader/releases.atom",
-                "source": "https://github.com/laminas/laminas-loader"
+                "chat": "https://laminas.dev/chat",
+                "forum": "https://discourse.laminas.dev"
             },
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
-            "abandoned": true,
-            "time": "2024-12-05T14:43:32+00:00"
+            "time": "2025-09-19T14:47:36+00:00"
         },
         {
             "name": "laminas/laminas-servicemanager",
@@ -17140,16 +17161,16 @@
         },
         {
             "name": "sebastian/exporter",
-            "version": "4.0.6",
+            "version": "4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "78c00df8f170e02473b682df15bfcdacc3d32d72"
+                "reference": "eb49b981ef0817890129cb70f774506bebe57740"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/78c00df8f170e02473b682df15bfcdacc3d32d72",
-                "reference": "78c00df8f170e02473b682df15bfcdacc3d32d72",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/eb49b981ef0817890129cb70f774506bebe57740",
+                "reference": "eb49b981ef0817890129cb70f774506bebe57740",
                 "shasum": ""
             },
             "require": {
@@ -17205,15 +17226,27 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/exporter/issues",
-                "source": "https://github.com/sebastianbergmann/exporter/tree/4.0.6"
+                "source": "https://github.com/sebastianbergmann/exporter/tree/4.0.7"
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+                },
+                {
+                    "url": "https://liberapay.com/sebastianbergmann",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://thanks.dev/u/gh/sebastianbergmann",
+                    "type": "thanks_dev"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/sebastian/exporter",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2024-03-02T06:33:00+00:00"
+            "time": "2025-09-22T05:18:21+00:00"
         },
         {
             "name": "sebastian/global-state",
