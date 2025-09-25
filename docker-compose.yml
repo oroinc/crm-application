@@ -28,5 +28,11 @@ services:
     ports: ['1025', '1080']
     labels:
       com.symfony.server.service-prefix: ORO_MAILER
+  gotenberg:
+    image: gotenberg/gotenberg:8
+    ports: ["3000"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:3000/health"]
+    restart: on-failure
 volumes:
   postgres: {}
