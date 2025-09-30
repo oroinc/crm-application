@@ -1,9 +1,12 @@
-packages: []
+packages:
+  - 'npm-package/**'
 
 publicHoistPattern:
   - 'stylelint**'
   - 'webpack**'
   - '**loader**'
+  - 'glob'
+  - 'minimist'
 
 allowedDeprecatedVersions:
   eslint: '^8.57'
