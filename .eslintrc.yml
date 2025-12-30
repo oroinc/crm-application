@@ -3,17 +3,17 @@ extends:
   - "plugin:oro/recommended"
   - "plugin:no-jquery/deprecated"
 parserOptions:
-  ecmaVersion: 2022
   sourceType: module
 env:
+  es2024: true
   browser: true
-  commonjs: true
-  amd: true
   jasmine: true
 globals:
   Promise: true
+  module: 'readonly'
 plugins:
   - 'no-jquery'
+  - 'import'
 rules:
   # turn off ES6 code style check
   arrow-parens: ['error', 'as-needed']
@@ -97,3 +97,6 @@ rules:
   'no-jquery/no-selector-prop': 'error'
   'no-jquery/no-box-model': 'error'
   'no-jquery/no-browser': 'error'
+  'import/no-commonjs': 'error'
+  'import/no-amd': 'error'
+  'import/no-dynamic-require': 'error'
