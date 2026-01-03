@@ -1,11 +1,10 @@
 <?php
 
 /**
- * @codingStandardsIgnoreFile
+ * phpcs:ignoreFile
  */
 
 use Oro\Bundle\DistributionBundle\OroKernel;
-
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
