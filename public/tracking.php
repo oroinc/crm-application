@@ -1,7 +1,8 @@
 <?php
+
 /**
  * @SuppressWarnings(PHPMD)
- * @codingStandardsIgnoreFile
+ * phpcs:ignoreFile
  */
 
 define('PUBLIC_DIR', __DIR__);
