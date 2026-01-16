@@ -1,6 +1,6 @@
 services:
   pgsql:
-    image: oroinc/pgsql:17.4-alpine
+    image: oroinc/pgsql:17.6-alpine
     ports: ['5432']
     labels:
       com.symfony.server.service-prefix: ORO_DB
@@ -18,7 +18,7 @@ services:
       start_period: 40s
     restart: on-failure
   redis:
-    image: redis:7.4.2-alpine
+    image: redis:8.4.0-alpine
     ports: ["6379"]
     labels:
       com.symfony.server.service-prefix: ORO_REDIS
@@ -28,7 +28,7 @@ services:
     labels:
       com.symfony.server.service-prefix: ORO_MAILER
   gotenberg:
-    image: gotenberg/gotenberg:8
+    image: gotenberg/gotenberg:8.23.2
     ports: ["3000"]
     healthcheck:
       test: ["CMD", "curl", "-f", "http://127.0.0.1:3000/health"]
