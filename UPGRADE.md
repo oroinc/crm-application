@@ -4,6 +4,22 @@ This file includes only the most important items that should be addressed before
 
 Please also refer to [CHANGELOG.md](CHANGELOG.md) for a list of significant changes in the code that may affect the upgrade of some customizations.
 
+### 6.1.8, 6.0.9, 7.0.1
+
+Strict deserialization rules were applied to workflow data. Every class referenced in serialized objects, object graphs, or arrays must belong to a trusted namespace prefix or be explicitly allowed. If a disallowed class is detected, the application throws a `RuntimeException` and aborts deserialization by default.
+
+When a violation occurs, the following critical log entry is written to the `oro_workflow` channel regardless of whether blocking is enabled:
+
+```
+CRITICAL: Failed to unserialize workflow attribute value {"exception":"[...] Data passed to unserialize contains not allowed classes: <fully\qualified\class\name>"} []
+```
+
+Three environment variables control the behavior:
+
+- `ORO_UNSERIALIZE_BLOCK` (boolean, default: `true`) — set to `false` to log violations as critical errors instead of throwing an exception. Use this temporarily to audit existing workflow data before enforcing the new rules.
+- `ORO_UNSERIALIZE_TRUSTED_ORGS` (comma-separated, optional) — additional namespace prefixes whose classes are permitted during deserialization (e.g., `Acme\\`).
+- `ORO_UNSERIALIZE_NOT_ALLOWED_CLASSES` (comma-separated, optional) — additional fully qualified class names to block from deserialization regardless of namespace.
+
 ### 5.1.0 RC
 
 Added `.env-app` files support and removed most of the parameters from the config/parameters.yml in favor of environment variables with DSNs. For more details, see [the migration guide](https://doc.oroinc.com/master/backend/setup/dev-environment/env-vars/).
