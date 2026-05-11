@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   pgsql:
-    image: oroinc/pgsql:17.4-alpine
+    image: postgres:18.3-alpine
     ports: ['5432']
     labels:
       com.symfony.server.service-prefix: ORO_DB
@@ -11,7 +11,8 @@ services:
       POSTGRES_PASSWORD: oro_db_pass
       POSTGRES_ROOT_PASSWORD: oro_db_pass
     volumes:
-      - postgres:/var/lib/postgresql/data
+      - postgres:/var/lib/postgresql
+      - ./config/uuid-ossp.sql:/docker-entrypoint-initdb.d/uuid-ossp.sql:ro
     healthcheck:
       test: "pg_isready -U$${POSTGRES_USER} -d$${POSTGRES_DB}"
       interval: 5s
