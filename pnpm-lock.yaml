@@ -129,7 +129,7 @@ importers:
         specifier: 6.8.6
         version: 6.8.6
       underscore:
-        specifier: 1.13.*
+        specifier: ^1.13.8
         version: 1.13.8
       when:
         specifier: 3.7.8
@@ -142,8 +142,8 @@ importers:
         specifier: 7.0.1
         version: 7.0.1
       '@oroinc/oro-webpack-config-builder':
-        specifier: 7.0.4
-        version: 7.0.4(@lezer/generator@1.8.0)(tslib@2.8.1)
+        specifier: 7.0.5
+        version: 7.0.5(@lezer/generator@1.8.0)(tslib@2.8.1)
       check-engine:
         specifier: ^1.10.1
         version: 1.14.0
@@ -1237,8 +1237,8 @@ packages:
     resolution: {integrity: sha512-h8b3RwYbGWB5gBifhiMkUCUpxRDy/vQfwEtA1WOMWF1TjafCYUNxowMKDqx48iW+y9JzvUNphADCTYuQqHnuWA==}
     hasBin: true
 
-  '@oroinc/oro-webpack-config-builder@7.0.4':
-    resolution: {integrity: sha512-RBawIcuMGNGuCajSkc5aCRV9n8Hc9OnW3TPjGol3sASyrtbxCARf+Ad2p4ez7gSixusvC7DVPncmm9c23Yy5fg==}
+  '@oroinc/oro-webpack-config-builder@7.0.5':
+    resolution: {integrity: sha512-YqvnWWvz9bhgxhbbgHXJbDxebx+sNy66PgdMOEdjpOEyUS7EVPqMfYlq36l7w2IoF60SLuU9S/+43zZ11SC1Qg==}
 
   '@oroinc/select2@3.4.1':
     resolution: {integrity: sha512-R+MhYCMXwEirRa/+gg3HwjUnHEEdVu7XoWh3OrmvNhIpYzBxSX6gAr8xihEe3pFSx7UNitSP5R+KQ3PZHKLtBA==}
@@ -4634,9 +4634,6 @@ packages:
     resolution: {integrity: sha512-nWJ91DjeOkej/TA8pXQ3myruKpKEYgqvpw9lz4OPHj/NWFNluYrjbz9j01CJ8yKQd2g4jFoOkINCTW2I5LEEyw==}
     engines: {node: '>= 0.4'}
 
-  underscore@1.13.7:
-    resolution: {integrity: sha512-GMXzWtsc57XAtguZgaQViUOzs0KTkk8ojr3/xAxXLITqf/3EMwxC0inyETfDFjH/Krbhuep0HNbbjI9i/q3F3g==}
-
   underscore@1.13.8:
     resolution: {integrity: sha512-DXtD3ZtEQzc7M8m4cXotyHR+FAS18C64asBYY5vqZexfYryNNnDc02W4hKg3rdQuqOYas1jkseX0+nZXjTXnvQ==}
 
@@ -6127,7 +6124,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@oroinc/oro-webpack-config-builder@7.0.4(@lezer/generator@1.8.0)(tslib@2.8.1)':
+  '@oroinc/oro-webpack-config-builder@7.0.5(@lezer/generator@1.8.0)(tslib@2.8.1)':
     dependencies:
       '@babel/core': 7.23.9
       '@babel/plugin-transform-runtime': 7.21.4(@babel/core@7.23.9)
@@ -6167,7 +6164,7 @@ snapshots:
       terser: 5.39.2
       terser-webpack-plugin: 5.6.0(@swc/core@1.15.33)(postcss@8.5.14)(webpack@5.98.0)
       text-loader: 0.0.1
-      underscore: 1.13.7
+      underscore: 1.13.8
       url-loader: 4.1.1(file-loader@6.2.0(webpack@5.98.0))(webpack@5.98.0)
       webpack: 5.98.0(@swc/core@1.15.33)(postcss@8.5.14)(webpack-cli@6.0.1)
       webpack-bundle-analyzer: 4.10.2
@@ -9942,8 +9939,6 @@ snapshots:
       has-bigints: 1.1.0
       has-symbols: 1.1.0
       which-boxed-primitive: 1.1.1
-
-  underscore@1.13.7: {}
 
   underscore@1.13.8: {}
 
