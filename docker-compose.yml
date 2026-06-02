@@ -20,7 +20,7 @@ services:
       start_period: 40s
     restart: on-failure
   redis:
-    image: redis:7.2.6-alpine
+    image: redis:7.2.13-alpine
     ports: ["6379"]
     labels:
       com.symfony.server.service-prefix: ORO_REDIS
