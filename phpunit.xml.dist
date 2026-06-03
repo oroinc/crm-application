@@ -62,17 +62,9 @@
         <ini name="error_reporting" value="-1"/>
         <ini name="memory_limit" value="-1"/>
         <server name="KERNEL_DIR" value="src/"/>
+        <server name="KERNEL_CLASS" value="AppKernel"/>
     </php>
     <listeners>
-        <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener">
-            <arguments>
-                <array>
-                    <element key="slowThreshold">
-                        <integer>1000</integer>
-                    </element>
-                </array>
-            </arguments>
-        </listener>
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
         <listener class="Oro\Component\TestUtils\Listener\TestListener"/>
     </listeners>
