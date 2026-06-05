@@ -43,6 +43,9 @@ parameters:
 
     tracking_data_folder: '%env(ORO_TRACKING_DATA_FOLDER)%'
 
+    permitted_outbound_connections: '%env(ORO_PERMITTED_OUTBOUND_CONNECTIONS)%'
+    outbound_connection_check_duration: '%env(int:ORO_OUTBOUND_CONNECTION_CHECK_DURATION)%'
+
     # Fallback values (used if environmental variables are not set)
     env(ORO_DB_HOST): 127.0.0.1
     env(ORO_DB_PORT): null
@@ -56,3 +59,6 @@ parameters:
     env(ORO_SECRET): ThisTokenIsNotSoSecretChangeIt
 
     env(ORO_TRACKING_DATA_FOLDER): null
+
+    env(ORO_PERMITTED_OUTBOUND_CONNECTIONS): ''
+    env(ORO_OUTBOUND_CONNECTION_CHECK_DURATION): '5' # 5 seconds

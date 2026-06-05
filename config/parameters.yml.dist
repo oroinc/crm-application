@@ -46,6 +46,9 @@ parameters:
 
     maintenance_lock_file_path: '%env(ORO_MAINTENANCE_LOCK_FILE_PATH)%'
 
+    permitted_outbound_connections: '%env(ORO_PERMITTED_OUTBOUND_CONNECTIONS)%'
+    outbound_connection_check_duration: '%env(int:ORO_OUTBOUND_CONNECTION_CHECK_DURATION)%'
+
     # Fallback values (used if environmental variables are not set)
     env(ORO_DB_HOST): 127.0.0.1
     env(ORO_DB_PORT): null
@@ -61,3 +64,5 @@ parameters:
     env(ORO_TRACKING_DATA_FOLDER): null
     env(ORO_MAINTENANCE_LOCK_FILE_PATH): '%kernel.project_dir%/var/cache/maintenance_lock'
 
+    env(ORO_PERMITTED_OUTBOUND_CONNECTIONS): ''
+    env(ORO_OUTBOUND_CONNECTION_CHECK_DURATION): '5' # 5 seconds
