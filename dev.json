@@ -43,6 +43,7 @@
     "oro/gridfs-config": "7.0.x-dev"
   },
   "require-dev": {
+    "composer/composer": "~2.9.8",
     "behat/behat": "~3.29.0",
     "behat/gherkin": "~4.16.0",
     "behat/mink": "~1.12.0",
@@ -222,10 +223,11 @@
       "console oro:maintenance-notification --message=Deploy\\ finish --subject=At\\ $ORO_APP_URL --no-interaction --no-ansi"
     ],
     "sync-npm-package": [
-      "rm -rf npm-package",
-      "cp -rf ../../npm-package ./",
-      "pnpm install --prefer-offline --link-workspace-packages --no-lockfile",
-      "pnpm -r --if-present run build"
+      "rm -rf dev/npm-package",
+      "cp -rf ../../npm-package dev/",
+      "pnpm install --prefer-offline --link-workspace-packages --no-lockfile --dir dev",
+      "pnpm --dir dev -r --if-present run build",
+      "pnpm install --prefer-offline --link-workspace-packages --no-lockfile --dir dev --modules-dir ../node_modules"
     ]
   },
   "minimum-stability": "dev",

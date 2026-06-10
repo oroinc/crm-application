@@ -4,6 +4,20 @@ This file includes only the most important items that should be addressed before
 
 Please also refer to [CHANGELOG.md](CHANGELOG.md) for a list of significant changes in the code that may affect the upgrade of some customizations.
 
+### 7.0.3
+
+#### EmailBundle - Available in Template Entity Configuration
+
+- The new `email.available_in_template` entity config setting controls whether an entity can be selected when creating email templates. By default, all entities are unavailable. To make an entity available for email templates, enable this setting in the `#[Config]` attribute before the upgrade (if you can change the entity's source code), or after the upgrade using the Entity Management UI or the `\Oro\Bundle\EntityConfigBundle\Migration\UpdateEntityConfigEntityValueQuery` migration query.
+- The same `email.available_in_template` option also exists at the entity field level and controls which fields are exposed as variables in email templates, and now it defaults to `false`. Enable it in the `#[ConfigField]` attribute, via the Entity Management UI, or using the `\Oro\Bundle\EmailBundle\Migration\SetEmailAvailableInTemplateQuery` migration query.
+- Use the following commands to verify:
+  - `./bin/console oro:debug:email:template:entities` — lists entity classes available when creating email templates.
+  - `./bin/console oro:debug:email:variables` — lists template variables allowed for a given entity.
+  - `./bin/console oro:email:template:security-policy-check` — validates that an email template passes the security policy checks.
+- Use the following commands to enable "email.available_in_template" setting:
+  - `./bin/console oro:platform:post-upgrade-tasks --task=enable_available_in_template_for_entities_having_templates` — enables the `email.available_in_template` entity config setting for all entities that already have email templates.
+  - `./bin/console oro:platform:post-upgrade-tasks --task=enable_available_in_template_for_fields_in_templates` — enables the `email.available_in_template` entity field config setting for all entity fields that are used in email templates.
+
 ### 6.1.8, 6.0.9, 7.0.1
 
 Strict deserialization rules were applied to workflow data. Every class referenced in serialized objects, object graphs, or arrays must belong to a trusted namespace prefix or be explicitly allowed. If a disallowed class is detected, the application throws a `RuntimeException` and aborts deserialization by default.
