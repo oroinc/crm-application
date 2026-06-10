@@ -5941,7 +5941,7 @@
         },
         {
             "name": "oroinc/laminas-loader",
-            "version": "dev-php85-support",
+            "version": "2.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/laminas-loader.git",
@@ -5969,29 +5969,7 @@
                     "Laminas\\Loader\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "LaminasTest\\Loader\\": "test/"
-                }
-            },
-            "scripts": {
-                "check": [
-                    "@cs-check",
-                    "@test"
-                ],
-                "cs-check": [
-                    "phpcs"
-                ],
-                "cs-fix": [
-                    "phpcbf"
-                ],
-                "test": [
-                    "phpunit --colors=always"
-                ],
-                "test-coverage": [
-                    "phpunit --colors=always --coverage-clover clover.xml"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -6002,12 +5980,12 @@
                 "loader"
             ],
             "support": {
-                "docs": "https://docs.laminas.dev/laminas-loader/",
-                "issues": "https://github.com/laminas/laminas-loader/issues",
-                "source": "https://github.com/laminas/laminas-loader",
-                "rss": "https://github.com/laminas/laminas-loader/releases.atom",
                 "chat": "https://laminas.dev/chat",
-                "forum": "https://discourse.laminas.dev"
+                "docs": "https://docs.laminas.dev/laminas-loader/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-loader/issues",
+                "rss": "https://github.com/laminas/laminas-loader/releases.atom",
+                "source": "https://github.com/laminas/laminas-loader"
             },
             "abandoned": true,
             "time": "2025-12-29T14:23:03+00:00"
@@ -6018,20 +5996,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/laminas-mail.git",
-                "reference": "fc8589a3b82703f22672126e51f77b77af817cf1"
+                "reference": "b18b1c8adb0fefa5bfad5f5f246a35b2c673bc1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/laminas-mail/zipball/fc8589a3b82703f22672126e51f77b77af817cf1",
-                "reference": "fc8589a3b82703f22672126e51f77b77af817cf1",
+                "url": "https://api.github.com/repos/oroinc/laminas-mail/zipball/b18b1c8adb0fefa5bfad5f5f246a35b2c673bc1e",
+                "reference": "b18b1c8adb0fefa5bfad5f5f246a35b2c673bc1e",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
                 "laminas/laminas-stdlib": "^3.17.0",
                 "laminas/laminas-validator": "^2.31.0 || ^3.0.0",
-                "oroinc/laminas-loader": "dev-php85-support",
-                "oroinc/laminas-mime": "dev-php85-support",
+                "oroinc/laminas-loader": "~2.14.0",
+                "oroinc/laminas-mime": "~2.15.0",
                 "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
                 "symfony/polyfill-intl-idn": "^1.27.0",
                 "symfony/polyfill-mbstring": "^1.27.0",
@@ -6061,33 +6039,7 @@
                     "Laminas\\Mail\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "LaminasTest\\Mail\\": "test/"
-                }
-            },
-            "scripts": {
-                "check": [
-                    "@cs-check",
-                    "@static-analysis",
-                    "@test"
-                ],
-                "cs-check": [
-                    "phpcs"
-                ],
-                "cs-fix": [
-                    "phpcbf"
-                ],
-                "static-analysis": [
-                    "psalm --shepherd --stats"
-                ],
-                "test": [
-                    "phpunit --colors=always"
-                ],
-                "test-coverage": [
-                    "phpunit --colors=always --coverage-clover clover.xml"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -6098,18 +6050,18 @@
                 "mail"
             ],
             "support": {
-                "issues": "https://github.com/laminas/laminas-mail/issues",
-                "forum": "https://discourse.laminas.dev",
                 "chat": "https://laminas.dev/chat",
-                "source": "https://github.com/laminas/laminas-mail",
                 "docs": "https://docs.laminas.dev/laminas-mail/",
-                "rss": "https://github.com/laminas/laminas-mail/releases.atom"
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-mail/issues",
+                "rss": "https://github.com/laminas/laminas-mail/releases.atom",
+                "source": "https://github.com/laminas/laminas-mail"
             },
-            "time": "2025-12-29T14:25:04+00:00"
+            "time": "2026-06-09T11:04:41+00:00"
         },
         {
             "name": "oroinc/laminas-mime",
-            "version": "dev-php85-support",
+            "version": "2.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/laminas-mime.git",
@@ -6142,32 +6094,7 @@
                     "Laminas\\Mime\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "files": [
-                    "test/TestAsset/Mail/Headers.php"
-                ],
-                "psr-4": {
-                    "LaminasTest\\Mime\\": "test/"
-                }
-            },
-            "scripts": {
-                "check": [
-                    "@cs-check",
-                    "@test"
-                ],
-                "cs-check": [
-                    "phpcs"
-                ],
-                "cs-fix": [
-                    "phpcbf"
-                ],
-                "test": [
-                    "phpunit --colors=always"
-                ],
-                "test-coverage": [
-                    "phpunit --colors=always --coverage-clover clover.xml"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -6178,18 +6105,18 @@
                 "mime"
             ],
             "support": {
-                "docs": "https://docs.laminas.dev/laminas-mime/",
-                "issues": "https://github.com/laminas/laminas-mime/issues",
-                "source": "https://github.com/laminas/laminas-mime",
-                "rss": "https://github.com/laminas/laminas-mime/releases.atom",
                 "chat": "https://laminas.dev/chat",
-                "forum": "https://discourse.laminas.dev"
+                "docs": "https://docs.laminas.dev/laminas-mime/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-mime/issues",
+                "rss": "https://github.com/laminas/laminas-mime/releases.atom",
+                "source": "https://github.com/laminas/laminas-mime"
             },
             "time": "2025-12-29T14:22:53+00:00"
         },
         {
             "name": "oroinc/pubsub-router-bundle",
-            "version": "2.9.x-dev",
+            "version": "v2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/PubSubRouterBundle.git",
@@ -6253,7 +6180,7 @@
                 "ZMQ"
             ],
             "support": {
-                "source": "https://github.com/oroinc/PubSubRouterBundle/tree/2.9.x"
+                "source": "https://github.com/oroinc/PubSubRouterBundle/tree/v2.9.0"
             },
             "funding": [
                 {
@@ -6269,17 +6196,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/WebSocketBundle.git",
-                "reference": "2ce69910fdc14438ab8b06ff5a624bb5909c0e27"
+                "reference": "31a4af4321ba9d7aa4fb6f66398f520a465fdc26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/WebSocketBundle/zipball/2ce69910fdc14438ab8b06ff5a624bb5909c0e27",
-                "reference": "2ce69910fdc14438ab8b06ff5a624bb5909c0e27",
+                "url": "https://api.github.com/repos/oroinc/WebSocketBundle/zipball/31a4af4321ba9d7aa4fb6f66398f520a465fdc26",
+                "reference": "31a4af4321ba9d7aa4fb6f66398f520a465fdc26",
                 "shasum": ""
             },
             "require": {
                 "cboden/ratchet": "^0.4",
-                "oroinc/pubsub-router-bundle": "2.9.x-dev",
+                "oroinc/pubsub-router-bundle": "~2.9",
                 "php": "^8.4",
                 "psr/log": "^1.1 || ^2.0 || ^3.0",
                 "react/event-loop": "^1.2",
@@ -6344,11 +6271,7 @@
                     "Gos\\Component\\WebSocketClient\\": "src/Component/WebSocketClient/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Gos\\Bundle\\WebSocketBundle\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6365,22 +6288,22 @@
             "description": "A fork of Symfony Web Socket Bundle that enables PHP 8.4 and Symfony 7 support",
             "homepage": "https://github.com/GeniusesOfSymfony/WebSocketBundle",
             "keywords": [
-                "IO",
                 "Ratchet",
                 "WAMP",
                 "Web Socket Bundle",
-                "Websocket"
+                "io",
+                "websocket"
             ],
             "support": {
                 "source": "https://github.com/oroinc/WebSocketBundle/tree/3.16.x"
             },
             "funding": [
                 {
-                    "type": "github",
-                    "url": "https://github.com/mbabker"
+                    "url": "https://github.com/mbabker",
+                    "type": "github"
                 }
             ],
-            "time": "2025-10-06T10:34:58+00:00"
+            "time": "2026-06-09T11:24:30+00:00"
         },
         {
             "name": "php-http/client-common",
@@ -7768,16 +7691,16 @@
         },
         {
             "name": "ratchet/rfc6455",
-            "version": "v0.4.0",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ratchetphp/RFC6455.git",
-                "reference": "859d95f85dda0912c6d5b936d036d044e3af47ef"
+                "reference": "9b05f371219cbaf9748b505f139617dd0715592b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ratchetphp/RFC6455/zipball/859d95f85dda0912c6d5b936d036d044e3af47ef",
-                "reference": "859d95f85dda0912c6d5b936d036d044e3af47ef",
+                "url": "https://api.github.com/repos/ratchetphp/RFC6455/zipball/9b05f371219cbaf9748b505f139617dd0715592b",
+                "reference": "9b05f371219cbaf9748b505f139617dd0715592b",
                 "shasum": ""
             },
             "require": {
@@ -7821,9 +7744,9 @@
             "support": {
                 "chat": "https://gitter.im/reactphp/reactphp",
                 "issues": "https://github.com/ratchetphp/RFC6455/issues",
-                "source": "https://github.com/ratchetphp/RFC6455/tree/v0.4.0"
+                "source": "https://github.com/ratchetphp/RFC6455/tree/v0.4.1"
             },
-            "time": "2025-02-24T01:18:22+00:00"
+            "time": "2026-06-06T14:34:23+00:00"
         },
         {
             "name": "react/cache",
@@ -11720,16 +11643,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.38.1",
+            "version": "v1.38.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "14c5439eec4ccff081ac14eca2dc57feb2a66d92"
+                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/14c5439eec4ccff081ac14eca2dc57feb2a66d92",
-                "reference": "14c5439eec4ccff081ac14eca2dc57feb2a66d92",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
+                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
                 "shasum": ""
             },
             "require": {
@@ -11781,7 +11704,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.1"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.2"
             },
             "funding": [
                 {
@@ -11801,7 +11724,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-26T12:51:13+00:00"
+            "time": "2026-05-27T06:59:30+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
@@ -12022,16 +11945,16 @@
         },
         {
             "name": "symfony/polyfill-php83",
-            "version": "v1.38.1",
+            "version": "v1.38.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php83.git",
-                "reference": "8339098cae28673c15cce00d80734af0453054e2"
+                "reference": "796a26abb75ce49f3a84433cd81bf1009d73d5f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/8339098cae28673c15cce00d80734af0453054e2",
-                "reference": "8339098cae28673c15cce00d80734af0453054e2",
+                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/796a26abb75ce49f3a84433cd81bf1009d73d5f8",
+                "reference": "796a26abb75ce49f3a84433cd81bf1009d73d5f8",
                 "shasum": ""
             },
             "require": {
@@ -12078,7 +12001,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php83/tree/v1.38.1"
+                "source": "https://github.com/symfony/polyfill-php83/tree/v1.38.2"
             },
             "funding": [
                 {
@@ -12098,7 +12021,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-26T12:51:13+00:00"
+            "time": "2026-05-27T06:51:48+00:00"
         },
         {
             "name": "symfony/polyfill-php84",
