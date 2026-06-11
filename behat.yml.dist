@@ -7,7 +7,7 @@ default: &default
             tags: ~@not-automated&&~@skip
     extensions:
         Behat\MinkExtension:
-            base_url: 'http://dev-crm.local/'
+            base_url: '%env(default:oro_test.behat.base_url:ORO_BEHAT_BASE_URL)%'
         FriendsOfBehat\SymfonyExtension:
             kernel:
                 debug: false
