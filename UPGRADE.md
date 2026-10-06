@@ -4,6 +4,14 @@ This file includes only the most important items that should be addressed before
 
 Please also refer to [CHANGELOG.md](CHANGELOG.md) for a list of significant changes in the code that may affect the upgrade of some customizations.
 
+### 6.1.11
+
+#### EmailBundle - Sensitive Fields in Email Templates
+
+- The confirmation token of a user is no longer an email template variable. A template that reads `entity.confirmationToken` still renders a working link in the emails the application sends, because the sending code passes the value as the `confirmationToken` email template parameter and a listener of `\Oro\Bundle\EmailBundle\Event\EmailTemplateSecurityPolicyViolationEvent` resolves the attribute from it. Anywhere else - a template preview, a compilation, or an email sent by custom code that does not pass the parameter - the attribute renders empty, so custom code that sends a password reset or invitation email must pass this parameter.
+- An email template render resolves only the records the current user is allowed to view: an attribute of a related record the current user cannot view renders empty.
+- Use `./bin/console oro:email:template:security-policy-check` to find the email templates affected by the security policy.
+
 ### 6.1.9
 
 #### EmailBundle - Available in Template Entity Configuration
