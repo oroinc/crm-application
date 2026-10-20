@@ -1,6 +1,6 @@
 services:
   pgsql:
-    image: postgres:18.3
+    image: postgres:18.6
     ports: ['5432']
     labels:
       com.symfony.server.service-prefix: ORO_DB
@@ -19,7 +19,7 @@ services:
       start_period: 40s
     restart: on-failure
   redis:
-    image: redis:8.4.2-alpine
+    image: redis:8.4.7-alpine
     ports: ["6379"]
     labels:
       com.symfony.server.service-prefix: ORO_REDIS
