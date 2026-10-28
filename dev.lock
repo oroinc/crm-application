@@ -375,16 +375,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.5.14",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "0c8abba0634f637bd78c4e451981da368d403463"
+                "reference": "2c99cf2e92516985dea4914812b93d9daf01cdd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/0c8abba0634f637bd78c4e451981da368d403463",
-                "reference": "0c8abba0634f637bd78c4e451981da368d403463",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/2c99cf2e92516985dea4914812b93d9daf01cdd6",
+                "reference": "2c99cf2e92516985dea4914812b93d9daf01cdd6",
                 "shasum": ""
             },
             "require": {
@@ -431,7 +431,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.5.14"
+                "source": "https://github.com/composer/ca-bundle/tree/1.6.0"
             },
             "funding": [
                 {
@@ -443,7 +443,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-21T14:57:29+00:00"
+            "time": "2026-10-20T20:14:05+00:00"
         },
         {
             "name": "composer/semver",
@@ -4736,20 +4736,20 @@
         },
         {
             "name": "nette/utils",
-            "version": "v4.1.5",
+            "version": "v4.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "b043439dbdf954e6c28b5ea7e34b0100f83165e0"
+                "reference": "6bf24518accf32cf845bca305e0b92078700fd01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/b043439dbdf954e6c28b5ea7e34b0100f83165e0",
-                "reference": "b043439dbdf954e6c28b5ea7e34b0100f83165e0",
+                "url": "https://api.github.com/repos/nette/utils/zipball/6bf24518accf32cf845bca305e0b92078700fd01",
+                "reference": "6bf24518accf32cf845bca305e0b92078700fd01",
                 "shasum": ""
             },
             "require": {
-                "php": "8.2 - 8.5"
+                "php": "8.2 - 8.6"
             },
             "conflict": {
                 "nette/finder": "<3",
@@ -4821,9 +4821,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.1.5"
+                "source": "https://github.com/nette/utils/tree/v4.1.6"
             },
-            "time": "2026-07-17T23:02:45+00:00"
+            "time": "2026-10-20T17:07:56+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -6229,16 +6229,16 @@
         },
         {
             "name": "oroinc/web-socket-bundle",
-            "version": "v3.16.1",
+            "version": "v3.16.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oroinc/WebSocketBundle.git",
-                "reference": "31a4af4321ba9d7aa4fb6f66398f520a465fdc26"
+                "reference": "fbacaa55b24d0e9028ae62a0742f0664e8be7ebb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oroinc/WebSocketBundle/zipball/31a4af4321ba9d7aa4fb6f66398f520a465fdc26",
-                "reference": "31a4af4321ba9d7aa4fb6f66398f520a465fdc26",
+                "url": "https://api.github.com/repos/oroinc/WebSocketBundle/zipball/fbacaa55b24d0e9028ae62a0742f0664e8be7ebb",
+                "reference": "fbacaa55b24d0e9028ae62a0742f0664e8be7ebb",
                 "shasum": ""
             },
             "require": {
@@ -6308,7 +6308,11 @@
                     "Gos\\Component\\WebSocketClient\\": "src/Component/WebSocketClient/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Gos\\Bundle\\WebSocketBundle\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -6325,22 +6329,22 @@
             "description": "A fork of Symfony Web Socket Bundle that enables PHP 8.4 and Symfony 7 support",
             "homepage": "https://github.com/GeniusesOfSymfony/WebSocketBundle",
             "keywords": [
+                "IO",
                 "Ratchet",
                 "WAMP",
                 "Web Socket Bundle",
-                "io",
-                "websocket"
+                "Websocket"
             ],
             "support": {
-                "source": "https://github.com/oroinc/WebSocketBundle/tree/v3.16.1"
+                "source": "https://github.com/oroinc/WebSocketBundle/tree/v3.16.2"
             },
             "funding": [
                 {
-                    "url": "https://github.com/mbabker",
-                    "type": "github"
+                    "type": "github",
+                    "url": "https://github.com/mbabker"
                 }
             ],
-            "time": "2026-06-09T11:24:30+00:00"
+            "time": "2026-10-22T11:39:26+00:00"
         },
         {
             "name": "php-http/client-common",

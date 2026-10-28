@@ -1,10 +1,11 @@
 packages:
-  - 'npm-package/codemirror-expression-editor'
-  - 'npm-package/webpack-config-builder'
-  - 'npm-package/stylelint-config'
+  - '../../../npm-package/codemirror-expression-editor'
+  - '../../../npm-package/webpack-config-builder'
+  - '../../../npm-package/stylelint-config'
 
 linkWorkspacePackages: true
-optimisticRepeatInstall: false
+ignoreScripts: true
+initPackageManager: false
 
 publicHoistPattern:
   - 'stylelint**'

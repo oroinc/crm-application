@@ -25,7 +25,7 @@ Other application distributions:
 What is OroCRM?
 ---------------
 
-OroCRM is an open-source customer relationship Management application built with flexibility in mind. It can be customized and extended to fit any business needs.
+OroCRM is a customer relationship management application built with flexibility in mind. It can be customized and extended to fit any business needs.
 You can find out more about OroCRM at [www.orocrm.com](https://www.orocrm.com/).
 
 OroCRM Community Edition is an example of a fully functional [OroCRM](https://github.com/oroinc/crm) application which can be used as is or customized to meet
@@ -49,5 +49,5 @@ Resources
 
 License
 -------
- 
-[OSL-3.0](LICENSE) Copyright (c) 2024 Oro Inc.
+
+[OSL-3.0](LICENSE) Copyright (c) 2026 Oro Inc.

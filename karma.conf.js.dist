@@ -86,7 +86,6 @@ module.exports = function(config) {
       '**/*Spec.js': ['webpack']
     },
 
-    // use dots reporter, as travis terminal does not support escaping sequences
     // possible values: 'dots', 'progress'
     // CLI --reporters progress
     reporters: ['progress', /* 'coverage', */ 'junit'],
@@ -128,7 +127,6 @@ module.exports = function(config) {
     // - Safari (only Mac)
     // - IE (only Windows)
     // CLI --browsers Chrome,Firefox,Safari
-    // browsers: [process.env.TRAVIS ? 'Firefox' : 'Chrome'],
     browsers: ['ChromeHeadless'],
     // browsers: ['Chrome'],
     // browsers: ['Firefox'],
