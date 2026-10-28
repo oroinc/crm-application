@@ -225,11 +225,12 @@
       "console oro:maintenance-notification --message=Deploy\\ finish --subject=At\\ $ORO_APP_URL --no-interaction --no-ansi"
     ],
     "sync-npm-package": [
-      "rm -rf dev/npm-package",
-      "cp -rf ../../npm-package dev/",
       "pnpm install --prefer-offline --link-workspace-packages --no-lockfile --dir dev",
       "pnpm --dir dev -r --if-present run build",
-      "pnpm install --prefer-offline --link-workspace-packages --no-lockfile --dir dev --modules-dir ../node_modules"
+      "rm -rf dev/node_modules",
+      "pnpm install --prefer-offline --link-workspace-packages --no-lockfile --dir dev --config.inject-workspace-packages=true --config.dedupe-injected-deps=false",
+      "rm -rf node_modules",
+      "ln -s dev/node_modules node_modules"
     ]
   },
   "minimum-stability": "dev",
